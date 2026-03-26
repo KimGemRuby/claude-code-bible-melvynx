@@ -1418,3 +1418,237 @@ La derniere section du document liste 6 fichiers identifies comme des "doublons"
 ---
 
 > **Formation compilee depuis les transcriptions Melvynx par Claude Code -- 2026-03-25**
+
+---
+---
+
+# PARTIE 11 -- COMPLEMENT : "1000h de Claude Code resumees en 1h30" (2026)
+
+> Source : Video Melvynx "1000h de Claude Code resumees en 1h30 (formation gratuite 2026)"
+
+## 11.1 Deploiement rapide avec Netlify Drop
+
+- Methode la plus simple : Netlify Drop (app.netlify.com/drop)
+- Workflow : demander a Claude "prepare un dossier pour deployer sur Netlify Drop"
+- Claude genere un dossier dist/ (index.html + assets)
+- Drag and drop du dossier sur Netlify Drop = URL publique instantanee
+
+## 11.2 Agent FixGrammar en parallele
+
+- Creation via /agent > Create New Agent > Personal Folder > Generate with Cloud
+- Assigner un modele different (Sonnet) pour economiser + une couleur
+- Main agent lance FixGrammar en parallele sur chaque fichier (13 simultanement dans la demo)
+
+## 11.3 Recommandation progressive abonnements
+
+- Commencer Pro 20$/mois > Max 100$ > Max 200$ si necessaire
+- Depense API directe possible : 171$ en une seule journee
+
+## 11.4 Analogie cuisinier
+
+- Claude Code = robot executant du chef (modele). Chat = chef qui explique sans agir.
+- Skills = livre de cuisine (SKILL.md = table des matieres + recettes individuelles)
+
+---
+
+# PARTIE 12 -- COMPLEMENT : "Claude Code TUE Encore 3 Startup" (2026)
+
+## 12.1 /voice (beta) -- Espace pour micro, mauvais en francais, ne remplace pas dictee native
+## 12.2 CEMUX -- Terminal agents IA, Ghosty-based, tabs V+H, notifications, browser integre, gratuit
+## 12.3 Ask User Question -- Choix UI riches, N pour ajouter note, automatique
+## 12.4 /simplify -- 3 agents review paralleles (reuse, qualite, efficacite), auto-corrige
+## 12.5 Auto-Memory -- autoMemoryEnabled:true, 200 lignes MEMORY.md, verifier regulierement
+## 12.6 /schedule (cron persistant) vs /loop (expire avec session)
+## 12.7 Claude Review beta -- 94% bugs trouves, 15-25$/review, entreprises uniquement
+
+---
+
+# PARTIE 13 -- COMPLEMENT : "VIBE CODEUR : Formation terminal" (2026)
+
+## 13.1 3 piliers Vibe Codeur : Terminal + VS Code + Git/GitHub (langages plus obligatoires)
+## 13.2 Bash != PowerShell (zero compatibilite). WSL recommande sur Windows
+## 13.3 macOS : Clic droit + Option = "Copy as pathname". cd seul = retour ~
+## 13.4 Outils : Raycast, Homebrew, CleanShotX, WhisperTurbo (Parakeet=court, Large=francais), Ghosty
+## 13.5 Premiere app : npm create vite@latest > cd > npm install > npm run dev (localhost:5173)
+
+---
+
+
+---
+
+# PARTIE 14 -- COMPLEMENT : "Je SETUP OpenClaw en 1h a un total debutant" (2026)
+
+> Source : Video Melvynx — Setup complet OpenClaw avec un debutant total
+
+## 14.1 VPS Setup — Commandes exactes
+
+- Script automatise : `npx open-claw VPS setup`
+- Installe automatiquement : Node.js, openclaw-github, Claude CLI, Bun, Cloudflared, GCloud
+- Security Hardening : UFW (firewall), Fail2Ban, SSH Hardening (desactiver password, cle uniquement)
+
+## 14.2 Permission Bypass sur VPS (IMPORTANT)
+
+Par defaut Claude Code refuse le bypass permission sur VPS. Hack :
+- Ajouter dans .bashrc du VPS : `export CLAUDE_SANDBOX=0`
+- Ou lancer : `CLAUDE_SANDBOX=0 claude [commande]`
+
+## 14.3 Telegram Bot Setup detaille
+
+1. Ouvrir BotFather sur Telegram > /newbot > nommer le bot
+2. Recuperer le TOKEN API
+3. `openclaw onboard` > Quick start > Provider Anthropic > Token > Telegram Bot API > Configure Skills
+
+## 14.4 Skills recommandes a l'installation
+
+- claw-ups (web updates), openai-whisper (speech-to-text), gemini (fallback LLM)
+- PAS Google Workspace (deprecated, utiliser CLI recent)
+
+## 14.5 Google Workspace Integration (Calendar + Gmail)
+
+1. Creer Google Cloud Project
+2. Activer APIs : Google Calendar API + Gmail API
+3. Create Credentials > Desktop App > telecharger JSON (client_id + client_secret)
+4. Donner le fichier JSON a OpenClaw
+5. OAuth2 flow : OpenClaw envoie URL > user copie code > re-colle dans Telegram
+
+## 14.6 Workspace et Auto-sync GitHub
+
+- `openclaw workspace init` cree un repo GitHub prive
+- Structure : config.json + skills/ + sessions/ + memory/
+- OpenClaw commit automatiquement chaque modification config vers GitHub
+
+## 14.7 Gestion des cles API
+
+- `openclaw config add OPENAI_API_KEY [key]`
+- Tout stocke dans `~/.openclaw/.env` (ne JAMAIS commiter)
+
+## 14.8 Troubleshooting
+
+- Si OpenClaw ne repond plus : auto-restart apres 5 min, ou relancer manuellement via SSH
+- Permission bypass echoue : verifier export CLAUDE_SANDBOX=0
+- Cron actif seulement si OpenClaw service actif (pour persistant : systemd)
+
+---
+
+# PARTIE 15 -- COMPLEMENT : "Je teste ClawdBOT pour la premiere fois" (2026)
+
+> Source : Video Melvynx — Premier test en direct de ClawdBOT
+
+## 15.1 Historique et naming
+
+- Ancien nom : Claude Bot > renomme Malt Bot (demande Anthropic, confusion tonalite)
+- Beaucoup d'utilisateurs achetent des Mac mini (~600 EUR) pour ClawdBOT 24/7
+
+## 15.2 Architecture fichiers ClawdBOT
+
+```
+~/.claude/cloud/
+  agent_identity.json    -- nom, timezone, description
+  memory/today.md        -- memoire du jour
+  canvas/index.html      -- interface web locale
+```
+
+Le bot met a jour ses fichiers automatiquement pour se souvenir du contexte.
+
+## 15.3 Securite — Risques identifies (CRITIQUE)
+
+- Port gateway ouvert (localhost:18789) = quiconque y accede controle le bot
+- Si bot Telegram compromis = acces PC complet
+- 1Password skill = extraction de TOUS les secrets
+- Bot peut etre ordonne de supprimer recursivement
+
+Recommandations :
+1. TOUJOURS sandboxer dans Docker
+2. Pas de port ouvert vers Internet
+3. Ne connecter que les integrations essentielles
+4. Whitelist IPs Telegram
+5. Commande audit : `cloudbot security-audit`
+
+## 15.4 Cas d'usage reel — Feature complete via Telegram
+
+Workflow teste en direct :
+1. Envoyer commande Telegram : "Dans Subfast, supprime X, ajoute Y, affiche stats"
+2. Bot cree/modifie fichiers, routes API, cache NextJS, fixe ESLint
+3. PR creee automatiquement avec commit au nom de l'utilisateur
+4. Tout en < 10 minutes, sans toucher un clavier d'ordinateur
+
+## 15.5 Limitations decouvertes
+
+- Pas de multi-session Telegram (/new coupe la session actuelle)
+- VPS instabilite : SSH se coupe toutes les 20 secondes (selon testeur)
+- Email integration absente au moment du test
+- Latence interface web au chargement des sessions
+
+## 15.6 Screenshots + Instructions contextuelles
+
+Le bot peut recevoir des screenshots annotes et comprendre les instructions visuelles.
+Exemple : envoyer screenshot du site + "Fous-moi le logo Product Hunt en dessous du email generator"
+Le bot comprend le contexte visuel et code la modification.
+
+---
+
+# PARTIE 16 -- COMPLEMENT : "Mon Setup OpenClaw pour Coder via Telegram" (2026)
+
+> Source : Video Melvynx — Workflow complet de codage a distance
+
+## 16.1 Code Task via Screenshot + URL
+
+Au lieu d'ecrire des commandes, envoyer une URL + screenshot avec la description.
+Le skill code_task execute :
+1. Clone le repo / cree worktree
+2. Installe dependances
+3. Cree GitHub issue
+4. Lance : `claude -p --dangerously-skip-permissions apex --pr <issue> <description>`
+5. Schedule completion watcher (cron chaque minute)
+6. Notifie quand termine
+
+## 16.2 Modeles alternatifs et pricing
+
+- Gemini 3 Pro : $2/M input + $12/M output (plus economique que Claude Opus)
+- Gemini 3 Flash : pour cron jobs recurrents (100+/jour)
+- Strategie : Flash pour taches repetitives, Opus pour taches complexes ponctuelles
+
+## 16.3 Skills API concretes de Melvynx
+
+### CodeLine (plateforme formation)
+- Lister coupons, consulter infos, recuperer subscribers + derniers emails
+- Skill = SKILL.md (prompt) + execute.sh (curl API)
+
+### Lumail (email marketing)
+- get_campaign, replace_campaign, send_email
+- Controle complet des campagnes depuis Telegram
+
+### TypeFully (social media)
+- Creer et planifier des tweets
+- Consulter posts planifies, brouillons
+- Exemple : "Cree un tweet et planifie-le demain a 14h"
+
+## 16.4 Creer un Skill API (methode universelle)
+
+1. Copier la doc markdown de l'API (ex: TypeFully docs = ~7000 lignes)
+2. Coller dans un prompt Claude
+3. Demander : "Create Skill Creator, similaire a code_line. Nouveau skill TypeFully avec API Key [TOKEN]"
+4. Claude genere : SKILL.md + execute.sh
+5. Utilisation directe via Telegram
+
+## 16.5 MCP vs Skills — Critique structuree de Melvynx
+
+**Pourquoi les Skills > MCP pour OpenClaw :**
+- MCP = abstraction inutile (Claude > MCP > API au lieu de Claude > API)
+- MCP ne savent pas quand arreter (rabbit hole)
+- Skills = controle total, pas de dependances, facile a debugger
+- Chaque skill fait exactement ce que VOUS voulez
+
+## 16.6 Cas reel : Incident au spa (demo vocale)
+
+- Bug arrive sur l'app, notification WhatsApp
+- Envoie audio vocal 32 secondes via Telegram > bot cree l'issue
+- Continue en mode vocal depuis le cafe sans ordinateur
+- Code review, refactor, merge PR — tout par la voix
+- Ne revient jamais a l'ordinateur
+
+---
+
+> **BIBLE COMPLETE — Formation compilee depuis 9 videos Melvynx — 16 parties**
+> **Sources : TUTO 4h, Setup Terrence, OpenClaw x4, 1000h resume, TUE 3 Startup, VIBE CODEUR terminal**
+> **Derniere mise a jour : 2026-03-26**
