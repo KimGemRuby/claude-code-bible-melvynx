@@ -71,6 +71,9 @@
 - **CHAPITRE 61** -- Hooks & Thoughts BOKADOR
 - **CHAPITRE 62** -- Dossiers Speciaux ~/.claude/
 - **CHAPITRE 63** -- Inventaire Complet ~/.claude/ (Arborescence)
+- **CHAPITRE 64** -- Scripts Directory (command-validator, statusline, backups)
+- **CHAPITRE 65** -- Step Files (Prompt Discovery 4 etapes)
+- **CHAPITRE 66** -- Dossiers Systeme Claude Code (cache, logs, plans, tasks, telemetry)
 
 ---
 ---
@@ -2509,4 +2512,103 @@ Role : Stockage persistant des listes de taches des agents/sub-agents Claude Cod
 
 ---
 
-**FIN DE LA BIBLE COMPLETE -- Version 7.0 -- 63 chapitres -- Derniere mise a jour : 2026-03-26**
+
+
+# CHAPITRE 64 -- Scripts Directory (~/.claude/scripts/)
+
+Dossier : `~/.claude/scripts/` — contient les scripts Node.js/Bun, outils de build et configs du systeme Claude Code.
+
+## Structure
+
+| Element | Type | Role |
+|---------|------|------|
+| `command-validator/` | Dossier | Hook PreToolUse principal — valide les commandes au niveau AST avant execution |
+| `statusline/` | Dossier | Script Bun pour la status line (chemin, modele, contexte %, cout, quota) |
+| `auto-backup.sh` | Script | Backup automatique de la config ~/.claude/ |
+| `claude-session.sh` | Script | Gestion des sessions Claude Code |
+| `watch-claude-config.sh` | Script | Surveillance des changements de configuration |
+| `biome.json` | Config | Configuration Biome (linter/formatter) pour les scripts JS/TS |
+| `package.json` | Config | Dependances Node.js pour command-validator et statusline |
+| `bun.lockb` | Lockfile | Lockfile Bun |
+| `tsconfig.json` | Config | TypeScript config |
+| `node_modules/` | Dossier | Dependances installees |
+| `.claude/` | Dossier | CLAUDE.md local du dossier scripts |
+| `.gitignore` | Config | Exclusions git |
+| `CLAUDE.md` | Config | Instructions Claude Code specifiques au dossier scripts |
+
+## command-validator (detail)
+
+Hook PreToolUse qui analyse les commandes via AST (Abstract Syntax Tree) au lieu de simples regex.
+Avantage : zero faux positifs (contrairement a grep/regex). Bloque les commandes dangereuses AVANT execution.
+Installe par Blueprint CLI Melvynx.
+
+## statusline (detail)
+
+Script Bun qui affiche en permanence : dossier courant, modele actif, % contexte utilise, cout session, quota hebdomadaire, repo git.
+Necessite : `bun` installe, configure dans settings.json (`statusLine`).
+
+---
+
+# CHAPITRE 65 -- Step Files (Prompt Discovery)
+
+Dossier : `~/.claude/step/` — fichiers d'etapes pour le pattern Prompt Discovery (anti Lost-in-the-Middle).
+
+## Fichiers
+
+| Fichier | Etape | Role |
+|---------|-------|------|
+| `1_init.md` | Initialisation | Setup du contexte, chargement memoire, identification projet |
+| `2_explore_ultra.md` | Exploration | Sub-agents d'exploration (codebase, docs, web), collecte infos |
+| `3_plan.md` | Planification | Plan mode, decomposition taches, architecture decisions |
+| `4_implement.md` | Implementation | Execution du plan, codage, tests, verification |
+
+## Principe
+
+Chaque skill/workflow lit son fichier step juste avant d'agir. Le prompt courant est toujours "recent" dans le contexte (fin de fenetre), evitant le probleme "Lost in the Middle" des transformers. Les 4 fichiers correspondent au pattern EPCT (Explore > Plan > Code > Test).
+
+---
+
+# CHAPITRE 66 -- Dossiers Systeme Claude Code & Fichiers Divers
+
+## Dossiers generes automatiquement par Claude Code
+
+| Dossier | Role | Persistance |
+|---------|------|-------------|
+| `cache/` | Cache general Claude Code | Temporaire |
+| `debug/` | Fichiers de debug | Temporaire |
+| `downloads/` | Fichiers telecharges par Claude | Temporaire |
+| `file-history/` | Historique des modifications de fichiers | Persistant |
+| `image-cache/` | Cache d'images traitees | Temporaire |
+| `paste-cache/` | Cache du presse-papiers | Temporaire |
+| `shell-snapshots/` | Snapshots de l'etat du shell | Temporaire |
+| `session-env/` | Variables d'environnement par session | Session |
+| `telemetry/` | Donnees de telemetrie Anthropic | Persistant |
+| `plans/` | Plans sauvegardes (3 fichiers .md nommes aleatoirement) | Persistant |
+| `tasks/` | Taches executees (12 dossiers UUID) | Persistant |
+| `teams/` | Configuration teams (vide actuellement) | Persistant |
+| `sessions/` | Sessions sauvegardees (3 fichiers JSON) | Persistant |
+| `logs/` | Logs internes (doc-guard.log, modifications.log) | Persistant |
+
+## Fichiers systeme individuels
+
+| Fichier | Role |
+|---------|------|
+| `history.jsonl` | Historique complet des commandes Claude Code (format JSON Lines) |
+| `mcp-needs-auth-cache.json` | Cache des MCP necessitant authentification |
+| `stats-cache.json` | Cache des statistiques de session |
+| `security_warnings_state_*.json` | Etat des warnings de securite (par session UUID) |
+| `settings.json.backup-pretooluse` | Backup settings avant modification par hook PreToolUse |
+| `settings.json.tmp` | Fichier temporaire settings pendant ecriture |
+| `.git/` | Repo git local de ~/.claude (versionning de la config) |
+| `.gitignore` | Exclusions git pour ~/.claude |
+
+## logs/ (detail)
+
+| Fichier | Role |
+|---------|------|
+| `doc-guard.log` | Log du hook de protection documentaire |
+| `modifications.log` | Journal de toutes les modifications de fichiers effectuees par Claude Code |
+
+---
+
+**FIN DE LA BIBLE COMPLETE -- Version 7.1 -- 66 chapitres -- Derniere mise a jour : 2026-03-26**
