@@ -821,5 +821,390 @@ Images minimales, health checks, limites ressources, pas de root, tags explicite
 /clear entre taches, max 2-3 MCP, sub-agents pour recherches, EPCT pour workflows, bypass+deny-list, rules pour erreurs repetitives
 
 ---
+---
 
-**FIN DE LA BIBLE -- Derniere mise a jour : 2026-03-26**
+# CHAPITRE 21 -- SKILLS CUSTOM KIM13 (39 skills)
+
+## Skills Workflow (les plus utilises)
+
+| Skill | Usage |
+|-------|-------|
+| `/apex` | Feature complete, >99% succes (version Melvynx) |
+| `/oneshot` | Quick fix rapide sans intervention |
+| `/workflow-apex-free` | Apex version gratuite |
+| `/workflow-code` | Workflow code standard |
+| `/workflow-steps` | Workflow multi-etapes avec fichiers step |
+| `/plan-before-code` | Force la phase planification avant code |
+| `/strategic-compact` | Compactage strategique du contexte |
+
+## Skills Maintenance & DevOps
+
+| Skill | Usage |
+|-------|-------|
+| `/infra-check` | Verification infrastructure (BOKADOR, VPS, Mac) |
+| `/backup-strategy` | Strategie backup 3-2-1 |
+| `/docker-management` | Gestion conteneurs Docker |
+| `/monitoring-setup` | Mise en place monitoring |
+| `/network-hardening` | Durcissement reseau |
+| `/security-config-audit` | Audit config securite |
+| `/incident-response` | Protocole reponse incident |
+| `/error-recovery` | Recovery apres erreur |
+
+## Skills Git & Code
+
+| Skill | Usage |
+|-------|-------|
+| `/commit` | Commits simplifies (Conventional Commits) |
+| `/create-pr` | Creation Pull Request |
+| `/merge` | Merge branches |
+| `/fix-errors` | Corrige erreurs en parallele (sub-agents) |
+| `/fix-grammar` | Corrige grammaire en bulk |
+| `/fix-pr-comments` | Corrige commentaires PR |
+| `/git-workflow` | Workflow Git complet |
+| `/tdd-workflow` | Test-Driven Development |
+| `/parallel-agents` | Lancer agents en parallele |
+
+## Skills Memoire & Apprentissage
+
+| Skill | Usage |
+|-------|-------|
+| `/claude-memory` | Gestion optimisee CLAUDE.md |
+| `/auto-learn` | Auto-apprentissage des preferences |
+| `/learn-from-user` | Apprentissage explicite correction |
+| `/my-profile` | Profil kim13 complet |
+| `/my-daily-standup` | Standup quotidien (charge contexte) |
+| `/my-analysis` | Analyse personnalisee |
+| `/thoughts-directory` | Reflexions et decisions |
+| `/context-management` | Gestion contexte avancee |
+
+## Skills Meta & Creation
+
+| Skill | Usage |
+|-------|-------|
+| `/prompt-creator` | Cree des prompts optimises |
+| `/meta-prompt-creator` | Cree des prompts qui creent des prompts |
+| `/skill-creator` | Cree des skills |
+| `/subagent-creator` | Cree des sub-agents |
+| `/automation-patterns` | Patterns d'automatisation |
+| `/ultrathink` | Max thinking tokens (2+ min reflexion) |
+| `/ralph-loop` | Boucle iterative Ralph |
+
+---
+
+# CHAPITRE 22 -- AGENTS CUSTOM KIM13 (20 agents)
+
+| Agent | Role | Quand l'utiliser |
+|-------|------|-----------------|
+| `action.md` | Actions generiques | Taches courtes autonomes |
+| `backup-verifier.md` | Verification backups | Avant/apres operations backup |
+| `code-explorer.md` | Exploration codebase | Comprendre structure projet |
+| `debugger.md` | Debug avance | Erreurs complexes multi-fichiers |
+| `doc-explorer.md` | Exploration documentation | Chercher dans docs techniques |
+| `doc-writer.md` | Redaction documentation | Runbooks, README, ADR |
+| `explore-codebase.md` | Exploration code (rapide) | Recherche fichiers/patterns |
+| `explore-docs.md` | Exploration docs | Context7, web search |
+| `firewall-auditor.md` | Audit firewall | Verifier regles UFW/iptables |
+| `infra-checker.md` | Check infrastructure | Etat BOKADOR/VPS/Mac |
+| `jarvis.md` | Assistant general | Taches multi-domaines |
+| `network_monitor.md` | Monitoring reseau | Connectivite, latence, ports |
+| `performance-tuner.md` | Optimisation perf | CPU, RAM, disque, reseau |
+| `planner.md` | Planification | Plans d'execution complexes |
+| `researcher.md` | Recherche web | Exa, Context7, web search |
+| `reviewer.md` | Code review | Qualite, securite, clean code |
+| `security-auditor.md` | Audit securite | Scan vulnerabilites, permissions |
+| `test-writer.md` | Ecriture tests | Unit, integration, E2E |
+| `web-search.md` | Recherche web | WebSearch, WebFetch, Exa |
+| `websearch.md` | Recherche web (alt) | Variante web-search |
+
+---
+
+# CHAPITRE 23 -- HOOKS KIM13 (8 hooks)
+
+## Hooks actifs dans settings.json
+
+| Hook | Type | Script | Declencheur |
+|------|------|--------|------------|
+| command-validator | PreToolUse (Bash) | `bun ~/.claude/scripts/command-validator/src/cli.ts` | Valide chaque commande Bash avant execution |
+| edit-logger | PostToolUse (Edit\|Write) | `echo '[HOOK] File modified' >> /tmp/claude-code-edits.log` | Log toute modification fichier |
+| notify-stop | Stop | `bash ~/.claude/hooks/notify-stop.sh` | Notification sonore + visuelle fin de tache |
+| set-tab-title | UserPromptSubmit | `bash ~/.claude/hooks/set-tab-title.sh` | Met a jour le titre du tab terminal |
+| notification-sound | Notification | `afplay /System/Library/Sounds/Funk.aiff` | Son quand Claude a besoin d'attention |
+
+## Hooks disponibles (dans ~/.claude/hooks/)
+
+| Script | Role |
+|--------|------|
+| `block-delete.sh` | Bloque les suppressions non autorisees |
+| `claude-firewall.js` | Firewall commandes Claude (JS) |
+| `jarvis-firewall.js` | Firewall commandes Jarvis (JS) |
+| `notify-permission.sh` | Notification demande de permission |
+| `notify-with-timeout.sh` | Notification avec auto-dismiss |
+| `pre-backup.sh` | Backup automatique avant operations risquees |
+
+---
+
+# CHAPITRE 24 -- PLUGINS ACTIFS KIM13
+
+| Plugin | Source | Role |
+|--------|--------|------|
+| hookify | claude-plugins-official | Gestion avancee des hooks |
+| commit-commands | claude-plugins-official | Commandes de commit ameliorees |
+| feature-dev | claude-plugins-official | Workflow developpement features |
+| code-review | claude-plugins-official | Review de code automatisee |
+| code-simplifier | claude-plugins-official | Simplification et refactoring |
+| pr-review-toolkit | claude-plugins-official | Toolkit review Pull Requests |
+| claude-md-management | claude-plugins-official | Gestion fichiers CLAUDE.md |
+| claude-code-setup | claude-plugins-official | Setup et configuration |
+| security-guidance | claude-plugins-official | Conseils securite |
+
+RAPPEL MELVYNX : copier le code des plugins dans ses propres skills pour garder le controle.
+
+---
+
+# CHAPITRE 25 -- RULES KIM13 (20 regles)
+
+## Regles alwaysApply (chargees a chaque session)
+
+| Fichier | Role |
+|---------|------|
+| `01-no-delete-without-triple-backup.md` | REGLE #1 ABSOLUE : triple backup avant toute suppression |
+| `02-memory-architecture-melvynx.md` | Architecture memoire 3 niveaux obligatoire |
+| `07-melvynx-checklist.md` | Bonnes pratiques Melvynx |
+| `08-claude-code-commands.md` | Commandes et raccourcis |
+| `09-mac-specifics.md` | Regles specifiques MacBook M4 |
+| `11-auto-learning-live.md` | Auto-apprentissage temps reel |
+| `24-process-kill-protocol.md` | Protocole obligatoire avant kill processus |
+| `25-notification-format.md` | Format alertes macOS obligatoire |
+| `25-progress-bars.md` | Barre de progression obligatoire taches longues |
+
+## Regles ciblees (globs)
+
+| Fichier | Globs | Role |
+|---------|-------|------|
+| `20-json-files.md` | `*.json` | Regles manipulation JSON |
+| `21-git-operations.md` | `.git/**` | Regles operations Git |
+| `22-security-context.md` | `**/.env*` | Regles securite secrets |
+| `23-test-context.md` | `**/*.test.*` | Regles ecriture tests |
+| `24-bbox-nat-infrastructure.md` | `**/ssh*, **/network*, **/nat*, **/firewall*, **/port*, **/*.conf` | Infra reseau Bbox |
+
+## Regles reference Melvynx
+
+| Fichier | Role |
+|---------|------|
+| `10-melvynx-sync.md` | Sync avec repo Melvynx/aiblueprint |
+| `12-progress-tracking.md` | Progression visible taches longues |
+| `30-bible-melvynx-reference.md` | Bible = source de verite |
+| `31-workflows-melvynx.md` | Workflows reference rapide |
+| `32-prompting-melvynx.md` | Techniques prompting |
+| `33-context-engineering-melvynx.md` | Context engineering |
+
+---
+
+# CHAPITRE 26 -- DENY-LIST COMPLETE (34 regles)
+
+## Commandes Bash interdites
+
+```
+rm -rf *              # Suppression recursive
+rm -rf /              # Suppression racine
+rm -rf ~              # Suppression home
+rm -rf G:*            # Protection disque G: BOKADOR
+rm -rf H:*            # Protection disque H: BOKADOR
+rm -rf C:\Windows*    # Protection Windows
+sudo rm *             # Suppression root
+sudo rm -rf *         # Suppression root recursive
+chmod 777 *           # Permissions trop permissives
+git push --force *    # Force push
+git push -f *         # Force push
+git reset --hard *    # Reset destructif
+curl * | bash         # Execution code distant
+curl * | sh           # Execution code distant
+wget * | bash         # Execution code distant
+wget * | sh           # Execution code distant
+npm publish *         # Publication npm
+reboot *              # Redemarrage
+shutdown *            # Arret
+init 0                # Arret
+init 6                # Redemarrage
+dd if=/dev/zero*      # Ecrasement disque
+mkfs *                # Formatage
+format *              # Formatage
+diskutil eraseDisk *  # Formatage macOS
+diskutil eraseVolume *# Formatage volume macOS
+netcfg *              # Config reseau (incident passe)
+> /dev/sd*            # Ecriture directe disque
+```
+
+## Fichiers interdits en lecture
+
+```
+.env, .env.*          # Variables d'environnement
+**/*password*         # Fichiers mots de passe
+**/*secret*           # Fichiers secrets
+**/*token*            # Fichiers tokens
+**/*.pem              # Certificats prives
+.ssh/id_*             # Cles SSH privees
+```
+
+---
+
+# CHAPITRE 27 -- RESEAU COMPLET BBOX/NAT (12 regles)
+
+## Topologie
+
+```
+Internet
+  |
+  v
+Bbox (IP publique: 31.35.20.184, dynamique)
+  |
+  +-- DESKTOP-6SNQTTK (BOKADOR Windows, SSH interne 2222/22222)
+  +-- kims-MBP (MacBook Pro M4, SSH interne 22)
+  +-- 192.168.1.97 (device SSH port 44)
+  +-- 192.168.1.4 (Ancien Mac, SSH port 22)
+```
+
+## Table NAT/PAT active
+
+| Port ext | Port int | Equipement | Proto | Restriction IP | Usage |
+|----------|----------|------------|-------|----------------|-------|
+| 22 | 22 | Ancien Mac | TCP | * | SSH standard ancien Mac |
+| 443 | 443 | BOKADOR | TCP | * | HTTPS/SSL passthrough |
+| 1983 | 22 | kims-MBP | TCP | * | SSH MacBook depuis exterieur |
+| 2223 | 2222 | BOKADOR | TCP | VPS only | SSH VPS→Windows |
+| 2224 | 2222 | BOKADOR | TCP | VPS only | SSH VPS→Windows (2eme) |
+| 4422 | 44 | 192.168.1.97 | TCP | * | SSH externe custom |
+| 9999 | 9 | BOKADOR | UDP | * | Wake-on-LAN via VPS |
+| 38271 | 2222 | kims-MBP | TCP | VPS only | SSH VPS→Mac |
+| 44 | 22 | BOKADOR | TCP | * | SSH test |
+| 47281 | 22222 | BOKADOR | TCP | * | SSH anti-vol port obscur |
+| 50000 | 3389 | BOKADOR | TCP | * | RDP port non-standard |
+
+## Connexions rapides
+
+```bash
+ssh -p 1983 kim13@31.35.20.184           # Mac depuis exterieur
+ssh -p 47281 kim13@31.35.20.184          # BOKADOR SSH (port obscur)
+ssh -p 443 kim13@31.35.20.184            # BOKADOR via HTTPS port
+ssh -p 38271 kim13@31.35.20.184          # Mac depuis VPS
+ssh -p 2223 user@31.35.20.184            # Windows depuis VPS
+ssh root@109.176.197.139                 # VPS Kali direct
+```
+
+## Wake-on-LAN BOKADOR depuis VPS
+
+```bash
+ssh root@109.176.197.139 "wakeonlan -i 31.35.20.184 -p 9999 <MAC_BOKADOR>"
+```
+
+---
+
+# CHAPITRE 28 -- SCRIPTS & FICHIERS MEMOIRE KIM13
+
+## Scripts (~/.claude/scripts/)
+
+| Script | Role |
+|--------|------|
+| `command-validator/` | Valide commandes Bash avant execution (bun/TypeScript) |
+| `statusline/` | StatusLine avancee (bun/TypeScript) : modele, cout, tokens, %, git |
+| `auto-backup.sh` | Backup automatique config Claude |
+| `claude-session.sh` | Gestion sessions Claude Code |
+| `watch-claude-config.sh` | Watchdog modifications config |
+
+## Fichiers memoire (~/.claude/memory/)
+
+| Fichier | Role |
+|---------|------|
+| `00_status.md` | Etat courant du systeme |
+| `01_architecture.md` | Architecture infra (OBLIGATOIRE lecture avant action) |
+| `02_lessons_log.md` | Lecons apprises (OBLIGATOIRE lecture avant action) |
+| `03_conventions.md` | Conventions strictes (OBLIGATOIRE lecture avant action) |
+| `04_autonomy_matrix.md` | Matrice d'autonomie (quand agir vs demander) |
+| `05_reflection_loop.md` | Boucle de reflexion |
+| `07_security_bypass_guards.md` | Gardes securite bypass |
+| `08_claude_code_advanced_patterns.md` | Patterns avances Claude Code |
+| `09_methode_melvynx_complete.md` | Methode Melvynx complete |
+| `CLAUDE_WEB_MEMORY_EXHAUSTIVE.txt` | Memoire web exhaustive |
+
+## Bootstrap Jarvis (OBLIGATOIRE avant chaque action)
+
+Lire silencieusement dans l'ordre :
+1. `memory/01_architecture.md` — etat du projet
+2. `memory/02_lessons_log.md` — erreurs passees
+3. `memory/03_conventions.md` — regles strictes
+
+---
+
+# CHAPITRE 29 -- PROCEDURES OPERATIONNELLES
+
+## 29.1 Night Audit (Opera Cloud PMS - H0373)
+
+Contexte : Mercure Paris Montmartre, poste de Night Auditor.
+Opera Cloud PMS est le systeme de gestion hoteliere.
+Claude Code peut assister pour : scripts d'automatisation, reporting, analyse de donnees, mais n'a PAS acces direct a Opera Cloud.
+
+## 29.2 Runbook : BOKADOR inaccessible
+
+1. Ping `31.35.20.184` depuis VPS : `ssh root@109.176.197.139 "ping -c 3 31.35.20.184"`
+2. Si timeout : Wake-on-LAN via VPS (UDP port 9999)
+3. Attendre 2 min, re-ping
+4. Si toujours down : verifier IP Bbox (dynamique), verifier alimentation physique
+5. Escalation : acces physique requis
+
+## 29.3 Runbook : VPS inaccessible
+
+1. Ping `109.176.197.139` depuis Mac : `ping -c 3 109.176.197.139`
+2. Si timeout : verifier console Hostinger (reboot VPS)
+3. Si SSH refuse : verifier fail2ban (`fail2ban-client status sshd`)
+4. Si IP bannie : unban depuis console Hostinger ou attendre expiration
+
+## 29.4 Runbook : Espace disque MacBook plein
+
+1. `df -h /` pour confirmer
+2. Verifier caches : `du -sh ~/Library/Caches/*` (triable)
+3. Verifier logs : `du -sh ~/Library/Logs/*`
+4. Verifier Docker : `docker system df` puis `docker system prune`
+5. Verifier node_modules : `find ~ -name node_modules -type d -maxdepth 4`
+6. Transferer media vers BOKADOR : `python3 ~/transfer_media_to_bokador.py`
+7. JAMAIS supprimer sans backup confirme
+
+## 29.5 Runbook : Contexte Claude Code sature (>80%)
+
+1. `/context` pour verifier le pourcentage
+2. `/clear` immediat
+3. Si tache en cours : noter l'etat dans un fichier step avant /clear
+4. Relancer avec prompt discovery (step files)
+5. Reduire MCP si >3 actifs
+
+---
+
+# CHAPITRE 30 -- PROTOCOLE AUTO-APPRENTISSAGE KIM13
+
+## Declencheurs automatiques
+
+1. **Correction utilisateur** : quand kim13 corrige une action → `/memorize` auto
+2. **Echec commande 2+ fois** : creer regle dans `.claude/rules/`
+3. **Preference exprimee** : ajouter dans `rules/11-auto-learning-live.md` ET knowledge graph
+4. **Decision technique** : persister dans `memory/` + knowledge graph
+
+## Triple persistance obligatoire
+
+Chaque apprentissage doit etre sauvegarde dans :
+1. `rules/` (fichier .md avec alwaysApply ou globs)
+2. Knowledge graph (mcp memory)
+3. Rules specialisees si securite
+
+## Commandes memoire
+
+| Commande | Action |
+|----------|--------|
+| `/memorize` | Workflow auto-apprentissage complet |
+| `/auto-learn` | Detection et persistance patterns |
+| `/learn-from-user` | Apprentissage explicite |
+| `/cloud-memory` | Optimisation quand fichiers >100 lignes |
+| `/standup` | Charge contexte en debut de session |
+| `/my-profile` | Affiche profil complet kim13 |
+
+---
+
+**FIN DE LA BIBLE COMPLETE -- Version 2.0 -- Derniere mise a jour : 2026-03-26**
