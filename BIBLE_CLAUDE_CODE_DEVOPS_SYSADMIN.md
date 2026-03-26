@@ -52,6 +52,12 @@
 - **CHAPITRE 42** -- Claude Review (Beta Entreprise)
 - **CHAPITRE 43** -- Anomalies Connues & Corrections
 - **CHAPITRE 44** -- CLAUDE.md Global Reference
+- **CHAPITRE 45** -- Profils SSH (~/.ssh/config)
+- **CHAPITRE 46** -- Methode Melvynx Complete (20 sections)
+- **CHAPITRE 47** -- Skills Cowork (12 skills VM)
+- **CHAPITRE 48** -- Anti-Patterns Complets (18 patterns)
+- **CHAPITRE 49** -- Checklists Pre/Post Session
+- **CHAPITRE 50** -- Flags CLI Avances Claude Code
 
 ---
 ---
@@ -1841,4 +1847,197 @@ Avant CHAQUE action, lire silencieusement : memory/01, 02, 03.
 
 ---
 
-**FIN DE LA BIBLE COMPLETE -- Version 4.0 -- 44 chapitres, ~1900 lignes -- Derniere mise a jour : 2026-03-26**
+---
+---
+
+# CHAPITRE 45 -- PROFILS SSH (~/.ssh/config)
+
+```
+Host windows-rdp
+    HostName 176.133.20.227
+    User kim13
+    Port 2222
+    IdentityFile ~/.ssh/id_ed25519
+    LocalForward 3390 localhost:3389
+
+Host vps-kim
+    HostName 31.35.20.184
+    User kim13
+    Port 443
+    LocalForward 13389 localhost:3389
+
+Host vps
+    HostName 109.176.197.139
+    User root
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+
+Host hostinger
+    HostName 109.176.197.139
+    Port 443
+    User root
+    SetEnv TERM=xterm-256color
+
+Host bokador
+    AddressFamily inet
+    HostName 31.35.20.184
+    Port 443
+    User kim13
+    LocalForward 13389 localhost:3389
+```
+
+## Usage rapide
+
+| Commande | Destination |
+|----------|-------------|
+| `ssh vps` | VPS Kali (root, keepalive 60s) |
+| `ssh hostinger` | VPS via port 443 |
+| `ssh bokador` | BOKADOR via port 443 + tunnel RDP |
+| `ssh vps-kim` | BOKADOR via port 443 (nom legacy) |
+| `ssh windows-rdp` | PC via domicile + tunnel RDP |
+
+---
+
+# CHAPITRE 46 -- METHODE MELVYNX COMPLETE (20 sections, memory/09)
+
+Reference fusionnee de toutes les transcriptions Melvynx. Contenu cle non couvert ailleurs :
+
+## Philosophie Vibe Coding
+- Developpeur = chef d'orchestre de l'IA, pas ecrivain de code
+- Prompting > coding : la competence cle est de bien communiquer avec l'IA
+- Ne JAMAIS ecrire de prompts a la main → meta-prompting obligatoire
+
+## Template CLAUDE.md Melvynx (structure recommandee)
+Role > Workflow > Contexte Projet > Memoire (4 niveaux) > Securite > macOS/Systeme > MCP Servers > Sous-Agents > Prompting > Qualite > Git > Plugins & Hooks > Checklists > Anti-patterns
+
+REGLE : CLAUDE.md ne doit JAMAIS depasser 500 lignes (anti-pattern mega-CLAUDE.md)
+
+## Principe de protection du contexte (sub-agents)
+- Ne JAMAIS laisser l'agent principal faire de la recherche web ou lire de longues docs
+- Le sub-agent consomme des dizaines de milliers de tokens de son cote
+- Il ne renvoie qu'un resume ultra-condense (1500 mots au lieu de 120 000)
+- Protege le contexte principal de la pollution
+
+## Clear Context entre planification et execution
+- Separer la phase de planification de la phase d'execution
+- Plan valide → /clear ou /compact → Execution
+- Repartir sur base de tokens allegee pour l'implementation
+
+## Memoire modulaire chirurgicale
+- Refuser de polluer le CLAUDE.md global avec des instructions temporaires
+- Utiliser `.claude/rules/` avec regles contextuelles chargees conditionnellement
+- Chaque regle ne se charge que quand elle est pertinente (globs)
+
+## MCP limitation stricte
+- Limiter a 2 MCP essentiels : Context7 + Exa
+- Parametre `mcp.autoSearchThreshold: 10%` — si MCP prennent >10% memoire, outil de recherche optimise active
+- Plus de MCP = plus de latence + contexte gaspille
+
+## Workflows par taille
+| Taille | Lignes | Approche |
+|--------|--------|----------|
+| XS | <50 | Direct, pas de plan |
+| S | 50-200 | Plan simple, un agent |
+| M | 200-1000 | EPCT complet |
+| L | 1000+ | Equipes multi-agents, worktrees |
+
+## Correspondance config kim13
+Deja en place : CLAUDE.md 13 regles CRITICAL, settings.json 39 allow + 36 deny + 4 hooks + 9 plugins, 27+ skills, auto-backup 3 couches, delete guard, firewall JARVIS, 16+ MCP, aliases zsh, memory files, step files, Conventional Commits.
+
+A corriger : edit-logger.js fantome, bypass-guards a fusionner.
+
+---
+
+# CHAPITRE 47 -- SKILLS COWORK (12 skills VM)
+
+Skills disponibles dans l'environnement Cowork (VM Linux legere, differents des skills MacBook) :
+
+| Skill | Declencheur |
+|-------|------------|
+| `schedule` | Taches planifiees (cron on-demand ou intervalle) |
+| `xlsx` | Tout fichier spreadsheet (.xlsx, .csv, .tsv) |
+| `pdf` | Tout fichier PDF (extraction, merge, split, formulaires, OCR) |
+| `pptx` | Tout fichier PowerPoint (creation, edition, extraction) |
+| `docx` | Tout document Word (creation, edition, TOC, images) |
+| `kim13-terminal` | Memoire multi-niveaux kim13 (profil, preferences, knowledge graph) |
+| `skill-creator` | Creer, modifier, optimiser des skills + evals |
+| `security-hardening` | Hardening serveur, audit, OWASP, firewall, SSL, fail2ban |
+| `monitoring-alerting` | Prometheus, Grafana, alerting, dashboards, SLO/SLI |
+| `sysadmin-devops` | IaC, CI/CD, Docker, K8s, Ansible, Terraform, scripts Bash |
+| `cowork-plugin-customizer` | Personnaliser un plugin Claude Code |
+| `create-cowork-plugin` | Creer un plugin from scratch |
+
+---
+
+# CHAPITRE 48 -- ANTI-PATTERNS COMPLETS (18 patterns)
+
+| # | Anti-Pattern | Pourquoi c'est mauvais | Alternative |
+|---|-------------|----------------------|-------------|
+| 1 | Mega-CLAUDE.md > 500 lignes | Pollue le contexte a chaque session | Deplacer dans rules/ avec globs |
+| 2 | Trop de MCP (>3) | Latence + contexte gaspille | Max 2-3, toolSearchMode: auto |
+| 3 | Hooks bloquants | Ralentissent toute execution | async: true |
+| 4 | Context stuffing | Infos inutiles dans CLAUDE.md | Memoire modulaire chirurgicale |
+| 5 | Pas de tests apres modifs | Regressions silencieuses | /test ou --test flag |
+| 6 | Sessions >50% sans /compact | Qualite degradee, lost-in-the-middle | /compact ou /clear |
+| 7 | Ecrire prompts a la main | Sous-optimal, pas structure | Meta-prompting (/prompt-creator) |
+| 8 | Agents teams zones chevauchees | Agents se marchent dessus | Un agent par zone separee |
+| 9 | Force push sur main | Perte historique | PR + merge |
+| 10 | rm au lieu de trash | Perte irreversible | alias t=trash |
+| 11 | Ecraser configs existantes | Perte config | TOUJOURS fusionner (merge) |
+| 12 | /batch multi-PR | Trop de PR a review | Main agent + sub-agents |
+| 13 | Taguer fichiers avec @ (Apex) | L'exploration les trouve mieux | Laisser exploration auto |
+| 14 | Empiler demandes pendant travail IA | Perturbe l'agent | Attendre fin de tache |
+| 15 | Agent principal fait recherche web | Pollue contexte (28K+ tokens) | Sub-agent web-search |
+| 16 | declare -A dans scripts Mac | Incompatible zsh/bash3 macOS | Fonctions simples |
+| 17 | echo -e dans scripts Mac | Non portable | printf |
+| 18 | Lancer Claude Code a la racine (/) | Acces systeme complet non desire | Toujours cd dans un projet |
+
+---
+
+# CHAPITRE 49 -- CHECKLISTS PRE/POST SESSION
+
+## Pre-session
+
+- [ ] `git status` propre
+- [ ] CLAUDE.md a jour
+- [ ] Branche correcte
+- [ ] Contexte libre (pas de session precedente polluante)
+- [ ] `/standup` pour charger le contexte
+- [ ] Bootstrap Jarvis : lire memory/01, 02, 03
+- [ ] Verifier `/context` < 10%
+
+## Post-session
+
+- [ ] Tests passent
+- [ ] `git status` propre
+- [ ] Docs a jour si API modifiee
+- [ ] `/compact` ou `/clear` si session longue
+- [ ] `/auto-learn` pour persister les patterns
+- [ ] Changelog a jour
+- [ ] Knowledge graph mis a jour si nouvelles decisions
+
+## Pre-intervention majeure
+
+- [ ] `/master-audit` avant intervention
+- [ ] Backup config : `ccbackup`
+- [ ] Verifier SSH vers toutes les machines
+- [ ] Documenter dans GitHub AVANT (regle #0)
+
+---
+
+# CHAPITRE 50 -- FLAGS CLI AVANCES CLAUDE CODE
+
+| Flag | Usage |
+|------|-------|
+| `--dangerously-skip-permissions` | Bypass toutes les confirmations (alias: god) |
+| `--model claude-opus-4-6` | Forcer un modele specifique |
+| `--allowedTools Bash,Read,Write` | Limiter les outils disponibles |
+| `--output-format json` | Sortie JSON pour CI/CD |
+| `-p "question"` / `--print` | One-shot sans boucle agentique |
+| `--resume` | Reprendre une session precedente |
+| `--continue` | Continuer la derniere conversation |
+| `SANDBOX=1 claude` | Forcer mode sandbox (bypass permission sur VPS) |
+
+---
+
+**FIN DE LA BIBLE COMPLETE -- Version 5.0 FINALE -- 50 chapitres -- Derniere mise a jour : 2026-03-26**
