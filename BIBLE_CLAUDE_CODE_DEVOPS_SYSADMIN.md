@@ -58,6 +58,8 @@
 - **CHAPITRE 48** -- Anti-Patterns Complets (18 patterns)
 - **CHAPITRE 49** -- Checklists Pre/Post Session
 - **CHAPITRE 50** -- Flags CLI Avances Claude Code
+- **CHAPITRE 51** -- Scripts Deployes (VPS + Mac, 7 scripts)
+- **CHAPITRE 52** -- Etat Systeme & Taches Restantes
 
 ---
 ---
@@ -2040,4 +2042,98 @@ Skills disponibles dans l'environnement Cowork (VM Linux legere, differents des 
 
 ---
 
-**FIN DE LA BIBLE COMPLETE -- Version 5.0 FINALE -- 50 chapitres -- Derniere mise a jour : 2026-03-26**
+---
+---
+
+# CHAPITRE 51 -- SCRIPTS DEPLOYES (VPS + Mac)
+
+## Scripts VPS Kali (109.176.197.139)
+
+| Script | Lignes | Role |
+|--------|--------|------|
+| `setup-claude-code-vps-kali.sh` | 756 | Setup initial complet (Node, CC, CLAUDE.md, settings, rules, agents, SSH, UFW, fail2ban, sysctl, tmux) |
+| `restore-merge-claude-code.sh` | 577 | Restauration configs ecrasees + fusion sans perte |
+| `audit-claude-code-vps.sh` | 666 | Audit 17 sections, 199 verifications |
+| `fix-melvynx-gaps.sh` | 358 | MCP 4→2, workflow steps, logging actif, nettoyage auto |
+| `setup-autolearn-system.sh` | 501 | Boucle auto-apprentissage complete |
+| `sync-memory-vps.sh` | — | Memorisation lecons + conventions dans memory/ |
+
+## Script Mac
+
+| Script | Lignes | Role |
+|--------|--------|------|
+| `sync-mac-from-vps.sh` | 730 | Sync Mac ← VPS (CLAUDE.md, settings, rules, agents, skills, commands, memory, step, tmux, aliases) |
+
+## Hooks VPS (differents des hooks Mac)
+
+| Hook | Role |
+|------|------|
+| `reflection-loop.sh` | Boucle reflexion post-action |
+| `auto-learn.sh` | Auto-apprentissage automatique |
+| `jarvis-firewall.js` | Firewall commandes Jarvis |
+| `notify.js` | Notifications |
+| `validate_bash.js` | Validation commandes Bash |
+
+## Scores d'audit VPS
+
+| Audit | Score | Details |
+|-------|-------|---------|
+| Audit 1 (initial) | 197/197 PASS, 0 FAIL | Avant fix Melvynx |
+| Audit 2 (post-fix) | 198/198 PASS, 0 FAIL, 0 WARN | Apres fix + autolearn |
+| Score Melvynx | Structure 100%, Securite 150%, Workflows 95%, Auto-learning 100% | Evaluation qualite config |
+
+## Backups (~/.claude/backups/)
+
+| Dossier | Date/Contenu |
+|---------|-------------|
+| 20260318 | Premiere session Cowork |
+| 20260322 | Session 22 mars |
+| 20260323 | Session 23 mars |
+| 20260323-032420-before-melvynx-merge | Avant merge Melvynx |
+| 20260323-audit | Apres audit |
+| 20260323-session2 | Session 2 du 23 |
+| 20260326 | Session courante |
+| claude-config | Config complete |
+| claude-melvynx-macos | Config Melvynx Mac |
+| melvynx-memory-system | Systeme memoire Melvynx |
+
+---
+
+# CHAPITRE 52 -- ETAT SYSTEME & TACHES RESTANTES
+
+## Etat courant (2026-03-26)
+
+| Element | Valeur |
+|---------|--------|
+| Claude Code version | v2.1.76 |
+| MacBook | Operationnel |
+| VPS Kali | Operationnel, audit 198/198 |
+| BOKADOR | Operationnel, SSH OK |
+| Dernier sync Mac←VPS | 2026-03-18 |
+| Bible version | 5.0+ (52 chapitres, ~2100 lignes) |
+
+## Taches restantes (non completees)
+
+| Priorite | Tache | Machine |
+|----------|-------|---------|
+| HAUTE | Migration iCloudDrive 525Go restants vers H: | Mac→BOKADOR |
+| HAUTE | Lancer transfer_media_to_bokador.py (11632 fichiers, 201Go) | Mac→BOKADOR |
+| MOYENNE | Augmenter MaxStartups SSH sur BOKADOR | BOKADOR |
+| MOYENNE | Configurer mcp.json sur Mac (Context7 + Exa) | Mac |
+| MOYENNE | Corriger edit-logger.js fantome dans settings.json | Mac |
+| BASSE | mv ~/.claude/settings.json.new ~/.claude/settings.json (hooks notification) | Mac |
+| BASSE | Changer iTerm de "Alerts" a "Banners" (System Settings > Notifications) | Mac |
+| BASSE | Synchroniser config BOKADOR avec architecture Mac/VPS | BOKADOR |
+
+## Documents crees lors des sessions precedentes
+
+| Document | Taille | Contenu |
+|----------|--------|---------|
+| Guide-Claude-Code-DevOps.docx | 26.8KB, 561 paragraphes | Checklist 22 sections (4 masterclass Melvynx, ~12700 lignes → 200 instructions) |
+| transcription_youtube.txt | 446 lignes | Transcription video "Claude Code fonctionne 100x mieux" |
+| transfer_media_to_bokador.py | v4 | Script rsync Mac→BOKADOR (11632 fichiers, 201Go) |
+| BIBLE_CLAUDE_CODE_DEVOPS_SYSADMIN.md | 2100+ lignes | Ce document |
+
+---
+
+**FIN DE LA BIBLE COMPLETE -- Version 6.0 -- 52 chapitres -- Derniere mise a jour : 2026-03-26**
