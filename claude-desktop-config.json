@@ -1,0 +1,49 @@
+{
+  "mcpServers": {
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "fetch": {
+      "command": "C:\\Users\\kim13\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\uvx.EXE",
+      "args": [
+        "mcp-server-fetch"
+      ]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Users\\kim13\\Documents",
+        "C:\\Users\\kim13\\Downloads",
+        "C:\\Users\\kim13\\Desktop"
+      ]
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "GITHUB_TOKEN_REDACTED"
+      }
+    }
+  },
+  "preferences": {
+    "allowAllBrowserActions": true,
+    "dispatchTrustedCodeWorkspaces": [
+      "C:/Users/kim13/.claude-workspace",
+      "C:/Users/kim13"
+    ],
+    "coworkScheduledTasksEnabled": true,
+    "ccdScheduledTasksEnabled": false,
+    "sidebarMode": "task",
+    "coworkWebSearchEnabled": true,
+    "keepAwakeEnabled": true
+  }
+}
