@@ -3,9 +3,26 @@
 Reference complete extraite de la Masterclass 4h + Setup Terrence + Formation Complete de Melvynx (CodeLynx).
 Fusionnee et structuree pour servir de reference absolue a Claude Code.
 
+> **V2.0** (2026-03-26) — Mise a jour majeure : +56% de contenu (527 → 820 lignes). Voir [CHANGELOG.md](CHANGELOG.md) et [BIBLE_MELVYNX_V2.md](BIBLE_MELVYNX_V2.md).
+
 ---
 
-## Table des matieres
+## Fichiers du repo
+
+| Fichier | Description | Lignes |
+|---------|-------------|--------|
+| **[BIBLE_MELVYNX_V2.md](BIBLE_MELVYNX_V2.md)** | Bible V2 complete — 14 chapitres + anti-patterns | 820 |
+| [README.md](README.md) | Bible V1 — 30 sections (ce fichier) | ~1200 |
+| [BIBLE_CLAUDE_CODE_DEVOPS_SYSADMIN.md](BIBLE_CLAUDE_CODE_DEVOPS_SYSADMIN.md) | Bible etendue DevOps/SysAdmin — 40 chapitres | 99 Ko |
+| [BIBLE_MACOS.md](BIBLE_MACOS.md) | Bible specifique macOS | 400+ |
+| [BIBLE_WINDOWS.md](BIBLE_WINDOWS.md) | Bible specifique Windows | 400+ |
+| [BIBLE_LINUX.md](BIBLE_LINUX.md) | Bible specifique Linux/VPS | 400+ |
+| [CHANGELOG.md](CHANGELOG.md) | Historique des modifications | - |
+| [settings-bokador-current.json](settings-bokador-current.json) | Config Claude Code BOKADOR (43 deny, 20 agents) | - |
+
+---
+
+## Table des matieres (V1)
 
 1. [Fondamentaux du terminal](#fondamentaux-du-terminal)
 2. [Architecture Claude Code](#architecture-claude-code)
