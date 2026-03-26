@@ -60,6 +60,17 @@
 - **CHAPITRE 50** -- Flags CLI Avances Claude Code
 - **CHAPITRE 51** -- Scripts Deployes (VPS + Mac, 7 scripts)
 - **CHAPITRE 52** -- Etat Systeme & Taches Restantes
+- **CHAPITRE 53** -- CLAUDE_CODE_MASTER_SYSTEM.md (Reference Maitre Fusionnee)
+- **CHAPITRE 54** -- kim_context.json (Profil Machine & Infrastructure)
+- **CHAPITRE 55** -- memory.json (Memoire Persistante JSON)
+- **CHAPITRE 56** -- policy-limits.json & security.log
+- **CHAPITRE 57** -- Scripts Utilitaires ~/.claude/
+- **CHAPITRE 58** -- Agents BOKADOR (14 agents)
+- **CHAPITRE 59** -- Commandes BOKADOR (39 commandes)
+- **CHAPITRE 60** -- Skills BOKADOR (22 skills)
+- **CHAPITRE 61** -- Hooks & Thoughts BOKADOR
+- **CHAPITRE 62** -- Dossiers Speciaux ~/.claude/
+- **CHAPITRE 63** -- Inventaire Complet ~/.claude/ (Arborescence)
 
 ---
 ---
@@ -2136,4 +2147,366 @@ Skills disponibles dans l'environnement Cowork (VM Linux legere, differents des 
 
 ---
 
-**FIN DE LA BIBLE COMPLETE -- Version 6.0 -- 52 chapitres -- Derniere mise a jour : 2026-03-26**
+
+
+# CHAPITRE 53 -- CLAUDE_CODE_MASTER_SYSTEM.md (Reference Maitre Fusionnee)
+
+Fichier : `~/.claude/CLAUDE_CODE_MASTER_SYSTEM.md`
+Statut : Reference complete de 37 sections, fusion de toutes les sources (modeles, architecture, setup, memoire, skills, hooks, MCP, sub-agents, workflows, anti-patterns, checklist)
+
+## Contenu (37 sections)
+
+| Section | Titre | Resume |
+|---------|-------|--------|
+| 0 | Objectif du document | Fusion corpus complet : modeles, Claude Code, DevOps, Melvynx, workflows, nouveautes |
+| 1 | Modeles grands contextes | GPT-5.4, Claude 4.6, Gemini 2.5 Pro = 1M contexte chacun |
+| 2 | Cloud Chat vs API vs Code | Chat=one-shot, API=one-shot, Code=agentique |
+| 3 | Architecture mentale | Boucle : comprendre > contexte > planifier > agir > verifier > boucler |
+| 4 | Installation et setup | Node.js requis, curl install, jamais a la racine |
+| 5 | Abonnements | Pro 20$, Max 5x 100$, Max 20x 200$ |
+| 6 | Terminal pilier | pwd, ls, cd, mkdir, convention ~/Developer/ |
+| 7 | Structure memoire CLAUDE.md | 3 niveaux (Global, Projet, Dossier) + rules modulaires |
+| 8 | Auto-memory vs CLAUDE.md | CLAUDE.md=source de verite, auto-memory=scratchpad |
+| 9 | Permissions et securite | Modes Normal/Accept-Edit/Bypass, deny list stricte |
+| 10 | Commandes et raccourcis | /clear, /init, /stats, @fichier, Shift+Tab, etc. |
+| 11 | Skills/commandes | github-init, front-end-design, skill-creator, debug, one-shot, apex, etc. |
+| 12 | Hooks | PreToolUse, PostToolUse, Stop, Prettier, command-validator |
+| 13 | MCP | Max 2-3, Context7 + Exa privilegies |
+| 14 | Sub-agents | Types Explore/Task, fast-web-search, codebase-explorer, etc. |
+| 15 | Status line | Chemin, modele, contexte %, cout, quota, temps |
+| 16 | 6 nouveautes majeures | Voice, CEMUX, Ask User Question UI, Simplify/Batch, Auto-memory, Schedule/Loop/Review |
+| 17 | Schedule et Loop | Planifier taches, repeter prompts, lie a session vivante |
+| 18 | Code Review | Review parallele, pertinent equipe/entreprise |
+| 19 | Plugins | Prudence, s'inspirer plutot que copier |
+| 20 | Dossier .claude | Centralise sessions, projects, plans, rules, skills, agents |
+| 21 | Meta-prompting | Prompts qui creent des prompts |
+| 22 | Workflow APEV/APEX/EPCT | Analyse>Plan>Execute>Verify ou Explore>Plan>Code>Test |
+| 23 | Prompt discovery | Decouper gros prompts en etapes sequentielles |
+| 24 | Teams | Plusieurs agents coordonnes avec team lead |
+| 25 | Worktrees | Branches paralleles sans conflit |
+| 26 | Review style de travail | Feature->APEX, Fix->one-shot, Bug->debug, Archi->brainstorm |
+| 27 | Clean code/review/debug/brainstorm | 4 workflows specialises |
+| 28 | Erreurs recurrentes | Toute erreur repetitive = regle/commentaire/workflow |
+| 29 | Commentaires comme memoire | Patterns, exemples, conventions dans le code |
+| 30 | CC folder | Idees, journal, scripts, projets, automation |
+| 31 | tmux | Plusieurs tabs/splits, sessions persistantes |
+| 32 | Optimisation contexte | Peu MCP, regles utiles, sub-agents cibles, prompt discovery |
+| 33 | Design de workflow | Humain=controle, IA=execution |
+| 34 | Anti-patterns | 8 erreurs fondamentales a eviter |
+| 35 | Synthese finale | Resume de tout le systeme |
+| 36 | Checklist maitre finale | 24 etapes d'installation et configuration |
+| 37 | Conclusion | Claude Code = systeme d'execution cadre |
+
+---
+
+# CHAPITRE 54 -- kim_context.json (Profil Machine & Infrastructure)
+
+Fichier : `~/.claude/kim_context.json`
+Version : 2026-02-21
+
+## Structure
+
+```json
+{
+  "identity": { "name": "Kim", "job": "Night Auditor Mercure H0373", "pms": "Opera Cloud v25.4.4.0" },
+  "infrastructure": {
+    "macbook": { "model": "MacBook Pro M4 24GB 1To", "claude_code": "v2.1.50" },
+    "windows_server": { "name": "BOKADOR", "gpu": "RTX 3060 12GB", "disks": "C,D,E,G,H,J,K,L" },
+    "vps": { "ip": "109.176.197.139", "os": "Kali Linux", "telegram_bot": "claude_telegram_bot.py" }
+  },
+  "rules": {
+    "never_delete_without_backup_check": true,
+    "never_use_hash_in_scripts": true,
+    "never_overwrite_files": true,
+    "zero_corruption_tolerance": true,
+    "verify_before_asking": true,
+    "default_language": "french"
+  }
+}
+```
+
+## Informations cles
+
+- Watchdog : `~/claude_watchdog.sh` + `com.kim.claude-watchdog` LaunchAgent
+- Scripts diagnostics : `~/diagnostic_ressources.sh`, `~/diagnostic_dechets.sh`
+- Apps desactivees/supprimees : TeamViewer, Google Updater, OneDrive, Parallels, Backblaze, Tuxera, ChatGPT Desktop, Zoom, Sizzy, EaseUS, GitKraken, JetBrains, Dropbox, LogMeIn
+- BOKADOR disque protege : `G:\GOOGLE_DRIVE_NE_PAS_SUPPRIMER_SINON_PERTE_DE_PHOTO`
+
+---
+
+# CHAPITRE 55 -- memory.json (Memoire Persistante JSON)
+
+Fichier : `~/.claude/memory.json`
+Version : 1.0, cree 2026-02-20
+
+## Structure
+
+| Section | Contenu |
+|---------|---------|
+| `_meta` | Description, version, date creation/mise a jour |
+| `user` | Nom "Soly Kim", tel +33 6 24 03 71 04, email solykim@gmail.com |
+| `network.isp_box` | Bbox Sagemcom Fast5330b-r1, IP publique 31.35.20.184 (dynamique), firewall IPv4 ON |
+| `network.nat_rules` | 7 regles NAT (rdp_vps:50000, ssh_externe:4422, ssh_test:44, ssh_anti_theft:47281, SSH_HTTPS:443, ssh_macbook:22, ssh_macbook_actuel:1983) |
+| `network.machines` | BOKADOR (192.168.1.97), MacBook ancien (192.168.1.4), kims-MBP (192.168.1.75) |
+| `projects.telegram_voice_reader` | Script Telethon+osascript, API id 37876353, LaunchAgent com.soly.telegram-voice-reader |
+| `history` | 2 entrees (creation projet 2026-02-17, ajout config reseau 2026-02-20) |
+
+## Differences avec memory/ (fichiers .md)
+
+- `memory.json` = format JSON, lu automatiquement, contient infos reseau + projets + user
+- `memory/*.md` = format Markdown, 10 fichiers (00 a 09), architecture/lecons/conventions/autonomie/reflexion/securite/patterns/methode
+
+---
+
+# CHAPITRE 56 -- policy-limits.json & security.log
+
+## policy-limits.json
+
+Fichier : `~/.claude/policy-limits.json`
+
+```json
+{
+  "restrictions": {
+    "allow_remote_control": { "allowed": false }
+  }
+}
+```
+
+Empeche le controle a distance non autorise de Claude Code.
+
+## security.log
+
+Fichier : `~/.claude/security.log`
+Contenu : Journal des evenements securite (commandes bloquees, force-trash, validations)
+
+Exemple d'entree :
+```
+[2026-03-24 02:56:25] FORCE-TRASH: TRASH OK: /tmp/test-force-trash-guard.txt (rm )
+```
+
+Le security.log est alimente par les hooks de securite (command-validator, claude-firewall.js, jarvis-firewall.js).
+
+---
+
+# CHAPITRE 57 -- Scripts Utilitaires ~/.claude/
+
+## cleanup_old_sessions.sh (420 octets)
+
+Role : Nettoyer les sessions Claude Code de plus de 30 jours
+Fonctionnement :
+- `find ~/.claude/projects/ -name "*.jsonl" -mtime +30`
+- Affiche le nombre de sessions obsoletes
+- NE SUPPRIME PAS automatiquement (affiche la commande pour le faire manuellement)
+
+## save_session.sh (809 octets)
+
+Role : Sauvegarder la session courante avec horodatage
+Fonctionnement :
+- Cree `~/.claude/sessions/session_YYYY-MM-DD_HH-MM.md`
+- Copie le dernier `.jsonl` dans `~/.claude/sessions/raw_*.jsonl`
+- Nettoyage auto des sessions > 7 jours
+
+---
+
+# CHAPITRE 58 -- Agents BOKADOR (agents_bokador_tmp/)
+
+Dossier : `~/.claude/agents_bokador_tmp/` (14 agents copies de BOKADOR)
+
+| Agent | Role |
+|-------|------|
+| `backup-verifier.md` | Verification des sauvegardes |
+| `code-explorer.md` | Exploration de codebase |
+| `debugger.md` | Analyse et resolution de bugs |
+| `doc-writer.md` | Redaction de documentation |
+| `firewall-auditor.md` | Audit des regles firewall |
+| `infra-checker.md` | Verification infrastructure |
+| `jarvis.md` | Agent principal Jarvis (orchestrateur BOKADOR) |
+| `network_monitor.md` | Surveillance reseau |
+| `performance-tuner.md` | Optimisation performances |
+| `planner.md` | Planification de taches |
+| `researcher.md` | Recherche et analyse |
+| `reviewer.md` | Review de code |
+| `security-auditor.md` | Audit de securite |
+| `test-writer.md` | Ecriture de tests |
+
+---
+
+# CHAPITRE 59 -- Commandes BOKADOR (commands_bokador_tmp/)
+
+Dossier : `~/.claude/commands_bokador_tmp/` (39 commandes copiees de BOKADOR)
+
+| Commande | Categorie |
+|----------|-----------|
+| `alert.md` | Monitoring/alerting |
+| `audit.md` | Audit systeme |
+| `backup-now.md` | Sauvegarde immediate |
+| `clean-sys.md` | Nettoyage systeme |
+| `code-review.md` | Review de code |
+| `commit.md` | Git commit |
+| `compact-report.md` | Rapport compact |
+| `debug-error.md` | Debug erreur |
+| `deploy-check.md` | Verification deploiement |
+| `deploy-staging.md` | Deploiement staging |
+| `disk-report.md` | Rapport disques |
+| `doc.md` | Documentation |
+| `fail2ban-mgr.md` | Gestion fail2ban |
+| `fix.md` | Correction rapide |
+| `hotel.md` | Opera Cloud PMS hotel |
+| `infra.md` | Infrastructure |
+| `jarvis-deploy.md` | Deploiement Jarvis |
+| `jarvis-diag.md` | Diagnostic Jarvis |
+| `jarvis-fix.md` | Correction Jarvis |
+| `jarvis-status.md` | Status Jarvis |
+| `jarvis-watch.md` | Surveillance Jarvis |
+| `nginx-mgr.md` | Gestion Nginx |
+| `night-audit.md` | Audit de nuit (hotel) |
+| `optimize.md` | Optimisation |
+| `plan.md` | Planification |
+| `process-mgr.md` | Gestion processus |
+| `refactor.md` | Refactoring |
+| `research.md` | Recherche |
+| `review.md` | Review |
+| `security-log.md` | Logs securite |
+| `smart-commit.md` | Commit intelligent |
+| `spend.md` | Suivi depenses |
+| `ssl-check.md` | Verification SSL |
+| `test.md` | Tests |
+| `thoughts.md` | Reflexions |
+| `tunnel-check.md` | Verification tunnels SSH |
+| `update-sys.md` | Mise a jour systeme |
+| `vps-sec.md` | Securite VPS |
+| `wsl-init.md` | Initialisation WSL |
+
+---
+
+# CHAPITRE 60 -- Skills BOKADOR (skills_bokador_tmp/)
+
+Dossier : `~/.claude/skills_bokador_tmp/` (22 skills copiees de BOKADOR)
+
+| Skill | Categorie |
+|-------|-----------|
+| `automation-patterns/` | Patterns d'automatisation |
+| `backup-strategy/` | Strategie de sauvegarde |
+| `claude-memory/` | Gestion memoire Claude |
+| `context-management/` | Gestion du contexte |
+| `docker-management/` | Gestion Docker |
+| `error-recovery/` | Recuperation d'erreurs |
+| `fix-errors/` | Correction d'erreurs |
+| `git-workflow/` | Workflow Git |
+| `incident-response/` | Reponse aux incidents |
+| `infra-check/` | Verification infrastructure |
+| `learn-from-user/` | Apprentissage depuis l'utilisateur |
+| `monitoring-setup/` | Configuration monitoring |
+| `my-analysis/` | Analyse personnalisee |
+| `my-daily-standup/` | Standup quotidien |
+| `my-profile/` | Profil utilisateur |
+| `network-hardening/` | Durcissement reseau |
+| `parallel-agents/` | Agents paralleles |
+| `plan-before-code/` | Planifier avant de coder |
+| `strategic-compact/` | Compactage strategique |
+| `tdd-workflow/` | Workflow TDD |
+| `thoughts-directory/` | Repertoire de pensees |
+| `ultrathink/` | Reflexion approfondie |
+
+---
+
+# CHAPITRE 61 -- Hooks & Thoughts BOKADOR
+
+## Hooks BOKADOR (hooks_bokador_tmp/)
+
+| Fichier | Role |
+|---------|------|
+| `claude-firewall.js` | Firewall Claude Code — bloque commandes dangereuses |
+| `jarvis-firewall.js` | Firewall Jarvis — bloque commandes dangereuses sur BOKADOR |
+
+## Thoughts (thoughts/)
+
+Dossier : `~/.claude/thoughts/`
+Contenu : Reflexions et notes persistantes generees par `/thoughts`
+Format : `YYYY-MM-DD-sujet.md`
+Chaque fichier contient : contexte, decisions, lecons, actions a suivre
+
+## Thoughts BOKADOR (thoughts_bokador_tmp/)
+
+Dossier : `~/.claude/thoughts_bokador_tmp/`
+Contenu : README.md (meme structure que thoughts/)
+
+---
+
+# CHAPITRE 62 -- Dossiers Speciaux ~/.claude/
+
+## bible/
+
+Fichier : `~/.claude/bible/BIBLE_MELVYNX_COMPLETE.md`
+Contenu : Version locale de la Bible Melvynx complete (37 chapitres, reference maitre fusionnee)
+Relation : Ce fichier est une version anterieure/parallele de la presente Bible
+
+## song/
+
+| Fichier | Usage |
+|---------|-------|
+| `finish.mp3` | Son joue quand Claude termine une tache (hook Stop) |
+| `need-human.mp3` | Son joue quand Claude a besoin d'intervention humaine |
+
+## disabled-agents/ et disabled-skills/
+
+Dossiers vides — reserves pour stocker les agents et skills desactives temporairement.
+Permettent de desactiver sans supprimer (mv au lieu de rm).
+
+## todos/
+
+Dossier : `~/.claude/todos/`
+Contenu : 40 fichiers JSON de todos d'agents (format UUID-agent-UUID.json)
+Role : Stockage persistant des listes de taches des agents/sub-agents Claude Code
+
+## Fichiers de backup settings.json
+
+| Fichier | Role |
+|---------|------|
+| `settings.json.bak` | Backup principal |
+| `settings.json.bak.*` | Backups horodates multiples |
+| `settings.json.new` | Nouvelle version en attente de mv manuel |
+
+---
+
+# CHAPITRE 63 -- INVENTAIRE COMPLET ~/.claude/ (Arborescence)
+
+```
+~/.claude/
+├── CLAUDE.md                          # Config globale (99 lignes)
+├── CLAUDE_CODE_MASTER_SYSTEM.md       # Reference maitre fusionnee (37 sections)
+├── kim_context.json                   # Profil machine & infrastructure
+├── memory.json                        # Memoire persistante JSON (user, network, projects)
+├── policy-limits.json                 # Restrictions (allow_remote_control: false)
+├── security.log                       # Journal evenements securite
+├── settings.json                      # Config principale (39 allow, 34 deny, 5 hooks, 9 plugins)
+├── settings.json.bak*                 # Backups multiples
+├── settings.json.new                  # Nouvelle config en attente
+├── settings.local.json                # Config locale (regles Telegram debug)
+├── cleanup_old_sessions.sh            # Nettoyage sessions > 30 jours
+├── save_session.sh                    # Sauvegarde session courante
+├── agents/                            # 20 agents actifs Mac
+├── agents_bokador_tmp/                # 14 agents copies BOKADOR
+├── backups/                           # 9 dossiers de backup dates
+├── bible/                             # BIBLE_MELVYNX_COMPLETE.md (37 chapitres)
+├── commands/                          # 43 commandes Mac
+├── commands_bokador_tmp/              # 39 commandes BOKADOR
+├── disabled-agents/                   # Agents desactives (vide)
+├── disabled-skills/                   # Skills desactivees (vide)
+├── hooks/                             # 8 hooks actifs Mac
+├── hooks_bokador_tmp/                 # 2 hooks BOKADOR
+├── memory/                            # 10 fichiers memoire (00-09)
+├── plugins/                           # 9 plugins
+├── projects/                          # Projets et sessions
+├── rules/                             # 20+ regles
+├── skills/                            # 39 skills Mac
+├── skills_bokador_tmp/                # 22 skills BOKADOR
+├── song/                              # Sons (finish.mp3, need-human.mp3)
+├── thoughts/                          # Reflexions datees
+├── thoughts_bokador_tmp/              # Reflexions BOKADOR
+└── todos/                             # 40 fichiers todos agents (JSON)
+```
+
+---
+
+**FIN DE LA BIBLE COMPLETE -- Version 7.0 -- 63 chapitres -- Derniere mise a jour : 2026-03-26**
