@@ -28,6 +28,30 @@
 - **CHAPITRE 18** -- Documentation & Runbooks
 - **CHAPITRE 19** -- Adaptation a l'Infrastructure kim13
 - **CHAPITRE 20** -- Checklist Rapide -- Les Essentiels
+- **CHAPITRE 21** -- Skills Custom kim13 (39 skills)
+- **CHAPITRE 22** -- Agents Custom kim13 (20 agents)
+- **CHAPITRE 23** -- Hooks kim13 (8 hooks)
+- **CHAPITRE 24** -- Plugins Actifs kim13
+- **CHAPITRE 25** -- Rules kim13 (20 regles)
+- **CHAPITRE 26** -- Deny-List Complete (34 regles)
+- **CHAPITRE 27** -- Reseau Complet Bbox/NAT (12 regles)
+- **CHAPITRE 28** -- Scripts & Fichiers Memoire kim13
+- **CHAPITRE 29** -- Procedures Operationnelles (Runbooks)
+- **CHAPITRE 30** -- Protocole Auto-Apprentissage kim13
+- **CHAPITRE 31** -- Regle #0 Absolue : Documenter Avant Toute Modification
+- **CHAPITRE 32** -- Inventaire MCP Complet (28+ MCP)
+- **CHAPITRE 33** -- LaunchAgents macOS (10 agents com.kim.*)
+- **CHAPITRE 34** -- Commandes Custom (43 commandes)
+- **CHAPITRE 35** -- Contenu Fichiers Memoire (Bootstrap Jarvis)
+- **CHAPITRE 36** -- Prompt Discovery (Anti Lost-in-the-Middle)
+- **CHAPITRE 37** -- Proxyman (Debug Contexte Claude Code)
+- **CHAPITRE 38** -- Opera Cloud PMS & Workflows Hotelier
+- **CHAPITRE 39** -- Disaster Recovery Complet
+- **CHAPITRE 40** -- Alias Shell & Raccourcis (zshrc)
+- **CHAPITRE 41** -- Architecture Skill+SubAgent+Workflow (Pattern Melvynx)
+- **CHAPITRE 42** -- Claude Review (Beta Entreprise)
+- **CHAPITRE 43** -- Anomalies Connues & Corrections
+- **CHAPITRE 44** -- CLAUDE.md Global Reference
 
 ---
 ---
@@ -1207,4 +1231,614 @@ Chaque apprentissage doit etre sauvegarde dans :
 
 ---
 
-**FIN DE LA BIBLE COMPLETE -- Version 2.0 -- Derniere mise a jour : 2026-03-26**
+---
+---
+
+# CHAPITRE 31 -- REGLE #0 ABSOLUE : DOCUMENTER AVANT TOUTE MODIFICATION
+
+**Creee le 2026-03-26 sur demande explicite kim13.**
+
+AVANT toute modification, suppression ou ecrasement :
+
+1. **DOCUMENTER** dans un commit GitHub AVANT l'action (quoi, pourquoi, etat avant)
+2. **CHANGELOG** : entree datee
+3. **KNOWLEDGE GRAPH** : persister dans memory MCP
+4. **JAMAIS** modifier/supprimer/ecraser sans avoir documente
+
+Ordre obligatoire : **DOCUMENTER > BACKUP > AGIR > VERIFIER**
+
+Cette regle prime sur TOUTES les autres sauf la regle #1 (triple backup avant suppression). Les deux sont complementaires.
+
+Fichier : `~/.claude/rules/00-document-before-modify.md` (alwaysApply: true)
+
+---
+
+# CHAPITRE 32 -- INVENTAIRE MCP COMPLET (28+ MCP)
+
+## MCP Infrastructure & Systeme
+
+| MCP | Outils | Usage |
+|-----|--------|-------|
+| Desktop Commander | start_process, write_file, read_file, edit_block, search, etc. | Controle complet MacBook (processus, fichiers, PDF) |
+| filesystem | read_file, write_file, search_files, directory_tree, etc. | Operations fichiers sandboxees |
+| git | git_add, git_commit, git_diff, git_log, git_status, etc. | Operations Git sans bash |
+| ssh | ssh_exec, ssh_connect, sftp_read, sftp_write, etc. | SSH vers BOKADOR, VPS |
+| docker | run_command | Commandes Docker |
+| kubernetes | kubectl_get, kubectl_apply, kubectl_logs, helm, port_forward, etc. | Orchestration K8s |
+| iterm | read_terminal_output, write_to_terminal, send_control_character | Controle iTerm2 |
+
+## MCP Donnees & Recherche
+
+| MCP | Outils | Usage |
+|-----|--------|-------|
+| memory | create_entities, add_observations, create_relations, search_nodes, read_graph | Knowledge graph persistant |
+| context7 | resolve-library-id, query-docs | Documentation technique a jour |
+| exa | web_search_exa, get_code_context_exa | Recherche web optimisee IA |
+| fetch | fetch | Recuperer contenu web |
+| postgres | query | Requetes PostgreSQL |
+| sqlite | read_query, write_query, create_table, list_tables | Base SQLite locale |
+| sequential-thinking | sequentialthinking | Raisonnement etape par etape |
+
+## MCP Navigateur & Web
+
+| MCP | Outils | Usage |
+|-----|--------|-------|
+| Claude in Chrome | navigate, read_page, get_page_text, form_input, computer, javascript_tool, tabs, etc. | Controle Chrome complet |
+| Control Chrome | open_url, get_page_content, execute_javascript, list_tabs, etc. | Chrome via AppleScript |
+| puppeteer | puppeteer_navigate, puppeteer_click, puppeteer_fill, puppeteer_screenshot, etc. | Automatisation headless |
+
+## MCP Applications Apple
+
+| MCP | Outils | Usage |
+|-----|--------|-------|
+| Control your Mac | osascript | Execution AppleScript |
+| Apple Notes | add_note, list_notes, get_note_content, update_note_content | Notes Apple |
+| iMessages | read_imessages, send_imessage, search_contacts, get_unread | Messages Apple |
+| Google Calendar | gcal_list_events, gcal_create_event, gcal_update_event, gcal_find_free_time | Agenda Google |
+| Google Drive | google_drive_search, google_drive_fetch | Fichiers Google Drive |
+
+## MCP Systeme Cowork & Plugins
+
+| MCP | Outils | Usage |
+|-----|--------|-------|
+| PDF (Anthropic) | display_pdf, list_pdfs, read_pdf_bytes | Manipulation PDF |
+| scheduled-tasks | create_scheduled_task, list_scheduled_tasks, update_scheduled_task | Taches planifiees |
+| session_info | list_sessions, read_transcript | Historique sessions |
+| mcp-registry | search_mcp_registry, suggest_connectors | Recherche MCP disponibles |
+| plugins | search_plugins, suggest_plugin_install | Gestion plugins |
+| everything | echo, get-env, simulate-research-query, etc. | Outils utilitaires |
+| applescript | applescript_execute | AppleScript direct |
+| cowork | allow_cowork_file_delete, present_files, request_cowork_directory | Gestion fichiers Cowork |
+
+## ATTENTION : Regle Melvynx vs Realite
+
+Melvynx recommande max 2-3 MCP pour preserver le contexte. kim13 a 28+ MCP actifs. Ceci est compense par `toolSearchMode: auto` qui ne charge les definitions que quand necessaire. Surveiller `/context` regulierement.
+
+---
+
+# CHAPITRE 33 -- LAUNCHAGENTS MACOS (10 agents com.kim.*)
+
+CRITICAL: JAMAIS supprimer ces LaunchAgents sans autorisation explicite.
+
+| LaunchAgent | PID | Role |
+|-------------|-----|------|
+| `com.kim.sysadmin-monitor` | 5186 | Monitoring systeme MacBook (CPU, RAM, disque) |
+| `com.kim.claude-watchdog` | 5188 | Watchdog Claude Code (relance si crash) |
+| `com.kim.bokador-tunnel` | 5189 | Tunnel SSH persistant vers BOKADOR |
+| `com.kim.quotes-jim-rohn` | 5196 | Citations motivantes Jim Rohn (notifications) |
+| `com.kim.mount-stockage-bokador` | 5197 | Montage automatique stockage BOKADOR |
+| `com.kim.terminal-journal` | 5200 | Journal terminal automatique |
+| `com.kim.claude-config-backup` | inactif | Backup periodique config Claude |
+| `com.kim.rappel-france-travail` | inactif | Rappels France Travail |
+| `com.kim.timemachine-backup` | inactif | Declencheur Time Machine |
+| `com.kim.claude-memory` | inactif | Sauvegarde periodique memoire Claude |
+
+Emplacement : `~/Library/LaunchAgents/com.kim.*.plist`
+
+---
+
+# CHAPITRE 34 -- COMMANDES CUSTOM (43 commandes dans ~/.claude/commands/)
+
+## Commandes Maintenance
+
+| Commande | Usage |
+|----------|-------|
+| `/clean-sys` | Nettoyage systeme (caches, logs, tmp) |
+| `/disk-report` | Rapport espace disque detaille |
+| `/update-sys` | Mise a jour systeme (brew, npm, pip) |
+| `/process-mgr` | Gestion processus (list, kill, priority) |
+| `/optimize` | Optimisation performances |
+
+## Commandes Infrastructure
+
+| Commande | Usage |
+|----------|-------|
+| `/infra` | Vue d'ensemble infrastructure (BOKADOR, VPS, Mac) |
+| `/tunnel-check` | Verifier tunnels SSH actifs |
+| `/wsl-init` | Initialiser WSL sur BOKADOR |
+| `/deploy-check` | Pre-verification deploiement |
+| `/deploy-staging` | Deployer en staging |
+| `/vps-sec` | Securite VPS (fail2ban, ufw, logs) |
+| `/ssl-check` | Verification certificats SSL |
+| `/nginx-mgr` | Gestion Nginx |
+| `/fail2ban-mgr` | Gestion Fail2Ban |
+
+## Commandes Code
+
+| Commande | Usage |
+|----------|-------|
+| `/refactor` | Refactoring code |
+| `/code-review` | Review de code |
+| `/smart-commit` | Commit intelligent (analyse diff) |
+| `/test` | Lancer tests |
+| `/fix` | Fix erreurs |
+| `/commit` | Commit simple (Conventional Commits) |
+| `/debug-error` | Debug erreur specifique |
+| `/review` | Review complete |
+| `/doc` | Generer documentation |
+| `/plan` | Planifier une tache |
+
+## Commandes Securite
+
+| Commande | Usage |
+|----------|-------|
+| `/audit` | Audit securite rapide |
+| `/alert` | Alerte securite |
+| `/security-log` | Consulter logs securite |
+
+## Commandes Jarvis (assistant IA)
+
+| Commande | Usage |
+|----------|-------|
+| `/jarvis-status` | Etat Jarvis |
+| `/jarvis-diag` | Diagnostic Jarvis |
+| `/jarvis-fix` | Fix Jarvis |
+| `/jarvis-deploy` | Deployer Jarvis |
+| `/jarvis-watch` | Surveiller Jarvis |
+
+## Commandes Memoire
+
+| Commande | Usage |
+|----------|-------|
+| `/memorize` | Workflow auto-apprentissage complet |
+| `/auto-learn` | Detection patterns et persistance |
+| `/cloud-memory` | Compaction memoire (>100 lignes) |
+| `/standup` | Charge contexte debut session |
+| `/compact-report` | Rapport compaction contexte |
+| `/thoughts` | Reflexions et decisions |
+| `/spend` | Suivi depenses tokens/API |
+
+## Commandes Hotel (Opera Cloud PMS)
+
+| Commande | Usage |
+|----------|-------|
+| `/hotel` | Assistant hotel Mercure Montmartre H0373 |
+| `/night-audit` | Rapport de releve reception + checklist audit |
+| `/hotel breakfast` | Rapport petit-dejeuner (avant 6h) |
+| `/hotel audit` | Checklist night audit, balances, no-shows |
+| `/hotel hk` | Feuille de travail housekeeping |
+| `/hotel consigne` | Rediger consigne Opera Cloud |
+
+## Commandes Recherche
+
+| Commande | Usage |
+|----------|-------|
+| `/research` | Recherche approfondie (web + docs) |
+| `/backup-now` | Backup immediat |
+
+---
+
+# CHAPITRE 35 -- CONTENU FICHIERS MEMOIRE (BOOTSTRAP JARVIS)
+
+## 01_architecture.md — Architecture 5 niveaux memoire
+
+| Niveau | Scope | Persistence |
+|--------|-------|-------------|
+| 1. Ephemere | Conversation courante | Perdu au /clear |
+| 2. Session | auto-memory projects/hash/memory.md | Persiste entre sessions |
+| 3. Projet | CLAUDE.md racine projet | Stack, conventions |
+| 4. Utilisateur | ~/.claude/rules/ + memory/ | Persiste entre projets |
+| 5. Meta | rules/09-learned-*.md | Auto-genere par apprentissage |
+
+Structure ~/.claude/ : CLAUDE.md (99L), settings.json (39 allow + 36 deny + 9 plugins + hooks + teams), 42 commands, 24 skills, 17+ agents, 10 memory files, 4 step files prompt discovery.
+
+Machines synchronisees : VPS Kali (198/198 audit), MacBook M4 (synce 2026-03-18), BOKADOR (a synchroniser).
+
+## 02_lessons_log.md — Lecons critiques
+
+| Severite | Lecon |
+|----------|-------|
+| CRITICAL | Ne JAMAIS ecraser CLAUDE.md et settings.json — toujours lire et FUSIONNER |
+| CRITICAL | Valider format exact settings.json avec python3 apres modification |
+| WARNING | declare -A incompatible zsh/bash3 macOS — ne jamais utiliser |
+| WARNING | defaultMode = bypassPermissions (avec S) — pas bypassPermission |
+| INFO | MCP max 2-3 sinon contexte sature (~5% chacun) |
+| INFO | Prompt discovery anti lost-in-the-middle (lire step juste avant execution) |
+| INFO | Fichiers Cowork dans VM, pas ~/Downloads — utiliser present_files |
+
+## 03_conventions.md — 6 conventions strictes
+
+1. Fusion avant ecrasement (backup > lire > fusionner > valider JSON > verifier)
+2. Scripts Mac compatibles (#!/bin/bash, pas declare -A, pas echo -e, lancer avec bash)
+3. Trash obligatoire (alias t=trash, JAMAIS rm -rf)
+4. Auto-apprentissage continu (/memorize, /auto-learn, /cloud-memory, /standup)
+5. MCP minimal (max 2-3 actifs, verifier /context)
+6. Workflow Melvynx (EPCT, /clear entre taches, workflow pour features complexes)
+
+## 04_autonomy_matrix.md — 5 niveaux autonomie
+
+| Niveau | Actions | Permission |
+|--------|---------|------------|
+| 1 | Lecture, diagnostic | Toujours autorise |
+| 2 | Creer fichiers, modifier code, git add/commit | Autorise sans demander |
+| 3 | Modifier configs serveur | Verifier + backup avant |
+| 4 | Suppression, permissions, push/merge | Double confirmation |
+| 5 | rm -rf, mots de passe, H:/G:, iCloud, LaunchAgents | INTERDIT sans autorisation |
+
+## 05_reflection_loop.md — Boucle reflexion
+
+ACTION > RESULTAT > REFLEXION > LECON > PERSISTANCE > AMELIORATION > retour ACTION
+
+Declencheurs : erreur commande, correction user, pattern repetitif, fin tache complexe, debut session.
+Anti-patterns : pas de boucle infinie (max 1 reflexion/action), pas de regle pour cas unique (attendre 2+).
+
+## 07_security_bypass_guards.md — 12 principes securite bypass
+
+1. User non-root, 2. Deny-list (87 patterns), 3. Hook PreToolUse guard, 4. Logs complets, 5. Workspace limite, 6. Sandbox/VM, 7. Pas de prod directe, 8. Chemins proteges, 9. Limites ressources, 10. Secrets interdits, 11. Regles CLAUDE.md, 12. Safe ops (test config avant reload)
+
+ANOMALIE CONNUE : edit-logger.js reference dans settings.json PostToolUse mais ABSENT de ~/.claude/hooks/
+
+---
+
+# CHAPITRE 36 -- PROMPT DISCOVERY (Anti Lost-in-the-Middle)
+
+## Concept
+
+Les transformers donnent plus d'importance aux tokens du debut et de la fin. Solution : decouper en etapes, chaque etape lit son fichier juste avant d'agir.
+
+## Fichiers step (~/.claude/step/)
+
+| Fichier | Phase |
+|---------|-------|
+| `1_init.md` | Initialisation : charger contexte, definir objectifs |
+| `2_explore_ultra.md` | Exploration ultra : sub-agents, codebase, docs, web |
+| `3_plan.md` | Planification : plan detaille avec checkpoints |
+| `4_implement.md` | Implementation : executer le plan, tester |
+
+## Usage
+
+Chaque workflow avance (apex, workflow-steps) lit automatiquement le step courant. Le prompt est toujours "recent" dans le contexte, donc bien suivi par le modele.
+
+---
+
+# CHAPITRE 37 -- PROXYMAN (Debug Contexte Claude Code)
+
+## Concept
+
+Proxyman intercepte les requetes HTTP de Claude Code vers l'API Anthropic. Permet de voir exactement ce qui est envoye au modele.
+
+## Ce qu'on peut observer
+
+| Element | Tokens approx |
+|---------|---------------|
+| System prompt | ~3 500 |
+| Descriptions outils (tools) | Tres volumineux |
+| Skills charges | Variable |
+| MCP tools descriptions | ~5% par MCP |
+| CLAUDE.md + rules | Variable |
+| Conversation | Croissant |
+
+## Installation
+
+```bash
+brew install --cask proxyman
+```
+
+Configurer le proxy SSL pour intercepter les requetes HTTPS de Claude Code.
+
+## Quand l'utiliser
+
+- Debug contexte sature (comprendre ce qui consomme les 27K tokens de demarrage)
+- Verifier qu'un MCP ne surcharge pas le contexte
+- Optimiser les skills (reduire leur taille token)
+
+---
+
+# CHAPITRE 38 -- OPERA CLOUD PMS & WORKFLOWS HOTELIER
+
+## Contexte
+
+Mercure Paris Montmartre (H0373). Night Auditor. Opera Cloud PMS = systeme de gestion hoteliere cloud Oracle.
+
+## Commandes Claude Code pour l'hotellerie
+
+| Commande | Declencheur | Actions |
+|----------|------------|---------|
+| `/night-audit` | Fin de shift nuit | Rapport releve, checklist audit, balances, no-shows |
+| `/hotel breakfast` | Avant 6h | Rapport petit-dejeuner (couverts, observations) |
+| `/hotel audit` | Night audit | Checklist complete, rapports gestion |
+| `/hotel hk` | Matin | Feuille travail housekeeping (format Excel si possible) |
+| `/hotel consigne` | A tout moment | Rediger consigne Opera Cloud |
+
+## Workflow Night Audit typique
+
+1. Verifier balances Opera Cloud (manuellement dans le PMS)
+2. `/night-audit` : fournir en vrac les evenements → Claude formate le rapport
+3. Identifier no-shows, litiges, VIP
+4. Mettre en evidence actions pour le shift matin
+5. `/hotel consigne` pour consignes specifiques
+
+## Limites
+
+Claude Code n'a PAS acces direct a Opera Cloud PMS. L'integration est manuelle : copier-coller des donnees du PMS vers Claude pour formatage et analyse.
+
+---
+
+# CHAPITRE 39 -- DISASTER RECOVERY COMPLET
+
+## 39.1 DR MacBook Pro M4
+
+### Sauvegardes existantes
+- Time Machine (com.kim.timemachine-backup LaunchAgent)
+- Config Claude : com.kim.claude-config-backup + GitHub repos (claude-config-mac, claude-code-bokador)
+- Photos/Videos : script transfer vers BOKADOR H: (201 Go)
+- iCloud : ~/Library/Mobile Documents (JAMAIS toucher)
+
+### Procedure restauration complete
+1. Restaurer depuis Time Machine (priorite 1)
+2. Si Time Machine indisponible : reinstaller macOS, puis `curl -fsSL https://claude.ai/install.sh | bash`
+3. Cloner config : `gh repo clone KimGemRuby/claude-config-mac ~/.claude`
+4. Reinstaller Homebrew : `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+5. `brew install node bun tmux terminal-notifier`
+6. Restaurer LaunchAgents depuis backup
+7. Tester SSH vers BOKADOR et VPS
+8. `/standup` pour charger le contexte
+
+### RPO/RTO
+- RPO : 1 jour (Time Machine hourly + iCloud continu)
+- RTO : 2-4 heures (reinstallation complete)
+
+## 39.2 DR BOKADOR
+
+### Sauvegardes
+- Disques H: et G: = stockage primaire (40TB)
+- Config Claude : GitHub repo claude-code-bokador
+- WSL Ubuntu-24.04 : config dans /home/kim13/
+
+### Procedure restauration
+1. Si Windows OK mais config Claude perdue : `gh repo clone KimGemRuby/claude-code-bokador`
+2. Si Windows reinstalle : reinstaller SSH (OpenSSH Server), WSL Ubuntu-24.04, rsync
+3. Reconfigurer ports SSH (interne 2222 et 22222)
+4. Verifier NAT Bbox (regles port 443, 47281, etc.)
+5. Tester : `ssh -p 47281 kim13@31.35.20.184`
+
+### RPO/RTO
+- RPO : variable (derniere sync GitHub)
+- RTO : 4-8 heures (reinstallation Windows + config)
+
+## 39.3 DR VPS Kali (109.176.197.139)
+
+### Sauvegardes
+- GitHub repo vps-backup (config complete)
+- Snapshots Hostinger (si actives)
+
+### Procedure restauration
+1. Console Hostinger : rebuild VPS Ubuntu/Kali
+2. `ssh root@<nouvelle-IP>` (si IP change, mettre a jour NAT Bbox regles 9, 10, 12)
+3. Cloner config : `gh repo clone KimGemRuby/vps-backup`
+4. Reinstaller : Claude Code, fail2ban, ufw, Docker
+5. Reconfigurer SSH hardening (cles, port, fail2ban)
+6. Whitelist IPs (176.133.20.227, 185.208.60.2, 31.35.20.184)
+7. Tester depuis Mac : `ssh root@109.176.197.139`
+
+### RPO/RTO
+- RPO : derniere sync GitHub
+- RTO : 1-2 heures (VPS rapide a reconstruire)
+
+## 39.4 Test DR trimestriel
+
+Checklist a executer tous les 3 mois :
+- [ ] Verifier Time Machine fonctionne (derniere sauvegarde <24h)
+- [ ] Verifier repos GitHub a jour (claude-config-mac, claude-code-bokador, vps-backup)
+- [ ] Tester restauration config Claude depuis GitHub sur machine de test
+- [ ] Verifier snapshots VPS Hostinger
+- [ ] Tester Wake-on-LAN BOKADOR depuis VPS
+- [ ] Verifier que tous les LaunchAgents sont actifs
+- [ ] Verifier SSH vers toutes les machines
+- [ ] Documenter tout changement dans la Bible
+
+---
+
+---
+---
+
+# CHAPITRE 40 -- ALIAS SHELL & RACCOURCIS (zshrc)
+
+## Alias Claude Code
+
+| Alias | Commande | Usage |
+|-------|----------|-------|
+| `cc` | `cd ~/Developer/CC && claude` | Lancer Claude Code dans le dossier CC |
+| `ccs` | `~/.claude/scripts/claude-session.sh` ou tmux fallback | Session Claude avec tmux |
+| `ccdir` | `cd ~/.claude && ls -la` | Explorer dossier config Claude |
+| `ccrules` | `cat ~/.claude/rules/*.md` | Afficher toutes les rules |
+| `ccbackup` | `bash ~/.claude/scripts/auto-backup.sh manual` | Backup manuel config |
+| `god` | `claude --dangerously-skip-permissions` | Mode bypass total |
+| `claude-yolo` | `claude --dangerously-skip-permissions` | Alias alternatif bypass |
+
+## Alias SSH Machines
+
+| Alias | Commande | Usage |
+|-------|----------|-------|
+| `cc-vps` | `ssh root@109.176.197.139` | SSH direct VPS |
+| `cc-win` | `ssh -p 47281 kim13@31.35.20.184` | SSH direct BOKADOR |
+| `cc-audit-vps` | SSH + `bash ~/.claude/scripts/status.sh` | Audit VPS distant |
+| `cc-audit-win` | SSH + PowerShell audit script | Audit BOKADOR distant |
+| `cc-backup-full` | tar+scp VPS→BOKADOR | Backup complet cross-machine |
+| `vps` | `ssh vps-kim` | SSH VPS via profil SSH |
+
+## Alias Systeme
+
+| Alias | Commande | Usage |
+|-------|----------|-------|
+| `t` | `trash` | Suppression securisee (JAMAIS rm) |
+| `ll` | `ls -lah --color=auto` | Liste detaillee |
+| `..` | `cd ..` | Remontee rapide |
+| `...` | `cd ../..` | Double remontee |
+
+---
+
+# CHAPITRE 41 -- ARCHITECTURE SKILL+SUBAGENT+WORKFLOW (Pattern Melvynx)
+
+## Schema hierarchique
+
+```
+Skill (englobe tout)
+  |
+  |-- SubAgents (supportent le skill)
+  |     |-- web-search (WebSearch + WebFetch + Exa)
+  |     |-- explore-codebase (Read, Grep, Glob, Search)
+  |     |-- explore-doc (Context7 MCP)
+  |
+  |-- Steps/ (prompt discovery anti lost-in-the-middle)
+  |     |-- 01-init.md (initialiser parametres)
+  |     |-- 02-analyse.md (analyser erreur/feature)
+  |     |-- 03-plan.md (planifier solutions)
+  |     |-- 04-execute.md (executer plan)
+  |     |-- 05-verify.md (verifier resultat)
+  |
+  |-- Parametres (--plan, --teams, --auto, --branch, --pr, --economy, --resume)
+```
+
+## Principes
+
+- On OBLIGE l'IA a suivre un workflow specifique
+- Les sub-agents supportent le skill (sous le skill)
+- Le skill englobe tout
+- Chaque step est lue JUSTE AVANT execution (anti lost-in-the-middle)
+- La description du sub-agent est critique (decide quand l'IA l'utilise)
+- Forcer l'utilisation des sub-agents via le workflow (sinon l'IA peut ne pas les appeler)
+
+## Meta-Prompting
+
+Ne JAMAIS ecrire un prompt a la main. Utiliser les meta-skills :
+- `/prompt-creator` : genere prompts optimises (utilise anthropic-best-practices.md)
+- `/skill-creator` : genere skills
+- `/subagent-creator` : genere sub-agents
+- `/meta-prompt-creator` : genere prompts qui generent des prompts
+
+Le fichier cle est `anthropic-best-practices.md` dans le skill, contenant anti-patterns, clarity principle, context management, few-shot pattern.
+
+---
+
+# CHAPITRE 42 -- CLAUDE REVIEW (Beta Entreprise)
+
+## Concept
+
+Review automatique des PR avec processus multi-agents en parallele.
+
+## Resultats apres mois de tests
+
+- PR avec reviews passent de 16% a 54%
+- Moins de 1% des reviews marquees incorrectes
+- 94% des bugs trouves sur les grandes PR
+
+## Cout
+
+15-25$ par review (token usage, augmente avec complexite). Comparaison : ingenieur mid San Francisco = 77-96$/h, senior = 100-150$/h.
+
+## Optimise pour
+
+Equipes, pas individuel. Activer quand on travaille en equipe sur des PR complexes.
+
+---
+
+# CHAPITRE 43 -- ANOMALIES CONNUES & CORRECTIONS
+
+| Anomalie | Severite | Status | Action |
+|----------|----------|--------|--------|
+| edit-logger.js reference dans settings.json PostToolUse mais ABSENT de ~/.claude/hooks/ | WARNING | Non corrige | Creer le fichier ou retirer la reference |
+| settings.json protege par macOS App Management (EPERM sur write) | INFO | Contournement | Creer .new puis `mv` manuellement |
+| defaultMode = bypassPermissions (avec S final) et non bypassPermission | WARNING | Corrige | Verifier orthographe apres chaque modif |
+| declare -A incompatible zsh/bash3 macOS | WARNING | Documente | Ne jamais utiliser dans scripts Mac |
+| echo -e non portable sur macOS | INFO | Documente | Utiliser printf a la place |
+| settings.local.json contient des allow tres specifiques (debug Telegram) | INFO | Normal | Residus de session debug, nettoyer si besoin |
+| Bbox IP publique dynamique (31.35.20.184) | WARNING | Surveiller | Peut changer apres reboot Bbox, impacte toutes les regles NAT |
+| Whisper large-v3 OOM sur VM Cowork | INFO | Non resolvable | VM a 2.2GB free, utiliser yt-dlp auto-subs |
+
+---
+
+# CHAPITRE 44 -- CLAUDE.md GLOBAL REFERENCE
+
+Reproduction de reference du fichier `~/.claude/CLAUDE.md` (MacBook Pro M4) :
+
+## Identite
+- Night Auditor & SysAdmin — Mercure Paris Montmartre H0373 (Opera Cloud PMS)
+- Infrastructure : MacBook Pro M4 24GB, BOKADOR (RTX 3060, 40TB H:), VPS Kali 109.176.197.139
+- Claude Code deploye sur 4 machines
+
+## Langue
+- Francais sauf si j'ecris en anglais. Direct et concis, zero blabla.
+
+## Machine courante
+- MacBook Pro M4 24GB RAM, 1TB SSD, user kim13karame.com
+- SSH BOKADOR : `ssh -p 47281 kim13@31.35.20.184`
+- SSH VPS : `ssh root@109.176.197.139`
+- Sons : afplay /System/Library/Sounds/Glass.aiff (fin de tache)
+- Watchdog : com.kim.claude-watchdog
+
+## Regles Absolues (CRITICAL)
+1. (#0) Documenter dans GitHub AVANT toute modification
+2. (#1) Triple backup avant suppression (trash + knowledge graph + GitHub)
+3. JAMAIS rm -rf — utiliser trash
+4. JAMAIS supprimer sans backup confirme (SHA256 + chemin + confirmation)
+5. Double confirmation avant suppression ou ecrasement
+6. JAMAIS toucher H: et G: BOKADOR
+7. JAMAIS toucher ~/Library/Mobile Documents (iCloud)
+8. JAMAIS supprimer LaunchAgents actifs (com.kim.*)
+9. Scripts idempotents obligatoires
+10. Diagnostiquer avant agir (logs, processus, espace, permissions)
+11. Backup/snapshot avant operation risquee
+12. JAMAIS commencer un script par # seul
+
+## IPs de confiance
+185.208.60.2 (travail), 176.133.20.227 (domicile), 109.176.197.139 (VPS), 31.35.20.184 (BOKADOR), 92.92.127.0/23 (plage Kim), 127.0.0.0/8 (localhost)
+
+## Ports SSH
+- VPS : 22, BOKADOR : 47281, Mac : 1983
+
+## Commandes interdites
+rm -rf, sudo rm, chmod 777, git push --force, netcfg -d, curl|bash, wget|bash
+
+## Workflow
+- Lire 3 fichiers similaires avant de modifier
+- Erreurs TypeScript non implementees : passer a la suite
+- Changelog apres tout changement
+- Tester via SSH avant de poser une question — agir directement
+- Indiquer cout en $ quand tokens mentionnes
+
+## Preferences Code
+- 2 spaces JS/TS/JSON, 4 spaces Python
+- Single quotes, trailing commas, semicolons
+- pnpm preferred, npm fallback
+- Conventional Commits (feat:, fix:, refactor:, test:, ci:)
+- TDD when possible
+
+## Auto-Apprentissage
+- Correction → /memorize auto
+- Echec 2+ fois → creer rule
+- Preference → rules/11 + knowledge graph
+- Detection : corrections, preferences, patterns, decisions, workflows implicites
+- Persistance triple : rules/ + knowledge graph + rules specialisees
+
+## Bootstrap Jarvis (OBLIGATOIRE)
+Avant CHAQUE action, lire silencieusement : memory/01, 02, 03.
+
+## Protocole Melvynx Diamant
+- Son fin de tache : afplay Glass.aiff
+- /master-audit avant intervention majeure
+- Workflow : Explore > Plan > Code > Test
+
+---
+
+**FIN DE LA BIBLE COMPLETE -- Version 4.0 -- 44 chapitres, ~1900 lignes -- Derniere mise a jour : 2026-03-26**
