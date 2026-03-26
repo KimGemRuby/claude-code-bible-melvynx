@@ -1,0 +1,33 @@
+{
+  "$schema": "https://claude.ai/schemas/claude-code-settings.json",
+  "defaultMode": "bypassPermissions",
+  "permissions": {
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(del /f *)",
+      "Bash(del /s /q *)",
+      "Bash(rm -rf D:*)",
+      "Bash(rm -rf E:*)",
+      "Bash(git push --force-with-lease origin main*)",
+      "Bash(diskpart*)",
+      "Bash(format *)",
+      "Bash(*Clear-Disk*)",
+      "Bash(mkfs*)",
+      "Bash(dd if=*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -Command \"if ($env:TOOL_INPUT -match 'diskpart|format|rm -rf|del /f|del /s|Remove-Item.*-Recurse.*-Force|Clear-Disk|mkfs|dd if=') { Write-Host 'BLOCKED BY HOOK'; exit 1 }\""
+          }
+        ]
+      }
+    ]
+  },
+  "skipDangerousModePermissionPrompt": true
+}

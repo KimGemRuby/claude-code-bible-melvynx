@@ -1,0 +1,451 @@
+[0.00 -> 6.44] Aujourd'hui, je suis avec Terrence qui a créé une app iOS avec Cloud Code de A à Z sans
+[6.44 -> 10.44] savoir coder et on va le faire passer au niveau OG.
+[10.44 -> 11.44] Salut Terrence.
+[11.44 -> 12.44] Salut.
+[12.44 -> 13.44] Ça va ?
+[13.44 -> 14.44] Bien et bien merci.
+[14.44 -> 18.04] Tu peux retrouver son Instagram sur www.mnv.com.fr ou dans la description, il fait des très
+[18.04 -> 19.04] bonnes vidéos.
+[19.04 -> 20.04] Je vous invite à le suivre.
+[20.04 -> 29.84] Et donc, ce que j'expliquais, c'est qu'actuellement, on a moi qui suis ici au niveau OG, évidemment,
+[30.48 -> 32.64] et on a ma mère qui est ici.
+[32.64 -> 35.64] Elle n'a jamais utilisé Cloud Code, donc elle est au niveau 0.
+[35.64 -> 39.00] Terrence, il est au niveau OK parce qu'il a quand même créé une app de A à Z.
+[39.00 -> 48.00] Mais le but, c'est de le monter à son plein potentiel afin que telle une fusée, il atteigne
+[48.00 -> 49.00] le sein grave.
+[49.00 -> 53.68] Donc, je vous propose de setup ça tout de suite et on va se retrouver sur son écran
+[53.68 -> 55.08] pour ajouter tout ça.
+[55.08 -> 57.08] Let's go.
+[57.68 -> 60.08] Vous allez ouvrir un éditeur de code.
+[60.08 -> 61.60] Alors, lui, il a anti-gravity.
+[61.60 -> 62.60] Ce n'est pas grave.
+[62.60 -> 67.44] Tout le monde fait des erreurs dans son parcours, mais ce que vous allez pouvoir faire, c'est
+[67.44 -> 72.12] ouvrir un terminal et ouvrir un dossier très important qui est Cloud.
+[72.12 -> 77.40] Vous faites CD Cloud, ça va vous mettre dans le dossier Cloud et là, vous faites anti-gravity
+[77.40 -> 78.40] point.
+[78.40 -> 79.40] Ça ne marche pas.
+[79.40 -> 80.88] Code point.
+[80.88 -> 81.88] Ça ne marche pas.
+[81.88 -> 82.88] Vous faites open point.
+[82.88 -> 84.96] Ça va vous ouvrir le dossier Cloud.
+[85.56 -> 87.40] Vous changez la vue en colonne.
+[87.40 -> 91.00] Si vous n'avez pas utilisé la vue en colonne dans votre vie, ce qui est sûrement en
+[91.00 -> 92.92] ton cas, utilisez la vue en colonne.
+[92.92 -> 95.96] Porte-toi pendant une semaine, tu ne vas plus jamais pouvoir retourner en arrière.
+[95.96 -> 97.84] Vous draguez et dropez le dossier Cloud.
+[97.84 -> 102.04] Vous ouvrez et là, vous êtes passe à votre config Cloud.
+[102.04 -> 106.64] Vous allez avoir le fichier settings.json juste ici et vous allez avoir ici toutes
+[106.64 -> 108.56] vos conversations et tout ce que vous avez fait.
+[108.56 -> 114.04] Donc, typiquement, juste ici, si on ferme toutes les merdes qu'il y a sur cette page,
+[114.12 -> 118.08] on va pouvoir retrouver les commandes, les skills, etc.
+[118.08 -> 124.20] Ce que je pourcommande qui est assez simple, c'est d'utiliser mon CLI gratuit accessible
+[124.20 -> 129.96] qui est normalement sur iG Blueprint CLI GitHub Melvinx.
+[129.96 -> 132.24] Donc, il y a le repo qui est juste ici.
+[132.24 -> 136.20] Sous cette vidéo, je vous mettrai un lien pour accéder au repo et un lien pour pouvoir
+[136.20 -> 140.64] accéder à une formation qui vous prend la main pour le faire de votre côté et
+[140.64 -> 143.72] pour setup Cloud, au cas où ce n'est pas déjà fait sur votre ordinateur.
+[143.80 -> 148.20] Bref, Quickstart, c'est la seule commande qu'il faut savoir, iG Blueprint CLI GitHub.
+[148.20 -> 153.96] On vient ouvrir le terminal comme ceci et on la colle dans votre terminal.
+[153.96 -> 156.88] Vous faites Yes et on va voir ce que ça va changer.
+[156.88 -> 162.52] Donc là, vous lui dites, vous installez tous les trucs qui sont ici à pas de soucis.
+[162.52 -> 167.80] Ça va vous créer une backup au cas où dans le dossier backups l'âge 2026,
+[167.80 -> 172.20] machin chose et ça va vous installer entre autres les skills.
+[172.56 -> 177.08] Donc, on vient d'installer la configuration et je vais un peu vous montrer
+[177.08 -> 177.88] ce qui va changer.
+[177.88 -> 180.40] Enfin, je vais montrer à Terrence, Terrence, pour me poser des questions comme ça.
+[180.40 -> 183.52] Toi, tu vas comprendre, ça va être immensément incroyable.
+[184.36 -> 189.64] Donc ici, quand on lance Cloud, maintenant, ça va lancer par défaut en bypass permission.
+[189.64 -> 192.64] Et ce que ça va faire ici dans permission, c'est que j'ai mis un Ask Mode
+[192.64 -> 194.52] avec des règles interdites.
+[194.52 -> 198.64] Ça va lui permettre de venir interdire Cloud de potentiellement faire des trucs
+[198.64 -> 199.24] très dangereux.
+[199.36 -> 203.08] Par exemple, ici, je lui dis, supprime un dossier qui n'existe pas.
+[203.60 -> 206.44] Vous allez voir que malgré qu'ils soient en bypass permission,
+[206.44 -> 211.12] c'est-à-dire qu'il peut tout faire, ici, quand je lui demande de supprimer
+[211.12 -> 213.40] un dossier, normalement, il ne va pas avoir trop peur.
+[214.40 -> 215.72] Tout le monde est que ça supprime mon ordi.
+[215.72 -> 220.04] Et vous voyez que là, ça vous demande le permission à bloquer.
+[220.60 -> 225.20] La Permission Rules RMRF te demande la permission de faire cette commande ou pas.
+[225.84 -> 228.32] Donc, en fait, ça permet de l'autoriser de faire tout.
+[228.80 -> 230.96] Mais dans le cas, moi, ça m'est déjà arrivé que des fois,
+[230.96 -> 233.32] tu ne sais pas pourquoi tu lui dis clean ça, il supprime un dossier,
+[233.32 -> 234.96] il n'y a pas guide et tu perds toutes tes données.
+[235.40 -> 236.88] Et bien, à ce moment-là, vous pouvez lui dire non,
+[236.88 -> 238.80] et ça vient annuler la tâche et ça arrête, il y a.
+[239.40 -> 240.68] Donc, ça, première update.
+[241.16 -> 245.08] Ensuite, dans les updates, on aura un son.
+[245.20 -> 247.36] Donc, ça, tu peux désactiver aussi si ça te fait chier.
+[247.84 -> 249.56] Mais putain, quel con.
+[250.08 -> 252.00] Dis juste bonjour.
+[252.76 -> 254.20] Normalement, quand il va terminer, voilà.
+[255.68 -> 258.28] Il fait un petit bruit, ce qui permet de savoir qu'il a terminé.
+[258.32 -> 259.60] C'est vrai que tu ne me sais jamais ici, non.
+[259.96 -> 260.44] Voilà.
+[260.44 -> 262.00] Donc, vous allez pouvoir avoir le machin.
+[262.00 -> 264.80] Et quand il a besoin d'un humain, il fait un bruit qui s'appelle mid-human.
+[265.32 -> 265.76] C'est vrai ?
+[265.76 -> 266.52] Un bruit différent.
+[266.52 -> 267.48] C'est quand il vous pose un prompt.
+[267.48 -> 268.12] Excellent.
+[268.72 -> 269.52] Donc, ça, c'est ça.
+[269.52 -> 273.00] On va avoir un autre script commande validator qui est un peu plus deep,
+[273.36 -> 275.36] qui vient aussi vérifier les commandes avant qu'elle s'effectue.
+[275.36 -> 276.04] Ça va très vite.
+[276.56 -> 279.84] Et on va avoir une StatueLine qui, actuellement,
+[279.84 -> 282.44] ne semble pas être de super efficacité.
+[282.44 -> 283.16] On va tester.
+[283.16 -> 284.96] D'ailleurs, on a un bruit celui-là, ce n'est pas moi qui l'ai fait.
+[285.24 -> 287.68] Et je ne sais pas pourquoi ici, on n'a pas de StatueLine,
+[289.04 -> 291.12] qui devrait quand même être le cas.
+[291.12 -> 296.44] On n'a pas bun, qui est install bun, STP et slash debug, la StatueLine.
+[296.96 -> 300.76] Alors, il se peut que, suivant votre ordinateur, etc., la config, elle one-shot pas tout.
+[301.20 -> 303.20] C'est très dur de réussir à faire un script,
+[303.20 -> 308.20] dans mon cas qui one-shot tous les users en fonction de vos permissions,
+[308.20 -> 309.68] ce que tu as sur ton ordi, etc.
+[310.12 -> 314.36] Donc, il y a une commande qui existe par défaut d'enclose
+[314.48 -> 315.52] qui s'appelle slash debug.
+[315.96 -> 318.56] Ça permet de debugger la configuration de Clos,
+[318.56 -> 319.68] donc il s'auto-debug.
+[320.16 -> 321.56] Et ici, c'est ce qu'on est en train de faire.
+[321.92 -> 325.28] Donc là, on voit qu'il va réussir à debug la StatueLine.
+[325.72 -> 330.24] Et la StatueLine, qui est faite normalement dans ce projet,
+[330.24 -> 333.08] elle a des tests et donc, il est capable de s'auto-tester.
+[333.08 -> 334.92] Mais on peut voir qu'ici, il n'a pas la commande bun.
+[335.48 -> 336.32] On ne sait pas exactement.
+[336.32 -> 337.36] Il n'a pas dans le path...
+[337.36 -> 340.40] C'est un bug un peu tricky, mais là, du coup, il l'a.
+[340.40 -> 341.16] Il l'a réussi.
+[341.20 -> 344.56] Ça, c'est pour voir combien tu dépenses sur ton recul.
+[345.44 -> 348.24] Donc là, en ajoutant ça, vous pouvez après customiser,
+[348.24 -> 350.20] mais maintenant, on voit si on est dans un repo-git.
+[350.72 -> 352.20] On voit le chemin actuel.
+[352.72 -> 354.60] On voit combien nous a coûté la session,
+[354.60 -> 357.00] combien il y a de token et combien de pourcentage ça fait.
+[357.40 -> 362.64] Vu que là, j'utilise le modèle slash-model.
+[362.64 -> 364.00] Quand vous allez passer à celui-là,
+[364.00 -> 366.48] vous voyez que là, j'ai utilisé 10% parce que j'ai 20 tokens.
+[367.08 -> 369.80] Ça permet de savoir quand est-ce que vous arrivez à la fin de la session.
+[370.48 -> 371.56] Donc là, statue line.
+[371.56 -> 374.28] Ensuite, on va avoir plusieurs skills qui sont disponibles gratuitement.
+[374.28 -> 375.12] Ils sont juste ici.
+[375.12 -> 379.20] Typiquement, dans ton projet qu'on avait juste avant,
+[379.20 -> 382.36] HappyHour, si on lance un terminal,
+[382.84 -> 386.48] vous allez pouvoir travailler avec la commande,
+[386.48 -> 390.00] par exemple, LoadMemory, ça va lui permettre d'optimiser,
+[390.00 -> 393.32] on peut tester typiquement, d'optimiser la mémoire,
+[393.32 -> 395.28] les tokens qui est inutile dans votre mémoire
+[395.28 -> 397.20] ou d'ajouter de la mémoire spécifique.
+[397.60 -> 399.64] C'est un prompt vraiment que j'ai optimisé
+[399.64 -> 401.56] avec plusieurs études, etc.,
+[401.56 -> 405.24] qui permet de créer les meilleures fichiers de mémoire possible pour l'IA.
+[405.24 -> 406.48] Si elle oublie des trucs.
+[406.48 -> 408.56] Entre les sessions, elle se rappelle.
+[408.56 -> 410.44] Normalement, il y a un fichier Cloud.md,
+[410.44 -> 412.76] alors peut-être que tu n'as pas,
+[412.76 -> 417.32] mais tu en as un Cloud.md juste ici qui est mal nommé,
+[417.32 -> 421.00] mais ce n'est pas très grave, il nommage jusqu'à ce qu'il n'y a normalement.
+[422.36 -> 425.72] Mais ici, ça va permettre de chercher les infos
+[425.76 -> 430.32] et d'optimiser en l'occurrence de ci ou de créer des nouvelles règles.
+[430.32 -> 435.16] Ça, c'est typiquement un prompt très sympa pour des profils comme toi.
+[435.16 -> 436.40] On a quoi d'autre ?
+[436.40 -> 437.68] On va avoir Apex.
+[437.68 -> 442.32] On a la commande Commits qui permet de Commits très simplement.
+[442.32 -> 444.84] Créer de paire, fixer or.
+[444.84 -> 448.20] Fixer or, ça vient fixer les erreurs avec des sub-adjuncts.
+[448.20 -> 451.68] Donc, ça peut corriger plein d'erreurs en même temps.
+[451.68 -> 454.48] Par exemple, toi, je pense que souvent, il fait des builds de Swift.
+[454.52 -> 456.60] Et le build Swift, des fois, il fail.
+[456.60 -> 458.64] S'il y a plein d'erreurs à faire de partout,
+[458.64 -> 461.12] il va lancer plusieurs agents pour aller beaucoup plus vite.
+[461.12 -> 463.28] Fixe Grammar, très stylé.
+[463.28 -> 465.20] Il peut analyser tous les fichiers de votre app.
+[465.20 -> 468.00] On peut le tester pour voir si tu as laissé des erreurs de Grammar.
+[468.00 -> 469.64] C'est surtout juste.
+[469.64 -> 471.44] C'est un foc pour quoi ?
+[471.44 -> 472.56] Parce qu'il n'y a jamais rien écrit.
+[472.56 -> 474.36] Des fois, il fait des erreurs.
+[474.36 -> 476.32] Fixe Grammar, ici, vous pouvez mettre un dossier.
+[476.32 -> 479.68] Donc, par exemple, je dis voilà, je vais fixer toutes les grammars de onboarding.
+[479.68 -> 483.96] Et ici, il vient lancer des sub-adjuncts ensuite.
+[484.00 -> 486.64] Il va chercher tous les fichiers.
+[486.64 -> 490.16] Je dois faire 23 fichiers et je vais les processer en parallèle.
+[490.16 -> 494.68] Il va lancer plein de sub-adjuncts qui vont chacun corriger un groupe de fichiers.
+[494.68 -> 495.64] C'est génial.
+[495.64 -> 499.08] Pour bulk, modifier tous tes fichiers le plus rapidement possible.
+[499.08 -> 501.72] Donc, moi, je fais ça typiquement sur mes landing pages, etc.
+[501.72 -> 503.64] Vu que j'ai plein de fichiers, ça me prend du temps.
+[503.64 -> 505.68] Boom, il lance tout.
+[505.68 -> 507.68] Là, il a tout lancé en background.
+[507.68 -> 511.76] Donc là, je vais attendre quelques secondes que tout soit terminé.
+[511.84 -> 512.76] Ils vont très, très vite.
+[512.76 -> 514.44] On peut voir que là, les agents, ils n'ont rien trouvé.
+[514.44 -> 516.60] Il n'y a pas de fichier qui se modifie.
+[516.60 -> 518.48] Et il est toujours, ok, il en a...
+[518.48 -> 521.04] Ok, j'ai jamais vu Léa qui crée 23 agents.
+[521.04 -> 522.60] Tu vois, hop, modifié.
+[522.60 -> 524.80] On peut le voir qu'il modifie des codes.
+[524.80 -> 526.24] On va voir si ça a un sens ou pas.
+[526.24 -> 528.64] And you're going in circle.
+[528.64 -> 529.72] Est-ce qu'il y a un S à circle ?
+[529.72 -> 530.72] Tu sais ce que c'est ça ?
+[530.72 -> 533.44] Ouais, je pense que c'est juste la correction.
+[533.44 -> 533.92] C'est avec un S ?
+[533.92 -> 535.32] Non, je pense que c'est sans S.
+[535.32 -> 537.48] Ah non, ok, il a corrigé d'ajouter un S.
+[537.48 -> 537.88] Oui.
+[537.88 -> 539.56] Tu tombes là, ouais, je pense que...
+[539.60 -> 540.36] Mais oui, un S.
+[540.36 -> 540.84] S.
+[541.96 -> 543.96] Donc, il corrige la grammaire.
+[543.96 -> 544.80] Bon, c'est normal.
+[544.80 -> 547.12] Lui, il a peut-être aussi des fautes, ça arrive.
+[547.12 -> 549.44] Donc, corriger la grammaire.
+[549.44 -> 551.48] PixPR commande, moi, toi, ça te servira à rien.
+[551.48 -> 554.52] Merge OneShot, c'est un truc très cool.
+[554.52 -> 558.80] Je ne sais pas si tu as un mini truc à update.
+[558.80 -> 560.80] Mais si ici, on fait slash clear
+[560.80 -> 562.84] et qu'on utilise la commande OneShot,
+[562.84 -> 565.96] ça va permettre de faire des features assez rapidement.
+[565.96 -> 567.96] Donc, si on regarde ce onboarding,
+[568.00 -> 569.60] je vais, par exemple, lui dire...
+[569.60 -> 571.00] Non mais tu ne peux pas.
+[571.00 -> 572.16] On va annuler après.
+[572.16 -> 574.16] On va annuler, pas de soucis.
+[574.16 -> 575.56] Ici, je vais lui dire,
+[575.56 -> 580.28] rend le onboarding 0.7 en dark mode.
+[580.28 -> 581.68] On s'en fout.
+[581.68 -> 583.72] L'intéressant, c'est que ce OneShot,
+[583.72 -> 587.24] il a pour but de faire une feature rapidement, mais efficacement.
+[587.24 -> 590.64] Donc, il va généralement commencer par...
+[590.64 -> 593.48] Je ne sais pas, ici, il a le contexte du navigateur.
+[593.48 -> 594.52] Qu'est-ce qu'il va faire ?
+[594.52 -> 595.44] Qu'est-ce qu'il va faire ?
+[595.44 -> 597.56] Je ne sais pas comment tu le sais, ce qu'il fait.
+[597.60 -> 598.56] Normalement, il ne fait pas ça.
+[598.56 -> 600.52] Je pense que la feature est trop petite.
+[600.52 -> 603.00] C'est quoi l'intérêt du OneShot ?
+[603.00 -> 604.92] Oui, j'ai envie de te montrer, mais...
+[604.92 -> 606.32] Il faut que je trouve un truc à faire.
+[606.32 -> 608.08] Si j'ai rien à faire, je ne sais pas trop...
+[608.08 -> 609.80] Il va lui dire.
+[609.80 -> 611.52] C'est quoi, il faut une feature assez fat ?
+[611.52 -> 612.96] Voilà.
+[612.96 -> 614.36] On va faire ça. On va faire ce truc.
+[614.36 -> 615.72] Tu l'as déjà fait, c'est pas grave.
+[615.72 -> 616.76] Sture l'écran.
+[616.76 -> 618.56] Là, la différence que je vais faire avec OneShot,
+[618.56 -> 620.04] c'est que je ne vais pas taguer des fichiers.
+[620.04 -> 621.80] Tu vois ici, je voyais que tu taguais des fichiers.
+[621.80 -> 624.08] C'est à dire que tu comprends quand il y a un petit peu ce qui se passe.
+[624.12 -> 626.68] En tout cas, tu essaies de faire du code, car c'est un sens.
+[626.68 -> 630.24] Ici, le but du OneShot, c'est « Vibe ».
+[630.24 -> 633.00] Ceux-ci de dire pas d'explication de fichiers,
+[633.00 -> 635.60] pas d'explication de quoi que ce soit.
+[635.60 -> 641.00] Les règles du OneShot, c'est de faire beaucoup de phases d'exploration et de planification.
+[641.00 -> 643.96] De manière autonome et OneShot à la spécificité
+[643.96 -> 645.44] où il ne va pas te demander ton avis.
+[645.44 -> 648.12] Le but de OneShot, c'est qu'il OneShot ta feature.
+[648.12 -> 648.52] Pour rien.
+[648.52 -> 650.36] Sans que tu aies besoin d'intervenir.
+[650.36 -> 652.00] A ce moment-là, il va lancer plus ou moins d'agents,
+[652.04 -> 654.12] mais la commande que moi, je recommande.
+[654.12 -> 656.20] La commande OneShot, c'est plutôt pour les petites features
+[656.20 -> 658.60] comme on l'a fait ici, elle est optimisée pour la rapidité.
+[658.60 -> 661.52] Moi, ce que je renseigne le plus, c'est Apex.
+[661.52 -> 663.60] Apex, ici, je vais lancer 100 paramètres,
+[663.60 -> 667.84] mais il y a un paramètre principal que toi, tu as en gratuit, c'est tirer A.
+[667.84 -> 669.68] Ça permet de le faire en mode automatique.
+[669.68 -> 673.96] Sans automatique, il va te demander les permissions de faire ce que tu veux.
+[673.96 -> 678.00] Donc là, on va lancer Workflow Apex Free.
+[678.00 -> 681.88] Et tu vois qu'il va lire un fichier d'initialisation comme ceci.
+[681.88 -> 684.32] Automode, Save Mode, Economy Mode, Branche Mode.
+[684.32 -> 687.12] Donc ça, c'est les modes qu'il a activés ou pas.
+[687.12 -> 690.12] Et là, il va dire, voilà.
+[690.12 -> 692.20] Ok, ta feature, elle est simple ici.
+[692.20 -> 695.20] Donc là, il est Task Complexity Single Area,
+[695.20 -> 697.76] Kno IOS API, Direct Exploration.
+[697.76 -> 701.12] Donc là, il n'a pas fait des taps plus compliquées.
+[701.12 -> 703.40] Pourquoi ? Parce que c'est trop simple.
+[703.40 -> 706.88] Si on fait une feature complexe,
+[706.88 -> 709.72] il n'y a pas des features complexes que tu as fait dans ta vie, on va regarder.
+[709.76 -> 711.76] Si il peut...
+[711.76 -> 714.36] Ce n'est pas une feature, non, ça, c'est des pontes.
+[714.36 -> 717.96] Ce qu'il pourrait faire, c'est dans le In-App.
+[717.96 -> 725.08] Il faudrait faire en sorte qu'il y ait une grande qui envoie un message tous les jours.
+[725.08 -> 730.44] Il aura eu 7 heures du mat' ou il va demander à l'utilisateur
+[730.44 -> 733.56] comment s'est passé l'action du jour précédent.
+[733.56 -> 735.08] On n'a pas voulu laisser finir.
+[735.08 -> 738.44] Ok, parce qu'après, il ajoute une nuit ou il met une petite notif.
+[738.52 -> 739.88] Ok, je vais rajouter.
+[739.88 -> 744.36] Puis, il a rajouté une nuit avec une petite notif.
+[744.36 -> 746.36] On n'a pas forcément lui laissé exécuter,
+[746.36 -> 748.04] parce que c'est sûrement qu'on écrit de la merde.
+[748.04 -> 752.92] Mais le concept ici, c'est en lançant le workflow qui est juste là.
+[752.92 -> 757.56] Ça, c'est un peu chaud, il le back-end, il y a du front, de le tout.
+[757.56 -> 759.44] Ce qu'il a au moins...
+[759.44 -> 762.08] Ah, là, il fait un petit truc.
+[762.08 -> 764.04] Et là, il fait Analyzing.
+[764.04 -> 765.00] On va voir ce qu'il va faire.
+[765.00 -> 766.72] Et là, tu vois qu'il va lancer...
+[766.72 -> 768.08] Explore codebase.
+[768.16 -> 769.68] Un, deux sub-adjuncts.
+[769.68 -> 771.76] Peut-être trois, s'il y a besoin.
+[771.76 -> 774.96] Et en fait, il va être beaucoup plus capable avec ce prompt
+[774.96 -> 776.40] de lancer plus d'agents.
+[776.40 -> 778.92] Si on regarde un petit peu pour comprendre comment ça marche,
+[778.92 -> 782.84] Apex, Step, il a une phase d'initialisation.
+[782.84 -> 785.04] Ensuite, si tu lui passes un paramètre branche,
+[785.04 -> 786.20] il va créer une nouvelle branche.
+[786.20 -> 788.04] Economie, ça va éviter les sub-adjuncts
+[788.04 -> 790.36] pour éviter de dépenser de l'argent.
+[790.36 -> 792.52] Ensuite ici, il va analyser
+[792.52 -> 795.80] et en fait, il est obligé d'avoir tout le contexte possible,
+[795.88 -> 799.04] ce qui te permet d'assurer que l'IA commence pas à halluciner
+[799.04 -> 801.24] et que tu n'es pas besoin de lui dire quoi faire.
+[801.24 -> 803.04] Tu le vibe et lui, il va comprendre.
+[803.04 -> 805.04] Ensuite, il va planifier ici avec ce fichier.
+[805.04 -> 807.80] Il va exécuter et valider sa propre tâche.
+[807.80 -> 810.76] Dans la version premium, il vient même review la sécurité,
+[810.76 -> 813.64] le clean code et la cohérence de ton code par la suite.
+[813.64 -> 816.24] Moi, j'utilise beaucoup ça pour one-shot des features
+[816.24 -> 819.96] sans avoir besoin de faire exactement ce que tu as fait juste ici.
+[819.96 -> 821.36] Moi, je t'acc jamais de fichier.
+[821.36 -> 822.60] Est-ce que je fais ça ?
+[822.60 -> 824.36] Ça, c'est un sens de t'aguer des fichiers
+[824.40 -> 826.60] parce qu'à éclabonnement à 20 $ que tu as,
+[826.60 -> 828.92] tu vas vouloir économiser des tokens.
+[828.92 -> 832.00] Le fait de lui demander de chercher lui-même les fichiers,
+[832.00 -> 835.56] tu lui fais de l'inverse et tu lui demandes de chercher lui-même
+[835.56 -> 838.52] ce qui permet quand moi, je travaille sur beaucoup de features.
+[838.52 -> 840.72] Moi, des fois, j'ai plein de terminaux en même temps
+[840.72 -> 843.28] que je n'ai pas besoin de m'amuser à taguer les fichiers, etc.
+[843.28 -> 845.00] et que je peux juste lui balancer.
+[845.00 -> 846.60] Et grâce à ces phases d'exploration,
+[846.60 -> 850.88] en fait, il va presque toujours trouver tous les fichiers à les chercher.
+[850.88 -> 852.52] Tu vois que là, il a lancé les agents
+[852.56 -> 853.60] et ensuite, une fois qu'il a fait ça,
+[853.60 -> 856.36] il va relire encore un petit peu le contexte
+[856.36 -> 859.24] en guillemets pour être sûr de ce qu'il a fait.
+[859.24 -> 860.92] Et après, ici, il lit le plan.
+[860.92 -> 863.68] Et là, tu vois, il va lire le plan pour planifier.
+[863.68 -> 864.76] Il va planifier.
+[864.76 -> 866.80] Une fois qu'il a planifié, il va exécuter, etc.
+[866.80 -> 869.48] On va couper ça, de faire un burn des tokens pour rien.
+[869.48 -> 871.24] Mais l'idée est là.
+[871.24 -> 873.52] Il a des scripts aussi pour setup, pas mal de choses.
+[873.52 -> 874.92] C'est phénoménal, ça.
+[874.92 -> 877.32] En vrai ça, je pense que ça change la vie.
+[877.32 -> 878.04] C'est la cité.
+[878.04 -> 879.40] Et je te mettrai la version premium
+[879.40 -> 883.56] du coup que tu peux le lancer avec un nombre de trucs différents.
+[883.56 -> 886.20] Promets Creator, ça, c'est ultra axe.
+[886.20 -> 889.44] Tu as de l'Ian dans ton app, tous les patterns d'Ia
+[889.44 -> 892.56] pour avoir des bons prompts, moi, je fais beaucoup de choses.
+[892.56 -> 895.64] Et donc ici, ça va lui permettre de compter avec des règles
+[895.64 -> 897.56] avec toutes les bonnes pratiques,
+[897.56 -> 900.24] toutes les règles d'entropique de OpenAI sur les best practices
+[900.24 -> 904.44] pour que le prendre, parce que tu veux les multiprocessing que tu veux.
+[904.44 -> 907.20] Skill Creator, ça te permet de créer des skills.
+[907.24 -> 910.24] Donc là, on a des skills que tu peux créer autant que tu veux.
+[910.24 -> 912.64] Subadjun Creator, c'est pour créer des subadjuns.
+[912.64 -> 915.60] On t'a créé aussi des agents ExploreConbase et ExploreDoc.
+[915.60 -> 919.16] Et on va aussi avoir ici UltraFing,
+[919.16 -> 923.76] ça se permet juste de lui faire avec ce prompt.
+[923.76 -> 927.20] Il utilise le maximum de thinking token possible des fois.
+[927.20 -> 929.44] Il peut finir pendant deux minutes, ça n'a aucun sens.
+[929.44 -> 931.88] Et ici, c'est le workflow Apex Free.
+[931.88 -> 934.32] Ce que j'ai pas fait avec toi pour terminer ta configuration
+[934.32 -> 935.32] et terminer cette vidéo,
+[935.36 -> 936.76] ça, c'est la configuration.
+[936.76 -> 939.16] On a la StatueLine juste ici qu'on a vu.
+[939.16 -> 940.24] On a deux, trois scripts.
+[940.24 -> 943.36] Et on va t'installer les deux, trois MCP que j'aime bien.
+[943.36 -> 945.92] Donc que je vois que t'as pas, en fait.
+[945.92 -> 946.92] Context7.
+[946.92 -> 947.76] Je crois que je l'ai, lui.
+[947.76 -> 949.16] Peut-être pas dans cette configuration.
+[949.16 -> 951.36] Est-ce que c'est possible de l'avoir à plusieurs endroits ?
+[951.36 -> 951.84] Oui.
+[951.84 -> 953.08] Oui, je pense que ça va.
+[953.08 -> 955.56] Ici, vous allez aller dans SignIn.
+[955.56 -> 958.88] Normalement, vous pouvez sign in avec GitHub comme ceci.
+[958.88 -> 960.36] Et une fois que vous êtes sign in,
+[960.36 -> 962.72] on va ici prendre le token.
+[962.72 -> 964.92] Tu vois que tu avais déjà fait juste ici.
+[964.96 -> 966.08] Il y a six jours.
+[966.08 -> 967.64] Là, tu l'as utilisé il y a six jours.
+[967.64 -> 968.64] Je vais couper le record.
+[968.64 -> 972.84] Donc là, j'ai ajouté le MCP Context7 qu'on voit qui est juste ici.
+[972.84 -> 975.64] Context7, ça va permettre à l'IA de chercher dans la documentation,
+[975.64 -> 978.76] chercher des librairies, chercher toutes les dernières mises à jour.
+[978.76 -> 982.16] Et il n'y a pas de clé ici.
+[982.16 -> 987.12] Et la dernière chose qu'on a besoin, c'est Exa.i.
+[987.12 -> 987.80] C'est pas mal aussi.
+[987.80 -> 992.40] On peut aussi se connecter avec Google comme ceci de ça.
+[993.16 -> 995.04] Et là, on ajoute le deuxième MCP.
+[995.04 -> 999.76] Donc ici, avec Exa, on remplace Exa à Piaki comme ceci.
+[999.76 -> 1002.60] Je vais encore une fois couper le record.
+[1002.60 -> 1003.04] Voilà.
+[1003.04 -> 1005.64] Une fois qu'on a ajouté ça, on peut lancer Claude encore.
+[1005.64 -> 1007.64] Et là, normalement, si on fait slash MCP,
+[1007.64 -> 1010.16] on peut voir qu'on a voulu lancer Claude.
+[1010.16 -> 1011.64] Et après, tout ce qu'on a fait,
+[1011.64 -> 1014.12] on lui redit qu'on est content et qu'on trust le folder.
+[1014.12 -> 1017.32] On a Exa et là, on peut lui faire recherche.
+[1017.32 -> 1020.76] La meilleure librairie réacte avec Exa.
+[1020.80 -> 1022.80] Par défaut, normalement, il devrait avoir tendance
+[1022.80 -> 1025.16] à utiliser Exa suivant comment.
+[1025.16 -> 1028.40] Mais ici, je lui demande, tu vois qu'il utilise Exa.
+[1028.40 -> 1034.08] L'avantage d'Exa, c'est qu'il fait des recherches web qui sont rapides.
+[1034.08 -> 1035.60] On dirait pas.
+[1035.60 -> 1037.88] Et en fait, il output des trucs très intéressants
+[1037.88 -> 1039.28] quand vous regardez.
+[1039.28 -> 1043.40] En fait, ceci, tu peux voir qu'il vient output le contenu des articles
+[1043.40 -> 1046.68] avec uniquement ce qui est intéressant comme ceci en format AI.
+[1046.68 -> 1050.28] Donc, c'est un service qui scrape Internet
+[1050.32 -> 1053.24] qui permet de output des sacrés résultats
+[1053.24 -> 1057.56] pour faire des recherches à la place d'utiliser Web Search qui est par défaut.
+[1057.56 -> 1061.72] Le prix de Exa, c'est gratuit avec 10 dollars de crédit.
+[1061.72 -> 1067.52] Personnellement, en dépensant 3000 dollars par mois de Claude Code,
+[1067.52 -> 1070.08] j'ai dépensé mes 6 dollars.
+[1070.08 -> 1072.76] Donc ici, dans Billing, on peut voir qu'on a une balance normalement gratuite.
+[1072.76 -> 1074.88] On n'a pas mis de carte.
+[1074.88 -> 1077.00] J'ai dépensé à 20 dollars maintenant.
+[1077.00 -> 1079.40] Chier, à l'époque, il n'y avait que 10 dollars.
+[1079.44 -> 1082.84] Moi, pour dépenser 10 dollars, j'avais pris 5 mois.
+[1082.84 -> 1084.36] Donc, toi, on a pour 10 mois.
+[1084.36 -> 1087.28] Tu dépenses comme moi 3000 dollars de Claude par mois.
+[1087.28 -> 1088.28] Mais c'est très cool.
+[1088.28 -> 1089.68] Voilà, qu'est-ce que tu en dis ?
+[1089.68 -> 1091.92] Est-ce que tu as des questions, réflexions, tairents ?
+[1091.92 -> 1092.80] Voilà, c'est la fin.
+[1092.80 -> 1096.08] On a tout set up avec tairent sur ton ordi.
+[1096.08 -> 1099.36] Il est maintenant prêt pour open Claude codifié, tout ça.
+[1099.36 -> 1102.32] Et il est enfin arrivé au niveau OJ.
+[1102.32 -> 1105.56] Enfin, en vrai, il est arrivé à 90 % comme ceci
+[1105.56 -> 1108.48] parce que je ne l'ai pas encore mis la config premium.
+[1108.52 -> 1112.16] Une fois qu'il aura la config premium, il sera au niveau 99.
+[1112.16 -> 1115.48] Et le niveau son est impossible à atteindre parce qu'il n'y a que moi qui...
+[1116.80 -> 1119.80] Il y a un moment, il faut avoir quand même un ego surdimensionnel.
+[1119.80 -> 1121.48] C'est à ce moment-là que ça se passe.
+[1121.48 -> 1122.08] C'est un mec, ok.
+[1122.08 -> 1124.64] Mais OJ, ça compte à partir de 99, c'est bon ?
+[1124.64 -> 1125.96] 90, OJ.
+[1125.96 -> 1126.72] Oh, yes.
+[1126.72 -> 1127.44] C'est bon.
+[1127.44 -> 1130.12] Donc, si vous installez la config, vous passez en mode OJ.
+[1130.12 -> 1132.60] Si vous avez la config premium, OJ++.
+[1132.60 -> 1134.60] Comme ça, vous aurez tous les workflows.
+[1134.72 -> 1139.32] Et aussi, en plus, pour remercier Terrence pour sa participation,
+[1139.32 -> 1143.48] on va les repartir avec un sticker de moi qui pourrait mettre sur son ordinateur.
+[1143.48 -> 1144.20] Ma tête comme ça.
+[1144.20 -> 1145.52] Ça fait plaisir.
+[1145.52 -> 1147.52] C'est ce que j'attendais de cette interaction.
+[1147.52 -> 1148.84] Allez, suive Terrence sur Instagram.
+[1148.84 -> 1149.84] C'est vraiment un super gars.
+[1149.84 -> 1150.68] Il fallait très bonne vidéo.
+[1150.68 -> 1153.00] Il va continuer à poster une vidéo par jour.
+[1153.00 -> 1154.32] Il m'a dit pendant un an.
+[1154.32 -> 1155.92] Pendant au moins 5 jours.
+[1157.08 -> 1158.40] Et on se dit à très bientôt.
+[1158.40 -> 1158.92] Ciao, ciao.
