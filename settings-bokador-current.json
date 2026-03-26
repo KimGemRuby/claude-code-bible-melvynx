@@ -1,0 +1,224 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(cat *)",
+      "Bash(curl *)",
+      "Bash(df *)",
+      "Bash(docker *)",
+      "Bash(du *)",
+      "Bash(fail2ban-client *)",
+      "Bash(find *)",
+      "Bash(free *)",
+      "Bash(git *)",
+      "Bash(grep *)",
+      "Bash(head *)",
+      "Bash(journalctl *)",
+      "Bash(ls *)",
+      "Bash(md5sum *)",
+      "Bash(nginx *)",
+      "Bash(node *)",
+      "Bash(npm *)",
+      "Bash(ping *)",
+      "Bash(pnpm *)",
+      "Bash(ps *)",
+      "Bash(python *)",
+      "Bash(python3 *)",
+      "Bash(rsync *)",
+      "Bash(scp *)",
+      "Bash(sha256sum *)",
+      "Bash(ssh *)",
+      "Bash(systemctl *)",
+      "Bash(tail *)",
+      "Bash(tmux *)",
+      "Bash(trash *)",
+      "Bash(wc *)",
+      "Bash(npx *)",
+      "Bash(openclaw *)",
+      "Bash(where *)",
+      "Bash(which *)",
+      "Bash(whoami *)",
+      "Bash(hostname *)",
+      "Bash(echo *)",
+      "Bash(type *)",
+      "Bash(net *)",
+      "Bash(sc query *)",
+      "Bash(schtasks /query *)",
+      "Bash(powershell *)",
+      "Bash(powershell.exe *)",
+      "Bash(pip *)",
+      "Bash(uvx *)",
+      "Bash(nvidia-smi *)",
+      "Bash(arp *)",
+      "Bash(ipconfig *)",
+      "Bash(tasklist *)",
+      "Bash(findstr *)",
+      "Bash(netsh *)",
+      "Bash(reg query *)",
+      "Bash(claude *)",
+      "Edit(*)",
+      "Read(*)",
+      "Write(*)",
+      "WebFetch(*)"
+    ],
+    "deny": [
+      "Bash(chmod 777 *)",
+      "Bash(curl * | bash)",
+      "Bash(curl * | sh)",
+      "Bash(dd if=/dev/zero*)",
+      "Bash(diskpart *)",
+      "Bash(format *)",
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(git reset --hard *)",
+      "Bash(mkfs *)",
+      "Bash(netcfg *)",
+      "Bash(npm publish *)",
+      "Bash(reboot *)",
+      "Bash(rm -rf *)",
+      "Bash(rm -rf /)",
+      "Bash(rm -rf C:\\Windows*)",
+      "Bash(rm -rf G:*)",
+      "Bash(rm -rf H:*)",
+      "Bash(rm -rf ~)",
+      "Bash(shutdown *)",
+      "Bash(sudo rm *)",
+      "Bash(sudo rm -rf *)",
+      "Bash(wget * | bash)",
+      "Bash(wget * | sh)",
+      "Read(**/*.pem)",
+      "Read(**/*password*)",
+      "Read(**/*secret*)",
+      "Read(**/*token*)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(.env)",
+      "Read(.ssh/id_*)",
+      "Bash(rm -r *)",
+      "Bash(del /f *)",
+      "Bash(del /s /q *)",
+      "Bash(git push --force-with-lease origin main*)",
+      "Bash(git push --force-with-lease origin master*)",
+      "Bash(rm -rf D:*)",
+      "Bash(rm -rf E:*)",
+      "Bash(rm -rf J:*)",
+      "Bash(rm -rf K:*)",
+      "Bash(rm -rf L:*)"
+    ],
+    "defaultMode": "bypassPermissions"
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -Command \"Add-Content -Path ~\\.claude\\claude-sessions.log -Value '[STOP] Session terminee'\""
+          },
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -WindowStyle Hidden -File \"C:\\Users\\kim13\\.claude\\hooks\\play-sound.ps1\""
+          },
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -WindowStyle Hidden -File \"C:\\Users\\kim13\\.claude\\hooks\\notify-telegram.ps1\"",
+            "timeout": 15,
+            "async": true
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|Replace",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -Command \"Add-Content -Path ~\\.claude\\claude-edits.log -Value '[HOOK] Fichier modifie'\""
+          },
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -Command \"$f=$env:TOOL_INPUT | ConvertFrom-Json | Select-Object -ExpandProperty file_path -ErrorAction SilentlyContinue; if ($f -and ($f -match '\\.(js|ts|jsx|tsx|css|json|md)$')) { prettier --write $f 2>$null }\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Cmd|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -Command \"if ($env:TOOL_INPUT -match 'diskpart|format|rm -rf|del /f|del /s|Remove-Item.*-Recurse.*-Force|Clear-Disk|mkfs|dd if=') { Write-Host 'BLOCKED BY HOOK'; exit 1 }\""
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -WindowStyle Hidden -File \"C:\\Users\\kim13\\.claude\\hooks\\play-need-human.ps1\""
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "hookify@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "C:\\Users\\kim13\\.bun\\bin\\bun.exe run C:\\Users\\kim13\\.claude\\scripts\\status-line.ts"
+  },
+  "theme": "dark",
+  "includeCoAuthoredBy": true,
+  "autoMemoryEnabled": true,
+  "skipDangerousModePermissionPrompt": true,
+  "enableAgentTeams": true,
+  "cliShortcuts": [
+    { "key": "s", "description": "Status systeme", "command": "/status" },
+    { "key": "a", "description": "Audit securite", "command": "/audit" },
+    { "key": "c", "description": "Smart commit", "command": "/smart-commit" },
+    { "key": "m", "description": "Master audit", "command": "/master-audit" },
+    { "key": "d", "description": "Disk report", "command": "/disk-report" },
+    { "key": "t", "description": "Tunnel check", "command": "/tunnel-check" },
+    { "key": "b", "description": "Brain dump", "command": "/brain-dump" },
+    { "key": "e", "description": "Evolve systeme", "command": "/evolve" }
+  ],
+  "projects": {
+    "autoMemoryEnabled": true
+  },
+  "mcpServers": {
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ]
+    },
+    "exa": {
+      "type": "http",
+      "url": "https://mcp.exa.ai/mcp?exaApiKey=350da04a-3704-45a6-8373-59ced4f3bc96"
+    }
+  }
+}
