@@ -23,13 +23,14 @@ Machines contributrices :
 | [09-BIBLE-MEMORY.md](09-BIBLE-MEMORY.md) | Système de mémoire Bible |
 | [09-IMPLEMENTATIONS-MANQUANTES.md](09-IMPLEMENTATIONS-MANQUANTES.md) | Éléments manquants identifiés |
 | [10-JOURNAL-MACBOOK-20260326.md](10-JOURNAL-MACBOOK-20260326.md) | **Session MacBook M4 — 26 mars 2026** : création 3 bibles OS, fusion, Règle #1 |
+| [11-RESUME-COMPLET-MACBOOK-20260326.md](11-RESUME-COMPLET-MACBOOK-20260326.md) | **Résumé complet** : bibles + audit 100% + corrections + inventaire config |
 
 ## Bibles par OS
 | Fichier | OS | Lignes | Contenu |
 |---------|-----|--------|---------|
-| [BIBLE_MACOS.md](../BIBLE_MACOS.md) | macOS | ~2500+ | Bible complète macOS — 23 chapitres |
-| [BIBLE_WINDOWS.md](../BIBLE_WINDOWS.md) | Windows | ~1700+ | Bible complète Windows — 23 chapitres |
-| [BIBLE_LINUX.md](../BIBLE_LINUX.md) | Linux | ~2200+ | Bible complète Linux — 23 chapitres |
+| [BIBLE_MACOS.md](../BIBLE_MACOS.md) | macOS | 2930 | 23 chapitres + Règle #0/#1 + Skill backup + 3 annexes |
+| [BIBLE_WINDOWS.md](../BIBLE_WINDOWS.md) | Windows | 2001 | 23 chapitres + Règle #0/#1 + Skill backup + 2 annexes |
+| [BIBLE_LINUX.md](../BIBLE_LINUX.md) | Linux | 2674 | 23 chapitres + Règle #0/#1 + Skill backup + 4 annexes |
 | [BIBLE_CLAUDE_CODE_DEVOPS_SYSADMIN.md](../BIBLE_CLAUDE_CODE_DEVOPS_SYSADMIN.md) | Multi-OS | 99 Ko | Bible étendue DevOps/SysAdmin (66 chapitres) |
 
 ## Machines contributrices
