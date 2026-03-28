@@ -1,5 +1,14 @@
 # CHANGELOG — Bible Melvynx Claude Code
 
+## [V3.3] — 2026-03-28
+
+### Completions finales (1489 → 1502 lignes)
+- Alias YOLO mode : `alias cc="claude --dangerously-skip-permissions"` (Ch.3)
+- MCP vs Skills distinction fondamentale : MCP = outils (tool calls), Skills = connaissances (prompts). Skills plus token-efficient. (Ch.3)
+- Parler : app Melvynx speech-to-text open source, DMG disponible (Ch.11)
+
+---
+
 ## [V3.2] — 2026-03-28
 
 ### Fusion massive : 36 sources Melvynx (1289 → 1489 lignes, +15%)

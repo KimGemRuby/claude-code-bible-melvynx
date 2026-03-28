@@ -193,6 +193,12 @@ claude -v
 - `npx ctx7-latest-setup` → choisir "CLI + Skill" au lieu de "MCP Server"
 - Le skill ajoute une description chargee UNIQUEMENT quand necessaire (vs MCP charge a chaque conversation)
 
+#### MCP vs Skills — Distinction fondamentale
+- Les **MCP** ajoutent des **OUTILS** (tool calls) : le modele peut appeler des fonctions externes
+- Les **Skills** ajoutent des **CONNAISSANCES** (prompts structures) : le modele recoit des instructions et du contexte
+- Les skills sont **plus token-efficient** : seule la description est chargee, le contenu est lu a la demande
+- Les MCP sont charges en permanence dans le contexte, les skills ne le sont que quand necessaire
+
 #### CLI > MCP pour la plupart des cas
 - Preferer les CLI natifs : Supabase CLI, PostgreSQL CLI, GitHub CLI (`gh`), Neon CLI, Vercel CLI
 - Bash = lister fichiers, lire contenu, pipe, head, tail — controle total sur l'output
@@ -243,6 +249,12 @@ SANDBOX=1 claude
 # Persister dans .bashrc :
 export SANDBOX=1
 ```
+
+### Alias YOLO mode
+```bash
+alias cc="claude --dangerously-skip-permissions"
+```
+Ajouter dans `.bashrc` ou `.zshrc` pour persistance. Permet de lancer Claude en bypass avec juste `cc`.
 
 ---
 
@@ -904,6 +916,7 @@ La vraie puissance : donner des "mains" a l'IA.
 ### Speech-to-text
 - **Voice Ink** : speech-to-text pour Mac (39$ one-time, alternative a Super Whisper 9$/mois)
 - **WhisperTurbo** : app Melvynx, speech-to-text local gratuit et open source. Modele PRK (Parakeet) : rapide pour <20s. Modele Whisper Large : meilleur pour longs enregistrements et francais
+- **Parler** : app Melvynx speech-to-text, open source, DMG disponible en telechargement direct
 - **Homebrew** : gestionnaire de paquets macOS (`brew install <paquet>`)
 
 ### IDE
