@@ -1,5 +1,43 @@
 # CHANGELOG — Bible Melvynx Claude Code
 
+## [V3.1] — 2026-03-28
+
+### Fusion Checklist Integrale (820 → 1289 lignes, +57%)
+
+Fusion de la Checklist Integrale d'Instructions (22 sections, ~200 instructions cochables) dans la Bible.
+Sources ajoutees : Masterclass 1h30 + Masterclass 4h + 6 Nouveautes + Terminal Vibe Coder.
+
+### Nouveau fichier
+- `BIBLE_MELVYNX_V3.md` — Bible V3.1 fusionnee (1289 lignes, 20 chapitres + anti-patterns)
+
+### Chapitres restructures (20 → 20, reorganises)
+- **Ch.2 — Installation & Prerequis** : enrichi avec commande `curl` install, guide WSL mlv.sh/fs, organisation ~/Developer/
+- **Ch.3 — Le Terminal** : ajout analogie Minecraft, commandes npm, ouvrir terminal par OS
+- **Ch.5 — Abonnement & Limites** : details reset sessions (~4.5/jour), attendre ~1h si limit
+- **Ch.8 — Skills** : section Plugins vs Skills detaillee, front-end-design, github-init recommandes
+- **Ch.9 — Workflows** : tableau choix workflow selon tache, flags /apex complets (--resume, --tasks, --interactive)
+- **Ch.11 — Work Trees** : chapitre dedie (avant fusionne dans Sub-agents), alternative sans work tree
+- **Ch.12 — Prompting** : NowTS boilerplate, rules ciblees par path avec exemple globs
+- **Ch.13 — Securite** : securite dans CLAUDE.md (hash, idempotent, diagnostiquer avant agir)
+- **Ch.14 — Deploiement** : chapitre dedie (Netlify Drop + Vercel + github-init)
+- **Ch.15 — Nouveautes 2026** : CEMUX details (Swift/AppKit), Batch, Auto-Memory, Scheduled Tasks
+- **Ch.17 — Tmux** : commandes installation (brew/apt)
+- **Ch.18 — Multi-projets & Dossier CC** : symlinks skills, philosophie "Claude peut le faire ?"
+- **Ch.20 — Hooks** : chapitre dedie avec exemple JSON complet settings.json
+- **Ch.21 — WSL** : chapitre dedie Windows
+
+### Meta-skills & meta-prompting
+- Section enrichie : creer des skills qui creent des skills, app-prompting-creator, meta-prompts pour cloud memory/hooks/skills/sub-agents
+
+### Anti-patterns
+- 20 → 25 regles
+- Ajout : JAMAIS ignorer erreurs, JAMAIS rm -rf, JAMAIS supprimer sans backup, JAMAIS >4 work trees, JAMAIS relancer skills inutilement
+
+### Resume express (nouveau)
+- Tableau de reference rapide : 14 composants avec instruction cle chacun
+
+---
+
 ## [V2.0] — 2026-03-26
 
 ### Mise a jour majeure : Bible V2 (+56% de contenu, 527 → 820 lignes)
