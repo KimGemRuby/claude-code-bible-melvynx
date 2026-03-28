@@ -1,0 +1,269 @@
+Claude a rajouté la pièce manquante qui lui manquait,
+qui est le fait de pouvoir contrôler Chrome via Cloud Code.
+Donc ça c'est la nouvelle mise à jour de Claude.
+On peut voir que maintenant on peut utiliser l'extension Claude,
+mais ce qui nous intéresse c'est surtout que
+Claude Code peut maintenant directement contrôler ton navigateur
+pour pouvoir avoir des informations.
+Et dans cette vidéo on va tester tout simplement le contrôle du navigateur.
+On va tester s'il peut changer du local storage, différentes données,
+s'il peut interagir avec la page, etc.
+Comme ça on va pouvoir voir un petit peu ce qui fonctionne, ce qui ne fonctionne pas, etc.
+Alors pour ça, j'ai récemment rajouté une nouvelle feature,
+donc je vais tout de suite aller sur Chrome,
+parce que du coup pour faire fonctionner tout ça, il faut aller sur Chrome.
+Alors déjà, on va lire la documentation.
+Donc ici, il y a un article de blog Piloting Claude in Chrome.
+Donc maintenant tu peux piloter Claude dans Chrome.
+Et ce qui nous intéresse, c'est surtout qu'il y a une intégration avec Claude Code.
+Alors comment est-ce qu'on l'utilise ?
+Il faut savoir que c'est en bêta.
+Et donc cette intégration, elle va permettre à Claude de venir faire du live debugging.
+Il peut lire les consoles erreur et le state du DOM.
+Design verification pour savoir si ça représente ce qu'il doit faire.
+Web app testing, il peut tester le form, check les visual regression, etc.
+Authentification de web app, il peut interagir avec Google Docs,
+Gmail, Notion avec n'importe quelle app.
+Data extraction, il peut récupérer des données.
+Task automation, automate, répétitive for other tasks, etc.
+Et session recording pour faire des gifs, pour partager ce qui s'est passé.
+Alors pour ça, il faut être sûr que tu as installé dans Chrome l'extension ici Claude.
+Donc normalement, si on va Claude for Chrome, on voit ce site juste ici.
+Il ne faut pas prendre l'extension Claudia juste ici.
+C'est une autre entreprise, c'est du fake.
+Mais ici dans Add to Chrome, Claude et on installe l'extension.
+Ça, c'est la première étape.
+Ensuite, il faut Claude Code CLI et il faut un plan payant.
+Comment ça fonctionne ?
+Ça utilise la Chrome native message API pour recevoir des commandes de Claude,
+code et les exécuter dans le browser.
+Et donc, si on compte des pages, etc.
+Ça pose et ça demande à l'utilisateur de corriger tout ça.
+Il faut savoir ce qui change par rapport à Playwright.
+Parce que là, vous êtes en train de vous dire oui, Melvin, mais en fait,
+depuis le début, Playwright, MCP, c'est super et tout.
+Non, Playwright, c'était vraiment pas top.
+Parce que ça lançait des instances Headless de Chrome.
+Vu que ça lance des instances Headless de Chrome, c'est pas d'extension,
+pas d'extension, pas d'one password, etc.
+Pas d'authentification, etc.
+Alors que là, on va tout avoir qui va être présent.
+Comment est ce qu'on fait ?
+Déjà, il faut vérifier que tu as bien la dernière version de Claude.
+Mais une fois que c'est fait, il nous suffit d'utiliser le –chrome tag.
+Donc ici, je vais me retrouver dans mon éditeur de code qui est juste ici.
+On va clire et là, je vais lancer Claude –chrome.
+Là, quand on fait ça, tu vas voir, c'est intéressant
+parce que ça va nous afficher déjà un super gros warning.
+Alors voilà, j'ai déjà activé, mais je peux pas voir l'historique.
+C'est pas très grave, mais ça nous affiche ici Claude.
+Et normalement, la première fois que tu le lances,
+ça va te lancer une sorte de Claude comme ceci.
+Alors, est-ce que je l'ai là ou est-ce qu'il est ?
+Ah bah, je l'ai plus du coup.
+Du coup, ça va fermer la page, en fait.
+OK, donc une fois qu'on a ce Claude,
+on va pouvoir lui demander de vérifier des changements.
+Donc, typiquement moi, dans ma pull request sur laquelle je suis actuellement,
+pour tester et comparer les modèles,
+j'ai ajouté juste ici mon petit Claude.
+Et donc là, on peut voir que j'ai ajouté Tia GPT,
+mais uniquement quand le local storage show model picker fonctionne.
+Et donc là, je vais prendre ça.
+Donc, je vais copier.
+Enfin, je vais tout simplement aller dans Claude et je vais lui dire.
+Bon, j'ai eu un petit problème parce que Claude était down.
+Malheureusement, ça, c'est le seul problème de Claude.
+J'ai la statue page devant.
+Maintenant, c'est corrigé.
+Et donc ici, je lui ai dit, voilà, on regarde l'APR.
+Donc ici, on peut voir qu'il est capable de voir ça.
+Et là, il active le paramètre via le local storage
+et il est capable de venir naviguer.
+Ensuite, ici, il vient tenter de faire un screenshot.
+Alors là, est ce que ça va charger?
+Qu'est ce qui se passe?
+OK, bon, finalement, après quelques tests pas concluants,
+on a ici Claude Code qui a vraiment accès.
+Donc là, tu vois qu'il est allé sur la page.
+Donc après avoir regardé les trucs qu'il devait vérifier,
+il a vu ça et maintenant il est allé sur la page.
+Et il a commencé à naviguer, comme on peut le voir juste ici.
+Donc là, il est dans l'application.
+Il fait un screenshot et il dit voilà, là, je vois le dashboard.
+Et là, boom, il voit le computer comme ceci pour voir.
+Et il fait un screenshot.
+Donc en fait, on peut voir que Claude a directement accès au computer.
+Donc là, on peut voir qu'il voit que le modèle picker est visible.
+Le modèle picker est visible.
+Et on peut voir ici qu'il a réussi à accéder au local storage.
+Je ne sais pas comment.
+Il a désactivé la variable et on peut voir qu'il n'est plus là.
+Donc très intéressant.
+On peut voir qu'on peut tester vraiment.
+Il est assez smart.
+Il a réussi ici à désactiver la variable d'environnement,
+enfin le local storage et refaire un screenshot comme ceci.
+Donc ça, c'est la première chose qu'il est capable de faire.
+Donc c'est naviguer, cliquer et voir.
+Et puis, pardon, faire modification du local storage ou modification de la console.
+Maintenant, il a réactivé, il a refresh automatiquement.
+On peut voir qu'on n'a pas tous les tools usage.
+J'ai l'impression qu'il y a quelques infos qui sont cachées ici.
+Et là, il a refresh et on a maintenant bien le modèle qui s'est réaffiché.
+Donc comme ça, il a pu valider sa deuxième chose.
+Et maintenant, tu vois qu'il a dit il faut que je clique dessus pour voir quelle option.
+On peut voir qu'il a réussi à cliquer dessus.
+Il va refaire un screenshot pour voir qu'il y a bien NanoBanana Pro et GPTImage One.
+Et donc là, il dit c'est parfait, j'ai réussi à voir les deux options.
+Et donc, je vais maintenant pouvoir vérifier l'affichage du modèle
+sur l'over des thumbnails existence.
+Donc là, il se retrouve dans la page des thumbnails.
+Il est capable de cliquer sur escape ici, c'est marrant.
+Donc ça permet de défocus.
+Ensuite, il va sur la page.
+Il est en train maintenant de faire un screenshot pour savoir sur quelle page il est
+et qu'est ce qu'il est en train de faire.
+Il a cliqué ici sur une des miniatures.
+Et ce qui est drôle, c'est que nous, on peut modifier en même temps.
+Donc en fait, on travaille un peu avec Claude parce que moi,
+je suis aussi capable de faire des choses, donc de cliquer pendant qu'il est en train de faire.
+Donc je peux potentiellement l'aider, ce qui est quand même assez drôle.
+Et on peut voir que là, il a réussi même à over la thumbnail.
+Alors, je crois que ça n'a pas over assez longtemps.
+C'est marrant ça. Il a même réussi à over un élément.
+Alors là, effectivement, du coup, le over n'est pas resté assez longtemps.
+Et donc, on n'a pas pu voir le style.
+Malheureusement, mais c'est déjà assez fou qu'il ait été capable de faire ça.
+Là, on voit qu'il a scroll down.
+Bon, le problème, c'est que les screenshots sont très lents.
+Ah, tu vois que là, il y a le over.
+Donc avant, peut être que j'ai merdé à bouger ma souris.
+Vu que j'ai bougé ma souris, ça avait caché le truc.
+Mais là, on peut voir qu'il fait le screenshot.
+Il est vraiment smart, il comprend vraiment ce qui se passe sur le site.
+Il est capable de venir modifier ça
+et de venir avoir un résultat assez satisfaisant juste ici.
+Voilà, je peux voir que ça fonctionne.
+C'est parfait.
+Maintenant, on va voir s'il est capable du plot des SVG ou des GIF.
+Donc, c'est la troisième feature que j'ai rajouté, c'est interdire le plot des SVG.
+Et donc là, il n'a même pas testé de faire la validation côté navigateur.
+Il vient juste vérifier le code, mais c'est très stylé.
+On peut voir qu'il a bien contrôlé, on peut l'aider.
+S'il y a une page de login, il est capable de s'arrêter
+pour que nous, on puisse venir faire des modifications.
+C'est ça qui est intéressant, c'est qu'il est vraiment capable
+de venir nous dire, il faut que tu te log in, log in toi STP.
+Et il n'est pas en contrôle complet comme d'autres navigateurs pouvaient le faire.
+Là, on peut voir qu'il n'a pas réussi à cliquer.
+Là, on peut voir left click.
+On peut voir que cette histoire de screenshot, c'est quand même assez long.
+Ça serait plus optimisé d'avoir une sorte de chose plus rapide,
+mais ce n'est pas très grave.
+Il va réessayer de cliquer sur le bouton et il n'a pas réussi.
+Allez, tu vois, tu peux cliquer pour lui, on est sympa.
+On peut voir ici, on s'en contrôle au haut qu'on a pas mal d'informations
+avec ici les tapes contexte, l'URL actuel et qu'est ce qui se passe.
+Donc, chaque fois qu'il fait un tool call,
+là, on peut voir qu'on a réussi à aller sur la page.
+Est ce qu'il va être capable de duploader une image?
+Ça m'étonnerait énormément, mais pourquoi pas?
+Peut être qu'il va me demander de le faire.
+Je ne sais pas, ça va être intéressant.
+Ah, il vient vérifier l'attribut accept,
+mais directement sur l'application parce qu'il a accès au DOM.
+Donc, c'est quand même très intelligent.
+Et donc là, il peut voir que même ClientSAT s'est bloqué.
+Donc là, il a terminé ses tâches et tout est bien qui finit bien.
+Petite pause pour te dire qu'en allant sur le lien MLV.sh slash AI,
+tu peux accéder à une masterclass gratuite Cloud Code, mais pas que.
+Tu vas aussi pouvoir accéder à mon CLI qui contient toutes mes commandes.
+Donc, je les montre juste ici,
+mais tu vas avoir mes agents, mes commandes, mes hooks,
+mes output styles et toute ma configuration pour utiliser Cloud Code comme un pro.
+Et tu vas aussi accéder à une formation,
+comme tu peux le voir juste ici,
+avec un petit sourdage et pas mal de leçons juste ici.
+Conducteur, masterclass, etc, etc.
+Tu vas pouvoir y accéder pour, par exemple,
+comprendre comment fonctionnent les agents.
+Pour ça, on va créer un agent, etc.
+Tu vas pouvoir accéder à toute cette formation totalement gratuitement
+en allant sur MLV.sh slash AI.
+C'est une formation faite pour les développeurs
+qui veulent coder plus efficacement avec l'IA.
+On se retrouve là bas.
+Et voilà, il a tout vérifié et on voit qu'ici le Cloud s'est checké
+et donc ça a terminé.
+Ici, je vais sur cette page que j'ai testé
+pour voir un peu comment ça fonctionnait.
+Cloud Code Tool, Chrome Browser Automation.
+Donc ici, j'ai demandé à Claude en fait de me faire la liste
+de tous ses outils pour Cloud Browser Automation et il a accès à CMCP là.
+Donc il va pouvoir appeler le tab context pour récupérer le contexte.
+Ensuite, il peut créer des tabs.
+Il peut naviguer, lire la page, chercher quelque chose.
+Ici, il peut cliquer, scroller, screenshot, drag zoom, over, etc.
+Donc ici, il a accès au computer.
+Il peut trouver des form inputs.
+Il peut venir accéder au JavaScript Tool.
+Donc ça, je pense que c'est ce qu'il fait.
+Je ne sais pas si je ne pense pas que je peux voir ça ici.
+Console, mais il avait bien accédé au JavaScript Tool
+pour m'afficher le local storage.
+Resize window, get page text.
+Il peut créer des GIF.
+Il peut upload des images.
+Waouh, je lui ai demandé d'essayer de drag and drop un SVG.
+On va voir s'il est capable.
+Il peut lire les messages.
+Il peut lire les Network Access.
+Il peut update le plan.
+Ça, c'est bizarre.
+Il peut voir la liste des shortcuts et exécuter les shortcuts.
+Pourquoi pas? Pourquoi pas?
+On va voir s'il arrive à uploader des images, comme on lui a dit, juste ici.
+Mais on peut voir qu'ici, il n'a pas l'accès au upload d'images.
+Je ne sais pas pourquoi.
+Il essaie en fait d'uploader le screenshot, mais il n'a pas accès.
+Et bon, voilà, il ne peut pas le faire, mais ce n'est pas grave.
+Ce n'est pas mal.
+Aussi vu que maintenant, il est connecté à notre compte.
+Si je vais sur x.com,
+on peut voir qu'ici, je vais pouvoir me sign in.
+Et là, en me connectant sur Twitter, je vais pouvoir demander
+recherche les derniers tweets de Claude pour savoir les mises à jour
+et fait un gif de toi qui scrole sur les tweets de Claude.
+Alors, avant ça, avec Playwright, tu aurais dû te connecter, etc.
+Mais vu que là, ça utilise rien d'autre que Chrome.
+En fait, on va directement pouvoir interagir avec Chrome ici.
+Donc là, quand il fait Tab Read,
+on peut voir qu'il a accès à un seul tab, mais il vient ouvrir un nouveau tab comme ceci.
+Là, il va sur le Twitter de AnthropiKaï,
+ce qui n'est pas totalement le bon Twitter, mais ce n'est pas très grave.
+Là, on peut voir qu'il est capable de scroll down
+et je ne sais pas s'il va nous faire un gif comme ceci.
+Ah là, il est avec gif creator start recording et là, il a téléchargé le gif.
+Donc show latest download et ça donne ceci
+avec notre magnifique gif créé par Claude Code.
+Et on peut voir ici, c'est marrant.
+Ils ont mis le logo Claude et une sorte de search bar très, très drôle.
+En fait, il utilise les screenshots pour faire ça.
+C'est très intéressant. OK, OK. Bon, ben voilà.
+Voilà un petit peu pour cette update.
+Qu'est ce que ça change pour toi, pour moi, pour tous les développeurs de notre monde?
+Je dis souvent le problème de Claude, si tu as des mauvais résultats,
+c'est qu'il n'a pas une feedback loop.
+Donc, si demain, tu demandes à Claude de créer une page qui fait ça, ça, ça,
+il crée la page, mais finalement, il y a une erreur qu'il fallait faire
+jusqu'à maintenant, en guillemets.
+C'est toi, en tant qu'humain, regarder l'erreur et donner le feedback
+grâce au Chrome MCP ici, qui fonctionnerait mieux que ce qu'il y avait jusqu'à maintenant.
+On pourrait imaginer, en fait, un monde où tu n'as plus besoin
+de toi-même vérifier s'il y a une erreur ou pas.
+Vu que c'est Claude qui va automatiquement vérifier et toi, tu peux le laisser
+travailler jusqu'à que quand toi, tu viennes tester la feature,
+tu aies tout qui fonctionne plus ou moins bien.
+Donc, c'est ça ici qui est intéressant et c'est vraiment génial.
+Bravo à l'équipe qui envoie vraiment du lourd.

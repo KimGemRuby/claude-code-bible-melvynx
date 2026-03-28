@@ -1,0 +1,138 @@
+Il y a un grand débat, c'est est-ce que Cursor serait moins bon en général que CloudCode pour la création de fonctionnalités malgré les mêmes modèles ?
+Pourquoi est-ce que je pose cette question ? C'est parce que des fois dans mes vidéos je décide d'utiliser Cursor pour facilement comparer les différents modèles
+et pas mal de personnes se retrouvent à me dire mais Melvin ça n'a aucun sens, il faut tester dans CloudCode, il faut tester dans Gemini CLI, etc.
+Et donc je me suis dit que je n'avais jamais fait un vrai test solide pour savoir si toi tu devrais utiliser Cursor ou CloudCode sans même parler des pricing
+mais évidemment qu'on va parler de tout ça dans cette vidéo parce que tout vient ensemble.
+Alors on a ici CloudCode et Opus qu'on va mettre juste là, CloudCode et Opus et Cursor et Opus et un prompt que j'ai déjà préparé.
+Alors le premier prompt il va être d'une niveau de difficulté moyen, moyen c'est que dans mon éditeur d'email que j'ai juste ici
+j'ai pour l'instant ce sélecteur de couleurs que j'avais repris de la librairie que j'ai repris que j'aime pas trop
+et je me suis dit mais pourquoi pas foutre un vrai sélecteur de couleurs comme sur Notion, donc on sélectionne un truc sur Notion, on a ici texte color
+on peut changer les textes color et le background color et on peut voir que c'est super pratique ça a qu'un seul menu pour changer ça
+et ça rend assez joli donc si ici on change hop on a ici un texte avec un background color et moi je veux qu'il fasse la même chose
+je veux avoir le background color et le texte color inclus et donc j'ai fait ce prompt
+Implement a color selection interface requirement tu dois avoir deux sections machin color palette behavior et design
+et en plus de ça je vais lui passer un petit screenshot que j'ai fait juste ici donc on va lui rajouter ce petit screenshot.
+Pour ça on va venir j'ai déjà ouvert un petit environnement conducteur juste ici qui vient d'être terminé
+donc ici j'ai un environnement donc conducteur où je viens lancer Cloud Code
+on vient ici lancer la commande one shot alors cette commande en fait c'est une commande qui va effectuer une feature
+sans rien me demander et le but c'est de one shot mais elle va quand même avoir cette phase d'exploration très importante
+Je vais lui passer ici Notion style system et je vais lui passer le screenshot comme ceci donc ça c'est pour la version Cloud Code
+qu'on lance tout de suite et pour la version Cursor tu vas t'en douter on va pas faire grand chose de différent
+on va aller ici dans le chat je vais choisir le modèle opus 4.5 on va l'agrandir comme ceci et là je vais mettre le prompt
+et de manière très similaire on va drag and drop le screenshot opus 4.5 agent on lance alors ici je sais pas très bien ce qui se passe
+boom et puis on va voir la différence des deux applications bon alors c'est à peu près terminé on a en tout cas Cursor qui a terminé
+avant notre ami Cloud Code qui est toujours en train de travailler et qui est en train de terminer sa petite feature ici
+on va voir du coup un petit peu ce qu'il a fait donc on va pouvoir review le code il a bien ajouté l'extension highlight
+il a ajouté highlight ici highlight il a créé le petit composant juste ici avec plus ou moins tout ce qu'il faut j'espère
+et ici il a ajouté le Notion color picker à la place du color picker donc normalement le code semble très très bien il n'y a pas de chose qui me frustre juste ici
+et donc là je vais sélectionner ici on voit qu'on a ce sélecteur juste là et là on a un très beau design
+franchement par rapport au design de base que je peux t'afficher ici alors effectivement on n'a pas les deux lignes de ce que je lui ai demandé
+la sélection ici est un peu plus jolie mais la question c'est est-ce que ça marche donc là quand je clique là ça change bien la couleur
+donc c'est parfait et la sélection est quand même vachement jolie ici ça change bien la preview et donc là on est dans la version de cursor
+et là quand je change le background alors il est très très minimaliste mais ça marche donc après évidemment il faut configurer les couleurs
+faudra que j'aille dans Notion en light mode configurer les couleurs mais là on peut voir que ça fonctionne bien donc c'est un peu pas assez visible
+à mon goût on va juste mettre une couleur bien bien visible juste ici avec les différentes couleurs de tailwind donc on va demander ici
+utilise les variantes tirées 150 non tirées 200 donc voilà peut-être qu'il a ça dans sa mémoire donc comme ça on peut one shot la feature
+boom et donc là quand je viens sélectionner ça on peut voir que cette fois c'est beaucoup plus strong et ça rajoute bien le truc donc c'est très joli
+on peut voir qu'on a la preview avec ici sélection le joli texte et ça fonctionne parfaitement donc ici on a une bonne ui on va la screenshot
+comme ceci aussi par rapport à juste l'uil et donc on peut voir que opus avec cursor fait un très très bon travail il n'y a rien à redire
+alors maintenant ici on a notre ami alors on peut voir que sur cloud code il n'a toujours pas terminé pourquoi parce qu'il s'énerve avec le linter à vraiment faire en sorte
+qu'il n'y ait plus aucune erreur du monde alors que ici j'ai l'impression que voilà une fois qu'il a fini sa feature ah non il a quand même lancé typescript
+il n'a pas eu d'erreur donc il a réussi à one shot le truc plus rapidement là il nous lance le serveur en port 3001 normalement si je me trompe pas
+et donc là si on va sur localhost 3001 est ce qu'on a l'application qui est lancé parfait on a bien l'application qui est lancé alors je sais pas si c'est celle-ci
+boum on va dans le email test qu'on a juste ici et on va pouvoir sélectionner voir qu'ici à ce menu et on a exactement la même chose alors là je me dis que c'est peut-être un bug
+parce que c'est trop similaire pour moi on va venir split le terminal mais je sais pas pourquoi ici je le vois pas attention on va couper
+ok donc cette fois on est bien sur le port 3001 donc c'est un peu plus juste parce qu'en fait avant on avait été juste redirigé sur la même application
+et donc là si on compare nos trois versions donc ici on va voir la dernière version avec cette fois cursor donc là quand on clique ok alors je dirais pas que c'est mieux
+c'est pas mieux clairement ici on est sur une victoire de cursor ok il n'y a pas d'image alors ici ça respecte plus le design que j'ai mis ici
+avec ici ces trucs mais là déjà le premier bug quand je clique ça me ferme le menu donc en de guillemets je peux pas m'amuser à choisir ça et ça
+je dois constamment cliquer quand cursor avait quand même mieux fait cette feature là ils ont le même prompt le même système et ici ce menu là ça m'affiche
+un menu ici pour choisir la couleur donc le positionnement n'est pas fonctionnel non plus
+ouais ouais ouais ouais non là on est là on est sur un échec on est sur un échec de cloud code et une réussite de cursor on peut voir
+que cursor il a même fait fonctionner ça c'est assez formidable pourtant on peut voir qu'on a le même modèle encore une fois il y a un truc
+qu'il faut prendre en compte c'est la variabilité des modèles donc ici on est sur un code parfait et une intégration quasi parfaite avec cursor
+donc tu vois que je suis honnête dans cette vidéo parce que je dis souvent l'inverse mais ici c'est parfait
+tout fonctionne il y a même l'éditeur la sélection de custom color comme je lui ai demandé logique et intelligent tout est plutôt bien fait
+alors qu'ici avec cloud code on a custom color qui fonctionne pas en tout cas le sélecteur se positionne pas au bon endroit
+et logique manquante parce que quand on clique ça se déplace alors je sais pas exactement pourquoi et qu'est-ce qui expliquerait ici cette erreur
+alors on peut voir qu'il a lancé l'int donc il y a tout qui s'est fait il y a tout qui s'est fait l'int mais donc ici il y a tout qui s'est fait changer
+mais il a juste rajouté le highlight ici et si on regarde notion color picker on va voir qu'il a rajouté les couleurs alors déjà il a rajouté des moins belles couleurs
+donc ici cursor a un système prompt ou je sais pas quoi qui lui a fait utiliser quand même des couleurs tailwind qui était bien plus joli
+notion color picker props ah ici ils utilisent des userefs popover button le code est vraiment pas top ici donc on a un bon point pour cursor
+donc voilà ce qui donne quand même un encore une fois il y a une sorte de rng qui fait que même si c'est cloud code qui gagne en fait il y a ce qu'on appelle la température
+qui fait que chaque génération va être différente et que peut-être que si je lance 5 fois sur cursor et 5 fois sur cloud code on va avoir plus ou moins les mêmes résultats
+mais pour les personnes qui critiquent cursor et qui disent que cursor fait un très mauvais travail on peut voir cursor ici a fait un très bon travail
+donc le software cursor en lui même est très bien pour tester on peut faire un deuxième test que j'ai déjà terminé de lancer donc cette fois on passe à un niveau de difficulté plus élevé
+parce que je veux qu'il crée youtube thumbnail generator prompt alors là il doit utiliser les modèles de jimmy nye alors je crois qu'ici j'ai demandé de changer je sais pas pourquoi il m'a pas changé
+il doit utiliser les modèles de jimmy nye pour afficher une application qui permet de générer des thumbnails donc je me suis pas mal amusé à faire ça
+si j'arrive à avoir une petite application qui m'aide à le faire pourquoi pas donc ici j'ai créé normalement boom un petit un petit desktop qui s'occupe de faire tout ça
+et ici on a la première application que je vais ouvrir dans z' on va voir un petit peu la différence avec ici je vais quand même lui dire utilise
+ok donc ici on a cursor où je lui demande juste de changer le modèle à jimmy nye pourquoi tu veux pas non je veux utiliser le modèle jimmy nye 3 pro image preview
+mais ils arrivent pas à ces modèles ils veulent pas utiliser le dernier modèle mais non regarde je lui dis utilise jimmy nye 3 pro preview alors là il l'a fait et je sais pas pourquoi opus ici il veut pas
+non ok il a quand même fallu l'embrouiller michel pour qu'il fasse ce que je lui demande c'était pas dingue dingue dingue dingue du samedi
+alors ici on a les deux applications avec ici z normalement on a un fichier .env.example ici qui m'affiche ceci je vais le dupliquer et je vais récupérer ma variable d'env
+et une fois qu'on a ça on va pouvoir lancer l'application alors je crois que voilà lui il a déjà lancé l'application même deux fois je vais couper les instances de cursor et je vais lancer ma propre version ici
+et là encore une fois il y a des process alors que je viens de kill les process hop là on a tout kill et maintenant qu'on a tout kill est ce que ça peut fonctionner mais qu'est ce qu'est ce qu'il se fait
+ok ici on peut voir que je vais un peu te partager mon prompt parce que j'ai oublié de te présenter ça d'abord donc ici prompt create a youtube generator with jimmy nye
+jimmy nye dans le sens le modèle build a modern i-style next.js app pour créer des thumbnails ici je lui ai donné toutes les librairies qu'il doit utiliser les liens de la documentation
+setup avec chat cnu etc. core feature avec input interface avec ce composant là de co ssui pour qu'il fasse un bon uploader face upload inspiration upload extra image prompt input
+ai intégration prompt generation logic accepted output etc. donc ça doit nous créer une application ici on peut voir que ça dégage hop là on peut voir qu'on a cette application qui a été créée donc ça c'est de cursor
+powered by jimmy nye c'est petite pause pour te dire qu'en allant sur le lien mlv.sh slash ai tu peux accéder à une masterclass gratuite cloud code mais pas que tu vas aussi pouvoir accéder à mon cli qui contient toutes mes commandes
+donc je les montre juste ici mais tu vas avoir mes agents mes commandes mes hook mes output style et toute ma configuration pour utiliser cloud code comme un pro et tu vas aussi accéder à une formation comme tu peux le voir juste ici avec un petit sourdage et pas mal de leçons
+juste ici conducteur masterclass etc etc. tu vas pouvoir y accéder pour par exemple comprendre comment fonctionnent les agents pour ça on va créer un agent etc. tu vas pouvoir accéder à toute cette formation totalement gratuitement en allant sur mlv.sh slash ai c'est une formation faite pour les développeurs qui veulent coder plus efficacement avec l'IA on se retrouve là bas
+ok le light mode est beaucoup plus joli on a ici la thumbnail et on a ici les différents paramètres donc en fait on va pouvoir tester tout de suite donc normalement moi j'ai juste ici dans notion j'ai déjà tout préparé hop ici je drag and drop ma tête et on peut voir que ça rajoute bien l'image au bon endroit et je peux drag and drop plus d'image ensuite inspiration en fait ici je vais pouvoir télécharger des thumbnails donc là moi ce que j'aime bien faire c'est qu'on va sur
+on va prendre celle là c'est pas très grave on va faire copy image adresse ici je vais le foutre dans youtube metadata extractor pour récupérer comme ceci l'image de mr beast de démo donc ici inspiration je mets cette image là et extra image on va prendre le z logo comme ceci copy image et ensuite je le drag and drop ici dans extra image et là je vais lui dire crée une image inspirée de celle ci où je suis attaché au logo z
+donc avec mon visage mais à la place du caillou on va mettre le logo z et comme ça ça va être super beau de la mort qui tue et vraiment intéressant dans notre cas donc là je lui mets le petit prompt comme ceci et je clique sur generate thumbnail alors on a une erreur comme ça comme ça on est tout de suite calé sur l'histoire
+et donc pour résoudre ce problème un xjs limite la taille des serveurs action si on va mettre 10mb ça va être expédié comme ceci et on va pouvoir faire generate thumbnail on a toujours une erreur alors principalement parce que on a coupé le serveur non mais les gars il y a un serveur qui est lancé je sais pas trop où qui m'embrouille parce que ça marche pas ok donc maintenant c'est bon on a corrigé le problème de port il y avait en fait le port 3010 qui est
+ouvert je sais pas comment on est arrivé jusqu'à 3010 mais du coup ici j'ai donné toutes mes inspirations pour générer la thumbnail comme ceci on peut voir que le loader est pas mal alors il y a une erreur c'est qu'il a toujours pas compris qu'il y avait un padding par défaut sur ses
+cartes et voilà on a le visage qui est pas non plus super dingue l'inspiration de l'image est très mauvaise mais sinon on a quand même une miniature sympa on va cliquer sur regenerate c'est sympa qu'il ait pensé à faire le regenerate qui était quand même assez important ici mais donc ici on a la première version de l'application qui fonctionne plutôt bien qui respecte ce que j'ai dit qui permet de mettre les différentes images et ensuite de facilement générer regénérer etc des images on a ensuite la deuxième version donc ici
+avec z donc là je vais venir la lancer normalement ça va l'ouvrir sur le port 3001 juste ici et on va pouvoir l'ouvrir donc avec Claude code ok avec Claude code on a quand même une application plus sable qui respecte plus mon prompt c'est à dire l'usage ici de Gemini avec quand même exactement le même layout malgré un prompt plutôt permissif une landing page un peu moins sexy et donc là en fait quand je me rappelle une vidéo de Théo
+où il teste Opus je me rends compte que Cursor doit avoir un système prompt avec ses styles où il est fait waouh non mais regardez moi ça regardez moi ça la miniature est dingue vous voyez la deuxième génération est dingue la deuxième génération est magnifique c'est une dinguerie c'est une masterclass j'adore waouh waouh waouh waouh waouh vraiment cool on va faire le même test ici si je clique sur download ça fonctionne bien bref
+donc ici on a quand même une page en de guillemets qui fait un peu plus s'il y a avec ce background avec ses grades etc j'ai l'impression que Cursor a un custom prompt qui fait ça pourquoi est ce que je dis ça parce que ici si on va sur Théo gégé je regardais sa vidéo sur opus juste ici et là quand il compare en fait le modèle juste ici avec la génération de opus qui va sûrement s'afficher très prochainement voilà il ressemble à ça et là on peut voir qu'en dark mode si je compare
+ce dark mode avec ses grades et cette shadow de zinzin derrière et qu'ici je mets en dark mode on a exactement en de guillemets cette grade et cette shadow de zinzin qui est juste derrière donc en fait ça a été assez repris aussi ici voilà il y a tout qui fonctionne sinon on est parti alors ici on va juste devoir modifier exactement le même code j'imagine que ça va pas marcher next.config.ts et ici on va rajouter le experimental server action 10mb bam donc ici on a tous les
+6 éléments et on va pouvoir rechercher dans notre clipboard history toutes les petites images donc ici extra images on met ça bon le sélecteur d'image est aussi plus joli alors là on est quand même on a quand même un respect du sélecteur d'image que je voulais qui est un peu mieux donc si je fous cette image là hop ouais c'est pas mal je préfère ce sélecteur d'image pour être honnête avec toi on va mettre ici face reference et on va mettre ici la miniature de mr beast c'est un
+parfait là il ya qu'une seule image qui est mise en compte ça l'affiche en grand et là on peut mettre plusieurs images en face reference et là je vais pouvoir choisir mon petit prompt une image inspirée de celle ci où je suis attaché au logo z donc avec mon visage mais à la place du caillou on va mettre le logo z tu vois que mon prompt était pas super j'ai pas le meilleur prompt ici on a le creating thumbnail donc on a tout ça moi j'aime bien le sélecteur d'image qu'ici il a fait je préfère
+l'app en général qui fait un peu plus moderne et moins ia slope que ça moi tu me mets là dessus je sais que c'est un ia slope de merde voilà directement dans quoi les primaries etc alors qu'ici se fait quand même plus app professionnel plus app créé par un humain etc donc ici dans les notes qu'on peut rajouter juste là je dirais qu'ici sur la deuxième version il doit y avoir avec cursor un système prompt sur ses guides et shadow qui est un peu mis par dessus
+par défaut alors que ici je lui ai rien demandé alors qu'avec opus et cloud code il y a un style plus minimaliste respecté par défaut donc c'est pas mal et on va pouvoir voir les fonctionnalités donc là le logo z a été respecté on a bien le bouton download on manque un petit bouton regenerate et on a pas mon visage qui a été respecté quand avec l'autre ia ça a fonctionné donc je vais régénérer une deuxième fois on a fait une première génération on fait une deuxième génération
+parce que des fois l'ia en fait peut malheureusement malheureusement ne pas réussir à mettre la bonne image au bon endroit qui arrive assez souvent et donc comme ça on peut corriger le problème cette application
+il a un beau potentiel j'ai déjà plein d'idées d'amélioration et d'ajout quand je vois ça parce que je génère pas mal de miniature avec l'ia maintenant peut-être que vous les avez vu et donc si j'arrive à si j'arrive à créer une petite application comme ça encore encore encore
+encore ça fonctionne pas du coup là on a bien l'image de référence qui a été rajouté mais on a le visage qui fonctionne pas donc c'est c'est pas cool du tout c'est pas cool du tout du tout du tout du tout du tout
+parce que ça respecte pas exactement ce que je veux moi je veux je veux à tout prix avec mon visage alors on peut aller voir la différence de prompt juste ici j'imagine qu'il a créé un fichier actions juste ici
+et là ça rajoute les images ok message.push image ça devrait rajouter il n'y a pas une sorte de nom ouais non il n'y a pas de nom il faudrait rajouter une sorte
+ah ok ça a fonctionné celle là elle est jolie aussi ok ça a fonctionné ici avec l'image où on voit que ça me tourne mais c'est vraiment c'est vraiment pas bien c'est vraiment pas mal il ya vraiment un sacré concept c'est génial je suis un fan
+alors là voilà typiquement dans le prompt ici en regardant ce qui serait intéressant c'est faire image.ok ok donc on est revenu ici avec un petit peu de travail de prompting sur la version de cloud code
+et principalement ici de la qualité spécification ainsi que de l'image spécification qu'on peut voir juste ici avec les index je pense qu'on peut avoir un résultat encore plus dingo
+donc celle là je vais la télécharger parce que je l'aime bien on va juste voir si ici en spécifiant beaucoup plus d'informations sur la manière de faire on peut avoir des résultats
+un peu meilleur juste ici avec j'ai un peu regardé la doc pour spécifier en fait quelle image et quoi comment est-ce qu'il sait que c'est une face reference comment il sait que c'est une inspiration
+en fait c'était un des petits problèmes qu'on pouvait avoir à voir aussi combien ça coûte ces générations avec nano banana je pense que ça coûtait ah tu peux voir que là c'est pas mal mieux
+il a peut-être mieux compris les différents éléments que je lui ai donné ça respecte pas mal mieux ce que j'ai dit c'est très joli c'est incroyable de pouvoir faire des miniatures comme ça avec l'IA
+ouais je pense que je vais perdre du temps énormément de temps sur cette app pour créer un truc parce que là j'ai un concept assez cool quoi faites ce genre d'application c'est génial c'est génial c'est fantastique
+et là faut juste sauvegarder tout mais là il y a un concept de fou furieux malade bref voici pour cet exemple et voici pour ce deuxième truc donc la conclusion qu'on peut avoir de cette vidéo
+je pourrais tester une troisième feature mais je sais que cette vidéo est déjà assez longue que je suis désolé pour les gourous et il y en a plein dans mes commentaires on va aller les chercher tout de suite
+donc voilà on va trouver des commentaires très très vite je crois que le fait que tu utilises Cursor ça fonctionne pas comme tu voulais si tu utilises les environnements Cloud Code Codext
+ils auraient plus ou moins le même résultat c'est faux on l'a vu juste ici les environnements sont en général très similaires et ça donne des très bons résultats avec Cursor ou avec Cloud Code
+pour moi en moyenne par rapport à mes préférences et mes configurations Cloud Code me donne des meilleurs résultats mais c'est un avis subjectif que j'ai pas réussi à prouver dans cette vidéo
+et donc c'est pour ça qu'ici je garderais de donner cette opinion et ici un autre commentaire tu peux voir qu'on a vraiment beaucoup de commentaires merci pour ce compératif
+tu ne les as pas testés dans leur meilleur environnement Cursor fait des tweaks pour réduire les coûts et gagner de l'argent si tu peux retester Cloud Code CLA-SVS anti-gravity et les résultats seront très différents
+on peut le voir ici entre Cloud Code et Cursor les résultats ne sont pas si différents c'est un mensonge c'est une misconception des gens certes il va y avoir des différences
+mais Cursor n'a aucun intérêt de couper ton prompt de dégommer tout ça les gars ils te billent à l'usage donc que tu utilises 200$ enfin mieux vaut que tu utilises plus de dollars et que les gars ils te chargent plus
+donc voilà ici c'est ce que j'ai dit ça n'a aucun sens et ici quelqu'un il dit mais on s'en fout qu'ils aient le meilleur environnement c'est de savoir quel est le meilleur en Gemini et Cloud Code
+non ce qu'on veut savoir c'est quel est le meilleur modèle on veut savoir qui c'est le meilleur entre Gemini 3 Pro ou Opus 4.5 ou Sony 4.5 on veut pas savoir si ça fonctionne mieux sur Cloud Code ou autre
+donc on veut vraiment comprendre tout ça et donc là la même chose ça serait bien de faire un texte comparatif direct sur le terminal Cloud Code VS Gemini
+encore une fois on teste pas la même chose on teste la configuration des outils etc et donc ça n'a encore aucun sens et moi je déconseille de faire ce genre de test
+et ici on peut voir que malgré nos croyances et ma croyance aussi que j'avais initialement Cursor ou Cloud Code avec des très bons modèles les deux fonctionnent très bien
+et pourtant dans mes exemples qu'on soit clair quand on regarde le truc de l'e-mail eux ils n'ont pas du tout fait la même chose parce que lui il a pas l'accès aux agents
+il a quand même pu lire la documentation mais il est passé au code beaucoup plus rapidement que ici Cloud Code qui a commencé
+qui a commencé juste ici par lancer des agents tout ça pour faire un moins bon travail donc oui il y a une différence parce que si j'utilise Cloud Code j'ai des agents
+si j'utilise Cloud Code j'ai un Cloud.md global différent si j'utilise Cloud Code j'ai des commandes différentes des outils différents
+le contexte sur Cloud Code il est pollué par 12000 trucs qui sont pas forcément dans Cursor donc il y a tous les mcp ici qui sont rajoutés je sais pas pourquoi il y a ce mcp devtool
+je suis très mécontent de ce mcp devtool et chat cnui je sais pas pourquoi ils sont là je vais tout de suite les enlever vous inquiétez pas
+on a ici des custom agents on a des memory files qui sont ajoutés ici on a les slash command donc on a un contexte qui contient beaucoup plus de trucs
+qu'en Cursor on teste le modèle avec les outils du modèle simple efficace et très pratique parce qu'on peut utiliser les worktri
+personnellement je suis un Cloud Code maximaliste donc je vous invite à utiliser Cloud Code et à désactiver ces mcp
+qui a défini ces mcp on est dans quel dossier pourquoi il y a des mcp qui sont défini ici j'en ai aucune idée on a même le mcp stripe
+donc comme ça on est sûr de polluer mon contexte à tous les coups donc faites attention à bien désactiver tous ces mcp de mort je pense qu'il y avait des mises à jour
+ça les a réactivé on n'en active que deux on a beaucoup moins de contexte bref voilà pour la réponse à tous ces commentaires et c'est pour ça que je vais pas vous écouter
+et que je vais continuer de tester les modèles sur Cursor parce que c'est le meilleur moyen de tester les modèles si vous avez envie de comparer Cloud Code à Cursor
+c'est cette vidéo qu'il faut regarder et que vous avez regardé et vous pouvez voir que c'est plus ou moins similaire j'avais une autre tâche énorme à faire
+mais ça aurait pris des heures et donc peut-être que je ferai ça dans une prochaine vidéo à bientôt ciao ciao

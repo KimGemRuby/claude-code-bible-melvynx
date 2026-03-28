@@ -1,0 +1,249 @@
+Opus a bouleversé le développement et c'est pas que moi qu'il dit, c'est toutes les personnes sur Twitter qui disent que depuis qu'Opus est arrivé
+en tant que développeur, on a enfin la possibilité de faire confiance à l'IA.
+C'est un terme très fort et je vais te montrer de quoi je veux parler. Le SASS que tu vois juste ici, cette application
+terminée, publiée sur un domaine qui s'appelle Sumfast comme ceci, a été faite
+100% par IA, mais c'est pas la seule d'un gris. Je l'ai codé vraiment en moins de 10 heures de travail.
+J'ai fait tout ça en moins de 10 heures de travail et je vais t'expliquer précisément dans cette vidéo
+via mon graphique juste ici comment j'ai fait ça. Je vais te partager les promptes,
+enfin la vision des promptes, comment j'ai structuré tout ça, pour te dire, on dépense
+via uniquement ce projet juste ici, j'ai dépensé près de
+403 dollars et tu vois que j'ai principalement travaillé qu'une seule journée sur ce projet où j'ai fait les
+343 principaux dollars et ici j'avais commencé en fait pendant mes vacances juste ici avec ce 26 et 29, bref
+ce projet c'est 403 dollars
+41 mille lignes ajoutées, tout ça par le modèle ClaudeOpus via un workflow de fous furieux
+que je vais te partager. Alors déjà la première étape c'est de partager tout simplement l'app que j'ai faite.
+Si tu n'avais pas remarqué en fait dans mes vidéos, si je vais ici sur studio.youtube.com,
+en fait ici énormément de miniatures sont maintenant faites par IA.
+Tu sais que moi j'ai toujours été un pro maximaliste du minimaliste
+et donc ici on a une miniature par IA, miniature par IA et ma miniature, tu peux voir que d'ailleurs ma miniature marche
+moins bien même avec le même titre et ici la même chose, on va pouvoir voir ici,
+miniature par IA, miniature par Melvin et miniature par IA et donc là on peut voir qu'elle marche plutôt bien à 36 versus 30 ça reste
+on peut dire
+significatif juste ici et là la même chose
+alors cette miniature en fait elle n'est pas encore testée
+mais on peut par exemple cliquer sur celle-ci donc voici ce que Gemina est capable de faire, la même chose, miniature par IA
+donc là ici il n'y a pas eu de résultat concluant
+ici miniature par Melvin et miniature par Melvin donc
+l'IA commence à être vraiment très forte pour faire des miniatures, on a aussi ici ce test là
+avec anti-gravity où j'ai utilisé l'IA, bref c'est très puissant et moi j'ai fait un SASS comme ceci pour faire ça
+alors vous me connaissez moi je suis pas dans le gauchisme
+éthique à dire faut pas voler, faut être gentil etc
+The mid-journée of Thumbnail donc là toute la landing page a été fait avec l'IA, j'ai aussi utilisé évidemment l'AOTS
+ici on a mon petit éditeur, on a les miniatures que j'ai générées avec l'IA
+et le concept c'est simple c'est que je prends des inspirations et je peux recréer une miniature
+on peut voir que le travail ici est
+incroyable il est presque parfait ici pour un tutoriel cloud c'est magique la même chose ici en m'inspirant du concept
+là et là du coup j'ai fait trois démos où on voit en fait la puissance de l'IA
+donc le concept ici
+we solve iri originality, steal it, upload any thumbnail as inspiration
+notre IA capture le style, la composition, la vibe et ça recréer l'IA dans ta manière de faire
+donc c'est ce que j'ai fait juste ici on va te montrer une petite démo donc là on clique sur
+create thumbnail on a un système de crédit où ici en fait moi mon problème quand j'utilisais
+Gemini directement c'est que je me trouvais à refaire les mêmes choses encore et encore et donc là on peut choisir des personnes
+donc par exemple je choisis melvin et là je peux choisir les inspirations donc là tu peux voir que j'ai différentes
+inspirations et je peux tout simplement venir sur youtube
+scroller un petit peu et regarder les chaînes que j'aime bien pour prendre des inspirations donc voilà on connaît tous benjamin code benjamin code qui
+aime pas trop le vol de miniature
+c'est pas grave
+ça va faire une bonne démo donc celle-là elle peut être pas mal enfin elle a un concept sympa donc là on va récupérer son adresse
+on va venir ici faire create new inspiration je vais mettre l'url
+en fait ça récupère du coup tout simplement l'image de la miniature et ça l'analyse
+par IA parce que j'ai résolu un des gros problèmes qui est que l'IA comprenne un peu ce qui se passe
+donc tout ça je l'ai vibe codé et donc là j'ai rajouté j'ai mon personnage
+alors là j'ai ma petite image et moi je vais rajouter
+le logo de Claude alors normalement tu vois que dans ma galerie j'ai déjà le logo Claude et là je vais faire moi qui tiens mon iphone
+avec écrit Claude opus 4.5 et le logo de Claude le fond est orange
+donc ici j'écris ça un peu à la yolo et je peux cliquer sur generate
+à ce moment là ça vient utiliser des crédits alors en fait il ya plusieurs crédits qui sont utilisés pour renommer
+les différents éléments etc et ça vient
+générer la miniature alors on va voir ce que ça donne et voici un petit peu le résultat qu'on a juste ici donc tu peux voir
+que ça fonctionne super bien et en fait ça permet vraiment de créer des miniatures
+originales en ayant une base d'inspiration qui permet vraiment à l'IA d'avoir de la très bonne qualité
+et là je vais pouvoir mettre par exemple quatre versions et donc ça c'est un peu le hack c'est que l'IA a tendance à faire des choses
+plus ou moins aléatoires et donc là en utilisant quatre versions en fait on arrive à avoir des thumbnails de super qualité
+super rapidement et de pouvoir rapidement s'amuser et tester comme ceci
+en faisant ici des prompt alors il ya beaucoup de choses à améliorer voilà après il ya du détail
+mais maintenant je vais te montrer comment j'ai réussi à one shot tout ça avec ce workflow
+alors la première étape que je prends généralement c'est l'idée donc j'ai des j'ai des prompt qui sont dans ma config
+dans ma config premium donc je vais tout de suite te l'afficher
+boum voilà j'ai pas mal de petits prompt juste ici donc
+tchac tchac ça c'est la config premium je te mettrai dans la description l'accès à la config et on a notamment dans les commandes
+ici un dossier prompt et là il ya pas mal de prompt et un des prompt que j'aime bien c'est sas challenge id
+donc ici on a un prompt que tu vas pouvoir copier
+passer directement à cloud et donc là la première étape que je vais faire quand je crée une app
+c'est ouvrir un nouvel onglet mettre ce prompt et je vais lui dire
+voilà avec le nouveau modèle jimmy nine and obana 3 j'ai envie de créer un sas qui crée des miniatures bla bla bla bla explique-moi bla bla
+tu lui donne toutes les infos et lui va te challenger parce que
+généralement ce qu'il va faire ici donc moi j'utilise 100% cloud pour tout maintenant j'ai arrêté d'utiliser tchat gpt et tout ça
+il va pouvoir faire des recherches etc donc faut ajouter
+le mode thinking et via ce prompt en fait il va te challenger
+voilà quel problème est ce qu'il ya des miniatures qui convertissent mieux quel angle tu vas vouloir prendre etc
+et donc ça c'est important parce qu'il va falloir faire
+ta différenciation quel problème pour qui exactement
+et en répondant un petit peu à ces questions il va te challenger de dire mais ce que tu es sûr de vouloir faire cette idée
+est ce que ça a un sens pourquoi pour qui pour comment
+ça c'est la première étape parce que si ton idée est pas claire sur le résultat que tu vas voir
+tu vas avoir des problèmes ensuite une fois que j'ai ça
+toujours dans mon code je vais pouvoir créer sasprd
+donc l'objectif c'est de créer un project requirement document for mvp avec une conversation
+itératif donc en fait on va lui donner les détails ici donc je vais le faire rapidement et je reviens avec toi
+donc là on peut voir qu'avec ce prompt en fait tu vois qu'ici je lui dis voilà ce que je veux chercher
+et il va faire une recherche concurrentielle pour savoir quel outil existe déjà
+quels sont les prix quels sont les marges est ce que c'est une bonne idée etc
+et donc ça ça te permet de réfléchir c'est un prompt super super super puissant et tu peux aller dans le premier lien dans la
+description pour y accéder ensuite il y a le crée prd donc ça c'est ce que je t'ai dit ça va vraiment définir
+toute la vision du produit et la vision de l'application qu'on va vouloir faire peut même voir que l'ia a réussi à trouver
+mon site donc c'est méga intéressant parce que tu vois qu'ici ça vient te donner
+c'est trop drôle on a un faux counter ça vient te donner les concurrents pour comprendre ce que tu fais etc
+une fois que j'ai fait ça j'ai lancé le prd donc j'ai lancé ce prompt et ce que ça m'a donné
+c'est dans mon projet juste ici je vais avoir un fichier un dossier normalement que je vais
+avoir juste ici qui s'appelle spec
+dans lequel dans lequel il y a un rinmi il y a un fichier prd et archi donc l'archi voilà
+les créateurs youtube perd du temps etc la solution c'est de créer des personnes le but c'est de réutiliser des
+des personnes s'inspirer
+instantanément et générer une à quatre variations
+donc là je lui ai donné exactement ce que je voulais tout ça ça a été généré par iam et ça va être la base
+pour que l'ia fasse un bon résultat
+et donc ici ça a vraiment brainstormé sur mon application ensuite ces commandes là je les lance directement dans le projet et donc
+si j'en viens sur mon schéma on a l'idée et ensuite on a le prd qui va définir les problèmes solutions
+l'avatar précis la niche la marketing stratégie les features et le mvp une fois qu'on a ce prd on peut passer à la prochaine étape
+qui est l'architecture
+quel tool quelle librairie comment réaliser les fonctionnalités et les dépendances
+etc donc pour ça la même chose j'ai une commande qui s'appelle normalement
+si je fais slash archi sas create architecture
+qui va créer ce fichier archi donc moi je vais
+spécifiquement lancer cette commande dans ma boilerplate now ts ce que de now ts c'est le accultime si tu veux aller rapidement
+il n'y a pas 12 mille moyens
+utiliser une bonne boilerplate ce qu'il faut faire donc boom j'ai utilisé now ts j'ai lancé cette commande et ça a directement
+lancé
+lancé l'architecture et donc l'architecture ça va dire voilà quelle librairie quel outil j'ai envie d'utiliser
+le state management les features les différentes pages qu'il va falloir faire
+l'architecture des crédits les méthodes qui vont être utiles
+l'authentification et en fait ça c'est un fichier super méga puissant
+mais ça c'est même pas la dernière étape ok une fois qu'on a cette architecture qui va être
+incroyablement importante par exemple ici
+on va pouvoir voir qu'il utilise le mauvais modèle parce qu'il arrivait pas à trouver gemini 2.5 mais c'est pas grave je lui ai dit après
+une fois qu'on a cette architecture que je lui ai précisé aussi moi même et que j'ai lancé le prompt on va pouvoir passer au
+task donc en fait on a un archi et un prd ces deux documents sont suffisants le prd définit le mvp minimum qu'on a besoin
+et l'archi elle définit
+la stack technique qu'on est en train d'utiliser et qu'on va utiliser et donc on va vouloir transformer ceci en petite tâche
+et donc pour ça j'ai un prompt encore une fois la même chose un create task qui est
+pourquoi je peux plus cliquer sur ce truc
+voilà qui est juste ici qui va créer des
+task files depuis ça et donc on va faire des phases avec chaque étape qu'il va falloir faire
+donc la même chose on lance ce prompt une fois qu'on a
+utilisé ce prompt on va avoir un dossier avec toutes les tâches et là c'est là où la magie opère
+c'est que moi ici j'ai mes tâches et l'avantage de séparer en tâches
+c'est qu'on va pouvoir les lancer dans l'ordre et d'avoir une sorte
+les tâches sont pas des fichiers qui définissent exactement quoi faire mais plutôt une vision de ce qu'il va falloir ajouter
+tu peux voir qu'ici elles sont assez courtes c'est un prompt très précis qui permet de
+alors ici il a un peu de code ce qui est pas ce que je veux mais c'est pas grave
+où il va vraiment s'occuper de petites parties petites parties petit à petit
+et donc là moi j'ai lancé toutes ces tâches c'est pour ça que j'ai eu un spending de fou furieux
+parce qu'une fois qu'on a créé les tâches on va les lancer
+pour les lancer il y a la commande que j'aime bien qui s'appelle normalement run task
+où on peut les lancer avec la commande apex juste ici qui permet aussi de venir lancer ceci en
+refaisant chaque fois le process de récupération des informations donc là j'ai lancé
+chacune de mes tâches et je suis déjà arrivé avec une première version qui fonctionnait et là c'est là la magie
+opus a fait une première version qui fonctionne mais cette première version qui fonctionne lia n'est pas
+satisfaisante pour créer un sas
+complet elle est satisfaisante pour créer ce mvp avec une interface de mauvaise qualité
+avec des choses qui ne donnent pas forcément envie etc et après c'est toi en tant que développeur et en tant que
+créateur de sas qui va transformer cette idée en projet
+donc tu vois qu'ici on a d'ailleurs eu les nouveaux résultats qui sont très bien
+lui il m'avait fait un éditeur dégueulasse et moi je me suis dit mais en fait cet éditeur n'est pas pratique moi je veux
+un truc le plus simple possible où j'ajoute mes petits trucs juste ici
+mes petits styles référence mes images et que tout fonctionne directement rapidement et donc ici
+c'est exactement ce que j'ai fait j'ai fait ce mon petit éditeur et tu peux voir que les résultats sont
+fous et ensuite on va venir ajouter petite feature par petite feature
+et donc comment est ce que je fais une fois que j'ai terminé en fait
+de lancer run task avec toutes les tâches faut savoir que le plus fou c'est que j'ai lancé toutes les tâches sans jamais regarder le code généré
+jamais
+et j'ai jamais regardé
+le résultat à la fin j'ai regardé le résultat et j'ai corrigé les petites erreurs et donc je sais pas pourquoi j'ai coupé le serveur
+ce qui était peut-être pas la meilleure des idées boom
+j'ai rien regardé et j'ai juste lancé tout ça une fois qu'on a en fait notre
+application et notre version où on est plus ou moins satisfait on va devoir tout
+rajouter dans les petits détails donc ici typiquement les choses qui n'étaient pas qui n'étaient pas présentes c'est les crédits qui fonctionnent bien
+le number de generation
+le prompt en chanceur donc là on a un petit outil qui permet d'améliorer ici le prompt pour fixer la grammaire et le rendre un
+peu plus joli
+on va avoir les personnes juste ici pour ajouter des personnes et les réutiliser
+et les inspirations qu'on a juste ici qui m'ont permis de dev tout ça
+si on regarde un peu les thumbnails que j'ai généré avec tout ça juste ici on va avoir toutes les thumbnails et là tu peux voir que
+typiquement
+cette thumbnail qu'on a juste ici elle est fantastique elle est parfaite prêt à être utilisée
+le texte Claude est magnifique etc et on l'a volé
+comme je le dis depuis le départ bon je sais que c'est panétique et que vous n'allez pas être content mais c'est pas grave
+il faut il faut il faut des fois se battre pour ses convictions
+donc ici on a toute notre app qui fonctionne et ensuite on va venir update des trucs petit à petit
+donc typiquement moi ici je suis là et je m'amuse à dev et là je me dis ouais
+pourquoi est ce que les personnes sont bloquées une fois que j'ai submit et donc ce que je vais faire généralement c'est la commande
+juste ici slash one shot la commande one shot elle est optimisée pour être rapide mais
+intelligente donc ici je vais dire one shot
+actuellement après avoir créé une thumbnail une fois qu'elle a été créée je peux plus modifier les personnes or il faudrait non seulement pouvoir
+supprimer les personnes mais aussi en ajouter des nouvelles
+comme ça je peux avoir une de trois personnes et je peux les changer en fonction de mes générations et l'outil reste super
+flexible c'est très important et là le hack que je fais
+pour pouvoir dépenser autant d'argent c'est que je lance ça la commande one shot à la
+particularité où elle va jamais te demander des questions elle va juste procéder à la demande
+contrairement à la commande apex qui est ici dans mon workflow
+qui elle va faire un plan et donc moi ici je supprime l'étape de plan
+pourquoi est ce que je supprime l'étape de plan parce qu'en fait on est déjà
+sur une sur des features normalement assez petite assez précise et là je peux aussi faire one shot
+modifie la logique actuelle de l'application pour l'instant je peux ajouter
+qu'une seule référence de style en fait ce serait mieux de pouvoir en ajouter une ou plusieurs
+et donc on va rajouter un bouton va devoir changer la database
+occupe toi de faire la migration et tout ce qu'il faut pour pouvoir ajouter plusieurs références de style lorsqu'on génère des miniatures
+donc là la même chose boom j'envoie ça
+et j'envoie juste ici mon prompt pour venir
+ajouter plusieurs références de style et en fait on peut voir que les outils viennent travailler en même temps et donc comment est ce
+que je fais pour aller si vite avec ce sas
+c'est que bon j'ai des prompts ici qui utilisent les tools explore pour être optimisé mais je m'amuse surtout à lancer
+moi je travaille entre trois et quatre terminales en même temps donc généralement ce que je fais
+c'est que je déplace le terminal serveur en bas juste ici pour voir les petites logs et ici je viens tout simplement faire mes petites
+modifications mes petites demandes plus ou moins précises donc là typiquement un truc que j'aime pas c'est que
+là si on va faire le background is red quand je génère ça ajoute et là je suis bloqué et donc je peux faire qu'une
+seule génération à la fois et donc ici je peux rajouter un terminal
+slash one shot
+actuellement quand on fait une génération on est bloqué on peut pas refaire des générations or j'aimerais bien pouvoir tester plus rapidement plus de
+choses et donc pouvoir facilement générer modifier le prompt générer modifier le prompt générer
+modifier le prompt et donc pouvoir faire ça de manière très rapide
+directement comme ceci vu qu'on va pouvoir générer beaucoup de choses en même temps il va falloir modifier le système de crédit en enlevant un crédit avant
+faire la génération et dans le cas où les générations fail redonner le crédit
+parce qu'en fait on doit roll back en fait cette modification de crédit ce qui serait bien mieux
+réfléchir un peu à tout ça et on fait ça et donc faut faire attention parce que clodcode par défaut ici a pas le mode thinking
+activé c'est le mode thinking qui définit
+un bon résultat ou pas et donc là boum on envoie troisième session et donc là on a trois sessions de clod qui travaillent en même
+temps sur notre app et donc moi après ici je suis comme ça en train de venir
+les différentes choses et donc là on peut voir qu'il a
+modifié et que maintenant on peut supprimer les personnes et en rajouter mais je suis limité à une seule personne
+ah oui je suis limité à une seule personne parce que j'ai qu'une seule personne dans mon app mais normalement si j'en ajoute
+une deuxième juste ici on va rajouter cette image fait paria ce n'est pas très grave boum on ajoute l'image
+create
+create person et là on peut voir que je peux rajouter du coup plusieurs personnes
+donc il a bien compris ma demande et il a réalisé cette tâche de manière parfaite en one shot
+lui on peut voir qu'il est en train de travailler toujours et lui on peut voir qu'il est aussi
+en train de toujours travailler
+On peut voir cette miniature qu'il a fait est assez formidable
+on a quand même trois mains alors là en fait c'est encore une fois ça dépend beaucoup de ce que tu lui donnes
+l'image que j'ai donné ici sur ma version de dev elle est pas top
+ma version de probe ici sub subfast elle est bien meilleure ici j'ai utilisé melvin 2 et donc le hack c'est que
+typiquement ici j'ai découvert et donc là ça demande la documentation que rajouter ici les images
+en regardant d'un côté et d'un autre
+ça fonctionnait beaucoup mieux en fait pour créer des très bonnes personnes
+voilà tu peux voir que là le visage est un peu mieux c'est différent
+c'est un style un peu différent ça dépend énormément de choses et donc là on a quand même une sacrée
+génération qui fonctionne super bien ça fait très plaisir et là on a juste cette
+inspiration qui n'est pas encore ajoutée mais ça va le faire et donc voici comment j'ai créé un sas et j'ai dépensé
+400 dollars d'appiaille pour te dire en fait j'ai dépensé tellement d'argent
+que je suis obligé que j'ai été obligé de passer sur l'abonnement ultime Claude et j'ai maintenant l'abonnement à 200 dollars
+c'est pour ça que je peux t'assurer que chaque requête que je fais
+j'utilise maintenant l'app Claude j'utilise Claude pour tout faire
+voici pour cette vidéo n'hésite pas à me dire ce que tu en penses de cette petite app
+elle est sympa parce que je pense en marketing il ya moyen de s'amuser un petit peu faire des demandes assez intéressantes
+c'est très minimaliste très simple comme outil et je trouve très puissant en l'occurrence et les miniatures que je génère avec
+sont vraiment de très bonne qualité généralement
+et voilà un petit peu mon opinion là dessus
+dites moi et faites moi des petits dramas en commentaire comme quoi voler les miniatures c'est pas bien
+ça me fera très plaisir de les lire et d'argumenter avec vous je vous dis à bientôt ciao ciao

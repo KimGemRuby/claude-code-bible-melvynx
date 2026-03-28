@@ -1,0 +1,126 @@
+Claude vient de publier une des updates les plus dingues qui va te permettre de continuer
+ta session Claude, même quand tu pars de chez toi et que tu vas manger ton lunch.
+Ça n'a aucun sens.
+En gros, ce que je te présente ici, c'est la nouvelle feature remote control qui va
+permettre au max user, alors je suis désolé pour toutes les personnes qui ont l'abonnement
+pro, mais normalement si t'as l'abonnement pro, généralement tu abandonnes tout de
+suite l'idée parce que c'est trop laggy, de venir utiliser la commande remote control
+pour prendre contrôle de la session sur ton ordinateur via chez toi ou tout ce que tu
+veux.
+Donc imaginons que là j'ai lancé ma petite application Chao et j'ai demandé de changer
+ce bouton avec Reopen, tu vois qu'ici à la session et donc ici dans ta session Claude
+on va basiquement faire ici slash remote control en lançant cette commande ici ça nous fait
+remote control connecting, c'est active, tu peux aller sur ce site là pour accéder
+à ce contrôle.
+Et donc en clair, si j'envoie ce lien là sur Telegram, ensuite ici tu vois que je suis
+allé sur mon bot Telegram ici et j'ai cliqué sur le lien et qui permet de venir ici directement
+dans ma conversation.
+Et là c'est fou parce que dans cette conversation il y a l'action que je vais demander et je
+suis en train de contrôler mon ordinateur.
+Donc là ce qui se passe juste ici c'est que je peux venir dans add feedback et lui
+dire ok parfait donc là je suis sur mon iPhone, j'ai mis le mirroring de l'iPhone sur le
+Mac mais c'est exactement ce que tu pourrais faire donc là tu as lancé l'agent, tu le
+mets en remote control, ensuite tu vas faire ta pause d'aigle tranquillou, bouhémo comme
+t'as l'habitude de faire et là ici tu lui dis ok parfait, t'as résolu si, t'as résolu
+cette petite feature et finalement ici tu lui dis à la place d'afficher le petit icône
+on va lui dire de rajouter un raccourci clavier ici, ok parfait mais j'ai envie que tu fasses
+comme la page open, alors le problème ici c'est que le raccourci clavier ne va pas,
+la page open avec un raccourci clavier command plus, alors là c'est insupportable d'écrire
+sur mon Mac mais command plus E pour command plus A ou command je ne sais pas comment je
+pourrais faire command O pour le open à nouveau au lieu d'avoir l'icône STP et donc là
+quand je lui fais ma demande sur mon Mac donc je vais vous montrer ça, j'envoie le message
+et ce qui se passe c'est que le message vient de s'envoyer dans le chat alors que vous êtes
+sur l'iphone alors que vous n'avez pas besoin d'être sur le même wifi vous pouvez ici
+littéralement être sur, je ne sais pas tu peux être chez toi tu peux être sur ta 4G etc et comme
+la personne qui a fait le tweet ici tu peux aller toucher de l'herbe pour venir directement
+avoir ton code qui fonctionne et donc ce qui se passe ici ce remote control ce qui est très
+intéressant c'est qu'à aucun moment Claude est en train de s'effectuer sur un serveur virtuel ou
+sur une instance qui serait en ligne mais c'est directement un tunnel qui se crée, je ne sais pas
+si c'est le bon mot mais c'est une connexion privée qui se crée en fait ici entre les serveurs
+d'open AI, ton terminal juste ici pour avoir la feature qui se fait donc là tu peux voir que sur
+l'iphone alors avec le max c'est pas très facile mais tu peux voir facilement les edits donc tu as
+l'interface ici qui gère tout et avec vraiment une interface super friendly donc ça ressemble
+pas à API ou à ce qu'on pouvait avoir sur d'autres outils qui sont un peu moins friendly, un peu
+moins facile à utiliser ici tu as vraiment une interface friendly que tu peux utiliser sans
+autre avec une belle interface qui permet rapidement d'avoir le machin et la boum down et donc là tu
+peux même quitter l'application, revenir et ici tu lui dis des feedbacks ok parfait commit et push
+tout ça alors là le problème c'est que le linking entre le clavier Apple et la virtual iPhone donc
+ici c'est une sorte de copie tu peux voir qu'ici il arrive à load le skill moi je vois il a
+téléchargé le skill il a lancé le commit c'est bon c'est commit et ce qui est sympa aussi c'est
+que si vous retournez sur l'ordinateur et que ici tu lui dis ok mais par contre est-ce qu'il a fait
+ce que je lui ai dit d'ailleurs ok mais par contre rend ses boutons en sm car là il traîne trop de
+place sdp là j'envoie le message sur mon terminal en local et on peut voir que ça envoie le message
+aussi sur l'iphone en fait les deux sont vraiment synchronisés peut-être qu'il y a même un concept
+de pair programming ici où tu donnes l'iphone à ton collègue et toi tu es sur le mac comme ça vous
+pouvez discuter avec votre clod en même temps et balancer des messages mais ici tu peux voir que je
+lui demande une modification sur le mac et ça vient aussi faire les modifications directement sur
+l'iphone franchement l'intégration pour une fois elle est simple il ya des cas d'usage comme il dit
+pour pouvoir sortir monitorer alors que tu es en train d'aller faire ton café alors je sais qu'on
+devient un peu fou avec lia et que si en fait quand tu sors aller marcher et sur clod en train
+de faire travailler ton ordi ça n'a aucun sens mais c'était un peu l'idée de open claw bon comment
+ça marche un petit peu de ce que j'ai compris ce qui va se passer ici c'est que votre votre
+ordinateur ici ordinateur il vient créer une session open claw un petit peu avec des sockets
+et tout simplement votre conversation générale avec les serveurs de clod.i pouvez voir que ça
+passe par clod.i parce que quand vous lancez la commande la première fois je vous demande
+si vous êtes ok avec le fait de partager tout ça avec clod.i une fois que vous dites oui ça
+fonctionne et ensuite il ya votre smartphone et donc ce qui va se passer ici c'est que les deux
+vont avoir des connexions bilatérales donc ils vont non seulement te permettre de venir envoyer des
+messages mais aussi de recevoir le stream d'update d'ailleurs je pense que recevoir le stream d'update
+c'est peut-être la chose la plus pratique parce que ça permet ici de recevoir en live toutes les
+choses qui sont en train de se produire sur ton iphone et donc ici clod.i va se connecter à ton
+ordi ton smartphone va se connecter à clod.i et les deux ça va permettre de faire une connexion
+comme ceci et de venir contrôler ta session clod.code qui est sur ton ordi directement depuis
+ton smartphone et inversement très très simplement donc ça j'ai trouvé ça vraiment
+très malin et en même temps j'ai envie de dire c'est génial en même temps j'ai envie de dire
+c'est une invention du diable parce que déjà qu'on passe trop de temps sur clod.code et que
+maintenant je pense que je passe plus de temps sur clod.code sur n'importe quoi si en plus maintenant
+je peux continuer mes sessions quand je vais chez moi ça commence à n'avoir plus aucun sens
+évidemment mais à part ça c'est quand même une très bonne invention donc qui suit les dernières
+petites mises à jour de clod hop je t'arrête deux secondes pour te dire que tu peux télécharger
+ma configuration clod.code directement ici en allant sur mlv.sh slash fc tu vas te retrouver
+sur ce site et tu vas avoir accès à ma configuration clod.code c'est à dire mes agents mes commandes
+mais surtout mes scripts qui sont juste ici pour renommer la session la statue line le commande
+validateur ainsi que les skills donc si tu cherches ça sache que c'est le premier lien sous cette
+vidéo ou sur mlv.sh slash fc qui va un peu aussi avec la nouveauté clod work tree donc dans mon
+autre vidéo j'avais pas trop pu tester mais ça se devrait fonctionner maintenant clod work tree
+comme ceci donc vous voyez que quand vous lancez cette commande ça va vous faire venir ici dans
+chawa.clod slash work tree slash test work tree alors j'avoue que après l'avoir testé si je peux
+vous donner mon feedback sur cette mise à jour aussi j'ai vraiment pas aimé le fait que le work
+tree soit dans le dossier chao pourquoi si vous utilisez code vous allez très rapidement voir
+pourquoi personnellement ces work tree moi j'aime bien les les mettre plutôt sur un niveau au dessus
+c'est à dire pas de faire du sub du sub commit parce que suivant commande donc vous aurez des
+changements sur ce work tree donc si je peux lui dire change with me et en fait ici quand j'ouvre le
+parent repo donc là j'ouvre le repository principal qui n'est pas celui-ci à la la j'arrive pas
+à le faire ici j'ouvre chao vous allez voir que dans git on va voir ici le work tree test work tree
+on va voir tous les work tree en fait ça c'est parce que c'est dans le dossier et aussi des fois
+quand tu demandes des trucs à claude et qui fait des greppes sur ce projet et ben il va se retrouver
+à trouver le dossier claude à trouver le dossier work tree et à t'afficher des changements de ces
+work tree donc ce que je préfère faire c'est lancer les work tree dans le route c'est comme
+ça que je fais avec conductor donc ça j'avais pas été très fan heureusement on a un gars qui avait
+fait un petit tweet juste ici je vous invite à voir j'ai remplacé le cloud code work tree par une
+nouvelle commande avec ghostly lazy git et yézy alors peut-être que c'est un peu trop compliqué
+mais là c'est typiquement create each branch in sibling directory donc dans point point slash
+work tree slash branch name comme ça au lieu de l'ouvrir au lieu de créer une copie de ton
+projet dans le projet donc ça fait un projet dans un projet ça l'ouvre à côté du projet ça te
+permet d'avoir le work tree à côté du projet personnellement j'aime pas mal conductor pour ça
+parce que conductor veut vraiment venir séparer ça dans des dossiers différents c'est pour ça que
+si ici je crée un nouveau projet subfast et que je lui donne tous les accès du monde puisque
+sinon il fait chier tu peux voir qu'il crée dans conductor slash workspace slash subfast victoria
+donc ici tu peux voir que ça a créé le dossier dans le dossier conductor et ça n'a pas créé le
+dossier dans le projet subfast donc ici ça fait que tous mes work tree se retrouvent ici tu vois
+qu'ici on a tout au même endroit et mon code est un autre endroit ce qui permet de mieux séparer
+voilà un petit peu pour ce feedback sur cloud code en tout cas une sacrée nouvelle feature ce
+remote control les work tree je trouve que c'est plutôt un truc pour les gens qui n'avaient pas
+déjà de work flow moi j'utilisais déjà pas mal conductor qui pour moi fait bien le travail sur
+les work tree je préfère le travail que fait conductor sur les work tree donc il n'y a pas
+de souci là dessus mais comme ça maintenant tu as une autre option si tu as besoin et que tu
+as envie de dupliquer le nombre d'options que tu peux avoir dommage d'ailleurs qu'ils n'aient pas
+rendu ça plus configurable on dirait que cloud code essaie de tout internaliser mais internaliser
+c'est aussi choisir une opinion et donc venir dire voilà ça se fait comme ça et ça se fait pas
+comme ça et donc vu qu'il y a une opinion il y a moins de liberté donc il y a un équilibre à faire
+ici entre la liberté qui t'offre donc changer le dossier de ton work tree et faire de plus en plus
+de features qui vont finalement t'offrir un moyen de faire ce que je kiffais pas forcément parce
+que j'aimais bien avec cloud c'est qu'il te laissait un peu faire comme tu voulais le work flow que tu
+voulais etc et ici avec ce work tree ils viennent te proposer une solution de leur vision dont je
+n'adhère pas et dont je ne peux pas changer le paramètre ce qui n'est pas non plus le plus
+pratique voici un petit peu dites moi ce que vous en pensez on se retrouve bientôt ciao ciao

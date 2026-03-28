@@ -1,0 +1,229 @@
+Il y a deux mois et un mois, j'ai fait des vidéos comme quoi j'utilisais Zed avec la configuration Zed,
+ainsi que je supprime Cursor, Zed devient une vraie alternative.
+Et dans cette vidéo, j'ai envie de te donner mon retour honnête après maintenant plus de deux mois d'utilisation de Zed.
+Et oui, déjà, première réponse, j'utilise encore Zed comme IDE principale.
+Alors oui, dans mes vidéos, j'utilise Cursor, pour plusieurs raisons j'utilise Cursor dans mes vidéos,
+tout simplement parce que ça ressemble à VS Code, qu'il y a l'IA qui me permet de tester ici les worktri avec plusieurs modèles,
+qu'en général, pour un spectateur, c'est plus satisfaisant de suivre une vidéo sur Cursor,
+quand il connaît l'interface, il va être moins perdu, il va avoir plus l'impression de comprendre ce que je fais,
+que si je lui fais la même vidéo sur Zed qui ressemble pas totalement la même chose.
+Alors maintenant qu'on a vu ça et que j'ai répondu à cette question, est-ce que j'utilise encore Zed ?
+Qu'est-ce que je préfère chez Zed et pourquoi je l'utilise pas, je l'utilise.
+Alors déjà, le premier point avantageux de Zed, c'est sa rapidité qui est incroyable.
+Donc si là, je quitte ce projet juste pour le fun et que je vais dans mon terminal et que je fais Zed.
+J'appuie sur Enter et on a ici l'environnement qui a été setup presque instantanément, donc je vais le refaire juste ici.
+Donc là, je fais Command K pour complètement fermer Zed et je fais Zed et ça lance comme ceci presque instantanément.
+Avec tout qui est prêt, etc.
+Donc ça, c'est le premier point que j'aime bien. Zed n'est pas un fork de Node.js, c'était un fork de Electron.
+Il n'est pas fait en JavaScript et de ce fait, il est plus rapide parce qu'il est fait en Rust.
+Il est vraiment optimisé pour la rapidité que tu aies 1000 tables, 1 table, tout ce que tu veux.
+Il y a vraiment tout qui fonctionne parfaitement juste ici, c'est très rapide, etc.
+Donc ça, c'est le premier point.
+Le deuxième point qui me fait vraiment aimer Zed par rapport à VS Code, c'est sa simplicité d'interface.
+Si on regarde une interface comme Cursor, juste ici avec le nombre d'éléments qui sont affichés sur cette page.
+Alors je vais déplacer ma caméra comme ceci et je vais utiliser le petit outil de dessin.
+Ici, j'ai le terminal, donc on va afficher le terminal comme ceci avec un terminal qui lance le serveur.
+Et je vais faire exactement la même chose sur Zed ici avec un seul terminal qui lance le serveur.
+Comme ça, on a à peu près exactement la même interface affichée.
+Et ici, je vais afficher deux fois tout simplement le même composant.
+Donc là, on a vraiment les deux interfaces qui sont l'un sur l'autre et on peut voir par rapport à la simplicité.
+Donc là, si j'ouvre le terminal comme ceci, en général, il y a beaucoup moins de boutons qui vont être affichés par défaut.
+Donc là, quand je suis ici, on peut voir qu'ici, on a plusieurs boutons, bla bla bla bla bla.
+Ici, on n'en a aucun.
+On peut voir qu'ici, on a une pelletée d'informations juste ici avec main, machin, la branche.
+Ici, on a juste des petits tables qui sont très discrets, sans texte, moins d'informations.
+Ici, la même chose, on a une pelletée d'informations sur prétilleurs, cursor, table, etc.
+Et là, on a encore une fois la petite sélection que je pourrais d'ailleurs enlever.
+Ici, simple et minimaliste, il y a très peu de boutons, très peu d'actions, très minimaliste.
+De la même manière, si on compare vraiment cursor, ici, on a agent, éditor, donc on a une vue agent, une vue éditor qui rajoute de la complexité.
+Avec ici, tous les petits boutons pour changer de table, donc on a non seulement des boutons ici, mais des boutons ici.
+Ici, on a outline, timeline, donc à tout moment, tu rajoutes ça et tu commences à avoir un bordel monstre.
+Alors qu'ici, c'est simple, il y a un menu, c'est tout, c'est tout, c'est tout, c'est tout.
+Et ici, il y a des tout petits boutons qui permettent ici d'afficher par exemple outline, mais c'est un bouton différent.
+Et le git, juste ici, et les éditors, il y a trois tables, simples, efficaces, minimalistes.
+J'aime beaucoup, j'aime beaucoup, j'aime beaucoup.
+Ce que j'aime beaucoup aussi, c'est que les boutons ici sont facilement accessibles, c'est-à-dire que quand tu débutes, tu as facilement envie de cliquer ici pour faire git ou quoi.
+Sur Z, les boutons sont tout, tout, tout, tout petits.
+Et donc, très vite, t'as la flemme de cliquer ici parce que quand t'essaies de cliquer sur git, tu cliques sur le mauvais, ça, ça affiche pas, etc.
+Et donc, tu passes directement au raccourci clavier et donc moi, j'utilise que les raccourci clavier sur Z.
+Finito terminado, raccourci clavier ato, facile, simple.
+En fait, le minimalisme de Z te force à utiliser les outils et augmenter ta productivité presque naturellement.
+Donc ça, c'est un des points par rapport au menu.
+Et encore une fois, si on peut continuer sur cet argument, ici, il y a 25 boutons pour ajouter des dossiers quand t'es là.
+Là, il n'y a pas de boutons, raccourci clavier, c'est tout, c'est ton seul choix, pas de boutons.
+Ici, la même chose, des boutons, là, bon, on a quand même quelques petits boutons avec fullscreen, etc.
+Ça, si je pourrais l'enlever, ça serait bien parce que je n'ai jamais vu un bouton aussi inutile que ça.
+Bon, ça peut être pas mal, en fait, pour les vidéos.
+Il faudrait peut-être que je l'utilise, mais vu que je n'utilise pas ça pour les vidéos, c'est un peu inutile.
+Et la même chose avec le terminal, voilà, simple, efficace.
+Sur ce point aussi, donc sur l'interface minimaliste, je suis un très grand fan ici de Z.
+Deuxième point, c'est leur intégration IA qui est plutôt aussi minimaliste et que j'aime beaucoup.
+Enfin, troisième point maintenant, on peut aller ici dans notre menu et cliquer sur Settings.
+Alors en fait, ça doit être ici, ça doit être là et là, il y a Settings.
+Et là, on a différents settings avec déjà des agents qui intègrent automatiquement Cloud Code, Codex, Gemini directement ici.
+Et ici, Your Agents, ça, ça sert à rien, je ne sais même pas pourquoi j'ai ce truc et je ne peux pas le supprimer, c'est super.
+Et ici, on a les LLM Provider où on peut rajouter notre clé API pour Google IA, pour GitHub Copilot, pour ZI, etc.
+À quoi ça sert? Et bien, typiquement ici, je peux sélectionner, faire command K et là utiliser mes propres clés API, pardon, avec mes propres modèles.
+Et donc moi, par exemple, pour l'édition facile, j'aime bien utiliser type Gemini 2.0 Flash.
+Là, je lui fais Use Type et il vient automatiquement Update, ça, ça va très très vite.
+Et après, c'est un peu limité quand même dans l'utilisation, ce n'est pas non plus le OG of the world.
+Et donc là, si par exemple, je remplace et je lui dis Use Props instead of Destructured Props.
+Voilà, ça va assez vite. Après, est-ce que ça fonctionne? Ouais, ça semble fonctionner, c'est pas trop mal.
+Ouais, c'est pas mal. Après, il fait souvent quelques petites erreurs, tu vois qu'ici là, maintenant, il y a des petites erreurs.
+Je ne sais pas trop pourquoi il y a ça. J'imagine qu'il faut remplacer par ça.
+Voilà, parce qu'avant, il y avait une valeur par défaut, donc tu vois qu'il n'a pas tout capté.
+Et que des fois, il rajoute souvent un truc ici que ce que Cursor ne fait pas forcément.
+Après, voilà, ce n'est pas non plus une feature que tu utilises pour faire des gros refactors, c'est plutôt pour faire des refactors minimalistes.
+Donc ici, on a l'IA qui est là. On a aussi l'IA qui est juste ici.
+Donc là, la même chose, tu peux utiliser tes différents modèles juste ici, par exemple, Sony IQ Opus juste ici.
+Et là, on est avec Cloud Code et je peux lui dire Modify Image Upload FX, toutes les erreurs.
+Et là, quand je fais ça, je n'ai pas besoin de payer d'abonnement à Z.
+J'ai directement l'intégration Cloud Code qui me permet d'ajouter des fichiers, qui me permet de lancer des commandes.
+Mais il y a quand même quelques limitations d'UI en général.
+Donc là, c'est aussi assez cool parce qu'il a eu le contexte des erreurs d'une manière ou d'une autre.
+Non, il y a toujours des warnings, erreurs, etc.
+Mon ami, il n'a pas...
+Ça, je ne sais pas ce que c'est.
+Compilation Skipped, pourquoi il m'a fait ça ?
+Voilà, il lance TSC, comme ça on va aussi voir.
+Mais c'est quoi cette merde d'erreur ?
+Mais ici, du coup, on a Cloud Code avec une interface qui est bien sympa.
+On peut voir les diffs qu'il a fait.
+On a Keep All, on a les edits, on a les types de permissions juste ici.
+On peut suivre ce qu'il est en train de modifier juste là.
+Donc je vais être honnête avec toi, je n'utilise pas ça souvent.
+J'utilise principalement le terminal, mais ça reste une intégration sympa.
+Finalement, un des trucs qui existent, c'est évidemment en de guillemets le Co-Pilot.
+Donc ici, je fais const x égale 1 const y.
+Oh merde.
+OK, donc hop là, ça fonctionne.
+Et là, du coup, il y a l'autocomplétion.
+Donc si je hop et que là, je fais const x est égal à 12.
+Conct y est égal à 24.
+Conct sum est égal.
+Et là, on a potentiellement une complétion.
+Des fois, summeur.
+Alors des fois, ça fonctionne.
+Peut-être que j'ai.
+Non, non, non, non.
+Donc là, on a un peu de complétion qui peut se faire avec le zai autocomplétion.
+Ce n'est pas la meilleure autocomplétion du monde.
+Curse 4 reste bien, bien, bien, bien, bien, bien, bien, bien, bien, bien, bien, bien, bien, bien, bien, bien, bien, bien, bien, bien, bien, bien, bien, bien, bien.
+Plus avancée qu'ici.
+Et ça, c'est clairement un des points noirs de Z.
+je leur ai déjà dit que leur complétion était à chier et la complétion de GitHub Co-Pilot est tout autant à chier.
+Donc pour ce point là, on est sur un désavantage de Z.
+Personnellement Z, de toute façon, je l'utilise dans le terminal.
+Généralement ici, j'ai un terminal là et ce que je fais, c'est que je split down.
+Et moi, ça c'est à peu près mon environnement de dev.
+Ici, je vais lancer tous mes serveurs.
+Donc si j'ai besoin de lancer des serveurs, ils vont tous être juste ici.
+Et là, je vais lancer toutes mes instances de Cloud Code.
+Donc généralement, je vais en lancer plusieurs.
+Quelques limitations que j'ai pas forcément appréciées.
+C'est qu'ici, il n'y a pas moyen de renommer ces tables de cons.
+Donc autant dire que quand c'est aussi grand que ça et que tu as trois tables.
+Bon alors sur mon énorme écran qui est juste ici, ça va.
+Mais sur l'écran que tu vois qui est juste là, c'est un peu petit.
+Et donc ça, c'est un des points noirs de Z.
+C'est pourquoi on ne peut pas renommer ces tables de cons.
+C'est pas possible.
+Un des autres points noirs de Z et ça, je sais pas dans quel univers ils ont réussi à avoir ce bug.
+Il est assez fou.
+Donc si ici, j'ouvre un projet, donc par exemple, juste ici, l'e-mail,
+que j'essaie de prendre ce fichier que je fais commander et que je fais commander ici,
+ça ne marche pas.
+On ne peut pas copier-coller un fichier d'un projet à un autre.
+Et j'utilise personnellement souvent ça.
+Donc ça, c'est un des points noirs de Z aussi sur tout ce qui est copier-coller des informations entre les différents éléments.
+Un autre point sympa de Z que on part un petit peu en vrille, c'est la recherche globale.
+Alors celle-là, je l'aime beaucoup tout simplement parce que ça ouvre un table comme ceci.
+Et là, si je recherche image, on va avoir du coup tous les endroits qui ont image.
+Je peux facilement direct mettre à jour le code ici.
+Et on a vraiment toute l'autocomplétion qui est disponible ici.
+Donc là, tu peux voir que quand je fais new image, ça m'affiche ça.
+Alors que si on fait la même chose ici sur cursor et que je fais image,
+on peut voir que là, je dois cliquer sur le fichier pour voir la vue.
+Alors, il y a une autre vue possible qui est open in editor.
+Mais là, en fait, on ne peut pas vraiment modifier le code ou en tout cas,
+je n'ai pas compris comment ça fonctionnait.
+Mais si là, je modifie le code et que je sauvegarde,
+on peut voir que ça me fait une sorte de code search extension.
+Et en fait, ici, je ne peux pas modifier le code.
+Donc là, c'est très stylé.
+J'utilise ça vraiment notre joke assez souvent.
+On va venir ici faire des recherches et ensuite modifier directement le code.
+Encore une fois, tout ce raccourci clavier.
+Donc, si tu veux afficher plus en bas comme ceci, tu fais shift enter
+et ça affiche de plus en plus de codes en haut.
+Et ici, en haut, on peut tout simplement, ça affiche en haut et en bas.
+Non, non, voilà.
+Donc là, je vais là, je fais shift enter et ça m'augmente mes trucs.
+Alors, je ne sais pas pourquoi il a décidé de chercher dans les noms de modules.
+Normalement, il ne le fait pas parce que les noms de modules sont ignorés.
+Pourquoi pas ?
+Qu'est ce qu'il a fait de y avoir un settings qui manque juste ici ?
+Bref, on a la recherche comme ceci et j'aime beaucoup, beaucoup cette recherche.
+J'aime aussi la recherche de référence.
+Donc là, je suis sur image upload, je clique et en fait,
+si je fais la même chose sur cursor ici dans image upload et que je clique,
+ça m'affiche ce petit menu.
+Ce petit menu, il est pratique, mais ça ne s'affiche qu'une seule référence.
+Pour aller sur l'autre, on doit cliquer, ça augmente un petit peu le nombre de clics.
+Alors qu'ici, quand on clique là, on a une sorte de vue qui affiche tous les endroits d'image upload.
+Et de la même manière, ici, je peux rajouter du code n'importe où.
+Donc ici, je rajoute, j'ai fait une connerie, du code n'importe où comme ceci.
+Et en fait, je peux venir voir les références et pour ouvrir le fichier,
+je fais option enter et j'arrive ici dans le fichier avec mon cursor qui s'ouvre juste ici.
+Et si je veux retrouver cette recherche, et bien ici, j'ai la recherche avec toutes les références
+qui s'affichent encore une fois sous forme de table.
+Donc ça, c'est très, très pratique.
+La même chose ici, input ref, boum, ça m'affiche tous les endroits où c'est utilisé.
+Je peux même facilement sélectionner comme ceci les quatre inputs ref,
+en voyant directement où est-ce que ça modifie.
+Si j'essaie de faire ça juste ici avec notre amique, je fais clic.
+Là, je vois ça et je veux les sélectionner.
+Ça m'affiche ça et là, on ne voit pas l'update qui se fait en live, etc.
+Donc ça, je suis très, très fan pour ce qui est du code de faire ceci, d'avoir ces deux trucs.
+Donc ça, c'est les deux petites pages que j'aime bien.
+Donc c'est command click et ça qui fonctionne bien.
+Sinon, on a la recherche, les settings et la customisation qui est assez poussée.
+J'avais déjà fait une vidéo là-dessus qui permet de tout customiser, etc.
+C'est pas mal bien.
+Donc à part les deux petits problèmes que j'ai dit, j'aime beaucoup Zed et je l'utilise
+au quotidien depuis tout ce temps pour mes applications sans hésiter.
+Et on utilise Cursor, surtout pour mes vidéos et pour des petits projets à la con
+où j'ai envie que l'IA fasse tout.
+J'ai un peu la flemme de faire ça à la mano.
+Voici un petit peu pour Zed et mon utilisation.
+Par rapport à l'IA et se dire l'IA est un peu moins intégré, c'est un peu moins pratique pour tab tab tab.
+Moi, je trouve que Zed est un IDE vraiment fait pour les développeurs,
+par des développeurs professionnels, efficaces, super puissants.
+Mais c'est vrai que l'intégration il y a manque un peu.
+Personnellement, je m'en fous un peu parce que j'ai mes 25 Cursor ici.
+Donc moi, quand je travaille, j'ai deux, trois clots de code ici et je m'amuse à switch
+dans les différents clots de code juste là.
+Il faudrait vraiment une capacité de renommer ces terminales qui changeraient encore mieux.
+Même manière de travailler.
+Mais là, boom, tu lances un clot de code, tu lances un clot de code, tu lances un clot de code,
+tu chats, tu retournes, etc.
+Tu vois les diffs.
+Ici, tu peux voir les diffs, tu commits.
+La même chose pour les commits, tout au raccourci clavier, command shift Y.
+Ici, j'arrive là, je fais option shift G, ça génère le commit super vite.
+Je peux cliquer sur commit, c'est parti.
+Ici, il y a publish, il y a commit tract, il y a notre dernier commit.
+On peut undo super facilement ici.
+L'interface de git est parfaite avec le git diff ici qui fonctionne top.
+Donc ça, c'est un peu l'usage que j'en fais.
+En tout cas, n'hésitez pas à me dire qu'est-ce que vous utilisez.
+Dans la description, tu vas avoir un lien qui permet de configurer Z comme je l'ai fait.
+J'ai tout mis dans un fichier Notion où je résume exactement comment est-ce que j'ai fait tout ça.
+Ce qui va te permettre de pouvoir avoir une config Z utilisable directement sans perdre du temps
+à toutes les heures que moi j'ai perdu.
+En tout cas, voici un petit peu pour mon retour.
+Je te redirai, je te referai une vidéo dans 6 mois si j'utilise toujours Z
+ou si je suis passé sur Antigravity.
+Évidemment, c'est une blague, Antigravity est une daube high slop de fou.
+Mais voilà pour mon petit avis.
+On se dit à bientôt, ciao ciao !

@@ -1,0 +1,267 @@
+Le roi des agents OIA, c'est Claude Code, et ça fait 6 mois que je l'utilise quotidiennement.
+Mais quand j'ai commencé, je l'utilisais n'importe comment.
+Je le traitais comme une sorte de tchat GPT capable de modifier mes fichiers.
+C'était un peu comme acheter un MacBook à 4000€ uniquement pour lancer Chrome et faire
+des recherches Google.
+Et quand je compare à comment je l'utilise maintenant, je me rends compte qu'il y a
+5 grandes différentes, 5 grandes leçons que j'ai pris en compte dans mon utilisation
+de Claude, qui ont drastiquement amélioré les résultats, et qui me permet maintenant
+de faire le travail de 5 jours en seulement 5 heures.
+Et dans cette vidéo, j'ai pas envie de te rabâcher tous les conseils inutiles.
+Utilise des sub-agents pour créer une équipe de 25 développeurs ? Non !
+Ce que je veux, c'est te partager 5 leçons qui vont drastiquement changer ta manière
+d'utiliser Claude Code forever.
+C'est parti !
+Traite ton contexte comme ton temps, chaque mot inutile te coûte cher.
+Ça, Claude Code, et la plus grosse erreur que je vois chez mes élèves, c'est ne pas
+faire attention au contexte.
+Pour rappel, quand on parle de contexte, c'est l'intégralité des messages qui vont générer
+une réponse.
+Qu'est-ce que ça veut dire qui vont générer une réponse ? C'est que chaque fois qu'on
+envoie un message à Claude, il vient récupérer toute notre conversation.
+Et quand on dit contexte, ça inclut aussi le système prompt, ça inclut les mémoires,
+ça inclut tous les outils, le user, etc., afin de générer une réponse.
+Ce output, il peut soit être sous forme de réponse, soit être un tool call comme ceci,
+et ensuite il va itérer sur des appels encore.
+Et si tu as trop de contexte, au bout d'un moment, avec tous les outils, il y a une sorte
+de limite hard codée qui vient te bloquer avec ici le warning, limite de contexte atteint,
+tu dois lancer une nouvelle conversation ou lancer slash compact.
+Et donc il va falloir faire très attention à ce que tu mets dans ce contexte pour éviter
+d'arriver à cette limite avant que tu termines ta fonctionnalité.
+Surtout que le pire là-dedans, c'est que l'IA aura tendance à faire ce qu'on appelle
+un lost in the middle.
+C'est-à-dire que dans tout ton contexte, ici il y a tous tes tokens, l'impact sur
+l'output va être élevé pour les premiers messages, donc ça va être le système prompt,
+ça va être le memory, ça va être ton premier message et les différents tools, et ensuite
+au milieu du contexte, donc s'il y a par exemple 200 000 tokens, les tokens à peu
+près à 100 000, ils vont être un peu plus perdus, ils vont être moins écoutés, ils
+vont être plus souvent oubliés, ils vont avoir plus de mal.
+Et tous les derniers messages que tu vas lui donner, ceux-ci vont être très importants.
+Surtout que pour atteindre ces niveaux de contexte et d'optimisation de coût, parce
+que quand on voit 200 000 tokens, ça fait beaucoup plus de calculs qu'il faut faire,
+et bien les providers font des choix techniques qui permettent d'optimiser ce contexte.
+C'est pour ça qu'en plus, sur l'intégralité du contexte, on en a encore moins disponible.
+Et c'est pour ça qu'il faut traiter ton contexte avec amour.
+Les MCP par exemple peuvent rapidement prendre beaucoup de place, c'est-à-dire qu'avoir
+des MCP comme Strite, Next.js, Chat.cn, Context7, Hexa, ça peut prendre jusqu'à 15, 1% de
+ton contexte global.
+Le pire là-dedans, c'est que ces outils sont envoyés au début, donc ils vont avoir
+beaucoup d'importance, donc toi tes messages qui vont être ici vont être plus souvent
+perdus, et tu viens flouder ton contexte.
+Dans une conversation où tu utilises qu'un seul MCP, pourquoi avoir 4 MCP inutilisés ?
+Et bien il n'y a aucune réponse à cette question, tu dois les désactiver.
+Comment est-ce qu'on les désactive ? Pas trop dur, on peut faire hâte, et quand on
+a hâte, ici on a tous les MCP disponibles, et donc on va pouvoir ici les désactiver,
+par exemple ici en appuyant Enter, je désactive le MCP, Strite comme ceci, et là on peut
+voir que j'ai que deux MCP qui sont activés, ce qui était exactement ce que j'avais envie
+d'avoir.
+Donc faites attention à bien désactiver les MCP pour optimiser votre contexte.
+Mais c'est pas le seul problème, les agents prennent beaucoup de place aussi, c'est-à-dire
+que chaque agent va être intégré dans le contexte pour que l'IA soit capable de
+les appeler.
+Donc là tu vois que moi si je fais slash contexte comme ceci, je n'ai pas beaucoup
+d'agents, alors ici je ne sais pas pourquoi il m'a mis tous les outils Stripe, mais ici
+j'ai que 6 agents qui ont très peu de tokens.
+Maintenant qu'est-ce qui se passe si juste pour le fun, je vais venir modifier ma config
+Cloud et rajouter des agents.
+Donc là tu vois que j'ai ajouté énormément de fichiers agents, et j'ai déjà un warning
+Tu vois qu'ici il me dit que je suis déjà à 18 000 tokens.
+Et donc là quand on fait slash contexte, on se rend compte que j'ai énormément d'agents.
+Tu vois ici custom agents, j'en ai une trentaine, et certains sont très très gros.
+Donc typiquement on a 446 tokens ici, on a beaucoup qu'on 446 tokens.
+Et si on vient regarder le code de ces agents très gros, pourquoi ils sont aussi gros ?
+C'est parce que leur description est très grande, et en fait la description est inclue
+dans le contexte de l'IA sous l'utilisation des sub-agents.
+Donc évidemment, pour ce coup aussi, encore une fois, le même constat qu'avant, supprimez
+vos sub-agents, ne gardez que l'essentiel, on ne peut pas malheureusement les désactiver
+ou les réactiver, mais typiquement moi ici j'ai un dossier qui s'appelle agent save,
+et ce dossier agent save, je le mets généralement dans le dossier cloud, et comme ça ici je
+mets que les agents que j'ai besoin, et si vraiment je veux avoir des agents, je peux
+les déplacer ici, ça c'est toutes mes archives d'agents que j'utilise jamais, que j'avais
+testé à l'époque.
+Donc voilà, le premier contexte qui change radicalement les résultats, c'est de ne pas
+faire le gigolo à ajouter 2000 trucs, limiter l'utilisation au maximum, un des grands avantages
+de cloud c'est cette command slash contexte qui permet d'être super précis concernant
+l'utilisation des MCP, des agents, etc. pour comprendre comment le contexte est utilisé,
+et c'est juste primordial de venir faire attention à bien avoir ça.
+Petite pause pour te dire qu'en allant sur le lien mlv.sh slash AI, tu peux accéder
+à une masterclass gratuite cloud code, mais pas que, tu vas aussi pouvoir accéder à
+mon CLI qui contient toutes mes commandes, donc je les montre juste ici, mais tu vas
+avoir mes agents, mes commandes, mes hooks, mes output styles et toute ma configuration
+pour utiliser cloud code comme un pro, et tu vas aussi accéder à une formation, comme
+tu peux le voir juste ici avec un petit sordage et pas mal de leçons juste ici, conducteur,
+masterclass, etc. etc.
+Tu vas pouvoir y accéder pour, par exemple, comprendre comment fonctionnent les agents,
+pour ça on va créer un agent, etc.
+Tu vas pouvoir accéder à toute cette formation totalement gratuitement en allant sur mlv.sh
+slash AI, c'est une formation faite pour les développeurs qui veulent coder plus efficacement
+avec l'IA.
+On se retrouve là-bas.
+Le deuxième point, c'est l'autocompact tu éviteras.
+Il y a un truc qui se passe, quand la conversation commence à être extrêmement longue, on va
+avoir un autocompact, donc comment est-ce qu'on peut voir ça ? Typiquement moi ici
+dans mon interface avec ma statue line, j'ai ici mon nombre de contexte disponible et on
+peut voir que là j'ai utilisé 45 000 tokens, ce qui représente 23% et que quand j'envoie
+un message comme ceci, ce pourcentage va venir changer.
+Donc tu vois que là dans une conversation vide, j'ai déjà 100 000 tokens qui sont
+utilisés.
+Pourquoi est-ce qu'il y a 100 000 tokens qui sont utilisés ? Je vais tout de suite te
+montrer pourquoi dès le départ d'une conversation, on a déjà, et oui c'est assez impressionnant,
+on a déjà 100 000 tokens utilisés, donc la moitié de ton contexte part dans un message.
+Pourquoi est-ce qu'on a ça ? Parce que ici en fait, on a pas mal de tokens qui sont
+utilisés, à cause évidemment de tous les systèmes prompt, mcp tools qu'on a etc,
+mais aussi à cause du autocompact buffer de 45 000 tokens qui prend 22% qui va venir
+bloquer tes messages.
+À quoi sert ce autocompact buffer en fait ? C'est que quand tu vas tout remplir ici,
+alors j'ai pas d'exemple comme ceci, mais si je prends une très grosse conversation
+de l'époque, on va faire un petit screenshot de ça, comme ça je peux te l'expliquer.
+Par exemple juste ici, tu peux voir que là je suis à 213 000 tokens donc là j'ai dépassé,
+et donc là dès que je vais envoyer un message, ça va venir faire compacting conversation,
+tu vois que là on a dépassé la limite et donc on vient compacter la conversation, mais
+pour que l'IA soit capable de générer des tokens, il lui faut de la place parce qu'elle
+est limitée à 200 000, et donc eux ils ajoutent 45 000 d'espace pour venir compacter la conversation.
+Qu'est-ce qui se passe quand on compacte la conversation comme je le fais juste ici
+avec l'autre code, on va zoomer parce que peut-être que tu vois rien là avec la taille de mon écran.
+Donc ici, hop, compacting conversation, on peut voir qu'ici ça génère des tokens.
+Alors je sais pas trop pourquoi ils mettent 45 000 tokens de safe space,
+et voilà, c'est au cas où.
+Donc voilà, là ça a terminé, ça a compacté la conversation et donc on
+est transformé toute cette conversation en ce énorme message qui résume notre conversation,
+qui fait pas tant de tokens que ça, et qui va permettre ici de passer de 200 000 tokens à 74 000.
+Donc c'est exactement ce que je montre juste ici, c'est-à-dire qu'on va avoir un contexte rempli,
+et quand on vient autocompact, ça vient prendre cet énorme blog de messages et ça vient le réduire
+en un petit message qui nous réoffre plein de contexte. Et donc il y a des gens qui vont faire
+ce que j'ai inscrit juste ici, c'est-à-dire qu'ils vont faire une tâche 1, faire une tâche 2,
+et ensuite ils vont arriver à la fin du contexte et donc ils vont lancer autocompact et faire la tâche 3.
+Moi je t'invite à complètement éviter ceci parce que déjà tu viens bourriner 45 000 tokens ici pour
+rien qui peuvent être utiles suivant comment, et tu viens comme ceci rajouter une sorte de couche
+de autocompact autocompact autocompact qui vient perdre un peu l'IA. La bonne manière de faire
+c'est de faire des tâches et de tout le temps utiliser clear, et avec le workflow que je propose
+qui s'appelle Apex qui va permettre de pouvoir retrouver le contexte, et bien chaque fois on
+récupère le contexte nécessaire pour relancer la tâche 2, puis on lance la clear, puis on lance
+la tâche 3. Le seul cas où l'autocompact est particulièrement utile, c'est si au milieu de
+ta tâche, donc tâche 1, et bien tu arrives à la limite, et à ce moment-là tu lances autocompact
+pour pouvoir continuer de travailler sur la tâche 1, ce qui arrive rarement parce que 200 000 tokens
+c'est énorme, et si ça arrive c'est que tu lui as demandé de faire un truc complètement délirant,
+mieux vaut séparer ses tâches. Et donc c'est pour ça que je recommande de ne pas utiliser ce
+autocompact ou d'éviter un maximum, on peut le voir juste ici pour garder du token. Ce que tu
+peux faire aussi, c'est que là quand on fait slash contexte on se rend compte que du coup on a
+tout cet espace libre et donc free message 62%. On peut augmenter cette free place en faisant
+slash settings, je sais plus exactement, slash config comme ceci, et dans slash config il y a
+autocompact. Tu vois que par défaut il est à true, mais en faisant espace on peut le mettre à false,
+et à ce moment-là quand je fais autocompact false, on vient de gagner 45 000 tokens et on est passé
+de 62% d'espace free juste ici, 62% à 83%. Donc dans le cas en fait où comme moi tu pars sur
+le principe que j'utilise jamais autocompact et j'évite un maximum, et bien je lui laisse un
+maximum de tokens comme ça il peut y aller, il peut printer comme je sais pas quoi, et j'ai pas de
+limite. Donc voici ce petit autocompact tu éviteras très très important. Troisième point les MCP tu
+n'utilisera pas. On l'a déjà vu, comme on a vu ensemble les MCP prennent de la place dans ton
+contexte, mais certaines personnes me disent oui mais moi j'ai envie d'avoir tous ces MCP c'est
+utile, c'est pratique, ça m'aide dans mon quotidien de travail, et donc j'ai envie d'avoir tous ces
+MCP. D'accord, est-ce que tu es sûr que ce MCP est utile ? Est-ce qu'il apporte de la vraie vraie
+valeur ajoutée ? Typiquement context 7 et hexa c'est des MCP très utiles qui vont permettre de
+récupérer des données de contexte très pratiques. Mais il faut comprendre que plus tu vas avoir de
+MCP, plus la qualité des résultats que tu vas avoir va diminuer. C'est corrélé comme ceci parce
+que tu viens polluer ton contexte avec des énormités sur des outils. Qu'est ce que je te recommande,
+utiliser les commandes bash. Par exemple, pourquoi utiliser superbase MCP qui permet d'interagir avec
+ta database comme ceci, quand tu peux utiliser le superbase CLI. La magie des outils il y a comme
+cloud code, c'est qu'ils sont très doués et qu'ils sont entraînés sur tous ces CLI déjà. Et donc
+si tu lui dis utilise le CLI superbase pour faire je sais pas quoi, il part tout de suite. Et il y a
+certains CLI qui manquent de features et à ce moment là le MCP est utile. Mais je suis convaincu
+qu'avec le superbase CLI et le postgreSQL CLI, parce qu'il va falloir aussi le postgreSQL CLI,
+tu peux facilement te connecter à ta database, faire des actions, récupérer des données avec
+du SQL, tu peux très bien spécifier ça dans le cloud, et récupérer ta database, superbase,
+lancer les services, fermer les services, gérer la CI-CD avec le superbase CLI et différents CLI qui
+vont en fait tout faire pour toi. Par exemple, pourquoi utiliser le GitHub MCP quand tu peux
+utiliser GitHub CLI, pourquoi utiliser le Néon Tech MCP quand tu peux utiliser le Néon CLI,
+pourquoi utiliser le Versailles MCP quand tu peux utiliser le Versailles CLI. C'était ma question,
+la majorité des CLI sont capables de faire la majorité des features. Vous allez trouver des
+exemples pour me dire que j'ai tort. Je sais, il y a certains... Là j'ai regardé la doc de superbase
+et c'est pour ça que je voyais qu'il n'y avait pas grand chose. Mais si on enlève superbase de
+cette histoire et qu'on utilise postgreSQL pour interagir avec la DB, ça fonctionne très bien.
+Donc c'est mon petit conseil, moi j'ai que deux MCP généralement, j'ai que les deux là, et tous
+les autres je les désactive et je les évite comme la peste. Quatrième point, le cloud.md chérit le,
+chérit le cloud.md. Le cloud.md vient s'ajouter ici dans memory file et il est au début du contexte.
+Comme on l'a vu, les memory files vont être au début du contexte donc ils vont avoir tendance à être
+très très bien respectés. Surtout le global memory file, donc celui que tu mets dans ton projet. Et
+donc fais attention d'avoir un memory file de qualité. J'écris une petite commande que tu
+peux télécharger dans la description qui permet ici de venir gérer tout ceci facilement. Donc ici
+je vais pouvoir gérer review cloud memory. Donc cette commande elle va venir un peu analyser le
+cloud.md en lançant des petits agents qui vont analyser le cloud.md référence et je t'invite à
+vérifier que tu as bien les données nécessaires dans ce cloud.md. Donc ça c'est pas le meilleur
+projet du monde. Mais donc cette commande ici elle vient lire ton cloud.md, elle vient de donner
+tes notes. Donc qu'est ce qui est important ? Il faut être spécifique, c'est à dire ne pas lui
+laisser la liberté d'interpréter tes informations. Très spécifique, éviter de venir ajouter de la
+redondance, donc répéter trois fois les mêmes trucs. Plutôt mettre de l'importance sur des
+règles plutôt que de la redondance. Relevant c'est avoir que des informations utiles. Completeness
+c'est d'avoir toutes les informations sur ton application. Donc ça va être typiquement toutes
+les commandes qui sont disponibles. Ça va être tous les outils qu'il doit utiliser, comment tester,
+comment vérifier, quel workflow utiliser etc. Emphasis c'est venir rajouter des marqueurs comme
+critical ou des informations importantes. Et donc pour ça généralement on va emphasis donc mettre
+en avant certaines choses. Parce que si on met rien en avant il va avoir tendance à faire un peu rien.
+Structure, garder une bonne structure. Actionability, c'est à dire avoir des actions précises par
+rapport à comment il doit faire les choses. Efficiency, avoir pas trop de fichiers et pas
+avoir beaucoup de mots pour rien. Accuracy, avoir des outils qui sont précis comme ceci. Donc pour
+faire ça j'ai créé une commande qui s'appelle review cloud memory et ici on peut venir tagger
+le fichier. Donc là par exemple on va tagger cloud.md qui est le fichier actuel pour venir lancer
+le test sur ce fichier là. Et donc ce prompt ici que j'ai créé qui s'appelle cloud.md, review
+cloud memory, va venir utiliser des critères, des bonnes pratiques qui vont vérifier que tout
+ce qui est dans ton cloud est vraiment utile, important, utilisable etc. Donc là tu vas voir
+qu'il va lire les fichiers, lire ton package d'adj, puis vérifier les références du cloud.md.
+Et donc ici cette commande elle va review ses neuf critères, la spécificité des informations,
+est-ce que tu lui donnes des exemples de librairies, donc par exemple ici je lui donne des exemples
+qui n'existent pas donc il n'a pas aimé. La redondance, c'est à dire ne pas répéter 25
+fois les mêmes commandes. La relevance de tes informations, tout le contenu doit être
+applicable et actuel. La completeness, c'est à dire est-ce que tu as toutes les informations
+de ton cloud. Enphasis, est-ce que c'est que tu précises les informations les plus importantes
+pour mettre une sorte de hiérarchie, ça change pas mal les résultats parce que sinon il suit un peu
+tout mais un peu tout mal. La structure de ton cloud.md est bien séparée. L'actionability,
+est-ce qu'il y a des exemples de données, est-ce que c'est concret ? Est-ce que c'est efficient,
+c'est à dire qu'il n'y a pas trop de lignes ? Est-ce que c'est accurate ? Donc tu vois qu'ici il
+est vraiment pas content parce que je sais pas pourquoi, je mets des librairies comme ça qui
+servent à rien. Et donc en fait ici, cette commande elle vient vérifier que tous les trucs que tu
+mentionnes dans ce fichier sont bien utilisés donc typiquement ici moi j'ai dialogue manager et bien
+il vérifie que le path de dialogue manager il est correct afin que tu n'aies pas des incohérences
+qui viennent réduire la qualité de ton résultat. Et aussi il va vérifier que ce soit complet donc
+quelles informations sont essentielles à rajouter dans un cloud.md. Ça va être ici les features de
+ton application pour qu'il puisse avoir une overview globale. Ça va être toutes les commandes
+importantes de ton application. Ça va être les testing command ici avec là tu vois critical de
+venir lui dire d'utiliser certaines variantes de commandes et pas d'autres. Database command,
+development tool etc. Ensuite les technologies que tu utilises, la structure des différents fichiers
+que tu as dans ton projet, les features importants, les conventions, les imports typescript pour pas
+qu'il hallucine des imports qui n'ont aucun sens. File naming que tu as envie qu'il utilise. Ensuite
+il va y avoir les librairies de composants que tu as envie. Ça ça ça ça a tout changé dans les
+résultats depuis que je lui ai dit d'utiliser finalement les composants utilitaires de chat cn,
+il fait des bien meilleurs résultats. Les composants qu'il doit utiliser ou pas par exemple ici avec
+la nouvelle mise à jour chat cn il avait du mal à utiliser input group et ben je les rajoutais là
+etc etc. Donc très important traiter avec énormément d'importance votre cloud.md et si vous
+avez envie d'avoir ma commande pour review votre cloud.md et d'avoir votre score juste ici donc là
+tu vois que j'ai un score de 9,1 sur 10. Je pense que si je dégage yuzu, kts et loadh je monte à
+9,5 9,6. Traitez votre cloud.md avec beaucoup d'amour beaucoup de respect et de manière très
+précise et ça c'est mon quatrième ma quatrième leçon. La cinquième leçon utilise Claude encore
+plus que ce que tu fais maintenant. Ça paraît ça paraît un peu tiré par les cheveux c'est je sais
+pas combien d'heures tu utilises Claude par jour mais si t'envoies actuellement 20 messages par jour
+envoies en 40. Si actuellement tu fais des trucs à la main arrête et utilise Claude processes
+processes processes processes Claude est capable de faire énormément énormément énormément
+énormément de choses donc pensée finale sur l'utilisation de Claude il est capable de beaucoup
+beaucoup plus que ce qu'on pense. Je suis sérieux. La technique par exemple que j'aime bien c'est
+feedback loop qui permet de résoudre la majorité des problèmes par exemple Claude hallucine sur
+un sujet n'arrive pas à avoir un code qui fonctionne et toi tu te fais chier à lui dire ouais corrige
+non ça marche pas non ça marche pas. Trouve un moyen de lui donner une réponse si ça marche ou
+pas par exemple moi ce que j'aime bien faire pour l'intégration c'est lui créer une feedback loop
+donc ici je lui envoyer un prompt tu fais ça incorrectement. Crée une API route dans
+mon application afin de tester et débugger la fonction qui pose problème. Le résultat que
+j'attends c'est xxxx, update le code et fait un curl request jusqu'à que tu aies le résultat
+attendu et comme ça il va faire lui-même sa propre autoévaluation pour tourner à l'infini et
+il peut tourner pendant 30 minutes no joke. Donc à quoi ça ressemble ça ressemble à ça il va
+update le code il va curl si ça fonctionne il termine si ça fonctionne pas il corrige, il curl,
+il corrige, il curl. Hack lui laisser lancer la commande du serveur donc par exemple npm rundev
+directement en background comme ça il peut même aller lire les logs et va lui-même aller lire
+les logs il va rajouter des logs puis aller lire les logs pour comprendre un peu ce qui s'est passé
+donc typiquement c'est comme ça que je corrige beaucoup de problèmes et moi j'ai fait du
+copyrighting, des marketing, j'ai fait des prompts pour tout tout tout tout tout et c'est exactement
+ce que je propose de toute façon dans mlv.sh.cccli un package de prompt avec des setups, des agents,
+des commandes, des statues lines, save script etc que tu peux installer juste ici donc j'ai
+vraiment tout automatisé pour avoir le meilleur résultat et maintenant Claude fait tout il fait
+tout c'est formidable pour un développeur donc voici mes leçons sur Claude hésite pas à mettre
+un commentaire si t'as aimé la vidéo si toi aussi tu as quelques leçons à partager on se retrouve
+bientôt ciao ciao

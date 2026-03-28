@@ -1,0 +1,97 @@
+Après avoir passé plus de 500 heures sur Cloud Code, j'ai trouvé des manières qui permettent de faire en sorte que Cloud Code travaille pour moi et pas contre moi.
+Que tu sois un développeur en entreprise ou un créateur de SaaS qui souhaite vibe coder une application qui fait 10 000 euros par mois, cette vidéo est faite pour toi.
+Je vais te montrer toutes les choses que j'ai apprises en utilisant cet outil pendant plusieurs mois.
+Si tu as déjà eu des problèmes par le passé, des hallucinations, des erreurs, des choses qui ne fonctionnaient pas, sache que malheureusement c'est ta faute.
+Parce que tu l'utilises tout simplement pas correctement.
+Dans cette vidéo, je vais te donner gratuitement tous les détails que j'implémente et que je mets dans mon workflow afin d'avoir des résultats bluffants.
+Ça je te le partage gratuitement et ça commence tout de suite.
+La première chose qu'il faut vérifier qu'on utilise correctement, c'est les commandes, la mémoire et les Hooks.
+La première chose à comprendre c'est cette mémoire.
+Quand tu utilises Cloud Code, tu as trois types de mémoire.
+Tu as une mémoire générale qui est dans point cloud slash cloud point md.
+Tu as une mémoire par projet avec projet slash cloud et tu as une mémoire spécifique par dossier avec projet slash spécifique folder slash cloud point md.
+Par exemple ici dans ce projet, on peut voir que j'ai un fichier cloud point md qui se situe à la racine de mon projet pour tout mon projet.
+Et un fichier dans un certain dossier uniquement pour les fichiers de ce dossier.
+Comment fonctionne cette mémoire ?
+Dès que tu inscris des fichiers cloud point md, chaque fois que tu envoies un prompt,
+ça va venir rajouter comme ceci avant ton prompt une sorte de system reminder avec le contenu du cloud point md global instruction
+et le contenu de ton projet avec les project instructions qu'on voit juste ici.
+Quand tu ajoutes des superspécifiques règles comme ceci, en fait ils vont se rajouter dès que l'IA essaie de lire un fichier.
+Quand elle va lire un fichier, elle va avoir une sorte de system reminder qui lui dit fais attention parce qu'il faut que tu suives les règles de cloud point md.
+Concrètement cette mémoire, tu vas pouvoir la modifier facilement en utilisant dièse comme ceci pour ajouter de la mémoire dans ton projet.
+Par exemple, utilise always use camel case et là tu vas pouvoir choisir user memory or project memory.
+Et quand tu choisis project memory, ça vient rajouter ta règle à l'intérieur de ton fichier cloud point md et tu peux lancer slash memory
+pour ouvrir comme ceci le fichier de la mémoire et tu vois que ça a rajouté ici always use camel case à la fin du fichier.
+Maintenant la question que tu te poses c'est que mettre dans ce fichier ?
+Généralement ce que je vais mettre c'est les commandes importantes à lancer et par exemple ici des spécificités donc des règles où l'IA fait souvent cette erreur.
+Je vais lui donner critical, ensuite je vais lui donner certaines règles par exemple les composants que j'ai envie qu'il utilise,
+les composants ou la manière de faire les méthodes d'authentification ou en général la création de code comme ceci.
+Tu peux voir que c'est assez grand et j'ajoute même des workflows, des spécifications etc.
+Pour update mon fichier cloud j'ai créé une commande qui est bien plus efficace qui s'appelle cloud memory
+où ici je peux faire cloud memory update, là je viens taguer le fichier cloud point md et je peux lui dire regroupe les éléments qui ont un rapport ensemble afin d'avoir un meilleur fichier.
+Si tu as envie d'accéder à cette méthode cloud memory tu pourras retrouver dans la description de cette vidéo un fichier complet avec toutes mes commandes que j'ai personnellement dans mon setup
+ce qui te permettra de pouvoir installer cloud memory comme ceci et en fait ce prompt vient ajouter beaucoup de spécificités pour faire en sorte que l'IA suive de manière bien plus précise les règles.
+La deuxième chose justement c'est les commandes, en fait à partir du moment où tu refais la même chose plusieurs fois on va utiliser des commandes,
+ce qui se passe c'est que quand tu tapes slash le nom d'une commande, ça va venir injecter comme si c'est toi qui l'avais envoyé la commande entière dans le prompt.
+Tu peux le voir comme une sorte de prompt injection ou tout simplement d'un prompt réutilisable qui s'appelle commande.
+Quand utiliser les commandes pour chaque chose répétitive, tu demandes souvent un lia de commit commande, tu demandes souvent un lia de debug commande, tu viens créer des commandes pour chaque spécificité.
+Voici à peu près toutes mes commandes et tu peux voir que typiquement ça c'est les commandes qui sont disponibles avec iBlueprint cccli tu peux y aller sur cccli comme ceci
+et ici en t'inscrivant ici tu vas justement avoir accès à ces commandes etc, notamment la commande clone memory qui permet d'update la mémoire de Claude.
+Comment est-ce qu'on structure une commande ? Généralement je recommande d'utiliser une sorte de workflow, par exemple un exemple de la commande pour commit,
+je vais lui donner un workflow avec stage analyze commit push, donc une sorte de liste numéroté.
+Ensuite si tu as besoin d'ajouter des règles par exemple ici pour le message je vais préciser message rules,
+on va toujours ajouter des exemples comme ceci afin d'aider lia et d'améliorer le fait qu'elle soit cohérente tout le temps et qu'elle fasse toujours la même chose.
+Et finalement des sortes de super règles, c'est à dire ici généralement qu'est ce qu'elle doit faire quand elle exécute tout ça.
+Si je te montre une commande typique par exemple des bugs, tu vois qu'ici j'ai analyze, ensuite explore, puis ultra think,
+ça ça va permettre de faire en sorte que lia fasse une grosse phase de réflexion et évite l'hallucination,
+recherche pour savoir comment résoudre le problème, implément et vérifier que ça va fonctionner et tu vois que là il y a pas mal de détails.
+Encore une fois pour écrire ces commandes je le fais jamais à la fin et j'utilise prompt commande qui va me permettre d'écrire ces commandes,
+donc ça c'est des prompt que j'ai pris des mois et des mois à faire mais qui me permettent maintenant d'écrire des commandes quasi parfaites à tous les coups.
+Troisième base c'est les hook, les hook on va pouvoir les utiliser avec notamment le before tool et le after tool.
+Le before tool il va permettre de venir couper l'action ou trigger la validation de l'utilisateur, c'est à dire que tu puisses dire si oui ou non tu acceptes de faire ça.
+Et after tool ça va permettre de modifier les fichiers ou ajouter du contexte.
+Typiquement dans le after tool on pourrait rajouter le run de pré-tier sur chaque fichier que modifie l'IA.
+Et dans le before tool on pourrait typiquement rajouter la validation des commandes.
+Comment est-ce que tu peux facilement créer un hook ? Moi je te recommande encore une fois d'utiliser directement cloud code avec un prompt.
+Peux-tu me créer un nouveau hook ? Blablabla.
+Tu peux lancer ce prompt directement dans le dossier cloud et tu lui donnes toujours la documentation très important,
+toujours lui donner la documentation soit en forme de texte soit en forme markdown et lui va automatiquement te créer les commandes.
+Personnellement je fais toujours ça. Un exemple c'est le yolo mode.
+Un truc que je te recommande c'est d'utiliser un alias cc pour cloud code cc qui va venir lancer cloud avec tire et tiret dangerous skip permissions.
+Ça va permettre de lancer cloud en bypass mode et d'éviter de te faire valider chaque chose que cloud fait.
+Quand tu fais ça tu vas voir que l'IA peut faire des grosses erreurs, supprimer des fichiers, supprimer des repos, changer des passwords je sais pas.
+Et donc pour ça j'ai utilisé un before tool hook qui va quand l'IA écrit rm rf va par exemple la stopper et me demander de valider.
+Je peux te montrer juste ici.
+Donc par exemple juste ici quand il essaie de lancer rm rf slash user slash this does not exist.
+Ici ça te dit ça va essayer de supprimer un dossier dans slash user et ici ça nous dit attention j'ai peut-être trouvé une dangerous commande.
+Est ce que tu veux y aller et tu peux par exemple dire non ça je le fais grâce à un hook.
+Prochain sujet c'est les mcp.
+Les mcp ça va permettre à cloud code c'est à dire ce qu'on appelle un mcp host de communiquer avec internet que ce soit avec des database que ce soit avec du code ou des API.
+Pour ajouter des mcp c'est très simple et je t'invite à en ajouter mais à faire très attention.
+Chaque mcp va utiliser du contexte.
+Cloud code à 200 000 tokens de contexte et ici en utilisant par exemple 5 mcp j'utilise près de 17% de mon contexte global que je ne peux plus utiliser pour coder.
+Donc quand on regarde ici stripe utilise par exemple près de 10% de contexte.
+On peut le voir en faisant ici at on peut le voir en faisant slash mcp juste ici surtout en lançant slash contexte que les mcp.
+Donc ici il n'y a même pas tout parce que ça n'a pas encore chargé mais les mcp utilisent des tokens qui viennent t'enlever énormément de contexte et c'est un très gros problème.
+Pour les activer et les désactiver tu vas pouvoir utiliser at et ici tu vois que je peux faire par exemple at stripe et ça désactive le mcp stripe et donc maintenant il n'utilise plus de tokens.
+Quel mcp est intéressant les deux mcp que je recommande à n'importe qui d'installer c'est context 7 ça va permettre de facilement récupérer des informations de la documentation.
+Par exemple tu cherches des informations sur Next.js avec par exemple le use cache de Next.js et tu vas te retrouver avec une sorte de mini documentation avec toutes les informations importantes pour le use cache.
+Ça l'IA est capable de vraiment facilement l'utiliser par exemple donne moi des informations sur use cache avec context 7 et là il est capable de récupérer comme ceci le cache de Next.js donc très très intéressant.
+Le deuxième mcp que j'aime beaucoup c'est Hexa. Hexa.ai ça va permettre d'avoir de la recherche fait pour l'IA donc par exemple ici quand on fait use cache Next.js en fait lui va te retourner plein d'articles et de bouts d'articles directement comme ceci.
+Et donc de la même manière quand tu ajoutes ce Hexa mcp il va pouvoir utiliser get code context pour te donner comme on peut le voir ici plein de bouts de code qui viennent d'internet et qui vont ajouter du context c'est très très pratique.
+Dans les autres mcp utiles il va y avoir les mcp que tu utilises en fonction des outils que tu utilises donc par exemple le chat cn mcp si tu utilises chat cn, super base mcp si tu utilises super base ou même stripe mcp.
+Pour tous ces mcp librairies spécifiques je te conseille de toujours faire attention de les activer et les désactiver en fonction de ton besoin en utilisant le hat avec enter pour toggle donc typiquement moi par exemple je désactive par défaut tous les mcp et je les active que explicitement quand j'en ai besoin.
+Prochain c'est les subagents en fait quand tu n'utilises pas les subagents chaque recherche va utiliser énormément de tokens et tous ces tokens vont prendre de la place dans ton contexte ce qui va faire que tu vas avoir beaucoup moins de place qu'on peut voir juste ici pour venir faire ta feature parce que tous les tokens ont déjà été consommés par la recherche c'est très problématique et pour résoudre ce problème on peut utiliser les subagents qui vont pouvoir utiliser énormément de tokens mais dans leur propre agent et qui vont
+rajouter à ton contexte uniquement les tokens nécessaires. Encore mieux ces subagents vont pouvoir utiliser des modèles qui coûtent moins cher par exemple IQ et donc tu vas énormément réduire tes coûts et pouvoir utiliser Cloud Code pendant plus longtemps durant tes sessions.
+Comment est-ce qu'il faut utiliser des subagents ? Pour moi le problème des subagents c'est que tu n'as pas la visibilité sur ce qu'ils font c'est impossible de les rediriger quand ils travaillent s'ils commencent à faire des erreurs et c'est ce qu'on appelle du one shot c'est à dire que tu n'as aucun contrôle donc moi j'utilise les subagents généralement pour la recherche ou pour des mini modifications de code et sinon je garde le main agent pour les features complètes qu'est ce que c'est par exemple de la mini modification de code donc par exemple ici quand j'utilise fixe, grammaire et
+que je viens mettre un path par exemple ici begin javascript tu vas voir que les subagents vont pouvoir faire des modifications mais très précises tu peux voir qu'ici il vient lancer l'agent fixe, grammaire pour chacun des fichiers comme ça au lieu que l'IA s'occupe de résoudre la grammaire dans tous les fichiers et bien il va y avoir un agent par fichier à quoi ça sert d'avoir un agent par fichier c'est qu'ils vont pouvoir en parallèle faire des modifications mais donc les
+modifications je recommande de les faire uniquement et uniquement que quand il est capable de faire des modifications sur des fichiers précis donc tu vois qu'ici que la majorité des agents n'ont pas trouvé de faute d'orthographe mais il y en a un qui a trouvé une faute d'orthographe il l'a corrigé et on peut le voir juste ici en lançant la commande qui l'a remplacé par rejoint avec un s et ici accès à la communauté privée comme ceci donc c'est très très pratique et tu vois que ça s'est exécuté super méga rapidement donc voilà pour ces subagents qui sont
+très pratiques mais faites attention parce que eux aussi prennent de la place les custom agents vont prendre de la place pour éviter qu'ils prennent trop de place la technique c'est de mettre des descriptions très courtes parce que
+le court est la description parce que parce qu'en fait c'est la description qui prend de la place dans le contexte de l'IA donc on va mettre des descriptions très courtes courtes et par exemple pour fixe grammaire en fait pour
+lancer cet agent et ben j'ai créé une commande fixe grammaire qui s'occupe de lui demander de lancer fixe grammaire agent comme ceci donc en fait ça permet de venir éviter d'utiliser du contexte pour rien comme ceci en ayant des énormes descriptions
+en utilisant des agents par exemple ici si je te fais un exemple d'exploration quand je lui dis utilise aucun agent pour m'expliquer comment est géré le OTP ça vient utiliser 41% du contexte alors que quand j'utilise un agent ça utilise que 38% donc il y a littéralement 5000 tokens qu'on a économisé pour à peu près le même résultat voire un meilleur résultat et c'est pour ça que je recommande d'utiliser les agents
+dernier point c'est customiser la statue line comme un développeur avancé pour ça personnellement dans ma statue line j'ai affiché la branche dans laquelle je suis avec le nombre de fichiers ajouté supprimé et stage ensuite j'ai affiché le PAF dans lequel je suis à peu près ce qui me permet de voir où est ce que l'IA est en train de travailler ensuite j'ai les informations concernant la session c'est à dire combien ma session m'a coûté jusqu'à maintenant combien de tokens j'ai utilisé et combien de pourcentage de contexte il me reste
+et finalement la meilleure vue c'est le usage limit donc par exemple ici je peux voir que j'ai utilisé 12% de ma session qui me reste 3h21 avec une petite barre juste ici
+là tu peux voir par exemple avec mon fixe grammaire on a ici un pourcentage 33% il me reste 2h24 et ça me permet de facilement voir combien j'ai dans mon usage actuel parce que pour rappel Claude limite votre usage comme ceci avec les sessions
+Quand est ce que j'ai fait ça encore une fois le setup complet de ma statue line est disponible uniquement sur mlv.sh slash cc-cli et tu vas retrouver un guide complet avec ma statue line ma configuration toutes mes commandes tous mes agents configurés les permissions tout ceci que tu peux accéder gratuitement en allant sur le lien qui est juste en dessous de cette vidéo
+Merci beaucoup d'avoir regardé cette vidéo dans son intégralité n'hésite pas à mettre un commentaire c'est le meilleur moyen de me soutenir peu importe ce que c'est ton commentaire si t'as vu la vidéo jusqu'à maintenant je t'invite à faire un commentaire immédiatement aller sur le lien t'inscrire et on se retrouve très bientôt pour une prochaine vidéo

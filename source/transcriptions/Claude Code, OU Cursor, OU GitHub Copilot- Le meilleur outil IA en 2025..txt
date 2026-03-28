@@ -1,0 +1,624 @@
+Ici, j'ai une issue pour mon projet Save It Not Now et je vais challenger Visual Studio Code avec la dernière version de Copilot
+versus Cursor versus Cloud Code pour résoudre la même feature avec le même prompt.
+Pour avoir un résultat équivalent, j'ai enlevé l'intégralité des fichiers de configuration.
+Il n'y a plus de fichiers Cloud, il n'y a plus de fichiers Cursor.
+On va tous les comparer avec leur interface, leur prompt pour savoir quel est le meilleur outil pour faire exactement la même feature.
+Donc pour ça, on va venir ouvrir un chat dans chacune de ces applications comme ceci et je vais l'ouvrir en fullscreen.
+Donc on a ici le chat Agent Mode. J'ai bien choisi le mode Agent et malheureusement, pour Copilot, on n'aura que le model Cloud 3.7 Sonnais.
+Parce que même quand je mets ma propre API key, il ne me laisse pas choisir Cloud 4.
+Et on va faire la même chose ici dans le chat de Cursor et on va évidemment ouvrir Cloud Code comme ceci.
+Pour résoudre le challenge, on va utiliser le même prompt donc je vais le mettre ici Resolve This Issue.
+Use GitHub CLI to get the data about the issue et je vais ajouter un prompt.
+Premièrement, explore la code base. Deuxièmement, plan le changement et ensuite code le Actual Fix.
+Ça va permettre d'éviter que les IA hallucinent et donc je vais venir déplacer ma caméra ici.
+Et on va venir prendre le même prompt qu'on va mettre dans Cloud Code, dans VS Code et dans Cursor donc tout en même temps.
+Et du coup, je vais appuyer Enter, Enter, Enter et on va voir du coup le travail.
+Donc on a GitHub Copilot qui répond super vite, qui me dit est-ce que j'ai envie de lancer cette commande ?
+Je lui dis oui. On voit qu'il lance la commande comme ceci.
+Et on voit que GitHub Copilot déjà il a un bug car contrairement à ici Cloud Code etc.
+Il n'arrive pas à voir le résultat de l'issue parce qu'il utilise cet interactif terminal qui n'est pas pratique.
+Et donc je vais lui envoyer l'issue afin qu'il soit tout s'égale. Je vais venir lui envoyer l'issue comme ceci pour qu'il sache quoi faire.
+On peut voir que Cursor aussi avait ce problème. Il n'arrivait pas à ouvrir avec le GitHub CLI mais il a un outil pour utiliser l'issue.
+Et donc il a fait et donc là il a Search, Search, Search. Il a préparé une to-do comme on peut le voir juste ici.
+Donc Cursor ici et ensuite il a fait le plan avec ici Create App Layout Skeleton et il est en train de nous faire les updates.
+Cloud Code quant à lui n'a pas commencé à coder. Il est toujours en phase d'exploration et donc de lecture d'un maximum de fichiers.
+Ce qui est un des avantages de Cloud Code c'est qu'ici il a ouvert un Subagent qui est en train de chercher les données.
+Donc très intéressant qui est pour l'instant le plus rapide c'est Cursor. Pourquoi est-ce que Cursor est plus rapide ?
+Tout simplement parce que Cloud Code a décidé de prendre plus de temps pour ça.
+En attendant ici notre ami il est à la ramasse. J'arrive pas à le relancer donc là je l'ai relancé.
+On peut voir qu'on a les fameux checkpoints et là je lui ai dit bah voilà maintenant il est censé planifier.
+Et donc là on peut voir que Copilot il est capable de lire les fichiers ensuite de faire les searches.
+Donc ils ont tous accès aux mêmes outils mais ils le font différemment.
+En attendant Cursor il a quand même des avantages c'est qu'il a directement rajouté un test automatiquement.
+Donc ça c'est cool. On peut voir qu'ici il a rajouté les tests.
+Alors il va pas être capable de les exécuter mais on peut voir que Cursor fait quand même un sacré bon travail.
+On va voir le code final avec trois applications qui font exactement le même prompt et qui n'ont aucun biais initial vu que j'ai enlevé l'intégralité des biais initiales.
+Donc ici on a vraiment les trois modèles qui sont en train de travailler avec un petit désavantage pour Copilot
+parce que j'ai pas envie de payer 10 dollars juste pour tester un test parce que de toute façon j'utilise pas cet outil.
+Mais c'est pas grave on lui donnera un petit bonus de points par défaut.
+En attendant ici Cursor il a décidé de build l'application ce qui est pas bête.
+Donc ici on peut voir il build l'application c'est assez pratique parce que ça va lui permettre de savoir
+si son changement il est pas totalement nul et ici on peut voir que notre ami Claude Code il a déjà passé à l'étape du code.
+Il n'y a vraiment que Copilot qui est à la ramasse notamment par rapport à comment il fonctionne et son utilisation des tools.
+Donc ici il fait le plan pour fixer l'issue et maintenant il implémente la solution.
+Et donc là ok l'interface est vraiment horrible je suis désolé si je l'ai mis en fullscreen
+et malgré que je le mets en fullscreen il veut quand même m'afficher des trucs.
+Oula attention on va lui dire tout de suite ok do not run the test it's ok.
+On va pas leur faire lancer les tests même si ce serait une bonne idée mais sinon on va lancer trois tests en même temps ça va être l'enfer.
+Mais c'est une bonne idée que Cursor lance les tests donc ici on est sur du bon code.
+Donc ici il dit voilà c'est bon en attendant ici notre ami Copilot est vraiment vraiment très lent.
+On a ici les petits changements qui s'affichent dans le terminal.
+Moi je veux pas savoir quel changement il fait je suis en mode Vibe Coding et donc on a ça.
+On a Cursor qui a été le premier à terminer et on a Claude Code qui est toujours please do not run the test for now.
+Donc je rajoute une petite information à Claude Code de ne pas lancer les tests.
+Et vu ici du coup ça vient que le message permettra d'éviter.
+Donc on a notre Cursor qui a terminé.
+On pourra analyser le code qu'il a pu faire et on a ici le test qui a été écrit par notre ami.
+Et du coup là il a eu notre instruction donc il va pas exécuter les tests normalement.
+Et donc là on a terminé pour Claude Code qui est le deuxième.
+Donc le premier a été Cursor le deuxième Claude Code.
+Pourquoi Claude Code a été plus lent ? Parce qu'il a fait des recherches plus approfondies.
+Quand il lance des tasks, les tasks vont généralement prendre plus de temps parce qu'il vient lire un nombre de fichiers impressionnant.
+Et donc ici on a notre ami qui est un peu... c'est Papy.
+Co-Pilot c'est un peu Papy.
+Et donc ici ça bosse dur. On peut voir qu'il met vraiment en avant le fait d'utiliser les modèles Claude 4.1 etc.
+Moi j'ai dû utiliser ma propre API Key.
+Mais sinon on avait GPT 4.1 gratuit on aurait pu aussi le tester.
+Donc il est toujours en train de modifier donc c'est à dire qu'il a pas terminé son issue parce qu'il est là il remodifie du code etc.
+Et puis tout simplement vu que j'utilise ma propre API Key j'ai carrément eu ma rate limit.
+Donc ça évidemment c'est parce que je ne paye pas assez Co-Pilot.
+Si tu payes Co-Pilot normalement il n'y a pas de problème. Je peux peut-être faire try again.
+Voilà donc on a terminé la minute.
+Mais en l'occurrence Co-Pilot n'est pas très optimisé dans le sens...
+Il m'en bouffe des tokens parce qu'il a modifié trois fois le même fichier.
+Oh mais en fait il a quand même terminé la feature donc je ne sais pas si ça sert à quelque chose de continuer.
+On va maintenant pouvoir comparer les codes.
+Donc comme tu peux le voir j'avais supprimé toutes les règles de tous les projets pour éviter qu'il ait du contexte supplémentaire.
+Donc ici on a la première version, la première update de GitHub Co-Pilot.
+Donc il nous a modifié la page pour enlever le loading.
+Donc c'était le but.
+Ici ce qui est marrant c'est qu'il m'a rajouté un search input ref.
+Ce qui était déjà le cas avant.
+Mais il l'a déplacé.
+Ensuite ici il a ajouté le isLoading isAuthentificated.
+Il a renommé ça.
+Et là il a enlevé le session.expending qui était exactement la chose qu'il fallait faire.
+Et c'était important qu'il soit capable de faire ça.
+Et il a utilisé un use effect pour faire ce qu'on avait fait avant.
+Donc ça c'est plutôt bien.
+Ça c'est plutôt top.
+Ici il n'a juste pas besoin d'un use effect mais c'est pas très grave.
+Et donc ensuite il a fait le isPending et il a modifié.
+Le code est plutôt pas mal.
+Le test par contre c'est n'importe quoi.
+Il a utilisé les tests unitaires pour faire son test.
+Et donc évidemment nous on ne veut pas faire de tests unitaires ici.
+On veut plutôt faire un test d'intégration.
+Surtout avec mon système de test d'intégration qui serait bien plus valuable.
+Et qui permettrait de mieux tester.
+Donc le test c'est un mauvais point pour l'ami copilot qu'on a juste ici.
+Deuxième ami c'est l'ami cursor.
+Donc cursor juste ici on va voir les edits.
+Donc encore une fois j'ai supprimé toutes les cursor roles pour éviter.
+Et donc lui il nous a crée app layout skeleton.
+Donc ce app layout skeleton en clair ce que j'ai l'impression que c'est.
+C'est que c'est une copie du code qu'il y a avant.
+C'est une copie de la page.
+Sauf que cette page là elle peut être chargée par défaut.
+Donc c'est une technique un peu différente d'avoir fait, de fonctionnement.
+Et donc ici il nous a fait le session loading.
+Du coup il nous dit si la session est e-spending il nous affiche le skeleton.
+Alors ici je suis désolé cursor c'est vrai que là du coup sans prompt sans customisation.
+Parce qu'on a vraiment tout enlevé.
+Il a fait un mauvais travail.
+Parce que c'est pas la meilleure solution.
+La solution que l'ami copilot a fait j'ai l'impression qu'elle est mieux.
+Donc intéressant aussi avec le modèle clodson e4 en l'occurrence.
+Et ensuite après il affiche.
+Donc si la session est pending il affiche le skeleton.
+Et en plus il vérifie si c'est authentificated.
+Donc ici c'est pas très optimisé.
+Le travail de recherche n'a pas été fait au top.
+Par contre les tests.
+Donc même si ça fonctionne ça résout le problème.
+Je lui ai pas expliqué comment il devait résoudre le problème.
+Il a juste overthinké le problème.
+Et il l'a résolu avec plus de codes.
+Plus de logique.
+Qui va créer infinite plus de dettes techniques.
+Et plus de problèmes dans le futur.
+Parce que maintenant je vais devoir gérer un nouveau composant.
+Comme on peut le voir juste ici.
+Je vais mettre ma caméra là.
+Maintenant je vais devoir en plus gérer un nouveau composant.
+Chaque fois que je modifie celui-ci.
+Je vais devoir modifier celui-ci.
+Puis il y aura des incohérences du design etc.
+C'est pour ça que je suis pas fan de la solution.
+Par contre le test.
+Alors je sais pas si ça marche etc.
+Mais en général c'est plutôt pas mal.
+Et donc le test a été bien fait.
+Donc ça c'est pour Cursor.
+Maintenant on va lancer Cloud Code.
+Donc Cloud Code je l'ouvre dans Cursor.
+Mais on comprend que c'est Cloud Code juste ici.
+Et donc Cloud Code si on va voir dans les edits.
+La même chose. Tu peux voir que j'avais supprimé toutes les règles.
+J'avais supprimé le fichier Cloud.
+Pour qu'il ait vraiment aucune information.
+Et qu'il commence tout nu.
+Sans information.
+Et donc lui il nous a fait vraiment la même chose que Copilot.
+Use Effect.
+Il nous a rajouté Is Authenticated.
+Et Should Choke Intent ici.
+Avec la condition
+qui est juste ici.
+Donc on a précisément le même code.
+Donc le code généré pour résoudre ma feature.
+Ici il est vraiment au top.
+De la même manière que
+GitHub Copilot.
+Et ici le test.
+Ça par contre c'était de grossières erreurs.
+Grossières erreurs. La même chose.
+Pourquoi il nous a fait un test unitaire ?
+C'était de challenger son choix.
+Cloud Code. Pourquoi tu as fait un test unitaire ?
+Et pas un test d'intégration ?
+Donc là je lui pose une question simple.
+Et du coup il m'explique pourquoi il a fait ça.
+Qu'il a tout moqué.
+Bon il a tout moqué. Alors je ne suis pas sûr que ça fonctionne.
+Et je ne suis pas sûr qu'on va pouvoir appeler
+Bookmark Page.
+Et tous les imports sont faux.
+Donc ici ce test là.
+C'est pas top. Et je pense que ça marche.
+Evidemment pas. Ptest.
+Donc ici c'était stupide. Voilà.
+Il avait un choix. Je ne sais pas à quel moment il s'est dit qu'il allait faire ce test.
+On peut voir qu'ici
+No let me add
+integration test for the bookmark page.
+Et au lieu d'ajouter un integration test
+il a rajouté un unit test.
+Donc peut-être qu'il n'a pas compris que c'était
+un unit test. Voilà.
+Ici il se rend compte de son erreur. Donc voilà
+un petit peu pour ces trois
+tests qu'on a juste ici.
+Et donc étrangement on a chaque fois
+un problème. Et on a presque
+du coup une équivalence et un équilibre des problèmes
+qui se créent. Si on vient juste ici
+pour comparer les trois
+on va maintenant pouvoir voir le résultat.
+Et j'ai l'impression que sur cinq
+eh bah Cursor il était en trois
+parce qu'il m'a fait, il m'a généré un
+mauvais code mais il m'a généré des bons tests
+Claude Code il m'a généré un bon code mais
+il a généré des mauvais tests et GitHub Copilot
+aussi. Aussi faut bien comprendre
+que tout ça c'est assez normal
+parce que
+finalement, finalement on est toujours
+sur les mêmes modèles. Claude
+Sonnet 4 vs Claude
+Sonnet 3.7 ça change pas
+grand chose pour ces features là. Claude
+Sonnet 4 a pas une, si on
+regarde les AI Benchmark
+donc dans le coding index entre Claude
+4 et Claude 3.7
+on a une légère augmentation
+si on le compare à d'autres modèles
+on peut voir qu'il reste moins bien apparemment que
+GPT 4.1
+et voilà. Donc on est pas sur
+une différence de dingue entre Claude 4 et Claude
+3.7 Sonnet. Donc ça, ça a pas
+influencé beaucoup. On a toujours les
+mêmes modèles et en sachant que
+j'ai enlevé tout le contexte
+ok ? J'ai enlevé tout le contexte
+donc la seule différence qu'on avait entre les
+trois c'est finalement leur capacité
+à utiliser des outils et leur
+rapidité ok ? Et leur
+manière de gérer les commandes etc
+On peut voir que Cursor il avait
+quand même quelque chose qui l'a fait
+super bien. C'est que
+évidemment c'est pas
+ce Cursor là mais c'est ce Cursor là
+que je veux. Donc on a le chat qui était là
+c'est que avec le
+GitHub CLI il était pas capable de le récupérer
+ce que Claude Code fait mieux
+il gère mieux les CLI et donc ça c'est vraiment
+appréciable. Mais en fait il était
+capable avec un outil interne
+donc là c'est un tool que propose directement
+Cursor de venir
+lire l'issue. Ok ?
+Donc ça c'est une bonne intégration
+contrairement à
+Copilot qui pour le coup fait le
+pire du travail. Donc lui c'est vraiment
+le pire, le pire qu'on peut
+voir. Ou il a vraiment galéré
+à lire l'issue parce qu'il mouvre chaque fois
+un terminal et cette commande là elle est
+interactive donc faut quitter bref.
+Donc assez problématique
+ok ? Mais c'est assez normal que tous
+atteint d'à peu près le même niveau
+de code sachant que Cursor
+dans mon exemple aurait été meilleur.
+Tout simplement parce que ils
+utilisent les mêmes modèles. Surtout sur des petites
+tasks comme je fais ici.
+Peut-être que Claude Sonnais devient plus d'intéressions sur
+des grosses tasks. Ok ?
+Sur des petites tasks. Ok.
+C'est pas dingue, dingue.
+Et ce qu'il faudrait voir aussi c'est
+la capacité de réfléchir
+et de trouver le bon contexte.
+Donc ça c'est toujours le même problème etc.
+Claude Code est assez bon là-dessus.
+Maintenant facilité d'utilisation.
+Evidemment ça on l'a déjà vu.
+Claude Code est moins facile
+d'utilisation tout simplement
+parce que c'est côté terminal, il n'y a pas
+de magnifique interface.
+Le dièse etc. c'est pas aussi
+fluide. Alors que Cursor et
+GitHub Copilot, bah ils sont
+même à 5. On va dire
+5 pour Cursor et 4 pour GitHub
+Copilot. Je trouve l'interface de
+GitHub Copilot moins jolie.
+Même si maintenant tu vois que
+ici on peut taguer.
+Mais en fait le tag ça
+fonctionne. Donc là quand je fais
+add, je viens ajouter des fichiers
+comme ceci. Ou on peut aussi appeler des sortes
+d'actions. Find test
+file. Donc ça vient chercher les
+test files. Donc ça c'est intéressant.
+Ils ont rajouté des trucs sympas. Create
+branch. Ah en fait non, j'appelle
+les mcp.
+Context 7. Ok. Sympa.
+On peut taguer plein de choses. Bref. Tu trouves
+que l'interface est quand même moins fluide.
+Si on compare net to net
+à Cursor. Voilà.
+Les fichiers changés. On peut voir que Cursor
+a quand même un sacré travail. Bon alors
+en fait Copilot a littéralement tout
+copié de Cursor. Donc c'est pas non plus
+c'est pas non plus formidable.
+Qu'on a à peu près la même chose. On n'est pas
+sûr du quelque chose de formidable.
+Mais en général je le trouve
+quand même plus joli, plus simple d'utilisation
+dans la globalité Cursor
+que Copilot.
+Qui est un peu moins friendly, mais plus développeur.
+Donc pourquoi pas. Ok.
+Le prix. Le prix.
+Ça c'est intéressant. GitHub Copilot
+pricing. Donc
+vu que GitHub Copilot est détenu
+par Microsoft, que Microsoft détient
+OpenAI etc. Bah t'as infinité de
+GPT 4.1. Qui est le meilleur
+modèle pour coder.
+Infinité de code completion. Infinité
+de... Non tu as accès au code
+review et t'as 6 fois plus
+de premium requests. Donc là t'en as
+50. 50 x 6 ça fait
+300. C'est à dire que si
+on regarde notre petit schéma
+pour 10 dollars
+par mois t'as
+300 requests. Ok.
+300 requests ça veut tout et rien dire
+parce qu'il y a des requests qui ne se valent pas.
+Quand tu fais une request
+avec un contexte. Par exemple si là je fais
+une request dans cette conversation qui est déjà longue
+elle va coûter bien plus cher
+à la request que la même
+request. Si ici j'ouvre un nouveau terminal
+comme ceci, que je lance Claude Code
+ici cette request elle va pas coûter très
+cher. On peut faire le test.
+Normalement si j'arrive
+on va faire ça, ça.
+Et là on va voir le prix. Aujourd'hui j'ai dépensé
+5 dollars 44
+et là je vais lui dire 4
+plus 4. Donc ici un prompt simple
+et efficace je lui demande juste un
+calcul. Donc on peut voir qu'on est passé de
+5.44. On est passé de
+5.44, 5.
+52, moins 5.44
+la petite request ici
+nous a coûté 8 centimes. Ok.
+Maintenant je vais faire la même chose.
+Donc ici on est à 5.52 dans cette
+conversation. 4 plus 4. Du coup on
+était à 5.52
+moins 5.66.
+Donc ici j'ai fait l'inverse, c'est pas très grave.
+Voici. Cette fois la request
+nous a coûté 14 centimes. Ah !
+Pourquoi on a presque un
+facteur de 2 ? 8 plus 8 ça fait
+16. Donc ici on est à 14 centimes.
+Pourquoi on est dans un facteur de 2 ? Parce qu'on a
+plus de contexte. Plus de contexte ça coûte
+plus cher. Et ça c'est
+même pas avec une très grosse conversation.
+On va faire le test ici
+avec Claude Code juste là.
+Et je vais venir résume
+une grosse conversation qu'on avait
+juste ici avant lui et moi. Donc là tu peux
+voir que la conversation est très très longue.
+On est à... On est presque à la
+fin du contexte. Donc ici tu vois pas encore une
+fois à cause de ma caméra. Donc ici
+on est à contexte left until auto
+impact 9%. Ça veut dire qu'on est
+très très limite dans le contexte.
+Et donc si là
+on rappte ici cette fenêtre juste pour la mettre
+avec nos autres histoires. Donc là
+actuellement on est à 7.67.
+Alors je sais pas pourquoi le nombre de dollars
+a augmenté mais c'est pas grave. On est
+à 7.67. Pourquoi le nombre
+de dollars a augmenté parce que j'ai ouvert la conversation ?
+Bon c'est pas grave.
+Maintenant ici je vais envoyer un message 4 plus 4
+dans cette conversation qui est déjà floude
+avec énormément de contexte.
+Et donc on était à 7.67.
+J'envoie le message. On attend
+qui répond. Donc il va juste faire
+une réponse simple. Il y a pas de...
+Il me donne juste la
+réponse 8. Et maintenant on est à
+8.14.
+8.14. On est à 47
+centimes. On a presque
+par rapport à la request simple
+triplé. Et donc c'est pour ça
+que Cursor a changé leur pricing.
+Ok ? Donc ici
+on est à 10 requests pour 300 requests.
+Une request elle peut coûter...
+Donc c'est là que c'est intéressant. Une request
+elle peut coûter 50 centimes
+ou 0.08.
+Mais t'as accès à l'infini.
+Donc ça c'est pour GitHub Copilot. Pardon.
+Ensuite pour Cursor
+pricing. Ici maintenant on a des
+Cursor pricing qui ont changé.
+Pour 20 dollars par mois, tu as accès
+à
+20 dollars d'agents model
+inference. Donc c'est à dire
+que si on peut dire
+la valeur
+que propose
+Copilot ici, avec ce prix
+300 requests actuellement,
+ça peut être 0x5x300
+si t'es un bourrin qui utilise tout
+le contexte possible. Et donc ça
+peut être 150 dollars. Ou ça peut être
+0.08x300
+et ça peut être
+ici 24 dollars. Donc en
+de guillemets, en fait, Copilot te donne entre
+24 et 150 dollars. Alors c'est
+des estimations à la con et il ne faut pas prendre toutes les résultats
+à la lettre. Mais Cursor
+il te fait payer 20 dollars par
+mois pour 20 dollars d'inférence.
+Donc on a une valeur bien
+moins haute que ça,
+surtout pour le prix. Dernièrement
+on a Cloud Code. Donc Cloud
+Code il a un plan à 20 dollars par mois
+qui est assez limité et qui atteint
+vite sa limite dans les sessions.
+Parce que Cloud Code a un pricing qui change
+complètement. C'est qu'il fonctionne
+par session. Le terminal que je te montre
+ici c'est une session qui dure 5 heures.
+Cette session quand elle est terminée
+ça me reboot mes tokens et je peux les réutiliser.
+Là tu vois que dans cette
+session de 5 heures, je suis déjà à 8 dollars
+14. Mais potentiellement
+je vais augmenter, augmenter. Si on regarde
+mes anciens pricing avec CC Usage
+on peut voir que
+j'ai eu une session par exemple avant-hier
+à 66 dollars ou à 23
+dollars hier et là je suis à 8 dollars 14.
+Ça va augmenter, ça va changer.
+Et donc moi je paye un abonnement à 100
+dollars par mois. Mais en général quand je
+paye à l'abonnement standard, donc avant j'étais
+à l'abonnement standard, tu peux aller
+jusqu'à à peu près 8 dollars par jour.
+Et donc pour 20 dollars par mois tu as
+à peu près 8 dollars par jour.
+Ça fait 8 fois
+30. Voilà 240 dollars facile.
+Donc clairement
+le pricing de Cloud Code pour l'instant
+est de loin le moins cher.
+C'est-à-dire pour la même valeur tu auras
+énormément de tokens. Incroyable.
+Pricing de Kitop Copilot
+est mieux à 4
+et pricing de Cursor est moins bien
+à 3. Comme ceci.
+Donc ça, intéressant d'expliquer
+tout ça. Maintenant on a d'autres
+informations sympa.
+Est-ce que ça vaut le coup d'apprendre ?
+C'est intéressant. Quel est l'outil
+qui vaut le plus le coup d'apprendre ?
+Eh bien ici, moi j'aime
+bien dire que Cloud Code a une
+meilleure valeur sur ça. Pourquoi ?
+Parce que c'est terminal. Terminal-based.
+En fait cette logique de terminal
+elle risque de rester longtemps. Parce que
+ce terminal, si on déplace ça ici,
+ce terminal il peut être
+utilisé dans un VPS,
+il peut être utilisé sur Windows,
+sur IntelliJ,
+etc. Donc apprendre
+à utiliser un outil à terminal comme ceci,
+ça vaut vraiment le coup.
+Je pense, parce que c'est une
+utilisation de l'IA, je pense qu'il y a plus
+à beaucoup de développeurs, qui rend
+l'IA beaucoup plus simple. Et si tu veux être
+développeur carriériste et pas vibe
+codeur, il peut être très intéressant
+d'apprendre à utiliser Cloud Code.
+GitHub Copilot est pour moi deuxième
+ici. Pourquoi ?
+Parce que GitHub Copilot a beaucoup plus
+de chances d'être là très très très longtemps.
+Donc là je dois l'assumer.
+Même si j'ai été un défenseur de Cursor.
+Objectivement, ça vaut plus le coup
+d'apprendre GitHub Copilot. Parce que GitHub
+Copilot va rester très très
+longtemps. C'est les mainteneurs de
+VS Code, c'est Microsoft derrière.
+Quand tu sais que c'est Microsoft derrière et pas une
+start-up. Oh, ok,
+ça vaut le coup d'apprendre. Cursor
+peut se faire détrôner. On ne sait pas, on ne connaît pas
+le futur. On ne sait pas, on ne sait pas,
+on n'a pas l'info. Donc Cursor, plus
+à 3, donc que ce soit Cursor
+ou InSurf, tous les outils
+de faux,
+c'est toujours la même chose.
+Ensuite, dernier point, c'est le Freedom.
+Freedom, qu'est-ce que j'entends par là ?
+On a un problème avec...
+En fait, on n'a plus de problème
+avec... Ok, en fait, c'est
+un benchmark à chier ce Freedom.
+C'est qu'à l'époque,
+Copilot, il ne te répondait pas à des questions comme
+ça. Alors que maintenant, il te
+répond à des questions comme ça. Ensuite,
+ça pourrait être plutôt cette question de Freedom,
+un peu la customisation. Donc avec, par
+exemple, les MCP
+qu'on a juste ici, qu'on peut venir
+regarder à tous les
+serveurs disponibles, qu'on peut
+ajouter des prompt files, qu'on peut ajouter
+des configurations, des
+tool sets. Donc je ne sais pas qu'est-ce que c'est les
+tool sets, mais en tout cas, on peut en ajouter. On peut
+ajouter des modes, comme ceci
+en créant des custom modes.
+Par exemple, ici, GitHub
+chat mode et par exemple, plan mode.
+Et ça va te permettre de faire une sorte
+de custom prompt comme on a juste ici.
+On va avoir les MCP
+serveurs, generate instruction, aussi
+je suis capable de lui dire, analyse
+le code et créer des instructions,
+etc. Donc on a pas mal de features
+qui offrent de la liberté.
+La même chose avec Cursor, etc. Ils ont
+tous un petit peu leur manière différente. Donc ici,
+on va pas juger. On va terminer notre
+comparatif ici. Je pense que
+je vais être choqué des résultats. 4, 8.
+Ici, on est quand même sur 15. Ici, on est
+aussi sur 15. Et là,
+on est sur 14. Donc voilà,
+là, un pauvre Cursor qui descend
+dans mon cœur. Alors c'est pas pour autant
+que j'utiliserais GitHub Copilot, mais c'est vrai que
+il gagne des points sur des trucs. Il est
+moins cher, qu'il est objectivement
+avec un peu plus de valeur. Et donc voilà
+un petit peu pour le comparatif des trois IA.
+Faut savoir que c'est très compliqué
+en fait de comparer leurs usages
+parce qu'ils utilisent tous les mêmes modèles.
+Ce qu'on peut comparer, c'est ce genre de
+feature qu'il m'a fait juste ici. Donc là, j'atteins mon
+rate limit ultra vite.
+Donc on pourrait utiliser
+GPT 4.1 pour tester.
+Mais voilà. Mais ici, tu vois
+on a des mods. Donc ça, c'est intéressant. Ensuite,
+je peux utiliser mon custom mod qui est une sorte
+de pré prompt. On a des
+tool sets où je peux créer ici, comme on
+a vu, des sets de tools.
+Je sais pas quoi ça sert, mais en tout cas, c'est
+là. On peut ajouter des instructions,
+par exemple, new instructions,
+follow me.
+Ah non, faut que je fasse.
+Follow me.
+Donc là, ça rajoute une instruction.
+Et ensuite, ici, je peux faire, j'imagine,
+follow me instructions pour lui donner
+des prompt. La même chose avec les commandes.
+Ils ont tous un petit peu les mêmes trucs, maintenant.
+Juste qu'ils ont un peu différents
+choses. Donc c'est pour ça. Cette vidéo
+est moins critique que d'habitude. Faut
+se rendre à l'évidence. Tous ces modèles,
+tous ces outils convergent
+sur la même expérience.
+Maintenant, le challenge, c'est surtout
+le pricing. Cloud Code gagne
+de très loin le pricing.
+Et ça, c'est fou.
+J'ai dépensé 262 dollars en Cloud Code
+en 20 jours. Ouais, Cloud
+Cloud Code y bosse.
+Bref, voilà pour mon avis.
+N'hésitez pas à télécharger
+iBlueprint.dev. Petite formation gratuite
+sur Cloud Code si ça vous intéresse
+plus que les autres. Et en général,
+sur devenir développeur
+IA. Donc je vais rajouter pas mal de trucs
+là-dessus. N'hésitez pas à t'inscrire là-bas.
+Et on se dit à bientôt. Ciao ciao.

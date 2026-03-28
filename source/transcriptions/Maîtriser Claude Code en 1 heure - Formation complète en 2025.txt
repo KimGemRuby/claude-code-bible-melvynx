@@ -1,0 +1,856 @@
+Depuis deux semaines, j'ai totalement arrêté d'utiliser Cursor pour le mode agent et c'est Cloud Code qui génère maintenant la majorité du code que je crée.
+115 000 développeurs ont déjà switché sur Cloud Code et malheureusement beaucoup de développeurs prennent leur temps avant de commencer à l'utiliser car Cloud Code est plus compliqué à utiliser que des outils comme Cursor et Winsurf qui sont plus user-friendly.
+Dans cette vidéo Master Class de une heure, je vais t'expliquer tout ce qu'il faut savoir sur Cloud Code pour être un développeur efficace, comprendre comment ça fonctionne et pouvoir faire tes premières générations de code avec.
+On va parler de tout, des prix de l'utilisation avec des démos concrets, du setup, tout ce que tu as besoin.
+Je te propose de tout de suite commencer avec comme à mon habitude un schéma pour t'expliquer tout ça.
+Déjà il faut comprendre comment fonctionne Cloud Code.
+Pour rappel, si t'as vraiment jamais vu ce qu'est Cloud Code, c'est un outil qui s'utilise dans le terminal comme ceci, tu vois que ici je peux aller dans n'importe quel dossier, par exemple ici dans mon dossier Cloud Code, et je peux lancer Cloud.
+À ce moment là, en appuyant sur Enter, ça va venir ouvrir Cloud Code comme ceci directement dans mon terminal et dans mon terminal je vais être capable de lui demander des modifications ou je peux lui demander n'importe quoi.
+Par exemple, créer un fichier hello.txt avec à l'intérieur hello.
+Et là en fait, avec les utilisations d'outils, on va voir qu'il me dit j'ai envie de créer ce fichier, est-ce que t'as envie que je le fasse ? Oui.
+Et maintenant il a créé le fichier hello.txt et la tâche est terminée.
+Ce qu'on va comprendre dans cette vidéo c'est comment ça fonctionne, quelle est la différence entre Cloud Code, quelle est la différence entre un agent et tout simplement chat GPT.
+Parce que malheureusement si avec chat GPT je lui dis créer un fichier hello.txt avec à l'intérieur hello, et bah voilà, il ne le fait pas vraiment, il m'explique comment le faire.
+Donc quelle est la différence entre chat GPT et Cloud Code, c'est ce qu'on va voir ici.
+Donc avec Cloud Code, il faut comprendre qu'il y a trois acteurs principaux, il y a toi qui est l'utilisateur qui utilise Cloud Code.
+Donc quand toi tu utilises Cloud Code, et bah c'est toi qui écris dans le prompt box.
+Ensuite il y a Cloud Code, Cloud Code n'est rien d'autre qu'un software, c'est un software, une ligne de code, un bout de code comme cursor qui va faire le middleman entre toi et Cloud.
+Qu'est-ce que c'est Cloud ? Cloud ici je veux parler de l'API, c'est-à-dire Cloud, Sony, 4, etc.
+Tout ça c'est des API d'Anthropic comme on peut le voir juste ici, et ces API là sont gérés par Cloud.
+Donc on a toi, on a Cloud Code et on a Cloud.
+Et donc quelle est la différence avec un agent, donc ici, qu'est-ce que fait le fait qu'on dit que Cloud Code est un agent ?
+En fait quand toi tu vas poser une question, par exemple remove the comment in script.ts, quand tu vas envoyer ce message, Cloud Code, le software, va venir rajouter des choses à ton prompt.
+Au lieu d'envoyer juste ça, il va venir rajouter, donc voilà ici je spoil un petit peu, il va venir rajouter if you want to read a file, use read file, if you want to edit a file, use edit file.
+Et donc ce qu'on dit, ce qui est expliqué juste ici, c'est ce qu'on appelle des tools.
+Et du coup on lui dit, si tu envoies cette suite de caractère très très très spécifique, read file, il ne doit pas y avoir d'erreur, il ne doit pas y avoir une virgule en trop, il ne doit pas y avoir n'importe quoi en trop.
+Si tu envoies read file, name of the file, je vais être capable de te donner le fichier.
+A quoi ça sert ça ? Et bien c'est parce que le modèle lui-même, il n'est pas capable de lire le fichier.
+Donc pour que tu comprennes bien, ici je suis dans le Playground de OpenAI.
+Si je lui envoie un message, s'il te plaît, lis le fichier index.txt.
+Et que je lui envoie ça, il va me dire, bon bah en fait, donne moi le fichier index pour que je puisse le lire.
+Maintenant, si je lui donne un system message, important, you have access to the following tool, read file, read a file in the system, write file, bla bla bla.
+Et maintenant, si je lui pose la même question, lis le fichier index.txt sur mon ordinateur.
+Et bah il m'envoie read file index.txt.
+Et donc quand il fait ça, ce que va faire Cloud Code ensuite, on va le voir tout de suite,
+et bah lui, il lui rajoute ce contexte-là, donc la même chose, un system message qui lui dit bah voilà,
+t'as accès à ces outils-là, tu peux faire ça, ça, ça, ça, ça, ça et on vient lister tous les outils disponibles.
+Ensuite, l'assistant, et bah il va être capable de se dire, ok, vu que j'ai l'outil read file ici, et bah je vais l'utiliser pour venir lire index.txt.
+Donc, Cloud, il va retourner la commande read file script.ts.
+À ce moment-là, le travail de Cloud Code, c'est de transformer cette commande en une action.
+Et donc Cloud Code, lui, il a accès à ton ordinateur.
+Donc Cloud Code, il va lui donner le fichier script.ts.
+À ce moment-là, une fois que Cloud a le fichier script.ts, vu qu'on lui a demandé remove the command in script.ts,
+et bah il va être capable de venir retourner en réponse le edit avec edit file script.ts new code.
+À ce moment-là, Cloud Code, qui est toujours le software qui permet de faire tout ça,
+lui, il va venir modifier le fichier, donc lui, il va venir actuellement lancer une commande bash pour dire je modifie le fichier.
+Ensuite, lui, il va lui dire bah voilà, le fichier est modifié, c'est tout bon, tu as réussi, bravo.
+Ensuite, le modèle, il va se dire bah voilà, l'utilisateur, il m'a demandé d'enlever les commentaires dans script.ts.
+Ah, j'ai lu le fichier, j'ai modifié le fichier, bah maintenant, je peux lui dire finish, I remove all the comments.
+Et là, lui, il va t'afficher ceci.
+Si on teste comme ceci, juste dans chat.gpt, juste pour tester comme ceci pour s'amuser.
+Remove all the comments in script.ts.
+Et donc là, il fait read file script.ts, donc il me dit j'ai envie de lire le fichier.
+On lui retourne le fichier comme ça, mon super comment, console log hello.
+Et donc là, on voit qu'on lui a dit remove all the comments, et donc moi, je lui réponds le fichier.
+Et donc là, tu vois la magie, il m'a fait write file script.ts console log hello.
+Vu qu'il a l'outil write file, il vient me dire je viens modifier le fichier.
+Là, maintenant, je lui réponds file edit console.log hello.
+Et donc là, je lui dis par exemple script.ts.
+Là, je lui dis bah voilà, le fichier a été modifié.
+The comments have been removed from the script.
+If you need any further modification, let me know.
+Tu vois la magie.
+Vu qu'on lui a donné des outils, il est capable d'appeler ses outils et de faire des actions avec ce système message.
+C'est exactement ce que fait Cloud Code.
+Et donc ce schéma résume précisément ce que fait Cloud Code et à quoi ça sert.
+Pourquoi est-ce qu'on utilise Cloud Code au lieu d'utiliser chat GPT, par exemple ?
+Très important de le comprendre.
+Donc ça, c'est pour la première théorie qu'on a juste ici.
+Maintenant, Cloud Code, il a à peu près ce schéma.
+Donc je vais t'expliquer ce schéma.
+En clair, on va avoir deux inputs dans Cloud Code.
+Le premier, c'est le prompt et la conversation.
+Alors si je reprends ce qui était juste ici, que je screenshot cette page et que je la mets là,
+le prompt et la conversation, ce qui est juste ici.
+Donc c'est la conversation qu'on a avec chat GPT.
+Ça, il va falloir lui donner en contexte parce que s'il n'a pas les informations, ça ne va pas.
+Donc on a la conversation qui est ici et on a le prompt qu'on lui envoie qui est la petite box qui est juste ici.
+Ensuite, on a les tools disponibles.
+Et donc il a deux types d'outils, il a les default tools et les MCP.
+Donc les default tools de Cloud, c'est les tools suivants.
+Il va pouvoir utiliser bash pour lancer une commande bash, edit un fichier, globe qui permet de chercher des fichiers,
+grep qui permet de chercher des fichiers en fonction de ce qu'il y a à l'intérieur,
+ls pour lister les fichiers, multi edit pour modifier plusieurs choses dans un fichier, notebook edit, notebook read.
+Ensuite, il peut lire les fichiers, il peut lancer un sub-adjunt pour faire des multi-step tasks,
+il peut créer une to-do, create and manage structurated task list, il va pouvoir fetch des données d'une URL,
+il va pouvoir faire web search pour venir faire une recherche sur le web et write pour create or overwrite file.
+Donc là, il va vraiment venir remplacer, remplacer le fichier.
+Donc ça, c'est tous les tools disponibles et on va les donner.
+Et donc là, dans notre exemple que j'ai fait juste avant, les tools disponibles, c'est ce qui est dans le système message ici.
+Donc on va lui donner tous les tools qui sont disponibles, tous les tools qu'il peut utiliser.
+Et ensuite, on va lui donner les tools custom.
+Donc les tools custom, ce qu'on appelle les tools custom, c'est les mcp.
+Donc nous ici dans le système message, on n'a pas de tools custom, mais on pourrait imaginer qu'on a des tools custom,
+on verra comment on installe des mcp dans la suite.
+Mais si moi je vais ici et que je fais slash mcp, on peut voir que j'ai différents mcp qui sont disponibles.
+Par exemple, j'ai un mcp assez drôle, c'est le wait timer.
+Please wait 10 secondes, then notify me.
+Donc là, je lui dis s'il te plaît, attends 10 secondes et ensuite notify me.
+Et donc là, il va utiliser le mcp wait timer duration 10 secondes.
+Donc là, tu vois que c'est un tool custom, que je lui ai donné les mcp finalement,
+il n'y a rien d'autre qu'un outil qu'on vient de donner.
+Donc il y a les commandes par défaut et il y a les commandes custom.
+Les commandes custom peuvent être tout et n'importe quoi à la limite de notre intelligence humaine pour créer des mcp.
+Donc par exemple, ici, j'en ai mis trois.
+Donc ensuite, qu'on va lui donner ça, Cloud Code ici, il va venir faire des allers-retours.
+Donc ici, entre les deux éléments ici, il va finir faire des boucles pour passer entre les tools et Cloud Code et donc entre l'API de Cloud.
+Donc en fait, ici, je me suis un peu trompé.
+Ici, c'est plutôt l'API de Cloud et ici, c'est Cloud Code.
+Cloud Code est en orange ici.
+Donc Cloud Code, c'est le software qui choisit entre appeler Cloud et lancer des outils.
+Et donc ce que va faire en boucle, c'est celui-ci, c'est récupérer du contexte, faire un plan et faire une action.
+Donc si je te fais un exemple ici, je vais lui dire par exemple, edit the file hello.txt by adding a script, by adding I am Cloud Code.
+Et donc à ce moment-là, on va voir ce qu'on a dit juste avant.
+Donc la première étape, c'est qu'ici, il va venir...
+Donc là, il a essayé de update, mais il va venir read le fichier.
+Une fois qu'il a lu le fichier, il va pouvoir faire l'update.
+Là, on voit qu'il a fait l'update et il a terminé.
+Done, fini.
+Donc un très bon exemple d'ici, il récupère du contexte, ça veut dire lire le fichier.
+Ensuite, il fait un plan ou pas, ça dépend ce qu'on fait.
+Et ensuite, il fait une action.
+Et donc ça, c'est Cloud Code en schéma.
+Donc qu'est-ce que peut faire Cloud Code ?
+Cloud Code, en fait, la magie de Cloud ici, pourquoi tout le monde utilise Cloud, c'est parce que Cloud, il a deux avantages.
+Le premier avantage, c'est qu'il est bon pour coder.
+Il est intelligent, il a été entraîné pour coder, donc ça, c'est top, j'imagine.
+Le deuxième, c'est qu'il est bon pour appeler des outils.
+C'est-à-dire que si on lui donne des outils, il est très très bon pour les appeler.
+Il est très très bon pour pas essayer de le faire sans les outils, ce qui est très important.
+Parce que s'il commence à vouloir utiliser autre chose, ça va être très problématique.
+Donc, au fil du temps, tous les modèles seront plus ou moins bons pour appeler des outils,
+mais cette vidéo s'applique à n'importe quel agent.
+Que tu utilises Cloud Code ou Cursor, on est toujours sur la même logique, ok ?
+C'est juste qu'à la place de Cloud Code, ici, on peut remplacer Cursor, Windsurf, Codex, etc.
+Donc ici, je prends l'exemple de Cloud Code, mais ça reste juste le schéma agentique de code.
+Ok, c'est juste un agent de code.
+On peut faire des tâches complexes avec les outils.
+On peut facilement rajouter des nouveaux tools, donc ici, avec les MCP,
+qui ont été inventés par Anthropic, donc ici, c'est Cloud qui l'a fait.
+Cloud peut facilement naviguer dans la codebase.
+Grâce à tous les outils qu'on a vus, il peut naviguer dans la codebase,
+et donc, il n'a pas besoin d'index ton code,
+ce qui signifie souvent l'envoi de tes données sur un serveur pour indexer.
+Maintenant, setup est pris.
+C'est ça qui nous intéresse pour cette vidéo spécifique sur Cloud Code,
+donc ici, j'ai mis le lien.
+On va pouvoir aller sur Anthropic.com et lancer cette commande.
+Normalement, cette commande fonctionne sur tous les OS, et donc là, moi, je l'ai déjà fait,
+mais on va pouvoir aller dans n'importe quel dossier
+et lancer npm install global anthropic cloud code.
+Donc, une fois que tu l'as fait, tu vas devoir lancer Cloud,
+et normalement, ce qui va arriver quand tu lances Cloud,
+c'est qu'ici, tu vas avoir Welcome to Cloud Code.
+Let's get started, choose the style, donc là, on va choisir Dark Mode,
+et ensuite, là, tu vas avoir deux choix.
+Soit tu utilises un compte comme ceci,
+soit tu payes l'API usage pricing.
+Donc, si tu utilises un compte, tu vas suivre le pricing qui est juste ici.
+Donc, on va avoir trois comptes différents.
+On va avoir le pro à 17 dollars par année, enfin 17 dollars par mois par année.
+On va avoir le max qui est 5 fois plus que le pro, donc le prix est aussi 5 fois plus.
+Donc, ça permet de venir utiliser Cloud Sony 4 et Cloud Opus 4,
+et tu vas avoir 5 fois plus d'utilisation.
+Le max x20 pour 200 dollars, donc ici, c'est deux fois plus cher, mais tu as 4 fois plus.
+À ce moment-là, c'est pour les power users qui vont utiliser beaucoup de Cloud Opus 4.
+Alors, quel est le choix qu'il faut faire par rapport à passer directement par l'API ?
+Parce que ce que tu peux faire, c'est aussi générer une API key et l'utiliser.
+Alors moi, je te dis tout de suite, utiliser une API key n'est pas rentable.
+Si ici, j'utilise BunX CC Usage.
+Donc, CC Usage, c'est un tool qui permet de regarder l'utilisation de Cloud
+avec les fichiers JSON qui génèrent pour savoir à peu près le prix que j'utilise.
+Si je regarde avec CC Usage, tu peux voir que depuis que j'ai payé l'abonnement,
+donc ici, j'ai payé l'abonnement à 100 dollars par mois, là, j'ai utilisé 16 dollars d'API,
+17 dollars d'API, 18 dollars d'API, 40, 21, et hier, j'ai utilisé 66 dollars d'API.
+Parce qu'il y a des sessions.
+Donc en fait, quand tu payes l'abonnement, tu as beaucoup plus d'usage que si tu passais par l'API.
+Et comment fonctionne l'usage ?
+En fait, ça fonctionne par bloc de 5 heures, et donc on a 5 heures où on peut utiliser X nombre de tokens.
+Moi, j'arrive à utiliser jusqu'à 30, 40 dollars d'API en bloc de 5 heures.
+Donc si tu fais ça 2 fois par jour, t'es déjà à 80 dollars et t'as déjà rentabilisé l'abonnement à 100 dollars.
+Tu passes par l'API, le prix que tu vas payer, c'est le prix qui est affiché juste ici.
+Donc là, j'en aurais eu pour moins d'un mois 261 dollars, mais j'ai payé que 100 dollars.
+Et donc on est bien plus rentable.
+On peut voir avec CCUJ, avec la commande bloc live, l'utilisation en live que j'ai.
+Et donc ici, on peut voir qu'en fait, tu vois que j'ai une session.
+Une session, elle a commencé à 8 heures et elle va terminer à 1 heure.
+Elle dure 5 heures, elle envoie le pourcentage et envoie le nombre de tokens et le nombre de projections.
+Donc on peut voir que vu que je fais un tournage de vidéo aujourd'hui, je ne suis pas en utilisation maxing de Cloud Code.
+Donc je vais utiliser moins que hier sûrement parce que je ne suis qu'à 1 dollar 42 pour l'instant.
+Et donc je te conseille après tout ça de passer par Cloud Code Account.
+Quand on fait ça, ça va t'ouvrir une page.
+Là, tu vas faire authorized comme ceci et tu vas devoir payer l'abonnement.
+Ensuite, tu vas devoir faire le setup du terminal.
+Donc je te recommande de faire yes.
+Ça va permettre de s'assurer qu'on a ici le setup du terminal qui est fait.
+Et donc là, maintenant, quand je lance Cloud, il y a tout qui fonctionne normalement.
+Et je peux commencer à utiliser Cloud Code et je suis bien connecté.
+J'ai bien mon compte qui est setup.
+Donc ça, c'était pour le setup de Cloud Code.
+Maintenant, on va aller dans un projet que j'ai juste ici, que j'ai lancé juste ici,
+qui va être notre projet de test qui est les full stack components ready to use.
+Donc c'est mon registry chat scene UI pour avoir des composants, par exemple celui-ci,
+avec des jolis composants, des dialogues manager et par exemple des serveurs toast.
+Donc plein de choses pratiques.
+Et donc ici, moi, j'ai créé, j'ai lancé l'application local pour avoir accès à la documentation, etc.
+Et donc ici, j'ai lancé l'application.
+Ce que tu peux faire, c'est qu'avec Cloud Code, tu n'as pas besoin d'installer un IDE.
+Tu n'as pas besoin d'installer une extension.
+Tout ce que tu as à faire, c'est d'ouvrir un nouveau terminal avec le bouton New Terminal.
+Et quand tu as un nouveau terminal, tu peux lancer à l'intérieur Cloud.
+Je lance Cloud et à ce moment là, ça me dit un truc que j'ai supprimé, mais ça vient ici lancer Cloud.
+Ensuite, tu vas pouvoir installer une extension.
+Ici, normalement, on a Cloud Code.
+Ça va permettre de venir link ton IDE, donc par exemple Cursor, VS Code, IntelliJ ou tout ce que tu veux.
+Ça va venir link ton IDE à Cloud Code.
+À ce moment là, ça va permettre que, par exemple, quand j'ouvre un fichier,
+et bien lui, il sait quel fichier j'ai.
+Il sait aussi les tables que j'ai ouvert actuellement.
+Ok, bon, apparemment, il ne sait pas.
+Il sait juste le table que j'ai ouvert actuellement.
+Il n'en voit qu'un seul.
+Bon, c'est un peu dommage, c'est pas grave.
+Ensuite, on va pouvoir ajouter du contexte.
+En sélectionnant du texte et en faisant commande option K,
+ça vient ajouter dans Cloud Code le code sélectionné.
+Et donc là, je lui dis quel est le code sélectionné.
+Donc là, en lui passant ça, il va être capable de me dire, tu sélectionnes la ligne 52 à machin.
+Et donc il me dit, le code sélectionné, c'est celui-ci.
+Et donc, on peut voir qu'il est très très smart
+et ça permet de venir utiliser Cloud Code de manière plus powerful.
+On a aussi, avec l'extension, un bouton ici,
+le petit icône de Cloud pour venir ouvrir Cloud Code directement à gauche.
+Alors là, j'ai fait une connerie, j'ai fait commande C.
+Mais ça ouvre Cloud Code directement ici,
+et donc ça te le permet de l'utiliser un petit peu comme le faisait Cursor,
+donc c'est-à-dire à droite de ton code.
+Cette page, elle va être lock, et donc même si tu navigues,
+et bien tu restes toujours avec ce petit menu ici.
+Donc ça, c'est pour le setup de base, et donc on va parler de l'utilisation.
+L'utilisation de Cloud Code correct, elle va être par rapport au contexte,
+par rapport, on appelle ça maintenant le fameux context engineering.
+On a vu, entendu parler, ça devient hype avec ce schéma.
+Donc la mémoire, les tools, les instructions, le système prompt,
+le user prompt, le state, history, short time et le rag.
+Donc tout ça, ça rentre dans ce qui est dans le contexte.
+On va d'ailleurs mettre cette petite image ici pour voir le contexte.
+Donc trop de contexte problématique, l'IA va se perdre.
+Aucun contexte problématique, le mieux c'est d'être au milieu.
+Et pour ça, on va utiliser premièrement la commande init.
+La commande init, elle va venir scanner le code,
+et elle va définir dans un fichier le but du projet,
+les commandes importantes et les fichiers critiques.
+Donc ici, on va pouvoir aller dans Cloud Code et lancer slash init.
+Je vais lancer slash init et là, il va venir utiliser une série d'outils
+pour venir lire des fichiers, lire leur in-me, lire les dossiers,
+lire les fichiers Markdown et ensuite, il va lire tous les fichiers
+qui peuvent être importants.
+Donc souvent, si tu avais un dossier cursor,
+il va lire le dossier cursor pour avoir tes règles et il va les ajouter, etc.
+Et donc après avoir lu pas mal de fichiers,
+on peut voir juste ici qu'il est en train de pondre,
+de pondre littéralement du token.
+Et il me dit, voilà le fichier Cloud, blablabla.
+Tu vois qu'avec l'extension, il ouvre directement comme ceci.
+Donc là, on se dit, bah voilà, il faut faire attention à ce fichier
+et être sûr qu'il est bien juste.
+Donc le plus important, c'est les commandes disponibles.
+Donc ici, vérifier que les commandes sont bien expliquées.
+Par exemple, vérifier que moi, je veux lancer avec PNPM.
+Et ici, on peut rajouter, par exemple, warning,
+always use PNPM.
+Je n'ai pas envie d'utiliser NPM.
+Architecture overview.
+OK, donc là, ça définit.
+Là, ça a le registri.
+Le output, il est là et les API endpoint sont là.
+Component type.
+OK, c'est tout bon.
+Documentation system.
+Donc on a la documentation, on a les example components
+et documentation is automatically injected via InjectDoc.
+Key feature.
+Multi-dependency support.
+OK, auto-generated build.
+Component dependency.
+Bam.
+Et donc là, on vérifie qu'il a bien.
+Donc là, par exemple, ça, ça sert à rien du tout.
+Donc là, on peut lui dire oui.
+Et tu peux aussi lui ajouter du contexte en lui disant, bah voilà,
+moi, je connais la doc.
+Je sais que dans ui.chatcen.ui, à la fin ici, il y a le fichier registri.
+Please add this to our file.
+Et là, tu vas être capable.
+Pardon, check, check, check.
+Je t'expliquerai comment faire toutes ces manipulations après.
+Mais là, tu vas être capable de lui passer, par exemple, la doc de registri
+et toutes les docs que tu aurais besoin.
+To the Claude.md so you understand the registry logic.
+Donc là, il ne faut pas hésiter.
+Donc on va déplacer ma caméra.
+Boom.
+À venir lui dire, bah voilà, récupère, récupère toutes ces documentations.
+Ça va permettre de comprendre l'utilité du projet.
+Et donc très important aussi de lui ajouter un maximum le contexte.
+Le fichier Claude, c'est le fichier le plus important de ton code.
+OK, si tu as ou là là, qu'est ce que j'ai fait là?
+Si tu as un bon fichier Claude, ça va permettre de t'assurer que tout fonctionne.
+Et donc là, voilà, ici, il a un peu merdé parce qu'il a dupliqué le component type.
+Donc on delete ça.
+Et là, il dit, bah voilà, il y a le name, il y a le home page, il y a item.
+Ensuite, il y a component UI page.
+Il y a toutes les propriétés qu'il faut, file object structure et voilà.
+Donc là, c'est important d'avoir ça dans le contexte parce que c'est littéralement le but du projet.
+Dans le fichier Claude.md, tu dois avoir tout le contexte utile.
+Ce contexte, il va être réutilisé encore et encore.
+Donc moi, par exemple, aussi dans ce projet, en fait, j'ai pas de test,
+mais ici, on pourrait lui rajouter des informations.
+Et donc le but, c'est que toi, tu, ce fichier, il doit vivre.
+Tu ne dois pas le créer une seule fois et l'abandonner.
+Chaque fois qu'il y a des modifications majeures qui se passent,
+tu dois venir apporter des modifications à ce fichier, sauvegarder les nouvelles choses, etc, etc.
+Donc très important ce fichier, ce premier fichier qu'on a vu ensemble.
+Donc lignes de commandes, elle scanne ton code, elle crée un résumé, elle écrit le résumé.
+Et donc ensuite, on a ce fichier Claude.md.
+On a trois levels.
+On a le project level, fichier partagé pour le projet.
+Ensuite, on a Claude.local.md qui est le personnel level.
+Ce fichier ne va pas être commis sur GitHub et on a le machine level.
+Et donc là, c'est le Claude.md qui va orchestrer et qui va être injecté dans l'intégralité de toutes tes promptes.
+Et donc pour s'amuser avec ça, on peut utiliser dièse et venir dire, par exemple,
+avoid useless comments when generating code.
+Là, j'appuie sur Enter et il va me dire, tu veux le sauvegarder dans le project memory,
+dans le project memory local ou dans le user memory.
+Par exemple, si je fais project memory local, il va créer un fichier Claude.local.md
+qui ne va pas être commis, tu vois qu'il est gris et qui va ajouter ce petit commentaire.
+Et donc là, tu vois qu'il a lu le fichier et qu'il a update le fichier correctement.
+Et on a évidemment le fichier global qui permet de faire exactement la même chose.
+Maintenant, dans le contexte, tu vas pouvoir mémoriser des choses sur le long terme et mentionner des fichiers.
+Donc par exemple, si chaque fois qu'il génère du code, il écrit trop de commentaires,
+et bien tu fais exactement ce que j'ai fait, tu utilises dièse pour ajouter de la mémoire
+et tu lui dis, s'il te plaît, mets moins de commentaires.
+Et comme ça, il va le sauvegarder sur le long terme.
+Sinon, tu peux mentionner des fichiers avec le at.
+Donc ici, quand je fais at, je peux mentionner n'importe quel fichier.
+Par exemple ici, dans form management, je pourrais dire, dans form management,
+s'il te plaît, déplace le form auto save watch dans un nouveau fichier,
+update le registry, build le registry, comme ceci.
+Et donc là, en taguant le fichier, il est capable de savoir exactement
+quel fichier j'ai envie qu'il modifie et il va être capable de faire les bonnes actions.
+Donc ici, voilà, il dit, il crée une to do, extraire l'action dans un nouveau fichier,
+update le registry pour inclure le nouveau composant et build le registry comme ceci.
+Donc généralement, il va commencer par lire le fichier,
+ensuite il va update le fichier.
+Ici, je peux dire yes, il va créer le nouveau fichier,
+ensuite il va enlever dans l'autre fichier, etc.
+Petite accéléré.
+Et donc là, il a fait la modification que je lui ai demandé et c'est terminé.
+Mais il va me dire c'est super.
+On peut voir qu'il a utilisé des outils et que j'ai aussi fait quelque chose ici.
+Bah, je lui ai fait remarquer une des erreurs qu'il a fait.
+Ensuite, tu peux le demander, rename, form, auto, save, watch,
+with, form, management, auto, save, comme ceci et il va être capable de le faire.
+Donc voilà, mentionner des fichiers, ça lui permet de donner le bon contexte
+et ça va lui permettre de faire des meilleures décisions.
+Effectivement, ça dépend toujours de ton prompt, etc.
+On peut voir que le prompt que j'ai fait juste ici aurait pu être bien amélioré.
+D'ailleurs, une fois qu'on a fait ça, on va parler des mods.
+Donc on a le plan mod qui est un des premiers mods qui existe.
+Et donc là, si je lui demandais de faire la même modification
+que j'ai fait juste ici par rapport au refactoring d'un composant,
+donc on va essayer d'en trouver un autre.
+Donc ici, je vais pouvoir faire slash clear pour nettoyer la conversation
+et je vais pouvoir changer de mode en utilisant shift tab.
+Et donc là, je suis dans auto accept edit.
+Quel est le auto accept edit qui est le deuxième mod ?
+C'est qu'il va arrêter de demander la permission pour modifier des fichiers
+et il va juste demander la permission pour les commandes qui ne sont pas autorisées.
+Et donc, on peut voir que depuis avant, il me demande
+est-ce que tu veux que je modifie ce fichier, ce fichier, ce fichier.
+Tout ça, c'est très chiant.
+Le mieux, c'est de lui dire auto accept edit, comme ça, il update tout.
+Et ensuite, on a le plan mod.
+Par exemple, si ici, je lui dis modifie la signature de use copy to clipboard
+pour prendre un objet en paramètres au lieu de délai.
+Et donc, en plan mod, au lieu de venir modifier le code directement,
+il va réfléchir, je dois analyser.
+Là, il va se dire en plan mod, je dois analyser l'implémentation qui va être faite
+et je vais devoir du coup chercher les différents endroits.
+Donc là, il ne l'a pas super, super bien fait.
+OK, on peut lui dire non, please think and search about.
+Donc là, encore une fois, c'est une histoire de prompt.
+Vu que je n'ai pas de prompt et que je lui ai juste dit modifié,
+et bien, il n'a pas cherché, il n'a pas recherché dans le code, etc.
+Si je lui fais une recherche, il va être capable de venir avec un plan
+ou de dire en fait, il y a ce fichier, ce fichier, ce fichier qui dépend de tout ça.
+Donc, je vais commencer par lire ces fichiers pour voir quels sont les problèmes.
+Et donc, l'avantage du plan mod, c'est qu'au lieu de coder,
+et bien là, j'ai pu voir qu'il n'avait pas pensé à ça avec le plan,
+pouvoir lui dire en fait, fais ça à la place.
+Comme ça, il travaille et il essaie de faire la recherche, etc.
+Tu peux voir que là, il fait la recherche.
+Voilà, j'ai la complète picture.
+Maintenant, je vais pouvoir chercher des tests aussi.
+Donc là, il part en vrille tout de suite et il dit,
+ben voilà, maintenant, j'ai tout ça, voici le plan que je peux te présenter.
+Donc là, après avoir réfléchi, il se dit, maintenant, j'ai le plan.
+Il nous donne le plan.
+Et du coup, là, tu peux valider ou pas le plan.
+Et tu peux le valider en disant auto accept edit,
+le valider en manuel et approve edit ou no.
+Donc, si je lui dis oui, vas-y, et ben là, on va passer en auto accept edit.
+Et tu vas voir qu'il va être capable de venir me bulg modifier plein de fichiers
+sans que j'aie besoin de venir cliquer sur oui ou non.
+Et donc là, on voit qu'il est en train de coder.
+Donc, plan mode, default mode, il va demander la permission pour modifier les fichiers auto accept.
+Et on a aussi le YOLO mode.
+Le YOLO mode, c'est tout simplement qu'on dit à Claude,
+bon, ben là, tu n'as plus besoin de demander aucune permission.
+Pour lancer le YOLO mode, je vais le lancer dans un nouveau terminal en même temps.
+On va lancer Claude avec le flag dangerous keep permission.
+Donc là, on va copier ce flag et on va lancer Claude, dangerous keep permission.
+À ce moment là, ça va le lancer avec ce petit flag juste ici.
+Et donc, on vient lui dire, ça vient bypass les permissions.
+Donc, typiquement, au lieu de me demander
+est-ce que j'ai le droit de lancer la commande npm run registry build.
+D'ailleurs, il utilise npm, ce qui est une honte et ce qui prouve qu'il n'a pas voulu utiliser.
+Ah, il m'avait supprimé mon truc, ok, autant pour moi.
+Donc là, on peut remodifier pnpm et attention, blablabla.
+Donc là, il me demande de lancer la commande.
+Je dis oui et il lance la commande, il se fait kiffer, etc.
+Et donc là, si j'utilisais le YOLO mode,
+j'aurais pas eu besoin d'accepter ou de refuser cette commande,
+ce qui est évidemment très pratique quand tu as envie de le lancer en mode agent.
+Et par exemple, quand tu lances plusieurs outils d'un coup,
+tu vois que là, chaque fois, il me demande est-ce que j'ai le droit de faire ça,
+est-ce que j'ai le droit de faire ça, est-ce que j'ai le droit de faire ça.
+Avec le YOLO mode, il n'y a plus de est-ce que j'ai le droit de faire ça.
+Il va pouvoir se lancer automatiquement.
+D'ailleurs, si j'ai envie de lancer un terminal qui était avant,
+pas en YOLO mode, en YOLO mode, ce que je peux faire, c'est arrêter.
+Evidemment, ça l'a coupé, mais c'est pas grave.
+Et là, je peux faire, t'es con ça quand je...
+Ok, bon, c'est pas grave, j'arrive pas à le lancer.
+Donc, on va le lancer comme ça.
+Et là, je peux faire Cloud, DangerousKeyPermissions,
+tirer C pour dire continue.
+Et donc, quand je fais ça, ça continue la conversation.
+Et maintenant, je peux lui dire continue.
+Et donc, cette fois, je suis passé en Bypassing Permissions.
+Quand tu es en Bypassing Permissions, ça fait aussi le auto accept.
+Donc, c'est-à-dire que par défaut,
+ça va aussi auto accepter tous les changements de code
+parce qu'il bypasses toutes les permissions.
+Ensuite, on a vu, on a déjà, on peut utiliser, on a le Thinking.
+Par défaut, Cloud Code ne va pas Think,
+ne va pas utiliser le Thinking.
+Le Thinking, c'est ce que fait O03, O3 de chat GPT, par exemple.
+Et on va pouvoir utiliser des mots-clés.
+Donc, il y en a cinq proposés par l'équipe d'Anthropic.
+Think pour faire du Basing Reasoning, ThinkMore, ThinkAlot, ThinkLonger.
+Et UltraThink.
+Quand est-ce qu'on utilise le Thinking, contrairement au Plan Mode ?
+Le Plan Mode, c'est une sorte de Thinking.
+Le Thinking, il va permettre pour des tâches complexes.
+Les tâches complexes vont bénéficier énormément du Thinking
+parce qu'il va être capable de ne pas partir sur le code directement.
+Les tâches complexes, la lecture de code complexe,
+tout ce qui va faire venir de la complexité que tu trouves difficile,
+le Thinking va être très intéressant.
+Le Plan Mode, ça ne permet pas de faire des tâches complexes.
+Ça permet d'orchestrer, ça permet de faire des choses dans le bon ordre
+et de lui donner l'obligation de dire ce qu'il veut faire
+et donc de réfléchir à l'avance.
+Donc ça, c'est la différence.
+Moi, j'utilise plus tant que ça le Plan Mode
+parce que le Plan Mode te demande une interaction.
+Je vais plutôt, dans mon prompt, lui demander de Think
+et de faire un plan et de l'exécuter directement.
+Bref, maintenant on a les Shortcuts et la Navigation dans Cloud.
+Donc si ici, on est dans le Terminal et tu vas voir mes Raccourcis Clavier.
+Dans le Terminal, on est capable déjà de venir Clear l'Input.
+Donc si ici j'écris Test et que j'appuie sur Échappe,
+si j'appuie deux fois sur Échappe rapidement,
+ça vient Clear l'Input.
+Donc ça permet de reset le contenu de l'Input pour écrire quelque chose d'autre.
+Ensuite, quand tu n'as rien dans l'Input et que tu appuies deux fois sur Échappe,
+à ce moment-là, tu vas pouvoir Jump sur un Preview au message.
+Par exemple, je vais pouvoir aller sur Continue,
+appuyer sur Enter et ça va venir retourner dans le temps sur Continue.
+Échappe, échappe, échappe, échappe et je peux retourner dans le temps ici
+et je peux encore une fois lui demander des modifications.
+Donc on a Échappe, échappe et Escape, Escape retourné dans un ancien message
+et Escape, Stop, Cloud.
+Ensuite, on a dièse qui permet d'ajouter dans la mémoire, on l'a déjà vu ensemble.
+Et on a aussi, point d'exclamation,
+comme ceci qui va permettre de passer en Bash Mode.
+À quoi ça sert ?
+Et bien ça permet que s'il fait du code, tu pourrais lancer PNPM TS en Bash Mode.
+Ça va venir te donner le résultat et tu peux ensuite lui dire Analyse le résultat.
+Et en fait, ça te permet de lancer des commandes Bash directement dans Cloud Code.
+L'avantage de faire ça, c'est que tu viens ajouter du contexte,
+c'est que tu viens lui donner des tips.
+Il est capable de voir le résultat ici de PNPM TS.
+Alors on peut voir que le résultat, c'était qu'Azno export formato watch, comme ceci.
+Et donc il est capable de voir cette erreur et de la corriger, comme on peut le voir juste ici.
+Bam !
+Donc ça va lui permettre de venir lancer,
+ça va te permettre de manuellement lancer des commandes
+qui vont être injectées dans la conversation,
+comme si c'est lui qui l'avait lancé.
+Donc là, on peut voir qu'il l'a corrigé.
+Donc ici, j'avais oublié, point d'exclamation est égal à Bash Command.
+Donc très important aussi.
+En parlant des commandes, on a justement plusieurs commandes.
+On avait le clear qui permet de clear la conversation.
+Donc là, si j'ai envie de lui demander un truc qui n'a rien à voir,
+là, il a modifié form auto save.
+Ouais, mais moi, en fait, j'ai pas envie de modifier form auto save.
+Maintenant, j'ai envie de modifier le hook use his client,
+par exemple, en lui disant review la documentation de use his client.
+Et je vais désactiver le screen casting mode, voilà.
+Mais en fait, là, le contexte, la conversation de l'IA
+n'a rien à voir avec use his client.
+Donc à ce moment-là, il est très important de venir faire slash clear
+pour nettoyer la conversation.
+Par hasard, tu as fait slash clear, mais que tu voulais pas faire slash clear.
+On peut faire slash, résume,
+et là, on va avoir toutes les conversations qu'on a dans ce repository.
+Et donc là, je peux aller une minute ago,
+retrouver ma conversation avec la commande bash qu'on avait fait avant.
+Parfait.
+Donc on a slash clear, qui permet de lancer une nouvelle conversation,
+c'est un peu l'équivalent du new chat.
+Et on a slash résume, qui permet de retrouver une ancienne conversation.
+On aurait aussi le slash compact,
+qui permet de venir réduire le contexte de l'action actuelle.
+Donc ça, ça sert à rien, en l'occurrence,
+parce qu'on n'a pas beaucoup de contexte.
+Mais quand t'as beaucoup de contexte,
+tu vas voir que ça utilise beaucoup de tokens.
+Ça utilise beaucoup de tokens,
+et au bout d'un moment, il va te dire,
+ouais, il y a trop, je peux plus gérer toute cette quantité de données.
+On peut compact en lui disant,
+rappelle-toi de la commande et de ce que t'as résolu.
+Tu es pas obligé de donner un prompt,
+mais lui, il va venir prendre la conversation,
+il va la compacter en un seul bloc, en un seul message,
+et oublier tout ce qui a été fait avant.
+Donc là, voilà, il a analysé et il a compacté notre conversation, normalement.
+Normalement, il y a une ligne qui sépare,
+mais ici, il n'y a pas la ligne, c'est pas grave.
+Ensuite, on va pouvoir créer des custom commandes ou des prompts.
+C'est comme tu l'appelles, on peut l'appeler simplement un prompt.
+Donc, par exemple, moi, j'avais une commande que je vais reprendre ici,
+que j'ai supprimée, qui s'appelle New Registry.
+Donc moi, par exemple, pour ce registry,
+j'ai une commande qui permet de venir tout remettre le registry.
+Donc, je vais venir annuler ce changement pour juste montrer comment ça marche.
+Donc, dans le fichier .cloud, on va pouvoir créer déjà un fichier settings.json.
+Dans ce fichier settings.json, on va pouvoir définir des settings.
+Par exemple, normalement, on a un objet permission, si je ne me trompe pas,
+et on peut faire default mode et ici accept edit.
+Donc, si je ne me trompe pas, ce que je ne suis pas sûr,
+c'est que maintenant, je lance cloud.
+OK, donc je me suis bien trompé parce que le fichier settings,
+il doit être dans .cloud et pas dans commandes.
+Voilà, première petite erreur.
+Maintenant, si je lance cloud, je me suis bien trompé.
+Ce n'est pas comme ça.
+Je pense que c'est permission avec un S.
+Voilà, donc permission avec un S, default mode.
+Et maintenant, accept edit, il va être par défaut en accept edit,
+comme on peut le voir juste ici.
+On peut aussi lui rajouter pas mal de settings qui sont juste ici.
+Donc là, on a normalement settings et dans le fichier settings,
+on va, par exemple, pouvoir lui donner les commandes qu'il a le droit de faire
+sans te demander.
+Donc ça, dans le cas où tu n'utilises pas le YOLO mode,
+je peux lui dire, tu as le droit de lancer toutes les commandes PNPM
+et tu as le droit aussi de lancer toutes les commandes Git.
+Mais le reste, tu n'as pas le droit de faire.
+Voilà, ça, c'est un des trucs qu'on peut faire.
+On peut aussi désactiver dans settings comme ceci,
+include coauteur by.
+Et donc là, si je fais include coauteur by false,
+ça évite que Claude, il ajoute le coauteur dans chacun de ses commits.
+Ça peut être pratique suivant ce que tu veux faire.
+Ensuite, une fois qu'on a fait ça, on va pouvoir ajouter les slash command.
+Donc il y a les slash command par défaut qui ont la liste juste ici
+à dire slash bug, slash help, slash init, slash permission,
+slash tout ce que tu veux.
+Et on va aussi pouvoir ajouter des commandes custom.
+Donc pour ça, on va créer dans le dossier Claude un dossier command
+avec à l'intérieur un nom de commande.
+Donc ici, je peux écrire blabla.md, say blabla in the chat.
+Là, je restart Claude code, bam.
+Et maintenant, je peux faire slash blabla.
+Et quand je fais slash blabla, comme je t'ai dit, ça agit comme un prompt.
+Il m'envoie blabla, fin de la conversation.
+C'était plutôt rapide.
+Donc on s'en fout du blabla, on veut faire new registry.
+Par exemple, ici, créer un registry pour arguments.
+Ce guide te permet de réfléchir à créer un registry.
+Step one fait ça, step 2, step 3, step 4, etc.
+Et je lui fais un énorme prompt qui lui explique exactement
+comment ajouter un nouveau registry.
+Donc ici, je pourrais lancer, ajouter un nouveau hook.
+Donc évidemment, j'ai pas de hook sous la main.
+Par exemple, ici, use mobile.
+Je rajoute ici use mobile.ps et je peux lancer la commande,
+comme on l'a vu juste ici, donc ça va prendre un peu de temps.
+Donc on ne va pas vraiment le faire.
+Mais ici, je peux faire slash new registry.
+Donc évidemment, il ne faut pas faire enter, il faut faire tab.
+Et je fais toujours cette erreur slash new registry.
+Et ici, j'appelle use mobile.ps.
+Et donc là, il va utiliser ton fichier new registry
+comme une sorte de prompt.
+Ce prompt va venir s'exécuter.
+Il va dire, je dois lire le fichier, ensuite, je dois l'ajouter.
+Ensuite, je dois créer la documentation et je dois build registry.
+C'est exactement ce que je lui demande de faire ici.
+Donc ces commandes, ça va te permettre de créer des workflows.
+Donc moi, j'ai plusieurs commandes que tu peux retrouver dans la description
+sur ma ressource complète qui s'appelle iBlueprint.dev.
+Si tu t'inscris sur iBlueprint.dev, tu recevras tous mes promptes, etc.
+dans un fichier Notion avec une formation qui t'explique comment l'utiliser.
+Donc pour aller un peu plus loin.
+Mais moi, ici, je peux ouvrir mon dossier cloud
+et on peut voir que j'ai des commandes qui s'effectuent.
+Donc j'ai plein de commandes et je peux créer des workflows.
+Par exemple, explore plan code test.
+Donc ça, c'est un bout de code qui a été pas mal
+repartagé sur LinkedIn.
+C'est quand tu veux faire une feature et tu lui demandes
+de follow le explore plan code test workflow.
+Explore un maximum de données en utilisant des parallèles sub-adjents
+pour aller plus vite.
+Plaine exactement ce que tu veux faire,
+précisément tout ce que tu veux, réfléchis un maximum
+et pose-moi des questions si on a.
+Code, bla bla bla, test, tout ce que tu peux.
+Et si ton testing a des problèmes,
+think ultra hard, donc think beaucoup,
+pour venir corriger le problème.
+Écris ce que tu as fait ou ce que tu n'as pas fait à la fin
+et fin du prompt.
+Donc ici, on peut faire plein de prompts,
+donc moi, j'en ai plein, etc.
+Ça, c'est pour les slash commandes.
+On peut faire des slash commandes qui sont dans notre projet,
+accessibles uniquement dans le projet
+ou des slash commandes dans le...
+Donc ici, c'est comme on l'avait utilisé, project level.
+Et on peut faire des commandes machine level.
+Donc si tu veux faire des commandes
+qui sont partagées avec tes collègues, project level.
+Si tu veux faire tes commandes qui sont disponibles
+partout sur ton ordi, machine level.
+MCP intégration.
+On va pouvoir ajouter des commandes, autant de commandes que tu veux.
+Par exemple, on va chercher un MCP que je pourrais ajouter.
+OK, donc par exemple, si on veut installer,
+j'ai pris un petit moment pour le chercher,
+sequential thinking.
+Donc ça permet de venir ici gérer
+step by step thinking for problem solving and analysis.
+Donc pour l'ajouter, en fait, ce que tu vas souvent retrouver,
+c'est ce genre de boot code, MCP server, sequential fixing, thinking.
+Ça, ça ne fonctionne pas avec Cloud Code.
+Et pour Cloud Code, le plus simple, c'est de venir l'ajouter avec le CLI.
+Et donc pour l'ajouter avec le CLI, j'ai fait un schéma juste ici pour les MCP.
+On va avoir des commandes comme ceci.
+Donc là, si j'écris la commande BAM juste ici,
+on a ce MCP server juste ici.
+Et pour créer la commande, on va venir utiliser la logique que j'ai mise ici.
+Donc Cloud MCP add.
+Ensuite, on va utiliser le nom du MCP, la commande utilisée.
+Donc ici, ASCOP, S user ou S project,
+pour savoir si c'est au niveau du projet ou du user.
+Et ensuite, tirer, tirer et la commande à lancer.
+Donc par exemple, ici, ça va être Cloud MCP add, sequential thinking.
+Ensuite, la commande à utiliser, c'est NPX.
+Puis l'ASCOP, ça va être SCOP project.
+Et ensuite, tirer Y.
+Et là, on appelle Frequential thinking.
+Donc ça, ça va être la commande qu'on doit lancer.
+On va ensuite dans le terminal et on lance Cloud MCP add,
+sequential thinking, NPX tirer S project.
+Et là, j'ai oublié un truc.
+Il faut faire tirer, tirer entre les deux pour dire fin de la commande.
+Add, donc là, add MCP server sequential thinking with command to project config.
+Project config, c'est que ça va créer un fichier MCP.json,
+qui contient le sequential thinking.
+Vous pouvez voir que j'ai fait une petite faute.
+Je sais plus comment on écrit sequential.
+BOM !
+On a du coup le ici, sequential thinking.
+Et je peux maintenant lancer Cloud.
+Et quand tu lances Cloud, tu vas pouvoir lui dire,
+voilà, il y a un MCP qui est disponible.
+Est-ce que tu l'utilises ?
+Oui, je l'autorise.
+Donc là, ça l'autorise et ça vient modifier settings.local.json
+en disant, j'ai accepté ce MCP qui a le droit d'être lancé.
+Et là, si je fais slash MCP, on peut voir qu'il a sûrement fail.
+Ah non, c'est Néon qui a fail to connect.
+On s'en fout de Néon.
+On veut sequential thinking et on peut voir qu'il est connecté.
+On peut voir view tool.
+Il n'a qu'un seul outil, c'est sequential thinking
+où il peut passer plein de paramètres comme ceci.
+On peut faire escape, escape, escape pour aller ici.
+Et maintenant, je vais pouvoir lui dire use sequential thinking
+to think about the problem.
+How many are in the world strawberry ?
+Et donc là, tu peux voir qu'il va utiliser le MCP
+to use sequential thinking, blablabla.
+Et on peut voir qu'il nous demande l'autorisation.
+Et on peut lui dire oui et ne me demande plus.
+Quand tu fais ça, ça va ajouter dans les permissions
+MCP sequential thinking underscore underscore
+que de sequential thinking.
+Si on veut autoriser toutes les commandes de sequential thinking,
+il nous suffit d'enlever ce qui est après le premier,
+le deuxième underscore.
+Et donc, quand je fais ça, maintenant, ça va autoriser toutes les commandes.
+Et du coup, là, il va être capable de venir réfléchir
+et me dire, ben voilà, il y a trois R dans le world strawberry.
+Alors, je ne sais pas qu'est ce que ça aurait donné
+si je lui demande la même question sans utiliser le sequential thinking.
+On va voir s'il tombe dans le piège.
+Je pense que maintenant, les IA ne tombent plus dans le piège.
+Voilà, ce n'est pas très fun.
+OK, bon, je ne sais pas quand est utile ce sequential thinking.
+Je n'utilise pas ce MCP, mais ça permet de rajouter des outils.
+J'ai essayé de trouver des trucs qui permettent de piéger les IA,
+mais je n'ai pas trouvé.
+Donc ensuite, on ajoute les permissions en ajoutant Allo MCP underscore underscore
+nom du MCP.
+Nom du MCP, c'est ce qu'on aura mis juste ici que j'ai mis,
+que j'ai illustré ici en rouge.
+Donc, on autorise notre MCP à être utilisé de cette manière.
+Donc ça, c'est pour toutes les bases.
+Ensuite, pour passer brièvement sur le dernier sujet avancé des Cloud Code,
+c'est les Hooks.
+Et Hooks, ça va permettre, en fait,
+quand toi, tu lui poses une question à Cloud Code.
+Cloud Code va communiquer avec Cloud
+et Cloud va ensuite dire, j'ai envie de lire le fichier script.ts.
+Et à ce moment-là, on peut faire ce qu'on appelle
+pre-to-use, post-to-use, qui va venir englober l'action.
+Pre-to-use, ça va permettre de dire, par exemple,
+avant que l'IA fasse une action, X ou Y,
+on va pouvoir checker si cette action est valide ou pas.
+Par exemple, on va pouvoir vérifier si cette action est pas harmful,
+par exemple, s'il essaie de supprimer tout notre ordinateur.
+Ensuite, il fait l'action.
+Une fois qu'il a fait l'action, on peut lancer quelque chose après.
+Par exemple, on pourrait dire, après que tu aies écrit un fichier,
+lance ESLint, lance TypeScript pour avoir les vérifications
+et on lui donne un deuxième feedback.
+Donc, je vais te montrer l'utilisation concrète de ces outils.
+Donc ici, j'ai le projet cloud.cloud, donc là dans mon projet principal.
+Et ici, j'ai le fichier settings.json.
+Dans ce fichier settings.json, j'ai ajouté trois commandes.
+La première commande, c'est qu'après qu'il m'ait posé,
+après qu'il m'ait répondu, ici dans le stop.
+Donc le stop, c'est quand il termine et je viens lancer un petit son.
+Parce que vu que j'ai pas mal de cloud qui travaille en même temps,
+ça me permet de savoir quand il termine une tâche.
+Par exemple, ici, on va lui poser la question à la con qu'on a posé juste avant.
+Je lui pose cette question, il va répondre et normalement tu vas entendre un bruit.
+Voilà un bim, ça veut dire terminé.
+S'il a besoin de me poser une question d'autorisation, c'est notification.
+Donc par exemple, si je fais plan mode et que je lui pose la même question,
+j'aurais beaucoup de chance qu'il me sorte un plan à la con.
+Mais cette fois, ça va pas être le même bruit.
+Bon, ici, il m'a répondu des trucs de drogués.
+Bon, c'est pas grave.
+Plan la modification de validate command qui interdit.
+Et donc là, tu vois qu'il y a eu ce petit bruit need human
+qui permet de savoir que l'IA est en train de me demander une action
+et que si je la fais pas, elle va pas continuer.
+Donc ça, c'est pour les premières choses.
+Deuxième chose, moi, souvent, j'utilise la commande cloud code.
+Donc ici, cloud avec DangerousKeyPermissions.
+Quand tu lances la commande avec DangerousKeyPermissions,
+tu pourrais être effrayé que l'IA commence à faire n'importe quoi.
+Pour éviter ça, j'ai créé un pretooluse qui va lancer chaque fois que bash est utilisé.
+Je lance la commande avec bun validatecommand.js.
+Validatecommand.js, c'est un script qui vient vérifier
+que l'IA n'est pas en train de faire quelque chose de dangereux.
+Alors, c'est très dur de le tester parce que généralement,
+l'IA, elle veut pas faire ce genre de commandes.
+Mais par exemple, si je lui dis supprime de manière récursive
+le dossier test-security, c'est pour un test.
+Et tu devrais être bloqué par validatecommand.js.
+Donc là, test-security, c'est un dossier de test que j'ai créé justement pour ça.
+Là, il fait bon après quelques réflexions.
+Maintenant, tu peux voir que quand il essaie de faire RMRM avec un chemin absolu,
+donc par exemple test-répertoire, ça lui fait bash-operation-blocked-by-hook, bla bla bla.
+Donc ici, ça te permet de créer autant de scripts que tu veux,
+qui te permet ensuite de passer le bypass-permission en étant safe,
+qui commence pas à détruire ton ordinateur.
+Donc là, tu vois qu'il y a plein de commandes qui sont interdites, etc.
+Donc ici, système destruction, privilege escalation, command injection,
+remote code execution, network attack, sensitive file access,
+and 50 more other dangerous patterns qui ne sont pas autorisés.
+Donc par exemple, si je lui dis lance une commande sudo pour tester le script,
+sudo ls operation-blocked-by-hook, il a pas le droit de lancer sudo.
+Donc typiquement, ici, tu peux faire le script que tu veux pour bloquer ou non des actions.
+Et donc ici, une fois que tu as fait ce script,
+tu peux l'ajouter dans settings.json en faisant pretooluse matcher bash.
+Donc ici, je dis, je veux que ça ne s'effectue que sur la commande bash.
+Le matcher, c'est à peu près la même chose qu'il y a dans Allo,
+avec ici hook, une commande qui lance bun, bla bla bla.
+On peut lancer n'importe quelle commande ici, python, etc.
+Bun, c'est très pratique parce que c'est zéro dépendance, c'est simple et efficace.
+Quand est-ce que tu peux créer des scripts comme ça ?
+Avec Cloud Code, et là, c'est la magie.
+C'est que tu viens dans la documentation, tu viens chercher hook,
+tu copies le code de hook et tu lui dis, crée un nouveau hook, bla bla bla,
+utilise la doc, tu mets la doc et c'est parti.
+Moi, il m'a fait un code one shot qui fonctionnait.
+Ensuite, tu lui dis, fais des tests.
+Il est capable de faire des tests avec echo.
+Il est capable d'avoir un fichier security log.
+Bref, il gère tout ça.
+Et donc, les hook, ça te permet de faire pas mal de choses.
+Donc, exemple de hook, par exemple,
+validate and sanitize outputs,
+always cut shell variables,
+block path traversal, par exemple, point point,
+use absolute paths,
+skip sensitive files,
+donc, par exemple, tu pourrais dire,
+si il essaie de read point env ou point git, tu lui interdis.
+Configuration safety, et donc ici, il y a la documentation, etc.
+Donc voilà un petit peu pour les hook qui s'effectuent comme ceci.
+Et voilà en fait, tout simplement pour cette masterclass qui est maintenant terminée.
+J'ai vraiment donné un maximum de choses.
+Encore une fois, si tu as envie d'avoir tous les fichiers,
+mes configurations, mes workflows plus avancés,
+je t'invite à aller sur un des sites qui est par ici,
+mais que tu peux taper highblueprint.dev.
+Ça va être du gros lourd qui arrive là-dessus.
+Et je t'invite à t'inscrire maintenant si tu as envie d'en savoir plus.
+Voici pour cette masterclass sur Cloud Code.
+On se retrouve très bientôt pour une prochaine vidéo sur Cloud Code
+ou sur Next.js ou sur React.
+Mais c'est vraiment un outil tellement dingue
+que ça me fait kiffer de faire des vidéos sur ce sujet.
+On se dit à bientôt. Ciao ciao.

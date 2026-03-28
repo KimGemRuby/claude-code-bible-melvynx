@@ -1,0 +1,521 @@
+Cloud Code est l'outil créé par Anthropic ou Claude pour t'aider à couder ou à faire n'importe
+quoi avec ton ordinateur. Dans cette vidéo Master Class, je vais te présenter tout ce qu'il faut
+savoir sur Cloud Code, que tu sois un développeur, un hacker, un vibe codeur, un shipper, tout ce que
+tu veux. Dans cette vidéo, on va prendre en main Claude 2.0 afin que tu puisses utiliser cet outil
+pour créer des applications et on va tout de suite commencer. Alors Cloud Code est disponible sur le
+site cloud.com slash product slash Cloud Code où je te mettrai le lien sous cette vidéo et pour
+l'installer, pour commencer avec Cloud Code, on va devoir exécuter cette commande qui est juste ici.
+Alors si on prend cette commande et qu'on ouvre un nouveau terminal, donc si tu ne sais pas ce que
+c'est le terminal, c'est un outil qui permet de lancer des commandes. Par exemple ici ls, ça permet
+de lister les dossiers que tu as actuellement et ça te permet en fait de contrôler en général ton
+ordinateur via des lignes de commande un peu comme les premiers ordinateurs au monde n'étaient qu'un
+terminal. Bref, dans ce terminal, tu vas pouvoir lancer cette commande donc qui est inscrite juste
+ici. Il se peut que quand tu lances cette commande tu aies une erreur parce qu'avant de lancer cette
+commande, il faut à tout prix que tu installes Node.js et donc quand tu vas sur ce site, tu vas avoir
+ici un bouton installe Node.js, tu vas pouvoir cliquer dessus juste ici et tu vas pouvoir copier
+les bons paramètres. Donc tu vois que si tu es sur macOS, Windows, Linux, ici tu peux garder nvm et tu
+peux garder ici npm, il n'y a pas de souci, mais tu vas pouvoir lancer cette commande juste ici,
+copy to clipboard et ensuite la coller dans ce fameux terminal. Pour ouvrir ce terminal,
+au cas où tu ne l'avais pas fait, il suffit de venir faire commande espace pour afficher le
+finder et écrire terminal et sélectionner cette application terminal. Donc par défaut elle ressemble
+à ça et moi j'utilise pas celle-ci parce que j'arrive pas à zoomer et donc j'utilise une autre
+application qui s'appelle iTerm qui me permet de zoomer mais ça ne change pas grand chose. Il
+se peut aussi que ton terminal ressemble à ça, donc il ressemblerait à ça avec uniquement le
+nom de ton mac comme ceci avec un petit icône. Ça ne change rien à ce tutoriel, tu peux lancer
+cette commande juste ici comme ceci afin d'installer. Donc là tu vas appuyer sur enter et tu vas attendre
+que ça termine. Quand ce sera terminé, tu vas pouvoir vérifier que l'installation a fonctionné
+en écrivant npm-v. Normalement ici tu devrais avoir 11.4.2 ou n'importe quel chiffre, ça veut
+dire que ça a fonctionné et une fois que c'est fait tu vas pouvoir lancer cette commande et tu
+verras qu'au bout de quelques secondes ça te dira que ça a été installé. Moi je l'ai déjà installé
+pour vérifier que c'est installé, tu peux lancer cloud-v et quand tu fais cloud-v ça devrait te
+donner une version donc ici par exemple 2.0.2 qui prouve que ça a bien fonctionné. Une fois que
+c'est fait, bravo, tu as installé cloud-code sur ton ordinateur et tu es prêt à l'utiliser. Maintenant
+qu'on a cloud-code sur notre ordinateur, il va falloir se connecter. Pour se connecter, tu peux aller
+sur ton ordinateur et taper cloud. À ce moment là quand tu vas écrire cloud pour la première fois,
+tu vas arriver sur normalement cette page qui va te dire voilà avec un petit icône welcome to
+cloud code et ici tu vas pouvoir choisir ton thème donc par défaut moi je te propose de garder le
+dark mode qui va très bien et là tu vas devoir choisir une manière de te connecter. Tu as deux
+solutions soit tu te connectes en utilisant ton API key donc quand tu choisis cette option ça va
+faire que tu vas payer par rapport à ton usage. Il faut faire attention parce que l'usage peut
+aller assez vite. Si ici je t'ouvre un terminal qui permet de voir combien j'ai dépensé de
+dollars ces derniers temps, on peut voir qu'ici je suis à 569 dollars dépensés et donc si j'avais
+utilisé l'API je serais à 569 dollars. Si tu n'as pas envie que ce soit ton cas, tu peux utiliser le
+cloud account subscription mais à ce moment là en choisissant le cloud account subscription,
+tu vas devoir prendre un abonnement cloud et donc quand on regarde les abonnements cloud juste ici,
+les pricing, tu vas avoir le choix entre un abonnement gratuit mais dans l'abonnement
+gratuit cloud code n'est pas disponible ensuite tu as l'abonnement pro et à ce moment là pour
+20 dollars par mois tu auras accès à l'abonnement pro avec à peu près 40 à 45 messages et sinon
+tu as l'abonnement max où tu as à peu près 200 à 250 messages par session. Qu'est ce que c'est
+une session ? En fait quand tu envoies ton premier message tu as une session qui dure 5 heures et
+pendant ces 5 heures tu vas par exemple pouvoir avec l'abonnement pro envoyer 40 à 45 messages et
+avec l'abonnement max 200 à 250 messages comme ceci. Une fois que ces 5 heures sont passées,
+tu vas avoir à nouveau un bloc de 5 heures où tu peux renvoyer le même nombre de messages. Donc
+ici tu dois choisir un abonnement et une fois que tu as choisi cet abonnement et que tu t'es
+abonné, tu vas pouvoir aller dans notre terminal et choisir cloud account subscription. À ce moment là
+ça va t'ouvrir ton navigateur et si tu es connecté tu vas pouvoir choisir ton abonnement comme ceci.
+Attention il faut à tout prix être connecté sinon ça ne marchera pas et si tu n'es pas
+connecté ça va te proposer de te connecter. On va ici cliquer sur authorise afin de se connecter et
+maintenant ça me dit login. Successful please press enter to continue. Ici ça va te proposer un
+petit security note qui n'est pas très importante et ici est ce que tu veux utiliser cloud code
+terminal setup ? On va dire oui avec les settings recommandés. Ici est ce que tu fais confiance de
+lancer ce de lancer cloud code dans ce dossier. Donc là tu peux voir que je suis à la racine de
+mon ordinateur et il n'y a pas de souci tu peux évidemment dire que tu fais 100% confiance avec
+yes. Et voilà on a maintenant l'interface de cloud code qui est prête pour pouvoir coder. Par défaut
+ici il y a une petite spécialité que moi j'ai c'est que tu n'auras pas ces informations qui
+sont juste ici. Ça c'est ma configuration personnelle qui fait que j'ai des informations
+juste ici. Donc je vais juste les enlever afin que tu puisses te rendre compte qu'est ce que toi
+tu auras vraiment. Donc voilà toi normalement tu auras ceci donc ici tu auras aucune information
+avec un point d'interrogation qui permet de voir les shortcuts et à gauche tu auras écrit thinking
+off ou thinking on. Donc on va tout de suite découvrir les fonctionnalités principales de
+cloud code. Pour ça on va commencer par aller dans un dossier au hasard donc enfin dossier qui
+nous permet de pratiquer. Donc moi ici je vais aller dans développeur, modèle test et je vais
+faire mkdir test-cli-tool cd test-cli-tool mkdir cloud code cd cloud code et donc en fait ici
+en faisant ces petites commandes là ça permet de me déplacer en fait tu peux voir qu'actuellement
+quand je vais lancer cloud tu vas voir que maintenant je suis dans le dossier slash user
+slash melvin slash développeur slash model test slash test-cli-tool slash cloud code et donc moi
+ça va me permettre ici de lancer du code directement ici. Donc ce que tu peux voir ici c'est le welcome
+back avec ton prénom. Ici tu vas voir l'abonnement que tu as choisi, le modèle actuellement à l'heure
+où je fais cette vidéo 4.5 est le meilleur modèle que tu peux avoir ici et ici tu vas avoir des
+petits machins. Là tu as les tips et tu as ici recent activity. Bref maintenant qu'on a ici cloud
+code on va pouvoir voir les différentes choses qu'on peut faire. Cloud code est une interface de
+chat ok donc par défaut ce qu'on peut faire avec cloud code c'est faire du chat donc par exemple
+ici je peux lui dire créer un fichier index.html qui sera une landing page pour intérieur IA,
+une application qui permet d'upload une image avec un prompt et de générer notre intérieur et
+juste un fichier index.html sans aucun autre fichier. Quand tu lances ça tu vas voir que l'IA va
+commencer à travailler comme ceci avec une sorte de petit mode drizzling et là on peut voir qu'il
+a réfléchi. Alors ça c'est parce que je suis avec le thinking mode, on va voir ça juste après
+ensemble quand on va faire les détails. Là je veux juste montrer qu'assez facilement on peut lui
+demander de faire quelque chose ou il contrôle notre ordinateur ici et va être capable de créer
+des fichiers. Donc là par exemple il va prendre un petit moment parce que je pense que le fichier va
+être assez gros mais il est en train de créer un fichier. Quand il va créer un fichier comme
+ceci il va te proposer si tu as envie d'accepter ou pas ce qu'il est en train de faire. Nous ici on
+va dire yes et tu peux voir qu'ici il a écrit le fichier. Comment est-ce qu'on peut voir et naviguer
+dans ce fichier ? Pour ça on va pouvoir installer Visual Studio Code si c'est pas déjà installé.
+Visual Studio Code c'est un éditeur de code visuel qui te permet de voir, de lire des fichiers et
+autres de manière 100% gratuite et open source. Donc tu vas pouvoir cliquer ici sur download
+format et une fois que c'est fait et que tu as installé tu vas pouvoir ouvrir Visual Studio Code.
+À ce moment là tu peux voir que moi ça m'ouvre sur un dossier. Tu vas pouvoir faire commande shift
+p commande shift p et ici tu vas pouvoir écrire code terminal non code path voilà tu vas faire
+shell command install code command in path donc commande shift p tu écris code path et ensuite
+tu choisis le même que moi et tu fais enter. Ça va l'installer et une fois que c'est fait et que
+tu as mis ton petit code juste ici on va pouvoir fermer Visual Studio Code, aller dans notre
+terminale et ici en fait on va pouvoir lancer des commandes terminale avec un shortcut quand
+tu fais point d'interrogation on peut lancer des commandes bash avec le point d'exclamation et
+donc là quand je fais point exclamation je peux faire code point pour ouvrir ce projet dans
+Visual Studio Code donc je refais ce que je viens de faire. Tu viens dans Cloud Code tu fais point
+d'exclamation ici ça écrit que tu passes en bash mode et tu écris code point pour faire des commandes.
+Avec ce point d'exclamation on peut faire n'importe quelle commande par exemple point
+d'exclamation ici je pourrais écrire echo salut et tu peux voir que ici ça fait la commande echo
+salut pour information echo permet de faire une log et donc ici ça écrit salut. Une fois qu'on a
+Visual Studio Code ouvert en fait on peut voir le fichier index.html qui est ouvert juste ici et tu
+peux voir tout ce qu'il a fait pour notre landing page. Ici on peut afficher ce fichier en faisant
+reveal in finder ça va t'afficher comme ceci le fichier et quand tu ouvres ton navigateur tu
+peux drag and drop le fichier index.html pour voir la landing page que Cloud Code a créé et donc
+en fait tu peux voir que ici en installant Cloud Code avec le terminal on peut lui demander de
+créer des pages de créer des fichiers exactement comme si tu étais avec l'interface de Cloud AI
+juste ici donc sûrement que tu as peut-être déjà l'abonnement Cloud et ici tu peux lui dire crée
+moi une landing page pour intérieur AI très très simple. La différence c'est que quand tu le
+demandes de faire ça à Cloud juste ici en fait tout va être dans Cloud et c'est pas sur ton
+ordinateur et tu vas être obligé de télécharger le fichier de l'ouvrir sur ton ordinateur etc.
+Avec Cloud Code tu peux directement faire tout ça sur ton ordinateur comme on peut le voir juste
+ici. Donc ça c'est la base pour lancer Cloud Code dans notre application et une fois qu'on a
+ouvert Visual Studio Code on va pouvoir faire la deuxième chose très intéressante c'est de
+installer l'extension parce que peut-être que toi tu n'es pas très à l'aise à l'idée d'utiliser
+le terminal comme ceci et que ça te fait pardon ça te fait un petit peu peur d'avoir le terminal
+il n'y a pas de souci tu peux installer l'extension donc là tu peux aller dans
+Visual Studio Code ici on a un petit bouton extension et tu vas pouvoir installer cette
+extension je te mettrai aussi dans la description et dans le lien masterclass pour setup Cloud Code
+ici on a Cloud Code for VS Code avec ici pas des très bonnes reviews mais c'est pas très grave
+ici tu vas pouvoir installer et vérifier que tu es dans la version 2.0 supérieure ok il faut
+que ce soit 2.0.1.2.3.26 c'est pas très grave il faut juste que ce soit supérieur à 2.0 une fois
+que c'est fait on peut ouvrir ce fichier index.html et cliquer sur ce petit icône juste ici et quand
+on clique sur ce petit icône juste ici on va pouvoir afficher comme ceci donc là je vais te
+montrer ça tout de suite bam on va avoir l'interface Cloud Code et donc là c'est très similaire au
+terminal qu'on avait avant sauf qu'on a une jolie interface on peut voir la conversation que j'ai
+fait juste avant tu te rappelles juste ici où on peut voir la conversation on peut créer une
+nouvelle conversation juste ici et avoir plusieurs tables et ici on a ce petit chat et là on a un
+petit bouton qui permet de changer de mode le mode qu'on a juste ici c'est ask before edit qu'est-ce
+que ça va faire ça va faire que quand ici je lui dis change le titre de index.html pour taguer un
+fichier tu peux faire commande at et écrire index.html et en fait tu vas voir qu'avec ce
+mode qui s'appelle ask before edit il va me demander si je veux valider ou pas et tu vois
+que ici chaque fois qu'il va faire une edit il va te changer le titre ici il va te dire est-ce
+que tu veux faire cette modification oui ne me demande plus non ou sinon un message qui
+lui permet de savoir qu'est-ce qu'il doit faire et quand tu choisis oui et ne me demande plus tu
+vas passer en mode edit automatically et à ce moment là il va arrêter de te demander ses
+éditions etc donc c'est très pratique parce que là je peux lui dire modifie le titre avec
+interior via et tu peux voir que quand je fais ça et bien cette fois il va arrêter de me demander
+concernant le terminal on a exactement les mêmes modes juste ici pour changer de mode tu
+dois faire shift tab et là tu peux voir qu'on est en mode accept edits et ça c'est le mode
+edit automatically donc les edits vont se faire automatiquement ensuite on a le mode plein mode
+ça en fait ça va interdire à l'IA de modifier du code et ça va te proposer un plan avant de
+coder et on a le mode par défaut où il va te demander chaque fois qu'il veut faire une
+modification donc on a trois modes et ces trois modes tu peux changer de mode avec commande shift
+juste ici afin de switcher de mode et là la même chose tu peux changer de mode ici donc tu peux
+voir que edit automatically c'est blanc le plein mode c'est bleu et le ask before edit c'est orange
+comme ceci donc ça ici l'extension chrome te permet de faire des modifications par exemple ici
+je peux lui dire rend la landing page bien plus moderne et tu vois tu vas pouvoir en fait poser
+des questions à l'IA, la faire travailler, la faire réaliser des features, tout ce que tu aurais besoin
+en tant que développeur ou webpoder directement via l'extension. Par souci de simplicité et parce
+que le terminal offre beaucoup plus de possibilités on va continuer sur le terminal mais sache qu'à
+peu près tout fonctionne et je ferai des allers retours avec ici le chat afin de pouvoir voir les
+différences dans la suite du tutoriel. En attendant ce qu'on peut faire sur vs code c'est au lieu
+d'utiliser un terminal séparé on peut ici faire commande shift p, terminal donc ici tu écris
+terminal et tu fais create new terminal comme ceci ou je sais plus laquelle c'est la meilleure des
+commandes create new terminal et voilà ça va t'ouvrir un terminal comme ceci et comme ça tu
+vas pouvoir directement dans visual studio code lancer Claude et quand tu lances Claude tu peux
+voir qu'ici bah au lieu d'avoir un terminal séparé bah j'ai Claude directement à côté de mon code
+donc ici je vais juste laisser l'IA terminer elle a modifié le fichier comme on peut le voir juste
+ici et une fois qu'elle a terminé tout ça je vais mettre l'extension juste ici fermer ça et comme ça
+ici on va pouvoir se balader avec les différents fichiers donc jusqu'à maintenant on a vu pour
+rappel le mode bash on a vu commande shift pour changer de mode et maintenant il faut qu'on
+voit un autre mode qui est le thinking mode thinking va permettre à l'IA d'avoir d'avoir plus de
+générations de tokens et de réfléchir à ta fonctionnalité pour activer le mode thinking tu
+vas devoir taper sur tab tu peux voir qu'il ya thinking on thinking off quand le thinking est
+off les borders sont grises et quand le thinking est on les borders sont bleus donc avec le thinking
+mode l'IA va généralement être plus intelligente par exemple imaginons que dans notre application
+juste ici je lui dis une sidebar en haut et donc là je vais te proposer d'utiliser une autre
+application très intéressante donc je vais tout de suite l'ouvrir et l'afficher le nom de
+l'application c'est cette application s'appelle tchak tchak tchak voicing alors si tu es sur
+mac ça marche sinon il faut en trouver une autre mais on a plein voicing comme ceci c'est une
+application qui a un one time payment donc ici 39 dollars pour deux device ou 25 dollars pour un
+seul device et ça te permet de faire du voice mode donc je le trouve bien moins cher que les
+autres par exemple super whisper que j'utilisais avant parce que super whisper coûte 9 dollars par
+mois t'as coûte très très cher 9 dollars par mois ou 250 dollars à vie alors que voicing coûte
+tout simplement 39 dollars ou 25 dollars à vie tu vas pouvoir installer cette application suivre le
+onboarding pour setup et après comme ça tu vas pouvoir utiliser un raccourci donc par exemple
+moi c'est commande et quand j'appuie sur commande ici je peux parler raconter ma vie bla bla bla bla
+bla bla et quand je le rappuie sur commande ça vient écrire le texte que j'ai mis dans cloud
+code donc l'avantage c'est qu'ici je peux lui dire s'il te plaît créer une sidebar responsive qui
+est plutôt en fait dans la header je veux différents liens dans la header et je veux
+que quand ça devienne en mobile avec du javascript du css ou je sais pas trop quoi tu fasses en sorte
+que cette sidebar se transforme en burger menu tu peux utiliser les icônes de fonta wesson et
+quand ce burger non quand ce menu est en burger menu pardon là je dis n'importe quoi c'est pas
+grave et bah quand on clique dessus ça nous affiche une sorte de dialogue ou menu tout en
+haut qui s'affiche et qui permet de sélectionner les différents liens bon je fais exprès de dire
+un peu n'importe quoi juste pour te montrer tu peux voir qu'ici on a un transcript on peut lui demander
+la question et par défaut cloud code va d'abord regarder les différents fichiers qui sont
+disponibles donc comme tu peux le voir ici il lit mon fichier index.html afin de voir et il va
+commencer à faire des modifications et d'autres choses qui vont se produire juste ici donc voilà
+là il lit le fichier et il va ajouter ce que je lui ai demandé exactement comme je lui ai dit et tu
+peux voir qu'ici il ya des thinking process bon là il me demande si je veux valider moi je vais
+passer en auto accept edit afin d'éviter d'avoir tout ça mais là tu peux voir qu'il think et en
+faisant le raccourci control o en fait je peux voir les thinking là il dit ok le fichier a été
+modifié je dois le relire maintenant je vais ajouter font away some bla bla bla bla bien maintenant je
+vais ajouter le style etc et donc en utilisant control o on peut afficher des thinking comme
+ceci pour voir ce qu'il est en train de réfléchir et le thinking va avoir tendance à rendre l'IA
+plus intelligente et à faire des meilleurs résultats en moyenne suivant la complexité surtout que tu
+veux faire donc moi je t'invite à toujours laisser le thinking activé afin de voir les
+différentes choses donc là il a terminé il a créé son burger menu et on peut évidemment tester
+pour voir ce que ça donne donc là on peut voir qu'il ya le menu et quand je passe en responsive
+et ben on peut voir que là j'ai un menu qui fonctionne plus ou moins parfaitement avec ici
+mes différents boutons donc c'est parfait on a bien réussi à faire cette fonctionnalité donc
+voilà pour rappel commande table ça permet de changer de mode table ça permet d'activer
+ou non le thinking qu'est ce qui nous reste à découvrir la prochaine étape à découvrir la
+mémoire de Claude Claude peut suivre ou non tes indications et il a un fichier de mémoire qui
+s'appelle Claude point MD pour générer ce fichier tu peux utiliser la commande et on va voir les
+commandes juste après slash innit slash innit comme ceci quand tu écris juste slash innit tu
+peux voir qu'on a une autocomplétion ici avec l'extension c'est la même chose quand j'appuie
+sur slash innit j'ai la commande aussi qui s'affiche là et quand j'appuie sur slash innit en
+fait ça va demander à l'IA de venir générer ce fichier Claude point MD Claude point MD ça
+agit comme une mémoire de Claude et la mémoire de Claude va influencer chaque fois le résultat de
+Claude comment ça fonctionne c'est qu'en fait chaque fois qu'on envoie un message à Claude ce
+fichier va être injecté comme une règle qu'il faut suivre et donc en fait en ouvrant ce fichier
+sur visual studio code ici on a les différentes informations et on va pouvoir le modifier ce
+fichier donne des règles c'est une single page pour intérieur IA donc il y a qu'un seul fichier
+les features c'est une responsive navigation un système de style et JavaScript interaction
+etc ici par défaut vu que l'application est très petite il nous donne peu d'informations c'est
+pas très utile ce qui nous a fait juste ici mais je vais te montrer que par exemple juste ici je
+vais supprimer tout ça et je vais juste garder ça et je vais faire style rules you need to always
+keep in mind that our application primary color is indigo 500 comme ceci et donc en lui disant ça
+on peut voir que là je peux utiliser la commande slash clear pour reset reset totalement la
+conversation ou slash new donc slash clear ça reset la conversation et là je peux lui dire
+modifie le style en utilisant notre couleur de l'application et avant de modifier le style
+dis moi quelle est la couleur de notre application primary fait ici tu vas voir que il va être
+capable d'avoir ce fichier plot.md dans sa mémoire pour nous dire ah bah oui moi je sais très bien
+que la couleur c'est indigo 500 et donc ici va modifier notre fichier en suivant indigo 500
+qu'est ce qu'il faut mettre dans ce fichier plot.md typiquement le plus important ça va être les
+commandes donc par exemple des commandes pour lancer le serveur donc moi ici je vais lui dire
+s'il te plaît dans le projet actuel j'ai envie que tu set up un projet vite avec npm package
+d'adjison etc afin que bah on puisse utiliser des commandes pour lancer le serveur et que ça soit
+auto refresh fait ça s'il te plaît une fois que c'est terminé donne les différentes commandes
+disponibles dans le fichier plot.md enfin mais à jour le fichier plot.md avec les différentes
+commandes disponibles afin que tu puisses en rappeler dans les prochaines sessions donc là
+je lui demande ceci je lui demande de set up un projet vite et donc il va être capable ici de
+set up le projet vite comme ceci dans mon dans mon projet avec le fichier index.html on va voir qu'il
+va initier quelque chose tu peux voir que quand il lance des batch command ça nous demande si on
+a envie d'autoriser cette commande et ici on a trois options oui et ne me demande plus toutes
+les commandes npm init et non donc nous on va dire oui et ne me demande plus et quand tu fais ça
+on a ici un fichier cloud avec settings.local.json qui nous dit qu'il autorise les commandes npm
+init et maintenant on peut tout simplement remplacer ceci donc là c'est un fichier qu'on
+appelle de configuration et dans ce fichier de configuration moi je vais lui dire j'autorise
+toutes les commandes npm init et après n'importe quel paramètre nous on va supprimer le mot init
+comme ça on dit j'autorise toutes les commandes npm ce qui est encore mieux là tu peux voir qu'il
+a set up notre projet avec vite vite qui est un outil qui permet de lancer l'application et il
+a modifié notre fichier cloud.md juste ici avec les différentes commandes disponibles et donc là tu
+peux voir que c'est typiquement l'usage du fichier cloud.md qu'il faut faire c'est de lui donner les
+différentes commandes donc nous on va lui enlever celui ci et on va garder ça et l'avantage quand
+tu fais ça c'est que quand je relance un projet cloud comme ceci et que je lui dis s'il te plaît
+lance le serveur pour moi en fait cloud est capable de directement savoir quelle commande
+est disponible parce que c'est dans sa mémoire et tu peux voir qu'ici nous dit one background task
+donc qu'est ce qu'il a fait il a lancé le serveur pour nous il nous dit bah voilà le serveur est
+lancé sur ce port tu peux faire commande clic pour l'ouvrir et ici on peut voir que le serveur est
+bien lancé sur l'application dite par cloud code donc une fois que c'est fait et là j'ai encore
+une fois merdé le zoom donc ici on va faire zoom to actual dice une fois que c'est fait tu peux voir
+que ici il a lancé le serveur lui-même parce que cloud code est capable de lancer le serveur de
+lancer des commandes etc on va pouvoir voir les commandes qu'il a lancé ici en faisant flèche du
+bas là on rentre dans la tâche et là on peut voir les commandes utilisées background task npm
+rendez-vous je peux appuyer sur enter et voir la commande qu'il a exécuté les différentes logs je
+peux aussi prendre cette tâche et utiliser le cas pour qu'il complètement le process afin de
+pouvoir supprimer le serveur donc là je peux lui dire relance le serveur stp évidemment normalement
+il va s'exécuter avec un plaisir fou donc ici il essaie de supprimer le le le background et il
+relance et tu peux voir que dès qu'il le relance ça va me rafficher le background task juste ici
+donc voilà on est pas mal on a lancé le serveur et on a découvert le cloud.md la prochaine chose
+qu'il faut qu'on découvre c'est les commandes quand on appuie sur slash on peut faire des
+injections de commandes donc tu peux voir que moi avec ma configuration j'ai beaucoup beaucoup beaucoup
+beaucoup de commandes et on va pouvoir en créer en allant dans le dossier cloud ici de notre projet
+ici je vais aller faire clic droit après avoir fait clic droit je vais faire new file et là je
+vais taper commande avec un s comme ceci slash par exemple ici on va faire une commande qui est très
+utile qui s'appelle epct.md et epct.md c'est une commande qui suit le workflow epct explore plan
+code test et moi je te propose en général d'éviter d'écrire tes commandes toi même et de plutôt
+de demander à l'IA d'écrire les commandes donc ici on peut aller dans l'IA et je peux lui dire
+pour la commande epct.md refactor celle ci en suivant la documentation et donc ici je vais
+lui donner les liens de la documentation donc là tu vas voir un hack ultime on va aller dans
+cloud code command je vais lui donner le lien de la documentation et je vais faire cloud code prompt
+guide best practice for agentic coding alors ça c'est pas ça prompt engineering overview
+et ici on va lui coller le cloud 4 prompt engineering best practice donc là je lui
+dis pour la commande refactor celle ci en suivant la documentation là je lui mets des liens de
+documentation et ensuite je vais lui expliquer ce qu'il doit faire j'ai envie que cette commande
+suive le workflow epct explore plan code test première phase c'est explore il doit utiliser
+des tools comme la recherche internet etc pour venir rechercher des informations sur la commande
+ensuite il doit chercher dans le code toutes les informations qu'il doit connaître sur l'application
+tout simplement pour avoir le contexte nécessaire une fois qu'il a tout le contexte il va faire un
+plan ici c'est très important que l'IA arrête de coder et me demande si j'ai envie de valider ou
+non ce plan et qu'elle me pose des questions sur les choses dont elle serait pas sûre de comment
+elle doit faire elle doit vraiment penser et réfléchir à ces questions pour vraiment se
+challenger et me poser des questions pour pas commencer à halluciner n'importe quoi une fois
+que c'est fait elle va passer au code et donc là elle va coder l'intégralité de la fonctionnalité
+puis elle va passer au test alors attention qu'est ce que c'est les tests elle va tout simplement
+lire les fichiers de configuration pour voir les commandes disponibles comme eslint, typescript
+etc et elle va ensuite procéder aux commandes disponibles elle ne va pas créer des tests qui
+n'existent pas ou lancer des tests qui n'existent pas mais uniquement faire les choses qui existent
+donc là tu peux voir que je fais un prompt dégueulasse et je viens lancer ça et tu peux
+voir que l'IA va de manière assez intelligente créer un prompt correct sur cette commande
+donc là tu peux voir qu'avec fetch elle vient lire la documentation donc ici elle a lu la
+documentation de slash command et prompt on peut voir d'ailleurs qu'en fait le fetch ça vient avec
+un prompt qui lui dit des instructions et qui va lui retourner les informations là dessus ici il
+a reçu les informations il est réfléchi afin de pouvoir créer la commande parfaite qu'on lui
+a demandé juste ici normalement le résultat va être assez cool et voilà ici on a la commande
+qui a été créée on lui dit que tout est bon et là tu vois qu'il y a un très bon workflow feature
+request avec les phases explore instruction qu'on ajuste ici le plan avec le plan instruction etc
+une fois qu'on a créé une commande comme on l'a fait juste ici on va pouvoir l'utiliser dans
+notre terminal et donc là si on fait slash je vais l'appeler epct2 parce que moi j'ai
+déjà une commande epct mais quand on fait slash epct on peut voir qu'il n'existe pas pour qui
+s'affiche il faut couper l'autre code et le relancer donc ici pour couper on fait control
+c on le relance et à ce moment là on peut voir qu'on a slash epct 2 qui est dans le projet et
+donc là je peux lui dire et une application multi page pour VJS avec une page qui est la landing
+page et la deuxième page qui est une page about dans notre projet donc là je lui donne un argument
+ok et là tu peux voir qu'il a écrit l'argument et là quand je fais enter avec mon super nouveau
+prompt etc et bah il va suivre mon workflow pour réaliser ma feature et donc tu vois qu'il
+commence ici par explorer le curent project ensuite ici il veut faire une web search ici je vais lui
+demander de accepter et je lui ai dit ne me demande plus donc encore une fois ça modifie
+les permissions ici afin qu'il puisse faire une recherche web comme on peut le voir juste ici là
+il vient lire la documentation de vite pour comprendre comment il va pouvoir faire cette
+histoire de multiples pages en fait moi même je sais pas comment il va pouvoir le faire mais
+c'est pas grave là on peut voir qu'il a une phase de recherche beaucoup plus étendue si je lançais
+cette commande sans paramètres sans slash epct et que je lançais juste ce prompt il irait directement
+au développement en utilisant sa mémoire mais là avec cette commande que j'ai créée avec le
+prompt d'avant qui lui explique précisément comment il doit faire les choses et bah il va
+donner un résultat et donc là tu peux voir que il s'arrête normalement voilà il s'est arrêté
+correctement en suivant mes instructions en me disant bah voilà voici mon plan basé sur
+mes explorations je te propose de faire ceci modifier le fichier donc là si t'es développeur
+évidemment tu vas pouvoir lui demander des questions donc la question qu'est ce que quel
+contenu tu veux mettre dans about dans about j'ai envie d'expliquer d'où vient l'application
+qu'elle a été créée par melvin et que c'est super génial de la mort qui tue ensuite deuxième
+question oui tu peux utiliser une spreadsheet commune comme ça ce sera plus pratique oui il
+faut que la navigation inclut le home et le about en haut ce sera parfait et oui c'est mieux de
+séparer le fichier js dans un nouveau fichier donc là on lui donne les réponses à ces questions
+qu'il m'a posé je lui ai répondu avec mon extension pour parler comme ceci et là bah il
+vient commencer à travailler et tu vois qu'il a bien suivi notre workflow et donc on a plus
+injecté une commande qu'on peut réutiliser dans les exemples de commandes que je peux te donner
+juste ici je vais t'ouvrir mon clod ici donc ça c'est mon projet clod en fait tu peux avoir
+différents types de commandes il ya précisément trois types de commandes il ya les commandes du
+projet partagé donc ça c'est dans le dossier de ton projet par exemple mon projet slash point clod
+slash command slash set up point d ça cette commande elle va être partagée et publiée sur
+github mais on a des commandes qui peuvent être cachées dans un dossier donc juste ici si on
+regarde alors en fait j'ai dit n'importe quoi il ya deux types de commandes il ya les project
+commandes ou les personnels commandes et donc les personnels commandes elles vont pas être
+partagées à ton équipe les personnales commandes elles vont être dans ton point clod slash command
+et donc là ici j'ai ouvert le projet point clod slash commande et tu peux voir qu'ici j'ai plein
+de commandes par exemple j'ai une commande que j'aime bien débug et donc cette commande elle
+utilise le même pattern que je t'ai mis juste avant qui permet de débugger etc j'ai une commande que
+j'adore c'est prompt commande et cette commande me permet de créer des commandes si tu as envie
+d'avoir toutes mes commandes je le montre juste ici tu peux te rendre sur mlv.sh slash cccli et en
+fait j'ai créé un CLI qui te permet en quelques secondes d'avoir toutes les mêmes commandes que
+moi d'avoir mon ma statue live, mes output styles, mes notifications sound etc donc il te suffit d'aller
+dans le premier lien sous cette vidéo pour avoir mon setup donc ici les idées de commande il ya
+par exemple epct que j'ai créé juste ici il ya une commande pour commit il ya des commandes ici
+pour fixer etc etc tu vas pouvoir créer des commandes pour tout ce que tu as besoin si on
+retourne ici à Visual Studio Code tu peux voir que grâce à notre workflow il est capable de créer
+une application super parce qu'il est en train de créer index.html encore et tu vois qu'il est
+toujours en train de coder il est capable de coder pendant très très longtemps sans s'arrêter qu'on
+peut voir juste ici donc ça c'est pour les commandes donc il ya les commandes personnalisées qu'on a
+fait juste ici et si ici j'ouvre un autre terminal juste pour pouvoir te montrer donc ici tu peux
+cliquer sur le plus pour avoir deux terminales relancer cloud et ici on va pouvoir voir quelques
+commandes qui sont là par défaut par exemple slash usage ou slash settings alors normalement
+voilà slash config voilà donc quand tu fais slash config ici on a trois menus on peut taper tab
+pour changer de menu et dans config ici on peut gérer quelques configurations comme ici on peut
+désactiver le tips on peut changer de modèle etc on va pouvoir voir statu qui est les statuts
+actuels s'il y a tout qui fonctionne etc tu peux voir les fichiers de mémoire qui sont
+utilisés les settings qui sont utilisés les mcp qu'on verra après si c'est connecté à l'ide
+quel modèle ça utilise ton compte ta session id le path dans lequel t'es etc et ici dans usage tu
+peux voir l'utilisation que tu as actuellement donc tu peux voir que moi j'ai utilisé 61% de
+ma session mais j'ai de la chance parce que il est déjà midi 39 et ça reset dans 29 minutes
+donc je peux encore envoyer du lourd c'est la commande une on peut faire slash clear qui
+permet de clear tout ça on peut faire slash batchies pour voir les background tasks on
+peut faire plein de commandes comme ça qui permet d'utiliser tout ça maintenant on peut voir qu'il
+est en train de tester donc il n'a pas encore terminé dans les autres petits trucs que je
+veux te montrer ici dans le chat avec ces commandes il ya la commande slash rewind donc si ici par
+exemple on a juste ici l'application qui a été créée donc on peut voir que maintenant il ya
+un fichier main.html etc alors je vais lui demander lance le serveur check check check pour pouvoir
+me connecter au serveur parce que là il est fermé donc c'est un peu c'est un peu con mon ami de me
+dire d'aller sur le serveur si tu l'as pas lancé ici je refresh et là quand je clique sur about tu
+peux voir que ça fonctionne nickel on a about et on a home et ici on a d'autres boutons mais donc
+on a bien la page about qui s'est ajoutée et qui fonctionne et qui respecte tous les trucs de
+code etc parce qu'on a fait un workflow optimisé pour que tout fonctionne une fois que ça s'est
+fait on a maintenant l'application qui est lancée là je peux encore lui demander de modifier des
+trucs par exemple modifie la home page pour dire pour mettre mon site http melvinx.com en avant
+donc là il va s'exécuter on peut désactiver le thinking comme ça il ira un peu plus vite avec
+une fois un appui sur table comme ça il envoie du lourd et désactive son thinking et là on va
+pouvoir utiliser un autre petit raccourci en fait il ya un raccourci très important à connaître dans
+le terminal quand j'écris du texte juste ici je vais pouvoir taper si j'ai envie de réinitialiser
+le texte je peux taper échappe échappe et ça vide le texte donc là quand j'écris quelque chose
+échappe échappe ça vide le texte ensuite en utilisant flèche de haut et flèche du bas je
+peux retourner dans l'historique ok mais qu'est comment faire si j'ai envie de annuler des
+changements imagine toi que ici il vient d'ajouter le lien de mon site mais je suis pas d'accord avec
+ce qu'il vient de faire et j'ai envie de l'annuler pour ça je vais faire échappe échappe et là j'ai
+toutes les conversations que j'ai eu et j'ai aussi les codes change donc là je vois qu'il ya six
+fichiers qui ont été modifiés ici à pas de fichiers ici à deux fichiers je peux sélectionner une des
+étapes par exemple celui ci modifie la home page pour mettre mon site appuyez sur enter et là je
+peux faire restore conversation restore code or restore code et conversation à ce moment là ça
+me dit que le code va être restauré avec le fichier index.html qui va être annulé donc nous c'est
+parfait c'est ce qu'on veut faire donc si je vais faire restore code and conversation et là tu vois
+que ça vient d'annuler le melvinx.com donc si ici je cherche melvinx.com il n'existe plus et donc
+ça va bien supprimer le melvinx.com et ça vient de me remettre le texte dans mon input donc en
+utilisant échappe échappe tu peux retourner dans l'historique de tes messages appuyez sur enter et
+ensuite choisir un des modes qu'on a juste ici ça c'est très important aussi de te le présenter c'est
+à peu près tout ce qu'on a dans ce terminal on a un dernier point que je t'ai pas montré juste ici
+double tape on a le show todo donc fait une todo en fait généralement il va faire une todo quand
+il fait une tâche et si par exemple je lui dis modifie index.html quatre fois donc là si je lui
+dis modifier le about quatre fois en rajoutant plus en enlevant mon site melvinx.com avec une
+todo qui précise les quatre étapes tu peux voir qu'ici il a une todo et quand je fais ctrl t je
+peux voir la liste de la todo et tu peux voir qu'à chaque étape qu'il va faire il va modifier la
+todo donc là il a lu le fichier about il a ajouté mon site ensuite il va checker la todo puis il
+va se dire ah bah maintenant je dois enlever le site donc là il a enlevé le site ensuite il
+va checker la todo puis il va ajouter donc là une fois qu'il a ajouté je peux appuyer sur échappe
+pour arrêter l'IA et arrêter de continuer donc ça c'est très pratique et c'était juste pour te
+montrer cette histoire de todo on a aussi le dièse qui permet d'ajouter des mémoires donc
+par exemple ici je peux lui rajouter une information qui lui dit code always write code in english et
+quand je fais ça ça va sauvegarder je peux choisir si je veux sauvegarder dans la mémoire
+globale ou dans le project je vais choisir project et là tu vas voir que ça va rajouter en bas
+you need to always keep in mind ok ça c'était bam et là il a rajouté always write code in
+english où je pourrais lui rajouter never write comments là je lui mets dans project memory et
+tu vois que ça vient modifier évidemment j'ai ouvert le fichier donc ça marche pas ça vient
+modifier le fichier cloud.md avec ces informations donc c'est aussi très pratique donc on a vu les
+commandes on a vu tous les trucs qu'on peut faire dans ce chat les derniers petits trucs qu'on peut
+faire c'est les mcp donc les mcp et les agents on va commencer par les mcp faites attention aux
+mcp en règle générale je déconseille tous les mcp et je vous conseille d'utiliser des CLI
+imaginons que tu veux créer un repository sur github et setup le projet github tu vas soit pouvoir
+utiliser un mcp github et donc là on peut taper mcp github pour voir github official mcp server et
+ce mcp serveur en fait il a une commande qui permet ici de créer un repository moi je trouve
+que c'est une très mauvaise idée et je vous invite à utiliser github CLI pour installer le
+github CLI tu peux taper github CLI et lancer la commande brew install github CLI et ensuite au
+lieu d'avoir un mcp en plus parce que chaque mcp va rajouter du contexte juste ici donc tu
+peux utiliser la commande slash contexte pour voir ton contexte et tu peux voir que moi j'ai que deux
+mcp donc qui utilisent pas beaucoup de contexte mais plus tu as de mcp plus tu vas utiliser du
+contexte et moins tu auras de la place pour ce qui est important pour éviter ce problème on va éviter
+d'ajouter des mcp et utiliser les CLI et donc là par exemple je peux dire setup un projet git sur
+mon projet actuel et utilise github CLI pour créer un repository privé avec ce code et donc là tu vas
+voir qu'il va être capable de venir bon peut-être qu'il va continuer sa to-do list voilà il a
+changé la to-do list qu'on peut voir juste ici on peut utiliser CTRL T pour cacher la to-do list et
+tu peux voir qu'ici va être capable de lancer git init, de gérer les commits etc donc si t'as
+pas git faut aussi l'installer je suis désolé ici il vient ajouter les différents commits il vient
+s'occuper de tout faire une fois qu'il a fait tout ça il a utilisé git up repo create intérieur
+IA et tu vois qu'il est capable d'interagir avec git via le CLI et sans utiliser de mcp maintenant
+il y a quand même des mcp utiles par exemple le seul mcp que je t'invite à installer c'est context
+7 il est simple et efficace il va permettre à l'IA de récupérer des informations sur les
+documentations de certains outils sans passer par internet pour context 7 tu vas devoir te sign in
+juste ici tu vas pouvoir choisir git up et je t'invite à créer un compte git up si c'est pas
+déjà fait et ici tu vas devoir créer et copier ton API key qui est juste ici donc ici une fois
+que tu as récupéré ton API key on va pouvoir aller sur check the doc et ici tu peux scroller
+jusqu'à install cloud code comme ceci et on va copier le premier la première manière de faire
+juste ici et cache ttp et donc là on va pouvoir faire cloud mcp add transport bla bla bla et là tu
+dois mettre ta clé API ce que tu trouves juste ici donc là on supprime tout ça et ta clé API
+c'est ce qui est juste ici avec ce petit texte donc ici moi je vais refresh je vais mettre ma clé
+API et je vais appuyer sur enter quand tu fais ça ça vient rajouter ton context 7 ici dans
+slash user slash maven slash point cloud point json donc globalement ensuite tu peux vérifier
+si ça a fonctionné en faisant cloud mcp list à ce moment là tu vas voir qu'il va essayer de se
+connecter au mcp et là il te dit que ça va bien fonctionner et ensuite on peut lui dire ici
+utilise context 7 pour comprendre comment utiliser vid pour faire une multiple page application donc
+là je lui demande ça et tu vas voir qu'il va être capable d'utiliser ces mcp directement comme
+ceci donc par exemple ici avec context 7 resolve librairie là il a utilisé le mcp une fois qu'il
+nous a donné ses réponses ici on lui dit oui oui utilise les mcp si tu as envie de l'autoriser
+d'utiliser tous les mcp tu peux juste faire ici mcp context 7 et enlever le paramètre afin d'accepter
+tous les mcp et tu peux voir qu'il est capable d'utiliser des mcp voilà ça c'est pour les mcp
+moi je vous conseille d'en avoir que un mcp context 7 ensuite il ya les agents les agents tu
+vas pouvoir en créer en créant ici agent slash par exemple explore code donc là j'ai fait une
+connerie offert pardon explore code point md et là on va pouvoir lui dire great the agents explore
+code et donc là on va faire le même lien on va d'abord lui mettre prompt best practice et ensuite
+on va aller sur internet et on va s'appeler cloud code sub agent donc ici on va cliquer sur ce lien
+et on va lui mettre le lien de la doc et ensuite je vais lui expliquer ce sub agent est spécialisé
+pour récupérer le contenu de ma code base le contexte afin de lire différents fichiers de mon
+code et de pouvoir infiner avoir des informations sur le code pour une certaine feature il prend
+en paramètre la chose qu'il doit chercher et retourne l'intégralité des fichiers des informations
+des codes naipette qu'il a trouvé avec les paths des fichiers qu'il a trouvé les paths exacts afin
+d'aider Claude ensuite à retrouver ces informations donc qu'est ce que fait un agent il vient prendre
+en paramètre un prompt et il vient retourner en un output et en fait l'agent il va être capable
+d'exactement comme Claude code de lire des fichiers faire des recherches internet et autres la
+différence que l'agent ne va pas mettre tout ça dans le contexte du main agent il va juste retourner
+un texte et là il a fait une grosse connerie et là c'est n'importe quoi tu vois que là pour annuler
+ce qu'il a fait je fais échappe échappe je retourne je restore ici je viens lui dire très très important
+tu dois d'abord lire les liens de la documentation comprendre exactement comment créer un agent et
+ensuite seulement créer l'agent donc là on lui rajoute ce petit prompt très très important qui
+va lui permettre de faire les choses dans le bon ordre et de pas halluciner comme il vient de nous
+faire juste ici donc il commence par fait les informations et je vais aussi activer le mode
+thinking en appuyant une fois sur table afin de m'assurer qu'il réfléchisse un petit peu avant
+de faire des conneries et donc cet agent il va faire différentes actions et il va te retourner
+un output et ça va éviter de flouder ton contexte principal donc c'est très pratique une fois qu'il
+a fait ça on va attendre qu'il termine et je vais te faire une démo comme ça tu vas tout de suite
+voir donc voilà cette fois il a créé un agent en respectant exactement ce qu'il faut faire qui
+explique un peu près ce qu'on a vu ici donc on va tout de suite voir ce qu'il dit tu quand
+tu es invoqué tu dois définir ce que tu dois chercher dans la code base ton goal c'est de faire
+ça ça ça et ensuite tu vas faire une deep analyse bla bla bla et l'output format tu vas
+donner les fichiers etc maintenant si je fais slash epct 2 merde slash slash epct 2 j'ai envie
+que tu rajoutes une nouvelle page qui s'appelle cgv et qui définit tous les cgv de notre super
+application et ici je vais lui préciser utilise explore code pour la phase d'exploration et on
+peut lui préciser utilise plusieurs agents parallèle pour aller beaucoup plus vite et
+donc en fait qu'est ce que va être capable de faire notre ya juste ici il va être capable
+de venir chercher des informations sur explore code agents in parallel to gather context quickly
+là il utilise explore code et tu vois qu'il est capable de venir chercher plusieurs explore code
+et chacun de ces agents si on regarde en fait ils prennent en paramètre une task précise avec ce
+qu'ils doivent faire donc ici prompt analyse pour comprendre bla bla bla prompt analyse current
+application pour comprendre bla bla bla analyse bla bla bla etc et donc eux ils vont travailler
+tous en parallèle et ensuite ils vont retourner un output et cet output va être utilisé par le
+main agent donc ça c'est le main agent c'est l'agent principal pour réaliser la tâche demandée donc
+ici il est en train d'explorer le code ça risque de prendre un peu de temps parce que du coup ces
+agents vu qu'on les invoque ils vont pas chercher à un seul fichier est terminé ils vont généralement
+appeler en tout cas une dizaine d'outils même si on a un qui a déjà terminé qui a que utilisé
+quatre outils et on peut voir que ces agents il donne un output donc là on peut voir qu'on a
+l'agent ici il a eu la tâche ensuite il a utilisé différents outils outils outils agents response
+perfecte j'ai toutes les demandes les demandes fait le summary ensuite fichier bla bla bla code
+snippet fichier bla bla bla code snippet fichier bla bla bla code snippet fichier fichier current
+structure current state recommendation for cgv explain footer donc là il s'est un peu fait
+plaisir à aller dans le futur pour nous raconter des conneries mais voilà il nous fait une petite
+recherche pour nous faire son plan et là il nous dit son plan et ensuite je peux lui dire go ahead
+mais on va terminer ici parce que ça sert à rien d'aller beaucoup plus loin juste ici peut voir
+qu'ici j'ai utilisé 6% en plus de mon contexte et on a terminé pour cette vidéo voici un petit peu
+tout ce qu'il faut savoir sur la version 2.0 de cloud qu'on part du setup jusqu'aux utilisations
+avancées qu'on a vu juste ici si tu as envie de devenir un développeur qui utilise vraiment
+l'IA pour coder tu peux aller sur le deuxième lien dans la description qui est mlv.sh slash ai
+pour recevoir une masterclass gratuite sur cloud code où on va voir des configurations plus avancées
+et autre chose merci d'avoir regardé cette vidéo sur un tutoriel complet de cloud code 2.0 et on
+se retrouve très bientôt pour une prochaine vidéo ciao ciao

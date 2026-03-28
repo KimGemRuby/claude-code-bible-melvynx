@@ -1,0 +1,167 @@
+Enorme nouveauté avec un modèle qui va vraiment changer ta manière de travailler.
+Evidemment, tu ne l'as pas pu le louper, je parle d'Opus 4.5 qui est un modèle qui a déjà explosé le milieu du développement.
+Et dans cette vidéo, comme à mon habitude, on va tester des promptes comme ceci pour venir faire des refactors dans l'e-mail.
+Donc des nouveaux promptes, des nouvelles features que j'ai trouvées compliquées de résolution de bugs et de refactors de code comme ceci.
+J'ai déjà tout préparé, on va tout tester dans cette vidéo et en plus de ça, on va venir review les différents tweets et informations que j'ai pu trouver sur Internet.
+Donc je te propose de commencer tout de suite avec le lancement du premier prompt dans Cursor et après, on va tout de suite parler des tweets.
+Donc je vais copier ce prompt, on va se retrouver dans Cursor dans le Agents Mode comme ceci et on va pouvoir ouvrir un nouvel agent.
+Donc normalement, je suis bien dans mails, j'ai commit les différents changements et je viens coller tout ça et on va tout de suite expliquer un peu ce qui va se passer.
+Pour l'instant, j'ai un dashboard comme ceci, mais dans ce dashboard, je n'affiche pas beaucoup d'informations sur le unsubscribe.
+Tu peux voir qu'ici, on a quelques informations, des petits graphiques, des trucs très intéressants que j'ai déjà refactors,
+mais on n'a pas d'informations sur le unsubscribe, pourquoi les gens se unsubscribe, etc.
+Comme on peut le voir juste ici, on va venir créer une route slash stat slash unsubscribe qui nous donne des informations sur les unsubscribe.
+Pour ça, il va devoir créer une total unsubscribe overview, top unsubscribe reason, donc en fait, je lui ai demandé de créer cinq cartes comme ceci,
+top unsubscribe reason parce que quand les gens se unsubscribe, ils peuvent donner leurs raisons,
+Campaign with most unsubscribe, donc une verticale barre qui montre à quel point une campagne fait des unsubscribe,
+et unsubscribe rate score, afficher un rate score comme la deliverability card, donc 100 points, c'est-à-dire moins de 0,2, ensuite chaque 0,1 enlève 10 points, etc.
+Et carte 5 and sync, unsubscribe over time, donc blablabla.
+Navigation, on doit pouvoir cliquer depuis le dashboard dans le bouton unsubscribe.
+Donc j'ai tout précisé, là on a évidemment pas mal de petits modèles, alors on a Composer qui est gratuit, mais Composer, on va pas se mentir, c'est sympa mais pas sympa.
+Ici, on va venir utiliser Opus 4.5, Sony 4.5, donc pour l'instant Opus est moins cher, on parlera des prix tout de suite après, t'inquiètes pas.
+Et on va utiliser Gemini 3 Pro, en sachant que GPT 4.5, on n'en parle même plus, parce que pour moi GPT 4.5 et Codex I sont des modèles inutilisables.
+Voilà, pour moi c'est déjà parti, donc si pour toi tu les aimes, moi je les aime pas du tout, donc on va tout de suite les abandonner.
+Donc ici, je lance Worktree et Domain, et je viens lancer ces 3 agents comme ceci, on va pas passer par des plans mode, etc.
+Ça me fait un peu chier, moi j'aime bien passer en mode YOLO, donc évidemment ici on peut rajouter une petite section Workflow.
+Donc là je vais lui donner One Shot Workflow comme ceci, donc Explore, Code, Test, Simple et Efficace qui va permettre d'améliorer un petit peu la output.
+Donc ici, on a le prompt, on a les 3 agents qui sont prêts, et on va lancer, et en attendant je vais te parler de 2 choses très importantes.
+La première chose dont on va parler, c'est la réponse aux gens qui me disent pourquoi je teste dans Cursor et pourquoi je teste pas dans Cloud Code pour les modèles d'Anthropic et dans Antigravity pour les modèles de Google.
+Ou, et je pourrais aussi évidemment mettre ici, pourquoi est-ce que je teste pas Codex dès que je parle des modèles d'Open AI, pourquoi est-ce qu'on utilise pas Codex pour tout ce qui est GPT 5, etc.
+La réponse elle est assez simple, faire ça, oui ça permet de tester le meilleur environnement d'après l'entreprise qui a créé le modèle pour le modèle,
+mais attention parce que faire ça vient créer un gros problème, parce que chaque modèle vient faire une définition des outils qui est complètement différente.
+Résultat, ils vont pas utiliser les mêmes outils et ils vont pas les utiliser dans le même ordre.
+On ne compare plus leurs modèles mais leur software, c'est pour ça que Cursor est assez intéressant parce qu'il utilise les modèles dans le même software avec les mêmes configs, avec les mêmes paramètres, tout qui est similaire.
+Système prompt différent, donc les instructions initiales de l'IA, l'objectif de l'IA va être différent, et avec Cursor par exemple, il y a l'indexing de code,
+sûrement avec Winsurf aussi, donc avec Anti-Gravity, quand Cloud Code et Codex n'ont pas d'indexing du code, donc en fait tout ça fait qu'utiliser Anti-Gravity versus Cloud Code n'aurait pas beaucoup de sens.
+Ça c'est pour la petite réponse à ces questions, on va voir si les modèles s'en sortent, donc on a ici les trois modèles qui sont en train de travailler, il y a Sonic qui est déjà en train de coder, Opus est déjà en train de coder aussi.
+Bref, on va voir ce que ça donne, et en attendant on va voir quelques petites informations sur ce modèle.
+Donc, il y a pas mal de tweets assez encourageants, donc ici Ben Davis qui est le pote de Théo qui dit 4.5 Opus c'est le premier modèle à faire 100% sur le Svelte Bench, donc ce modèle est d'après lui très bien.
+Aussi ici il nous dit Opus 4.5 a fait exactement 6 changements pour résoudre une issue, tout était parfait et good.
+Et on va parler de deux choses maintenant, du pricing qui a changé et des benchmarks.
+Donc dans les benchmarks, on peut voir un des benchmarks les plus importants, c'est Agenting Coding SWE Bench Verified.
+SWE ça va être à quel point un modèle est capable d'utiliser le bon outil au bon moment.
+On peut voir que Sonic était déjà meilleur que Gemini 3 Pro, mais là Opus a augmenté encore de à peu près 4%, 3-4%, et ce qui en fait le meilleur modèle au monde maintenant sur l'utilisation d'outils comme on peut le voir juste ici.
+Même Codex Max, qui est le modèle le plus bullshit qu'on peut trouver sur internet, n'est pas au niveau.
+Ensuite Agenting Terminal Coding comme ceci, la même chose, il est bien meilleur.
+Agenting Tool Use, donc là c'était un peu le truc que je disais avant, on est aussi sur un modèle qui est un tout petit peu meilleur que ce n'est, un tout petit peu meilleur que Gemini 3 Pro comme on peut le voir juste ici.
+Et en général on peut voir juste ici que sur tout ce qui est du code, Computer Use, etc, le modèle est meilleur.
+Après sur les trucs Multilangual, Graduate Level Reasoning, bon là il n'est pas le top du top, mais nous on s'en fout parce qu'on veut coder avec ce modèle, on veut juste coder, c'est tout ce qu'on veut.
+On a aussi un changement des prix, donc ça ce tweet là est très très intéressant.
+Pour les Cloud Code User, l'accès à Opus 4.5 qui supprime les Opus Specific Caps.
+Qu'est ce que ça veut dire ? Ça veut dire qu'avant quand on allait dans les settings de l'ami anthropique, donc je te l'affiche juste ici, on peut voir que dans les settings maintenant ça nous dit,
+On a augmenté les limites pour Opus, tu peux utiliser Opus 4.5 avec les limites en général, et donc à la place ils ont rajouté un Sony Only.
+Alors je ne sais pas ce que ça veut dire, c'est un peu compliqué toujours cette histoire, mais là on a la session, et on a toujours la weekly limit juste ici, on peut voir qu'elle a été reset.
+Donc sûrement qu'ils ont reset toutes les weekly limits pour le nouveau modèle, et donc maintenant il n'y a plus de limites de Opus, ce qui ont fait un énorme argument encore une fois pour utiliser Cloud Code.
+Parce que Cloud Code c'est de loin l'outil qui va coûter le moins cher.
+On testera à la fin de cette vidéo sur les prochaines features d'utiliser Opus pour réaliser ces tâches, pour voir combien de pourcents ça nous mange en une session.
+Ok, donc très intéressant, dans les autres tweets qu'on a pu voir juste ici, le Software Engineer on peut voir une amélioration, alors attention ici le Grade qui est de 70 à 92.
+Le Frontend, donc moi ces tweets là il me saoulent, et toi aussi je pense qu'il te saoule, ça saoule tout le monde.
+Oui il est super, il a fait un site de cons avec des petites couleurs d'enfants, c'est sympa, bravo.
+Gemini3 avait fait le même site horrible avec des couleurs de cons que personne n'en veut d'utiliser sauf ta grand-mère.
+Bref, on a compris, super.
+Ici aussi quelques tests intéressants, donc ce post là est beaucoup plus intéressant.
+Opus est cheaper de sonner car il est beaucoup plus efficient dans les tokens solution finding, mon expérience c'est que c'est beaucoup plus efficace.
+Donc voilà un tweet aussi très intéressant, et on va avoir le fait qu'apparemment le Opus 4.5 est 60% plus cher que Sonnet,
+mais il peut utiliser jusqu'à 76% moins de tokens pour la même feature, ce qui pourrait en faire un modèle moins cher que Sonnet dans l'utilisation de tokens qu'on a juste ici,
+comme on peut le voir juste ici, voir ce que ça donne les amis.
+Donc on a vu tout ça, c'est sympa, je pense que je t'ai donné toutes les informations, et maintenant on va passer sur les tests.
+On peut voir ici qu'il est tout de suite parti en vrille, tous les modèles veulent nous modifier des trucs, on va cancel ça.
+On peut voir qu'on a quand même des résultats ici qui semblent assez spécials, on va couper ça.
+Alors je sais pas quoi en penser ici, est-ce qu'on est prêt de voir le résultat de ce test ? Moi j'ai très peur de voir le résultat du test.
+On a 130 lignes qui ont été rajoutées pour Opus 4.5, ce qui parait quand même délirant, 1125 lignes pour Sonnet, ce qui parait plutôt logique,
+et 417 lignes pour Gemini 3 Pro Preview.
+Ok bon on a les infos ici, on va d'abord commencer par Sonnet, qui va être pour moi la référence en général.
+Donc on va appliquer, donc là on a créé tous ces petits fichiers, on peut voir ici qu'il y a tous les fichiers qui ont été créés,
+donc il a principalement créé tous les fichiers qu'on a juste ici.
+Si on regarde où est-ce qu'il les a créés, il les a créés dans stat slash unsubscribe, ce qui est pas mal.
+Et on a quelques petites erreurs d'import, ok parce que c'est un default export, donc ça c'est une très grosse bêtise de ma part, c'est pas très grave.
+On va aller ici dans les petites applications, on peut voir qu'il a fait des erreurs d'import,
+alors ça ça arrive très souvent dès qu'on lui laisse pas utiliser, comme je l'ai fait ici, il n'a pas le droit d'utiliser S-Lint et tous ces trucs.
+Donc ici on a ça et normalement on doit pouvoir cliquer sur ce lien, donc déjà ça a marché.
+Donc là quand on clique ici ça doit donc diriger sur une page de unsubscribe stats, et ça marche pas mal bien.
+Alors ici j'avais dit un vertical chart, je suis pas sûr d'avoir le truc, mais là unsubscribe over time ça marche bien.
+Unsubscribe rate score, on peut voir que je suis à 10%, ce qui est immense.
+Et ici j'ai les différentes informations qui sont quand même pas mal.
+Donc je vais lancer le serveur avec la config de production pour voir un petit peu des vrais stats.
+Donc voici un petit peu le vrai truc, donc on peut voir qu'on a ici les raisons qui fait que les gens unsubscribe avec le temps.
+On a aussi les newsletters et les différents trucs, par exemple ici qu'est-ce qui a changé, donc j'aurais bien voulu vertical, bon c'est un petit erreur.
+Et ici mon score, donc moi j'ai un unsubscribe rate de 0,343, ce qui me fait un 90 sur 10, qui est un bon score.
+Et donc à part ce graphique là qui est pas très bien, et que là c'est pas vertical, ça reste un très bon travail de la part de Sony.
+Ok durant le record, la première version, il y a eu quelques petits problèmes, et donc j'ai relancé Opus 4.5 sur Cursor comme ceci, dans une version clean.
+Parce que j'avais fait un petit problème, donc on va comparer la nouvelle version de Opus qu'on a juste ici.
+Donc si je refresh on a le dashboard là, et là on peut voir qu'on peut cliquer sur ce unsubscribe, et voici la version d'Opus.
+Donc elle est assez parfaite, on peut voir ici que le graphique il est correct, juste ici.
+On peut voir ici que le unsubscribe raison il est correct, il est bien vertical d'ailleurs.
+Ça c'est correct, ça c'est correct, et là on a bien le graphique, alors ici il a pas compris un truc, c'est qu'il a repris exactement le même graphique qu'on a juste ici.
+Au lieu de venir m'afficher uniquement les unsubscribes, donc là il y a une mauvaise compréhension de ces informations.
+Et donc sinon en règle générale ça reste très bien, donc si on teste de lancer le serveur juste avec les données de prod, comme on l'a fait depuis le début, pour voir un petit peu la différence.
+Donc on va venir lancer ça juste ici.
+Donc là on peut voir sur la version d'Opus, il y a tout qui est pas mal, ce graphique est respecté, ça c'est respecté avec les bonnes données et le pourcentage.
+Et ici on n'a pas le bon graphique, donc ça c'est la seule erreur, c'est ce graphique qui a mal été fait.
+Mais sinon il y a tout qui est pas mal, donc c'est vraiment la meilleure version par rapport à Sony, il a fait quand même un meilleur travail juste ici de raisonnement et de respect de la feature à noter.
+Si on fait le petit comparatif que j'ai pu faire des erreurs dans la vidéo d'exemple, Opus ici il respecte tout ce qu'il faut avoir, donc j'avais juste au début il y avait eu un bug et donc tout était erroné.
+Et donc ici il a respecté les graph styles, il a respecté précisément les features et il a été très très smart, donc il n'y a rien à dire, le graphique est top.
+Il y a juste quand même à noter l'erreur du graphique performance où il m'a affiché les subscribes alors qu'il n'aurait pas dû l'afficher.
+Ok on va aussi retester Gemini 3 Pro pour venir vraiment faire une review des deux features très honnêtes.
+Donc là on peut voir que Gemini a fini de générer tous ses fichiers, donc tu vois je l'ai relancé sur un code clean, parce que sur ma première génération il y avait eu quelques petits problèmes.
+Et donc on va pouvoir le tester juste ici, je vais refresh et on a déjà une sorte d'erreur d'import sur Gemini où il a fait une erreur juste ici.
+Je vais lui partager l'erreur ou peut-être que j'arrive à la corriger moi-même, avec Sony on avait corrigé les imports nous-mêmes,
+donc moi il n'y a pas de souci, s'ils font des petites erreurs d'import je les corrige manuellement pour moi, c'est chiant mais ce n'est pas non plus très grave.
+Donc ici est-ce que j'arrive, donc il y a juste le getOrguidedBySlug qui n'existe pas, je ne sais pas trop qu'est-ce que c'est cette histoire.
+On veut voir qu'ici dans cette page il nous a fait une erreur fondamentale, de logique cette fois, où il m'a créé une fonction qui n'existe pas,
+donc c'est quand même pas cool, normalement org c'est await getRequiredCurrentOrgCache et orgid ça va être org.id comme ceci,
+donc si on fait ça normalement c'est beaucoup mieux, ici les params aussi il a fait une erreur, donc là on est aussi pas mal, pas très bien.
+Donc moi dans mes tests, premier test d'Yamina il était horrible, mais ici il y a une mauvaise compréhension de mon code,
+parce qu'il n'a pas one shot le truc alors que je lui dis quand même quoi faire, donc mauvaise compréhension, ah putain je ne sais pas écrire ce mot, je suis vraiment désolé.
+Non c'est une blague, je sais sûrement l'écrire mais il faut que je réfléchisse plus souvent.
+Et ici création de méthode qui n'existe pas, donc ça c'est dû sonner il y a un an et quelques.
+Donc ici on a fait les petites updates, on va pouvoir voir le graphique, donc là je refresh une deuxième fois, puisque l'auto-refresh c'est pas fait.
+Donc là on a le loading qui est vraiment infâme, faut vraiment que je change ce loader, c'était pour améliorer la rapidité des pages.
+Et là vous voyez que la version de Jemini, la version de Jemini, Jemini c'est du bullshit, encore une fois les gars, les gars, les gars c'est incroyable,
+tous les bullshiters qu'on a sur internet, regardez-moi ça, ça n'a rien à voir, enfin, ça sert à, est-ce que j'ai besoin de commenter ?
+Est-ce que j'ai besoin de commenter le travail de Jemini ici ? Que je compare parce que ça reste le dernier modèle le plus puissant, il n'y a rien, il n'y a rien, il n'y a rien qui va.
+Ici unsubscribe, vous l'avez vu avec mes anciens trucs, ici c'est faux, c'est pas ça que je lui ai demandé, unsubscribe rate score,
+il est mal calculé parce qu'il devrait être à 90, on l'avait déjà vu avant tous les Sony et Opus ont fait.
+Ici le graphique est mauvais, les couleurs vont pas, daily unsubscribe ça va bien, et il m'a créé un nouveau graphique qui sert à rien.
+Donc ça me fait penser à la première version de Sony qui avait fait aussi l'erreur, mais ici il m'a refait l'erreur une...
+Non, non non non non non non non les amis, c'est infâme, mauvaise compréhension, mauvais graphique, donc là on a clairement des mauvais graphiques et non-respect de ce que j'ai dit.
+Voilà, c'est tout ce que j'ai à dire, il n'y a pas d'autres commentaires.
+Bon vous savez quoi, surprise juste pour le fun, je vais rajouter ici Opus 4.5 avec Cloud Code pour voir ce que ça donne.
+Ok donc Cloud Opus vient de terminer sur Cloud Code et pas sur Cursor, comme vous m'avez demandé aussi.
+Donc ici je vais me reconnecter et on va voir ce que ça donne, donc la dernière version qu'on fait juste ici pour cet exemple.
+Et donc voici l'interface de Cloud Code, est-ce qu'on est prêt pour voir ce que ça donne ?
+Donc il a fait le bon paf, le graphique ici il est correct, bonne utilisation des dashboards comme on peut voir juste ici, unsubscribe rate core c'est juste.
+Ici on a exactement les campagnes qui ont eu le plus d'unsubscribe dans la session donc ça fonctionne parfaitement.
+Donc ici je suis de Viet Nam, c'était pas une bonne compagnie.
+Et ici on a le nombre d'unsubscribe par jour comme ceci avec un graphique avec 32 average par day, c'est parfait, c'est parfait, Cloud Code est une masterclass les amis.
+Et là vous avez la preuve, Cloud Opus sur Cursor c'est pas top, Cloud Opus sur Cloud Code c'est instantanément fantastiquement génial de la mort qui tue.
+Qu'on a juste ici avec Opus 4.5 et Cloud Code.
+Alors je propose que pour la suite de la vidéo, alors déjà que cette vidéo dure longtemps, on va changer la manière de faire et on va comparer Sonnais et Opus directement sur Cloud Code et on enlève Gemini.
+Vous avez vu dans mes vidéos ou autre, Gemini il est pas mauvais mais en vrai il est mauvais ok, en vrai il est pas bon.
+Donc abandonnez-le, ça sert à rien de se battre Gemini, c'était sympa de t'avoir rencontré mais on va arrêter de te comparer parce que t'es pas une flèche, flèche, t'es pas mauvais mais t'es pas une flèche.
+Donc c'est ciao.
+Ok donc moi la version de Cloud Code ici elle est correcte, je vais venir la merger directement, on va commit et je vais la merger sur main et comme ça on va pouvoir tester la deuxième chose.
+Bon j'y comprends plus rien cette interface, on va créer un nouvel agent et je sais pas pourquoi maintenant l'agent il est passé à gauche, j'y comprends mais rien.
+Sur SOR vous êtes de pire, chaque jour c'est pire mais même chaque minute de la journée c'est pire.
+Donc là ce qu'on va faire en fait c'est tout simplement prendre n'importe quel modèle comme ceci, ou on va utiliser Sonnais en fait c'est pas très grave et on va lancer deux fois avec juste un prompt dis salut.
+Et en fait quand on fait ça, ça lance des worktree et on peut voir qu'une fois que les worktree sont créés comme ceci, donc là tu vois que ça charge, je peux venir faire normalement open terminal in worktree ou copy worktree path.
+Donc comme ça ensuite je peux aller ici sur Ghosty, faire cd dans le worktree et là la même chose, on fait copy worktree path et là on fait cd dans le worktree et là du coup tu vois que j'ai deux sessions que je peux lancer.
+Donc ici on a Sonnais et ici on a notre ami Opus et donc là je vais pouvoir faire slash model, on choisit le modèle Opus et ici slash model, je choisis le modèle IQ comme ceci, on va faire le deuxième prompt qui est celui de fix bug.
+Donc actuellement si on s'amuse à aller comme ceci.
+Petite pause pour te dire qu'en allant sur le lien mlv.sh slash AI, tu peux accéder à une masterclass gratuite Claude Code mais pas que, tu vas aussi pouvoir accéder à mon CLI qui contient toutes mes commandes, donc je les montre juste ici mais tu vas avoir mes agents, mes commandes, mes hooks, mes output style et toute ma configuration pour utiliser Claude Code comme un pro et tu vas aussi accéder à une formation comme tu peux le voir juste ici avec un petit soudage et pas mal de leçons juste ici, conducteur, masterclass,
+etc etc, tu vas pouvoir y accéder pour par exemple comprendre comment fonctionnent les agents, pour ça on va créer un agent etc, tu vas pouvoir accéder à toute cette formation totalement gratuitement en allant sur mlv.sh slash AI, c'est une formation faite pour les développeurs qui veulent coder plus efficacement avec l'IA, on se retrouve là bas.
+Dans une newsletter, on peut voir que quand je fais at name, ça m'affiche deux fois name name comme ceci et moi j'aimerais bien que ça m'affiche qu'une seule fois le name et donc c'est la résolution du bug que je vais tester ici, j'ai jamais réussi à le résoudre tout seul, j'ai jamais essayé aussi mais comme ça on va lui demander bug fix bug fix, donc ici je lance sur les deux endroits comme ceci et on va voir un peu ce que ça va donner.
+On peut voir qu'avec Opus il a corrigé son problème correctement, ici on a bien le name qui s'affiche avec le premier work tree qui a super bien fonctionné et le deuxième work tree, et si on regarde la diff c'est qu'ici il a utilisé un set qui permet de filtrer et de s'assurer qu'il n'y ait qu'un seul type de variable, si on undo les changements qui sont juste ici, boom et que j'utilise mon superscript que je viens de créer pour appliquer des work tree dans mon code actuel, on a ici le deuxième work tree, là il a fait
+la même chose avec un code un peu plus compliqué sans set mais ça semble fonctionner aussi et donc là je pense qu'on va voir que si je refresh ça fonctionne aussi, donc les deux ont très bien réussi ici leur mission, il n'y a aucun souci donc là boom name ça affiche bien le name, alors on peut voir que je peux juste pas forcément sélectionner mais boom ça m'affiche le name, je peux cliquer pour changer via name default, ça on voit vraiment du lourd donc c'est parfait, c'est validé,
+je préfère personnellement la version d'Opus qui ici avait fait ça donc pour la résolution de bugs, voilà il n'y a aucun souci, les deux modèles sont super doués, hop.
+Bon troisième feature pour le fun parce qu'il faut qu'on teste des trucs un peu différents donc là on a Sonel, là on a Opus,
+Problème too thick, create sender button replacements, actuellement quand on va dans email sender ici, j'avais vibe codé ça et c'était vraiment infâme et l'interface est vraiment infâme et c'est une très grosse erreur, il faut à tout prix résoudre ce problème le plus rapidement possible donc ici quand on se rend là, on voit que create sender button, il n'est pas du tout à la même place que les boutons généralement donc là tu peux voir que normalement il y a un bouton ici à côté du texte et là il m'a foutu, un bouton ici c'est très moche, quand on clique ici il ne se passe rien,
+on n'y comprend rien, on doit cliquer là pour edit pour avoir ce menu edit qui n'est pas du tout pratique et pourquoi est-ce qu'il a fait tout ça c'est parce qu'il y avait des limitations sur le code existant donc il va devoir faire pas mal de modifications et de refactor pour venir faire fonctionner ces nouvelles features et donc là je lui ai dit voilà on va créer un bouton sender qui va être placé dans le bon emplacement comme les workflows, on va enlever le send out account, on va faire en sorte que quand je clique ici sur la carte ça m'affiche directement l'éditeur,
+et que quand je clique ici ça m'affiche le menu ici uniquement quand j'ai besoin de ce menu, donc on demande le refactor de tout ça donc on a opus et sonnais et on va voir un peu le résultat, ok donc les deux IA ont terminé avec sonnais et opus d'un côté, on va pouvoir tester leurs différentes mises à jour donc on va commencer avec opus juste ici, on va copier cette petite ligne de code comme ceci, donc là il nous a modifié la page et le email sender list comme ceci avec un petit bouton,
+alors je sais pas exactement où est-ce qu'il a créé ce bouton, j'ai l'impression que ça l'a pas copié, oh non parce que c'est pas une mise à jour et donc l'IA n'a pas réussi à me faire celui-ci, ok je vais fixer ce problème et on revient tout de suite.
+Ok donc on a fait la petite update juste ici et on peut voir que ici je suis avec opus ou sonnais, je suis avec opus, il a fait ça parfaitement, on a le create sender qui est bien placé et quand je clique ici ça affiche l'édite et quand je viens sur le menu ici ça affiche le menu et ça affiche pas l'édite, donc il a bien réussi à refactor du code existant,
+on peut voir que le code qu'il a pu nous générer juste ici il est plutôt clean, il a suivi les principes que je lui avais dit, ici il a enlevé le code qui était infâme qu'il a fait juste ici avec plusieurs trucs et il a fait le create sender button juste ici, il y a tout qui fonctionne vraiment bien et donc le code ici rien à dire, tout est parfait et il a one shot la feature sans aucun problème.
+Si maintenant on compare avec ce que sonnais a fait, alors il y a des risques, vu qu'on utilise cloud code il y a tout qui est à peu près parfait donc c'est assez dur de de venir trouver des problèmes, juste ici on peut voir qu'on a à peu près les mêmes fichiers qui ont été mis à jour avec la page layout action, ici le bouton qui fait à peu près la même chose que ce qu'on avait vu avant et ici les quelques mises à jour ok, donc là on peut voir que quand je refresh la même chose, le bouton est au bon endroit, ici il n'a pas fait le hover mais
+ça fonctionne et là je peux cliquer sur point point point pour venir edit, donc ça fonctionne tout pareil, tout est super bon, alors évidemment on peut tester aussi de créer comme ceci pour voir si ça fonctionne, alors là c'est pas super joli quand il y en a deux mais ça fonctionne toujours, on peut set as default, alors non là il y a un petit bug, quand je fais le set as default ça m'affiche aussi la dialogue, là c'est intéressant on va tout de suite comparer avec l'implémentation de l'ami
+opus quand je viens ici et que je fais set as default, ça m'affiche aussi ce menu, alors les deux ont fait le problème, on peut voir que les deux sont assez similaires ici sur les tests qu'on a pu avoir, ce qui fait qu'on n'a pas de grandes grandes différences, voici pour ces deux tests, j'espère que t'as kiffé, en tout cas voilà pour moi, ok pour changer la outro je vais faire un petit vlog comme ça, les petites informations que je peux te partager après ces tests, c'est un, utiliser cloud code et éviter d'utiliser Cursor, alors pour
+tester de manière faire, par exemple des modèles comme Gemini vs Cloud j'utilise Cursor, mais en règle générale au quotidien je n'utilise jamais l'agent Cursor, il est bien bien moins bon, le système prompt est mauvais etc et tu as toujours des résultats qui sont moins bons donc ça ne sert à rien même d'essayer, deuxième chose opus est meilleur, alors après sonnet déjà super bon, on le voit dans les tests qu'il est, les modèles d'anthropie qui sont déjà incroyables,
+et on peut le voir avec ce test de Gemini 3, je pense, moi Gemini 3 il m'a vite fatigué, j'ai vite arrêté d'utiliser l'histoire, c'était sympa pour la hype parce qu'il est très bon pour one shot des sites, pour coder au quotidien il n'est pas top, je ferai un autre tour sur opus parce qu'en ce moment je suis en train de refactor le code de paddle pro, il y a beaucoup de choses mais j'ai pas le temps de faire la vidéo ici un petit peu en rush avec ces nouveautés là donc ce sera plus tard, on se dit à bientôt ciao ciao

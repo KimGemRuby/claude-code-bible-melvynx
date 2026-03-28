@@ -1,0 +1,247 @@
+Cloud Code vient d'annoncer les Marketplace et on est en train de passer à un tout autre niveau
+parce que Cloud Code devient une vraie OS pour coder avec des commandes, des agents et maintenant des plugins
+voire même des Marketplace.
+Et donc dans cette vidéo on va comprendre comment utiliser un plugin, comment se connecter à des Marketplace
+et comment créer nous-mêmes notre propre plugin et notre propre Marketplace.
+Et à la fin comme ça vous pourrez tous publier vos plugins dans ma Marketplace et on verra ce que ça donne.
+Cloud Code supporte maintenant des collections, des plugins pardon, qui sont en fait des collections de
+MCP server, hook, slash command et agents.
+Donc en fait tu vas pouvoir partager ton setup, donc c'est ce que j'avais fait par exemple avec le iBlueprint CLI
+en utilisant directement les plugins.
+Donc les plugins c'est des manières simples, de package, des informations, ta configuration avec les slash command,
+les sub-agents, les MCP server et même les hook.
+Donc ça c'est vraiment très cool.
+Tu vas pouvoir installer des plugins directement avec slash plugin qui est maintenant en bêta.
+On a designé ça pour pouvoir les activer en off pour facilement en fait activer ou non la configuration d'une autre personne.
+Donc par exemple ici avec un exemple de configuration.
+Donc on va tout de suite ouvrir déjà iTerm pour s'amuser.
+Et donc si ici on va dans un dossier Cloud Code et que je lance Cloud Code,
+on a donc une nouvelle command slash plugin qui permet de browse and install plugin,
+donc moi ici j'en ai pas,
+manager les plugins, ajouter des Marketplace et manager les Marketplace.
+Alors on va tester tout ça.
+Qu'est-ce que c'est les use case pour ces plugins ?
+Ça permet de faire en sorte d'enforcer des standards et donc de partager des configurations dans une équipe.
+Pour les open source maintainers, proposer des outils pour les personnes qui partagent,
+partager ses workflows, donc c'est un peu la community etc.
+Pour pouvoir se connecter à des tools et setup des MCP etc rapidement et gérer des customisations.
+Ensuite il y a des Marketplace pour faire en sorte que tout ça se soit beaucoup plus facile
+à installer, et ben n'importe qui peut créer sa Marketplace.
+Tu vas pouvoir créer des Marketplace puis les partager avec la communauté pour que tout le monde puisse y accéder.
+Et donc pour ça il nous suffit d'avoir un bon nom de repository avec marketplace.json.
+Et on peut utiliser une Marketplace avec slash plugin marketplace add user or org repo name qui permet de faire ça.
+Donc ici il nous dit on va pouvoir avoir ici par exemple Cloud Code Template avec ce site ici et cette Marketplace.
+Donc on va pouvoir prendre cette commande pour tester et la mettre juste ici.
+Et donc là je suis en train d'ajouter la Marketplace Cloud Code Template.
+Donc là j'ai ajouté la Marketplace qui me permet d'avoir des plugins et ensuite quand je lance plugin je peux browse.
+Et là je peux choisir une Marketplace et voir les différents plugins qui sont disponibles.
+Donc ici on a Git Workflow, SuperBase, Next.js, Versel Pro, Security Pro etc.
+Donc j'imagine regarder un petit peu ce que ça donne, est-ce qu'il y a un plugin qui aurait une utilité.
+Donc on peut voir que dans chaque plugin il y a des commandes des agents et par exemple des MCP.
+Donc je sais pas si je peux voir les détails pour voir ce qu'il y a.
+Donc ici il y a des agents, des MCP, Versel MCP, bon ça m'intéresse pas beaucoup.
+Est-ce qu'il y aurait un plugin vraiment utile ? Ça c'est pas super fou non plus.
+Bon par exemple Security, Security pourquoi pas.
+Donc ici on cherche Security Pro et je peux faire espace pour installer le plugin comme on l'a fait ici.
+Maintenant que j'ai fait espace et que j'ai installé le plugin, je peux aller dans Manage & Uninstall plugin et ça n'a pas fonctionné.
+Donc on va retester tout de suite Security Pro et donc là presse I or Enter to install.
+Donc là j'appuie sur Enter et là ça me dit tu vas installer CLI Tools, Component, Command.
+Et donc ça va m'installer ces trois agents et ces trois commandes.
+Install Now et donc là j'ai installé ce plugin.
+Donc maintenant je peux quitter, relancer le plugin et normalement relancer mon projet.
+Et là je peux voir que j'ai ce plugin qui a été installé.
+L'avantage c'est qu'on peut facilement espace pour le désactiver ou l'activer.
+Maintenant on peut voir que j'ai des nouvelles commandes.
+Donc j'imagine Security Pro Dependency Audit.
+Donc typiquement ici je pourrais aller dans un projet.
+Donc on va faire Boom Boom Developer slash SAS slash Lumeil.
+Et là on a ajouté ce plugin de manière globale et je peux faire Security Dependency Audit.
+Et maintenant ça vient utiliser le plugin et donc ça vient tout simplement utiliser la commande.
+Il n'y a rien d'incroyable.
+Alors ce qui est incroyable ici, c'est qu'il m'a exécuté un truc au background, je ne sais pas ce que c'est.
+Et donc ici il travaille et ça m'a permis de facilement set up une nouvelle commande.
+Bon en l'occurrence ce n'est pas la commande du siècle, ça ne marche pas très bien.
+Mais ce n'est pas grave, ça nous permet quand même d'illustrer le propos qu'on a.
+Je pense qu'on a aussi des agents, donc ici Agents Security Pro Penetration Tester.
+Alors là le nom est assez intéressant.
+Donc on peut laisser l'IA faire ça.
+En l'occurrence je pense que ça marche mieux que leur commande avec des mauvais noms de modèles.
+Ce qui n'était pas de leur faute on va dire.
+Et donc ici l'IA est capable d'appeler un de ses outils.
+Alors faites attention parce qu'à force d'ajouter des plugins,
+on vient de rajouter ici des Custom Agents avec des tokens qui sont potentiellement pas ce qu'on veut.
+L'avantage normalement c'est qu'on peut aller dans Plugin, Browse,
+et ici je peux Select pour entrer et ici Space pour désactiver.
+Bam !
+Ensuite pour appliquer les change, Restart to apply change.
+Delete to mark un install, U to mark update.
+Enter for details.
+Ok donc là je le désactive.
+Comment je Restart to Space to toggle, U to mark update, Delete to mark un install.
+Donc là j'ai délai le plugin.
+Ensuite quand on relance, maintenant on n'a plus de Security Pro
+et on n'a plus de tout ce qui se passe qu'on avait avant.
+Donc c'est parfait.
+Ça te permet de te démontrer un peu l'utilité des plugins
+et on va justement pouvoir le comprendre un peu mieux après.
+Donc ici on peut voir qu'il y a le plugin Marketplace
+et il y a aussi par exemple WebSum qui a rajouté ici le dossier Cloud Plugin avec Marketplace.json
+qui permet aussi d'avoir tous les plugins qu'on a juste ici.
+Ça fait pas mal de choses.
+Et donc ici de la même manière on peut ajouter les différents plugins qu'il a juste ici.
+Donc j'imagine qu'il faut déjà installer la Marketplace.
+Donc voilà on peut ajouter la Marketplace.
+Donc si je lance, on va tester une deuxième Marketplace.
+Comme ça on est bon.
+Donc Browse & Install Plugin, Add Marketplace.
+Je copie le nom avec ici Honor Repo.
+Pas besoin de faire plus.
+Ça vient télécharger la Marketplace.
+Là ça me dit c'est super, ça l'a installé.
+Là on peut voir qu'on a Cloud Code Workflow.
+Et là la même chose, on a tous les plugins qui sont juste ici affichés
+et donc qui permet de rajouter des plugins dans notre application.
+Donc le but c'est vraiment de distribuer des paramètres assez facilement entre guillemets.
+Alors je ne sais pas à quel point c'est facile, mais c'est là.
+Maintenant qu'est ce qui se passe quand on installe un plugin ?
+On va en installer un deuxième, par exemple ici Payment Processing.
+Ça a l'air d'être super.
+Donc voilà, Enter to Install, Install Now.
+J'ai installé et maintenant on va venir ouvrir.
+Ok donc j'étais en train de chercher comment ça fonctionnait.
+Alors voici comment les plugins fonctionnent ensuite quand tu les installes.
+Ça vient venir rajouter ici Enable Plugin avec les plugins qui se mettent ici.
+Et ensuite là, on a un dossier plugin avec Marketplace.
+Et là en fait, on a un clone littéralement du repo avec ici un dossier .cloud,
+les commandes et les agents ici.
+Et donc on peut voir ici qu'avec Cloud Code Templates,
+on a ici les agents qui ont été installés pour cette Marketplace et les commandes.
+On a Cloud Plugin et ici ensuite on a tous les bordels qui peuvent y avoir.
+Donc ça vient vraiment tout installer en fait sur notre ordinateur.
+C'est pour ça que ça prend un petit peu de temps.
+Mais donc là, la même chose, ça nous a mis les agents.
+Et c'est juste que d'une manière ou une autre,
+il arrive à lire ce fichier, à trouver où sont les agents et les injecter dans notre histoire.
+Donc ça fonctionne un peu comme ça.
+Maintenant, on va pouvoir créer ou ajouter des plugins dans un projet qui existe déjà.
+Donc cette fois, je vais ouvrir Cursor pour que ce soit plus simple pour vous.
+Et on va ouvrir AI Blueprint CLI.
+Donc dans le CLI que j'ai créé, il y a déjà plein de commandes, etc.
+Donc c'est parfait.
+C'est un cas d'école, on va dire, vu que j'ai déjà tout fait.
+Et donc on va voir comment on peut créer non seulement une Marketplace,
+mais aussi un plugin.
+Parce que si on ne crée pas de Marketplace, on ne s'amuse pas super.
+Donc comment est ce qu'on peut faire pour créer notre propre plugin?
+La première chose qu'il faut faire attention, c'est que tu aies un dossier avec agent et commande.
+Donc ce dossier peut être dans point cloud, etc.
+Mais ici, en fait, notre plugin dossier s'appelle Cloud Code Config.
+Donc avec le pattern qu'il y a ici, il faut des dossiers commande, agent et hook.
+Ceux-ci vont se définir et vont se faire détecter automatiquement.
+Si tu veux ajouter des hook, il faut qu'ils s'appellent hook.json.
+On va ensuite créer ici un nouveau fichier qui va s'appeler slash cloud plugin slash ici marketplace.json.
+Et donc dans ce fichier Marketplace, on va pouvoir copier la base.
+Donc j'imagine que plugin Marketplace ici, il nous affiche juste là.
+Donc là, on va pouvoir créer une Marketplace.
+Donc par exemple, iBlueprint comme ceci, ici honor melvin, ici melvin at iBlueprint.dev.
+Et là, une fois qu'on a fait ça, c'est suffisant.
+On va pouvoir définir les plugins.
+Donc les plugins juste ici, je vais créer un plugin qui va s'appeler iBBase.
+Et là, dans la source, on doit mettre le dossier relatif.
+Donc ici, Cloud Code Config.
+Attention, ce n'est pas relatif à ce dossier, c'est relatif au projet.
+Donc ici, c'est point slash Cloud Code Config comme ceci.
+Ensuite, dans description ici, on va pouvoir rajouter iBlueprint.dev online courses base configuration.
+La version, on va mettre 1.0.0 et auteur, on va mettre melvin avec ici.
+Peut-être qu'on peut juste garder un seul champ d'après l'exemple.
+Une fois qu'on a fait tout ça, on a déjà créé le plugin.
+Et grâce à ce dossier là, il arrive à automatiquement se dire
+ok, je dois récupérer les différents fichiers qui sont là.
+Donc là, j'ouvre un terminal, j'en avais déjà ouvert un.
+On va couper comme ceci et on va faire slash plugin pour configurer tout ça.
+Là, je lance slash plugin et là dans manage marketplace,
+on peut voir qu'on n'a pas notre marketplace.
+Donc je vais add marketplace et ici, on va tout simplement copier le path,
+mettre le path ici et supprimer le dossier Cloud Code Config.
+Donc, on veut mettre vraiment le repo qui contient Cloud plugin.
+On fait enter et là, ça nous dit que ça l'a ajouté, donc c'est parfait.
+On peut retaper plugin, browser install plugin.
+Là, on voit le plugin iBlueprint avec le path juste ici,
+parce qu'il est installé du coup, contrairement à l'autre,
+ici qui est installé via git et là via nom de repository.
+Ici, on l'installe directement via un dossier.
+Là, on a le nom du plugin iBlueprint base qu'on a créé.
+Donc avec ici iBlueprint base, j'appuie sur enter et là, je peux l'installer.
+Donc ici, on ne voit pas encore les composants, on va l'installer.
+Maintenant qu'on l'a installé, on doit relancer Cloud Code
+histoire de mettre à jour les plugins.
+Et là, si je vais dans slash plugin slash manage and uninstall plugin
+slash iBlueprint slash iBP base, on peut voir qu'il y a tout qui fonctionne.
+Comment est-ce qu'on sait que tout fonctionne ?
+Parce que là, on a la liste des commandes,
+là, on a la liste des agents et là, on a les hook.
+Donc on voit aussi que tout a été bien activé.
+Si je fais slash hook, on peut voir que là,
+on a un plugin hook qui est défini juste ici.
+Donc il y a bien tout qui fonctionne et le plugin s'est bien ajouté.
+Donc, comment est-ce qu'on peut tester aussi que ça fonctionne ?
+Eh bien, si on écrit iBP base,
+on peut voir qu'on a toutes les commandes que j'ai créées juste ici qui s'affichent.
+Et donc, on a bien créé un plugin que n'importe qui peut utiliser.
+Donc, je rappelle les étapes.
+Première étape, c'est d'avoir un projet avec les bons dossiers comme j'ai ici,
+c'est-à-dire command hook.
+Il y a aussi une autre solution qu'avait fait notre ami sur GitHub.
+Ici, c'est de mettre le paf des fichiers directement ici.
+Donc, ça fonctionne aussi, mais c'est un peu plus verbeux.
+Et si tu rajoutes un fichier un jour dans commande,
+il ne va pas être ajouté automatiquement.
+Une fois que tu as fait ça, ici dans source,
+tu mets le dossier qui contient commande hook, comme je l'ai fait ici,
+ou même, comme on l'a vu, agent commande hook.
+Et ensuite, c'est déjà terminé, notre plugin vient d'être créé.
+Donc, tu vois que c'est assez simple finalement.
+Alors au début, ça m'a un peu pris la tête parce que j'avais voulu le faire sans lire la doc.
+Mais quand tu lis la doc, on s'y retrouve.
+Et donc ensuite, il te suffit de commit le marketplace.json.
+Et ensuite, on peut l'installer après directement avec le lien GitHub.
+Donc, voilà un petit peu pour ça.
+Mon avis personnel sur le sujet, en ayant testé quelques minutes depuis avant,
+je dirais que je ne suis pas fan de l'histoire de Marketplace.
+J'aurais préféré avoir une commande et je ne sais pas, j'espère qu'ils vont le faire.
+Plugin add, par exemple melvinx-ai-blueprint-dev,
+slash, par exemple, aibp-base.
+Et lui vient automatiquement chercher le dossier aibp-base dans le projet, en de guillemets,
+et j'installe qu'un seul plugin, voire même slash plugin add, une URL,
+http.melvinx.com slash registry, blablabla.json, qu'il installe.
+Comme ça, je peux juste installer un plugin et je n'ai pas besoin de me faire chier,
+en de guillemets, avec cette complexité qu'il y a ici.
+Voilà un petit peu mon avis.
+Je vous mettrai en lien sous cette vidéo.
+De toute façon, mon petit outil aiblueprint plugin,
+que j'aurais publié d'ici que je fasse cette vidéo.
+Donc, j'ai un peu de travail à faire,
+juste pour pouvoir faire en sorte que tout soit super méga clean.
+Mon avis là-dessus, c'est que ça répond à un besoin,
+mais à la fois, moi, j'ai un profil geek où j'aime bien avoir un contrôle.
+Donc, je préfère presque copier-coller chaque commande, les modifier, les refactor, les juger.
+Et c'est ce que je vous invite à faire quand vous utilisez iBlueprint et mes commandes,
+de vous dire est-ce que j'ai besoin de cette commande, non, oui, comment je la modifie, etc.
+Que ces plugins, je sais comment ça finit, je vous connais les zigotos,
+on arrive, on finit par installer 25 plugins, on les utilise une fois tous les deux ans
+et on se retrouve avec un contexte pollué quand on fait slash 1 milliard de commandes et 203 agents.
+C'est mon avis, c'est la même chose que ces agents security, review, etc.
+Ouais, alors à part créer des fichiers Markdown et te dire que rien ne va,
+des fois, quand tu contrôles pas et que tu comprends pas ce que ça fait
+et que c'est pas adapté à ton code, ça fonctionne plus ou moins bien.
+En tout cas, c'est mon avis perso, à voir si le futur me dit que c'est faux.
+Par ça, la négativité, quand même, je trouve ça intéressant.
+Ils ont fait un bon travail, ils ont un peu over compliqué le truc,
+je sais pas pourquoi c'est pas plus simple, je sais pas pourquoi il y a des marketplaces,
+je sais pas pourquoi c'est pas juste slash add plugin,
+nom de l'url et bam, un petit peu comme chat cnui.
+Chat cnui, je pense qu'un chat cnui pour cloud code aurait été plus intéressant.
+Tu fous juste un registry de JSON, ensuite des éléments, bam,
+tu fais slash plugin, tu mets l'url.json et ça download tout.
+Alors ça a été intéressant ici, ce qu'ils ont fait parce que ça t'ajoute le code un peu over engineré.
+Voici mon avis, dites moi ce que vous en pensez, ciao ciao.

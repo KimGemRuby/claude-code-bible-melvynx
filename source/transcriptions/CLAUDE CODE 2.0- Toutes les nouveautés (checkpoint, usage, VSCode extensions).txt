@@ -1,0 +1,206 @@
+J'ai l'honneur de vous annoncer que Cloud Code version 2.0.0 vient d'être mise en ligne il y a précisément que 3 heures et c'est une master class.
+Ça me rappelle que moi personnellement je fais énormément confiance à Cloud et je vais te présenter pourquoi aussi dans cette vidéo mais on va d'abord voir toutes les nouveautés.
+Alors la nouvelle version de Cloud Code que tu peux voir avec cette nouvelle interface donc pour savoir si tu as la nouvelle version de Cloud Code quand tu lances Cloud Code tu devrais avoir ce petit bonhomme qui s'affiche donc c'est leur mascotte.
+C'est assez cool on a enfin une mascotte donc quand on lance Cloud Code comme ceci on a une sorte d'interface qui s'affiche avec cette mascotte très intéressant et donc ici on a les recent activity, what's news et d'autres choses.
+La première nouveauté ici c'est le Cloud Code Agent SDK qui te donne plus de puissance et ensuite la nouveauté la plus importante que l'extension maintenant possède une interface comme tu peux le voir juste ici et on va voir à quel point c'est une master class dans cette vidéo.
+Donc ici voilà maintenant on peut coder directement avec l'interface en installant la dernière version et on a plusieurs commandes qui sont rajoutées notamment le escape escape pour changer de conversation et slash rewind pour annuler les changements.
+Donc on est ici dans Cloud Code comme tu peux le voir juste ici on a l'interface qui est là et si tu ouvres un fichier donc par exemple ici si j'ouvre mon application mobile avec un fichier TSX comme celui-ci tu vas voir qu'il va y avoir un bouton ici Cloud qu'on a juste là et on peut cliquer dessus pour avoir l'interface de Cloud mise à jour donc ici avec Cloud et on a ici les
+différents modes qu'on retrouve ici on a le fichier dans lequel on est donc le contexte qui s'affiche et on a les commandes qui s'affichent juste ici donc avec toutes nos custom commandes avec new conversation, motion a file, attach a file, select model, mcp, login etc etc.
+Donc c'est vraiment super on va pouvoir tester la première chose que j'ai envie de tester avec cette conversation c'est typiquement de faire ce que j'ai fait juste ici donc lui je vais le couper mais il y a par exemple les lancements de serveurs je pense pas que ce soit possible.
+Donc là quand vous lancez un message ça affiche ceci et là on peut voir que ça lance un background job donc ça a bien fonctionné on peut bien avoir les background jobs et on a du coup une magnifique interface donc pour les personnes qui n'étaient pas fans de l'interface de Cloud Code avant et bien cette fois on a une interface qui est beaucoup plus accueillante.
+On va pouvoir lui demander de debugger ceci donc typiquement je vais lui dire mon application est bloquée dans un chargement infini, résout le problème s'il te plaît.
+Donc là on va voir le debug parce que ce que je t'ai pas dit aussi et qu'on voit pas juste ici mais c'est qu'il y a un nouveau modèle alors ça j'ai oublié de l'afficher ici CloudSony 4.5 juste ici.
+Introducing CloudSony 4.5 donc hétéoriquement meilleur de tous les autres modèles comme on a l'habitude d'avoir avec ici la comparaison entre tous les modèles et bon d'après Anthropic,
+Sony 4.5 est meilleur que Opus, qui est meilleur que Sony 4, qui est meilleur que GPT-5 Conex et que GPT-5 et que Gemini.
+Donc on a ici un modèle qui apparemment comme d'habitude de toute façon on a l'habitude d'avoir des modèles qui sont meilleurs que tout ce qui existe.
+Donc voilà ici on a l'IA qui a travaillé sur ce problème et qu'ici me demande si j'ai envie de lancer certaines commandes donc encore une fois avec l'interface qu'on a juste ici.
+Et ici c'est intéressant parce que dans les Batch Output on peut cliquer pour voir les données que reçoit l'IA donc tu vois qu'ici il reçoit Statue, Standout, Stand Error et Timestamp dans les paramètres.
+Et là lorsqu'il fait des modifications on peut voir qu'on a du coup la version à gauche et à droite qui s'affiche comme ceci et là il nous dit qu'il a corrigé le problème théoriquement.
+On va voir si c'est le cas avec notre application mobile, on peut voir qu'il a bien corrigé le problème Michel.
+Donc là il a corrigé le problème et on a cette interface qui est très jolie.
+On peut ensuite vérifier que ça fonctionne et boum notre application fonctionne plutôt bien et bam on a tous les résultats qui sont juste ici.
+Donc on a vu comment l'IA a réussi à corriger un problème ici avec le nouveau modèle et avec l'interface qui est juste ici.
+Donc voilà ils ont à peu près refait ce qu'il y avait avec Codex qui est une très très bonne idée.
+On peut aussi retourner sur tous nos chats donc ça c'est assez cool pour pouvoir retourner sur tous nos chats et pouvoir les relire avec une interface qui est un peu plus plaisante.
+Je suis en train de voir ça mais ça c'est vraiment cool parce que quand tu veux retourner sur un chat c'était un peu dur de switcher avec la commande résume, scroller etc.
+Donc là on peut voir même des anciens chats donc ça c'est cool et on peut aussi tester juste ici avant de quitter l'extension pour avoir vraiment la vue complète.
+Donc on peut en lancer plusieurs en même temps ça c'est cool par rapport à Codex où on peut en lancer qu'un seul.
+Et si je lui lance slash debug why I have all these logs.
+Donc la commande debug c'est une commande que j'ai créée qui est disponible pour les développeurs qui ont subscribe à iBlueprint.dev slash AI.
+Tu vas pouvoir accéder à une formation mais aussi à tout mon setup, tous mes agents, toutes mes commandes et il y a notamment une commande slash debug qui vient debugger tout le problème.
+Et tu vois qu'ici ce qu'il nous a fait c'est qu'il a lancé des tâches server action web search etc.
+On peut voir que pour les tâches l'interface est toujours mauvaise parce que du coup toutes les tâches sont affichées en ligne au lieu de les afficher dans des blocs comme fait Cloud Code.
+Donc pour ça c'est pas super parce qu'on comprend pas où est la tâche et on voit qu'il fait beaucoup de choses d'un coup donc on voit qu'il y a toutes les tâches qui nous output à la gueule ce qu'ils ont fait.
+Mais c'est pas pratique parce qu'on comprend pas ce qui est en train de se faire.
+Donc ça c'était pour le dernier truc que je voulais voir ici sur l'interface.
+Maintenant on va fermer tout ça et on va voir ici Cloud Code dans le terminal parce qu'il a aussi changé.
+Donc là quand tu lances CC tu as maintenant une jolie interface avec la petite mascotte Cloud Code ici qui est notre nouvelle icône favorie.
+Et quand tu fais Slash Model tu vas avoir du coup Default avec Sony 4.5 ou Opus qui est juste ici.
+Donc on va choisir Default.
+La première différence qu'on a juste ici c'est Thinking.
+Alors ça c'est très pratique parce qu'avant pour Trigger le Thinking tu devais taper UltraThink.
+Et donc là UltraThink vient proposer le Thinking.
+Et là j'ai l'impression qu'ils ont un peu dégagé la logique de Thinking qu'il y avait à l'époque.
+Et que maintenant il y a juste un tab qui permet de faire Thinking On, Thinking Off.
+Et donc ici quand tu fais Thinking On il va réfléchir pour toutes les requêtes.
+Et en fait ça c'est peut-être une des explications qui fait qu'à l'époque notre ami Cloud Code était moins bon que Cloud Sony.
+Parce que le mode Thinking n'était jamais activé par défaut.
+Mais là avec Thinking On donc dès que le champ est bleu juste ici, tu vas avoir le Thinking activé par défaut tout le temps.
+Et si tu as envie de changer entre les modes, moi je n'utilise pas parce que je suis toujours avec ce mode rouge qui fait flipper.
+Mais tu peux faire Shift Tab comme ceci pour changer de mode.
+Donc là je me mets en Bypass Permission avec le mode Thinking.
+Et on va pouvoir lui demander une réalisation de feature.
+Bon on va voir s'il est capable de faire ça. Je ne suis pas convaincu de la capacité.
+Mais je vais lui dire slash debug comme ceci.
+Dans l'application mobile tu peux voir sur le screenshot qu'on ne peut pas vraiment voir le contenu texte des tags.
+Ce serait très intéressant si tu arrives à nous résoudre ce bug dans les plus brefs délais.
+Donc voilà on le lance avec la commande slash debug.
+La commande slash debug elle a la particularité de lancer l'IA avec un process de debug qui permet d'améliorer les résultats la majorité du temps.
+Suivi d'une phase de recherche afin de pouvoir trouver ici l'élément qu'il a trouvé assez vite.
+Ensuite il va essayer d'identifier, d'implémenter un fixe et vérifier que ça a été résolu.
+Donc là c'est ce qu'on est en train de voir devant nos yeux épaillis.
+Je vais te foutre un coup de zoom en plus.
+Donc là il a mis à jour je ne sais pas trop quoi et je ne sais pas si ça va update en live.
+Qu'est-ce qu'il a fait juste ici ?
+Et voilà magistralement notre ami a réussi à résoudre ces histoires de tags et c'est magique.
+Est-ce que c'est pas fantastique qu'il nous ait résolu notre tag ?
+Et donc là évidemment moi je peux commit les changements qu'il a proposé juste ici qui me vont très bien comme ceci.
+Juste pour pas les annuler mais la différence c'est que maintenant on peut utiliser la commande slash rewind.
+Restore the conversation to a previous point.
+Quand on fait ça on peut voir chaque message qu'on a envoyé juste ici.
+Et en faisant ces messages on peut voir que entre chaque message quel fichier il a modifié.
+Et donc là si je rewind à un fichier différent par exemple celui-ci.
+Je vais pouvoir dire restore code and conversation, restore conversation ou restore file.
+Et donc en choisissant par exemple juste ici quand je viens ici sur rewind, restore code and conversation.
+Et bien à ce moment là on peut voir que ça a annulé les changements qui ont été fait.
+Et donc maintenant Cloud Code garde l'historique complet de toutes les modifications qu'il a fait.
+Pour pouvoir les modifier comme j'ai donné l'exemple juste ici.
+Tu peux aussi réaliser la même chose en faisant échappe échappe et ça vient faire le rewind.
+Donc slash rewind c'est maintenant une commande qui est l'équivalent de échappe échappe.
+Et donc maintenant chaque fois que tu fais échappe échappe tu peux choisir 1, 2 ou 3 ou annuler comme ceci.
+Ce qui va te permettre de pouvoir avoir une sorte de checkpoint.
+Et de pouvoir sauvegarder comme on l'a vu juste ici les différentes choses.
+Il y a une commande slash usage.
+Et bam là ça c'est beau, ça c'est beau.
+Donc là on peut voir que j'ai utilisé 9% de ma current session.
+On peut voir la semaine, combien de pourcents j'ai utilisé dans ma semaine.
+Et combien de pourcents j'ai utilisé avec opus.
+J'ai utilisé que 1% les amis, c'est dantesque parce que hier je l'ai utilisé beaucoup.
+Il n'y avait pas encore sonné.
+Ensuite on peut faire tab pour voir le statut et config pour voir tous les paramètres juste ici.
+Ah on peut désactiver les to do lists maintenant.
+Ça c'est vraiment cool, ils ont fait un travail de fou.
+Show tips, on peut désactiver les tips.
+Putain.
+Hop ça c'est ça, ça dégage les tips de cons.
+Ça oui, verbose output.
+Ça moi j'aime bien.
+Normalement j'aime bien, je vais tester, activer.
+Dark mode, notification, editor mode, model, diff tool, auto install IDE extension.
+Ok ok, c'est vraiment cool hein.
+A avoir l'usage comme ça, ça c'est game changer.
+Ça c'est vraiment, ça fait vraiment plaisir.
+Et donc là qu'est-ce que j'ai changé ?
+J'ai changé le verbose.
+Donc qu'est-ce que ça change le verbose quand vous l'activez ?
+Normalement ça vous affiche le nombre de tokens quelque part.
+Donc ici on peut voir qu'il me dit thinking mode on.
+Ici je lui demande ok à quel.
+Ok explique moi comment est géré l'authentification dans mon application.
+Et normalement une des différences avec le verbose, on va voir.
+C'est juste qu'ici on a les nombres de tokens ici qui s'affichent.
+Et on n'a plus les tips.
+Donc voilà, activer ces deux paramètres.
+Ça fait toujours plaisir de ne pas avoir tous ces trucs dégueulasses.
+Et on peut voir aussi que j'ai l'impression qu'en général,
+Claude 4.5 ici, ça va très très vite.
+Il va très très vite.
+Aussi il a caché le thinking.
+On peut faire contrôle O pour voir le thinking.
+Mais sinon par défaut il est caché.
+Donc ça c'est aussi une petite différence qu'on a juste ici.
+Mais sinon c'est vraiment top.
+Donc là on a tout le output qui vient de nous expliquer comment ça fonctionnait.
+Donc très stylé usage commande, nouvelle commande.
+Qui vient aussi s'ajouter juste ici.
+On a aussi ici je voyais quelqu'un qui fait la commande slash context.
+Dans les contextes on a une sorte de reserved autocompact plus output token.
+Alors ça je ne sais pas exactement à quoi ça servait.
+Mais j'ai l'impression que c'est une sorte d'estimation de combien de tokens on va avoir besoin pour les tool calls etc.
+Comme ça ici ça nous affiche les tokens qui sont disponibles vraiment pour notre utilisation.
+Et les reserves je ne sais pas trop ce que ça fait.
+Donc ici la personne nous dit.
+On dirait qu'il y a une partie de la contexte Windows qui est pré-réservée pour l'autocompact.
+Peut-être que ça permet d'avoir des meilleurs résultats.
+Je suis pas sûr.
+Je suis pas sûr non plus.
+Donc voici un petit peu pour les nouveautés sur le software.
+Donc on a vu l'extension et le rewind.
+Et voilà quelques petits retours de la communauté que je vois.
+Sonic 4.5 avec Cloud Code ressemble à GPT-5 dans Codex.
+Mais mieux.
+Moi j'ai toujours dit que GPT-5 et Codex étaient sûrement la pire UX, UI de développeur possible.
+Et j'ai jamais compris la hype.
+Ok.
+J'ai jamais vraiment utilisé Codex pour faire des tâches.
+Donc voici un petit peu.
+Dernier sujet que je voulais parler avec toi c'est pourquoi arrêter de switcher.
+Il y avait des fans d'Intelligence qui nous a fait ce tweet.
+Voilà je change de Codex à GPT-5 etc.
+Pourquoi est-ce que je pense qu'on est pas mal avec Cloud Code pour un certain temps ?
+2023, mars 2023, c'est le lancement de Cursor.
+A l'époque quand Cursor est lancé, ça marche pas.
+Tout le monde s'en bat les couilles.
+J'ai des vidéos sur ma chaîne YouTube où je dis c'est de la merde.
+Ok.
+Ensuite en 2024, le juin, en juin, il y a la sortie de CloudSonic 3.5.
+La sortie de CloudSonic 3.5 par Anthropic, par Cloud, ça change beaucoup de choses.
+Parce que dès que CloudSonic 3.5 sort, en août, explosion de Cursor.
+Pourquoi il y a une explosion de Cursor ?
+Parce que Sonic 3.5 offre la possibilité aux IA de faire des tool calls de manière très safe et très smart.
+Et ça fait que Cursor devient populaire.
+Ensuite en 2025, juin, il y a Cloud Code qui devient super populaire.
+Alors je sais plus trop quand il sort.
+Mais juste pour que vous voyez tanstack.com juste ici.
+Donc si vous allez sur tanstack.com, vous pouvez aller dans stats juste ici.
+Et ici, on peut écrire.
+Ici on peut chercher OpenAI Codex et Anthropic pour voir que...
+Donc voilà, en juin, c'est ce que je t'ai dit juste ici, il y a l'explosion de Code Code.
+En juillet, il skyrocket dans le futur.
+Il arrive juste ici.
+Et maintenant il a stagné depuis août, depuis un petit peu près la sortie juste ici.
+Mais il a déjà converti des centaines de milliers d'utilisateurs.
+Et donc ici, c'est ce qu'on a juste ici actuellement tout de suite.
+On est dans cette étape là.
+On a le skyrocket de Cloud Code.
+Et personnellement, pourquoi j'aime Cloud Code ?
+C'est que depuis qu'ils ont skyrocket ici, il y a eu des nouveautés.
+Amélioration.
+Tous les mois.
+Ça n'a rien à voir.
+Rien à voir.
+Avec Codex où ils améliorent leur modèle à la con.
+Mais leur software, enfin.
+Enfin, je ne sais pas si il y a des gens normalement constitués sur cette planète.
+Mais quand je viens ici et que je vais sur cette table de Codex de taré.
+Je ne prends pas plaisir à travailler là-dessus.
+Je ne prends pas plaisir du tout.
+C'est mal fait en général.
+Il n'y a pas les commandes.
+Il n'y a pas une bonne UI.
+Ce n'est pas facile de supprimer, de modifier un message.
+Ce n'est pas facile de retourner dans la conversation.
+Très compliqué pour moi.
+Très compliqué pour moi de supporter.
+C'est pour ça que je suis toujours sur Cloud Code.
+Et que je vous invite à faire pareil.
+Si on regarde mon usage de Cloud Code, vous verrez qu'il est intensif.
+Avec une utilisation hier de 73 dollars, mon record.
+Parce que j'ai utilisé Opus de manière intensive.
+Maintenant, ça ne sert à rien.
+Mais l'avantage d'utiliser Opus, c'est que vous faites monter les dollars beaucoup plus rapidement.
+Bref, c'est tout pour cette vidéo.
+Si vous avez kiffé, première chose à faire, vous abonnez.
+Deuxième chose à faire, allez dans le premier lien sur la description.
+Pour télécharger toute ma config Cloud Code que j'update de manière fréquente.
+A bientôt.

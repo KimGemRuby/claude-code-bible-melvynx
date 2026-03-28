@@ -1,0 +1,106 @@
+Cloud Code et les agents IA en général, Cursor ou Winsurf peuvent être énormément améliorés
+en faisant cette simple modification qui va totalement changer les résultats que tu peux
+avoir avec Cloud Code. D'abord, on va parler du problème. Il y a des développeurs qui disent
+je comprends pas comment un système qui génère du code qui ne compile pas appelle à des méthodes
+inexistent import de classe et quand c'est pas du refactoring qui plante les tests arrive à vous
+faire gagner du temps. Faut savoir que ceci c'est tout simplement un mauvais usage de l'IA. C'est
+ne pas savoir correctement prompter et expliquer comment on utilise l'IA et donc dans cette vidéo
+je vais te partager un tips qui change énormément les résultats que tu peux avoir. Alors quel est
+le problème qu'on fait tous face dans nos codebase ? Le problème principal qu'on fait face c'est
+l'hallucination face à l'usage de librairies et je vais te montrer un exemple tout de suite. Par
+exemple ici que je suis dans mon repository et j'ai envie de proposer la création d'une API
+root et si je te montre une API root standard qu'on a juste ici, généralement j'utilise la
+librairie ici je sais pas pourquoi il y a un S. Donc un problème qu'on va avoir souvent quand on veut
+par exemple créer une route donc ici je vais venir créer une route et je vais lui dire s'il te plaît
+créer une API root dont API slash user slash me qui retourne l'utilisateur actuel. Et donc là on
+peut voir qu'il a réussi après des recherches intempestives de venir faire un code qui n'est
+pas du tout correct parce qu'il utilise export a5 function get au lieu d'utiliser les outils qui
+sont typiquement disponibles dans toutes les routes juste ici ou on utilise safe routes donc
+safe routes qui retourne routes, autres routes, org routes et token routes qui permet ici de créer
+des routes type safe etc. Donc on peut voir que là le code qui m'a généré n'est pas satisfaisant
+parce qu'il utilise pas les outils qui sont actuellement disponibles dans le code et qui
+sont à sa disposition. Et donc pour résoudre ce problème on va faire deux choses très précises.
+La première chose qu'on va faire c'est modifier les fichiers routes qu'on a juste ici. Ce que j'ai
+fait dans OTS par exemple c'est que j'ai ajouté des commentaires qui expliquent bah voilà c'est le
+base route handler et voici comment l'utiliser. Et ensuite on va envoyer pour le out routes voilà
+ça c'est le route handler with authentication user is logend etc etc. Donc ça c'est la première
+étape. Le premier tips que j'ai à donner c'est maintenant qu'il va falloir ajouter des commentaires
+sur l'utilisation des librairies que l'IA ne pourrait pas forcément connaître avec des exemples.
+Ça va énormément améliorer les résultats de l'IA. La deuxième chose c'est de modifier son
+cloud.md par exemple ici avec workflow modification donc là je vais aller dans le cloud.md
+workflow modification critical rules always follow this donc là on vient emphases on vient mettre
+en avant cette règle avant de modifier n'importe quel fichier tu dois minimum lire trois fichiers qui
+vont te permettre de rester cohérent et d'avoir de la consistency c'est non négociable tu ne dois
+pas skip ceci et donc on ajoute ce workflow modification dans le cloud.md plus la documentation
+qui va lui dire que quand il va lire ce fichier cloud va être capable de beaucoup mieux comprendre
+ce qui se passe donc là j'ajoute les commentaires que sur les fonctions qu'on a besoin. Qu'est ce
+qu'on va faire maintenant on va aller ouvrir un nouveau terminal ouvrir cloud code comme ceci
+ici on va ouvrir cloud code ici juste pour déconnecter l'IDE afin de ne pas avoir de
+contexte et je vais lui donner exactement la même instruction et avant ça on va supprimer le user
+slash me qui est juste ici et donc là directement la différence est flagrante au lieu de venir faire
+ce qui s'est passé juste avant et de lire le fichier qu'on avait avant et ben là il a lu des
+exemples app slash API il a lu trois exemples de routes et donc avant on peut voir qu'il avait
+fait n'importe quoi ici il a lu l'exemple de routes et ensuite la magie magie magie magie il a lu
+safe routes et donc c'est exactement le fichier qu'on a envie qu'il lise d'ailleurs je sais pas
+pourquoi il y a ce commentaire juste ici bref on a exactement envie qu'il lise ce fichier safe routes
+ok maintenant je le comprends et donc là la magie et donc là c'est magnifique one shots exactement
+ce qui doit retourner exactement le code qu'il devait faire et il l'a fait en one shots pourquoi
+parce qu'on lui a donné les bonnes instructions donc la première chose c'est dans le cloud.md
+lui ajouter un workflow de modification donc le mieux c'est de lancer des commandes mais
+pour un usage simple pour augmenter les résultats et pour pas qu'il fasse n'importe quoi on va lui
+donner ces workflows de modifications en dedans vraiment une très grosse importance donc critical
+rules non-negotiable tout ceci c'est des keywords qui vont forcer cloud à suivre ceci. Deuxième
+tips très important c'est de venir ajouter des commentaires dans tous les fichiers que vous
+utilisez donc si dès maintenant tu décides de t'inscrire à NowTS qui est la boilerplate la plus
+poussée qui va te permettre d'utiliser cloud alors avec un zoom incroyable mais qui va avoir beaucoup
+de règles pensées pour l'IAC ce soir pour les cursor rules ou pour l'utilisation de cloud en
+général où je vais tout préparer pour toi dans NowTS je viens ajouter des commentaires donc ça c'est
+l'exemple de NowTS avec le fichier zode route qui est juste ici je viens préciser comment on utilise
+ces librairies par exemple j'ai upfetch je viens lui préciser exactement comment il doit l'utiliser
+avec des exemples des exemples des descriptions on pourrait aussi avoir n'importe quel fichier de
+configuration on va toujours rajouter un nombre ahurissant d'exemples pour s'assurer que l'IA
+génère du bon code le but c'est qu'on force l'IA dans le cloud.md et donc là dans le cloud.md on
+lui précise voilà un type of fichier que tu dois lire je viens de rajouter je viens d'avoir une super
+idée similar file et imported dependency donc par exemple si tu importes des types etc et bah
+tu vas toujours lire le fichier à ce moment là en lui disant ça il va venir lire le fichier en
+lisant le fichier la magie va opérer parce qu'il va avoir comme une sorte de prompt injection du
+de la définition que tu lui envoies là pour qu'il sache exactement comment l'utiliser même si dans
+les exemples il n'a pas eu toutes les informations donc c'est très important ce que je rajouterais
+encore mieux ici c'est de la documentation qu'on pourrait ajouter ici mais voilà vous pouvez vous
+amuser moi sur nowtess j'ai fait un setup plus complet sur plus de librairies mais ça de mon
+expérience ça suffit après attention par exemple avec upfetch de pas faire ça ça c'est l'enfer
+parce qu'il va pas savoir l'utiliser et non plus de pas rajouter un dictionnaire entier donc là
+c'est vraiment à la limite de la longueur ne vous amusez pas à faire beaucoup plus long donc c'est
+deux techniques très puissantes donc pour revenir aux commentaires et pour conclure cette vidéo si
+vous avez des mauvais résultats c'est parce que vous faites un mauvais usage de l'IA et c'est parce
+que vous ne donnez pas le bon contexte à l'IA donc vous avez toujours deux fois quand vous êtes
+face à ce genre de problème soit vous améliorer le prompt soit vous améliorer le workflow donc le
+workflow c'est ce qui peut s'apparenter au contexte donc le workflow va permettre de donner du contexte
+ou à vous améliorer le prompt ok il n'y a pas 10 000 solutions différentes pour améliorer le
+contexte et le workflow ce qu'on va faire c'est d'ajouter du cloud.md et des commentaires donc
+c'est la technique que je vous donne dans cette vidéo ça permet d'améliorer le contexte et le
+workflow soit vous améliorer le prompt qu'est ce que c'est améliorer le prompt et bah la dernière
+chose que j'aurais pu faire dans mon exemple juste ici tigez-re-prompt et donc là voici comment
+one-shot deuxième solution c'est d'améliorer le prompt et donc là juste pour te montrer crée
+moi in API routes pour faire ça utilise autres routes de safe routes donc là je tag le fichier
+and take for example la route et donc là je viens lui donner exactement la route et je viens lui
+donner exactement ici l'exemple qu'il doit faire et donc là il va quand même lire des fichiers
+parce que c'est quand même important qu'il augmente encore plus son contexte mais en faisant ça et
+bah il va nous one-shot encore une fois de manière assez impressionnante ce route voilà il a fait
+exactement la bonne chose alors à la place de retourner user il a retourné directement ça mais
+ça va très bien et on peut voir que ça donne le même résultat et ça va plus vite donc si vous
+n'améliorez pas le prompt c'est à dire exemple de fichier librairie à utiliser ça c'est à donner
+dans le prompt et bah dans ce cas là il faut modifier le contexte et le workflow en modifiant
+ceci ça va vous permettre d'éviter beaucoup beaucoup d'erreurs que l'IA va faire donc ça va
+permettre d'éviter d'utiliser de ne pas de ne pas utiliser des librairies existantes donc par exemple
+tu as une librairie qui est disponible et l'IA souvent au lieu d'utiliser les librairies à
+disposition il va utiliser des nouvelles librairies où il va ne pas les utiliser à recommencer tout
+à zéro ça va éviter que l'IA hallucine les fichiers qui n'existent pas et ça va augmenter
+drastiquement la qualité du code évidemment parce que tu lui donnes des exemples et elle est très
+douée justement pour reprendre du contexte si tu lui donnes pas de contexte si elle ne cherche pas
+de contexte tu auras des mauvais résultats donc un tips très très très très important et j'espère
+que tu envoies la valeur hésite pas à me donner dans tes dans les commentaires un tips que tu
+aurais et si tu as envie de maîtriser cloud code pour faire des applications de A à Z tu peux
+aller sur mlv.sh slash IA pour récupérer ta masterclass gratuite cloud code il ya déjà plus
+de 1500 personnes qui ont dû rejoindre ça donc vraiment profites-en maintenant et en attendant
+on se retrouve pour une prochaine vidéo merci de m'avoir suivi à bientôt ciao ciao

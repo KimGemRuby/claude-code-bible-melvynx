@@ -1,0 +1,177 @@
+Vous avez été beaucoup à péter les plombs dans cette histoire de Workflow parce que c'est assez manuel et il y a pas mal de choses à faire à la main pour pouvoir utiliser ce Workflow avec Cloud Code qui génère plusieurs branches.
+J'ai une bonne nouvelle pour toi parce que si t'es utilisateur macOS, on a une nouvelle application qui s'appelle Conductor.
+Tu peux la retrouver sur Conductor.Build et ce genre d'application alors peut-être que demain ce ne sera pas Conductor la meilleure et je t'invite si tu as envie d'avoir toujours les meilleures applications et les meilleures ressources d'aller sur highblueprint.dev où je partage tout qui est mis à jour parce que l'IA change très vite.
+Mais Conductor c'est une application qui va te permettre de lancer des Cloud Codes en parallèle avec exactement le système de Workspace que je t'avais expliqué.
+Donc quand tu es sur Conductor qui marche pour l'instant que sur macOS mais je t'invite à chercher Work Tree Cloud Code Parallel Windows et suivant quand tu regardes cette vidéo il y aura sûrement une sorte d'outil qui te permet de faire la même chose sur Windows.
+Qu'on soit clair, ça risque d'arriver, il n'y a pas besoin de flipper.
+Bref si tu es sur Mac tu peux télécharger Conductor et Conductor ça t'affiche une interface comme ceci où on a du coup toutes les issues et on peut créer des Workspace pour venir résoudre un problème.
+Donc par exemple ici je peux faire ce que tu vas devoir faire quand tu ouvres l'application pour la première fois c'est de venir ajouter un Repository.
+Donc pour ça tu vas dans Add Repository et là tu copie-colles ton Git Repository.
+A ce moment là ce que va faire Conductor c'est qu'il va cloner ton Repository de manière locale afin de pouvoir ensuite créer des Work Tree.
+Les Work Tree c'est des copies de ton Repository où tu vas pouvoir modifier du code sans impacter la branche principale.
+Et donc mon Workflow que je t'avais déjà expliqué le plus simple c'est d'utiliser GitHub comme un CRM surtout si tu travailles tout seul et sinon tu peux évidemment utiliser des outils plus poussés.
+Mais donc ici tu pourrais avoir différentes issues bla bla bla bla bla et tu pourrais les corriger juste ici.
+Par exemple si on va sur save it.now je pourrais dire on va par exemple créer un ticket tu peux voir qu'il y a un problème avec les liens dev.to on a ce genre de page.
+Et donc ici je vais screenshot cette page comme ceci et je vais venir créer une issue où là tu vas devoir décrire ton ticket.
+Donc par exemple use the OJ image as preview when the page is invalid or doesn't look like the expected result.
+For now sometime like with.
+Donc par exemple ici j'ai créé mon issue alors voilà on peut corriger la grammaire comme ça il n'y a personne qui va m'embrouiller sur les commentaires.
+Et donc ici on clique sur create.
+Quand on crée cette issue on va pouvoir voir que sur Conductor il va normalement si je le restart m'afficher cette issue.
+Donc on va sur Conductor et ici voilà use the OJ image etc.
+On peut cliquer dessus et ça va venir start le la résolution de cette issue.
+Et donc là tu vois que ça me dit can you take a look at GitHub issue 73 to help me solve it.
+Personnellement je préfère lancer la commande run task avec le nom de l'issue.
+Et pour rappel qu'est ce que fait le prompt run task si j'ouvre mon dossier cloud sur VS Code et qu'on a la commande run task.
+Et bien il vient utiliser le framework explore plan code test qui est assez efficace avec cloud code parce que cloud code vient son contexte.
+Vu qu'il vient son contexte on vient ici lui préciser.
+Tu dois récupérer la task de cette manière X ou Y.
+Ensuite tu dois explorer avec différents subagents pour venir regarder tout le contexte qu'il faut.
+Ensuite tu planifies tes changements et ensuite uniquement tu codes et tu tests.
+Tu crées une pull request et tu écris un résumé de ton travail à la fin avec tout ce qu'il faudrait faire pour les futurs développeurs à connaître.
+Donc ici cette commande elle est assez magique mais vraiment elle est magistrale et je l'ai testé sur des projets plus vibe coding.
+Donc je t'invite à aller sur iBluePrint.dev pour avoir les prompts.
+Tu recevras un fichier Notion avec l'intégralité des prompts parce que là tu vois qu'ici il utilise des parallèles subagents pour venir inspecter la code base.
+Et ça va être très très important parce que s'il explore pas correctement la code base tu ne vas pas avoir du contexte et son contexte ça va pas marcher.
+Bref le plus important c'est juste de lancer la commande et de voir l'interface.
+Donc à côté on a un menu, on peut voir le terminal ou ici d'ailleurs on peut lancer d'autres instances de cloud code ou moi ce que j'aime bien faire dans le terminal c'est de lancer cursor point.
+Comme ceci. On pourrait aussi lancer des scripts pour ajouter les fichiers point env qu'on peut modifier en fait dans le dossier.
+Donc si ici on fait cd, si ici je fais open point.
+En fait on se rend compte que Conductor comment il fonctionne, il crée un dossier Conductor.
+A l'intérieur il y a repo et dans repo il y a save it.now et dans save it.now on peut voir qu'il y a une branche main.
+J'imagine que si on ajoute les fichiers point env dans cette branche main on va tester.
+Là j'ai ajouté les deux fichiers point env dans la branche main juste ici.
+Et donc là ce qu'on va pouvoir faire c'est qu'on va pouvoir créer d'autres issues.
+Donc cette issue là elle est en process.
+Et donc là je peux créer une deuxième issue comme tu peux le voir juste ici.
+Et quand je fais cette deuxième issue je suis capable de venir cliquer ici sur new workspace.
+Et donc là j'ai un workspace qui travaille mais je peux aussi faire run task en utilisant ce deuxième workspace.
+Et on peut voir que maintenant on a non seulement Dakar qui travaille mais on a aussi Lion.
+Donc chaque fois ici on a des sortes de mots comme ceci qui sont sûrement des villes.
+Donc ici la ville de Lyon qui est en train de travailler.
+Et donc là on peut voir il va save et il va travailler.
+Et donc là on a deux instances de cloud code qui travaillent en même temps.
+Tout ça dans une jolie interface.
+Si on ouvre open point comme ceci ce dossier on peut voir est-ce qu'il y a le fichier point env qui est là.
+Ok il n'y a malheureusement pas le fichier point env donc ça c'est le seul problème de ceci.
+J'imagine qu'ils vont améliorer mais c'est que tu vois que moi j'ai besoin de mes fichiers point env pour lancer l'application sinon ça marche pas.
+Et donc je dois passer ma vie à les copier-coller dans les différents dossiers.
+Donc par exemple ici le point env dans l'application web.
+J'imagine que dans un futur proche ils vont copier main à la place de faire ça.
+Mais pour l'instant on doit faire ça.
+Et donc là on peut voir qu'on a nos deux agents qui sont en train de travailler avec ici le explore.
+Et là il est passé d'ailleurs en mode code.
+Donc ça c'est très bien.
+Implément de solution.
+Et ensuite test de solution.
+On va voir un peu ce qu'il donne.
+Donc là on voit qu'il fait toutes les updates.
+On a une interface assez sympa qui permet de voir les updates comme ceci peut-être de manière plus friendly que Cloud Code.
+Dans l'interface même si moi j'aime beaucoup l'interface de Cloud Code.
+Et du coup bam là il est capable de lancer TypeScript, de l'inting, de corriger les erreurs encore et encore et encore et encore.
+Et donc ça c'est toujours très intéressant de voir tout ceci.
+Et donc quand il termine on a la petite musique.
+Et donc là on peut voir j'ai tout terminé.
+Je suis content.
+Et là on a la pool request 74.
+Et encore une fois on peut faire le même workflow que je te partage souvent.
+On peut voir screenshots analysis.
+Donc ici voilà le code qu'il a modifié.
+Il a regardé ça.
+Là on peut voir qu'il appelle les différents toolnames etc.
+Et comme ça il regarde la description du screenshot et si c'est invalide.
+Et donc là on peut voir qu'il a sûrement modifié le prompt quelque part.
+Important, si l'image est invalide, appelle l'outil Invalide Image.
+Avec la raison, une image est considérée si c'est noir, si c'est une erreur page, si c'est une login or authentication page.
+Like sign in or continue.
+Et si c'est captcha verification, access denial, loading screen ou placeholder, browser error, page d'être recueillé, login to view the actual content.
+Et donc en rajoutant ça, on va pouvoir tester ensuite etc.
+Donc là on a la branche.
+Et donc ce qu'on peut faire, c'est typiquement ici soit modifier le code à la main, soit écrire un commentaire.
+Ici précise Unexpected Error Page.
+Car peut-être on sauvegarde une 404 car on la trouve jolie.
+Donc là j'ajoute ce commentaire.
+Et donc là encore une fois, si vous avez plusieurs commandes, on va pouvoir submit la review.
+Allez dans Conductor et ici lancer la commande fix pr comments.
+Et c'est une commande que j'ai ici fix pr comments.
+Voilà, toute simple, qui va automatiquement fetch les pr comments etc.
+Donc on a plusieurs commandes.
+Moi j'ai sept commandes que j'aime bien utiliser là-dessus et aussi watch ci.
+Donc watch ci c'est de loin la commande OG par définition.
+Qui va nous permettre de venir faire en sorte qu'il va venir vérifier à l'infini que la ci passe.
+Qu'est-ce que c'est la ci ?
+C'est les tests qu'on a juste ici.
+Donc le test vers celles fail généralement parce qu'il y a trop de branches.
+Mais évidemment le code quality etc. tout doit passer.
+Sinon il y a un problème.
+Et donc tu vois que c'est une interface assez agréable pour travailler sur deux pull requests.
+Parce que là je peux switch à l'un à l'autre.
+Si d'un seul coup tu dois l'ouvrir sur cursor et bah tu peux lancer cursor point.
+Ça touffe ton projet ici.
+Si tu veux ouvrir, donc ici si je veux ouvrir Cloud Code je peux faire ccc.
+Ccc ça va directement ouvrir Cloud Code avec les différents changements.
+Et je t'invite à regarder mon autre vidéo.
+Donc la commande ccc qu'on peut voir juste ici.
+Ça permet de lancer Cloud Code avec tirer continue.
+Et ce tirer continue bah il permet comme on a vu ici de venir continuer la conversation.
+Donc ici on peut lancer ccc et commencer à rentrer dans l'interface Cloud Code.
+En quittant l'interface qui est juste ici.
+Et donc là on a boom le fix.
+Et on peut voir que dans la pull request on a un commit qui a été fait fix clarify unexpected error page.
+Et ça a modifié notre commentaire.
+Donc toujours très pratique que résolve la conversation et comme ça on a terminé.
+De la même manière de l'autre côté on a ici un petit code qui vient d'être effectué.
+Et donc on peut encore une fois regarder la pull request.
+Je pense que le code ici va être plus intéressant.
+Donc ici il nous a fait un test un test unitaire.
+Et il nous a fait process.
+Donc là dans process vidéo check existing youtube vidéo.
+Il vient chercher une vidéo qui aurait le même youtube id.
+Il vient sélectionner toutes les données qu'on ajuste ici.
+Et si c'est le même et bah à ce moment là ça termine directement.
+Et ça copie les données.
+Donc comme tu vois ça vient dupliquer toutes les données automatiquement.
+Donc ici le code me semble très bien.
+Voilà je vais pas rentrer dans les détails du code.
+Mais ça semble super.
+Donc voilà un petit peu comment travailler sur des features avec cet outil.
+Je le trouve très intéressant parce que voilà pour des personnes qui voudraient.
+C'est beaucoup plus friendly.
+Et moi j'aime bien commencer par ça.
+Comme ça je peux le lancer.
+J'utilise plusieurs commandes différentes.
+Chaque fois parce qu'on est développeur.
+Parce qu'on aime optimiser les choses.
+On va pas commencer à écrire les mêmes prompt encore et encore.
+On veut avoir des résultats prédictifs.
+Et donc je t'invite énormément à créer plein de commandes.
+À créer des commandes pour tous tes use case.
+Donc moi j'ai une commande que j'adore c'est fixprcommands.
+Comme ça j'ai même pas besoin d'ouvrir le repo.
+Je peux directement regarder les changements.
+Tu peux voir que pour ce genre de PR les changements sont assez petits.
+Et donc il n'y a pas de problème.
+Et deuxième commande c'est watch ci.
+Watch ci c'est magique.
+Parce qu'en fait au lieu de venir corriger les tests moi même.
+Parce que des fois il y a des tests qui passent en local mais qui passent pas en prod.
+Ça peut arriver évidemment.
+Et donc à ce moment là j'ai envie de les corriger.
+Donc là typiquement le test qu'il m'a fait avec son describe.
+Est-ce que je suis sûr que ça fonctionne ?
+Normalement je pense.
+Je pense qu'il a lancé les tests.
+Let me fix the test.
+Run video utility test.
+Tu vois qu'il a lancé les tests.
+Donc évidemment il a vérifié.
+Mais si les tests passaient pas sur la ci pour x ou y raisons.
+Parce qu'il m'a pété ma config.
+À ce moment là je pourrais lui dire fixe moi les tests.
+Et il va partir en vrille et il va me corriger les tests.
+Donc très intéressant.
+Voilà un petit peu pour toute cette application.
+Hésite pas à me dire si t'as d'autres applications.
+Les applications que tu préfères etc.
+Et on se dit à très bientôt.
+Ciao ciao.

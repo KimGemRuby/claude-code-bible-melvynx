@@ -1,0 +1,296 @@
+Claude a encore sorti une Masterclass, donc maintenant sur l'application Desktop qui fait énormément, déjà énormément de choses
+et tout ça c'est inclus avec votre abonnement Claude Code, ne l'oubliez pas.
+On a maintenant un menu Chat qui était déjà là et un menu Code directement sur l'application Desktop.
+L'avantage c'est que par rapport à la version Web qui était juste ici avec Claude.com
+qui venait d'être autorisée à utiliser Claude Code uniquement dans des serveurs distants
+ce qui n'est pas forcément pratique et ce qui est un peu chiant.
+Ici on a maintenant l'accès à ce Claude directement dans nos Local Worktri.
+Qu'est-ce qu'on peut faire ? On peut du coup ouvrir n'importe quel folder, donc par exemple j'ouvre l'e-mail
+je précise que je veux un Local Worktri et là je peux lancer des agents Claude avec Claude, une application Claude
+et surtout l'énorme petit bonhomme juste ici que je peux déplacer tout doucement
+pas plus loin qu'ici et que dès que j'enlève il se déplace comme ceci donc c'est très mignon.
+Alors qu'est-ce que j'en pense avec mes deux petits tests que j'ai fait ici ?
+Non je n'en avais fait plus mais je pense qu'ici il y en a un peu plus.
+On va pouvoir ici demander des changements, mettre des images, choisir les modèles et envoyer.
+On va pouvoir ne pas utiliser de commandes, ça c'est le premier truc que je ne suis pas fan
+mais bon pourquoi pas anyway on peut tester.
+Alors on est sur l'e-mail et je vais pouvoir ici demander.
+Donc un petit truc pour tester, on peut voir qu'ici le copy public link est back to campaign
+il est vraiment pas joli d'ailleurs ce bouton back to campaign ne sert à rien et est complètement buggé
+et donc ici on va plutôt lui demander d'enlever ce bouton back to campaign
+et d'uniquement faire ce bouton view copy public link comme ceci donc là on screenshot ça
+Et on vient dans Claude et je dis
+Please remove this button back to campaign and keep only this copy public link button
+Très simple ça permet juste de tester donc là je peux par exemple choisir sonner
+et je peux envoyer ça dans un local work tree.
+Donc ici on peut voir qu'on a directement ça qui s'effectue
+et on a des petits boutons on a VS Code ici qui permet d'ouvrir
+le projet copié j'imagine sur VS Code donc là boum on voit qu'on a
+Ciley Johnson qui s'est fait ici et ça vient créer dans
+www.claudeworktree.io.io.ca
+Donc maintenant on commence à les connaître mais c'est quand même très pratique
+parce que là du coup on peut envoyer un premier prompt
+on a ici l'IA qui s'occupe de rechercher
+et je pense que dès que l'heure a terminé on pourra faire ce CLI.
+Deuxième avantage c'est que là je peux cliquer sur plus et me taper un deuxième un troisième
+une quatrième modification donc là on peut voir qu'il a terminé sa tâche
+il est venu modifier tout ceci on peut voir les diffs on a les différents outils
+qui sont appliqués on a ici le PAF qu'on peut cliquer donc ça
+c'est d'ailleurs bien mieux que Cursor exactement
+et là je peux cliquer sur CLI qu'est ce qui se passe on a le CLI
+qui s'affiche directement avec la conversation dans Claude Code
+très très stylé donc on peut voir que c'est vraiment Claude Code qui effectue les tâches
+sous le capot du coup on peut lancer slash avec des commandes
+par exemple ici create PR pour créer la pull request
+alors je sais pas pourquoi j'ai 25 modèles qui font ça
+on peut voir qu'ici on a quand même une petite erreur et boom
+il me crée la PR sur ma tâche comme ceci
+donc là je sais pas pourquoi il y a plein d'erreurs qui s'affichent
+c'est pas très grave et hop ça a créé la petite pull request
+avec ici le GitHub CLI n'est pas disponible
+ok donc là il me dit je dois faire ça moi-même
+donc on n'a pas non plus le full accès si on veut le full accès
+j'imagine qu'on a qu'à cliquer ici ouvrir un terminal
+faire CD blabla et on est dans le projet et je pense que si je fais Claude Code continue
+on peut voir qu'on peut continuer la conversation qui a été faite ici comme ceci
+donc maintenant qu'est-ce qui se passe quand ici je lance create PR à nouveau
+normalement ici il va avoir accès aux différents outils
+et là c'est marrant parce que je continue la conversation dans le CLI
+on va tester après si quand je refresh ça affiche
+ah voilà ça affiche c'est synchronisé
+ça affiche le truc qui s'est chargé juste ici
+donc là boom PR created j'ai ici la petite PR link
+donc qui n'a pas fait 12000 modifications de dingo
+donc ici toujours cette merde de fichiers qui s'update tout le temps
+et on a aussi les petites modifications que j'avais fait
+c'est pas très grave boom
+on a ici le principal qui est normalement ce fichier email
+qui a été changé juste ici en supprimant le bouton
+une fois qu'on a terminé cette tâche
+donc on peut voir qu'ici c'est quand même un petit peu buggé
+vu que j'ai continué la conversation sur Cursor
+sur mon terminal
+une fois que j'ai terminé cette tâche
+j'imagine que je peux tenter de merge
+donc on va venir ici et on va cliquer sur merge pull request
+confirme merge
+est-ce que ça se passe un truc sur l'interface
+parce que là on avait le petit bouton merged avec le plus moins
+mais là il n'y a pas le bouton merge qu'on a juste ici
+donc là il comprend pas non plus qu'il y a la PR qui a été link
+en tout cas je peux quand même archiver le projet
+et donc ça ça fonctionne nickel
+on peut archiver d'ailleurs tous les projets
+ok donc ça c'était pour une feature plus ou moins facile
+si on retourne maintenant dans le projet principal comme ceci
+qu'on demande une feature un peu plus compliquée
+donc là on clique sur plus
+on peut voir que moi j'avais choisi sonnet parce que c'était un changement très facile
+mais on va checker un autre petit changement juste ici
+donc là on a par exemple ce background et border color
+donc je vais screenshot ça
+et je vais lui dire
+pour la section
+nous avons background et border color
+ce n'est pas un sélecteur facile
+qui ne permet pas à n'importe quel utilisateur
+d'updater les choses facilement
+nous avons une nouvelle component
+et là on ne peut pas taguer de fichiers
+notion, sélecteur, color
+que nous avons besoin d'updater
+pour la rendre plus variable
+ou créer une nouvelle version
+et là on lui met le screenshot comme ceci
+donc voilà vous pouvez juger mon prompt
+je me suis donné
+et donc là quand j'essaie de submit
+je ne peux pas
+il faut d'abord que je choisisse le projet
+alors je ne savais pas si je pouvais sélectionner du texte
+on va tester pendant qu'il travaille
+si là je choisis le projet
+est-ce que je peux faire hâte
+on ne peut pas faire de hâte, on ne peut pas faire de slash
+ça c'est un peu dommage
+et je pense que c'est ce qui manque vraiment
+pour moi ici, je ne sais pas si je peux faire des feedback
+mais ce qui manque le plus
+dans ce code preview
+c'est le fait de ne pas pouvoir faire de hâte et de slash
+je veux faire des hâte, je veux faire
+des slash, c'est la puissance
+de Cloud Code, pourquoi j'ai pas accès à ça ?
+pas grave
+ici je lui demande de faire sa petite modification
+qu'on ajuste ici, on peut voir qu'il l'a fait
+on se retrouve quand c'est terminado
+en y pensant pendant que ça charge
+un des trucs que tu peux faire pour utiliser
+Cloud Code comme Work Tree Manager
+c'est faire un nouveau chat ici
+dans le projet Allumail Local Work Tree
+faites juste
+say hello
+petite pause pour te dire qu'en allant sur le lien
+mlv.sh slash ai
+tu peux accéder à une Master Class
+gratuite Cloud Code, mais pas que
+tu vas aussi pouvoir accéder à mon
+CLI qui contient toutes mes
+commandes, donc je les montre juste ici
+mais tu vas avoir mes agents, mes commandes
+mes Hooks, mes Output Styles
+et toute ma configuration pour utiliser Cloud Code
+comme un pro et tu vas
+aussi accéder à une formation
+comme tu peux le voir juste ici avec un petit sourdage
+et pas mal de leçons juste ici
+Conductor, Master Class, etc etc
+tu vas pouvoir y accéder
+pour par exemple comprendre comment fonctionnent les agents
+pour ça on va créer un agent etc
+tu vas pouvoir accéder à toute cette formation
+totalement gratuitement en allant sur
+mlv.sh slash ai
+c'est une formation faite pour les développeurs
+qui veulent coder plus efficacement avec
+l'IA, on se retrouve là bas
+là t'envoies à say hello, d'ailleurs tu peux utiliser
+IQ comme ça ça va plus vite
+là comme ça il va juste faire hello
+et toi tu peux cliquer ici, prendre
+un terminal, aller dans ce terminal
+et ici lancer Cloud Code
+comme ceci, comme ça en fait
+tu peux utiliser en de guillemets
+cet outil comme Wartree et là
+tu peux utiliser tes commandes, par exemple
+avec Apex One Analyze
+et je peux coller mon texte
+pour venir lancer ça, donc c'est aussi
+pourquoi pas très pratique
+alors en attendant
+on a vu qu'ici ça a demandé une
+modification de création de fichiers
+et donc là j'ai l'option directement
+sur l'interface, deny
+always allow
+for this session
+ou allow once, donc par exemple ici
+always allow, et comme ça je l'autorise à écrire
+des fichiers, donc il est moins libre
+c'est pour ça que le CLI ça reste plus intéressant
+c'est dommage qu'ils aient pas poussé leur
+Cloud Code Desktop
+plus loin pour pouvoir vraiment
+avoir une sorte de freedom de fou furieux
+qui permettrait de faire tout ce qu'on veut
+donc ici on peut voir que ça
+update tout ça, on va voir à quel point il a fait un code
+intelligent Michel, je pense
+je suis assez confiant sur ce qu'il a fait mais on va voir
+alors là on peut voir les limitations
+il a essayé de lancer PNPM
+mais il a pas accès à PNPM
+et donc là on est parti pour un truc assez
+horrible, ou
+you can't do this, vu qu'ils
+ont une sorte d'environnement un peu protégé
+virtuel qui a pas
+tous les accès, on peut voir qu'ici
+typiquement je suis bloqué, il ne peut pas
+lancer TypeScript et
+ESLint sur mon projet
+donc je lui dis, ça ne sert à rien
+tu ne peux pas faire ça, et donc dans ce cas là
+typiquement, le mieux c'est de continuer
+la conversation directement sur
+Cloud Code juste ici
+pour venir
+lui dire
+Create Pull Request, comme ça c'est terminé
+hop, boom, Create PR
+il n'y a pas aussi un moyen de facilement
+review le code, donc typiquement
+ce que Conductor fait un peu plus facilement
+j'ai pas l'exemple
+tchak tchak tchak
+donc là dans Conductor on a
+la version contrôle ici, alors Conductor c'est un peu
+la Geek Home App, mais
+ça reste quand même assez efficace
+et ça permet ici de venir faire
+tout ça, donc là, boom, ça a créé
+la Pull Request, donc là on peut voir
+un peu ce qu'il nous a fait, donc il a
+modifié que deux fichiers
+ici, ce Section
+Bubble Menu, il a échiqueté
+Dual Color
+donc avec un mode Border Background
+il a modifié Dual Color Picker
+ou il a même créé Dual
+mais il y a déjà un Color Picker
+pourquoi tu m'as créé un Dual Color Picker ?
+je vais lui demander
+on va lui demander ici, alors là j'ai un peu merdé
+vu que j'ai modifié du code
+j'ai l'impression aussi qu'on peut pas gérer le Thinking
+donc c'est un peu merdique de pas pouvoir gérer
+le Thinking, juste ici il a décidé
+de supprimer son fichier et de me modifier
+mon fichier, pourquoi pas, pourquoi pas
+mon ami, je te laisse free
+tu es free comme l'air, comme l'eau
+donc là il l'a remplacé par son
+Ocean Color Picker comme ceci
+donc c'est pas mal
+et il vient Update
+avec la nouvelle API, donc c'est sympa
+on va voir un peu ce que ça donne
+ça c'est cool aussi, tu pourrais chercher sur Internet
+c'est assez satisfaisant, j'ai demandé pas mal de petites modifications
+ici ça marche bien
+le problème c'est que c'est un worktree
+qu'on peut pas configurer le worktree, donc pour tester
+à part faire une pool request
+switch de branche
+ou importer les changements du worktree
+dans ma branche, je sais pas quelle
+option je pourrais avoir, et ici on sait
+pas trop ce qu'il a, update, ok, à tout update
+pourquoi pas, pourquoi pas
+mais donc, typiquement
+ça peut être problématique, ensuite ici on peut faire
+git commit push
+donc voilà c'est pas mal, j'ai l'impression
+qu'il n'y a pas de thinking, pardon, que le
+thinking est toujours désactivé
+c'est un peu problématique
+sinon la vue est sympa
+et les éditions sont cool, on peut voir qu'ici
+on a update, et on peut voir ensuite
+tous les changements dans la pool
+request, donc je pense qu'il y a
+été un peu aggravé
+hop la
+section bubble menu, text bubble menu
+et notion color qui a été
+ajouté avec plein de menus
+à voir si ça a fonctionné sa test, mais voici
+un petit peu ce cloud code desktop
+je pense qu'avec quelques updates
+configuration des worktree
+très important, commande
+agent, tag
+de fichier, tu fais ça
+mode thinking aussi
+avec tab, je sais pas pourquoi ils ont pas fait
+tout comme le, là il faudrait
+un mode tab, il faudrait aussi un mode yolo
+et ce serait vraiment parfait
+mais voici en tout cas ça marche bien, ça reste
+l'opus, donc y'a pas grand chose à dire
+à part qu'il y a cette nouvelle interface
+donc voici Kano

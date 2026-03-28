@@ -1,0 +1,136 @@
+Arrête-toi, arrête-toi. Tu crées encore des commandes à la main et je tiens à dire que c'est une très grosse erreur.
+Et dans cette vidéo on va voir comment on crée des commandes
+mais surtout comment on ne crée pas des commandes et je vais t'expliquer ça tout de suite. Pour rappel, qu'est-ce que c'est des commandes ?
+Alors qu'on soit clair, des commandes c'est simplement des promptes.
+Donc typiquement ici on pourrait avoir un prompt que j'aime beaucoup qui est commit. Donc ici ce prompt commit vient expliquer comment l'IA doit venir
+Commit, c'est à dire en suivant un certain format et tu vas voir que c'est très efficace parce que si ici je viens dans mon
+terminal et que je viens faire
+//cc//commit tu vas voir que ça va suivre un pattern très précis. Ça va venir
+exécuter des commandes bash automatiquement grâce à cette syntaxe là. Ça va venir ensuite
+commit avec une syntaxe très précise donc
+Action, endroit et définition et ensuite sa poche. Donc voilà, très rapide, très simple, très efficace
+juste ici avec toutes les différentes mises à jour qu'on a juste là.
+Alors comment est-ce qu'on crée une commande ? Pour ça j'ai créé un petit cheat sheet juste ici sur
+aibluprint.dev
+slash cheat sheet comme ceci donc il y a pas mal de commandes par défaut et ensuite dans les slash commandes on va avoir des
+basiques commandes comme ceci
+on va surtout avoir des arguments donc ça c'est très important
+dans des commandes on va pouvoir passer des arguments. Typiquement ici on vient dire
+fix issue argument following our coding standard
+donc là c'est ce qu'on va pouvoir retrouver
+juste ici. Tu vois qu'à la fin je rajoute les arguments des utilisateurs
+ce qui permet que quand je lance Cloud code juste ici je peux faire
+slash commit avec un argument donc ici slash commit salut et donc ici reçoit cet argument.
+On peut aussi créer des commandes avec des arguments positionnés donc ici on va pouvoir mettre
+comme ceci
+$10, $1, $10, $2, $10, $3 pour venir passer différents arguments.
+On va pouvoir rajouter comme je l'ai fait juste ici des points d'exclamation
+commandes pour venir mettre des commandes directement comme ceci
+donc ça va lancer des commandes bash et on va pouvoir lancer ici
+des modèles donc ici on va pouvoir choisir des modèles.
+Typiquement la commande commit, comment créer une bonne commande commit
+on va le faire juste ici. Première étape lui donner l'accès au tool dans le cas où tu n'es pas en bypass permission
+deuxième étape on va lui choisir le bon modèle donc soit on
+choisit aucun modèle et ça va choisir le modèle par défaut généralement sonné
+soit ici je viens hardcoder IQ pour qu'il soit plus rapide et moins cher donc là tu vois que quand je lance la commande commit
+ça vient lancer le IQ.
+Ensuite ici je viens
+lancer les commandes guide comme ceci
+là on vient définir un workflow donc là on rajoute du contexte on définit le workflow
+et là ensuite je lui définit les règles de comment il doit faire son message rule, des exemples, des exécutions priorité.
+Maintenant la question c'est est ce que tu dois te retrouver à écrire ces commandes toi-même
+la réponse est non et c'est exactement le but de cette vidéo c'est de montrer comment faire des commandes.
+Imaginons qu'on n'a pas cette commande commit donc je vais la supprimer comme ceci.
+Petite pause pour te dire qu'en allant sur le lien
+mlv.sh
+slash AI tu peux accéder à une masterclass gratuite cloud code mais pas que tu vas aussi pouvoir accéder à mon
+CLI qui contient toutes mes commandes donc je les montre juste ici mais tu vas avoir mes agents, mes commandes, mes hooks, mes output style et
+toute ma configuration pour utiliser cloud code comme un pro et tu vas aussi accéder à une formation comme tu peux le voir juste ici avec
+un petit soudage et pas mal de leçons juste ici
+conducteur, masterclass etc etc tu vas pouvoir y accéder pour par exemple comprendre comment fonctionnent les agents pour ça on va créer un agent etc
+tu vas pouvoir accéder à toute cette formation totalement gratuitement en allant sur mlv.sh
+slash AI c'est une formation faite pour les développeurs qui veulent coder plus efficacement avec CLIA on se retrouve là bas.
+On va pouvoir utiliser
+différentes manières par exemple ici je vais pouvoir utiliser skill slash create slash command et là je vais lui dire
+créez la commande
+commit dans le dossier
+git cette commande doit venir récupérer les différentes informations
+via le contexte de git donc directement en utilisant les bâches
+script dans la commande et une fois que c'est fait on va faire un workflow donc on va analyser tout ce qu'il faut commit
+puis on va commit les différents trucs en
+réutilisant la syntaxe commit-tizen que je vais te partager juste ici donc là je lui mets exemple
+et je viens lui mettre celui-ci donc qu'est ce que vient faire ce skill
+pourquoi utiliser ce skill et pas autre chose en fait quand on vient lancer cette commande
+ça va venir utiliser un des skills que j'ai juste ici
+donc il y a plein de manières différentes à faire et moi je t'invite à utiliser celui que tu veux
+mais celui-ci tu vas pouvoir télécharger et donc là skill ça va lui donner un workflow
+ça va lui donner des exemples
+ça va lui donner des références avec comment passer les arguments
+avec comment passer différents patternes donc par exemple ici avec les exemples de git
+donc là il va être capable de lire tout ça et comment faire des tools
+restrictions ou pas avec plein d'exemples et plein de documentation
+donc là on peut voir qu'il a lancé la commande il a utilisé tout ceci et il m'a créé ma commande commit
+et donc ici tu peux voir que c'est un peu différent mais ça ressemble à ce qu'on avait avant
+objectif contexte ça vient lui ajouter le contexte le process
+analyser les changements
+déterminer la scope
+générer le commit message
+créer le commit, push les change, success criteria et
+règle comme ceci donc ça ressemble un peu c'est juste la syntaxe qui change un peu par rapport à ma commande
+et donc si ici je relance mon terminal et que j'essaie de commit on a ici git commit
+ça utilise le modèle iq qui est juste ici comme avant avec les différents tools autorisés on peut voir que ça lance
+directement le commit et ça vient de commit notre fichier donc là on vient de créer une commande en utilisant
+create command skill donc c'est très très pratique
+et ce que je veux t'expliquer ici c'est que pour créer des commandes tu ne dois plus les créer à la main
+et on va pouvoir créer des commandes pour énormément de choses
+typiquement un jour tu te dis j'ai envie de create slash commande debug donc pour
+débugger une feature donc moi je l'ai déjà ici on va la supprimer
+on va faire debug.md cette commande permet de débugger un problème elle vient prendre en argument
+l'intégralité de l'erreur etc et ensuite elle va avoir un process très poussé
+d'analyse de l'erreur pour venir trouver d'où vient l'erreur comment la corriger
+qu'est ce qu'il faut corriger et
+utiliser un maximum de raisoning et fort pour venir corriger l'erreur de la manière la plus efficace possible
+donc
+la première étape c'est de venir analyser l'erreur puis ensuite de trouver les potentielles solutions
+d'implémenter la solution de tester si ça a fonctionné ou d'expliquer à l'utilisateur comment il peut tester ça a fonctionné
+bon alors là je bullshit un petit peu mais c'est pas grave
+toi tu vas pouvoir utiliser comme ceci le mode vocal pour bullshit dans le slash commande
+et ensuite lui il est capable d'utiliser le slash command skill ici pour créer ça alors évidemment je sais pas pourquoi mon
+mode vocal a pas fonctionné donc là je réponds à sa petite question
+avec l'historique de mon copier collé et donc lui va être capable de créer en fait un workflow
+excellent idée
+excellent idée un débagage sophistiqué
+il le dit juste ici pour venir vérifier
+la solution à notre problème il lance le débagage sophistiqué et là tu peux voir qu'il a créé une commande bien plus
+remplie donc voilà c'est une analytics de l'erreur qui identifie la cause trouver des solutions et implémentent la solution donc
+contexte il lui rajoute le guide statue le guide log le package dodgison et les arguments donc il m'a mis deux fois l'argument je
+sais pas quel point c'est utile c'est pas très grave phase 1 deep error analytics bla bla bla phase 2
+investigation de la route cause solution évaluation
+implémentation
+vérification
+reasoning guideline donc là
+raisonne comme ceci success vérification et output l'avantage aussi c'est que s'il y a des trucs très importants à
+effectuer tu vas pouvoir au lieu de toi-même essayer de prompter l'IA
+pour lui expliquer ce qui est important ou pas lui dire j'ai envie de mettre un point d'honneur
+sur le fait qu'après l'exécution il doit lancer pnpm ts et pnpm lindt où en général
+les commandes de validation type script très très
+important et donc lui va être capable via le système prompt de découvrir qu'est ce qui est très important pour venir créer des commandes
+efficaces et donc là tu vois qu'il vient
+validation
+critical
+vérification
+mandatory etc il vient utiliser des mots clés qui vont faire en sorte que ton prompt ton workflow
+fonctionne mieux tu peux voir ici qu'il vient rajouter des actions des importants s'il vient ordonner ton prompt pour savoir qu'est ce
+qu'est important ou pas et ça ça va énormément changer le résultat
+donc là c'est l'exemple avec un skill donc le skill c'est ce que je teste récemment
+avec avec des prompt un peu différent moi ici j'avais un truc beaucoup plus simple qui s'appelle prompt commande
+et là il fait la même chose il a pas mal d'exemples de manière de faire ces différentes
+styles j'ai pas mal de prompt aussi pour créer
+ici des sub-agents ou pour mettre à jour la mémoire de Claude
+donc je découvre de plus en plus les skills que j'ai voulu tester ici pour vous montrer
+en guillemets des choses plus poussées mais tu vois que ça fonctionne nickel et ça va te permettre de créer des workflows vraiment poussés avec
+Claude code et pour moi c'est vraiment ça qui vient débloquer Claude code c'est qu'on utilise les workflows et pas qu'en juste tu demandes des
+petites modifications comme ça par ci par là qui font des résultats plus ou moins aléatoires
+donc voilà dites moi vos commandes préférées vos workflows préférés
+moi j'en ai plein de toute façon t'as accès à tout ça dans la description avec mon CLI et on se retrouve très bientôt
+ciao ciao

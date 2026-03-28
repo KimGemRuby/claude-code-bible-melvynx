@@ -1,6 +1,6 @@
 # BIBLE MELVYNX — Claude Code Masterclass Complete
-> Source : 36 videos/transcriptions fusionnees (Formation Complete + Setup 20min + Cours 4h + 33 videos supplementaires)
-> Date de compilation : 2026-03-28 — Version V3.1 fusionnee avec Checklist Integrale (20 chapitres, 25 anti-patterns)
+> Source : 36 videos/transcriptions fusionnees (Formation Complete + Setup 20min + Cours 4h + 33 videos supplementaires) + 23 nouvelles transcriptions Whisper
+> Date de compilation : 2026-03-28 — Version V4.0 (21 chapitres, 217 sections, 25 anti-patterns, 1698 lignes)
 > Usage : Reference absolue avant toute question ou doute
 
 ---
@@ -242,6 +242,15 @@ Affiche en permanence en bas du terminal :
 - Soustraire 45 000 tokens autocompact du max pour le contexte reellement disponible
 - Recuperation usage API : `security find-generic-password -s "claude-code-credential"` puis fetch `api.anthropic.com/api/auth/usage`
 
+### Output Styles (personnalisation du comportement)
+- Permet d'adapter Claude Code au-dela du Software Engineering (Assistant, Senior Dev, etc.)
+- Remplace le system prompt standard et l'oriente vers d'autres roles
+- Fichiers de configuration : `~/.claude/output-styles/` (ex: `Honest.md`, `Senior Dev.md`)
+- Commande d'activation : `/output-style`
+- Applique au niveau du projet (`settings.local.json`)
+- Impact reel : difference massive de tonalite et de longueur selon le style choisi
+- Remplace ce que faisait "Append System Prompt" mais de maniere plus complete
+
 ### Hack bypass permission VPS
 Claude refuse le bypass permission sur VPS. Hack :
 ```bash
@@ -350,6 +359,19 @@ Tu n'as PAS l'autorisation d'ecrire du code de production tant que les phases A 
 
 **Lecon fondamentale** : un skill = un prompt directif, pas du code. La puissance vient de la precision des contraintes imposees au modele.
 
+### Workflow ONE-SHOT SaaS complet (methode Melvynx)
+Workflow en 8 etapes pour creer un SaaS from scratch (ex: Sumfast en 10h pour 403$) :
+1. **Idee + SAS Challenge** : prompt discovery, challenger sur problem/angle/market fit
+2. **PRD (Project Requirement Document)** : recherche competiteurs, pricing, marges, feature list MVP (genere par IA)
+3. **Architecture** : stack technique (libs, state management, auth, structure fichiers)
+4. **Tasks** : decomposer PRD + Architecture en petites taches (5-10 lignes chacune — evite hallucination)
+5. **Run Tasks** : `/run-task` chaque etape sequentiellement
+6. **First Version** : app fonctionnelle mais brute
+7. **Refinement** : `/oneshot` pour ajouts feature par feature (sans plan step)
+8. **Multi-terminal** : 3-4 sessions Claude Code en parallele pour iterer rapidement
+- Prompts custom disponibles : `/sas-challenge`, `/sas-prd`, `/sas-create-architecture`, `/create-task` (dans `~/.claude/commands/prompt/`)
+- Hack parallelization : ouvrir 3 terminaux Claude Code, lancer `/oneshot` simultanement = 3x plus vite (mais 3x plus cher)
+
 ### /oneshot — Quick fix rapide
 - Petites features, zero intervention, ne demande jamais l'avis
 - Mode "vibe" : zero explication, zero tagage
@@ -402,6 +424,11 @@ Exemple : "tous les matins a 9h, clean le dossier Downloads"
 ### /ultrathink — Reflexion profonde
 Force le maximum de thinking tokens. Peut durer 2+ minutes. Pour problemes complexes.
 
+### Opus Plan Mode (pattern avance)
+- Utiliser Opus pour le planning, Sonnet 4 pour l'execution
+- Commande : `/model` pour changer de modele puis `/plan` en plan mode
+- Pattern : Opus genere le plan → Sonnet 4 l'execute (economise tokens)
+
 ### Thinking / Extended Thinking
 5 mots-cles par ordre croissant d'intensite : `think`, `think more`, `think lot`, `think longer`, `ultrathink`
 - Difference avec Plan Mode : Plan Mode = orchestration + demande validation humaine. Thinking = raisonnement etendu sans interaction.
@@ -434,6 +461,11 @@ Commande `/claude-memory review` : lance sub-agents pour analyser le CLAUDE.md a
 Affiche l'historique complet des messages/etapes, chaque etape montre les lignes ajoutees/supprimees. Choisir "restore code and conversation" pour restaurer le code ET la conversation. Permet de "coder dans l'insouciance".
 ### /remote control — Controle a distance via telephone (Max requis)
 Genere un lien URL, ouvrir sur iPhone/Android. Messages synchronises en temps reel entre terminal et telephone. Pas besoin d'etre sur le meme WiFi.
+- Architecture : tunnel direct (WebSocket) entre Mac local et claude.ai, puis au client distant — PAS un serveur cloud
+- Interface web accessible via lien HTTP securise (envoyable par Telegram/SMS)
+- Pair programming mode : donner le controle a un collegue, deux personnes donnent des feedback differents au meme Claude
+- Cas d'usage : partir en pause, continuer la session depuis le telephone
+- Limitation : worktree place dans `.claude/` (problemes lors de grep sur le projet) — Melvynx prefere Conductor
 
 ### /batch — ANTI-PATTERN selon Melvynx
 Lance agents en parallele avec work trees separees, chaque agent cree sa PR.
@@ -506,6 +538,16 @@ Melvynx est CONTRE : genere des dizaines de PR a review. Preferer un main agent 
 - Permet de voir exactement ce qui est envoye au modele a chaque requete
 - Utile pour comprendre les 27K tokens de demarrage
 - Hack : demander a Claude de creer un fichier HTML qui affiche toutes les infos du contexte
+
+### Reverse engineering API (secrets reveles par Melvynx)
+- Chaque requete inclut des **metadonnees utilisateur** (user ID)
+- Les objets `tools` contiennent des schemas d'entree detailles pour chaque outil natif
+- **Outils natifs complets** : Write, Notebook Edit, Notebook, Web Fetch, To Do Write, Web Search, Bash Outputs, Kill Bash
+- Tous les MCP configures sont envoyes dans CHAQUE requete (d'ou l'importance de limiter a 2-3)
+- Structure messages imbriquee : system reminders empiles dans le contexte
+- **Web Fetch automatique** : quand l'utilisateur pose une question technique sur Claude Code, Claude declenche automatiquement un Web Fetch en arriere-plan pour recuperer la documentation — feature native, pas configuree par l'utilisateur
+- **Les commandes slash = injections de prompt pures** : pas des appels systeme ni des webhooks — elles ajoutent du texte dans le message avec tags `<command_args>`. Conclusion Melvynx : "c'est vraiment une sorte de prompt injection"
+- **Output style custom** apparait APRES les directives dans le prompt, le default AVANT — impact massif sur tonalite et longueur
 
 ### Probleme "Lost in the Middle"
 Les transformers donnent plus d'importance au DEBUT et a la FIN du contexte. Les tokens au milieu sont structurellement ignores. Les chunks au milieu sont oublies, les instructions au centre sont ponderees 1/3 a 1/2.
@@ -581,6 +623,20 @@ Documenter les helpers internes (ZodRoute, Upfetch, etc.) avec des exemples d'ut
 
 ### Changelog automatique
 Regle dans CLAUDE.md : `CRITICAL: Apres tout changement, update le changelog avec la date du jour.`
+
+### Commentaires inline comme "prompt injection benefique" (technique avancee)
+- Ajouter des commentaires DANS le code pour guider l'IA sur comment utiliser les librairies
+- Exemples : `// Base route handler — usage: use this for X, Y` ou `// Route handler with authentication — user is logged in`
+- **Similar file + imported dependency** : si on importe des types/dependances, l'IA doit lire le fichier de la librairie → empeche hallucination
+- Deux techniques anti-hallucination : 1) ameliorer contexte (CLAUDE.md + commentaires inline) 2) ameliorer prompt (donner l'exemple du fichier a utiliser)
+- Les EXAMPLES sont plus efficaces que la DOCUMENTATION pour l'IA
+- Avec la regle "lire 3 fichiers similaires", l'IA absorbe automatiquement les commentaires inline
+- NowTS boilerplate : boilerplate Next.js optimisee pour Claude Code avec tous les commentaires + exemples pre-configures
+
+### Keywords de priorite dans les prompts
+- CRITICAL, MANDATORY, VALIDATION, VERIFICATION → l'IA detecte l'importance via le system prompt et priorise
+- "non-negotiable" → renforce la contrainte
+- Majuscules = plus d'impact que minuscules dans les instructions
 
 ### Gestion du contexte — Regles
 - `/clear` OBLIGATOIRE entre les taches majeures
@@ -1186,6 +1242,60 @@ Les slash commands sont fusionnees avec les skills. Anthropic recommande de migr
 - Feature **Dispatch** (Repartition) : connecter des sessions Cowork en parallele
 - Feature **Channels** : point d'entree pour controler des agents autonomes depuis le telephone
 
+### Claude Code Desktop App (test Melvynx)
+- Interface native (pas web) avec menu "Chat" et menu "Code" distincts
+- Acces direct aux Local Worktrees (PAS besoin de remote)
+- Permission system : "Allow once" / "Always allow" / "Deny" pour operations sensibles
+- Synchronisation avec terminal CLI Claude Code (les deux interfaces se parlent)
+- **Limitations detectees par Melvynx** :
+  - Slash commands PAS supportees
+  - Pas de `#` ni `@` pour tag fichiers
+  - Thinking mode desactive par defaut
+  - PNPM/npm pas accessible (sandboxed environment)
+  - Pas d'acces TypeScript/ESLint
+  - Upload images non fonctionnel
+- Workaround Melvynx : creer un chat local dans Desktop, puis ouvrir terminal et lancer `claude code continue` pour acceder aux outils CLI complets
+
+### Plugins & Marketplace (systeme complet)
+- Claude Code supporte les **Plugins** = collections de MCP servers + hooks + slash commands + agents
+- Installation : `/plugin browse-and-install`
+- Commandes plugin :
+  - `/plugin browse-and-install` : chercher et installer
+  - `/plugin manage-and-uninstall` : gerer les plugins
+  - `/plugin add-marketplace` : ajouter une marketplace
+  - `/plugin manage-marketplace` : gerer les marketplaces
+- **Marketplace** : repo GitHub avec `marketplace.json` = marketplace complete
+  - Format : `/plugin marketplace-add [user/org] [repo-name]`
+  - Exemple officiel : `claude-code-templates` (Git Workflow, Supabase, Next.js, Vercel, Security Pro)
+- **Structure plugin** (creer le sien) :
+  - Dossier requis : `.cloud/agents/`, `.cloud/commands/`, `.cloud/hooks/`
+  - Auto-detection : chaque fichier dans ces dossiers est injecte automatiquement
+  - Config : `marketplace.json` avec name, author, description, version, plugins[]
+- Installation = clone du repo entier dans `~/.claude/plugins/[marketplace]/`
+- Toggle on/off : `Space` pour desactiver sans supprimer
+- **Limitations (Melvynx)** :
+  - 25+ plugins = 200+ slash commands/agents → pollution contexte
+  - Preference Melvynx : copier-coller et modifier plutot que d'installer en tant que plugin
+  - Risque : installer des plugins qu'on comprend pas → comportements imprevisibles
+
+### Changement de Pricing (annonce juillet 2026)
+- A partir du 28 aout 2026 : nouvelles limites par semaine pour plans Pro et Max
+- Impact estime : 5% des subscribers
+- Raison : demande "unprecedented" de users Max (usage 24/7 en background)
+- Cas extreme : un user a utilise 10 000$ pour un plan Max a 200$/mois
+- Certains users revendent des comptes (violation de policy)
+- Cost API affiche ≠ Cost reel pour Anthropic : ~2$/million tokens (inference) vs 18$/million (facture)
+- Marge Anthropic ≈ 16$ de gain par million de tokens
+- Cursor paye full API pricing → Claude Code est ~6x moins cher qu'alternative via API
+
+### Interface VSCode Extension (details)
+- Panel integre VSCode : acces direct a Claude depuis l'editeur via bouton "Cloud"
+- Contexte multi-fichiers : affichage fichier courant + contexte + commandes integrees
+- Multiple conversations paralleles (vs Codex qui en limite a 1)
+- Background jobs : visualisation des taches en arriere-plan avec interface dediee
+- Split diff natif : affichage side-by-side des versions avant/apres
+- Cmd+Opt+K : ajouter contexte selectionne a Claude Code depuis l'editeur
+
 ---
 
 ## CHAPITRE 15 — RALPH (Boucle autonome infinie)
@@ -1312,6 +1422,12 @@ Protocole : reproduire → hypothese → tester → observer → iterer. Empeche
 - Merge automatique a la fin
 - Alternative au pattern main agent + sub-agents pour les gros refactors
 - Avis Melvynx : "Trop d'interface" — prefere le pattern main agent orchestrateur
+- **Details concrets (video dediee)** :
+  - macOS uniquement
+  - Commandes : `run task [issue-name]` (EPCT auto), `fix pr comments`, `watch ci` (boucle debug), `ccc` (ouvre Cursor + continue conversation)
+  - `.env` files NOT auto-copies entre Worktrees (copie manuelle)
+  - Lancer Telegram + PR auto : `Runtask` cree automatiquement une PR a la fin
+  - Prompts disponibles sur **iBluePrint.dev** (fichier Notion complet)
 
 ### Crab Review (commande custom Melvynx)
 - Commande custom premium de Melvynx pour review de code
@@ -1333,6 +1449,52 @@ Protocole : reproduire → hypothese → tester → observer → iterer. Empeche
 - Application menu bar pour voir l'usage Claude en temps reel
 - Affiche la consommation sans quitter l'application en cours
 - Alternative rapide a `/usage` et `/stat`
+
+### CC Notify (notifications macOS)
+- Outil de notification native macOS pour Claude Code
+- Quand Claude Code termine une tache, notification macOS apparait
+- Installation : script Python `CC Notify.py` + `brew install terminal-notifier`
+- Hooks dans `settings.json` (sections `on_start` et `on_stop`)
+- Melvynx recommande de refactor en script Node.js avec SQLite local pour plus de controle
+
+### Super Cloud (framework de prompts)
+- Framework de commandes specialisees (`uv add super-cloud`)
+- Ajoute automatiquement : Flag, MCP, Mode, Orchestrator, Principle, Rules dans `.claude/`
+- Commandes : `SC Analyze` (analyse complete), `SC Improv` (amelioration fichiers)
+- Limitation Melvynx : prefere les commandes custom plutot que les pre-prompts generiques
+
+### Cloud Code Template (marketplace skills/agents/MCP)
+- Marketplace centralisee pour installer agents, commands (158+), MCPs, templates
+- Installation en une commande depuis le site
+- Structure creee : `Agent/Cloud/Agent/<NomAgent>/`
+- Source officielle : **iBlueprint.dev**
+- Melvynx prefere les commands (thread principal) plutot que les agents (contexte separe)
+
+### CC Usage (monitoring financier detaille)
+- `cc-usage daily` : prix par jour
+- `cc-usage monthly` : prix par mois
+- `cc-usage session` : consommation par session/repo
+- `cc-usage block-live` : **streaming temps reel** de la consommation dans la session (5h = 1 bloc)
+- Voir en direct ce que coute chaque action (ex: passer Sonnet → Opus = cout augmente immediatement)
+
+### ZED IDE (analyse Melvynx apres 2+ mois)
+- Ecrit en Rust (non-Electron), startup quasi-instantane meme gros projets
+- **Minimalisme UI** : quasi zero boutons (force usage clavier) vs Cursor (25+ boutons)
+- Integration IA minimale : Claude Code, Copilot, Gemini integres, inline edit `Cmd+K`
+- **Autocompletion inferieure** a Cursor 4
+- Recherche globale `Cmd+F` = live edit directement, multi-selection refs = voir diffs live
+- Git : `Cmd+Shift+Y` = commit message auto, diff panel tres lisible
+- **Limitations** : ne peut PAS renommer terminal tabs, ne peut PAS copier fichiers entre projets
+- Verdict Melvynx : IDE parfait pour devs pro, sous-optimal IA mais compense par terminal multi-instances
+
+### MoltBot / ClawdBOT (agent autonome telephone)
+- Bot autonome qui controle l'ordinateur via **Telegram, WhatsApp** depuis le telephone
+- Installation : `curl MoltBot.sh` (Quick Start)
+- Authentification : token Claude Code CLI directement
+- MCP/Skills : One Password, Apple Notes, Apple Reminder, Things, Obsidian, Google Play API, X/Twitter (Bird CLI), PDF tools
+- L'ordinateur local agit comme **gateway** connecte a internet pour executer les actions a distance
+- Memory auto : cree fichiers Identity, Soul, Memory dans `.cloudbot/agent/`
+- **Securite critique** : acces direct a One Password = tres dangereux si pas d'auth forte
 
 ### Mistral Vibe (comparatif)
 - CLI open source gratuit, modele Devstral
@@ -1470,6 +1632,40 @@ claude mcp add context7 --url <url> --scope user
 - Un ingenieur mid/senior coute **77-150$/h**
 - ROI evident : une review IA de 25$ vs 1-2h de review humaine a 150$/h
 - Combine avec review humaine : 1 review IA (clean code, bugs) + 1 review humaine (vision produit, taste)
+
+---
+
+## CHAPITRE 21 — COMPARATIFS & BENCHMARKS (videos dediees Melvynx)
+
+### Opus 4.5 — Benchmarks et tests pratiques
+- **Premier modele a 100% sur Svelte Bench** (selon Ben Davis)
+- SWE Bench Verified (agenting/coding) : Opus +3-4% vs Sonnet, les deux > Gemini 3 Pro
+- Computer Use : Opus > Gemini 3 Pro > Sonnet
+- **Pricing reel** : Opus 60% plus cher que Sonnet MAIS utilise 76% MOINS de tokens → peut etre moins cher en cout reel
+- Suppression des "Opus Specific Caps" pour abonnes Claude Code
+- **Opus sur Cursor vs Claude Code** : resultats MOINS bons sur Cursor (system prompt different, indexing different). "Cloud Code Opus c'est instantanement fantastiquement genial" vs Cursor basique.
+- Tests concrets (unsubscribe dashboard) : Opus = one-shot parfait, Sonnet = petites erreurs import, Gemini = mauvaise comprehension prompt → abandonne
+- Worktrees multi-sessions : lancer 2 worktrees paralleles (Sonnet + Opus) et comparer en direct
+
+### Claude Code vs Cursor — Test comparatif
+- Meme avec Opus 4.5, les deux outils produisent des resultats differents (~5% variabilite liee a la temperature du modele)
+- **Cloud Code avantages** : meilleurs resultats sur features complexes (color picker, menu positioning), lance recherches approfondies avant de coder
+- **Cursor avantages** : plus rapide (~1-2 min), system prompt custom pour le design (gradients, shadows automatiques)
+- Contexte pollution : avoir 12K MCPs, agents, memory files actifs dans Claude Code affecte la qualite vs Cursor "nu"
+- Conseil : pour comparer les MODELES (pas les outils), tester dans Cursor (interface simple, peu de contexte)
+
+### Claude Code vs Cursor vs GitHub Copilot — Comparatif complet
+- **Vitesse** : Cursor > Claude Code > GitHub Copilot
+- **Gestion CLI** : Claude Code gere mieux les outils CLI (GitHub CLI), Copilot ouvre des terminaux interactifs qui bloquent
+- **Token couteux avec contexte** : requete dans conversation vide = 8 centimes, conversation longue = 47 centimes (facteur ~6x)
+- **Pricing compare (valeur pour 10$/mois)** :
+  - GitHub Copilot : 300 premium requests/mois = 24-150$ de valeur
+  - Cursor : 20$/mois = 20$ inference value
+  - Claude Code : 20$/mois base + 100$/mois illimite = **meilleur rapport valeur**
+- **Pricing reel Melvynx** : 262$ sur 20 jours (vibe coder intensif)
+- **Verdict longevite apprentissage** : 1. Claude Code (terminal = portable) > 2. GitHub Copilot (Microsoft derriere) > 3. Cursor (startup, peut disparaitre)
+- **Facilite apprentissage** : Cursor > Copilot > Claude Code (courbe plus raide)
+- **Customisation** : Claude Code (MCP, rules, CLAUDE.md, custom modes, tool sets) > Cursor > Copilot
 
 ---
 

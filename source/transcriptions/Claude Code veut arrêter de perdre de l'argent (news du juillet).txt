@@ -1,0 +1,211 @@
+Hello, il y a eu des énormes updates par rapport à CloudCode, non seulement le changement de pricing qu'on va voir dans cette vidéo, qu'est-ce que ça change et quels sont les impacts.
+On va aussi voir le nouveau custom subagent qui va te permettre de pouvoir littéralement avoir une armée de CloudCode dans un même terminal sans avoir besoin de dupliquer tes terminales.
+Et finalement, un tips sur les command bash et donc ce format s'appelle les news CloudCode fin juillet, ok ?
+Donc c'est parti déjà pour le changement de pricing.
+Ici Anthropiq nous a fait un tweet ici le 29 juillet, donc il y a deux jours, on est en train de changer la limite par semaine de Cloud Pro et Max fin august.
+On estime que ce changement ne va qu'impacter 5% des subscribers basés sur l'usage actuel, alors quel est le problème les amis ?
+CloudCode a eu une demande unprecedented, incroyable, particulièrement par les personnes qui payent les Max plans, donc qu'est-ce que c'est les Max plans pour se rappeler ?
+Donc ici CloudCode pricing, il y a trois plans, il y a le plan Pro, enfin il y a le plan Free, il y a le plan Pro et il y a le plan Max.
+Mais dans le plan Max, je ne sais pas si j'arrive à le voir, en fait il y a deux plans Max.
+Il y a le plan Max à 100$ que personnellement j'ai et qui suffit largement et il y a le plan Max à 200$.
+Et donc les utilisateurs Max ont des limites très très élevées, je valide il y a des limites très très élevées.
+Donc voilà, certaines personnes qui utilisent Cloud, de nos plus grands fans, l'utilisent en background 24h sur 7.
+Ça on a envie d'accepter ces gens là, mais à cause d'eux, ça fait des outages, donc c'est ce qu'on voit, des fois il y a des limites qui sont bloquées.
+Par exemple, il y a une personne qui a utilisé 10.000$, donc c'est à dire qu'il a utilisé 10.000$ pour un plan à 200$.
+Et là c'est là aussi on voit où Cloud Code était impressionnant par rapport à son pricing.
+Dans d'autres cas, plusieurs utilisateurs ne respectent pas les usage policy en revendant des comptes, ce qui impacte tous les utilisateurs.
+Donc à partir d'August 28, ils vont ajouter une nouvelle limite qui va éviter ceci et qui va impacter le minimum de customers possible.
+On va aussi ajouter un plan pour payer des standards API REIT.
+Donc très intéressant, c'est assez logique qu'on voie ça, parce que si ici je rentre dans mon dossier principal, que je clear et que je fais Benix CC Usage comme ceci,
+on peut voir que personnellement j'ai utilisé pour 1000$.
+Bon alors il y a quelques petits bugs parce que ces API Pricing ne sont pas totalement justes, donc je pense qu'en réalité j'ai utilisé pour 600$.
+Je paye 100$ par mois, donc Melvin est égal à 100$ par mois, le coût API est égal à 600$.
+On peut comprendre qu'il y a un problème parce qu'ici il y a une marge de 500$ où on se dit, qui c'est qui paye ces 500$ ?
+Alors déjà il faut mitiger le concept de 500$ qu'on a juste ici, parce que les coûts d'inférence sont moins élevés que les coûts API, ok ?
+C'est à dire que quand l'output coûte peut-être 15$, l'output input, si je vais sur TypeFully je pense que j'ai fait un tweet à propos de ça.
+Donc ici d'après les études de TchadGPT, via l'API c'est environ 18$ pour un million de tokens, mais le coût réel est estimé à environ 2$ par million de tokens.
+Donc c'est à dire que quand Anthropic nous charge 18$, en réalité il paye environ 2$, ok ?
+Donc ça c'est le coût réel, donc l'argent qu'Anthropic perd, et ça c'est le coût API.
+Après dans le coût réel, qui sont le coût, il ne faut pas oublier le coût d'entraînement qui change tout le temps, mais il est défini comme ceci, on ne peut pas savoir ce que c'est,
+mais il y a un coût d'entraînement qu'il faut inclure dans le prix final, donc ça c'est le coût final de notre user.
+Et il y a aussi le coût de la boîte quoi, coût la marge, la marge pour faire de l'argent etc, xx$.
+Donc le coût d'entraînement ça va être tous les CPU qui vont travailler pendant des heures pour entraîner le modèle, et la marge c'est ce qu'il faut payer, enfin les charges plutôt,
+donc xx$ pour tous les employés, et finalement la marge qui est xx$ qui nous arrive à 18$.
+Donc intéressant quand même de voir que assez logiquement Cloud Code va être limité, ce qui est totalement faire et ce qui n'a rien de très choquant jusqu'ici.
+Beaucoup de personnes se sont indignées, moi je trouve ça totalement normal, il faut savoir que les 500$ qui sont brûlés juste ici entre guillemets par rapport à l'API,
+c'est à dire qu'en fait quand tu réfléchis deux secondes, quand tu utilises Cloud Code, tu payes 100$, ok ?
+Mais quand tu utilises Cursor, tu payes 600$, et oui, parce que quand Cursor utilise l'API de Cloud Code, donc il faut savoir que, pardon Cloud en tropique quoi,
+quand il utilise l'API de Cloud, il paye l'API, il paye le pricing standard, il va payer ces 18$ pour input-output par rapport à ton truc,
+et donc lui Cursor, il le paye, mais quand tu utilises Cloud Code, tu le payes pas, et c'est une des raisons pourquoi Cloud Code est si avantageux,
+et c'est aussi une des raisons qui fait que Cloud Code va changer son pricing.
+Donc voici pour la première news, le changement de pricing, on l'a vu, ça va nous impacter pas pour l'instant, donc si vous ne l'avez pas déjà fait,
+payez Cloud Code le plus rapidement possible et utilisez-le jusqu'au 28 août comme des fous, c'est une dinguerie, testez-le, adoptez-le et dégagez-moi Cursor.
+D'ailleurs moi récemment, j'ai fait le choix, après des mois avoir payé Cursor comme ceci, on peut voir que j'ai cancel ma subscription Cursor,
+c'est fini Cursor, pour moi la subscription à 20$ par rapport à l'usage que j'en fais n'est pas worst, je vais préférer repasser sur VS Code,
+parce que de toute façon ça ne change pas grand chose, et utilisez GitHub Copilot, pourquoi ? Parce que GitHub Copilot ça coûte pas cher,
+ça coûte 10$, et ça a toutes les updates infinies, et ça le inline, donc en fait j'ai payé deux fois moins cher,
+ça me donne 10$ en plus à payer pour Cloud Code, et personnellement je pense qu'il faut que Cursor a perdu son avantage compétitif.
+Nouveau custom sub-agents, deuxième sujet, alors qu'est-ce qui s'est passé ? Cloud Code a une nouvelle feature qui est les custom sub-agents,
+tu peux taper agent pour get started, et en clair on va pouvoir créer des agents qui vont être ce qu'on appelait avant des tasks,
+alors qu'est-ce que c'étaient les tasks ? Qu'on soit clair, si ici je vais dans n'importe quel dossier et que j'ouvre Cloud Code,
+et je lui dis, lance une tâche pour faire une recherche à propos des prix de Versailles,
+ainsi qu'une tâche pour la recherche sur les prix de Netlify, donc par exemple ici sur deux concurrents,
+et donc ici en fait il va être capable de lancer deux tâches qui vont s'exécuter en parallèle pour comparer,
+donc ici d'ailleurs il utilise un de mes agents, donc ici il utilise Deep Research Specialist,
+et donc ici ces deux agents ils vont faire des recherches de leur côté,
+en fait c'est comme si j'avais lancé deux fois Cloud Code, donc c'est comme si je lançais Cloud Code une fois ici,
+que je le lançais une fois ici, sauf que ici je lui disais fais une recherche sur Versailles,
+et de l'autre côté je lui disais fais une recherche sur Netlify,
+ça donnerait à peu près la même chose, sauf que ici ça le fait dans un seul terminal,
+ensuite les deux agents ici, donc en fait normalement c'est des tâches,
+ici il m'a lancé mon Deep Research Specialist mais c'est pas grave,
+ces deux agents ils vont retourner un résultat, ce résultat va pouvoir être interprété etc etc,
+donc les sub-agents vont permettre de créer une team de custom agents, chacun spécialisé pour faire une tâche,
+exemple Software Architects, Code Reviewer, QA Tester,
+et donc on va pouvoir créer des fichiers comme ceci dans .cloud slash agents slash bla bla bla,
+donc si j'ouvre Cursor, là je me suis un peu amusé, dans mon dossier Cloud Just ici,
+j'ai des agents et donc je me suis un peu amusé à tester différents agents,
+donc là dans agents, j'ai téléchargé des agents qu'on trouve sur internet,
+mais en clair par exemple il y a des agents ici sur Engineering, Backends Reliability Engineering,
+quand tu as besoin de faire une certaine feature, tu vas pouvoir utiliser cet agent,
+alors avant de commencer à regarder les agents que j'ai,
+on va voir comment tu peux facilement créer un agent,
+donc pendant que lui il travaille, on va mettre ici et on va du coup créer un agent,
+pour ça on peut lancer Cloud Code et on va pouvoir faire slash agent,
+manage, merde, cc, slash agent, on va pouvoir lancer agent et là on va voir tous les agents
+qui sont disponibles, donc là tu peux voir que moi en l'occurrence j'en ai un peu trop,
+mais c'est pas grave, on peut ici faire create new agent, par exemple ici je vais créer un agent
+sur .cloud slash agent, ensuite je vais pouvoir faire generate with cloud ou manual configuration,
+on va faire generate with cloud, et donc là on va pouvoir décrire quel est notre agent,
+par exemple si tu as envie d'utiliser Cloud Code pour éviter de payer l'abonnement ici de deep
+research, je peux voir qu'on n'a que un certain nombre de deep research disponible par ceux-ci,
+on pourrait en fait créer un deep research sur Cloud Code ou on pourrait même créer un agent
+mode juste ici pour naviguer sur le web, on va créer deep research agent,
+en rassemblant tous les sub-subjects nécessaires pour la grande recherche de domaines, il va ensuite créer
+une recherche pour chaque sujet d'information utile en utilisant la recherche web, il va sauver
+tous ses recherches à l'intérieur d'un folder, deep research slash search name slash sub-research,
+il va à la fin donner de l'information utile sur le deep research et créer un file nommé summary.md à l'intérieur de
+donc là je vais lui dire de créer un agent qui permet de faire une deep research,
+similaire à l'agent qui est utilisé juste ici qu'on regardera ce que fait dap research spécialiste,
+donc là on lui demande ça et il va venir créer l'agent configuration, vu que je lui ai demandé
+de créer dans mon dossier général, il va venir le créer ici dans ce dossier et on va voir le
+changement qui va normalement apparaître, donc là il nous dit create agent, là on va pouvoir
+définir des tools qu'il a le droit de faire, nous on va juste continue parce que je lance toujours
+mes terminaux en bypass permissions, ensuite ici on utilise le modèle qu'on veut utiliser,
+nous on va utiliser ici Sony, ça va très bien, et là on peut choisir une couleur,
+donc par exemple red comme il était avant, donc là deep research analysis, ça l'a créé et là on
+peut voir description, use decision when you need comprehensive structured research blah blah blah,
+example et donc là il donne des examples, system prompt blah blah blah, ok on a fait sur enter et
+on a maintenant terminé dans projectagents.cloud slash agent, on a créé notre agent et donc là
+ici je fais cure store point, on peut voir que là dans cloud ça m'a créé un agent dans mon projet,
+donc là il n'est que disponible dans le projet et on peut voir à quoi ça ressemble, donc on a un
+nom, use decision when you need comprehensive structured etc, alors moi j'aime pas trop ce
+formatting de description et donc on peut lui dire ici format this better using description
+de point boom and break line, donc là voilà en utilisant ce petit prompt là avec ça,
+ça va venir rendre la description un peu plus human readable ce qui te permettra de la modifier,
+ok, donc là on a le modèle et on a la couleur et donc là ça nous dit tu es en deep research
+analytics, tu dois faire ça, your research method et topic decomposition, tu vois qu'il a fait un
+petit peu ma query en plus march, where search name is blah blah blah, systematic investigation blah
+blah, donc moi ici j'ai un dossier analysis, on va remplacer ce nom ici par analysis et donc
+maintenant quand je suis dans ce projet dans cloud, dans cc, je vais pouvoir lancer cloud code et
+pouvoir lui dire fait une et là je vais pouvoir taguer cet agent, donc là je vais taguer deep
+research, comment il s'appelle, deep research analysis, agent deep research analysis, donc là
+je vais faire fait une deep research analysis à propos du nouveau pricing de cloud code qu'ils
+vont bientôt lancer car des utilisateurs utilisent trop l'outil, donc là je fais enter et donc là ce
+qu'il va faire en fait au lieu de faire dans la conversation, il va venir utiliser l'agent comme
+ceci pour faire des recherches, alors comme ça ça sert pas à grand chose, ça sert pas à plus de
+choses qu'une commande, l'avantage de ces agents, si je retourne ici pour comparer avec ici donc là
+tu vois qu'il a fait sa recherche etc, c'est de lancer des tâches en simultané et donc moi ici avec
+des repos et je vous invite à aller dans la description sur iBlueprint.dev, dans iBlueprint
+vous accéderai à une formation, une formation qui contient tous mes prompts, tous mes fichiers
+notion, tout ce que je découvre sur cloud donc c'est très intéressant, ok donc ici je vais fermer
+ce projet et dans cloud donc ici dans mon principal, j'ai pas mal d'agents que j'ai copié sur certains
+outils mais par exemple ici tu vois que tu as plein de différents agents qui sont tagués juste ici
+alors à quoi ça servirait par exemple on va lancer conductors juste ici et j'avais ajouté cette
+feature un Hong Kong audio image tool optimizer et ici je vais lancer open point et je vais copier
+et je vais aller sur ghosty et je vais ici faire cd user bla bla bla donc là je suis dans ce projet
+que j'ai fait et donc ce qu'on pourrait lui demander sur les changements actuels fait une
+et donc là je vais pouvoir taguer des différents agents donc par exemple QA test engineer donc là
+fait un agent QA test engineer pour vérifier que ça fonctionne bien je veux aussi end security
+trust analysis and UI designer that will find and fix the UI for the current feature start by
+gathering information about the current pull request changes donc là on lui lance ça et donc
+là l'avantage c'est qu'il sait qu'on veut utiliser ces agents donc il va être capable de venir faire
+les différentes vérifications donc ici en récupérant le statut en regardant les commits
+qui ont été faits en regardant dans quelle feature on est et donc ensuite il est capable ici
+maintenant je vais lancer trois specialized agents to analyze the current audio image and twitter card
+extraction tool page feature et donc là il a lancé QA testing for audio image tool, security
+analysis for image tool and UI UX analysis et donc là les trois ils vont pouvoir travailler
+sur en parallèle et donc en fait au lieu d'avoir un seul chat qui fait une seule chose et bien ici
+on a trois chats qui vont être capables de travailler en simultané en attendant on a notre
+deep research tool qui a terminé et donc là on peut voir si si je fais open boom on peut voir
+qu'ici il a fait notre analyse new weekly rate limit donc là on peut voir j'apprends des trucs
+on apprend des trucs il a réussi à faire des trucs incroyables donc là il nous dit qu'avec le
+max user il ya 140 à 288 heures plus machin machin donc en fait il va y avoir des heures limite par
+semaine et donc là on a exactement raison citée par machin donc là on a toutes les infos tu vois
+qu'il a fait une recherche super stylé il ya des gens qui ont dépensé plus de 1000 dollars d'API
+cool pardon il ya des gens qui payaient 200 dollars qui dépensait plus de 1000 dollars d'API
+cost ok c'est assez fou et donc là il nous a fait une trace comparaison etc alors on va essayer de
+lancer cursor point je sais pas pourquoi il a pas lancé ça dans le dossier analytics bon voilà
+c'était très intéressant je lui ai demandé quelques modifications mais c'est pas grave on va
+close ce terminal et on va venir ouvrir celui là et puis on va attendre qu'il termine donc là on
+peut voir que il termine et on peut voir que chaque conversation à ses propres tokens et en fait
+chaque agent va avoir son propre contexte va avoir sa propre tâche va faire son propre truc
+avec une jolie interface comme ceci si d'ailleurs on va un petit peu sur la documentation pendant
+qu'on est pendant qu'on est là donc voilà qu'est ce que c'est qu'un subagent ça va être un agent
+qui a un spécifique purpose et expertise aria il va utiliser sa propre contexte windows qui va être
+séparé des autres conversations il peut être configuré avec des tools et il inclut un custom
+system prompt qui bénéficie donc contexte preservation parce qu'il va avoir son propre
+contexte specialized expertise parce qu'il va pouvoir être fin tuné réutilisation et flexible
+permissions donc en faisant slash agents etc ok donc il a terminé l'identification des problèmes
+donc là on peut voir qu'il a terminé toute l'analyse donc ce qui s'est passé en fait c'est que
+ces trois agents ils ont retourné des tokens donc ils ont fait leur tâche et ensuite il retourne
+des tokens donc tu vois que ça a duré jusqu'à six minutes et là ensuite il m'a fait l'analyse et
+donc là il m'a dit bah voilà tous les problèmes moi j'ai pris tous ces problèmes et je me suis
+dit bah je vais venir lui dire qu'est ce que j'ai envie qu'il fasse et donc pour ça moi j'ai d'autres
+agents que j'ai configuré juste ici que j'ai mis dans epct donc epct c'est explore plan code
+test et j'ai créé un agent par truc comme ça je peux les lancer de manière parallèle très
+et donc là moi je lui ai dit ok bah j'ai envie que tu lances plusieurs agents plans qui vont
+venir planifier les mises à jour donc là qui vont venir planifier les mises à jour et ensuite tu
+vas lancer les agents codes pour faire la feature chaque code un seul objectif et donc là je lui
+dis tu vas faire ajoute au clipboard ajoute du rate limiting avec upstash redix et fixe le
+problème de ssrf plus input validation plus xxs danger et donc là il a réussi à venir lancer
+trois agents qui vont venir planifier de manière parallèle encore une fois chaque mise à jour
+ensuite il va prendre le résultat de ces agents et va les mettre dans un epct code pour pouvoir
+coder de manière simultanée sur trois features ce qui est très très intéressant donc on se
+retrouve quand il a terminé donc voilà ça prend un peu de temps et il est en train de partir en
+vrille maintenant où il veut tester ses histoires mais il a réussi à lancer les epct plans ensuite
+il a lancé epct code mais j'ai fait une erreur et je devrais lui préciser qu'il doit pas faire
+les tests ici il a voulu faire les tests c'est pas très grave je lui ai demandé de faire il a fixé
+et ça c'est terminé donc voilà un petit peu pour les cloud agents donc voilà un petit peu pour les
+nouveaux custom sub agents qui sont très intéressants et qui permettent de faire des
+choses sympa personnellement je préfère pour l'instant j'ai pas encore trouvé l'utilité
+ultime j'aime beaucoup utiliser plutôt conducteur pour lancer plein de threads différents et puis
+pour avoir un full chat historique parce que les agents c'est assez opaques on ne peut pas
+vraiment voir ce qu'il fait etc bref finalement on a les command bash alors ça j'avais beaucoup aimé
+un tweet ici de tarik qui nous dit j'aime beaucoup utiliser le cloud code sdk pour créer des command
+bash et il nous donne deux trois exemples donc je vais te montrer par exemple ici je suis dans
+mon terminal et une fois que j'ai fait tout ça je vais pouvoir lancer cc-commit-a-p donc là
+ça m'affiche mes changements comme ceci ça vient voir les changements prendre les trucs
+générer un commit message automatiquement et ensuite ça termine la feature alors il faudrait
+un peu que je modifie le script j'ai juste testé mais en clair qu'est ce que ça fait pour ce
+dernier petit changement c'est ici si je fais open recent cc là j'ai des scripts et j'ai créé
+cloud commit enfin j'ai repris cloud commit qui vient comme ceci lancer la commande qui
+regarde le statut etc et qui ensuite utilise basette of the git change créer un commit message
+bla bla bla bla bla et donc là comme ça il a créé ancient image tool et il crée le commit et donc
+apparemment j'ai carrément je sais pas pourquoi il affiche ça ça ça me rend dingue j'aimerais
+bien lui dire que je m'en fous de voir qu'est ce que qu'est ce que c'est les changements donc là
+il génère les commits avec cloud et ensuite je peux lui dire voilà c'est parti tu commits et il
+push et c'est terminé donc voilà à moi de voir si ce dernier commit était une bonne idée mais
+c'est intéressant de créer des scripts évidemment ces scripts on n'est pas obligé de les écrire à
+la main on ouvre cloud on lance code code et on vient dire par exemple ici moi dans ce script
+dans cloud commits.sh modifie le script pour par défaut utiliser .a et ne pas afficher les
+stages change si on utilise .a et donc là boum on modifie le script donc évidemment on utilise
+cloud code pour faire ceci et on n'a pas besoin de s'embrouiller maintenant ajoute un flag pour
+annuler le .a je sais pas comment l'appeler et donc voilà donc typiquement tout ce qui scripting
+tout ce qui bash tout ce qui commande automatisation moi maintenant c'est très simple j'utilise
+j'utilise uniquement cloud ça ne sert à rien de faire autre chose c'est beaucoup plus simple et
+bam bam bam boum on a fait et on a pu modifier tout ça donc voilà un petit peu pour ces mises
+à jour qui sont je trouve très intéressantes et comme ça tu as un peu toutes les news par rapport
+à cloud code encore une fois si tu as envie d'avoir toutes mes proms toutes mes commandes toutes
+mes réflexions un peu plus poussées je mets à jour aibluprint.dev premier lien dans la description
+on se retrouve là bas et en attendant je te souhaite une bonne semaine ciao ciao

@@ -1,0 +1,628 @@
+ClaudeBot, une sorte de bot qui permet littéralement de contrôler ton ordinateur depuis ton téléphone.
+C'est le concept hein, je rigole pas.
+En utilisant des outillats, donc peu importe que ce soit ClaudeCode, TientGPT, tout ce que tu veux.
+Et on a ClaudeBot.
+Alors déjà ClaudeBot s'appelle maintenant Monsieur Lobster et il s'appelle MoltBot.
+Pourquoi ? Donc premier fun fact marrant, c'est qu'Anthropic a demandé ici de venir changer de nom.
+Parce que Claude avait un peu le même nom. Donc très très drôle.
+Et donc aujourd'hui on va un peu découvrir ce ClaudeBot.
+Alors déjà faut savoir que ce ClaudeBot existe depuis très longtemps.
+C'est juste qu'il a explosé en popularité, on peut le dire.
+MoltBot, l'IA qui te permet de faire des choses.
+Donc il y a pas mal de petits running gag ici si on cherche ClaudeBot.
+C'est que vu que c'est un outil qui te permet de venir contrôler un ordinateur via WhatsApp etc.
+Avec un agent super complet.
+Et bien il y a plein de gens qui ont acheté des Mac mini.
+Donc c'est pas une blague, c'est pas une blague.
+Il y a plein de gens qui ont acheté des Mac mini pour avoir un Mac mini.
+Et puis mettre MoltBot ou ClaudeBot dessus.
+Afin de pouvoir avoir un ordinateur qui contrôle ta vie, qui contrôle tes mails, qui gère tout ça etc.
+Et de l'autre côté on a aussi des petites blagues comme ça.
+ClaudeBot qui vit sur un vieux Mac avec ici, c'est vraiment très drôle.
+Ou même des memes comme ça.
+Et surtout ce Youtubeur Alex Finn que tu as sûrement peut-être pu voir.
+Qui nous explique qu'il a set up ClaudeBot ici pour gérer toute sa vie.
+Comme ceci avec des tâches, des mission control etc.
+Et qu'apparemment il fait plein de trucs.
+Alors moi je doute de la véracité des informations mais quand même c'est marrant.
+Alors on va tester, on va tester tranquillement.
+Donc qu'est-ce qui se passe ?
+On peut lancer ici Curl MoltBot.sh.
+Et ici on se retrouve avec ça.
+Et donc là évidemment il nous dit que c'est risqué.
+On va venir activer ça en Quick Start.
+Et on va venir utiliser ClaudeCode ici.
+Qui nous permet ici de venir utiliser le ClaudeCode CLI.
+Donc là on va dire oui.
+Et du coup on vient en fait utiliser directement notre token ClaudeCode.
+Donc ça va t'ouvrir, on authorise.
+Ensuite on doit copier le token ou pas.
+Et donc boum là on voit que ça s'est connecté à ClaudeCode.
+Et donc notre Claude fonctionne avec ça.
+Ensuite on peut choisir le modèle.
+Et là on va pouvoir configurer des choses.
+Alors moi je te conseille de configurer Telegram.
+Parce que c'est d'une simplicité déconcertante.
+J'ai déjà plein de bots Telegram qui font plein de choses.
+Et donc c'est assez simple.
+Tu viens ici une fois que tu as setup ce ClaudeBot dans Botfather.
+Ici moi tu vois que j'ai déjà plein de bots.
+Mais on va faire NewBot.
+Ici on va l'appeler avec son vrai nom.
+Donc ici c'est Molt.
+Et après on l'appelle Molt Melvin Bot.
+Ensuite ici on a une API Key.
+Donc là tu viens d'avoir mon API Key.
+Tu vas pouvoir me spammer aussi.
+Et là je vais pouvoir faire Telegram Bot API.
+Sélectionner ici le Bot API.
+Et normalement soit il va directement créer le truc.
+Et je suis un mongole d'avoir créé le truc moi-même.
+Ah voilà.
+Donc là il me dit fais le token.
+Donc moi ici je lui mets le token.
+Il me dit c'est bon.
+C'est éligible.
+Il manque quelques skills.
+Est-ce que tu veux configurer les skills ? Oui.
+Quel package manager ? On va choisir Bun évidemment.
+Et là du coup on peut utiliser One Password, Apple Note, Apple Reminder.
+Beer Note.
+Moi j'ai toutes ces applications.
+Qu'est-ce que j'ai d'autres ?
+Go Plus.
+Query Google Play API.
+MC Porter.
+Model Usage.
+Nano PDF.
+Obsidian.
+Très intéressant Obsidian.
+Et Thing que j'ai aussi.
+Donc ça c'est tous les MCP des skills j'imagine.
+Ça lui apprend à utiliser tout ça.
+Est-ce qu'on a les emails ?
+On n'a pas les emails.
+C'est assez marrant.
+Bird.
+Bird.
+Un Bird.
+X Twitter.
+CLI.
+Searching.
+Posting.
+Il faut installer Bird.
+Donc peut-être c'est une extension.
+On ne va pas l'installer tout de suite.
+Ça va peut-être prendre du temps.
+Edit PDF.
+Oracle.
+Summarize.
+Allez let's go.
+Et donc là on installe ces différents skills.
+Et donc vu que l'IA est capable de lancer des commandes sur ton ordi.
+Et bien comme on peut le voir ici elle peut accéder à ton One Password.
+Alors je ne sais pas à quel point c'est safe.
+Ça peut être très dangereux.
+Ça peut être très très très très très très très très dangereux.
+Et ça on verra le petit security issue après.
+Mais donc ici on installe des dépendances sur notre ordinateur.
+Et on va attendre que ce soit terminado.
+Ok donc j'ai ajouté tout ça.
+Donc il m'a demandé d'ajouter plein d'API iQI que j'ai dû vous cacher.
+Mais j'ai ajouté Google API iQI.
+J'ai ajouté Nano Banana API iQI.
+J'ai ajouté OpenAI API iQI etc.
+Et donc ici Do you want to Hatch your bot ?
+Alors là je ne sais pas ce que ça veut dire Hatch.
+On va faire Open the Web UI.
+Comme ça on peut voir.
+Et voilà on a le Web UI juste ici.
+Donc ici c'est pas mal parce qu'il me dit tout de suite qu'il est déconnecté du Getaway.
+Alors que sur mon autre navigateur je le vois connecté.
+C'est pas mal l'application rend bien.
+Alors ici je ne sais juste pas.
+En fait il s'est ouvert sur mon autre navigateur.
+Donc on va venir essayer d'afficher la page juste ici.
+Et donc là on a un agent.
+Et je peux lui demander des trucs du style quels sont mes to do thing pending.
+Alors ça fait longtemps que je n'ai pas utilisé thing.
+Mais théoriquement ici il vient utiliser mon abonnement Claude.
+Pour venir faire une action sur ce gateway.
+Qu'est ce que c'est un gateway ?
+C'est le fait d'avoir en fait notre ordinateur qui est sur internet.
+Et qui peut interagir avec internet et tout ce qu'on peut s'imaginer.
+Avec tous les outils, avec le bot Telegram etc.
+Donc ça sert un petit peu à ça.
+Mais en l'occurrence il est fatigué.
+Claude Bok approve Telegram.
+Il faut que j'approuve la conversation.
+Peut-être qu'on n'a pas besoin.
+Approve Telegram.
+Pairing code.
+Hello.
+On va voir si lui répond un peu plus vite.
+Typing.
+Agent fail.
+No agent provided.
+Donc lui il m'affiche l'erreur.
+Lui il ne m'affiche pas l'erreur.
+Pour moi c'est pas mal.
+Maintenant comment est-ce que je débug Michel ?
+Ok bah ça ça aide.
+On va faire Claude bot model.
+Evidemment model ça n'existe pas.
+C'est model.
+Et donc ici il me dit...
+Donc là Claude setup token.
+Je ne sais pas pourquoi il n'a pas réussi à avoir mon entropiq.
+Donc là on a une commande configure.
+On va essayer de redébugger ça.
+Donc là on peut choisir le modèle.
+On peut choisir entropiq.
+Et là du coup j'ai ajouté Michel le token.
+Là lui il est content.
+Maintenant est-ce que Telegram est content ?
+Hello.
+On va voir si ça fonctionne un peu mieux qu'avant.
+Typing.
+Hello.
+Je suis online.
+Fred state.
+No memory.
+On dirait que c'est notre première conversion.
+So qui je suis ?
+Comment je dois m'appeler ?
+On va l'appeler Melvin Assistant Pro.
+Donne-moi un nom afin que je puisse me nommer.
+Donc c'est marrant.
+C'est la première chose qu'il te demande.
+Et donc ici on a la petite Telegram.
+Et donc là ici il dit Boldchoice.
+C'est une entreprise stratégie.
+Mais si tu veux je peux te proposer des meilleurs noms.
+On peut l'acheter.
+Non tu vas t'appeler.
+Tu vas t'appeler.
+C'est quoi son nom qu'on a dit juste avant les gars ?
+Check, check, checked.
+On a dit Maltbot.
+Tu vas t'appeler Maltbot.
+Voilà.
+Tu vas pas faire chier.
+Tu vas pas faire chier ton monde.
+Tu vas t'appeler Maltbot.
+Et du coup là, ce qui est intéressant, c'est de voir un petit peu ce qu'il fait.
+Donc on va lui dire qu'on est en Timezone GMD plus 8.
+Pas de signature.
+Je suis Dave.
+Regarde le site HTTPS.
+On va voir s'il est capable d'aller voir des sites.
+Melvinx.com pour mieux me connaître.
+C'est marrant parce qu'il parle anglais.
+Donc première ligne français, deuxième ligne anglais et tout le reste en anglais.
+Donc là je lui passe mon site.
+Ça va peut-être l'aider à comprendre un petit peu à quoi je sers dans la vie.
+Melvin.
+Parfait.
+Il a réussi à fête.
+Tu construis pas mal de trucs.
+Stack préféré.
+Je mets à jour mes fichiers pour me souvenir de tout ça.
+Alors ce qui est intéressant, c'est Cloudbot.
+Je me demande où il configure ses fichiers.
+Est-ce qu'il y a un dossier?
+Il y a un dossier Cloud juste ici.
+On va pouvoir l'ouvrir avec Z et voir un petit peu ce qui se passe.
+Donc ça, c'est tous les Cloud.
+Agent.
+Donc ici, un fichier Agent.
+Airsprite.
+Identity.
+On peut voir que là il a modifié.
+Soul.
+Donc là, il doit devenir quelqu'un.
+Les outils qu'il a et l'utilisateur à qui il parle.
+Donc ici, toutes les infos qu'il a sur moi.
+C'est très cool.
+Ensuite, il a Memory d'aujourd'hui et il a Canva avec ici un fichier index.html.
+Très intéressant et c'est pas mal.
+En vrai, c'est pas mal.
+C'est pas mal.
+On ne va pas.
+Donc je suis configuré.
+Toi, Melvin, etc.
+Qu'est-ce qu'on construit aujourd'hui?
+On va d'abord essayer de lui dire.
+Donne-moi la liste des to do things.
+Alors d'abord, je vais regarder ma liste de to do pour voir qu'est-ce que je veux.
+Vous leak.
+Donc, j'ai énormément de choses.
+J'ai jamais ouvert Thing depuis pas mal de temps.
+Donc, on va lui dire.
+Donne-moi ma liste des to do things sur Subfast à faire.
+Hop là.
+Donc là, normalement, il va être capable d'appeler des outils.
+Je ne sais pas si j'arrive à débugger dans son gateway juste ici.
+Donc là, on a le chat qui était là, qui nous a dit que ça n'a pas fonctionné.
+Ici, on a le télégramme qui nous dit qu'il est bon.
+On a les instances qui sont ouvertes.
+Et là, on a la session du coup.
+Parfait, on peut voir ce qu'il fait.
+Donc là, on peut voir que.
+Donne-moi la liste des to do.
+Donc là, il a lu le skill Thing.
+Là, il dit, ben voilà, j'ai mon skill Thing.
+Hop, je récupère les to do.
+Blah, blah, blah.
+Et donc là, il a trouvé la to do.
+Et c'est pas mal.
+C'est pas mal.
+C'est pas mal.
+Je voulais dire, peux-tu lire mes mails?
+Ce serait intéressant.
+Je pense que là, du coup, c'est la configuration ultime.
+C'est de venir setup avec son outil d'e-mail.
+Donc là, il dit pas directement pour l'instant.
+J'ai pas de skills.
+Browser Automation, CLI Setup, Apple Mail.
+Là, ce qui est intéressant, c'est d'aller voir la doc de Mold.bot.
+Et normalement, il y a un bouton doc que je prends un petit moment à chercher.
+Et là, on va pouvoir taper Gmail.
+Skill à ajouter des docs pour tout.
+Donc là, Gmail, GOG Gmail Watch Server.
+J'include.
+J'include.
+Ok, j'ai abusé.
+Ajouter un hook.
+Ok, ok, ok.
+Gmail, ok, c'est pas le plus simple.
+Donc, je vais pas faire le setup ici parce que ça va me prendre du temps.
+Wizard 1.
+Ouais, c'est mieux.
+Alors, le problème, c'est que maintenant, tout est renommé Mold.bot.
+Mais en même temps, chez moi, il n'est pas renommé Mold.bot.
+Donc, c'est pas le plus pratique.
+Cloudbot, Webhook Gmail Setup.
+Et donc là, par exemple, je peux setup mon compte secondaire
+où j'utilise un petit peu pour tous mes avions et tout ça.
+MelvinMal2, addgmail.com.
+Et on va voir si ça fonctionne.
+Keep hands fit inside the shell at all times.
+Je sais pas ce que ça veut dire.
+Merde, il n'y a rien qui se passe.
+Ok, il faut rajouter un petit peu plus de config, c'est pas grave.
+Je pense qu'il va pas faire ça aujourd'hui.
+Qu'est-ce qu'on peut faire d'autre?
+Je vais lui dire aussi, va sur le projet Lumeil
+et dis-moi la pull request actuelle sur mon ordinateur.
+Donc là, en fait, vu que le Gateway qui se connecte à Telegram,
+il est sur mon ordinateur,
+je peux lui demander de faire n'importe quelle action.
+Et donc là, normalement, il vient me demander des accès à plein de choses.
+Hop, hop, hop, high cloud drive.
+On donne tout, on donne tout, on donne tout.
+Après, je vais le couper.
+Après, je le coupe parce que là, le danger que je fais avec ce Cloudbot,
+c'est que tout ce que je suis en train de donner,
+je suis en train de le mettre sur une IP à moi.
+Donc là, 2PR ouverte sur Lumeil, parfait.
+Tu veux que j'aille lire les deux.
+Donc là, très smart.
+J'arrive juste pas à voir.
+Ah voilà, il a lu tous les dossiers, il est allé chercher, etc.
+Je vais lui dire, OK, ouvre la review,
+la pull request ouverte sur le add dedicated IP.
+C'était ce que j'étais en train de travailler maintenant.
+Et donc là, ce qui est intéressant,
+normalement, je veux merger cette PR si je ne me suis pas trompé.
+J'avais fini cette feature.
+Là, j'ai commis tous mes changements.
+Je vais checker ça.
+Ah, c'est pas mal.
+Résumé, ajoutez la possibilité de faire une IP dédouée.
+Le machin, BugBug a trouvé une issue.
+Il y a une incohérence du prix.
+Donc là, je vais dire parfait.
+Renomme la PR pour mettre le prix à 30 dollars.
+Donc théoriquement, ce qui est assez fou ici, ce qu'il faut se dire,
+ce qu'il faut se dire qui est intéressant,
+c'est que je peux faire ces actions que je suis en train de faire
+directement sur mon téléphone parce que j'ai Telegram.
+Donc là, il a renommé la PR et on peut voir que la PR s'est bien renommée.
+Donc ça a bien fonctionné de mon côté ici.
+Alors apparemment, il y a plein, plein, plein de problèmes actuellement.
+Voilà, il y a plein de tests qui failent.
+On va essayer de corriger tout ça.
+Pourquoi que ce n'est pas grave, on a déjà prouvé qu'il pouvait faire ça.
+Donc c'est pas mal.
+Maintenant, on va essayer de faire une petite feature.
+Donc on va profiter du code de subfast pour venir faire une petite feature.
+On va lui demander de changer la landing page.
+Donc là, typiquement, j'ai envie de mettre le productant en dessous du e-mail generated.
+Donc on va tenter de faire un screenshot et je vais lui dire ici,
+voilà, fous-moi le logo productant en dessous et on va sur Telegram.
+Donc imagine toi que je fais ça avec mon téléphone.
+OK, maintenant, nouvelle mission.
+Ouvre le projet subfast et déplace le badge productant en dessous du nombre de...
+Non, tu sais quoi, on va faire différent.
+Nouvelle mission dans subfast.
+Supprime le nombre de thumbnails générés.
+Pas utile ici.
+Garde le badge productant et rajoute une section divider entre la hero section et la copy section
+qui met en avant le nombre de thumbnails générés plus le nombre de users créés plus le nombre d'inspiration.
+Hop, donc là, je lui demande ça.
+Et donc là, tu vois, c'est une sacrée mission.
+Je vais lui dire après, tu crées la pull request et tu m'envoies le lien de celle-ci.
+Donc là, imagine toi un petit peu la vie que tu vas mener avec ça.
+Donc là, je comprends la hype.
+Alors là, c'est sur mon ordinateur.
+Donc c'est sur mon ordinateur local, c'est-à-dire que du moment que mon ordinateur qui est juste ici.
+Donc je vais te faire un selfie avec mon ordinateur comme ceci.
+Hop là, du moment que l'ordinateur qui est juste ici en dessous de la caméra, il est connecté à Internet.
+Je peux aller sur Telegram et lui demander de bosser.
+Donc là, j'arrive.
+Je suis à la piscine.
+J'ouvre Telegram et je lui demande.
+Vas-y, boss.
+Et il va pouvoir contrôler mon ordinateur à distance, faire des pull requests, créer commit, aller lire les fichiers, etc.
+Et donc c'est assez fou.
+Donc là, on peut voir qu'il a répondu.
+Hop, je t'arrête deux secondes pour te dire que tu peux télécharger ma configuration Cloud Code directement ici en allant sur mlv.sh slash fc.
+Tu vas te retrouver sur ce site et tu vas avoir accès à ma configuration Cloud Code, c'est-à-dire mes agents, mes commandes,
+mais surtout mes scripts qui sont juste ici pour renommer la session, la statue line, le commande validateur ainsi que les skills.
+Donc si tu cherches ça, sache que c'est le premier lien sous cette vidéo ou sur mlv.sh slash fc.
+Je vais faire les modifications.
+D'abord, créer les APIA pour les stats et modifier le code.
+Donc évidemment, on peut retourner sur Arc pour voir ce qu'il a fait.
+Donc là, il avait renommé la paire.
+Alors on peut voir que quand j'ouvre cette session, ça prend un petit moment avant de voir la session.
+Aussi, le truc que je me dis, c'est que je ne sais pas ici comment je peux créer d'autres sessions.
+Donc je peux faire slash new pour ici créer une nouvelle session.
+Mais du coup, ça couperait ma session actuelle, c'est-à-dire que je ne pourrais pas continuer ma session.
+Alors là, Michel Elfoke, on peut voir qu'il a bien trouvé le repo subfast et qu'il a fait edit.
+Là, on peut voir edit du fichier, edit du fichier, edit du fichier.
+Donc on a tout qui fonctionne.
+Là, on le laisse travailler.
+On va pouvoir aussi changer la photo de profil sur Telegram.
+En attendant, on va mettre la petite photo de Melvings, melvings.com.
+Voilà, comme ça, j'ai l'impression de me parler à moi-même et je vais l'appeler Moltdev.
+Hop là, donne.
+Là, il a une petite photo.
+Sinon, je pourrais me faire une photo de moi-même avec Gemini.
+Donc ici, voilà, c'est fait, c'est allé assez vite.
+Fichier créé est la pool request.
+Donc là, la dinguerie, il m'envoie la pool request.
+Alors j'ai que 5 pool requests sur subfast.
+On va dire que je code principalement dans main.
+Ici, je peux venir regarder.
+Je peux venir voir qu'il a créé un truc pour compter le nombre d'inspiration.
+Root.handler, le code est très juste.
+Il a rajouté du cache.
+C'est super smart.
+Ici, je pourrais rajouter du Next.js cache.
+Ce serait intéressant.
+On va lui dire, ajoute Next.js, use cache, revalidate toutes les heures
+pour éviter de spammer mes API Root qu'on a créé ensemble.
+Et assure-toi que la page ne va pas attendre que ce soit chargé
+pour avoir une landing page qui charge rapidement.
+Donc là, boom, stat divider.
+Ici, il a enlevé le thumbnail count badge.
+Il a rajouté la stat divider juste ici et il a enlevé du coup le badge,
+ce qui fait qu'il n'y a que maintenant l'autre badge.
+Et là, du coup, je lui demande une modification.
+On peut voir que ça commite avec mon compte.
+C'est comme si j'avais lancé Claude Code.
+Sauf que là, j'avoue que c'est une dinguerie.
+Là, je suis en train de voir les possibilités.
+Je suis en train de voir les possibilités en faisant la vidéo.
+J'ai pris un peu de temps parce que je suis toujours un flemard réticent.
+Mais là, si je setup un VPS que j'ai déjà essayé, mais je n'ai pas réussi.
+Je n'ai pas réussi parce que ce VPS SSH, il se coupait toutes les 20 secondes
+et il n'arrivait jamais à terminer son boulot.
+Ça se coupait, ça se coupait, ça se coupait.
+Bon, laissez tomber, je vais réessayer.
+Je vais réessayer.
+Si j'arrive à setup un VPS, je me sign in avec GitHub.
+Je rajoute tous mes projets.
+Je ligne ça avec Telegram.
+Et ensuite, depuis mon VPS, je code et je fais mon délire de mon côté.
+C'est génial.
+Le seul problème qu'on a, maintenant, on va parler du sujet, du sujet, du sujet.
+Alors que cette vidéo est déjà longue, ce n'est pas grave.
+Vous aimez les vidéos longues.
+Si vous aimez les vidéos longues, mettez un commentaire comme ça.
+Je sais que je peux garder tout au montage.
+Donc ici, Cloud Bot Security.
+On a un problème avec des petites vidéos ici.
+Alors, j'avais vu une vidéo dans mon feed.
+Y est vraie vue.
+Donc en gros, il y a quelques petits issues comme ceci.
+Il faut faire attention.
+Pour des gens qui savent ce qu'ils font, il n'y a pas de souci.
+Mais pour des gens qui ne sauraient pas ce qu'il faut faire,
+c'est intéressant de faire du sandboxing.
+Donc ici, de venir run Cloud Code dans un Docker.
+Donc typiquement, moi, sur mon ordi ici, il a accès à mon ordi.
+Mais qu'il soit dans un Docker, ça ajoute de la sécurité.
+Et on a une petite commande, normalement, qu'il a partagée.
+Juste ici qu'on voit dans la vidéo qui s'appelle Cloud Bot Security Audit.
+Donc ici, on va faire Cloud Bot Security Audit.
+Et donc ici, 1.1.1.1 warn.
+Reverse proxy are not trusted.
+Donc en fait, ce qui pourrait potentiellement arriver,
+c'est que là, moi, j'ai uniquement ouvert Telegram.
+OK, sur mon ordi, j'ai uniquement ouvert le Telegram.
+Imagine toi que tu ouvres plus de moyens.
+Donc si là, je fais Cloud Bot Configure.
+En fait, moi, j'ai ici rajouté Configure.
+Donc Set Workspace plus Session.
+OK, donc ça, ce n'est pas ce que je voulais faire.
+Donc là, Getaway.
+Donc là, en fait, tu vois que j'ai un port Getaway.
+Et ici, j'ai potentiellement mon port localhost 18789
+qui est ouvert au monde sur mon Internet.
+Alors évidemment, voilà.
+Et suivant à quel point tu ne fais pas gaffe,
+quelqu'un pourrait accéder à ça et lancer des commandes à Cloud.
+Ce qui serait évidemment drastiquement dangereux pour ton ordinateur.
+Il peut récupérer toutes tes infos.
+Donc là, tu arrives, tu as accès à ce bot Telegram ici.
+Tu arrives à le vérifier.
+Tu arrives à me hacker.
+Tu as accès à tout mon ordinateur.
+Tu peux lui dire, supprime tous les fichiers.
+Tu peux lui dire, va dans le fichier secrète et récupère les passwords.
+Ou le plus fou, vu que j'ai activé One Password.
+Donc tu vois que j'ai quand même une petite maladie mentale,
+peut-être en réfléchissant deux secondes.
+Au concept, moi ici, j'ai activé One Password.
+Donc je peux lui demander théoriquement,
+quel est mon email et compte pour Figma STP.
+Et théoriquement, quand je fais ça,
+il est capable d'aller chercher dans One Password.
+Donc tu te rends compte de la dinguerie.
+On a quand même une sacrée dinguerie ici avec Michel le Claude Bot.
+Qui est capable ?
+J'ai pas assez d'infos en mémoire.
+Je vais lui dire, utilise One Password Skill.
+On va voir s'il arrive à faire ça.
+Donc là tu peux voir qu'il a cherché Memory Search avec des outils.
+C'est très très bien fait.
+Je ne sais pas s'il gère aussi le contexte de manière automatique.
+Parce qu'évidemment, si on commence à faire une sacrée conversation,
+ça peut être long.
+Et aussi ce Gateway juste ici, il est un peu long des fois.
+Mais on peut voir que là, il essaie d'utiliser le Skill One Password qu'il a juste ici.
+Avec des Guard Lines aussi.
+Never Pass Secret Into Log.
+Et donc là, il essaie d'exécuter des petits outils.
+Et ici, il me dit que l'intégration s'y est là, il n'est pas faite.
+Mais moi, je l'avais ajouté, le Skill potentiellement.
+Imagine toi, tu lui donnes le Skill One Password.
+Il va dans ton Skill One Password.
+Il récupère tes SSH Key.
+Et il te détruit ta vie entière.
+Il récupère tes cartes de crédit.
+Il récupère tout ce que tu veux.
+Donc ça, c'est le petit truc à faire gaffe.
+Mais sinon, c'est assez fou.
+On peut voir ici qu'on a quand même fait notre petite pull request.
+Je commence à faire n'importe quoi.
+Donc là, on a quand même fait notre petite pull request.
+Il a rajouté son truc.
+Alors évidemment, ESLint passe pas.
+On va lui dire OK, OK, OK, OK.
+Mais t'abuses.
+ESLint fail.
+Sur la PR.
+Hop là.
+Et comme ça, il va pouvoir travailler.
+C'est assez dingue.
+En fait, j'adore.
+J'adore le concept.
+J'ai souvent des problèmes comme ça d'ailleurs.
+Ça me donne envie de garder mon ordinateur toujours allumé à clodin.
+Le problème, c'est que c'est mon ordinateur.
+Donc il faudrait un autre ordinateur.
+Et c'est pour ça que les gens achètent des Mac mini.
+Pourquoi? Parce que les Mac mini, ça coûte pas cher.
+Donc là, si on va acheter le Mac mini, ça coûte 600 euros, tu vois.
+Donc contrairement à un Mac, ça coûte pas cher.
+Je pensais qu'il y avait un Mac encore plus mini.
+Donc il faudrait un Mac super mini qui permet d'avoir encore moins cher.
+Mais ça reste un prix plutôt abordable.
+Et donc c'est intéressant.
+On peut voir qu'ici, il a fixe.
+On peut voir qu'il fait des commits, tout ce qu'il y a de plus normal.
+Il rajoute ses petites infos.
+Il y a tout qui est fixé.
+Il nous suffit ensuite de commits.
+Donc ici, on est YOLO parce que de toute façon, il modifie la landing page.
+Je vais merger.
+Et comme ça, on va voir la page en live qui aura complètement été faite avec Cloudbot.
+C'est quand même assez dingue de se dire ça.
+OK, je lui ai dit de corriger ce problème jusqu'à que le build fonctionne sur Versailles.
+Donc d'après lui, le build a fonctionné sur Versailles, ce qui est quand même l'objectif justicier.
+Donc ici, quand je refresh Subfast, le plus important, c'est que ça a fonctionné.
+On a le productance et ici, on a les statistiques.
+1200, 409, 232 inspiration saved.
+C'est parfait.
+C'est magique.
+C'est fantastique.
+On a tous les chiffres.
+On a une petite section des chiffres et il y a tout qui fonctionne.
+Donc voici un petit peu pour ce test.
+Il y a beaucoup de choses à faire, mais je voulais juste faire...
+Voilà, tu sais, je sais que vous adorez.
+Je sais que j'adore aussi.
+C'est tester les trucs pour la première fois avec toi.
+Donc là, c'est 100% honnête.
+C'est les vraies émotions que j'ai ressenties quand j'avais vu ça.
+Et voilà, faites attention à la sécurité si vous installez ça et que vous ne connaissez pas bien comment fonctionnent ces outils.
+Le fait d'ouvrir un gateway potentiellement sur votre ordinateur, si c'est mal fait, peut laisser des gens contrôler votre ordinateur.
+Parce que Claude peut littéralement supprimer votre ordinateur entier s'il le veut, télécharger des applications, télécharger des malwares, télécharger des scripts.
+Mais c'est un cas d'usage super intéressant.
+Et pour être honnête, souvent, j'en aurais besoin.
+Parce que moi, quand je vais à la gym et que je discute avec Claude, c'est pratique.
+Mais ce n'est pas super pratique pouvoir discuter ici avec Telegram.
+Alors, je n'ai même pas testé toutes les features pour savoir si je pouvais envoyer des audios.
+On va tester.
+Hello, est-ce que tu peux recevoir cet audio message ?
+Si on peut envoyer des audio messages, c'est vraiment très stylé.
+Est-ce que tu peux recevoir des audio messages ?
+Ah, parce que ça, c'est Masterclass.
+Parce que cette merde, cette merde de Claude App, contrairement à Tiat GPT qui reçoit plutôt bien les audio messages, ne reçoit pas du tout bien les audio messages.
+Et d'ailleurs, je pense que sur Claude, j'avais vu, on peut mettre une clé API 11 Labs.
+Comme ça, tu as Claude qui te répond avec une voix.
+Alors là, on va dire que c'est la version ultime.
+Putain, c'est incroyable, fonctionne parfaitement, c'est une dinguerie.
+Et toi aussi, tu peux parler...
+Non mais regardez-moi ça, Claude a réussi à m'envoyer un message.
+Hey Melvin, ça marche, je peux maintenant te parler en audio. C'est plutôt cool, non ?
+Maintenant, il peut me répondre en audio, on peut discuter.
+Ok, let's go, on peut discuter en audio maintenant, on est intime.
+Donc, j'aimerais bien te demander tout simplement, sur mon ordinateur, est-ce que je suis bien connecté en wifi ou non ?
+On va voir s'il répond en audio, c'est trop drôle. Alors là...
+Je sais, c'est une dinguerie. On peut maintenant avoir des vraies conversations vocales.
+Tu m'envoies un audio, je te réponds en audio. Le futur, c'est maintenant mon pote.
+Ok, let's go, on peut discuter en audio maintenant, on est intime.
+Et maintenant, c'est moi qui lui envoie l'audio. Non mais les gars, c'est d'un fun.
+Alors là, je crois que là, c'est bon, je pars en vrai.
+Vous savez, ce que j'adore faire, c'est qu'en fait, quand je suis à ma gym et que je fais mes tractions et tout ça et que je suis trop chaud,
+toi même, tu sais, et bien d'un seul coup, je me dis merde, j'aimerais trop...
+J'ai des questions, j'ai des questions, je me dis ouais, est-ce qu'il y a ça, est-ce qu'il y a ça, et je me pose des questions.
+Et de base, quand je me pose des questions, je vais sur Cloud et j'utilise l'audio Apple, mais qui pue la merde.
+Et il me répond pas en audio, donc après, je dois lire, etc. Mais là, en fait, on peut avoir une discussion de zinzin.
+Donc là, il m'a répondu, on va le lire.
+Oui, t'inquiète, tu es bien connecté. J'ai testé la connexion Internet et ça marche nickel. Google répond, donc ton Wi-Fi est opérationnel.
+On est bien intime maintenant qu'on parle en audio.
+On est bien intime maintenant qu'on parle en audio. Ah non mais c'est d'un hilarant, c'est d'un hilarant que je peux m'amuser.
+Attendez, on va essayer de prendre une meilleure voice.
+Là, évidemment, on va lui demander d'utiliser une autre voix comme ceci.
+On va voir un peu si ça fonctionne.
+J'ai testé un petit peu Eleven Labs et donc là, il me dit, ouais, tu peux changer la voix, envoie-moi l'ID.
+Je lui mets à jour l'ID et ensuite, après avoir fait ça, répond, crée un message.
+Ok, donc il a fait son truc.
+Moi, je restarte et après avoir restarté sans faute, je lui dis, vas-y, fais-moi un message, balance la sauce.
+Le prompt qu'il a fait, il est pas mal. Ce pitter, il est bon.
+Il est bon, c'est une dinguerie, la conversation, télégramme, audio.
+Et en fait, il y a infinité de choses à faire.
+En fait, tout ce que ton ordi peut faire, il peut le faire.
+Ça n'a aucun sens.
+C'est une dinguerie.
+À part le fait que tu peux plus te balader avec ton ordinateur et que tu pourras plus jamais l'éteindre si t'as qu'un seul ordinateur et que t'as pas de Mac Mini.
+À part ça, c'est super.
+Et hop là, c'est parti pour Olivier.
+Allez, c'est parti avec la nouvelle voix.
+J'espère que celle-ci te plaît mieux.
+On peut maintenant discuter.
+Oui, t'inquiètes, tu es bien connecté.
+C'est la voix différente, c'est pas exactement la voix que je voulais, mais c'est pas grave.
+Voici un petit peu pour cette review Claude.
+Voilà, on a fini, on s'est éclatés.
+C'est parti.
+Donnez-moi votre avis en commentaire sur ce que vous en pensez.
+Dites-moi si vous aimez bien les vidéos qui sont un peu plus longues.
+Alors je ne sais pas combien ça va faire avec le montage.
+Et on se dit à très bientôt pour une prochaine vidéo.
+Tchao tchao.

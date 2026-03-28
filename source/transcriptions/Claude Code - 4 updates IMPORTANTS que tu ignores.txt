@@ -1,0 +1,194 @@
+Si tu utilises Claude Code ou pas, sache qu'il y a eu quatre nouveautés qui changent drastiquement la manière d'utiliser Claude Code et ses capacités et dans cette vidéo je vais te présenter très clairement ces quatre nouveautés et on commence tout de suite.
+Claude Code comme ceci, donc on se rappelle que Claude Code c'est l'agent de code le plus performant actuellement et il a proposé quatre nouveautés et on va commencer tout de suite avec la première news qui est la plus visible
+que je vais te montrer tout de suite qui est la Statue Line. Alors qu'est-ce que c'est la Statue Line ? Et bien en fait ça va être une Statue Line qui va s'effectuer juste en dessous de Claude Code, donc un peu comme ces trucs où ça donne plein d'infos sur ton Mac.
+Ici quand je vais lancer Claude Code, on peut voir qu'ici il y a une sorte de ligne et cette ligne elle va se mettre à jour, potentiellement maintenant, ou ici on va voir pas mal d'informations.
+Donc par exemple dans la Statue Line que moi j'ai configuré, je vois la branche dans laquelle je suis avec un petit icône qui dit si je suis actuellement avec des pending change ou pas.
+Ici je vois les changements actuels, le dossier dans lequel je suis, le modèle que j'utilise, combien d'argent j'ai utilisé dans cette session, combien d'argent j'ai utilisé aujourd'hui et combien d'argent j'ai utilisé dans mon bloc ainsi que mon nombre de tokens.
+Alors à quoi ça sert ? Alors si ici je pose une question, par exemple je fais iBlueprint.dev en une phrase, parce que là je suis dans mon dossier qui permet de gérer tout ça.
+Et du coup ici voilà, iBlueprint est une plateforme de cours en ligne que tu développes pour enseigner l'IA et Claude à tes audiences Youtube, Twitter, LinkedIn.
+Ici on a une réponse et ce qui est intéressant c'est que cette Statue Line elle va se mettre à jour, on peut le voir juste ici.
+On peut voir que ça me dit que j'ai dépensé 9 centimes dans la session ici, aujourd'hui et dans le bloc.
+Donc évidemment le bloc et le truc d'aujourd'hui ça va changer en fonction et ça ce sera ce que j'ai fait aujourd'hui, enfin ce que j'ai fait dans la conversation.
+Donc comment est-ce qu'on configure tout ça ? On va se retrouver sur VS Code juste ici ou Cursor ou n'importe quel outil.
+Et on va aller dans le dossier Claude comme je suis ici avec plein de bordel.
+Ce qui nous intéresse c'est ici ce qu'on va pouvoir avoir dans settings.json.
+On va retrouver tous nos settings et notamment un Statue Line.
+Ce Statue Line ça va être un script qui va être exécuté et le retour de ce script va être le texte qui va être infinite, rajouté.
+Donc si ici je lance Claude Code, il va être rajouté ici.
+Et donc moi où est-ce qu'est le script ? Il est dans script slash Statue Line ccusage.sh.
+Et donc en fait là, bon ça ne va servir à rien que je t'explique précisément ce que fait le script.
+Mais ici on a un script qui effectue plein de choses, on voit qu'il n'est pas si long et qui va justement set up tout ça.
+En fait si on regarde un petit peu la documentation de ce Statue Line, on va aller dans Claude Code Settings, Statue Line Configuration.
+En fait on va pouvoir ajouter ce script.
+Comment ça fonctionne ? Statue Line va être mise à jour quand la conversation va avoir une update.
+Ça s'effectue tous les 300 MS et tout simplement la première ligne qui est Standout, donc la première ligne qui est retournée de ta commande devient la Statue Line.
+Tu peux utiliser les couleurs. Claude Code va passer des informations à propos de sa session.
+Donc en fait qu'est-ce qu'on reçoit ? On reçoit, ou qu'est-ce qu'on nomme, on reçoit la session ID, le transcript path,
+ici le working directory, le modèle, le workspace, la version et le output style.
+Donc en fait on reçoit toutes ces petites informations pour rajouter ceci à notre Statue Line.
+Alors comment ça marche ? Je ne sais pas parce que ce n'est pas moi qui l'ai codé.
+Mais ici on peut voir qu'on extrait les contenus.
+Ensuite ici grâce à Git, j'affiche les Git branches, etc. dans un changement.
+Ensuite j'affiche le Dear Name, Today, Format Cost, Format Token, etc.
+Et j'utilise la commande CCUSH qui me permet d'afficher les informations.
+On peut lui demander comment fonctionne Statue Line CCUSH.
+Je peux voir que là je lui ai demandé aussi de faire un readme.
+Et là normalement ça va assez rapidement m'expliquer un petit peu tout ça.
+Typiquement là je vois, voilà donc ici il m'explique comment ça fonctionne.
+Et donc si tu as envie de récupérer mon script, je te mettrai dans la description, dans AI Blueprint.
+Donc tu peux aller sur mlv.sh slash AI pour t'inscrire sur AI Blueprint.
+Et je mettrai tout ça dans les ressources Notion afin de pouvoir avoir la même Statue Line que moi.
+Pour la modifier, tu peux modifier le script.
+Typiquement, normalement je serais capable ici de venir rajouter Melvin.
+Et quand je sauvegarde juste ici en mettant dans la Statue Line Melvin,
+je peux lui demander est-ce qu'il est sûr de cette petite mise à jour.
+Et on peut voir que ça devrait rajouter Melvin ici dans la Statue Line.
+Exécute le script.
+Et donc là tu vois que ça rajoute le Melvin juste ici donc en le rajoutant là.
+Ce que je pourrais faire c'est qu'on voit que maintenant je reçois le Output Style.
+Donc là si tu as envie de modifier la Statue Line, ma Statue Line par exemple,
+tu vas venir lui dire voici ce que reçoit le script.
+Rajoute le Output Style.name directement dans la Statue Line à gauche du dossier avec l'émoji.
+Et donc là on peut voir que quand je rajoute ça, ça m'affiche ici que j'utilise l'Output Style Friendly Senior.
+Alors là tu te demandes sûrement qu'est-ce que c'est ce Friendly Senior.
+Et ben on parlera de tout ça dans la suite de la vidéo et je t'expliquerai précisément ce que c'est.
+Mais ça c'est le premier changement de la Statue Line.
+Vous avez été pas mal sur Twitter à me demander qu'est-ce que ça faisait,
+pourquoi est-ce que j'avais un terminal aussi stylé.
+Et ben c'est grâce à ma Statue Line et je vous invite à prendre mon script.
+Donc ça c'était pour la première mise à jour de la Statue Line.
+Et je propose de passer à la News Cap directement parce qu'on s'est un peu spoilé avec l'Output Style.
+Alors encore une fois on va voir dans la documentation Output Style et faut bien comprendre ce que ça fait.
+Je trouve que le nom n'est pas super bon.
+Donc le Output Style, ça va adapter ton usage de Cloud Code en dehors du Software Engineering.
+Output Style allows you to use Cloud Code as any type of agents.
+En gardant ses capacités, c'est-à-dire Reading, Writing File, Add and Tracking to Do.
+Donc ça c'est les bases et on va pouvoir faire en sorte que Cloud Code,
+il soit autre chose qu'un Software Engineering.
+Si on regarde le Cloud Code Prompt, System Prompt.
+Donc là on a par exemple, on a System Prompt leak.cloud, est-ce que c'est le bon ?
+Donc voilà, Reverse Engineering Cloud Code Prompt.
+Et ce qu'on peut voir en fait dans ce prompt, on peut voir ici,
+the user will primary request to perform Software Engineering task,
+c'est-à-dire résoudre des bugs, etc.
+Et donc en fait le prompt est très orienté comme étant un Software Engineer.
+Et les Output Style vont te permettre de venir rajouter des nouveaux styles.
+Alors comment est-ce qu'on fait pour configurer ces Output Style ?
+Encore une fois dans le dossier Cloud, donc quand je dis dans le dossier Cloud,
+c'est toujours dans le dossier .cloud qu'on a juste ici,
+on va pouvoir avoir Output Style et là par exemple j'ai testé Honest et Senior Dev,
+mais on va pouvoir aussi créer Assistant par exemple.
+Assistant.md et donc ici je vais pouvoir prendre à peu près ce qui est juste ici,
+remettre ça là et faire Assistant for My Work and Organization.
+Helpful Assistant.
+Et donc là par exemple, j'ai rajouté un Assistant.
+Donc on a rajouté dans Output Style cet Assistant et on va pouvoir ensuite faire ici
+slash Clear slash Output Style et là tu peux voir qu'évidemment si je relance le terminal
+pour avoir les updates, Output Style, on peut voir que maintenant ici j'ai Honest for My Work and Organization.
+Et quand je le choisis ici, tu peux voir que ça va changer la sélection juste ici
+et je peux lui demander est-tu un Software, d'ailleurs le nom est beaucoup trop grand,
+donc on va remplacer par Assistant, donc voilà en gros ici je lui ai demandé si c'était un
+Software Engineering, il me dit qu'il est pas très sûr et je lui demande quel est son nom et il me
+dit je suis Bob et je suis un Assistant pour parler de tes projets à Bali et donc en fait là tu viens
+remplacer son côté très très développeur alors que si on fait normalement, on sait jamais vu que
+c'est de l'IA et on sait jamais trop comment fonctionnent tous ces trucs, mais Output Style
+et si je reprends le Default, donc là on enlève ce que j'ai fait ici et on va lui demander Are you
+a Software Engineer ? donc les mêmes questions et du coup là au lieu de me dire tu vois que la
+réponse n'est pas du tout pareille, là il me dit non pas totalement je suis un Assistant qui peut
+t'aider là dessus et là quand je reprends le mode par défaut, donc celui que tout le monde avait
+avant, oui je suis un Assistant qui est spécifiquement designé pour créer du code
+en tant que développeur donc en fait on a ces deux styles et donc ça va permettre de pouvoir
+modifier et remplacer le prompt donc c'est exactement ce que nous disent. Juste ici, Output Style
+vont directement modifier le système prompt, on va supprimer tout ce qui était avant concernant
+la Code Generation et Efficient Output, à place on va utiliser tes Custom Instructions pour faire
+tout ça donc tu peux utiliser Output Style, tu peux changer et tu peux appliquer l'échange à un
+Local Project Level pour venir, enfin non les changements sont appliqués à un Local Project
+Level dans .cloud slash settings.local.jsol on peut voir qu'ici ça met le Output Style juste
+ici donc c'est très pratique et ça va venir vraiment modifier ceci donc ça remplace aussi un
+petit peu ce Append System Prompt qui vient rajouter des choses au prompt, cette fois on vient vraiment
+remplacer ce qui était là avant pour mettre notre nouveau prompt. Donc voilà pour la nouveauté 2,
+j'ai pas encore fait beaucoup d'utilisation, ce que je m'étais amusé à faire juste ici c'est
+d'utiliser le Output Style que j'avais fait Senior Dev Style et donc là normalement si je fais Clear
+et que je lui dis Statue Line, hop là Statue Line CC Usage, donc là normalement ça va changer ici
+dans Senior Dev Style, moi j'aime pas trop le nom Senior Dev Style par la même occasion, on peut
+voir qu'ici en fait il écrit pas de majuscule avec ce prompt là il l'écrit voilà en minuscule de
+manière très très simple et efficace comme on peut le voir juste ici donc c'est très pratique,
+c'est très fun et je vous laisse vous amuser et voir ce que vous allez pouvoir faire avec ce
+nouveau style. Attention tu peux tout de suite accéder à une Master Class gratuite sur Cloud
+Code où on va voir comment configurer les Workflow, les Tips et toutes les applications. En t'inscrivant
+tu auras instantanément accès au setup de Cloud Code comme ceci avec des commandes, des Tips et
+plusieurs cours sur ma plateforme de formation. En plus de ça tu auras accès à ce fichier Notion
+avec toutes les commandes, toutes les applications que j'utilise, que je mets à jour dès que je
+trouve des nouveaux outils. Cloud Code c'est vraiment le meilleur moyen de coder actuellement
+donc je t'invite tout de suite à aller dans le premier lien dans la description ou sur mlv.sh
+slash AI pour venir t'inscrire à la Master Class Cloud Code. La news numéro 2 attention c'est le
+background job, background job c'est très très intéressant ça va permettre à l'IA de venir lancer
+des serveurs donc par exemple sur cette application je peux lancer Cloud Code et je peux lui dire dans
+desktop lance l'application après avoir lancé et donc là je vais demander directement à Cloud Code
+de venir lancer mes applications avec cette nouvelle feature et donc en fait là ça va venir
+l'application lancer l'application web donc là ça va dans mon dossier et ça vient lancer la
+commande et donc on peut voir qu'ici on a one bash running donc là il est en train de lancer
+aussi le desktop ça va m'ouvrir une page normalement en lançant le desktop et là c'est
+marrant parce qu'il ne l'a pas lancé en background mais c'est pas grave tu peux faire le petit
+raccourci pour lancer l'application en background et là on peut voir que du coup on a les deux
+applications qui sont en background. Il va être capable de venir read l'output shell donc en fait
+maintenant qu'on a le serveur qui est lancé il va pouvoir être capable d'accéder directement au
+log donc on va pouvoir nous gérer ce serveur en faisant flèche du bas juste ici et quand on fait
+flèche du bas on choisit par exemple le premier serveur pour voir ce qui se passe alors là c'est
+bizarre parce que on dirait qu'il se passe rien et là on dirait qu'il se passe rien mais normalement
+tu vois les logs donc par exemple typiquement si ici je vais sur ce serveur et que là je vais sur
+localhost 3000 on voit qu'il y a les logs qui s'effectuent juste ici avec tout ce qui se
+passe par exemple si ici je ne sais pas comment quelle erreur de quelle erreur de de touristes je
+pourrais faire donc ici on va aller sur landing page et on va faire tout simplement l'utilisation
+d'un use state juste ici ça devrait suffire pour causer une erreur donc là boum on a une erreur et
+là en fait je pourrais lui dire regarde les logs de la web j'ai une 500 et là ça marche pas super
+super super super bien de la mort qui tue parce qu'il n'a pas vu la log mais en clair il pourrait
+lancer des logs et il pourrait aussi gérer ton application donc par exemple ici j'ai cette
+application electron et j'ai un bouton retry et donc là par exemple il a fait une erreur concernant
+la commande qu'il fallait lancer et donc là on a trouvé l'erreur ensemble il est capable de
+kill le ici background job et de relancer cette fois avec la bonne commande et on peut voir que
+cette fois ça fonctionne et là l'avantage c'est que je peux lui demander des questions du style
+donc là par exemple on lève la carte de vidéo ou l'upload car en fait il y a trop de style et
+ensuite tu relances le serveur automatiquement donc là l'avantage c'est que j'ai l'application et je
+suis tout le temps obligé de la relancer parce que j'ai pas réussi à configurer l'auto reload
+mais je dois la relancer pour l'update et donc là il est capable de dire ah bah en fait voilà je
+vais enlever la carte et garder uniquement la carte de processing donc la boom il modifie le code et
+une fois qu'il a modifié le code et bah vu que c'est lui qui contrôle tout simplement le process
+electron et le process bash en général il va être capable de me dire bon bah le frérot je
+relance le serveur quoi et là on peut voir qu'il a quille et qu'il a relancé le serveur et que
+maintenant il n'y a plus la carte et donc il est beaucoup plus d'autonome aussi dans le cas où il
+y a une erreur dans la configuration et bah il est maintenant capable de lancer le serveur sans
+qu'il ait besoin de copier-coller des logs donc typiquement ici si on va dans index.ts et que je
+fais une grossière erreur comme ici print de x je pense que ça va pas je pense qu'il va pas kiffer
+il va pas kiffer le concept et donc là on peut voir qu'il y a une erreur et donc en fait vu qu'il
+gère le déploiement du serveur il va être capable de corriger l'erreur te rafficher corriger
+l'erreur te rafficher etc donc voilà pour le petit news numéro 2 et pour rappel si tu as envie
+d'avoir accès à tout ce que je fais mlv.sh-ai ou premier lien dans la description pour savoir
+comment coder des applications comme ceci que j'ai créé presque principalement en utilisant
+cloud code donc il y a énormément de valeurs là dessus la news numéro 3 c'est l'opus plan mode
+donc c'est la dernière chose qui va être disponible juste ici et donc là on va pouvoir
+slash clear cette conversation peut voir que le slash clear d'ailleurs ça garde le tchuk tchuk tchuk
+le background job et là je vais pouvoir utiliser model et passer en opus plan mode donc ça va
+utiliser opus pour le plan mode et sony 4 pour le reste et donc là on va être obligé de passer
+en plan donc là tu vois que je suis en plan mode et quand je vais passer en plan mode et que je
+lui mis je lui demande par exemple comment rajouter donc on va on va faire un petit commit de tous ces
+changements juste ici boom voilà hop comment rajouter l'auto reload en live ture top et donc
+là en fait ce qu'on va voir c'est que là actuellement je suis en train d'utiliser opus
+vu qu'il est en plan mode il va commencer à lire les différents fichiers pour définir en rajouter
+l'auto reload vu que je lui ai pas demandé d'aller sur internet normalement il va pas partir en
+vrille et aller sur internet et chercher la terre entière donc là on peut voir qu'il nous a fait
+un plan et là je vais lui dire yes and auto accept edit et donc là on peut voir que j'étais avec
+le plan opus 4.1 faut savoir que la statue bar elle prend quelques secondes à se mettre à jour à
+ce date généralement c'est pas super instantané et donc là on le voit pas mais je suis sûr qu'on
+est en train de changer de modèle j'aimerais bien qu'on voit la petite mise à jour ici parce
+que là il dit toujours que j'utilise opus et donc voilà là ça s'est mis à jour et on peut voir
+que maintenant j'utilise sonic 4 et donc ça a automatiquement changé de mode donc ça c'était
+la dernière mise à jour de cloud code ce que j'aime beaucoup avec toutes ces mises à jour qu'on
+a vu juste ici l'amour qu'est ce que c'est l'amour c'est qu'il ya pas mal de gens sur twitter et je
+rejoins ce qu'ils disent qui nous disent ça se voit que cloud anthropique utilise cloud dans
+l'entreprise parce qu'il utilise tellement qu'ils ont autant de bonnes idées qui prennent pas mal
+davantage sur ce qu'on peut voir sur les autres outils donc j'aime beaucoup j'aime beaucoup l'amour
+que cloud apporte tout ça ça fonctionne toujours super bien et je pense que à l'heure d'aujourd'hui
+c'est toujours le meilleur outil pour coder si tu as aimé cette vidéo n'hésite pas à t'abonner
+va dans le premier lien dans la description pour accéder au prompt statue line etc et aux
+différents output styles que j'ajouterai sûrement là bas et on se dit à bientôt ciao ciao

@@ -1,0 +1,314 @@
+Cloud Code, c'est un peu le React de l'écosystème des outils pour développeurs.
+Pourquoi c'est un peu comme le React ? Parce que Cloud Code, c'est une sorte de SDK, donc une base.
+Et avec Cloud Code, on peut créer plein de choses autour. En fait, ça nous donne la liberté.
+Quand Cursor était close source, on ne pouvait pas accéder à ce qu'il faisait et on ne pouvait rien faire avec,
+Cloud Code t'offre une infinité d'utilisations et je pense que dans les prochains mois ou dans les prochaines années,
+ce jouet va pouvoir faire énormément de choses. Mais aujourd'hui, je vais te partager les 5 outils que je trouve le plus intéressant et utile.
+Si tu es développeur avec Cloud Code, c'est parti pour le premier.
+Alors le premier que vous me demandez tout le temps, c'est CC Usage.
+Alors CC Usage, qu'on voit ici, c'est un outil qui va nous permettre d'avoir le report de notre utilisation de Cloud Code.
+Comme on peut le voir juste ici. Alors il n'y a même pas besoin de l'installer.
+On va juste lancer cette commande dans un terminal.
+Donc ici, j'ouvre un terminal comme ceci et je lance, comme je t'ai expliqué, Bunnix CC Usage.
+À ce moment là, ça va fetch les prix et ça va donner combien de dollars tu utilises chaque jour.
+Donc on voit qu'aujourd'hui, j'ai utilisé 6 dollars avec uniquement Sonnet.
+Mais CC Usage vient avec vraiment pas mal de paramètres, par exemple Daily.
+Donc là, CC Usage, je rajoute Daily et à ce moment là, j'ai le prix précisément pour chaque jour.
+Alors en fait, ça, c'est le mode par défaut.
+Donc je m'excuse parce que ça ne sert à rien, mais ça peut faire Monthly.
+Donc là, CC Usage Monthly, on peut voir que le 07, j'ai utilisé pour 1015 dollars et le 08, je suis déjà à 302 dollars.
+Donc on est pas mal.
+On peut aussi voir par session.
+Alors par session, c'est vraiment super cool parce que ça va limiter l'utilisation qu'on a sur chaque repo.
+Tu vois qu'ici, on a Conductor, MailerLinks, Code User.
+Et je peux voir que sur Melvinc CC, je suis à 46 dollars, etc.
+Et tu as toutes les sessions.
+Donc très intéressant.
+La commande que j'aime le mieux, c'est Bunnix CC Usage, bloc-live.
+À ce moment-là, tu vas voir combien tu es en train de payer pour ton bloc actuel.
+Ton bloc, c'est ta période de 5 heures.
+Donc on voit que là, il n'y a rien.
+Mais ce qu'on va faire ici, c'est qu'on va mettre ça là et on va mettre ça ici.
+Et je vais ouvrir CC et je vais écrire Hello World.
+Et on peut voir que quand j'écris ce Hello World, en fait, je viens démarrer une session.
+Et à ce moment-là, on peut voir que ça me dit qu'il me reste 4 heures dans ma session, qu'elle a commencé à une heure, qu'elle finira à 6 heures
+et que je suis à 0,07 centimes.
+Et donc là, si je passe par exemple à un modèle avec le modèle opus et que je commence à demander des dingueries dans mon dossier,
+ça va venir me coûter, je vais pouvoir voir mes dépenses en live.
+Donc très, très intéressant aussi.
+On peut voir que c'est vraiment un outil qui a été bien fait.
+On peut rajouter des dates, etc.
+Donc voilà, toutes les features et c'est vraiment un super outil qui s'est bien popularisé.
+Je vous invite à le tester et c'était pour le premier outil.
+Deuxième outil, j'en ai fait une vidéo complète, mais c'est vraiment cheaté.
+Je voyais une personne sur LinkedIn ici, Antoine Chalifour me faire ce post juste avant et il disait
+ben voilà, qu'est ce que tu fais pendant que Cloud Code travaille?
+La réponse, c'est clairement Conductor.
+Conductor, c'est l'UI la plus simple et efficace pour pouvoir lancer des tâches en même temps.
+Par exemple, moi, j'avais récemment un bug avec mes e-mails qui envoyaient des white et donc je lui ai dit,
+ben voilà, EPCT, donc une commande et je lui ai donné la commande.
+Depuis que je vous ai fait la vidéo, on peut faire encore plus de trucs.
+Donc là, quand je fais New Workspace comme ceci, on va pouvoir aller sur les tags juste ici.
+Et par exemple, je me dis, ben voilà, sur cette page, j'ai envie de rajouter à la place de Action Poubelle.
+Je veux rajouter un bouton Rename et Duplicate.
+Bon, pourquoi pas?
+Et donc ici, je peux aller dans le repo.
+On peut voir que quand je fais plus, ça m'affiche Milan ici.
+Et je peux lancer EPCT ou je peux aussi lancer Runtask qui est un peu la même chose,
+sauf que Runtask va aussi faire en sorte de venir créer une pull request à la fin.
+Et donc ici, je dis dans la liste des tags, ici, je mets le lien.
+J'ai envie que tu rajoutes à la place de la poubelle un bouton Dropdown avec Delete, Duplicate.
+Delete, Duplicate, Rename.
+Et donc là, je lui envoie.
+Et en fait là, ça vient de coller, co-créer un nouveau projet.
+Donc qu'est ce que ça fait?
+Ça fait que si ici, j'ouvre Visual Studio Code comme ceci.
+Donc là, j'ai le projet CC.
+On s'en fout.
+On va ouvrir le projet MailerLinks.
+Donc MailerLinks, c'est le SaaS que je viens de lancer.
+En fait, dans ce projet, on le voit pas ici parce que je l'ai caché.
+Mais si je reveal, je reveal ce petit dossier VS Code dans le Finder,
+on peut voir qu'on a un dossier Point Conductor.
+Dans ce dossier Point Conductor, qui est Git Ignoré, il y a ici deux dossiers Milan.
+Et dans le Milan, c'est là où il code.
+Donc en fait, il code dans une copie qui est dans mon dossier.
+Résultat, c'est que moi, ici, dans ce projet, je suis capable de faire des modifications,
+de changer de branche, de faire ce que je veux.
+Et on a un sous dossier Conductor ici, j'arrive à le retrouver,
+où il exécute la tâche comme ceci.
+Et donc, ça va te permettre de travailler littéralement sur plusieurs tâches en même temps.
+Tu peux lancer dix trucs comme ça.
+Et donc après, qu'est-ce que tu peux faire ?
+Et bien, on peut voir que là, j'ai cette branche-là.
+Et si je veux travailler sur cette branche-là,
+soit je fais code point ici et ça move Visual Studio Code
+avec le projet qui est juste ici Milan.
+Donc là, on peut voir que j'ai Visual Studio Code avec le projet Milan qui est dans ce dossier.
+Ou je peux tout simplement aussi, donc la solution numéro deux,
+c'est d'essayer de switch.
+On peut voir qu'on ne peut pas switch sur la branche,
+même si je fetch, parce qu'elle n'est pas encore déployée.
+Mais sache que si tu as envie de switch de suite,
+tu seras obligé de supprimer, d'archiver le dossier
+parce qu'on ne peut pas travailler sur deux work trees en même temps.
+Bref, tout ça, ça utilise les work trees.
+On peut voir que là, il est parti en mode full travail.
+Les mecs qui font ceci, ils ont vraiment une bonne intégration.
+On peut voir que je peux taguer les fichiers, ça fonctionne.
+Je peux aussi taguer les agents.
+Donc par exemple ici, CI Fixer, je peux taguer l'agent CI Fixer.
+Je peux aussi lancer des commandes.
+Donc ici, on a la liste de toutes les commandes qui sont disponibles dans le projet.
+Et on peut à peu près tout faire tout simplement et c'est vraiment un bon outil.
+Prochain projet, c'est CC Notify.
+Alors on avait déjà le son.
+Le problème du son, quand tu l'utilises avec Cloud Code,
+c'est que tu entends un son et tu ne sais pas trop où aller.
+Et donc, CC Notify, c'est assez cool.
+On va voir ici qu'on peut ouvrir un projet Visual Studio Code.
+Dans le dossier Open Recents, on va ouvrir le dossier Cloud.
+Donc moi, évidemment, je ne l'ai pas, mais j'ai un workspace ici
+qui contient tous mes trucs Cloud Code.
+Et donc là, dans Cloud, on crée un nouveau folder CC Notify.
+À l'intérieur, on écrit CC Notify.py.
+CC Notify.py.
+Et là, on peut mettre le code, même si ça ne veut pas dire...
+Je ne sais pas comment j'arrive à cacher ça. Bam.
+Donc là, il y a le code, on peut installer évidemment l'extension Python.
+Et on va voir si ça fonctionne.
+Je ne sais pas pourquoi ils utilisent Python, on pourrait utiliser...
+Ah non, il est assez complexe le script.
+Il a une mini database SQL là.
+Bref, on crée CC Notify.py comme ceci.
+Ensuite, on le shimod et on lance le script et on voit que ça écrit OK.
+Ensuite, on installe Terminal Notifier.
+Donc là, j'installe Terminal Notifier.
+Ça va prendre un peu de temps.
+Et ensuite, on va dans Cloud Settings.
+Et donc ici, on va dans Cloud, dans Settings.json.
+On va venir... Bon, en fait, ça allait assez vite.
+Et on va rajouter User Promptum Meet dans les Hooks.
+Donc là, moi, je n'avais pas déjà User Promptum Meet.
+Et apparemment, il n'y a pas de User Promptum Meet.
+Donc, je ne sais pas exactement pourquoi il m'a rajouté ici.
+Ce n'est pas très grave, ce n'est pas très grave.
+On rajoute le Hook, en tout cas, dans Stop.
+Donc dans Stop, on va Bam !
+Et on rajoute dans Notifications.
+On rajoute dans Notifications, juste ici.
+Bam !
+Donc plusieurs books.
+Et on va aussi créer le User Promptum Meet.
+On ne sait pas, au cas où je pense que c'est qu'on commence une discussion.
+Donc là, Boom !
+Hook User Promptum Meet.
+Et donc là, qu'est-ce qu'on peut faire pour voir si ça marche ?
+Eh ben, on peut tester la commande qui est juste ici.
+Et donc là, on peut voir que je peux cliquer...
+Je peux changer de vue, comme ceci.
+Et là, j'ai une notification.
+Alors, il faut que j'autorise déjà les notifications de Michel.
+Là, je vais lui dire.
+Again, je quitte.
+Et là, en clair, on peut voir les notifications qui apparaissent juste ici.
+Alors moi, de base, il y a tout caché.
+Mais comme ça, ça permet ici de venir revenir.
+Et on peut même gérer le fait que quand on clique sur ces notifications,
+ça nous affiche la bonne application.
+Et donc, n'hésitez pas à modifier ces scripts avec évidemment Cloud Code.
+Donc ici, on a ce CC Notify.
+Toi, tu arrives ici.
+On va ouvrir un nouveau terminal comme ceci.
+Ah non, il faut ouvrir ici.
+Je fais Cloud Code et je lui dis, explique-moi CC Notify.
+Et puis toi, tu peux lui demander de modifier, etc.
+Moi, personnellement, si je devais utiliser ce script personnellement,
+je le transformerais en script type script avec la DB, etc.
+Comme ça, je pourrais avoir un peu plus de contrôle sur ce qui se passe.
+Mais voici pour ce troisième outil.
+Alors, j'ai oublié de vous le montrer parce que tout le monde m'en parle tout le temps.
+Donc ici, Super Cloud, qui est le quatrième.
+Et donc Super Cloud, tout ce que c'est, c'est une sorte de commande système.
+Donc en fait, il y a des commandes spécialisées pour le développement avec des personas
+et une intégration au MCP comme ceci.
+En fait, c'est une sorte de prompt pack, super prompt pack de la mort,
+de la mort qui te permet de simplifier le prompt.
+Donc ce qu'on peut faire, c'est ici utiliser UV Add Super Cloud.
+Alors j'imagine que moi, je ne dois pas avoir.
+Je ne dois pas avoir beaucoup d'UV disponible.
+Voilà donc UV sur mon ordi.
+Je ne m'attendais pas à que ce soit disponible.
+Et donc là, quand on lance l'installation de Super Cloud,
+on a juste ici Installation Super Cloud Framework Components.
+Quick Installation, Minimal Installation, Custom.
+Donc ici, nous, on va dire un Quick Installation.
+Et donc là, on peut voir que ça a ajouté super beaucoup de commandes.
+Donc Flag, MCP, Mode, Orchestrator, Principle, Rules,
+comme ceux-ci qui se sont mis dans le dossier Cloud qui viennent de s'ajouter.
+Et on a aussi ici dans Command, SC et donc là Super Cloud avec tout ça.
+Donc qu'est-ce qu'il nous dit dans la doc qui est quand même la base qu'on a juste ici.
+Donc si on retourne dans la doc, il nous dit,
+ben voilà, quand tu es dans un projet, tu peux lancer SC Analyze pour qu'il analyse ton projet.
+Donc là, j'arrive ici, je lance Cloud Code dans ce projet et je lance SC Analyze.
+Et là en clair, on va avoir tout le pack de Super Cloud qui lui donne plein de prompts.
+C'est du prompt pour moi.
+Donc ici, on a SC Improv, Messy File, par exemple.
+Donc là, on pourrait tester dans un autre terminal en même temps.
+Si je trouve un composant un peu dégueulasse, pourquoi pas test Tag List comme ceci.
+On va dire que Tag List peut être improuvé.
+Et donc là, je vais tagger TagList.tsx.
+Bam !
+Et donc en fait, tout ce que ça fait, si je ne suis pas perdu,
+c'est qu'ici, on a un prompt qui s'appelle Improv, qui est juste ici,
+qui lui dit, ben voilà comment ça fonctionne.
+Exécution, analyse le code, identifie les improvements,
+create improvement plans, apply improvement plans, verify and report change.
+Et donc là, on voit qu'on a le prompt.
+Donc c'est une sorte de prompt pack.
+Moi, personnellement, je suis trop geek et j'aime trop faire les trucs à ma sauce
+pour vraiment utiliser Super Cloud dans mon quotidien
+parce que j'ai mes petites commandes.
+Je préfère geeker pour améliorer, améliorer, améliorer encore et encore mes commandes.
+Mais ça dépend le temps que tu as disponible.
+C'est aussi intéressant parce que ça offre une sorte de règle globale pour tout le monde,
+qui est assez cool.
+Dans la même veine, le cinquième outil, c'est Cloud Code Template.
+Alors c'est assez intéressant, ce Cloud Code Template.
+C'est un outil qui te permet facilement d'installer des agents
+et tout ce que tu veux en une seule commande.
+Donc par exemple ici, on aurait un iOS Developer.
+Donc là, il y a la commande.
+Je copie la commande iOS Developer et je vais dans mon terminal juste ici.
+On va clire tout ça et on va faire cd point point.
+Et je viens installer le iOS Developer – yes.
+Et là, on voit que ça l'a ajouté.
+Et donc, qu'est-ce qu'on a ?
+Eh bien, normalement, on a eu juste ici le iOS Developer.
+Je ne sais pas où il l'a créé, Michel.
+Voilà, juste ici, donc, dans Agent, Cloud slash Agent slash iOS Developer.
+Donc d'ailleurs, je pense qu'il a fait une petite erreur
+parce qu'il a voulu l'installer localement.
+Donc ce qu'on va faire, c'est qu'on va relancer cette commande
+en l'ençant dans le dossier principal.
+Comme ça, normalement, il va le créer dans le bon dossier.
+Donc Agent iOS Developer.
+Ici, on a iOS Developer.
+Et donc là, théoriquement, ce qu'on pourrait faire,
+c'est qu'ici, je pourrais ouvrir Developer Paddle Pro.
+Demandez à Cloud Code iOS Developer.
+Create, Update.
+Qu'est-ce que je peux demander d'update sur ma petite application Watch ?
+Clicking on Team Logo, Should, Ask.
+Donc là, bref, tu peux lui demander ce que tu veux.
+Et tu as cet agent.
+Donc qu'est-ce que c'est, les agents ?
+C'est qu'au lieu de travailler dans le thread principal,
+il y a beaucoup de chances qu'il demande à l'agent de faire cette tâche.
+Et l'agent, il a une prompt où il a des règles.
+Et donc, encore une fois, je suis pas super fan de l'agent comparé aux commandes
+parce que les commandes, ça t'ouvre dans ton thread.
+Et là, en fait, à la place, on va juste attendre
+et on a moins de clarté sur ce qui se passe.
+Et on n'a pas le contexte dans la conversation
+parce qu'un agent a son propre contexte.
+Donc ça dépend vraiment ce que tu veux faire.
+Mais si tu veux des commandes, ça tombe bien
+parce qu'il y a 158 commandes disponibles qui sont juste ici.
+Donc là, la même chose.
+Tu veux la commande pour Create une PR,
+tu copies la commande et tu l'installes.
+Et ça te permet, en fait, d'avoir une sorte de repo,
+d'installation de commandes, etc.
+Très cool.
+Il y a même les MCP pour facilement installer des MCP.
+Donc ici, on en a pas mal.
+Playwright que j'aime beaucoup.
+Postgres, QL Installation.
+Et donc là, l'avantage, c'est que tu copies juste la commande
+et tu peux facilement installer ceux-ci.
+Et finalement, les templates, les templates.
+Alors, je ne sais pas trop à quoi ça sert.
+J'avoue que je n'ai pas deep sur celui-ci,
+mais sinon, c'est assez cool.
+On peut même installer le Cloud Code Template
+et faire tout ce que je fais ici avec l'interface,
+directement avec le Cloud Code Template.
+Donc ça, c'est cool.
+Et en attendant, on a le iOS Developer qui travaille.
+Et en attendant, on a le Super Cloud ici,
+qui a sûrement optimisé ce fichier.
+On va voir le travail monstrueux qu'il a fait.
+Il a fait un travail des plus dégueulasses qu'il pouvait faire,
+ce qui n'est pas étonnant.
+C'est pour ça, encore une fois,
+que je ne suis pas fan de tous ces pré-promptes.
+Je sais qu'il y a beaucoup de gens qui aiment bien.
+Moi, personnellement, ça m'emmerde
+parce que tu vois, typiquement ici,
+pour lui, optimiser le code,
+c'est rajouter un Use Callback
+où il n'y a pas besoin d'Use Callback
+parce que ça ne change aucune performance.
+Donc évidemment, on annule tout ça et on ferme ces pages.
+Voilà pour cette vidéo.
+On va aussi fermer Michel.
+Et voici pour plusieurs outils.
+Sache que j'ai fait toute une liste d'outils
+que j'update un petit peu.
+Mais il y a, par exemple, Cloud Code Web UI.
+Donc c'est assez marrant ici.
+Cloud Code Web UI pour avoir une Web UI de Cloud.
+Encore une fois, ça peut avoir ses usages.
+Cloud Code Usage Monitor.
+Et il y a aussi, par exemple, CC Switch.
+Donc là, qui va permettre de gérer les worktriples plus facilement.
+Et donc voilà, il y a plein, plein, plein, plein d'outils comme ça ici.
+Si tu as envie d'avoir toute la liste
+et de voir comment je code avec Cloud Code,
+tu peux aller sur iBlueprint.dev.
+Tu auras accès à ce sujet chez Notion,
+ainsi qu'en plusieurs vidéos qui t'expliquent un peu tout ça.
+Merci beaucoup d'avoir regardé cette vidéo.
+On se dit à bientôt.
+Ciao, ciao.
