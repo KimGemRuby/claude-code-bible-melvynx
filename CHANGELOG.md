@@ -1,5 +1,47 @@
 # CHANGELOG — Bible Melvynx Claude Code
 
+## [V3.2] — 2026-03-28
+
+### Fusion massive : 36 sources Melvynx (1289 → 1489 lignes, +15%)
+
+Fusion de 36 videos/transcriptions Melvynx dans la Bible V3. Toutes les sources du dossier `CLAUDE_CODE_MELVYNX_BIBLE/` analysees par 6 agents paralleles, dedupliquees et integrees.
+
+### Contenu ajoute
+
+#### APEX enrichi (Ch.4)
+- Definition : modele cognitif / framework de raisonnement, implementation de ReAct (Reasoning and Acting)
+- Explication "sous le capot" : interdiction de toucher au code pendant Analyze et Plan, SCRATCHPAD.md, micro-taches numerotees, diff + linter + tests dans eXamine
+- Pourquoi APEX existe : modeles autoregressifs → instinct de cracher du code → APEX brise cette habitude
+- workflow-apex-free : saute les sur-verifications (pas juste "bride les sous-agents")
+- State Persistence : sauvegarde d'etat si quota epuise ou PC ferme, reprend au prochain lancement
+
+#### Nouveaux chapitres
+- **Ch.15 — Ralph** : boucle autonome infinie (PRD, prd.json, progress.txt, ralph.sh)
+- **Ch.16 — 6 niveaux de maitrise** (Prompteur → Agents Autonomes H24)
+- **Ch.17 — Skills tiers remarquables** (Top 10 : SEO, OWASP, Superpowers, Remotion, Canva Design)
+- **Ch.18 — Erreurs en entreprise** (5 erreurs : permissions, multiagent, workflow, automatisation)
+- **Ch.19 — Outils complementaires** (Conductor, Crab Review, CEMUX+Hium, cceva, Mistral Vibe)
+- **Ch.20 — Usages non-code & configs avancees** (duti, hack token API, YOLO resume, hooks JSON complet, agents.md Teams, contextFork, install VPS OpenClaw 9 etapes, /config toggles, MCP syntaxe exacte)
+
+#### Enrichissements chapitres existants
+- Ch.3 : autocompact desactive, tool search, migration Context7 MCP→CLI, bypass VPS, statusline technique
+- Ch.4 : /rewind, /remote control, thinking levels, feedback loop debug, Claude memory review 9 criteres
+- Ch.5 : /compact, /resume, Tab thinking toggle, # memoire rapide
+- Ch.6 : archivage agents agent-save/, ajout memoire #, /memory
+- Ch.7 : Agent Swarm (delegate mode, modes execution, outils Teams), worktree sibling directory
+- Ch.9 : plugins structure marketplace.json
+- Ch.12 : threads OpenClaw, agent email/sponsors, anti prompt-injection, situation.md, claudebot security-audit, OC Pro
+- Ch.13 : Skills V2 frontmatter, API-to-CLI, fusion commands/skills
+- Ch.14 : Chrome automation, Tasks system, Cowork, Ask User Question
+
+### Anti-patterns
+- 20 → 25 regles (+5 : plugins 25, autocompact actif, 1 seul agent, OpenClaw devant ordi, tool search si MCP < 2-3%)
+
+### Sources (36 fichiers)
+Plugins, 5 Erreurs entreprise, 6 mois lecons, 500h, 1000h formation, Arrete MCP, Ralph, Updates devs, 100x mieux app, Chrome, Pour tout, TUE Startup, Remote Control, Rewind, Drama abonnement, Formation 2.0, Formation Avancee, Trompe Cursor, Setup Vibe Codeur x2, OpenClaw setup, Nouvelle feature, Cowork, 6 Niveaux, 10 Skills, Formation 1h, Mistral Vibe, OpenClaw Telegram, OpenClaw VRAI usage, Skills passer a cote, Skills revolution, Statusline, TUTO dev, TUTO 4h, Formation Complete
+
+---
+
 ## [V3.1] — 2026-03-28
 
 ### Fusion Checklist Integrale (820 → 1289 lignes, +57%)
