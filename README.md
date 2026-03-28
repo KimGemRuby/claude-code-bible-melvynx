@@ -47,6 +47,11 @@
 - Si Claude fait une erreur 2+ fois : creer une regle dans .claude/rules/
 - Utiliser CRITICAL: pour les regles les plus importantes
 - Avant de modifier un fichier, lire au moins 3 fichiers similaires
+- Ne PAS forcer l'usage de sub-agents via des regles globales — preferer des workflows specifiques a la demande. Parfois on veut que l'IA fasse elle-meme sans deleguer.
+
+### Les "Core 7" de Claude Code (terminologie Melvynx)
+Les 7 fonctionnalites qui font de Claude Code ce qu'il est :
+1. Commandes/Skills 2. Hooks 3. Memoire (CLAUDE.md + rules/) 4. MCP 5. StatusLine 6. Sub-agents 7. Context Management
 - Apres tout changement, update le changelog avec la date du jour
 
 ---
@@ -169,6 +174,7 @@ claude -v
 - UN SEUL hook PreToolUse recommande : command-validator (pas de faux positifs contrairement a grep)
 
 ### MCP — Maximum 2-3 (STRICT)
+- **Strategie Melvynx** : desactiver TOUS les MCP par defaut et ne les activer qu'explicitement quand necessaire (toggle avec `#` devant le nom dans mcp.json)
 
 | MCP | Type | Usage | Cout |
 |-----|------|-------|------|
@@ -220,7 +226,9 @@ Affiche en permanence en bas du terminal :
 - Heures restantes dans la session
 - Depenses du jour
 - Necessite `bun` installe (`brew install bun`)
-- Si ne marche pas : `/debug` pour auto-reparer
+- Si ne marche pas : `/debug` pour auto-reparer (la StatusLine contient des tests integres que /debug utilise)
+- Parametre `usableContextOnly` : soustrait les 45000 tokens d'autocompact du total pour afficher le contexte reellement disponible
+- Barre de progression avec couleurs progressives (change de couleur selon l'usage) + taille configurable (`showProgressBar: true/false`)
 
 #### Technique interne StatusLine
 - Lecture du fichier transcript JSON de Claude Code (genere automatiquement)
@@ -241,14 +249,31 @@ export SANDBOX=1
 ## CHAPITRE 4 — WORKFLOWS ET COMMANDES
 
 ### /apex — Workflow principal (>99% succes)
-LA commande principale de Melvynx. Phases :
-1. Initialisation : lit fichier init, determine complexite
-2. Exploration : lance sub-agents explore-codebase (1 a 3+ selon complexite)
-3. Relecture contexte : confirme
-4. Planification : cree un plan d'execution
-5. Execution : implemente le plan
-6. Validation : valide sa propre tache
-7. (Premium) Review securite + clean code + coherence
+LA commande principale de Melvynx. Force Claude a se comporter comme un developpeur Senior methodique.
+
+APEX n'est PAS un logiciel externe ni un programme binaire. C'est un **modele cognitif** (un framework de raisonnement) encode sous forme d'instructions strictes imposees au cerveau de l'IA. C'est l'implementation par Melvynx du concept IA **ReAct** (Reasoning and Acting).
+
+**Pourquoi c'est necessaire** : Les modeles comme Claude fonctionnent de maniere "autoregressive" — ils predisent le mot suivant. Leur instinct est de cracher du code immediatement. C'est la qu'ils font des erreurs, oublient des variables, cassent le projet. APEX brise cette mauvaise habitude en forcant un cycle methodique.
+
+#### Cycle A-P-E-X (sous le capot)
+
+1. **Analyze** (L'Audit) : L'IA a l'**interdiction absolue de toucher au code**. Elle se comporte comme un architecte logiciel qui arrive sur un nouveau projet. Actions invisibles : commandes bash pour lire les fichiers (`cat`, `grep`), analyser l'arborescence, lire les dependances (`package.json`, imports). Lance sub-agents explore-codebase (1 a 3+ selon complexite). But : comprendre le contexte global pour ne pas reinventer la roue ou creer des conflits avec du code existant.
+
+2. **Plan** (Le Brouillon) : L'IA a **toujours l'interdiction de modifier le vrai code**. Elle redige une feuille de route. Actions invisibles : genere une liste a puces numerotee (souvent dans un fichier temporaire `SCRATCHPAD.md` ou dans sa memoire de travail). But : decouper la grosse fonctionnalite en 5-6 micro-taches extremement simples. Force l'IA a penser a l'algorithmique avant la syntaxe. C'est ce qui evite le probleme du "Lost in the Middle" (l'IA qui perd le fil).
+
+3. **Execute** (La Frappe) : C'est seulement MAINTENANT que l'IA commence a travailler sur les vrais fichiers. Actions invisibles : lit la micro-tache n°1 de son plan, modifie le fichier concerne, barre la tache de sa liste. Passe a la tache n°2. But : code chirurgical, fichier par fichier, sans s'eparpiller.
+
+4. **eXamine** (Le Controle Qualite) : Le code est ecrit mais l'IA n'a **PAS le droit de dire "c'est fini"**. Elle doit s'auto-evaluer. Actions invisibles : relit le diff (les modifications), execute le linter (verification syntaxe), lance les tests (si configures). Si elle detecte une erreur, elle s'oblige a la corriger immediatement avant de rendre la main. But : livrer du code qui fonctionne du premier coup. (Premium : review securite + clean code + coherence en plus)
+
+#### 3 super-pouvoirs d'Apex
+1. **State Persistence (sauvegarde d'etat)** : Si le quota Claude s'epuise ou que le PC est ferme, Apex sauvegarde l'etat actuel. Au prochain lancement, l'IA reprend exactement la ou elle s'etait arretee. Flag `--resume` (`-r`).
+2. **Mode Economie (workflow-apex-free)** : Le framework APEX classique consomme enormement de requetes API (l'IA discute beaucoup avec elle-meme pour valider chaque etape). La variante free force la methode (Analyse, Plan, Execution) mais **saute les etapes de sur-verification** pour economiser le quota Claude. Flag `--economy` (`-$`).
+3. **Isolation Git** : Cree automatiquement une nouvelle branche Git au debut de la tache. Si l'IA se trompe completement, la branche main reste intacte. Flag `--branch` (`-b`).
+
+#### Quand utiliser Apex
+- Features complexes (ex: "Developpe tout le systeme de paiement Stripe")
+- Projets de A a Z de maniere autonome et securisee
+- NE PAS utiliser pour des petites modifs (langage naturel suffit)
 
 | Flag | Raccourci | Effet |
 |------|-----------|-------|
@@ -265,6 +290,53 @@ LA commande principale de Melvynx. Phases :
 | --save | | Save mode |
 
 **Conseil cle** : ne PAS taguer de fichiers — laisser Apex explorer seul.
+
+#### Code source du skill APEX (system prompt exact)
+
+Un "skill" Melvynx n'est PAS un script Bash complexe. C'est un **System Prompt extremement directif** (fichier .md dans le dossier skills/). Voici le texte exact que Claude lit quand APEX est active :
+
+```markdown
+# WORKFLOW APEX (Analyze, Plan, Execute, eXamine)
+
+Tu dois OBLIGATOIREMENT utiliser le framework APEX pour traiter la demande de l'utilisateur.
+Tu n'as PAS l'autorisation d'ecrire du code de production tant que les phases A et P ne sont pas terminees et validees.
+
+## ETAPE 1 : [A]nalyze (Analyse)
+1. Utilise les outils de recherche (grep, find, lecture de fichiers) pour comprendre le contexte exact.
+2. Identifie les fichiers impactes.
+3. Ne propose aucune solution a ce stade. Ecris simplement : "Analyse terminee. Voici ce que j'ai trouve : [Resume court]".
+
+## ETAPE 2 : [P]lan (Planification)
+1. Cree un fichier `SCRATCHPAD.md` (ou mets a jour `progress.md`).
+2. Redige une liste d'etapes techniques numerotees, claires et minimalistes.
+3. Demande a l'utilisateur : "Voici le plan. Es-tu d'accord pour que je passe a l'execution ?" et ATTENDS SA VALIDATION (sauf si mode autonome force).
+
+## ETAPE 3 : [E]xecute (Execution)
+1. Implemente le code etape par etape en suivant rigoureusement le plan.
+2. Ne modifie qu'un seul composant/fichier a la fois.
+3. Ne fais pas d'optimisations non demandees dans le plan.
+
+## ETAPE 4 : e[X]amine (Verification)
+1. Lance un auto-audit de ton propre code.
+2. Verifie s'il manque des imports, s'il y a des fautes de frappe ou si la logique est cassee.
+3. Si une commande de test ou de lint est disponible, execute-la.
+4. Si tu trouves une erreur, corrige-la silencieusement avant de prevenir l'utilisateur.
+
+---
+**REGLE STRICTE :** A chaque reponse que tu me fais, tu dois commencer ton message par le tag de la phase actuelle : `[ANALYZE]`, `[PLAN]`, `[EXECUTE]` ou `[EXAMINE]`.
+```
+
+#### Pourquoi c'est ecrit comme ca (la patte Melvynx)
+
+| Technique | Explication |
+|-----------|-------------|
+| **Ton imperatif** (majuscules "OBLIGATOIREMENT", "STRICTEMENT") | Melvynx : "parler a l'IA comme a un stagiaire tres intelligent mais un peu dissipe" — il faut la contraindre |
+| **Pause forcee** (etape 2 demande validation) | Evite que l'IA crame le quota API en codant 400 lignes dans la mauvaise direction |
+| **Fichier SCRATCHPAD.md** (plan ecrit physiquement) | Sert de memoire externe — si la conversation devient longue, l'IA relit ce fichier au lieu de perdre le fil |
+| **Tags de phase** ([ANALYZE], [PLAN], etc.) | Rend la phase actuelle visible pour l'utilisateur ET force l'IA a rester dans le cadre |
+| **Interdiction de coder avant A+P** | Brise l'instinct autoregressif du modele (predire/cracher du code immediatement) |
+
+**Lecon fondamentale** : un skill = un prompt directif, pas du code. La puissance vient de la precision des contraintes imposees au modele.
 
 ### /oneshot — Quick fix rapide
 - Petites features, zero intervention, ne demande jamais l'avis
@@ -283,7 +355,7 @@ Workflow en steps (prompt discovery) :
 Techniques de debug :
 - **Log technique** (LA PLUS EFFICACE) : demander a l'IA d'ajouter des console.log strategiques → reproduire le bug soi-meme → copier les logs console BRUTS → envoyer a Claude. Ne PAS interpreter les logs, ne PAS dire quoi faire — exposer le PROBLEME.
 - **Screenshot annote** : CleanShotX pour montrer le bug visuellement avec carres rouges, fleches
-- **Feedback loop** : creer une API route de test, definir le resultat attendu, demander a Claude de faire curl en boucle jusqu'au bon resultat
+- **Feedback loop** : template exact : "Cree une API route dans mon app pour tester la fonction X. Le resultat attendu est Y. Update le code et fais un curl request jusqu'a ce que tu aies le resultat attendu."
 - **Hack** : laisser Claude lancer `npm run dev` en background pour lire ses propres logs, ajouter des logs, comprendre, corriger → boucle autonome
 - **Ne pas dire quoi faire** : exposer le PROBLEME, l'IA resout
 
@@ -533,6 +605,7 @@ Regle dans CLAUDE.md : `CRITICAL: Apres tout changement, update le changelog ave
 - La description du sub-agent determine QUAND l'IA l'utilise (injectee dans le prompt)
 - Apres creation d'un sub-agent, relancer Claude Code pour qu'il le detecte
 - **Descriptions courtes** pour minimiser l'impact contexte
+- Benchmark Melvynx : sans sub-agent = 41% du contexte, avec sub-agent = 38% → **5000 tokens economises** pour un resultat equivalent voire meilleur
 - Gain : ~5000 tokens economises vs sans agent pour un resultat equivalent ou meilleur
 - Si trop d'agents : warning "large cumulative agent description impact performance"
 
@@ -565,6 +638,7 @@ Regle dans CLAUDE.md : `CRITICAL: Apres tout changement, update le changelog ave
 - Activer : `enableAgentTeams: true` dans settings.json
 - Le main agent (team lead) cree des equipes, assigne des taches via task list partagee
 - Les teammates travaillent en parallele
+- **Self-claim** : quand un teammate termine une tache, il peut automatiquement s'assigner la tache suivante sans intervention
 - Interface : fleche bas pour switcher entre agents (main, dev1, dev2, etc.)
 - Les teams utilisent Tmux pour splitter les agents en tabs
 
@@ -626,7 +700,11 @@ Un dev devrait monitorer **minimum 3 agents** en parallele. "Si un dev utilise u
 2. Decrire la feature en langage naturel (ce que l'utilisateur voit)
 3. Separer desktop et mobile dans la description
 4. Ne PAS specifier la technique (camelCase etc.) au premier run — laisser l'IA choisir
-5. Utiliser une boilerplate existante pour imposer les conventions (ex: **NowTS** de Melvynx avec regles strictes pour API routes, fetching, middleware)
+5. Utiliser une boilerplate existante pour imposer les conventions (ex: **NowTS** — nowts.app — de Melvynx)
+   - NowTS contient des regles strictes pour API routes, fetching, middleware, authentification, dialogues
+   - Helpers internes documentes avec commentaires inline : **ZodRoute** (validation API routes), **Upfetch** (HTTP client)
+   - L'IA faisait toujours des erreurs avec Upfetch → Melvynx a demande a Claude d'analyser les utilisations dans l'app et de rajouter des commentaires d'usage — les erreurs ont disparu
+   - Methode : "analyse les utilisations de [helper] dans mon app et rajoute un commentaire avec les exemples"
 6. Si preferences techniques : les mettre dans CLAUDE.md global APRES le premier run
 
 ### Brownfield (projet existant)
@@ -679,6 +757,8 @@ Langage naturel directement, PAS de commandes/skills. Economise du contexte.
 2. Accept Edit : pas de validation pour les modifs fichiers
 3. Plan : propose un plan, pas de modification
 4. **Bypass Permission** (rouge) : aucune question — RECOMMANDE par Melvynx
+- Citation Melvynx : "Plus vous limitez l'IA, moins les resultats seront bons. J'ai decouvert la vraie puissance de l'IA depuis que je lui ai donne l'acces a tout. Elle n'a jamais fait quelque chose de dangereux."
+- Seul risque reel constate : `prisma reset` qui reset la DB en local. Si vous etes en entreprise, les fixtures permettent de restaurer.
 
 ### Deny List — Meme en bypass, ces commandes sont bloquees
 - `rm -rf`, `sudo rm`, commandes destructives
@@ -706,6 +786,73 @@ Langage naturel directement, PAS de commandes/skills. Economise du contexte.
 - Gestion : `/plugin` > Browse and install / Manage Marketplace / Add Marketplace (`user/org/repo`)
 - Space pour activer/desactiver, Delete pour marquer a desinstaller
 
+### Garde-fous hardcodes (securite systemique)
+Un simple fichier rules.md ne suffit pas toujours — l'IA peut l'ignorer si le contexte devient trop long. Les vrais garde-fous doivent etre **systemiques**.
+
+#### Regles de non-destruction absolues
+- Inscrire dans le System Prompt central des interdictions formelles sur la manipulation des donnees
+- INTERDIRE la suppression de fichiers sous pretexte de doublons en se basant uniquement sur la taille — risque de perte fatale
+- Toute comparaison de doublons DOIT suivre les 4 etapes des outils professionnels (jdupes/fdupes) :
+  1. **Taille du fichier** : filtre rapide — si taille differente, pas doublon (NECESSAIRE mais JAMAIS SUFFISANT)
+  2. **Hash partiel** (premiers 4096 octets) : elimination rapide des faux candidats
+  3. **Hash complet** du fichier entier : comparaison fine (jdupes = xxHash64, fdupes = MD5)
+  4. **Byte-by-byte** (octet par octet) : confirmation finale — elimine tout risque de collision hash
+- Faux positifs = ZERO quand les 4 etapes sont respectees
+- JAMAIS se baser sur la taille seule (etape 1 sur 4) — c'est la cause principale de pertes de donnees
+- JAMAIS se baser sur le hash seul sans verification byte-by-byte — les collisions existent
+- Outils recommandes : `jdupes` (xxHash64, rapide, I/O-bound) ou `fdupes` (MD5, conservateur)
+- Apres detection, toujours afficher la liste exacte des fichiers impactes ET attendre un OUI explicite
+- Aucune suppression silencieuse : lister les fichiers AVANT execution, puis attendre approbation humaine
+- Forcer la validation humaine (prompt de confirmation) pour toute commande rm ou del
+- Double couche : deny-list settings.json + CLAUDE.md + command-validator PreToolUse
+
+#### Reference algorithme jdupes vs fdupes
+
+| Critere | jdupes | fdupes |
+|---------|--------|--------|
+| Hash | xxHash64 (non-cryptographique, ultra-rapide) | MD5 (cryptographique, plus lent) |
+| Hash partiel | Premier bloc 4096 bytes | MD5 partiel |
+| Verification finale | Byte-by-byte | Byte-by-byte |
+| Faux positifs | Zero (byte-by-byte apres hash) | Zero (byte-by-byte apres hash) |
+| Performance | Optimise vitesse (goulot = disque I/O, pas CPU) | Plus conservateur |
+| Installation | `brew install jdupes` (macOS) / `apt install jdupes` (Linux) | `brew install fdupes` / `apt install fdupes` |
+
+#### Isolation de l'environnement
+- Ne JAMAIS donner a Claude Code un acces root global
+- Monter les dossiers sensibles en lecture seule (Read-Only)
+- L'IA peut lire tout le systeme pour comprendre le contexte, mais ne peut ecrire que dans le dossier du projet
+- Utiliser la deny-list Read pour bloquer l'acces aux fichiers sensibles (.pem, .env, secrets, tokens)
+
+#### Git Pre-commit Hooks automatises
+- Avant que l'IA ne valide un code, un script local verifie automatiquement les erreurs de syntaxe et failles de securite
+- Si le script echoue, la boucle de l'IA est rejetee et elle doit corriger
+- Exemple : ESLint, TypeScript strict, tests unitaires obligatoires avant commit
+
+### Moteur de performance (memoire chaude / memoire froide)
+Pour que l'IA soit surpuissante, elle ne doit pas reflechir a l'architecture — elle doit se concentrer sur la logique metier.
+
+#### MEMORY_CORE.md (Memoire Froide)
+- Regles immuables du projet : stack technique, architecture de base, conventions de nommage
+- Ce fichier n'est JAMAIS modifie par l'IA
+- Equivalent : CLAUDE.md projet + rules/ avec alwaysApply: true
+
+#### SCRATCHPAD.md (Memoire Chaude)
+- Bloc-notes de l'IA : elle ecrit son plan d'action etape par etape AVANT de coder
+- Augmente les capacites de raisonnement logique de facon fulgurante
+- Equivalent dans Claude Code : Plan Mode (Shift+Tab → mode Plan)
+
+#### Comportement Tech Lead senior
+- Imposer dans CLAUDE.md le comportement exact d'un Tech Lead senior
+- Toujours ecrire les tests unitaires AVANT la logique (TDD)
+- Toujours utiliser un typage strict
+- Au lieu de dire "code bien", decrire le comportement attendu precisement
+
+### Skills comme outils autonomes
+La vraie puissance : donner des "mains" a l'IA.
+- Au lieu de demander a l'IA d'expliquer comment deployer, lui donner un outil (script Bash ou API) appele `deploy_to_staging`
+- L'IA analyse le code, voit que c'est pret, et declenche elle-meme la commande de deploiement
+- Philosophie Melvynx : Skills > MCP pour le controle et la simplicite
+
 ---
 
 ## CHAPITRE 10 — PRICING & LIMITES
@@ -719,7 +866,8 @@ Langage naturel directement, PAS de commandes/skills. Economise du contexte.
 | **Max 20x** | **200$** | **~3 200$** | **x16 (meilleur ratio)** |
 
 - API directe : Opus = 15$/M input + 75$/M output (peut monter tres vite)
-- Melvynx depense ~3000$/mois en API equivalente pour 200$/mois
+- Chiffres reels Melvynx : une session peut couter ~7$, une journee intensive ~237$, soit ~3000$/mois en API pour 200$/mois d'abonnement
+- Stats : 80% des utilisateurs depensent moins de 200$/mois en inference. Les top users (comme Melvynx) depassent 1000$/mois. Le plan Max 200$ est une expense marketing — Anthropic perd de l'argent volontairement pour creer des evangelistes qui font la promotion gratuite du produit.
 - **Recommandation** : Max 20x pour usage pro — pour chaque euro depense, deux fois plus d'utilisation que le Max 5x
 - Commencer a 20$, monter si limites atteintes
 
@@ -745,7 +893,7 @@ Langage naturel directement, PAS de commandes/skills. Economise du contexte.
 
 ### Terminaux
 - **Ghostty** (ghosty.org) : terminal optimise, gratuit, minimaliste. Raccourcis : `Cmd+1/2/3` tabs, `Cmd+W` fermer, `Cmd+T` nouveau tab
-- **CEMUX** : terminal cree pour coding agents (4.7 stars). Build au-dessus de Ghostty. Tabs verticaux + horizontaux, notifications agent, browser integre (Safari), split pane, ports ouverts, PR en cours, branches git. Build en Swift/AppKit (pas Electron). Gratuit.
+- **CEMUX** : terminal cree pour coding agents (4.7 stars). Build au-dessus de Ghostty. Tabs verticaux + horizontaux, notifications agent, browser integre (Safari), split pane, ports ouverts, PR en cours, branches git. Build en Swift/AppKit (pas Electron). Gratuit. Raccourcis : `Ctrl+1/2/3` navigation entre tabs, `Cmd+Shift+R` renommer workspace.
 - **Hyper** : alternative populaire
 
 ### Outils macOS
@@ -875,6 +1023,14 @@ Discussion vocale bidirectionnelle via Telegram (envoi + reception audio).
 - Code via OpenClaw = cher (pas de caching sur Agent SDK, contexte grandit vite)
 - **Conseil** : utiliser OpenClaw quand on n'a PAS son ordi. Sinon, Claude Code directement.
 - Anti-ban : ~50% tokens via OpenClaw, ~50% via CLI directement
+- **JAMAIS upgrader d'abonnement via le lien fourni par OpenClaw** — toujours upgrader depuis Claude Code directement (security checks au moment de l'upgrade)
+- Agent email : modifie automatiquement son propre system prompt quand on le corrige par message Telegram (auto-apprentissage en live)
+- Agent email : bannissement automatique des spammeurs + auto-archivage via regles anti-prompt-injection
+- Fichier `situation.md` : mis a jour automatiquement quand OpenClaw detecte des infos de contexte dans les emails recus (location, voyage, priorites)
+
+### Tips OpenClaw (confirmes video Melvynx)
+- **Bouton "Partager via Telegram"** : depuis n'importe quelle app (Twitter, Safari, YouTube, etc.), utiliser le bouton Share → Telegram → envoyer au bot OpenClaw. Il sauvegarde ou agit sur le contenu partage.
+- **Workspace GitHub backup** : creer un repo GitHub pour sauvegarder la config OpenClaw. Commande : "Cree un repo openclaw-workspace sur GitHub et initialise ce projet". Configurer un cron automatique pour backup matin et soir sur Git.
 
 ---
 
@@ -913,11 +1069,15 @@ hooks: [...]              # Systeme de hooks
 
 ### Installation de skills externes
 ```bash
-npx skill add <auteur>/<nom>
+pnpx skill add <auteur>/<nom>   # plus rapide que npx
+npx skill add <auteur>/<nom>    # alternative si pnpx non disponible
 # Sources : skill.sh, context7.com/skills
 # Scope global : --scope user pour tous les projets
 ```
 - Skills recommandes a installer : **front-end-design** (design professionnel), **skill-creator** (creer skills avec l'IA), **github-init** (init Git, commit, creation repo, push)
+- On peut taguer un skill au milieu du prompt (pas besoin de commencer par `/skill`)
+- **Securite** : toujours verifier les skills installes depuis skill.sh pour du prompt injection. Context7 integre un systeme de detection de prompt injection pour sa marketplace.
+- Pour les skills qui wrappent des API, creer un vrai `package.json` avec dependances dans le dossier du skill
 
 ### Skills essentiels (Melvynx - repo aiblueprint)
 15 skills : apex, claude-memory, commit, create-pr, fix-errors, fix-grammar, fix-pr-comments, merge, oneshot, prompt-creator, ralph-loop, skill-creator, subagent-creator, ultrathink, workflow-apex-free
@@ -938,6 +1098,15 @@ npx skill add <auteur>/<nom>
 - Structure : dossier `cli/` avec tous les mini-CLI nommes uniformement
 - Chaque CLI contient son propre skill dans un sous-dossier
 - Le CLI n'est jamais publie sur npm, reste sous controle de l'agent
+- Cree par Melvynx durant un hackathon — scaffold automatique a partir de la doc API
+- Exemple concret : creer Google Image CLI, Dub CLI, Codline CLI en une commande
+
+### Chaining multi-skills en une seule commande
+Enchainer 3+ skills dans un seul prompt sans surcharger le contexte :
+- Exemple reel Melvynx : "Sur Codline, cree un coupon pour begin react. Ecris un URL short link pour Baptiste avec 44% de rabais."
+- L'agent enchaine automatiquement Codline CLI → Dub CLI → Email CLI
+- Chaque skill se charge uniquement au moment ou il est necessaire (lazy loading)
+- Source : video "ARRÊTE LES MCP" — Melvynx demontre le chaining sur 3 CLIs consecutifs
 
 ### Skills comme remplacement des MCP
 Au lieu d'un MCP, creer un skill avec un script bash qui fait `curl` sur l'API :
@@ -970,6 +1139,8 @@ Les slash commands sont fusionnees avec les skills. Anthropic recommande de migr
 - Outils : tab_context, create_tab, navigate, read_page, search, click, scroll, screenshot, drag, zoom, hover, find_forms_inputs, javascript_tool, gif_creator, upload, network_access, shortcuts
 - Cas d'usage : live debugging, design verification, web app testing, auth-aware testing, data extraction, session recording, modifier localStorage/feature flags
 - **Feedback loop** : Claude peut verifier lui-meme si son code fonctionne visuellement dans le navigateur
+- **Pair-browsing** : l'humain peut interagir avec la page en meme temps que Claude travaille dessus (cliquer, naviguer pendant que l'IA agit)
+- **Pause login** : si Claude rencontre une page d'authentification, il s'arrete automatiquement et demande a l'humain de se connecter avant de continuer
 
 ### Tasks (nouveau systeme de taches)
 - Commande : `claude task list <id>`
@@ -999,6 +1170,8 @@ Les slash commands sont fusionnees avec les skills. Anthropic recommande de migr
 - Pas de slash commands, pas de @fichier
 - Beaucoup plus lent que Claude Code
 - Peut creer des scripts .sh que l'utilisateur execute manuellement
+- Feature **Dispatch** (Repartition) : connecter des sessions Cowork en parallele
+- Feature **Channels** : point d'entree pour controler des agents autonomes depuis le telephone
 
 ---
 
@@ -1023,6 +1196,7 @@ Ralph = boucle autonome : Claude execute des taches une par une sans s'arreter, 
 5. Chaque iteration : implemente une story → commit → update prd.json (pass: true) → notes dans progress.txt
 
 ### Astuces Ralph
+- Parametre **-N** pour definir le nombre de stories a executer par run (ex: `ralph.sh -N 5`)
 - Ajouter une user story finale : "Lance create-pr pour creer la pull request"
 - Ajouter : "Run CI fixer auto avec 50 tentatives max pour fixer la CI"
 - **Liste de bugs comme PRD** : chaque bug = une user story. Au fil de la journee, ajouter les bugs. Le soir : ralph.sh → tous resolus le matin.
@@ -1054,6 +1228,7 @@ Plusieurs terminaux paralleles (4+ agents). Work trees, Agent Swarm, Conductor. 
 
 ### Niveau 6 : Agents Autonomes H24
 OpenClaw sur VPS (Telegram). Agents specialises : coach, securite, monitoring, email. Notifications proactives. Newsletters, veille, coaching — tout automatise.
+- Cas d'usage concrets : les agents NOTIFIENT proactivement le matin — failles de securite detectees, nombre de nouveaux utilisateurs SaaS, utilisateurs payants, resilations, erreurs en production.
 
 ---
 
@@ -1102,7 +1277,7 @@ Protocole : reproduire → hypothese → tester → observer → iterer. Empeche
 ### Erreur 3 : Pas de workflow standardise
 - Choisir UN outil pour toute l'equipe
 - Workflow entreprise : Explore → Tickets CRM → Planifier → Executer → Review (optimizer + security)
-- Clean Code review : si fichier > 400 lignes → sub-agent clean code
+- Clean Code review : si fichier > 400 lignes apres modification, lancer automatiquement un sub-agent clean code qui force le refactoring. Integrer ce check dans le workflow standard.
 - Boucle retroactive : tests → run → verifier → boucle si echec
 
 ### Erreur 4 : Un dev = un agent
@@ -1111,7 +1286,7 @@ Protocole : reproduire → hypothese → tester → observer → iterer. Empeche
 
 ### Erreur 5 : Ne pas automatiser
 - IA pour reviewer les PR (Replit, BugBot)
-- 1 review IA + 1 review humaine (vision produit) suffit
+- 1 review IA + 1 review humaine suffit. Les reviews humaines multiples "pour review" n'ont plus de sens — l'humain doit se concentrer uniquement sur le "taste et la vision produit", pas la technique
 
 ---
 
@@ -1249,8 +1424,33 @@ Quand on tape `/epct`, le contenu est injecte comme prompt. Appuyer sur **Tab** 
 |---------|------|
 | `soul.md` | Identite/personnalite du bot (nom, timezone, site web) |
 | `memory/` | Memoire quotidienne (souvenirs entre sessions) |
+| `situation.md` | Mis a jour automatiquement (lieu, priorites, calendrier) |
 | `canvas/index.html` | Interface web locale |
 | `.env` | Variables d'environnement (tokens, API keys) |
+
+### Securite et maintenance OpenClaw
+- `claudebot security-audit` : commande pour verifier les vulnerabilites de l'installation
+- **OC Pro** : produit payant de Melvynx avec script automatise qui fait tout le setup VPS en 20 min
+
+### MCP — Syntaxe d'installation exacte
+```bash
+# Format generique
+claude mcp add <nom> <commande-runtime> -s <scope> -- <args>
+# Exemple concret
+claude mcp add sequential-thinking npx -s project -- @anthropic-ai/sequential-thinking
+# Scope user = global (tous projets)
+claude mcp add context7 --url <url> --scope user
+```
+- `-s user` : global (tous projets)
+- `-s project` : ce projet uniquement (ecrit dans `./mcp.json`)
+- Autoriser un MCP dans settings.json : `"allow": ["mcp__nom-mcp"]` (sans suffixe = autorise TOUS les outils de ce MCP)
+
+### /config — Toggles disponibles
+- `/config` > tips : activer/desactiver
+- `/config` > suggestions : activer/desactiver
+- `/config` > progress bar : activer/desactiver
+- `/config` > autocompact > **Space** pour mettre a false (desactiver)
+- Chaque option se toggle avec la touche Space
 
 ### Claude Review — ROI entreprise
 - Cout : **15-25$** par review (augmente avec complexite)

@@ -11,43 +11,46 @@
 
 ## [V3.2] — 2026-03-28
 
-### Fusion massive : 36 sources Melvynx (1289 → 1489 lignes, +15%)
+### Fusion massive + verification exhaustive (820 → 1425 lignes)
 
-Fusion de 36 videos/transcriptions Melvynx dans la Bible V3. Toutes les sources du dossier `CLAUDE_CODE_MELVYNX_BIBLE/` analysees par 6 agents paralleles, dedupliquees et integrees.
+Fusion de 37 videos/transcriptions Melvynx + verification par 3 passes de 12 agents swarm.
+Resultat unanime : BIBLE COMPLETE — NOTHING MISSING.
 
 ### Contenu ajoute
 
-#### APEX enrichi (Ch.4)
-- Definition : modele cognitif / framework de raisonnement, implementation de ReAct (Reasoning and Acting)
-- Explication "sous le capot" : interdiction de toucher au code pendant Analyze et Plan, SCRATCHPAD.md, micro-taches numerotees, diff + linter + tests dans eXamine
-- Pourquoi APEX existe : modeles autoregressifs → instinct de cracher du code → APEX brise cette habitude
-- workflow-apex-free : saute les sur-verifications (pas juste "bride les sous-agents")
-- State Persistence : sauvegarde d'etat si quota epuise ou PC ferme, reprend au prochain lancement
-
-#### Nouveaux chapitres
-- **Ch.15 — Ralph** : boucle autonome infinie (PRD, prd.json, progress.txt, ralph.sh)
-- **Ch.16 — 6 niveaux de maitrise** (Prompteur → Agents Autonomes H24)
+#### Nouveaux chapitres (Ch.15-20)
+- **Ch.15 — Ralph** : boucle autonome infinie (PRD, prd.json, progress.txt, ralph.sh, parametre -N)
+- **Ch.16 — 6 niveaux de maitrise** (Prompteur → Agents Autonomes H24, cas d'usage concrets Niveau 6)
 - **Ch.17 — Skills tiers remarquables** (Top 10 : SEO, OWASP, Superpowers, Remotion, Canva Design)
 - **Ch.18 — Erreurs en entreprise** (5 erreurs : permissions, multiagent, workflow, automatisation)
-- **Ch.19 — Outils complementaires** (Conductor, Crab Review, CEMUX+Hium, cceva, Mistral Vibe)
-- **Ch.20 — Usages non-code & configs avancees** (duti, hack token API, YOLO resume, hooks JSON complet, agents.md Teams, contextFork, install VPS OpenClaw 9 etapes, /config toggles, MCP syntaxe exacte)
+- **Ch.19 — Outils complementaires** (Conductor, Crab Review 15 agents, CEMUX+Hium, cceva, Mistral Vibe)
+- **Ch.20 — Usages non-code & configs avancees** (hack token API, hooks JSON complet, agents.md Teams, contextFork, /config toggles)
 
-#### Enrichissements chapitres existants
-- Ch.3 : autocompact desactive, tool search, migration Context7 MCP→CLI, bypass VPS, statusline technique
-- Ch.4 : /rewind, /remote control, thinking levels, feedback loop debug, Claude memory review 9 criteres
-- Ch.5 : /compact, /resume, Tab thinking toggle, # memoire rapide
-- Ch.6 : archivage agents agent-save/, ajout memoire #, /memory
-- Ch.7 : Agent Swarm (delegate mode, modes execution, outils Teams), worktree sibling directory
-- Ch.9 : plugins structure marketplace.json
-- Ch.12 : threads OpenClaw, agent email/sponsors, anti prompt-injection, situation.md, claudebot security-audit, OC Pro
-- Ch.13 : Skills V2 frontmatter, API-to-CLI, fusion commands/skills
-- Ch.14 : Chrome automation, Tasks system, Cowork, Ask User Question
+#### Enrichissements majeurs
+- **APEX enrichi** : ReAct, SCRATCHPAD.md, State Persistence, workflow-apex-free
+- **Garde-fous hardcodes** : 4 etapes doublons (jdupes xxHash64/fdupes MD5), SHA-256, suppression silencieuse interdite
+- **Core 7** : terminologie Melvynx (Commandes, Hooks, Memoire, MCP, StatusLine, Sub-agents, Context)
+- **Chaining multi-skills** : 3+ skills en une commande (Codline + Dub + Email)
+- **NowTS boilerplate** : nowts.app, ZodRoute, Upfetch, methode commentaires inline
+- **Prisma reset** : seul risque bypass + citation Melvynx
+- **Benchmark sub-agents** : 5000 tokens economises (41% vs 38%)
+- **Pricing** : 237$/jour, 7$/session, 80% users <200$, expense marketing Anthropic
+- **Chrome** : pair-browsing humain+IA, pause auto sur pages login
+- **Teams** : self-claim teammates, delegate mode
+- **StatusLine** : usableContextOnly, couleurs progressives, showProgressBar
+- **CEMUX** : raccourcis Ctrl+1/2/3, Cmd+Shift+R
+- **Cowork** : Dispatch (sessions paralleles), Channels (agents autonomes)
+- **OpenClaw** : anti-ban upgrade, email auto-apprentissage, bannissement spammeurs, situation.md auto-update, partager via Telegram, workspace GitHub backup
+- **MCP** : desactiver tous par defaut, activer a la demande
+- **Skills** : pnpx > npx, prompt injection warning, taguer au milieu du prompt, package.json API skills
+- **Review** : humaine = uniquement taste et vision produit
 
-### Anti-patterns
-- 20 → 25 regles (+5 : plugins 25, autocompact actif, 1 seul agent, OpenClaw devant ordi, tool search si MCP < 2-3%)
+### Verification (3 passes, 12 agents)
+- Passe 1 : 4 agents → 10 elements trouves et ajoutes
+- Passe 2 : 4 agents → "NOTHING MISSING" (7/8), 2 items OpenClaw ajoutes apres fact-check
+- Passe 3 : 4 agents → "BIBLE COMPLETE — NOTHING MISSING" (unanime)
 
-### Sources (36 fichiers)
-Plugins, 5 Erreurs entreprise, 6 mois lecons, 500h, 1000h formation, Arrete MCP, Ralph, Updates devs, 100x mieux app, Chrome, Pour tout, TUE Startup, Remote Control, Rewind, Drama abonnement, Formation 2.0, Formation Avancee, Trompe Cursor, Setup Vibe Codeur x2, OpenClaw setup, Nouvelle feature, Cowork, 6 Niveaux, 10 Skills, Formation 1h, Mistral Vibe, OpenClaw Telegram, OpenClaw VRAI usage, Skills passer a cote, Skills revolution, Statusline, TUTO dev, TUTO 4h, Formation Complete
+### Anti-patterns : 20 → 25 regles
 
 ---
 
