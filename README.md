@@ -831,6 +831,9 @@ Langage naturel directement, PAS de commandes/skills. Economise du contexte.
 - **Ghostty** : editeur multi-table pour gerer 5+ projets en parallele
 - **Convex** : real-time DB recommandee par Melvynx ("magique, automatique")
 - **Telegram + Claude agents** : deleguer des taches secondaires automatiquement via Telegram
+- **Langages compiles = meilleur ami de Claude Code** (TypeScript, Swift) — les build errors permettent a l'IA de s'auto-corriger
+- **Vibe coding iOS tres couteux** : ~55$ en tokens pour une petite app Watch+iPhone
+- **Recommencer une conversation** plutot que l'allonger (evite erreurs compilation en cascade)
 
 ---
 
