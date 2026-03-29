@@ -1,6 +1,6 @@
 # BIBLE MELVYNX — Claude Code Masterclass Complete
 > Source : 36 videos/transcriptions fusionnees (Formation Complete + Setup 20min + Cours 4h + 33 videos supplementaires) + 23 nouvelles transcriptions Whisper
-> Date de compilation : 2026-03-28 — Version V4.0 (21 chapitres, 217 sections, 25 anti-patterns, 1698 lignes)
+> Date de compilation : 2026-03-29 — Version V4.0 (21 chapitres, 217 sections, 25 anti-patterns, 1714 lignes)
 > Usage : Reference absolue avant toute question ou doute
 
 ---
