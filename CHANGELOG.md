@@ -1,5 +1,15 @@
 # CHANGELOG — Bible Melvynx Claude Code
 
+## [V4.0] — 2026-03-29
+
+### Mise a jour majeure : 23 nouvelles transcriptions Whisper (1502 → 1698 lignes, +13%)
+
+- **Chapitre 21 — Comparatifs & Benchmarks** (NOUVEAU) : Opus 4.5 benchmarks, Claude Code vs Cursor vs GitHub Copilot, pricing reel, verdict longevite
+- 217 sections totales (vs ~180 en V3.3)
+- Sources : 36+23 = 59 videos/transcriptions Melvynx fusionnees
+
+---
+
 ## [V3.3] — 2026-03-28
 
 ### Completions finales (1489 → 1502 lignes)
