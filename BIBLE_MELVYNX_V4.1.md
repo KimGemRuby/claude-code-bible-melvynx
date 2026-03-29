@@ -1043,18 +1043,42 @@ Controler son ordinateur a distance via Telegram (texte + audio). Lance des agen
 
 ### Installation locale
 ```bash
-curl maltbot.sh
+npm install -g openclaw@latest
+openclaw onboard --install-daemon
 ```
 Choisir Claude Code CLI comme backend. Autoriser via URL navigateur. Configurer BotFather (Telegram > /newbot > copier token API).
 
-### Installation VPS (Docker)
+### Installation VPS (methode reelle testee 2026-03-29)
 ```bash
-npx openclaw-vps-setup
+# 1. Installer OpenClaw globalement
+npm install -g openclaw@latest
+
+# 2. Onboarding non-interactif avec daemon systemd
+openclaw onboard --non-interactive --accept-risk --mode local --install-daemon
+
+# 3. Activer plugins essentiels
+openclaw plugins enable telegram
+openclaw plugins enable duckduckgo
+openclaw plugins enable exa
+openclaw plugins enable elevenlabs
+
+# 4. Connecter Telegram (token BotFather requis)
+openclaw channels add --channel telegram --token "TON_TOKEN_BOTFATHER" --name "JARVIS"
+
+# 5. Personnaliser SOUL.md et USER.md dans ~/.openclaw/workspace/
+
+# 6. Auto-backup cron (commit git matin/soir)
+echo "0 6,18 * * * /root/.openclaw/auto-backup.sh" | crontab -
 ```
-Installe : Node.js, OpenClaw, Claude Code, Bun, Cloudflared, GCloud + options securite (UFW, Fail2Ban, SSH Hardening).
+Prerequis : Node.js 22.16+ (24 recommande), Docker installe.
+Note : `npx openclaw-vps-setup` n'existe PAS sur npm — utiliser `npm install -g` directement.
 
 ### VPS recommande
 Hetzner CAX21/CAX31 (ARM, ~$7.59/mois). IPv4 obligatoire.
+Config testee Kim : VPS Kali 4GB RAM, 49GB disk, 8 VCPU — OpenClaw tourne confortablement.
+
+### Attention : un bot Telegram = une seule instance
+Si le token est deja utilise par un autre service (ex: Telegram Voice Reader), OpenClaw aura une erreur `409 Conflict`. Solution : creer un bot dedie par service.
 
 ### Workflow complet depuis Telegram
 1. Message/audio Telegram avec description feature
@@ -1601,30 +1625,58 @@ Quand on tape `/epct`, le contenu est injecte comme prompt. Appuyer sur **Tab** 
 - Tres utile pour les skills de review/audit (pas de contamination par le contexte precedent)
 - Exemple : un skill security-audit avec contextFork ne sera pas influence par les decisions precedentes
 
-### Installation manuelle VPS OpenClaw (9 etapes)
-1. Creer cle SSH : `ssh-keygen -t ed25519 -f ~/.ssh/hetzner3`
+### Installation manuelle VPS OpenClaw (methode moderne, testee)
+1. Creer cle SSH : `ssh-keygen -t ed25519 -f ~/.ssh/vps-openclaw`
 2. Configurer `~/.ssh/config` avec keep-alive (`ServerAliveInterval 60`)
-3. `ssh hetzner3` → installer Docker : `curl -fsSL https://get.docker.com | sh`
-4. Cloner OpenClaw, creer `.env`, installer Claude Code sur le VPS
-5. `docker compose build && docker compose up -d`
-6. Onboarding dans Docker : `docker compose exec openclaw-gateway bash && node dist/index.js onboard`
-7. Pairing Telegram : `node dist/index.js pairing approve telegram <CODE>`
-8. Dashboard : `node dist/index.js dashboard` (SSH tunnel pour acces distant)
-9. Approuver devices : `node dist/index.js devices list && devices approve <id>`
+3. SSH sur le VPS → installer Docker : `curl -fsSL https://get.docker.com | sh`
+4. Installer Node.js 22+ : `curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && apt-get install -y nodejs`
+5. Installer OpenClaw : `npm install -g openclaw@latest`
+6. Onboarding : `openclaw onboard --non-interactive --accept-risk --mode local --install-daemon`
+7. Connecter Telegram : `openclaw channels add --channel telegram --token "TOKEN" --name "NOM"`
+8. Envoyer `/start` au bot depuis Telegram
+9. Approuver pairing : `openclaw pairing approve telegram <CODE>`
+10. Verifier : `openclaw status`
+
+### Commandes CLI OpenClaw utiles
+```bash
+openclaw status                    # Etat general (gateway, channels, sessions)
+openclaw status --deep             # Test complet des channels
+openclaw logs --follow             # Logs en temps reel
+openclaw skills list               # Liste des skills (61 bundled)
+openclaw plugins list              # Liste des plugins (82 disponibles)
+openclaw plugins enable <nom>      # Activer un plugin
+openclaw security audit --deep     # Audit securite complet
+openclaw channels list             # Voir les channels connectes
+openclaw sessions list             # Sessions actives
+openclaw backup create             # Backup manuel
+```
 
 ### Fichiers config OpenClaw
 
 | Fichier | Role |
 |---------|------|
-| `soul.md` | Identite/personnalite du bot (nom, timezone, site web) |
-| `memory/` | Memoire quotidienne (souvenirs entre sessions) |
-| `situation.md` | Mis a jour automatiquement (lieu, priorites, calendrier) |
-| `canvas/index.html` | Interface web locale |
-| `.env` | Variables d'environnement (tokens, API keys) |
+| `~/.openclaw/openclaw.json` | Config principale (gateway, auth, agents) |
+| `~/.openclaw/workspace/SOUL.md` | Identite/personnalite du bot |
+| `~/.openclaw/workspace/USER.md` | Profil de l'utilisateur |
+| `~/.openclaw/workspace/AGENTS.md` | Config des agents |
+| `~/.openclaw/workspace/MEMORY/` | Memoire quotidienne (souvenirs entre sessions) |
+| `~/.openclaw/workspace/TOOLS.md` | Outils disponibles |
+| `~/.openclaw/workspace/HEARTBEAT.md` | Status heartbeat |
+
+### Plugins OpenClaw (82 disponibles, principaux)
+- **Channels** : telegram, whatsapp, discord, slack, signal, imessage, matrix, irc, line
+- **Recherche** : duckduckgo, exa, brave, tavily, perplexity, firecrawl
+- **Voix** : elevenlabs, deepgram, microsoft-speech, voice-call
+- **Providers IA** : anthropic, openai, google, mistral, ollama, deepseek, groq, openrouter
+- **Memoire** : memory-core (fichiers), memory-lancedb (vectorielle)
+- **Autres** : browser, apple-notes, apple-reminders, clawhub, lobster
 
 ### Securite et maintenance OpenClaw
-- `claudebot security-audit` : commande pour verifier les vulnerabilites de l'installation
-- **OC Pro** : produit payant de Melvynx avec script automatise qui fait tout le setup VPS en 20 min
+- `openclaw security audit` : commande pour verifier les vulnerabilites
+- `openclaw security audit --deep` : audit approfondi
+- Gateway en loopback par defaut (127.0.0.1:18789) — securise
+- Auth par token automatique
+- **OC Pro** : produit payant de Melvynx avec script automatise
 
 ### MCP — Syntaxe d'installation exacte
 ```bash
