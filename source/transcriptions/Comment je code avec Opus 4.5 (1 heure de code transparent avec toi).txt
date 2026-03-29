@@ -1,0 +1,705 @@
+Hello et dans cette vidéo je vais te présenter un petit peu comment je travaille dans mon quotidien
+avec l'IA donc par exemple ici sur mon outil l'U-mail qui est mon envoi d'emails comme ceci
+et j'ai envie de partager tout simplement comment je travaille donc là c'est honnête ça va être trop
+je vais couper les moments où l'IA travaille et fait des choses mais ça va mieux juste
+te permettre de comprendre un petit peu
+qu'est ce que je fais et comment je réalise des fonctionnalités de zéro donc récemment j'ai rajouté le change log avec le petit
+bouton dismiss all
+donc on va pouvoir vérifier que ça fonctionne bien donc on voit que quand on clique
+ça vient changer l'url ça vient nous afficher le change log et là tu vois typiquement on a tout de suite un bug
+donc qu'est ce que je fais quand j'ai un bug je screenshot
+je vais dans cloud et je trouve une des sessions que j'ai pas
+utilisé donc là par exemple celle ci elle est terminée et je vais lancer slash clear puis slash debug
+la dialogue qui permet d'afficher les change log est actuellement buggé
+quand l'écran est trop petit
+l'image du dessus et le texte
+prend trop de place et on n'y voit rien au contenu
+on va lui laisser un peu de liberté pour celui ci je vais utiliser mon snipe est ultra thing pour créer une meilleure interface
+de dialogue et mieux voir
+le change log boum donc là on lance un agent donc ça c'est pour cette feature là on va on va la garder pour plus
+tard je vais pouvoir passer directement à la prochaine feature que je veux
+donc en fait j'avais des snipers j'ai un problème avec mes snipers que j'aimerais bien pouvoir les réutiliser
+donc là quand je crée un snipers par exemple
+my footer
+et que je vais pouvoir réutiliser ensuite dans mes emails en fait quand je l'ajoute donc là si on va utiliser
+Default footer comme ceci on va faire update snipers là je vais aller dans
+campagne ouvrir un nouvel anglais on va mettre ça en fullscreen ça va quand même être plus convivial
+et que je viens cliquer sur une campagne pour l'instant on a un problème
+alors déjà ça c'est ce chargement me fait chier il est lent mais là quand j'ajoute ce snipers donc je peux ici
+lancer une commande slash snipers oulala
+slash snipers my footer ça ajoute juste le contenu
+mais en fait je me suis dit c'est un peu débile faudrait et donc là ça devient une réflexion compliquée
+faudrait une autre manière d'ajouter des snipers qui ajoute un blog de preview avec le snipers on peut le modifier
+on peut cliquer sur éditer dans ce cas là il s'intègre et si on clique pas dans ses dites en fait il va être
+synchronisé avec le vrai snipers donc ça c'est une feature plus compliquée que juste le petit fixe qu'on avait fait juste avant
+donc là je vais regarder ce que ça ça fait ok ça s'en fout on va lancer un nouveau terminal
+et cette fois je vais lancer apex et je vais expliquer exactement ce que je veux
+actuellement là les snipers s'ajoutent et s'intègrent directement à l'éditeur comme si c'est moi qui l'avait écrit
+le problème c'est que quand je modifie le snipers il n'y a pas de synchronisation entre tous les emails ce qui serait pourtant
+très très très pratique
+donc on va venir modifier la feature pour que par défaut qu'on ajoute un snipers il s'ajoute dans une sorte de section un mini
+bloc qui permet de comprendre qu'en fait il est
+synchronisé ok et que bah du coup quand on va sur la page on a tous les snipers affichés
+maintenant si on veut on peut modifier le snipers quand on clique dessus
+on doit avoir là tout le bar comme les autres composants et pouvoir cliquer sur edit et dans ce cas là le snipers vient se
+copier dans la page ce qui me permet de pouvoir le modifier l'adapter pour mon cas précis donc comme ça on gère les deux cas
+ensuite ce qui va être important c'est qu'on va devoir créer un nouveau composant
+directement dans l'éditeur et dans le render on va devoir
+afficher les snipers donc pour ça on va devoir fetch les snipers via leur id
+ça va faire des queries database qui vont lors de l'envoi d'email
+faire potentiellement des crashes parce qu'on va faire beaucoup trop de queries pour récupérer ces snipers et donc on va créer une fonction qui
+récupère les snipers par id mais qui cache le résultat
+jusqu'à la modification de ces données
+on va les cacher en utilisant upstache et on va devoir ajouter une logique d'invalidation de cache
+directement quand on modifie les snipers. Donc là tu peux voir que la feature elle est compliquée
+c'est pour ça que vu qu'elle est compliquée je n'utilise pas mes commandes one shot ou d'autres commandes je viens utiliser Apex
+Apex qui va avoir pour but ici
+de venir faire un plan et de venir demander plus de réflexion
+j'aurai aussi une autre commande s'il arrive pas ce sera brainstorm et brainstorm lui vient utiliser le maximum de réflexion possible donc on a ça
+j'avais d'autres agents que j'avais lancé donc là il y a le serveur et là il y a les services qui sont lancés
+donc normalement on a juste deux pages et là j'ai deux services d'agents donc là il avait corrigé
+le dismiss all qui fonctionne bien qui est juste ici on va voir si ça fonctionne parfait on peut dismiss
+tout l'échange log donc ça c'est bon et là j'avais
+j'avais fait deux fois le dismiss all ok on va pouvoir clear cette chat là comme ça ça me fait un chat en plus
+et là on a le mail éditor donc ça j'avais fait avant en fait j'avais dit que dans les snipers je veux pouvoir tag
+org et donc là on peut le voir qu'on a déjà voilà maintenant on peut taguer org et j'ai voulu cacher le
+deliverability score donc le deliverability score qui est ici avant il était aussi ici et j'ai voulu
+le cacher donc ça on s'en fout donc ça on a fait c'est parfait on a terminé aussi ce terminale là donc je peux lancer une nouvelle
+session et là on peut voir que ça a fixé le dialogue changelog alors le problème c'est que là je vois pas
+le changelog donc on va cliquer ici dans le debug panel reset changelog
+ce qui permet de revoir les changelog et donc là quand on clique maintenant on a toujours l'interface qui est corrigée mais c'est pas très beau
+je vais lui dire mieux vaut faire toute la vue scrollable mieux vaut faire toute la vue scrollable car actuellement il y a
+peu de parties qu'on peut vraiment lire sera bien mieux de pouvoir lire
+là je lui mets toujours le screenshot faut savoir que quand je travaille avec Claude Code je travaille vraiment beaucoup
+avec les screenshots en fait les screenshots ça vient juste lui donner le contexte nécessaire de comprendre ce qu'il a fait
+parce que lui il n'a pas de feedback ui et dès que tu lui ajoute un screenshot
+tu viens lui donner un petit feedback ui et lui il est content toi t'es content tout le monde est plus ou moins content donc là hop
+il a corrigé déjà tu vois que ça va super vite on a juste ça ok bon ça c'est un système d'overflow de ça
+qui passe pas et donc on a réalisé une autre fonctionnalité et un autre petit bug qui traînait maintenant je vais pouvoir
+dismiss tout ça
+et ça va être bon je voulais aussi faire une autre chose que j'étais en train de penser
+alors là on a double scroll bar du futur qui me fait chier donc là je vais dire dans la campagne ok slash
+débug dans la campagne actuellement on a une double double scroll bar c'est pas normal il faudrait plutôt qu'on ait une seule scroll bar
+et donc en fait ici la taille du campagne éditeur principale est
+incorrectement calculé il faut recalculer ça en calculant
+l'overflow pour la header pour éviter d'avoir cette double scroll bar qui est vraiment désagréable
+tant si on regarde le tchonjok parce qu'on vient d'enlever un hide overflow parce qu'on veut que quand les pages soient trop grandes on
+puisse toujours scroller c'est juste que
+spécifiquement la page de la campagne ne doit pas être scrollable donc là tu vois que je viens donner des infos je viens lancer un quatrième
+terminal comme ceci qui vient faire son travail et ce que je voulais
+c'était aussi faire en sorte que quand je clique ici sur les tools
+pour l'instant ils sont assez grands des fois tu vois get campagne c'est trop grand donc là je vais lancer un nouveau petit
+terminal
+et là je vais clear et je vais faire slash one shot donc one shot c'est ma commande
+pour réaliser des features c'est pas débugger c'est vraiment réaliser une feature mais très rapidement
+actuellement le
+résultat des tools prend beaucoup trop de place ça ajoute beaucoup de scroll et ça devient compliqué
+j'aimerais bien que tu limites tous les blocs de code ici qui sont dans le tool
+dans l'IA tool à cinq lignes et qu'ensuite il y a un inner scroll directement dans le code qui permet de venir gérer ça
+afin d'éviter d'avoir des outputs beaucoup trop grands
+donc là on vient modifier ceci comme ça ça va être plus joli et je pourrais aussi lui demander directement
+rajoute aussi un display name qui sera plus joli donc normalement tu as tous les noms des tools en back-end
+côté front-end on va faire un display name qui permet d'afficher un nom un peu plus friendly qu'on appelle les outils ce qui évite d'avoir
+de sorte de code un peu effrayant etc
+la même chose avec les icônes tu pourrais changer les icônes en fonction de la tâche qu'on fait et j'aimerais bien aussi que l'appel des
+outils tu refactoires un petit peu le ui pour que ça prenne un peu moins de place
+fais attention parce que le composant
+outils est utilisé à plusieurs endroits
+ce qui fait que tu vas devoir faire ce refactor à plusieurs endroits donc essaie de réfléchir à ça
+donc là on lui demande une tâche un peu compliquée après réflexion le one shot ici est trop
+simple et va potentiellement faire la guélilla donc on va utiliser la commande apex ça va permettre de s'assurer
+un meilleur code parce que ici j'aimerais bien review le plan qu'il va faire je suis pas sûr qu'il va réussir à le faire donc apex ça vient
+faire le plan en attendant on a terminé ici le plan pour le snipettes donc ici on va pouvoir voir
+j'ai compris donc e-mail snipettes table ok snipettes intérations extract le contenu et insert once
+il a tout compris tu vois il est super smart opus 4.5 et mega smart
+create snipettes tiptap node extension parfait on doit créer une nouvelle node extension
+snipettes view exactement modify snapdates insertion c'est
+exactement ce qu'il faut faire il est super smart même moi je sais pas faire moi je sais pas comment faire ça
+le snipettes caching add cache invalidation add snipettes rendering in meili class
+attention attention static preview donc là tu vois qu'en fait il vient me poser des questions
+ça c'est principalement dû au fait de mon prompt je lui ai spécifiquement dans mon prompt système
+expliquer qu'il doit me poser des questions et donc là je viens lui répondre à ces questions et là delete snipettes
+convert to static content show error warning when snipettes is deleting impossible to delete a snipette that is
+use add archive only feature
+for this snipettes comme ceci on rajoute ça et là je me rends compte qu'il ya un autre problème que j'ai réfléchi
+je vais lui dire
+warning in the
+meili render
+it's a sync right we should donc là on pourrait se dire je suis en train de vibecoder mais il y a une
+différence très importante à ce que je suis en train de faire par rapport à ce qu'on pourrait dire qui est du vibecoding
+c'est que ici je viens évidemment lui préciser les
+implémentations des réflexions que j'ai et je viens utiliser la commande apex quand je suis pas sûr que l'IA va faire quelque chose de parfait
+alors que la majorité du temps vu que je suis sûr que l'IA va faire quelque chose de parfait
+j'utilise la commande one shot donc là il nous a fait notre réponse tu as complètement raison
+maintenant il va falloir utiliser
+render ça va faire un end plus un query tu vois que là j'ai directement
+press shot l'approche donc faut savoir que ce qui est intéressant ici que j'ai même pas de code ouvert là
+là ici j'ai un IDE mais je n'utilise pas forcément ce que j'aime bien ouvrir c'est le change log ici pour voir les modifications
+qui sont en train de faire et ça me permet aussi de voir quand un agent termine une tâche il ajoute sa tâche ici ce qui me
+permet de voir ça mais donc là moi j'ai press shot l'erreur parce que je suis développeur et c'est là où il faut être développeur
+parce que j'ai réfléchi donc là je me dis
+voilà optimiser prefetch strategy before rendering create email data before calling mehli.render
+extract all snipers batch fetch
+all snipers in one query donc là on vient continuer à poser des questions parce que cette feature en l'occurrence elle est plus
+compliquée qu'en fait avant de passer à l'implémentation
+l'implémentation je la ferai plutôt avec les yeux fermés là on est vraiment sur de la réflexion le but c'est vraiment de trouver
+la solution ultime pour faire ça et donc opus est un génie parce qu'il vient te donner
+il vient en fait de bombarder d'idées et moi je suis capable ici de venir réfléchir avec lui plus ou moins rapidement
+etc alors normalement je le fais plus vite et là je réfléchis donc là on peut voir que search latest next.js
+documentation cache components true with use cache because
+unstable cache is
+deprecated think again and come back with the best plan donc là on va
+réfléchir à tout ça afin de vraiment trouver la solution la solution ultime
+donc là je viens lui je viens regarder encore une fois le code qu'il fait donc même si je code pas en fait je code
+énormément dans ma tête c'est du code de réflexion c'est ça qui est intéressant en fait c'est que je code pas directement juste ici
+mais je réfléchis alors normalement quand je suis dans la vraie vie et que je fais pas de vidéo je change de table pendant qu'il réfléchit et
+je reviens plus tard là je reste parce que je suis en train de te parler et du coup
+ça c'est rien que je change de table entre deux où je viens tester les autres features
+vu que là tu vois qu'il a fixé la double scroll bar il a terminé sa tâche etc
+donc ce serait intéressant d'aller voir ça mais là vu que je sais qu'il va faire son plan
+je préfère rester ici d'habitude je suis capable de travailler sur pas mal de trucs en même temps
+et là on peut voir aussi que depuis avant j'ai eu plusieurs tables qui ont travaillé
+sur mon code en même temps d'ailleurs pendant qu'il fait ça on peut aller voir ce plan là bon parfait tu vois que ça c'était
+assez compliqué aussi ce qu'on a demandé hein
+donc ici
+element tool on peut voir qu'il s'est utilisé à beaucoup d'endroits parfait on vient faire les icônes
+et là code bloc parfait on vient rajouter no change create là je vais lui dire ok but what
+happened ? il a déjà inclus les capture builder tool page builder ok il a déjà inclus ok vas-y
+process with the plan j'aime bien ce qu'il a fait juste ici ça me paraît
+correct il a bien trouvé les deux chats et donc il va pouvoir procéder à l'implémentation
+donc lui c'est parti et on retourne à l'autre
+donc tu vois qu'il y a quand même un petit peu de travail mental à faire et là il nous a fait le plan
+campaign level tous les deux 2.000 emails utilisent les same content donc les snipers peuvent être résolus une seule fois
+pas durant chaque render donc campaign start extract snipers id
+fetch tous les snipers replay snipers ok c'est pas mal mais comment on fait durant l'envoi des emails dans le
+workflow email step
+il faut aussi gérer ça donc là tu vois qu'on est déjà 200.000 tokens et on n'a pas commencé à coder
+et donc là c'est intéressant on est vraiment en train de travailler énormément
+avant de commencer à coder
+pendant qu'il réfléchir on peut vérifier si la double scroll bar est partie et on peut voir qu'elle est partie donc il a bien
+résolu ce problème
+donc comme ça on est déjà bon et on peut voir qu'il est déjà en train de résoudre
+ce problème là vu qu'il a déjà changé l'interface
+il n'a pas encore changé la hate donc il est en train de le faire c'est parfait ensuite qu'est ce que lui l'avait fait
+fixe change all the liars responsive layout ok donc ce terminal
+il est il est good et ce terminal il est en train d'update ça et ce terminal il avait fixé donc tu vois qu'on a déjà fixé
+ces deux issues et là on vient encore une fois explorer et on vient vraiment créer le meilleur plan possible
+ici pour l'implémentation de cette feature
+En attendant on peut voir que là il a corrigé
+tous les tous les petits outils avec les petits icônes avec le petit
+complétid d'ailleurs ce complétid prend trop de place donc on va screenshot et on va dire
+ok non c'est pas celui là
+Icon on the
+right boom comme ça hop on demande des modifications dès qu'il va terminer continue
+et comme ça on peut continuer à regarder le code pour voir si tout fonctionne la boom ça c'était juste tout ça c'était pas
+mal ah ouais j'avais un truc vraiment horrible
+regardez-moi ce bug et donc là la même chose on tape le screenshot lui il avait terminé sa tâche donc on peut le clear
+et là je vais faire slash des bugs
+dans des petits écrans
+l'éditeur le
+campaign form est un peu cassé et vient rajouter un double overflow il faudrait faire en sorte de transformer la
+preview en texte aria afin de pouvoir gérer plusieurs lignes
+il faudrait faire en sorte de transformer la preview en texte aria afin de pouvoir gérer plusieurs lignes
+donc là hop la commande debug elle est autonome donc je sais que ce terminal là j'aurais rien besoin de faire je pourrais le faire
+donc là on va pouvoir récupérer
+celui-ci et on va pouvoir retrouver le plan complet parfait je vois que maintenant les workflows utilisent le même
+plus bonne nouvelle le plan couvre déjà les workflows puisque les deux flux utilisent get campaign sending
+campaign build workflow email sable ok mais du coup
+ou
+ouais mais du coup si le snipers change il faudrait aussi
+refresh et revalider get
+campaign sending non car ici où le cache live hour fait déjà le travail là il y a une réflexion à voir
+parce que get campaign sending vient récupérer les snipers et je vais lui aussi dire
+j'aimerais quand même que les snipers sauvegarder
+dans
+redis dans tous les cas pour
+optimiser pour rien donc tu peux voir que l'orthographe j'en ai rien à foutre donc tous les rageux
+l'orthographe on n'en a rien à foutre avec Claude code il est largement assez smart et on vient juste
+lui demander les choses comme ceci donc là on peut voir qu'il a l'idée d'ici extraire et résoudre
+ajouter comme ça normalement c'est pas mal et là on est en train d'arriver à un super résultat alors on peut voir qu'on entend des petites
+notifications ça veut dire que là
+l'ami il a corrigé sa petite erreur pour avoir les deux lignes et donc là
+voilà ça corrige et là je vais aussi lui dire
+pourquoi il n'y a pas les mêmes paddings donc là comment est ce qu'on va faire pour lui exprimer cette histoire
+on va mettre des flèches là des flèches là je vais mettre un nombre et là on va dire pourquoi le padding de
+la header n'est pas la même que le padding du form 5 tout ça
+stp et bon j'ai mis deux fois l'image c'est pas grave on s'en fout j'ai la flemme d'enlever les images
+et donc là en attendant on a tout ceci qui s'est mis comme ça on a toutes les infos maintenant
+est ce qu'on implémente c'est ce qu'il est en train de me demander tchouk tchouk tchouk tchouk on a le plan total
+donc sniped cache partagé tenue résolvée tag et sniped
+ids ? Quoi sniped ids ? cache qui cache htl
+get
+sniped cached avec le cache
+get sniped batch ok ok ça semble pas mal donc là ce qu'on va faire on va changer de branche parce que depuis
+avant je suis dans main parce que je faisais des petits changements yuai c'est pas grave
+ça ça change la manière dont on envoie les emails donc on est obligé de changer de branche je vais l'appeler
+update
+updates sniped
+logique et donc là j'ai une philosophie où je m'en bats les couilles je viens commit tout ça
+on vient générer le commit avec ia juste juste ici et comme ça on a on a tout qui est vide et je peux
+yes start with it
+et comme ça je peux lancer ce plan là et regarder un peu ce que ça donne en attendant on a
+regardé s'il a réussi à synchroniser et je sais qu'il arrive pas à synchroniser alors déjà
+en fait il n'arrivait pas à réussir à refresh ce con alors j'ai l'impression qu'il a fait l'inverse de ce que je lui ai demandé
+non
+tu as fait l'inverse
+Il faut reprendre le padding de la header dans le form pas l'inverse
+Donc là faut lui dire des fois il capte pas donc là c'est problème de demande
+donc là on va aussi vérifier que le chat a fonctionné on peut voir qu'il ya tout qui fonctionne ça prend un peu moins de
+place c'est un peu plus joli il ya des icônes
+avec ici le check qui se met ici qui prend un peu moins de place comme ça qu'on est sur un petit écran comme ceci
+on peut voir que ça prend un peu moins de place et c'est un peu plus propre
+Maintenant on peut voir qu'ici on a toujours une scroll bar comme ceci et donc là et donc là on doit faire
+toujours la scroll bar mon ami sur des très petits écrans il faudrait plutôt
+transformer les choses pour que ça fasse des retours à la ligne etc
+et finalement avoir une vraie UI super responsive de la mort qui tue
+des fois on peut aussi parler de chill à cloud code il comprend plutôt facilement
+On a aussi des petits détails par exemple ici contexte low alors moi faut savoir que j'ai désactivé l'auto compact
+donc en fait il auto compact jamais parce qu'on peut voir qu'ici j'ai beaucoup de contexte j'ai 120 mille tokens juste ici
+utilisé sur 200 mille donc j'ai encore 80 mille tokens à utiliser
+donc j'ai évidemment pas besoin de venir réfléchir à ce contexte low qui est un mytho
+un mytho à 100% donc on s'en fout
+celui là il sait rien
+celui là
+ok donc là on a juste celui là qui est en train de travailler on va voir s'il arrive à faire
+les petites choses là on peut voir que
+oulala oulala qu'est ce que t'es en train de faire alors là c'est le seul et unique
+problème qu'on a quand on code avec plusieurs rages en même temps c'est que là ils viennent de se battre sur un changement
+ignore toutes les erreurs qui ne sont pas produites par ton code
+alors ça faudrait peut-être l'ajouter dans les règles tu vois là c'est typiquement le genre où tu te dis bah c'est bizarre en fait je suis en
+train de modifier etc et donc là on pourrait rajouter tout simplement
+ici cet agent fait rien on va faire clone memory
+il faut préciser qu'un agent quand il lance les typescripts et l'in checker
+il ne doit pas corriger les erreurs qu'il n'a pas produite ou dans des fichiers qu'il n'a pas modifié
+sauf si
+explicitement demandé par l'utilisateur de résoudre toutes les erreurs très important de rajouter ça
+donc là j'utilise le skill clone memory qui va permettre de modifier la mémoire
+et de corriger donc en fait c'est comme ça qu'on vient s'assurer que l'IA fait toujours du bon code
+ça va ça va être en faisant d'une sorte de ping pong de travail très correct et très intelligent
+pourquoi t'as pas utilisé le
+utilise pas le skill normalement il est censé utiliser le skill ici alors je sais pas pourquoi il l'a pas utilisé
+on va voir s'il utilise normalement ça a une petite interface voilà clone memory là il utilise le skill
+quand il y a ce petit truc ça veut dire qu'il utilise le skill sinon il n'utilisait pas donc ça c'est fait
+et là il est toujours en train de travailler lui il a terminé
+je suis assez satisfait de son travail donc c'est bon c'est bon lui il est lui il est validé
+il n'y a pas il n'y a pas besoin de se battre avec lui
+et lui on va voir s'il a réussi à corriger on peut voir qu'on a toujours une scroll bar de zinzin et là on a une
+ligne en bas alors déjà
+dégage moi cette ligne dégage moi cette ligne alors de 1 ça marche pas de 2 c'est moche
+de 3 il y a une ligne de merde en bas qu'il faut que tu supprimes
+et j'ai plusieurs anglais en fait pour pouvoir travailler sur ces choses en même temps c'est comme ça qu'on vient faire
+lui il est bon lui le clone memory on va regarder typescript critical when running
+to verify your work only fix it so that you modify never fix pre-existing exception
+When the user explicitly why this matter pourquoi ça matter car des fois plusieurs agents travaillent
+en même temps et n'ont pas forcément terminé
+leur feature
+stp prend moins de place pour cette règle il y a trop de tokens là il y a trop de tokens lui on peut voir
+qu'il est toujours en train de travailler il est allé à une vitesse folle la feature est super compliquée il a déjà presque terminé
+ça tout doux on peut voir qu'on a 13 000 tokens on est à 140 000 tokens donc tu vois qu'on a encore pas mal de
+place pour pouvoir faire des choses
+il a rajouté le archive at dans le schéma normalement il va me laisser aussi réaliser les migrations parce que
+claude qui fait des migrations c'est l'enfer ok aussi rajoute une nouvelle règle pour dire que claude ne fait jamais les migrations il peut juste
+générer les types prisma et ensuite c'est moi qui dois faire les migrations à la main ça évite d'avoir des conflits des trucs dégueulasses
+que je puisse pas corriger dans comme ça dit qu'en général il évite de lancer les migrations
+ça c'est un truc que j'avais oublié de mettre dans mes règles mais pourtant je suis en train de me dire que c'est très intéressant
+et c'est là où on voit un truc important que je te partage dans cette vidéo raw que les règles vivent ok ils ne sont pas
+statiques on vit avec les règles on a le droit de modifier les règles on a le droit de venir
+on a le droit de venir faire des choses tu vois en
+collaboration avec l'IA et on n'est pas juste en train de faire un truc etc donc là
+tu vois qu'il est en train de travailler il est en train de résoudre ses erreurs
+lui il est en train de travailler il est en train de résoudre ses erreurs on les laisse on les laisse travailler on les laisse
+résoudre leurs erreurs
+lui il m'a rajouté mes règles ça va me permettre que dans le futur j'ai un code plus clean et plus moderne et ça c'est très important
+c'est de venir éduquer ton claude code pour ton repo pour ton projet pour tes spécifications
+on demande des modifications constamment exactement comme je l'ai fait ici
+donc ça c'est très intéressant en attendant lui voilà il dit j'ai des erreurs qui étaient avant dans sniped cache mais il n'y a pas de souci
+c'est normal parce que c'est lui notre ami qui est en train de corriger les erreurs et on va voir s'il a réussi à me
+c'est une pute ou quoi
+c'est une pute alors là il a corrigé ça c'est redsponsive ça c'est
+pas redsponsive ok donc là c'est un cas horrible où j'ai un écran tout petit mais là on va lui dire
+oh là là comment je peux lui dire de résoudre ça alors on va on va reload pour vérifier que
+ce soit bien mais non il y a toujours il y a toujours la scroll bar donc là on va pouvoir faire une commande un peu spécial
+ça c'est la commande du désespoir
+ça s'appelle la commande brainstorm
+still scroll bar on the campaign editor either please fix it
+la commande brainstorm c'est la commande que j'appelle token maxi
+la commande brainstorm elle va demander à l'IA de venir faire des rounds, des rounds de réflexion
+parce qu'en fait l'IA va réussir à corriger des problèmes si elle arrive à y réfléchir suffisamment longtemps
+et la commande brainstorm c'est une commande qui vient explicitement demander à l'IA de consommer un maximum de tokens
+alors là en l'occurrence il a décidé de tout m'update directement cet enculé parce qu'il veut pas faire l'exemple que je lui dis
+il m'a caché la scroll bar sale fils de pute
+alors là il faut le démonter
+sale fils de pute de merde tu viens de cacher la scroll bar ce qui rend l'interface inutilisable
+faut être un vrai enculé pour faire ça
+évidemment je fais ça pour la blague et la vidéo des fois je suis pas aussi méchant
+brainstorm un maximum pour trouver la vraie solution de développeur senior
+pour ce problème on va voir s'il arrive à le corriger parce que j'espère cette fois il va utiliser mon workflow brainstorm parce qu'avant il
+a pas utilisé le workflow brainstorm l'avantage c'est que quand tu insultes l'IA généralement il n'en a rien à foutre
+il n'en a rien à foutre tu as raison j'ai fait une connerie
+cacher l'overflow c'est pas une solution c'est un hack de merde laisse-moi
+revert et trouver la vraie cause là là on est analyse route cause
+le problème de l'overflow c'est ça la vraie solution c'est ça pourquoi tu fais pas le brainstorm
+ok il m'a rajouté un oh
+l'enculé il a presque réussi en fait c'est que le replay 2 ici le replay 2 doit retourner à la ligne
+quand il n'y a pas la place aussi en fait c'est ça qui va te permettre
+de venir
+Ransponsify tout ça mon ami 1 on va y aller on va y aller on va y aller on va y aller
+donc là il a terminé notre grosse grosse grosse grosse grosse grosse grosse feature alors là va falloir couper le serveur
+donc là on sait qu'il a fait ça et c'est pour ça qu'il faut un peu suivre quand même ce que l'IA a fait
+alors des fois je le suis moins des fois je le suis plus
+on lance la migration je viens faire
+snipers add archive add
+petite pause pour te dire qu'en allant sur le lien
+mlv.sh
+slash AI tu peux accéder à une masterclass gratuite cloud code mais pas que tu vas aussi pouvoir accéder
+à mon CLI qui contient toutes mes commandes donc je les montre juste ici mais tu vas avoir mes agents mes commandes mes
+hook mes output style et toute ma configuration pour utiliser cloud code comme un pro et tu vas aussi
+accéder à une formation comme tu peux le voir juste ici avec un petit soudage et pas mal de leçons juste ici
+conducteur masterclass etc etc tu vas pouvoir y accéder pour par exemple comprendre comment fonctionnent les agents pour ça on va créer un agent etc
+tu vas pouvoir accéder à toute cette formation totalement gratuitement en allant sur mlv.sh
+slash AI c'est une formation faite pour les développeurs qui veulent coder plus efficacement avec l'IA on se retrouve là bas
+on a ajouté ça et on vient relancer le serveur cette fois avec
+le paramètre email qui va me permettre d'envoyer des emails parce que par défaut tout l'envoi des emails est désactivé dans l'application
+ce qui évite de potentiellement faire des hacks dégueulasses qui causerait problème
+donc là on peut voir qu'il a presque corrigé ce problème on va voir en fait
+il a réussi hein il a réussi tu vois que quand tu l'insultes il a réussi
+c'est juste ici je pourrais lui dire c'est pas mal que tu as fait ça marche assez bien
+bravo faut le récompenser faut le récomposer des fois faut lui dire bravo mais voilà
+le text area devrait s'auto resize avec la nouvelle
+prop css qui s'appelle et là là j'ai un blanc là j'ai un blanc monumental
+auto resize ou quelque chose du genre
+cherche sur internet si tu sais pas c'est nouveau boom on va voir s'il arrive
+en attendant on va pouvoir tester nos snipettes parce que ça c'est de la feature alors ça on va dégager michel d'ici
+et là on a nos magnifiques snipettes et donc là je vais faire pas hâte slash
+snipettes my footer et là wow on a un petit icône ici snipettes my footer
+waouh waouh waouh regardez comme il est smart mais il est l'autre t'es trop smart
+il a fait ça meilleur que ce que j'aurais pu faire
+oh mais il est smart il est smart mais là je vais lui dire que ça va pas ça va c'était pas bien ok mais c'est smart
+ajoute une petite bordere tout autour pour comprendre que c'est un snipette
+synchronisé et ridonny qui ne peut pas être modifié fait le sélectionnable
+exactement comme la logique qu'on a dans le component
+section et affiche une toolbar qui contient ce bouton avec le bon icône
+des familles
+qui va bien mon ami tout tout tout tout alors là tu vois je suis gentil écrit parce qu'il a fait un bon travail là il a
+fait un travail
+voilà qui est dans l'élite
+en attendant on vient vérifier que michel il ait fait le bon travail bah voilà tu peux voir que là ce
+ça se resize et le subject
+fait la même chose pour le subject finalement fait en sorte avec un
+container query cherche sur internet si tu sais pas ce que c'est alors j'ai la flemme d'écrire
+si tu tu sais pas
+pour que reply to retourne aussi à la ligne stp donc là on va faire ça mais là c'est pas mal là c'est une
+vraie interface
+responsive alors là ça alors là c'est pas top là c'est pas top il ya un peu de réflexion à faire mais on est quand même plus
+responsive que la phase initiale il faut savoir que vu que je fais une vidéo j'ai
+réduit mon écran à une taille de lilliputien pour que sur youtube
+quand tu regardes cette vidéo sur ton téléphone tu ne sois pas en pls
+cependant de base c'est mieux donc là on a quand même des petites erreurs lui va corriger les erreurs on s'en fout un petit peu
+on va le laisser faire ça lui on lui a lancé sur cette petite tâche pour qu'il termine ça ça
+et là lui il n'a pas modifié non j'ai pas modifié les snipers parce que j'ai oublié de sauvegarder
+Donc là il corrige ça on est pas mal on n'est pas mal du tout on est on a bien avancé on a fait des choses
+maintenant je vois qu'en fait il n'y a plus la ligne en bas en fait peut-être que cette ligne en bas elle n'était pas
+non plus débile quand j'y réfléchis un petit peu
+mais là ce reply to il veut pas retourner à la ligne alors le subject marche bien maintenant il retourne bien à la ligne c'est joli
+il ya juste le reply to
+voilà le reply to maintenant il retourne à la ligne mais là il n'est pas aligné
+Aligne le, aligne le reply to quand on retourne à la ligne aussi stp hop là on partage l'image
+toujours partagez l'image l'image les amis c'est le hack
+les images je trouve que ça améliore les résultats chaque fois que je partage des images bah tu vois que même si j'écris
+tel un putain de doutiste qui ne comprend rien et qui est à limite de la syncope mentale ça fonctionne
+pour moi j'ai envie de dire si ça fonctionne ça fonctionne au bout d'un moment on n'est pas là pour se battre
+on va quand même se battre et je vais te montrer mon workflow complet
+le but c'est que cette vidéo fasse une heure donc à 38 minutes on va voir un peu ce que ça donne et mon but c'est vraiment
+que tu puisses voir mon workflow de travail actuellement
+exagéré pour que tu comprennes bien parce que généralement
+je travaille même pas sur un seul projet à la fois
+je travaille sur deux ou trois projets en même temps mais j'ai plusieurs z' comme ça je peux lancer un maximum d'agents en même temps
+ok donc
+bah voilà bah là là c'est quelque chose que j'aime
+on a quelque chose qu'on aime et quand on clique maintenant on a double interface d'enculé mais qui a fait ça ok je
+vais dire quand on clique on a double interface ok c'est pas mal mais quand on clique on a double
+interface d'enculé
+corrige le bug alors là je sais pas comment il va corriger ça moi j'aurai aucune idée de comment faire ça mais à
+138 000 tokens d'ailleurs il a réussi à supprimer des tokens magiquement parce qu'il était à beaucoup plus de tokens
+on est à 70% du contexte disponible
+et on continue de bosser à la même allure ça on fait pas
+ça on garde ici et là on va retourner ici
+donc là on peut voir que normalement il a corrigé finalement cette histoire de cons avec ce reply to non mais non mais non mais non mais non
+le reply to il doit se déplacer sur l'autre côté hop bro
+et donc là tu vois que normalement je suis capable de lui donner juste bro et l'image et il est super smart
+pour comprendre ses flèches les informations tu vas voir que là si je regarde un petit peu le thinking qu'il va avoir
+on va regarder on va checker le thinking bah il think trop là là il est en train de réfléchir
+au sens de l'univers et comment est ce qu'il va pouvoir s'échapper de cet enfer que je suis en train de lui faire vivre
+mais là on peut voir
+ici
+Le joueur montre que le reply to n'est pas bien aligné il montre un reply sur une ligne et deux sur la prochaine ligne et il n'est pas aligné avec le contenu de l'horloge
+le point de l'horloge à ce que le reply to soit mis aligné tu vois comme il est smart
+il est des images il fait des images
+fait des screenshots fait des screenshots au bout d'un moment c'est pas possible je dois rajouter ça
+et maintenant je regarde le container dans ce cas là bla bla bla maintenant il nous raconte des trucs on s'en fout on s'en fout de son
+explication en fait on regarde même pas qu'est ce qu'il qu'est ce qu'il fait ok
+et ben voilà quand je clique maintenant j'ai my footer et j'ai un link
+convert to editable contents et quand je clique ça fucking marche
+les gars c'est du génie c'est du génie ok donc là on va faire un test on va délèter
+tout ce tout ce snipette de toute façon n'est que sur du sur du full full dev full random là et là on va faire
+super snipette
+number two alors en fait il y a pas mal de petites questions
+qu'il faut qu'il soit capable de faire
+notamment le fait qu'ici je dise oublie pas on va faire une petite section ça c'est un peu joli
+oublie pas que je suis et là on va mettre
+organization egg et que mon adresse organization adresse
+tu peux cliquer ici pour te unsubscribe
+et oui c'est important aussi de rajouter ça hop unsubscribe url
+et bah si ça c'est pas beau je sais pas ce que c'est mais je sais vraiment pas ce que c'est
+je suis vraiment choqué par la qualité du truc donc là je vais faire slash
+snipettes je vais rajouter mon footer juste ici et là je vais faire
+slash snipettes et je vais rajouter super snipettes number two juste ici
+et encore ce content update by fucking aïe assistant de putain et je pense que ce fait c'est à cause du
+contenu du tchat là
+voilà on corrige le problème
+ok donc là on a les deux snipettes qui sont rajoutées ici et tout simplement on va faire un test email
+on va voir s'il a supporté les tests email parce que s'il n'a pas supporté les tests email
+ça va être la merde je vais venir utiliser une email poubelle je vais couper la vidéo
+voilà je vais aller sur un petit compte un petit compte secondaire pour pas que tu puisses voir tous mes emails
+je suis cruel
+donc là send email to melvinmaltout et on va voir si ces snipettes fonctionnent alors déjà on a une belle erreur
+comme ça on sait tout de suite à quoi s'attendre
+alors il y a deux choses qui vont pouvoir causer cette erreur la première c'est ça
+when I make a test email I got
+et après on rajoutera les tests aussi on sera la dernière étape pour ce sniper
+on va voir les tests qu'on peut rajouter
+test unitaire, test d'intégration, le problème c'est que les tests email le contenu n'est pas passé
+je dois ajouter une messelle sniper dans la classe maj pour gska non non non non non non non non non non non non non
+non non non non non non non non non non non non non non non non non non non
+comment faire ça en utilisant la même logique
+sans tout dupliquer à nouveau. Réfléchis mieux, fais un meilleur code. Au MMFG. Tu vois là, des
+fois Claude tu lui dis et cette erreur là il va te trouver la solution de retard mental pour la
+corriger. Toi tu dois lui dire non non non non non non non non non non. Voilà là il réfléchit. Ok
+je dois créer la fonction qui résout les snipettes et l'utiliser partout. Ajouter une fonction get
+snipettes batch cached. Ok on va voir. On va voir, on revivra le code après ensemble de tous ces
+travails que Claude nous a fait. J'espère qu'il nous a pas mis trop de bâtons dans les roues.
+Donc là on va voir la test action pour qu'elle fonctionne bien. Et comme ça en fait on doit
+résolver les snipettes avant. Je suis pas sûr de la logique maintenant. En fait l'avantage de
+résolver avant c'est qu'on évite des fetches intensifs qui feraient bugger l'application. Alors
+là je vois sur mon autre écran que la page a craché. Pas encore craché apparemment. Et là
+à chaque fois il lance sa petite commande là des familles pour être sûr que tout fonctionne bien.
+On s'en va les couilles ok. Sent. Test email successfully sent. J'ai envoyé ça à l'adresse
+email 2. Là est-ce que c'est pas beau ? On a le footer, on a le nom. Et là oublie pas ce que
+je suis Melvin et que mon adresse est. Mais quelle est mon adresse ? Oh. Oh oh oh oh oh oh oh. Que
+passe-t-il ? Que passe-t-il ? Là là là là là. Ça ça ne me plait pas. Il n'y a pas d'adresse. C'est
+pour ça. 15 rue de la ville Franche-Comté. Dijon 500 France. Comme ça on est bon là. Là on est
+un bon villageois. Villonge de la Franche-Comté. France c'est parti. Hop là on renvoie. On renvoie
+au test. Et hop donc là boom on peut voir qu'on a le machin, que le snipet est bien rajouté et que
+ça c'est bien rajouté. Maintenant qu'est-ce qui se passe si je viens là ? Que je viens changer mon
+snipet et que là je viens faire un truc criminel. Boom. Boom. Maintenant c'est rouge. Je update le
+snipet. On vient ici. On teste. Mais regardez la satisfaction. Mais regardez la satisfaction. Donc
+là deuxième email et c'est rouge. J'ai trop bien travaillé aujourd'hui. Mon travail est super. Faire
+des vidéos c'est super. Après coder avec Lya c'est aussi très satisfaisant. Il y a tout qui
+fonctionne. Comment est-ce que je peux te dire que tout fonctionne sans te montrer que tout fonctionne ?
+Bah je peux pas. C'est pour ça que je t'ai montré que tout fonctionne. Alors on va voir quels sont
+les subscribers qu'on a actuellement dans l'application. Je vais remplacer ici par des
+melvinmall2. On va les unsubscribe et on va ajouter un melvinmall2 plus test1212.com test1212. On va
+ajouter le tag startworkflow. Non on va pas lui mettre de tag cet enfure. Et maintenant on va tout
+simplement envoyer la newsletter de Noël. Alors la newsletter de Noël va pas fonctionner du tout
+parce que j'ai oublié de lancer ici pdev services. Donc pdev services ça lance tous les serveurs
+d'un coup et faut aussi que je lance pafterbuild qui vient créer un worker. Une fois qu'on a tout
+ça qui est fait, maintenant je peux schedule cet email et normalement c'est parti. On va voir
+l'envoi ici des petites choses. Alors attention non non non j'ai une idée. Cancel. Chier. Elle a déjà
+envoyé l'email. Ça va trop vite. Ça va trop vite. Donc là ça marche bien. Il y a bien les variables
+qui ont été rajoutées donc ça fonctionne. En fait j'ai l'impression qu'on a beaucoup de chances
+parce que le code a été fait de manière assez smart. Ce qui fait qu'actuellement on n'a pas
+trop de soucis. Notamment le souci que je pourrais m'imaginer c'est qu'est ce qui se passe si je tag
+name. Donc là on va rajouter évidemment je fais un raccourci clavier de Niketo. Hello name. Donc là
+ce qui est intéressant avec hello name qu'on a juste ici, le name est interactif donc là on a test
+et là on a melvin1212. Et donc là on va voir dans la newsletter de noël et puis on va schedule
+cette campagne. On peut voir qu'en dev en fait il n'y a pas de timestamp de cons. Donc ça va presque
+instantané. Là on peut voir que c'est sending et qu'après je vais recevoir un webhook qui me dit
+en fait il y a tout qui s'est envoyé c'est parti et fini. Beaucoup trop rapide. Et là on peut voir
+que ça écrit bien le prénom mais c'est tout qui est parfait. Donc là on est bon. Là on a une
+super feature. Alors qu'est ce qu'on peut faire ici ? On peut review le code. On peut review le
+code. Donc là on a le changelog avec la feature qui s'est rajoutée et non c'est pas ça qu'on veut.
+Ça c'est bon. On a le cloud.md qu'on a modifié ensemble. On a les cache query. Qu'est ce que ça
+fait ici ? C'est intéressant. Ah oui ça vient rajouter la logique de snipettes. Donc on vient
+intégrer les snipettes dans le contenu comme ceci avec du code comme ça en fait. En fait là c'est
+très très smart parce que si je fais pas ça quand j'envoie 20 000 emails ça veut dire que
+j'aurai récupéré 20 000 fois mon snipette. Mais grâce au caching ici je viens m'assurer en fait
+cette méthode s'appelle qu'une seule fois que j'ai le contenu qui est caché. Une fois que le contenu
+est caché ici eh ben j'ai plus aucun souci. Snipette action invalidé, snipette cache. Ok
+ça invalide. On a rajouté le archive at. Donc là ce qu'on peut faire normalement c'est que vu
+que ce snipette est utilisé dans je sais pas quoi je peux delete. Pourquoi j'ai l'action ? Pourquoi
+j'ai l'action ? Delete ici. On pose des questions aussi à l'IR on n'est pas obligé de faire que ça.
+Là le email c'est bon. Test email action ça rajoute ça c'est bon. Campaign form class on a
+modifié. Campaign form c'est ce qu'on a modifié ensemble. Email sender dialog c'est ce qu'on a
+modifié aussi ensemble. Mail kits on a rajouté. Is custom not selected c'est parti c'est parti.
+Snipettes c'est bon on a rajouté la migration. Snipettes view qu'est ce que c'est cette merde ?
+C'est la view qu'on a fait ensemble. Ici snipette on a rajouté l'extension avec tous les trucs
+qu'il faut c'est parfait. C'est du génie c'est du génie. Je suis fan je suis fan. Resolve snipettes.
+Ce qu'on n'a pas fait c'est modifier le lia avec tout ça. Resolve snipettes c'est parti. Snipette
+cache on a des logs avec des logs des bugs. Get snipette batch cost. Je dois savoir que je suis
+assez traumatisé avec le cache parce que les early experience de l'e-mail c'est énormément
+d'erreurs et énormément de problèmes parce qu'on appelle trop de fois l'adb donc j'essaie vraiment
+de réduire l'appel à l'adb un maximum. Donc là on peut voir qu'il est parti en vrille et qu'il s'est
+dit je pense j'ai oublié de gérer le archive machin chose Michel donc je suis un enculé et donc
+je vais corriger tout ça. Merci merci merci quand même grand seigneur. Ok maintenant on va
+brainstorm les tests possibles pour s'assurer que ces méthodes fonctionnent. Si tu arrives à créer
+un test d'intégration pour tout ça ce serait parfait. Il nous permettrait d'être en sécurité.
+Le snipette testé doit avoir des variables et vérifier qu'elles sont correctement injectées
+comme il le faudrait correctement super cool. Alors j'adore écrire des promptes de merde parce
+que l'IA fait des meilleurs résultats ne me demandez pas pourquoi c'est mathématique. Ok
+donc ici on a corrigé les boutons reply alors par la même occasion on a pété l'interface alors
+déjà on va voir ce archive de con. Archive are you sure it will not occur upon the sniped list.
+Mais ça c'est con ça c'est con mais ça c'est con. Pourquoi tu fais ça ? Bon alors là le problème
+c'est qu'il est en train de nous partir en vrille et que je lui ai demandé ça et donc là le problème
+c'est que je lui ai demandé un autre truc. Là on est en conflit d'intérêt avec moi même. Ce qu'on
+peut faire qui est un hack ultime de la mort c'est ici on va faire slash résume et on va trouver la
+commande sniped. Voilà on va retourner à l'ancien prompt comme ça maintenant on a ça et là je vais
+dire oui mon frérot il faudrait afficher un bouton en bas show archive qui affiche ou non les sniped
+archivés. T'as compris le concept je pense. Sinon c'est pas très très pratique de ne pas
+pouvoir unarchiver un sniped. Update ça stp. Et donc en fait là on a deux fois la même conversation
+donc là ça fait bugger l'entièreté du monde entier de Claude Code mais on n'est pas là pour
+satisfaire Claude Code on est là pour nous satisfaire nous-mêmes parce qu'on est en train
+de créer une deuxième branche de la même conversation avec le même id avec les mêmes
+voilà on est en train de dupliquer l'histoire donc je vais pouvoir... Donc là en fait il vient de me
+donner un edge case lui-même et c'est pour ça que c'est intéressant de demander à Lia elle-même
+de faire les tests dans la même conversation où t'as déjà eu toute la discussion c'est que là elle
+vient de me trouver un edge case de zinzin à me dire en fait il peut y avoir des sniped imbriqués
+à ce moment là faut dire non non non non non il peut pas y avoir de sniped imbriqués t'es un
+zinzin dans ta tête donc là comme ça il corrige ça et lui il est en train de lancer l'interface en
+même temps et il est en train de refaire tout ça je vais dire normalement il y a déjà une logique
+d'archive dans email sender réutilise la même ou merge les logiques pour que ce soit sniper clean
+il y a des keywords comme ça comme sniper clean qui veut rien dire mais t'inquiète pas il comprend
+un petit peu ce que tu es en train de faire donc là on est focus sur cette feature bon c'est
+parce que je fais la vidéo je pourrais faire plus de features en même temps et dupliquer mes agents
+mais là on peut voir qu'il y a d'ailleurs mais là est-ce que tu m'as fait un test d'intégration
+test d'intégration c'est pour ma grand-mère ou quoi ? putain de merde bah oui mais en gros là tu pensais
+que je fais tu pensais que j'allais pas j'allais pas capter ta connerie alors je pense que test
+d'intégration qui test l'uai ça va être compliqué mais test qui test les méthodes notre application
+ça peut être possible je pense réfléchis aux tests qui apportent le plus de valeurs tout en
+restant simple et minimaliste simple et minimaliste c'est des mots assez magiques ok hop là archive
+true ça marche pas ça marche pas mais au moins il y a un truc qui se passe quoi il y a une url qui
+a changé et vu que j'ai aucun snipe head qui a été archivé ça sert à rien donc là boum j'archive
+et là je fais show archive true mais il m'affiche pas les archives ouais ici est-ce qu'il a terminé
+sa feature ou il travaille bon j'ai activé le show archive mais il les affiche pas what the fuck
+non mais tu es un bon goal alors là tu vois que des fois il ya des limites de cloud peut-être
+aussi parce qu'on est en train d'attendre les limites du contexte mais les tests d'intégration
+c'est dans spec c'est pas dans le dossier underscore underscore test ce qui fait exprès d'être con ou
+quoi parce que des fois tu te poses des questions est-ce que tu es con par mission ou est-ce que tu
+es con parce que j'ai fait de la merde alors faut savoir qu'avec Claude généralement c'est toujours
+toi qui fait de la merde c'est qu'ici pardon laisse moi voir comment son structure et donc là on a
+plus de contexte donc là tu vois que ce qui est intéressant c'est que même si t'as plus de
+contexte tu peux toujours lancer slash compact et dire rappelle toi tout ce qu'il faut pour les
+tests uniquement ok est-ce que maintenant on voit les archives c'est l'an c'est l'an c'est l'an
+c'est fatiguant enfin je suis j'ai envie de bailler juste à l'idée de voir le code se faire lentement
+oh show archive d'enculé ouais faut rifraîche quoi ouais bon pour l'instant c'est lent comme la
+mort il ya rien qui se passe donc fais en sorte que ça se rifraîche automatiquement et qu'on
+rerender l'histoire de manière clean et correcte quoi et lui aussi va arriver en fin de vie il va
+arriver en fin de vie en fait un Claude c'est un peu comme un développeur que tu peux poncer
+comme une orange jusqu'à qu'il arrive plus à respirer qu'il a la tête sous l'eau qu'il est
+et quand il n'y a plus de contexte il meurt tout simplement à ce moment là tu dois trouver la
+solution oh pardon donc on va d'ailleurs lancer slash rename slash rename alors là j'ai trop de
+j'ai trop de commandes carrément rename add snipers reusable hop et maintenant on va tester si ça
+fonctionne j'active et là ça marche ah bah tu vois que là l'interface elle est cool là c'est une
+bonne expérience que j'aime bien donc là je lui dis fait les tests d'intégration sois intelligent
+fait dans spec va voir les rules ok bam comme ça on est bon lui il est fini on le ferme on le
+ferme j'en ai eu assez j'ai eu assez de de de supplice avec lui et lui on est bon etc donc là
+qu'est ce qu'on peut faire on peut venir lancer git commit alors il ya un bug dans z quand je
+clear ça claire pas vraiment la conversation on s'en fout peut voir que ça a claire juste ici là
+on peut voir que cette session va coûter 63 dollars donc on peut voir que ce chat ne s'arrête
+littéralement jamais c'est un chat qui a travaillé sans cesse pendant des heures c'est assez
+formidable maintenant à faire slash créé pr voilà avec git la variante git qui est la commande
+globale pour faire ça et comme ça on va créer la poule request c'est comme ça on pourra passer
+à la dernière partie qui se passe alors lui me fait chier comme la mort parce que ses tests il
+a décidé bon les placeholder devrait aussi fonctionner actuellement et tu pourrais aussi
+ajouter dans l'environnement de test actuellement les variables redis pour arrêter d'avoir ses
+warning d'enculé donc là je le tips donc lui il fait ça comme ça ici on a la poule
+request qui a été créé donc ça c'est top comme ça on peut aller voir la poule request et donc là
+la dernière étape ça peut être plusieurs choses première chose c'est de lancer un autre agent
+slash clear slash review et faire un review de la poule request ça c'est sympa il ya une commande
+review et ça va permettre de venir faire travailler savoir que moi vu que je travaille tout seul j'ai
+même pas envie d'avoir d'agent qui revue le code ici parce que ça coûte de l'argent et que je
+préfère avoir Claude qui peut travailler là dessus lui même sur mon propre code ce qu'il
+en train de faire magistralement ensuite l'avantage de ces tests qu'on vous connaît beaucoup et qu'il
+y a c'est d'avoir des tests d'intégration si t'as pas de test d'intégration t'es mort et je sais
+ce que je suis déjà je fais déjà des erreurs mais je les fixe assez vite mais typiquement hier
+j'ai fait alors regardez alors en ce moment c'est juste que j'ai eu un kiff sur Claude et ça m'a
+donné envie de travailler sans m'arrêter hier j'ai fait 7 pr 10 000 lignes en plus 1200 lignes en
+moins 116 fichiers modifiés j'ai émergé j'ai cassé un truc évidemment on pouvait plus scroller comme
+ça c'est dit on pourrait plus scroller tout simplement j'ai corrigé l'histoire mais tu peux voir que là
+dans mon dernier truc j'avais mes tests qui passaient alors le delete nion branche de merde ici
+veut jamais passer ça c'est une autre histoire mais en attendant ici on a des erreurs typescript
+et eslint bon ça c'est par c'est parfait parce qu'on peut les corriger plus rapidement que ce
+qu'on peut croire que je peux lancer slash non slash autofix lui on va on va l'arrêter tout de
+suite parce qu'en fait il ya des erreurs là je lance slash autofix ça c'est une commande magique
+qui fixe toutes les erreurs eslint et toutes les erreurs possibles et imaginables et donc
+comme ça une fois qu'on lance ça on est parti comme comme jaja donc test corrigé et fonctionnel
+mais là il n'a pas compris ce que tu fais depuis avant c'est des tests unitaire et non
+d'intégration c'est un concept c'est différent tu comprends enfin j'adore cette vidéo j'adore
+cette vidéo j'espère que tu l'aimes autant que moi je sais pas qui est encore là c'était encore là
+à ce moment là écrit café ou mets un commentaire avec le mot café genre ta vidéo est super bla bla
+j'ai aussi envie de boire du café comme ça on pourra se marrer en commentaire parce que cette
+vidéo est hilarante très très sympa on code des features en live avec l'IA et comme ça tu
+peux vraiment voir mon vrai usage de l'IA qui est pas un usage ou un usage où je prends beaucoup de
+risques parce que je suis en train de faire là on est en train de faire des tests alors on fait des
+tests avec l'IA mais en fait l'IA est très doué pour faire des tests qui vont lui permettre de se
+rendre compte des problèmes qu'elle aurait potentiellement on va voir elle va faire des
+tests d'intégration ça va être très intéressant de regarder tout simplement ce qui est en train de
+se produire et donc j'ai un peu dormi là trois minutes pas de souci play ride ne fonctionne pas
+bien avec leur rendu réact je vais tester la résolution db j'ai déjà un test unitaire
+ouais bah t'es con aussi t'es con t'es con t'es con est-ce que le autofix a fait son travail on va
+voir s'il arrive à terminer l'autofix et comme ça on pourra passer à la suite et il y a raycast
+aussi qui m'a lâché durant cette vidéo ici donc on peut voir que les tests lint et tout ils ont
+été corrigés que là lui trois tests d'intégration vérifie est-ce que les tests passent les tests
+passent on va vérifier quand même que les tests passent ok donc là il a corrigé tous les lint on
+va faire le petit commit donc des fois je fais exit des fois je fais avec des fois je fais avec
+cloud code ça dépend et donc là on a un peu la dernière étape ultime de notre histoire là on
+avait plein de tests qui fail je pourrais aussi lui dire ok vérifie que pnpm test si il fonctionne
+aussi pendant qu'on y est pendant qu'on y est autant vérifier que tout fonctionne et que ce
+soit tout magnifiquement beau parce que sinon c'est la merde ok ça fonctionne donc on est
+bon à pouvoir voir la pr qui fonctionne donc voilà comment je vais travailler on va faire une pr avec
+tout ici tu peux voir que le semari est très minimaliste on a aussi le changelog et comme
+ça ici qu'on lance slash review en fait avoir le changelog de toutes les modifications quand
+guillemets été fait dans la journée etc là tu peux voir qu'en un jour là dans le truc de
+travail on a fait tout ça on a fait tout ça ça c'est un travail juste cette histoire de snipettes
+en bug en réflexion en bordel ça m'aurait pris un jour là ça m'a pris cette vidéo d'une heure et
+encore vu que je suis en vidéo je suis bien plus lent que ce que je suis en réalité on est sur
+une sorte de sous-efficacité volontaire de ma part ok mais qui est malheureusement très triste ok
+donc ici on peut faire le slash review où on peut simplement regarder si les tests passent
+où les tests passent normalement on peut être assez confiant sur le fait que l'application marche
+plus ou moins bien donc on va voir ça et on se retrouve après et voilà on a notre merge pr qui
+est clean et tu vois qu'on a 280 on pourrait 2163 fichiers la review V on peut évidemment recheck
+tous les changements ici et on peut aussi check tout simplement la review de l'IA et donc on peut
+voir ici qu'elle a fait une sacrée review code review pr 114 le nom de la pr donc les lignes
+c'est tout bon security review il n'y a pas de gros dangers qui ont été faits les patterns ils ont
+vérifié que tout est sécurisé donc c'est très important security review feature review est ce que
+toutes les features ont été implémentées on peut voir ici qu'il ya des tests qui cover la
+majorité des choses code quality clean architecture erreur résilience itch batch loading good test
+coverage minor issu snipet ça je sais qu'il est débile il n'arrive pas à comprendre ce truc je
+pense qu'il faudrait que je lui ajoute une mémoire de next.js que je pourrais faire ici tu peux voir
+que souvent quand il fait la même erreur on va tout simplement lui faire un autre fichier ici
+lancer la commande cloud memory et dire s'il te plaît utilise context seven pour avoir la
+documentation de revalidate path et créer un fichier dans .cloud slash rulles qui s'appelle
+next.js ou modifier le fichier s'il existe déjà en rajoutant le fait qu'il faut passer un deuxième
+argument à revalidate path parce que chaque fois l'IA n'arrive pas à s'en rappeler et donc là je lui
+donne un exemple comme ceci juste pour qu'ils puissent corriger ça any type case ok could use
+proper for type safety alors ça on peut tester dans un autre terminal juste ici de venir faire
+clear slash one shot ceci afin de pouvoir résoudre ce petit problème voir si ça passe test token use
+generic string ok this is fine for test but considering a more obvious task format ok et
+donc là on est bon il dit voilà tu peux l'amerger on va voir si ici il y a un sens à update ça et
+là on peut voir qu'il a créé une nouvelle rulle next.js et là je vais lui dire tu viens de rajouter
+beaucoup trop de texte garde cette règle simple et minimaliste et inspire toi juste de quelques
+infos importants sur la doc voilà tu peux voir que là il a modifié ceci par fait tu vois c'est
+exactement ce que je voulais ça va permettre d'arrêter d'avoir ce genre d'erreurs et de
+corriger ses erreurs pour la vie donc voilà quand l'IA reproduit un mauvais pattern on vient créer
+des règles on vient mettre à jour la mémoire on est ce qu'on fait pour que l'IA soit parfaite
+tout simplement modifier la mémoire donc là on peut voir qu'il a rajouté ça moi je vais check à
+la main ce fichier là tout simplement pour vérifier qu'il n'y a pas d'erreur qui soit plus là
+qu'autre chose has no exported member prisma et quand celui là mais il est con ah voilà ok il a
+corrigé le problème moi j'étais en train de me dire mais il est con est ce qu'il y a encore des
+any ok ici et là si on va regarder as qu'est ce qu'il a changé as prisma.input.json ok et
+avant c'était as any et comme ça il a supprimé le warning bon c'est très bien on va commit tout
+ça je pense que là il a terminé on peut lancer git commit et comme ça on a la pr qui est faite
+et tu peux voir comment j'ai créé une application de zéro donc si tu as envie de faire la même
+chose et d'avoir vraiment accès à mes commandes mes workflows mes settings j'aurais déjà mis là
+au milieu de la vidéo mais va sur le premier lien qui est sous cette vidéo c'est simple c'est
+efficace et tu vas avoir tellement de valeur que tu vas en pleurer donc voilà un petit peu
+pour les infos j'espère que t'as kiffé cette vidéo et on se dit à bientôt ciao ciao

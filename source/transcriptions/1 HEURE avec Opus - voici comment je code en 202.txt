@@ -1,0 +1,579 @@
+Hello dans cette vidéo je te propose de t'emmener avec moi dans mon quotidien de développeur qui utilise l'IA
+tout simplement une heure avec moi voilà un timer timer débute maintenant
+et je vais te montrer comment je travaille sur près de 5 projets en même temps
+en même temps je m'amuse à configurer mon openclaw ça n'a aucun sens ma vie n'a plus aucun sens depuis que
+Claude code existe et dans cette vidéo c'est simple je te partage le concret de ma vie de développeur c'est parti ok c'est parti
+donc cette fois je vais pas te montrer le même écran que d'habitude
+donc ici je vais m'amuser un petit peu à zoomer mais mon quotidien de développeur maintenant c'est à peu près ça mon workflow
+j'avais un peu changé ça par rapport à l'époque où j'utilisais zed
+maintenant zed je l'utilise plutôt en cas d'extrême urgence
+où j'ai besoin de faire quelque chose
+voici mon nouvel éditeur de code
+ici tu peux voir que j'utilise ghosty avec ici trois tables donc là j'étais en train de lancer un petit agent
+là j'ai un agent Claude code agent Claude code agent Claude code et ensuite en haut on a des agents
+donc là faut faire une petite gist gymnastique mentale parce que de ce que je me rappelle j'ai pas trouvé de moyen de renommer mes tables
+mais là j'ai mon projet tchao
+là j'ai un autre projet là j'ai un autre projet là j'ai un autre projet là j'ai un autre projet donc on a en fait
+cinq tables avec cinq projets différents donc ici avec codelinks v2 où je suis en train de gérer
+les coupons
+ici on a la même chose là on a Claude code là on a subfast avec deux instances pour subfast
+ici on a codeline on est en train de travailler avec codeline pour mettre un petit peu un petit peu d'amour dans le dashboard
+et ici on a save it.now où je suis en train d'utiliser mon nouveau package tchao
+donc en fait je lance plein d'agents comme ça à côté maintenant
+j'ai mon telegram michelle claude où je lui fais faire aussi quelques petites tâches
+donc ici c'est mon agent tu peux voir qu'il m'a envoyé mes petits commentaires youtube là on a résolu une petite erreur
+donc comme ça on a michelle claude sur le site sur le teco au cas où
+donc je vais rajouter des petits zoom à toutes ces pages comme ça
+celle ci non
+celle ci on va la dégager là ça c'est un peu trop personnel à
+donc là on a subfast hop et donc là
+actuellement j'étais en train de me dire que les emails envoyés à l'utilisateur comme ceci n'était pas très joli
+donc on va tout de suite lancer un petit agent sur le tas
+fixe fixe ui inspire create beautiful chat ui boom
+ici on avait un problème de déploiement sur versel donc une fois qu'on fait ça en fait on a une sorte de travail infini
+On peut voir ici que chao et up donc on va pouvoir tester un petit peu les changements de chao
+donc on va essayer de pas leak 12000
+12000 emails mais faut savoir que maintenant pour certaines app
+j'ai assez de confiance pour faire ce que j'appelle du travail en prod donc voilà ici on a l'utilisateur
+qui est juste là et ce que j'étais en train de travailler c'était la version mobile qui était vraiment dégueulasse
+Voilà les messages sont toujours trop petits et aussi si on a le curseur
+donc d'ailleurs je sais même plus comment avoir de curseur voilà
+bon ici on a quand même mobile
+si je refresh cette page as
+en fait très énervé parce que sur mobile les blocs prennent pas assez de place et ici quand je clique ça m'affiche ça
+mais en fait je veux pas afficher ça je vais afficher le menu
+donc ici on va tout de suite lancer slash clear slash apex a
+hop on met l'image je vais faire un screenshot de ça
+on va lui dire je veux que les messages prennent plus de place donc évidemment là la couleur de la flèche
+match pas exactement le truc boom boom boom boom mais sinon c'est pas mal il a changé la taille
+sur l'application mobile enfin sur la version mobile faut que les messages prennent plus de place et qu'il faut que quand on
+clique ça affiche pas le menu pour reply etc
+faut que ça affiche un truc mobile donc je sais pas une sorte de pop-up ios tu vois une sorte de mini dialogue qui
+affiche les actions à faire c'est beaucoup plus simple c'est beaucoup plus moderne ça va matcher exactement ce qu'on a besoin juste ici
+donc s'il te plaît implément de ça et aussi sur mobile est ce que le retour fonctionnait ce que je sais que des fois
+les amis j'ai un petit peu d'erreur
+en fait la page conversation devrait voilà là on a une internal serveur erreur
+j'avais ça tout simplement parce que le bouton back retour sur undefined parfait on a trouvé l'erreur
+donc tu vas aussi me corriger cette erreur le bouton back qui retourne sur undefined donc là je te partage le lien
+et tu vas me corriger ce petit problème qui est très chiant et tu vas aussi me mettre
+la page conversation dans react router
+directement en fait tout dans react router parce que si c'est pas le cas c'est pour ça que c'est un peu lent
+alors là le prompt est d'enfer et à chier de sa mère
+lia elle va suffoquer dans son lit à pleurer toutes les larmes de son corps pour demander de l'aide à dieu mais
+grâce au workflow apex normalement je sauve les meubles
+je lui dis bon bah voilà je sais je sais que c'est compliqué ce que je t'ai demandé juste ici
+je sais que tu vas pas forcément réussir mais
+mais c'est pas grave écoute t'as les infos t'as apex apex c'est un workflow très solide il va nous faire ça donc
+ici j'ai aussi rajouté ça donc là il me dit required en barre optional but recommandé
+read page je lui retourne un petit to-bet ou handbrake bon alors là on va devoir rajouter des petites clés
+donc on va le faire on écoute toujours ce que clone nous dit donc on va se rendre sur cloud flair là je pense que je vais
+devoir faire des petites pauses
+donc voilà ici on a les petits tokens on va créer a chao app scrapping
+permission account
+là tu screenshot ça tu lui dis quelle permission mon gros mon gros cloud hop
+quelle permission avant l'account browser rendering edit account browser rendering edit
+permission
+ou si tu vois browser rendering
+account ressource ton account spécifique
+account ressource include all account ok c'est parti
+client ip ttl et là on fait continue et on crée le token ok j'ai ajouté les tokens donc je change de page pour pas avoir
+des problèmes pour pas leak mes tokens cloud flair là on peut voir que conline.app il est en train d'update le dashboard on va
+voir ce que ça donne malheureusement ça ça va être compliqué de vous montrer et je vais en profiter
+sur chao pour rajouter un petit domaine donc là on a le internal serveur erreur
+d'ailleurs ici ça devrait pas internait le serveur erreur on va corriger ça aussi
+voilà voilà j'ai caché tout ça et donc ce qu'on se retrouve ici dans notre petite application
+c'est qu'il a fixé les emails juste ici et une fois qu'il a fixé les emails on va on a ici rajouté
+cloud flair et là mobile sheet open pourquoi est ce qu'il fait des new state
+fait attention utilise les bonnes les bonnes pratiques mon ami 1 fait pas commence pas à nous
+faire n'importe quoi s'il te plait donc là on va rajouter un petit website qui est https.lumail.io
+donc ça en fait c'est mon application de chat que j'ai moi même créé hop tu vois que là il y a
+l'email qui a été créé moi ça me permet de facilement chat avec les utilisateurs et vu
+qu'on s'amuse un petit peu j'ai créé la documentation tout pour faire tout ça donc la boom doc
+documentation widget sdk reference copy page et là on peut lancer un nouvel agent sur l'email et
+là je vais aussi apex-a use new chao app sdk et avec le website id boom avec le website id bam
+comme ça remplace hop là on va plutôt faire ça remplace l'ancien sdk ayo par celui-ci hop là ici
+on peut voir que c'est vite il a réussi à atteindre son contexte limite continue non non non non non
+non pas de contexte limite avec moi quand même foul à la non non non non non non c'est pas bien
+c'est pas bien que ce que là ici je vois pas qu'il a beaucoup de contexte donc ça m'arrête voilà il
+a il a plus de contexte alors petits tips des fois ça marche vous coupez claude et vous le
+relancer des fois il s'énerve un peu et il se se débloque parce que là j'ai l'impression qu'en
+dessous il a quand même écrit 33% de contexte donc tu vois que là tu vois j'ai quitté claude je
+l'ai relancé il s'est débloqué il s'est réveillé il a dit ouf peut-être que je peux faire des trucs
+etc ok ici format compact price tick formateur boom ici il change il change c'est toujours code
+line pourquoi j'ai deux terminal code line maintenant lui doit dégager et subfast lui je l'avais
+coupa coupa co donc là normalement on a ça on a le bag bouton ici qui s'est ajouté c'est parfait on
+va pouvoir tester alors évidemment en fait ici le test c'est slash commit all et c'est croisement
+des doigts croisement des doigts en fait je sais que je modifie pas des features je modifie des
+features admins si le dashboard casse sur chao vu que c'est une app que je suis en train de développer
+c'est pas c'est pas super grave mais là aussi ce placeholder me rend dingue mais me rend
+dingue tous les jours je le vois et tous les jours je me dis pourquoi est ce que ce placeholder
+est dégueulasse bah c'est sûrement parce qu'il a pas déplacé toute l'app toute l'app dans
+l'histoire donc là il est content là il a fait ça ok ok ok on est bon ici et ici lui il est
+en train de m'ajouter le chao mais pourquoi il tu utilises pas le sdk non non non non non non
+non tu dois être il est con mais pourquoi il a commencé à m'utiliser bah oui tu as raison je
+dois utiliser le sdk bah oui fallait fallait être con pour pas vouloir utiliser le sdk en fait
+c'était c'était sur tout ça donc lui en train de refaire mon dashboard et sur ce face normalement
+j'avais corrigé le problème de mes clients principaux on va regarder bah typiquement là j'ai
+un truc pourquoi est ce que quand j'arrive sur cette page ça écrit un autorize de merde au lieu
+de m'afficher un truc utile quoi cc slash apex-a quand je vais sur une page interdite ça m'affiche
+juste un autorize au lieu d'afficher un bouton pour si je suis connecté être dirigé sur
+slash org pour pouvoir voir mon org et si je suis pas connecté un bouton pour se connecter cqfd
+avec redirect url qui me retourne sur la bonne url après génération sunglasses et bam hop là
+donc là tu vois qu'il ya qu'un bouton contact support c'est vraiment un chier du coup tu
+dois retourner là tout ça pour voir que je suis connecté non je suis pas connecté sign in
+ça c'est une application qui a super bien marché finalement on peut voir les petites
+les petites choses ici ça c'est un client ça c'est moi j'ai rajouté les petits settings vidéo mais
+voilà typiquement il y avait un truc de zinzin qui me rendait fou c'est que cette dialogue de
+vidéo est vraiment pas belle donc là on va lancer un deuxième agent slash apex-a dans
+cette dialogue de vidéo pour ajouter dans une vidéo youtube ui est vraiment pas top
+top il faudrait plutôt imaginer des cartes comme on a déjà avec une sorte de dashboard
+plusieurs colonnes barres de recherche ou même un commande components ça pourrait aussi passer
+suivant comment tu fais ça et une bonne ux de cat et hop là voyez ça c'est du prompt de qualité
+mais je peux vous assurer qu'il va faire un truc sympa donc là il est en train de corriger ça donc
+lui il est lancé lui cet agent là il a terminé code line j'ai changé le dashboard ok c'est
+parfait on va commit on va commit si ça fonctionne on verra ça je me connecte à un compte sans les
+data et donc là il a rajouté tout le widget il a bien utilisé le chao sdk avec le identify et
+tout ça et là je vais dire tu as pas voulu utiliser le provider pourquoi je suis en accept
+édite de zinzin toujours être en bypass permission les amis ici il a fait ça il a
+utilisé identify et là il n'y a pas de provider non plus et là on va tester les emails alors quand
+même quand même alors ce qui est bien c'est quand vous travaillez sur plein de projets il y a une
+page très importante à avoir ses versailles déploiements comme ça vous voyez les app qui
+cassent vous voyez que je déploie plein d'apps en même temps sur main sur master ici pour code
+line un peu le touriste et là on peut voir que chao a été update je vais essayer de lui dire de
+changer son skeleton de zinzin le fucking skeleton dans le chat ici les messages à l'intérieur
+prennent full width alors que la vraie ui prend pas full width fait exactement la même ui de
+skeleton mobile desktop friendly c'est quand même pas dur non c'est pas dur et là c'est
+quoi cette ui de zinzin là bah oui mais qu'est ce tu m'as fait tu vois des fois il des fois il
+est pas il est pas non plus à jour parce que là on est bien dans une conversation ok là on voit
+la conversation alors déjà le scrolling et zinzin alors je sais pas si je suis en dézoom ou si je
+suis pas en dézoom ok je suis en zoom ok ok le scrolling est pas mal et le bouton back qu'est
+ce que fait le bouton back il n'est pas instant c'est ça qui m'énerve c'est que s'il n'est pas
+instant en fait il marche même pas ce bouton back d'enculé bon on va quand même lancer le
+serveur hop z donc là qu'est ce que je fais quand je veux lancer le serveur généralement je m'amuse
+pas à lancer le serveur dans mon terminal le terminal c'est vraiment le travail le terminal
+c'est vraiment cloud workspace ici et quand je veux lancer des petites des petits serveurs ici on va
+lancer pnpm dev et ici on va lancer pnpm lx convex dev donc pour cette application j'utilise
+convex qui permet de gérer tout le real time oh yes très très pratique et là on peut voir que
+j'ai des ports déjà utilisés donc en fait vu que je dois travailler avec plein d'applications en
+même temps j'utilise plein de ports donc là port 3009 et donc là ça devient l'enfer pour travailler
+parce que fait vous avez plein d'applications sur plein de ports différents vous devez switch
+entre les ports entre les applications entre les logiques etc pour pouvoir un petit peu vous y
+retrouver donc vous vous entendez pas normalement tous les bip parce que j'ai coupé le son mais en
+fait ça me bip dans l'oreille tout le temps ça c'est un peu ma journée c'est que vu que tu
+lances plein d'agents voilà voilà tu vois ici il m'a utilisé le tchao provider ici je vais
+demander à cet agent là qui est bon lui on va dire à là là on va faire un nouvel agent donc tu
+vois en fait quand je fais un nouvel agent je coupe mon écran en plusieurs ça me fait plein
+d'agents please verify that tchao provider implementation respect clean code handle everything
+every params and work fine hop donc là c'est le dashboard ce dashboard aussi dégueulasse
+dégueulasse de chez dégueulasse ici plus moche que ça je sais pas si j'aurais pu le faire
+consciemment mais inconsciemment je l'ai fait parce que c'est quand même ce que je lui ai demandé
+les spacing et tout tout est moche tout est moche tout simplement invite member pourquoi il y a cette
+action là ça sert à rien donc là je sélectionne une conversation ça fonctionne pas mal et ici ce qui
+nous intéresse donc tout ça c'est bon et là sur mobile c'est pas mal sur mobile c'est mieux mais
+pourquoi quand je clique sur bac ça se fait rien du tout que ça on va lui dire slash débug à quand
+je clique sur bac sur mobile il ne se passe rien fixe it voilà hop et là je sais pas si je peux
+voir le la petite ui qui s'affiche browser info custom properties à ça c'est des custom
+à oui ah oui ok ici je peux changer je peux changer je peux changer ça fonctionne bien ça
+fonctionne tout fonctionne sinon plutôt bien le à la website j'aime pas trop trop trop trop
+trop l'uai ce que je veux tester c'est l'agent il ya donc normalement j'ai une page ici widget
+démo pour venir tester un petit peu le chat et l'agent ya donc là si je si j'ouvre ce
+petit agent et que je lui dis et l'eau que contient la page htp code linx on va peut-être ouvrir
+code linx sinon il va s'énerver hop bam bam bam slash débugger tirer ok slash clear ok on va lui
+lancer dans celui là quand j'envoie un message via le widget actuel en dev g7 erreur fixe le
+problème et pourquoi ici il utilise pas un link navigate mais vient d'où ce navigate
+navigate next link bah oui next link ça existe pas dans xjs vérifie que tu as pas fait l'erreur
+autre part sdp the error is clear bah oui l'erreur elle est claire mais tu l'as quand même fait donc
+au bout d'un moment quand tu fais l'erreur elle a beau être claire c'est quand même toi la
+prostituée dans l'histoire si je veux être honnête avec toi pour ces raisons voilà bah voilà tu vois
+metadata hein qu'est ce que t'as changé ciao provider bah oui bah oui bah oui bah oui j'ai vu
+que t'as oublié il a pas rajouté il a même pas rajouté en fait missing visitor country slash
+clear slash one shots update the ciao provider sdk to add all the metadata and stuff that we
+can handle inside the provider so it's fully compatible and powerful and beautiful and awesome
+mais il se fout de ma gueule donc là on lui a demandé vérifier son histoire ici il a corrigé
+pourquoi convex et temporary unavailable oh la la la la c'est compliqué parfois ce cette
+histoire de convex il ya beaucoup de types qui mismatch souvent même si c'est fantastique et
+que lia corrige quand même la majorité des problèmes des fois on est obligé d'envoyer
+des erreurs à la main ce qui peut visiteur role visiteurs compagnie mais il me fait chier ton
+use effect de zinzans ok et mais c'est ok fait un truc clean slash clean code hop on lui lance
+le petit clean code ça lui permet de se réveiller un petit peu et pas qu'il fasse n'importe quoi bah
+oui bah oui si tu ajoutes les bons fields à la bonne histoire à la bonne heure etc mais en fait
+en fait tu as pas compris ces fields ont été putain de fucking de suprimado faut juste lancer
+une migration qui les deletes sur la db locale pour éviter le problème donc ça c'est souvent le
+problème d'ailleurs avec cette histoire d'hier etc c'est que lui par défaut il va vous résoudre
+l'erreur sans avoir pris en compte que vous avez supprimé ces fields ou que vous avez changé la
+manière la manière de faire fonctionner l'application et du coup lui vous les rajoute
+après vous lui demandez de les supprimer puis tu sais pas pourquoi un jour il les rajoute puis
+il est supprimé puis il les rajoute puis toi t'es en mode bah au bout d'un moment il faut que
+tu ailles trouver un travail et que tu arrêtes les conneries ah bah oui tu me rajoutes des fields à
+l'infini est ce que j'ai ce que j'ai envie de me tuer update la documentation aussi faudrait
+que je j'ajoute peut-être une règle ici tu vois typiquement quand t'as ça et que tu lui dis
+plusieurs fois ajoute la documentation ajoute la documentation tu peux venir faire ici ce que
+peuvent lui lancer ici cloud memory add new slash cloud point le root in current folder
+whenever the IE agents update the SDK code important update the documentation with the
+latest change and API bla bla bla bla bla bla bla bla bla bla bla bla bla bla plein de points
+d'exclamation comme ça il comprend que t'es très énervé des fois il faut des fois il faut
+il faut un petit peu s'énerver mais tu vois que là il me fait chier ok je rajoute les fils
+de schéma je déploie il rajoute tous les fils optionnels pour faire la migration en fait je suis
+un con parce que j'ai fait la migration en local et derrière j'ai commit et j'ai résolu en production
+mais j'ai pas résolu en dev donc je me retrouve maintenant en dev avec un truc qui marche plus
+donc j'ai fait un peu le j'ai fait un peu le camé j'ai fait un peu le camé c'est à dire non
+l'application fonctionnait que en production donc il fallait quand même fallait quand même être un
+peu un peu dans un quand j'ai fait ça je suis désolé je suis désolé ma connerie ma connerie donc
+là tu vois boum il a réussi la migration il lance la migration et ensuite il me delete ses
+fils avec trois websites id donc on est vraiment en train de se battre pour n'importe quoi je pense
+qu'ici je vais lui rajouter aussi Claude memory add a rules when we update the schéma
+who handle the migration correctly with all of this logic explain the process production dev
+and everything always have this fixed and no problems boom by way comme ça on ajoute les
+règles en fait c'est ça qui est important inside point Claude slash rules c'est ça qui
+est important ici tu vois que ici il a fait route one memory il a écrit où son memory pourquoi c'est
+ça pourquoi je vois pas la mémoire tu as fait quoi et c'est mal fait ça Claude code pourquoi
+vous me cachez la mémoire maintenant ça n'a aucun sens ça n'a aucun sens de me cacher la mémoire
+écrit en anglais bg ok voilà donc là on peut voir que maintenant ils nous cachent la mémoire ça je
+sais pas pourquoi ils font ça c'est débile là les fichiers de mémoire c'est un fichier comme un
+autre pourquoi tu me cacherais l'affiché le fichier de mémoire n'a aucun sens des fois l'équipe
+Claude il prête un petit coup de rail de coq et tu te dis pourquoi vous avez pris ce rail de coq
+ils te disent ouais bon on n'était pas sûr on n'était pas sûr de l'histoire et ils te font ça donc
+ici le skeleton est correct la structure correspond bien à la vraie UI ouais ouais ouais alors déjà
+je te crois pas mais même si je te croyais je te croirais pas parce que ça fait quand même
+cinq fois que je te demande de changer ce skeleton et il est toujours pas corrigé
+visite htp codelings.dev slash begin react qu'elle est la hero header title est ce que
+ça fonctionne bah voilà ça fonctionne donc là normalement il ya l'agent IA qui répond au
+bout de 30 secondes un truc comme ça donc on va voir un peu ce que ça donne aussi ce important
+qu'est ce qu'on pourrait améliorer dans ce petit widget donc là on peut rendre le chat super grand
+j'aime beaucoup j'aime beaucoup le chat super grand mais là aussi les emojis pourquoi ils sont
+en light mode alors que le machin est en dark mode ça n'a aucun sens slash one shot le emoji
+piqueur et pas dans le thème du widget quand même une dinguerie donc comme ça encore une
+ça bonjour un agent je suis délégé mais j'arrive pas à accéder au contenu cette page un de mes
+collègues humains sera capable d'aller sur le site et pourquoi quand j'affiche ce menu là ça
+m'affiche aussi le codeline founder ici faudrait lui dire slash one shot quand j'ouvre le widget il
+faut cacher la bubble sinon ça n'a aucun sens et duplique les informations uniquement quand
+le widget est fermé on affiche la bubble comme ça comme ça on corrige ah bah oui bah voilà tu
+vois que ici c'est en ce mongole il n'a pas utilisé les thèmes et du coup il doit se réveiller bon je
+peux voir que je lui ai envoyé ça ici il me dit let's fix both issues il n'a pas de to do list à
+cause de one shot qui est un peu en mode yolo faudrait que je lui dise de rajouter une to do list
+et de garder la trace puisque sinon ici on est quand même dans un sacré pétrin mais quand même
+on peut voir ici que ça marche on avait aussi subfast add autoware button sign in with redirector
+go to work parfait redesign vidéo selector with machin allez c'est parti hein slash commit all
+but looking ok ouais c'est vrai que j'avais demandé ça je comprends pourquoi il a fait ça tu vois
+qu'il est smart quand même non mais opus et dans le génie et d'un génie assez assez fou
+opus et d'un génie incroyable donc là je lui dire rajoute des logs quand l'agent utilise ses
+outils et s'il y a des erreurs pour éviter les problèmes stp parce que là faut que je
+débugge et rajouter le fait que l'agent puisse aller lire des... Attends attends attends je t'arrête
+deux secondes pour te montrer cette masterclass tu peux accéder à cette formation pour setup
+cloud code ma configuration sur windows mac os et apprendre plusieurs choses sur l'IA qui vont
+être essentiel comme le fonctionnement des agents et j'en passe pour ça il te suffit d'aller sur
+mlv.sh slash fa comme ceci sur n'importe quel navigateur et tu vas directement arriver sur
+cette page tu vas pouvoir t'inscrire et accéder directement à tout ça 100% gratuitement n'attends
+pas inscris-toi tout de suite et maintenant on peut reprendre la vidéo. Ok donc là on a la petite
+application on peut voir que le zoom est zinzin faudrait peut-être qu'il sauvegarde aussi son
+statut mais là on peut voir que quand on ouvre le chat boum ça enlève l'erreur donc tu vois que
+toutes les erreurs finissent par être corrigées et que maintenant le statut picker permet d'avoir
+le bon thème donc on a tout qui fonctionne bien comme on est bien ici on peut fermer ça c'est
+parfait et là je peux lui faire utilise le tool donc là moi j'ai créé un tool qui s'appelle
+fetch page markdown stp et là ce qu'on peut voir c'est les settings qui sont juste là avec le
+travail de l'univers entier donc ici je sais pas si je vais le voir là tout le search memory called
+résulte 0 memory fetch page markdown success content length 0 intéressant des bugs ça c'est
+vraiment le prompt ultime c'est lui dire bah vas-y débug, débug, corrige, faites des logs, envoyez
+les alias pour comprendre un petit peu ce qui se passe hop là tu vois hop as result success
+boum boum boum on vient donner alias du travail ici ça reload convex convex est fantastique c'est
+magique c'est automatique ça ça n'a rien à voir avec la vie entière de l'univers c'est
+complètement incroyable je suis un fan ultime maintenant hop maintenant on vient ici et là je
+fais utilise le fetch page markdown stp à nouveau et là on peut voir en fait qu'il est capable de
+faire des actions donc là conversation id fetching
+c'est étrange quand même tu peux tester localement pour voir ça devrait
+fonctionner code length.dev slash begin react et en full ssr normalement ouais c'est étrange
+c'est étrange je suis désolé donc là on a reaction picker use them color j'aimerais bien
+vendre ce composant vraiment swaggy là par exemple quand on clique sur copie ça affiche
+le bouton copie en géant et ça cache le menu quand je clique sur le bouton point point point
+ça affiche le bouton copie et ça cache le menu point point point et icon selector au lieu de
+les garder corrige ce problème stp il lui passe des meilleurs paramètres bah oui si t'as pas
+là si t'as pas lancé les bons paramètres ça marche pas et là on lui relance utilise le
+fetch markdown stp fetching canton lake 0 mais ça ça ça ça n'a aucun sens on va fetcher
+un autre page on va on va fetcher melvinx.dev vas-y fetch melvinx.dev pour tester il n'y a
+aucun site qui fonctionne il n'y a aucun site qui fonctionne crée toi un script local pour tester
+elle ne t'arrête pas avant d'avoir un script qui fonctionne hop comme ça tu lui dis des fois une
+bonne solution c'est de lui dire vas-y balance toi un script auto corrige toi jusqu'à la mort et quand
+tu meurs tu peux arrêter en gros c'est je veux plus t'entendre jusqu'à que t'aies corrigé ta merde
+d'erreur donc la code lynx on a ici le chat on a toujours le nombre donc là quand on clique
+ça m'affiche toujours donc ça il n'a pas corrigé cette enflure mais on a toujours cinq regarde ça
+me rend dingue ce bug il est là depuis tellement longtemps énorme bug que tu corrige pas je vois
+cinq batch alors que j'ai lu les messages or on doit afficher un batch avec seulement les messages
+non lue ou ça je lui ai dit déjà cinq fois je lui ai dit je me dis c'est bon c'est corrigé
+non mais qu'ils clout flair je t'explose la gueule c'est pas possible je veux pas
+utiliser ton djena de merde et devoir payer 150 balles par mois des bugs lilla dog et un
+script avec les tokens fait le fetch markdown test jusqu'à que ça marche corrige toi documente
+toi j'avais vu que j'avais des mcp qui passaient pas je vais regarder je sais pas pourquoi j'ai
+mcp chat cn non ncp chat cn on s'en bat les couilles les amis pourquoi j'ai le mcp chat cn
+dans cette application disable allez hop ça dégage bon en attendant on va s'énerver un
+petit peu avec subfast j'avais quand même l'application ici peut-être qui a été déployée
+donc voilà sur les petites choses je déploie souvent hop là on a l'application qui déployait
+et comme ça ici je peux revenir tester on tape le petit refresh des familles comme ça on corrige
+les problèmes et ici on a le bouton plus voir qu'il n'a rien changé cette enflure
+c'est un enculé add video donc si vous énervez un petit peu vous lancer z comme d'habitude tu
+vois que la baume deuxième terminale z là on le lance sur le port 3004 c'est le port de
+subfast généralement et on peut tester comme ça en même temps comme ça on a un peu tout
+on a cet agent tu vois qui travaille le problème et que code lynx testant avec
+différentes options de voir que là on peut voir un petit peu toutes les options qu'il
+peut y avoir et il vient tester pour voir s'il récupère le contenu du site donc c'est vraiment
+top c'est un peu ça la magique c'est que vous venez lancer vos convex alors là je
+leak mon API token je vais le je vais le changer cette pute cette pute API token c'est vraiment
+insupportable de faire des vidéos avec des API token qui sont constamment leak on passe
+notre vie entière à leak ses API token donc ici on peut voir qu'il me dit qu'il a corrigé ce qui
+serait pas mal ici on va afficher la page en attendant ici avec ouais j'avais que lire ma
+database ce qui n'était pas non plus la meilleure idée que j'avais donc on va tout de suite lui
+dire donc depuis qu'il y a je m'amuse beaucoup à dump certaines données et pas tout donc là par
+exemple je lui dis je veux que tu dump mes données de melvin de melvinx.dev etc mais je veux pas
+non plus que tu prennes tout donc juste que tu prennes les bons trucs donc là c'est ce qu'il
+est en train de faire et lui ici il a corrigé son et lui ici il a corrigé son problème et donc
+on va tester hop ciao donc là on a toujours le petit truc le petit chat qui s'affiche des familles
+on prend code lynx là ça affiche le petit chat là on a finalement le vu qui a apparu enfin ça
+fait six mois qu'on essaie de faire ce vu et là je vais dire évidemment il faut pas l'afficher
+dans l'uai pas besoin d'afficher le vieux dans l'uai donc là quand je le mets je lui fait fetch à
+nouveau pour tester et là on vient dans les logs on voit qui read page il fetch la page via cloud
+flair cette fois il récupère bien le contenu de la page et cette fois je pense qu'il va faire
+un réponse j'ai pu lire la page etc etc c'est parfait maintenant je vais demander à mon agent
+il a parfait ça fonctionne limite la lecture de la page uniquement aux domaines associés au site
+web ce qui permet à lia de lire des pages directement super facilement si c'est le
+domaine qui match et donc là le hack avec cette feature c'est que tu peux lui mettre dans ton
+contexte prompt les pages de tous tes trucs et lui peut aller lire les pages pour aller lire les
+différentes informations et là on pourrait d'ailleurs faire un read page plus poussé d'ailleurs
+ça c'est pas con moi je pourrais faire un read page plus poussé qui a réutilise de lia pour venir
+venir récupérer l'information dans la page que l'agent a besoin de récupérer donc ici c'est
+exactement ce qu'on est en train de faire donc là il peut fetch et aussi on peut lui ajouter de
+la mémoire donc normalement tchao on a ici les websites j'avais envie de passer toute cette
+app en client side rendering parce qu'actuellement c'est super lent peut-être que je pourrais passer
+toute cette page d'organisation en client side rendering c'est déjà un petit peu ce que je
+faisais donc voilà same domain only parfait parfait et donc en fait là ce qu'on peut faire c'est que
+quand on a un site comme code links.dev juste ici en fait j'ai créé un agent ya de fou furieux pour
+vous aider quand vous avez des problèmes il vient tous les jours récupérer toutes les nouvelles
+discussions pour venir créer des memories donc ici on a high memories et donc là par exemple je
+peux faire une mémoire quelle est la meilleure formation pour créer un sas avec lia sans coder
+c'est high builder tu peux rejoindre en cliquant ici mlv join builder hop on ajoute cette mémoire
+et en fait c'est question and swear qui vient être ajouté ici soit de manière manuelle soit
+de manière automatique et là si je lui dis quelle est la meilleure formation pour apprendre à créer
+des sas si je sais pas coder il devrait être capable de réutiliser l'outil search memory avec
+sas et là il peut récupérer la meilleure formation c'est de rejoindre a builder ok tu vois que c'est
+assez magique en fait il peut récupérer les mémoires comme ça alors le mieux ce serait même
+de passer en petite en petite database ici de sauvegarde mais c'est vraiment pas mal
+on peut voir qu'ici ça a bien fonctionné et donc on a un agent ya encore plus smart qu'avant donc
+c'est magique c'est magique on a créé l'agent ya ultime je veux aussi vérifier que le setting ici
+always idle fonctionne bien puisque j'avais fait ça il ya un petit moment et depuis je sais plus
+si ça fonctionne donc le but c'est de pas afficher away parce que des fois away ça donne pas envie
+de tchater mais idle voilà idle ça permet plus d'avoir envie de tchater donc si j'ai rajouté ça
+ici l'image ça fonctionne bien et on a toujours le drag and drop complet oh mais le drag and drop
+il est en light mode aussi drop image to upload mais il est con mais il est con le drag and drop
+est en light mode fix it please dans le widget on a une méga erreur de la mort light mode dégueulasse
+url demandé autorisé pas autorisé c'est parfait lia peut lire n'importe quelle page du site pour
+mieux répondre aux questions du visiteur parfait parfait on a fait un truc incroyable on a fait un
+truc incroyable on va aussi pouvoir vérifier subfast ah vous voyez que la migration a marché
+directement je lui dis rajoute moi des données va chercher dans les autres databases et maintenant
+on a des données et là maintenant on a les vidéos qui sont bien plus jolies créer une vidéo certes
+project alors là c'est quand même pas super beau c'est pas non plus super super beau fin c'est c'est
+ok ça respecte lui x etc moi je vais lui dire inspire toi un peu de lui x et de la classe du
+component command plus casseur pour faire une expérience qui fait waouh j'ai envie d'utiliser
+cette tape jusqu'à la fin de ma vie tu vois et si vous êtes youtubeur utiliser cette table c'est
+tout simplement magnifique regardez toutes les miniatures qu'on a fait toutes les miniatures
+qu'on a fait c'est fanta sti casse allez hop lui part en code lui il a corrigé son problème
+can you show the screenshot le problème c'est que quand je prends une image et que je drag and
+drop ça dans le chat on a une sorte de vieux truc white dégueulasse un peu difficile de
+faire un screenshot parce que je suis obligé de drag and drop mais on a en fait un drag image
+qui est en light mode avec background light alors que le widget est en dark mode donc ça c'est
+vraiment pas très beau est ce que tu peux fixer ça hop on lui envoie ça voilà donc là ici le bug
+c'est que quand on fait le screenshot et qu'on drag ça c'est pas très beau mais en fait c'est
+dur de faire le screenshot comme ceci peut voir les images et on peut voir aussi qu'il y a pas
+le bouton reply donc déjà je pense je suis pas très fan de ces boutons il y en a deux déjà si
+je vais en rajouter un troisième tu vois que si ici je fais slash apx a add the button reply inside
+the chats add the UI UX experience to see the reply and add the click on the reply in the widget
+that's redirect to the message correctly like the admin interface please make clean code allez
+toujours mettre un petit peu de clean code comme ça il s'énerve un petit peu donc là on peut voir
+qu'il a apparemment corrigé non il n'a pas corrigé c'est normal il n'a pas corrigé parce
+qu'on est obligé de refresh pour voir la correction hop alors là je pense que j'ai un peu trop spammé
+de clics j'ai un peu trop spammé de clics on va pas spamer de clics l'histoire on va le
+on va le respecter un petit peu et là quand je fais un screenshot et que je drag maintenant
+il y a une sorte de double il y a une sorte de double drag je sais pas trop comment je peux faire
+un double screenshot voilà brainstorm l'interface parce que actuellement il y a une sorte de double
+drag dégueulasse essaie de faire vraiment un truc super clean avec un drag and drop normal qui
+permet d'avoir une expérience super clean dans notre application quoi je te demande pas non plus
+la lune ici on est d'accord j'espère que tu me l'accordes il faut savoir parler aussi à les amis
+j'aime bien parce qu'il me traduit des fois en anglais des fois il ne traduit pas et tout c'est
+assez drôle lui il va ajouter son petit reply bouton on va voir s'il arrive à le faire avec une
+bonne ux ici dans save it dot now on a fait ça là je pense que je vais lui dire vas-y normalement
+j'ai update la doc j'ai choisi use chao parce que bla bla bla ouais mais normalement j'ai update la
+doc normalement maintenant tu peux arrêter les conneries à utiliser les bons trucs widget
+sdk référence mais je dois publier une nouvelle version du package ouais ça marche bien ça je
+dois publier une nouvelle version du package donc pour publier une nouvelle version du package si
+je me trompe pas je dois aller dans package ensuite je dois aller dans chao guide statue
+on va lui dire commit all commit all current change et là je dois faire pnpm publish non
+pnpm relays donc là ça lance un build une fois que ça build ça va me demander mon petit token
+machin on va faire une mineure on va dire yes ici généralement il me dit que je ne suis pas
+connecté et ça termine c'est pas non plus super fun npm login ça on doit se faire chier à ce
+login 100 fois par jour sur cette merde non seulement ils arrivent pas à foutre un lien
+qui fonctionne quand on clique dessus voilà open de browser non seulement faut foutre ce
+otp code 100 fois par fucking jour de quoi avoir envie de se tuer chaque fois que je fais ça je
+dois toujours faire ça et là il me redemande un token mais c'est une dinguerie donc là hop tu
+rouvres et tu dois refoutre ton otp token activer le do not challenge afin de ravoir un otp token
+et maintenant on a publié la version maintenant peut prendre la doc et lui dire ici install de
+version 1.1.0 de chao que je viens de publier et utilise la documentation latest non mais la
+complexité du widget le code il est parti en brille il m'a fait un code maintenant qui est d'une
+complexité à toute épreuve mais au moins on s'éclate c'est vraiment une app de l'éclate
+que j'utilise pardon maintenant au quotidien donc c'est quand même cool on va voir si ici
+c'est un peu énervé il nous a fait une expérience ah bah voilà une expérience alors le create new
+vidéo est un peu dégueulasse il manque des spacings mais sinon c'est bien là regardez moi
+cette UI de zinzin du furieux de la beauté parfait juste le bouton pour ajouter une nouvelle vidéo
+est un peu dégueu stp rajoute spacing et fait un bouton qui match le style du reste de l'application
+boom et je peux tester normalement aussi sur mon iphone normalement j'ai rajouté du coup
+ce chao pour que ce soit une app mobile non vous savez le machin exporté exporté l'application
+de l'histoire directement sur le mobile j'avais envie de faire ça parce que du coup je réponds
+à pas mal de gens sur mobile mais mais l'application est un peu dégueu sur mobile donc donc ça
+fonctionne bien j'ai là sur mobile regardez moi ça je vais demander de faire ça juste avant avant
+d'enregistrer la vidéo mais je lui ai juste demandé de faire ça je lui ai dit fais moi ça après je
+n'ai même pas regardé et là maintenant on a une app mobile et là je peux cliquer dans le chat
+test et ça envoie bien c'est joli on a les infos je peux switch à super vite c'est parfait j'ai
+rajouté l'app mobile les amis c'est trop bien les amis ça c'est vraiment trop bien et là je
+montre le mauvais écran mais lui il est en train de s'énerver avec son création de vidéos de zinzin
+on va voir un peu ce que ça a bah voilà créer une vidéo c'est pas mal mais il manque un spacing
+il manque un spacing maintenant et peut-être de manière plus simple on a ces actions en bas
+on pourrait juste ajouter une action créer une vidéo avec un shortcut ou tout simplement un
+bouton dans lequel on clique évidemment les deux en fait hop là je pense qu'on va pouvoir créer
+une expérience sympa et c'est là aussi où on voit en fait un truc important c'est que même si
+j'utilise que l'IA pour coder et que j'ai même pas d'éditeurs de code actuellement et que je
+m'amuse avec 25 terminal c'est quand même moi qui teste et qui regarde tu vois qu'ici je vois
+qu'il y a des boutons select and close et je me dis mais pourquoi on me montrerait pas le create
+vidéo ici en bouton avec un raccourci clavier du style P ou je sais pas il va choisir et comme ça
+on a une meilleure expérience vous voyez le thinking toujours toujours think des trucs un
+peu original des trucs qui vont envoyer du lourd etc donc là typiquement exemple 1 lui il s'est
+énervé je pense qu'il est en train de s'énerver avec des styles de zinzin de quoi d'avoir envie
+de me tuer on va refresh pour voir un petit peu ce que ça donne le widget donc ça c'est le widget
+que vous pouvez accéder maintenant sur mon site c'est une app que j'ai développé qui fonctionne
+mais là on peut voir qu'il ya reply mais reply reply reply ne fait rien donc là je vais tout
+de suite te dégommer la gueule bon il ya le bouton reply mais quand tu reply exactement comme l'admin
+il faudrait voir le message dans lequel on reply au dessus de la box pour envoyer un message ça
+serait beaucoup plus beau et moderne hop on lui on lui prompt injecte la gueule on lui envoie ça
+est ce que je vous demande aussi est ce qu'on mobile ça fonctionne toujours bien alors c'est
+quoi mobile pour lui exactement ça fonctionne pas en mobile à faire un autre agent clear slash
+one shot en mobile ouvrir le chat devrait un j'ai déjà mis l'image putain un affiché le chat de
+toujours en full putain de screen 3 pas de boutons à grandir en mobile implément de ça
+sans changer le desktop bah oui si tu me change le desktop ça sert à rien je après je t'apprécie
+peut être le problème c'est que la première fois que je lui ai demandé ça il m'a aussi changé le
+desktop donc après je lui ai dit de le changer sur le desktop donc il a enlevé sur le mobile et
+maintenant je me retrouve avec un truc sur un mobile qui marche pas non plus donc c'est parfait
+on lance un deuxième agent qui va faire la même chose ici est ce qu'il a fixé le dragon drop
+overlay bah voilà là c'est joli drop image here up to 10 mégabytes mais c'est un malade up to 2
+mégabytes bah oui non mais moi je veux pas que les gars me plot de 10 mégabytes dans la face je
+vais me tuer mais bon serveur il va se tirer une balle il va plus pouvoir fonctionner donc là
+apparemment il a un peu corrigé son il a un peu corrigé son erreur et lui est ce qu'il m'a
+corrigé là je pense qu'avec subface je tiens la meilleure ui pour vidéo new vidéo alors là
+le bouton new vidéo devrait avoir un border radius en mode outline et il devrait avoir un
+shortcut du style command plus n ou un autre shortcut qui vient pas se battre avec le reste
+des choses tu vois utilise un beau bouton une belle ui moderne classe ok une fois qu'il aura
+fini ça en fait je vais réutiliser ce composant et ce style pour venir en faire d'autres ça va
+être très très très très très très joli ça va être très très très joli bravo alors là je
+suis excité alors là je suis excité les amis à mes codés est un kiff ultime un codé est un kiff
+ultime on est là on a on a juste l'application qui est en train de se créer sous nos yeux avec
+les conseils qu'on lui donne de manière assez magique donc lui est toujours en train de s'énerver
+là avec son widget app j'espère qu'il va terminer donc là il me dit mobile app widget a été corrigé
+quand je clique il ya le full screen quand je vais en mobile ça prend le full screen c'était pas
+non plus compliqué à faire il l'a fait plutôt simplement et donc là quand je fais reply ça
+ça fonctionne à pas ça fonctionne à pas d'eau ça fonctionne à pas d'eau tu sais pas d'eau alors
+là c'est là le machin il est sous l'eau il est en train de respirer ça fonctionne fonctionne pas
+fonctionne pas fonctionne pas d'eau fonctionne à pas d'eau le new vidéo aussi il a fonctionne à
+pas d'eau fonctionne à pas d'eau fonctionne à pas d'eau les amis j'espère que le son n'était pas
+trop fort je normaliserai le son après on est déjà à une heure et demie on fait une très
+longue vidéo maintenant sur cette chaîne on est passé en mode vidéo longue vidéo trop
+longue vidéo très longue mais mais c'est c'est pas mal donc ici use that key n parfait parfait
+bah voilà là des fois il fait des trucs bien mais il m'a pas fait un bouton outline voilà là il est
+en train de modifier son bouton et lui apparemment il a fini aussi on va aussi le refresh à dos on
+est obligé de refresh à dos tout le temps le widget à dos sinon ça refresh à dos pas dos et là
+si je fais reply bah voilà une interface qui envoie du lourd yo mais là on voit pas le reply
+là je viens de reply à un user mais dans le chat on voit pas le reply bah oui faut faire
+faut faire le reply partout quoi on va pas non plus faire un reply que d'une seule manière le but
+c'est d'avoir un truc qui envoie du lourd donc là apparemment il nous a changé le bouton
+new vidéo n c'est parfait on le voit et là si je fais n ça fonctionne pas n new vidéo boom et
+donc là je vais lui dire cette interface est de manière lunaire parfait à dos j'ai un peu la
+flemme de modifier la inspiration inspiration page je pense qu'il va un peu galérer je sais pas
+s'il va être capable parce que là vous voyez dans ces miniature on a ici les références et
+qu'on ajoute les références à cette interface qui est quand même bien moche je vais essayer je
+refactor cette interface de inspiration avec le même style pour voir si tu es capable de faire
+un truc qui envoie déplace le bouton pour créer en bas à gauche la même chose et fait le même
+interface avec la search box et les filters qui sont affichés de manière correcte sur l'application
+garde la grade même si c'est commande ce sera très joli et moderne je n'en doute pas une seconde
+pourquoi il thumbnail vidéo sélecteur mais non mais en fait il a deux composants qui font la même
+chose j'en étais sûr je l'avais dit je l'avais dit je l'avais dit et donc là j'ai une application
+de merde qui vole mon raccourci pour m'afficher ce truc c'est pas très grave non non non non non
+mais c'est débile unifi les deux interfaces pour avoir qu'une seule dialogue et duplique pas
+le code ça c'est typiquement preuve de high slope quand vous faites une app c'est si l'IA commence
+à tout dupliquer et qu'il y a eu aucun développeur qui a dit qu'il fallait arrêter de dupliquer
+là on voit thumbnail vidéo sélecteur de générateur et là on voit vidéo sélecteur de dialogue donc
+on a deux fois le même composant pourquoi est ce que tu du coup chaque fois qu'il fait un truc là
+il est à 79% de contexte parce qu'il a fait le même truc 100 fois ce qui est totalement débile
+donc attendez là il rajoute le repli to id dans son truc ça va être ça va être parfait à dos
+ça va être parfait à dos comme ça on va avoir le repli to dans le chat vu qu'il n'a pas rebuild
+en fait le widget on n'a pas on n'a pas là moi ici il m'a dit qu'il a réussi à fixer à dos le
+widget et donc on va tester on va vérifier finalement si c'est vrai je vois toujours pas
+le replay je vois toujours pas le replay malgré un refresh complet je suis désolé mon ami mais
+tu n'as pas fait la chose et je suis pas sûr de comprendre aussi qu'est ce qu'il est en train de
+faire donc tu vois c'est là où il y a le côté engineer qui est obligé de revenir depuis avant
+là il me fait n'importe quoi je ne se rappelle plus génération et thumbnail, erreur, modèle,
+en fait tout est thumbnail tout devrait être alors il va falloir compacter parce que de toute
+façon il va s'énerver slash compact rappelle-toi des fichiers etc hop là je vais dire tout doit
+être thumbnail on n'ajoute que des thumbnails aux miniatures aux vidéos c'est tout supprime
+toute l'ancienne logique qui incluait aussi des générations pour remplacer par des thumbnails
+et simplifier de manière drastique ce composant et la manière de faire qu'on avait stp bon normalement
+on va corriger tout ça ça va être parfait et lui convert message function ok des fois en fait
+le problème c'est que la plus la complexité grandit plus il oublie de faire des choses ou plus il va
+faire les choses un peu vite fait ici c'est ce qu'on a mais avec un petit peu de avec un petit peu
+d'amour voilà maintenant on peut voir juste quand je clique dessus ça marche toujours pas quand je
+clique sur le message ça scroll pas au message cible émogies tristes émogies tristes ça lui
+donne vraiment les infos comme quoi comme quoi t'es pas t'es pas content quoi comme quoi t'es un
+peu triste ça permet de l'aider et du coup ici j'ai fait la limitation 2 mégabytes je lui dis
+vérifier aussi que la limitation est côté back-end ça va nous permettre d'être sûr que le truc est
+bon et derrière on a cinq donc ce que vous voyez j'ai fait compact et après je lui envoie
+direct un prompt donc comme ça dès qu'il a fini de compacter ça ça ajoute directement à la
+bonne chose et donc là tu peux voir qu'il est capable de tout simplifier il va tout simplifier
+ça ça va être magnifique on va avoir un code clean tu vois que vous pouvez publier du code de
+manière dans prod et après changer ça en code clean comme je le fais ici ça arrive plus souvent
+que vous croyez ça c'est quoi c'est le dashboard c'est pas grave pour l'instant pas de dashboard
+ciao widget intégration il a fait ça il a il a arrêté contexte limite riche mais des fois il
+est con ce truc il a même pas commencé c'est c'est c'est j'ai zoomé en même temps il a pas kiffé
+zoom zoom clique de quoi le de quoi le tuner donc là il a rajouté le clic et là il a rajouté la
+limitation du plot d'image c'est parfait rate limite de upload image 2 maximum et donc là
+quand on clique ça scroll vous voyez qu'on peut tout faire on peut tout faire on a réalisé à
+faire notre petite feature on a tout ce qu'il faut ici dans ce chat c'est magnifique on peut le
+mettre quoi pourquoi maintenant quand il est en grand il passe à gauche mais c'est pas possible
+mais c'est pas possible et pourquoi il ya toujours le chat ici ça c'est l'autre ça c'est l'autre ça
+c'est l'autre et maintenant quand je mets ce putain de widget en full screen il s'affiche à gauche
+pourquoi je change ça c'est toujours à droite c'est toujours en fonction du settings au même
+endroit que la bulle mais un effort putain mais non mais des fois il est con des fois il est con
+des fois il est con bon ici on ajoute tout ok c'est parfait il est en train de corriger en
+corriger toutes ses erreurs ça va être parfait éviter de dupliquer 500 fois les mêmes les mêmes
+codes c'est quand même quelque chose de généralement intéressant et là je lance le
+refactor de l'ancienne page comme je t'avais dit avant en même temps ici terminal 1 ici j'ai
+l'impression qu'il a corrigé son erreur il a bu le widget on va voir si maintenant quand je
+mets en full screen il arrête de me faire littéralement n'importe quoi voilà ça c'est
+parfait et là maintenant on peut toujours cliquer pour scroller parfait c'est magnifique
+là vous voyez je peux venir je peux répondre à ce message là pourquoi tu as dit ça et là quand
+je clique ça vient me scroller directement au message c'est magnifique c'est une très très bonne
+expérience et là ici il rajoute un rate limiting pour les images puisque je me suis ici un gamme
+upload 12000 images ça va quand même me faire un peu chier donc j'ai rate limiter tout ça et là
+il est en train de dev ça lui il a dev ça et lui il est en train de dev ça et en même temps il dev
+ça on n'est pas mal on n'est pas mal on n'est pas mal on n'est pas mal sur le concept vidéo
+sélecteur dialogue on va voir si on peut toujours upload des images ou s'il a pas du tout fixé ça
+test ça fonctionne toujours vous voyez quand on sélectionne l'image ça l'affiche ici mais
+encore une fois il y avait un bug c'est que ici le overlay devrait être au dessus du chat
+le overlay de l'image dans le widget devrait être au dessus du chat pas en dessous je pense
+hop on lui envoie ça avec l'image lui il a corrigé ça hop hop et lui il code non lui il explore
+il explore et là il a corrigé son vidéo sélecteur dialogue on va voir si ça fonctionne
+toujours si on a le bouton plus alors plus hop added et là on va dans vidéo à chaque addition de
+vidéo refresh le tan stack query hook pour éviter d'avoir des données non synchronisées stp mais
+voilà ça marche c'est juste que maintenant c'est tu aille aussi elle est plus simple generation
+4 generation tout ça ajoute les slots permet d'ajouter des petits éléments comme ceci et
+on a tout qu'est bon on a tout qu'est bon qui finit bon dans la vie du bon alors il ya juste lui je
+pense qu'en train de s'énerver non mais c'était bien non non non non c'était bien radix dialogue
+juste le faire s'afficher plus haut on est responsibles on est respectueux de l'accessibilité
+ici hop là 69 dollars on n'a pas dépensé tant d'argent que ça tu vois j'ai l'impression
+que ça dépense moins qu'avant avant j'aurais dépensé beaucoup plus en faisant tout ça mais
+voilà un petit peu comment je travaille sans aide cette fois on a une méthode de travail un
+peu différente que la dernière fois on peut voir que ça change très vite donc voici si vous avez
+kiffé ce long long long long long format où je m'amuse juste à conner et faire des features
+parce que c'est mon dernier jour de session donc je sais qu'aujourd'hui je peux bombarder les
+features au max dites moi en commentaire et on se dit à bientôt ciao ciao

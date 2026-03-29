@@ -816,6 +816,22 @@ Langage naturel directement, PAS de commandes/skills. Economise du contexte.
 - Attention aux mauvais chats avec plusieurs terminaux ouverts
 - Fautes d'orthographe OK — l'IA comprend
 
+### Techniques de live coding Melvynx (extraites de 2h de sessions filmees)
+- **Apex vs OneShot** : apex pour features complexes (plan obligatoire), oneshot pour taches rapides et sures
+- **Brainstorm** : commande "token maxi" qui force l'IA a reflechir en rounds successifs pour problemes difficiles
+- **Debug par screenshot** : prendre un screenshot pour donner du feedback UI a Claude (plus efficace que du texte)
+- **Multiples terminaux paralleles** : lancer plusieurs agents sur differentes features/bugs simultanement, alterner entre eux pendant que l'IA reflechit
+- **Relancer Claude quand il bloque** : aide souvent a debloquer (~33% contexte = limite pratique)
+- **Rules dynamiques** : quand l'agent fait la meme erreur 5+ fois, ajouter une rule en memory immediatement
+- **Desactiver auto-compact** : garder suffisamment de tokens de reflexion (120K utilises sur 200K)
+- **Erreurs TypeScript/ESLint** : les injecter UNIQUEMENT si l'agent les a produites (critique avec plusieurs agents)
+- **"Always be thinking"** : demander a Claude d'imaginer une UX meilleure que celle demandee
+- **Prompt UI avec "clean code"** : inclure le mot dans le prompt pour eviter du code degueulasse
+- **Fetch page markdown** : creer un tool custom pour que Claude lise les pages du site en contexte (restreindre par domaine pour securite)
+- **Ghostty** : editeur multi-table pour gerer 5+ projets en parallele
+- **Convex** : real-time DB recommandee par Melvynx ("magique, automatique")
+- **Telegram + Claude agents** : deleguer des taches secondaires automatiquement via Telegram
+
 ---
 
 ## CHAPITRE 9 — SECURITE
