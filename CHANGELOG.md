@@ -2,11 +2,29 @@
 
 ## [V4.0] — 2026-03-29
 
-### Mise a jour majeure : 23 nouvelles transcriptions Whisper (1502 → 1698 lignes, +13%)
+### Bible V4.0 — 21 chapitres, 1714 lignes, 59 sources fusionnees
 
-- **Chapitre 21 — Comparatifs & Benchmarks** (NOUVEAU) : Opus 4.5 benchmarks, Claude Code vs Cursor vs GitHub Copilot, pricing reel, verdict longevite
+Fusion massive de 23 sources supplementaires (59 total). 3 passes de verification par 12 agents swarm — unanime : BIBLE COMPLETE.
+
+### Nouveaux chapitres
+- **Ch.21 — Comparatifs, Benchmarks & Garde-fous hardcodes** : Opus 4.5, Claude Code vs concurrents, jdupes/fdupes (4 etapes doublons), memoire chaude/froide, pre-commit hooks, isolation environnement
 - 217 sections totales (vs ~180 en V3.3)
-- Sources : 36+23 = 59 videos/transcriptions Melvynx fusionnees
+
+### Ajouts majeurs
+- Core 7 terminologie Melvynx
+- Chaining multi-skills (3+ skills en une commande)
+- NowTS boilerplate (ZodRoute, Upfetch, commentaires inline)
+- Chrome pair-browsing + pause login auto
+- Teams self-claim
+- Ralph parametre -N
+- StatusLine usableContextOnly + couleurs progressives
+- Cowork Dispatch/Channels
+- OpenClaw tips (anti-ban, email auto-apprentissage, Telegram share, workspace backup)
+- Pricing details (237$/jour, 80% users <200$, expense marketing)
+- Skills : pnpx, prompt injection warning, taguer au milieu du prompt
+
+### Config Mac
+- `autoCompact: false` ajoute dans settings.json (+45K tokens libres)
 
 ---
 
