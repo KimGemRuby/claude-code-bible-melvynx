@@ -1,0 +1,644 @@
+Ça fait plusieurs années que je suis développeur et aujourd'hui j'ai envie de tester un truc.
+Cloud Code est devenu tellement puissant et devenu tellement dingue que je me suis dit
+j'ai une Watch et j'ai envie de coder une application pour Apple Watch.
+Pour faire ça, dans mon souvenir, il faudrait que je vérifie mais le mieux c'est d'utiliser du Swift.
+J'ai fait un peu de Swift dans ma vie mais pas beaucoup et je me suis dit
+avec Cloud, avec les outils modernes, on va essayer de vibe coder une application
+en sachant que je suis développeur et que j'ai déjà fait du Swift.
+Et donc aujourd'hui, je vais essayer de créer Paddle Pro qui va être une app
+qui permet de faire des matchs de paddle parce que j'en fais beaucoup en ce moment.
+Et pour compter les points, toutes les apps ne sont pas top et notamment elles ne font pas tout.
+Moi j'ai envie qu'elles fassent des comptages basiques de points,
+j'ai envie qu'elles fassent des argentinos et des américanos.
+Et donc, j'ai tout simplement créé un projet VS Code sur mon ordi
+et j'ai écrit un premier draft de ce fichier avec un PRD qui explique tout ce qui doit être fait.
+Et dans ce PRD ensuite, j'ai dit à Lya, bam, ghosty, je lui ai ouvert,
+j'ai un PRD, lance la tâche de faire une app iOS.
+Donc là, on est sur du vibe coding.
+Pourquoi ? Parce que je ne suis pas développeur iOS et je comprend brièvement ce qui se passe.
+Pour te dire, je n'ai même pas créé un projet sur Xcode,
+c'est-à-dire que je suis direct passé par VS Code et je lui ai dit créer l'application.
+Et donc aujourd'hui, on va voir un peu ce que ça donne, vibe coding avec Claude.
+Et pour du vrai vibe coding entre guillemets parce que mon but c'est que je ne vais pas coder
+parce que je ne suis pas super capable de faire ça de manière super clean.
+Donc on va voir ce que ça donne.
+Et jour 2 où je vibe code une app iOS et c'est pas facile tous les jours.
+C'est niveau UI sur iOS, il n'est pas au top du top
+et il y a beaucoup de logique à gérer.
+Donc évidemment, moi, j'ai de la chance parce que j'ai fait du iOS.
+Je comprends ce qu'il fait, je sais ce qu'il fait, je vois ce qui se passe.
+Ce n'est pas inconnu.
+Mais voilà, il fait des trucs un petit peu de retard.
+Ici, il me dit, il m'a créé une fonction, il m'a fait une tout doux.
+Bref, du coup, ici, j'ai Xcode qui update la preview en live
+et à gauche, j'ai Claude Code.
+Et donc, c'est là aussi, on voit la magie de Claude Code,
+c'est que je peux continuer à travailler sur Xcode,
+voir les modifications qui se font en live comme ceci avec les erreurs.
+Lui, il sait comment corriger les erreurs et donc ça, c'est vraiment le hack.
+C'est que si tu codes avec l'IA sur iOS,
+mais tu n'as pas moyen de savoir si le code fonctionne ou pas.
+Comme il vient de le faire juste ici,
+tu vois que s'il a vérifié la compilation, il a eu l'erreur,
+qui est l'erreur que j'ai juste ici.
+Il a besoin de connaître les erreurs.
+D'ailleurs, si tu n'es pas développeur
+et que tu ne lui expliques pas comment voir les erreurs
+et que tu t'amuses à le faire à la mano, tu es mort.
+Et donc là, il me dit, c'est terminé.
+Il m'a fait une tout doux, donc je lui ai dit,
+tu n'as pas fixé le americano, tu as fait n'importe quoi,
+tu as laissé une tout doux.
+Remove la tout doux et termine la logique.
+Donc voici l'UI pour un argentino.
+Et donc ici, on peut voir qu'on a les points qui fonctionnent bien
+avec les valeurs de score pour chacun des joueurs.
+Et quand on arrive à la fin, ça arrive à la fin.
+Juste que le problème, c'est que ça reset la game
+au lieu de faire autre chose.
+Et donc là, on peut voir qu'avec ces prompts,
+ça bouffe du token, mais ça mange, ça mange du token.
+J'ai fait ça depuis 15 minutes.
+Si je te montre ça, on est déjà à 5 dollars 20 d'API.
+On a déjà burn 8,5, 8,5 mille tokens.
+Et oui, on est, on est à 12% de ma session.
+On a, on a à peine commencé la session.
+On a déjà bouffé du token comme je sais pas quoi.
+Et donc là, il a fait pour la troisième fois un compact de conversation
+parce que j'utilise la même conversation, évidemment.
+Et donc encore et encore et encore et encore et encore.
+Le but, c'est qu'il arrive à résoudre ses problèmes
+pour venir faire ça.
+J'espère vraiment qu'il va le faire.
+Sinon, je suis dans la merde.
+Ok, ok, après un très, très, très, très long travail,
+après des milliers de tokens générés,
+des milliers de tokens générés,
+55 dollars d'API utilisés.
+J'ai maintenant l'application iOS qui est juste ici
+et toutes les features du watch qui fonctionnent.
+J'ai fait un GitHub repository.
+Et juste regarde moi cette conversation.
+Je peux scroller sans m'arrêter pendant des heures
+et on peut même pas arriver à l'historique tellement il y a de choses.
+Sinon, le terminal cracherait littéralement.
+J'ai fait du vrai, vrai, vrai vibe coding.
+Donc malgré que je comprends le code qui est généré,
+donc je suis capable de dire des fois là, tu fais n'importe quoi.
+Ça n'a aucun sens et je suis capable d'utiliser les bons keywords.
+Mais il y a tout qui a été vibe codé.
+Il a créé l'application de A à Z lui-même.
+Et donc maintenant, le challenge, ça va être de le lancer sur mon iPhone.
+Et donc il m'a donné, je lui ai dit, comment est-ce que je fais pour lancer cet app sur mon iPhone?
+Et donc là, il dit, moi je dois prendre mon iPhone et le mettre sur mon e-vive.
+Donc là, je dois le sélectionner et je dois cliquer sur trust.
+Et du coup ici, là tu vois que j'ai trust sur computer, trust.
+Ensuite, je mets le code.
+Et maintenant, est-ce qu'il me dit qu'il est bon?
+My iPhone is not available because pairing is progress.
+C'est pas grave.
+On va lancer.
+Et donc là, ça ne marche pas.
+Breathe and run the main app.
+The watch app will automatically install off your paired Apple Watch.
+Il faut que j'active aussi sur la watch.
+Regardez, trust is computer.
+Ici, on a l'application.
+Et donc là, on déverrouille la watch et on dit trust.
+OK, donc on revient ici en même temps.
+J'ai bien Apple Watch.
+Mon application paddles avec ici les matchs, les settings.
+Ici, il me dit que l'Apple Watch, elle est connectée.
+Alors en dessous, c'est écrit not reachable, donc je ne sais pas ce que ça veut dire.
+Et si je vais sur mon Apple Watch, une erreur sur l'Apple Watch, comme quoi l'intégrité de l'application ne peut pas être vérifiée.
+Ce qui est très relou.
+Pourquoi l'intégrité de l'application ne peut pas être vérifiée ?
+OK, donc cette fois, on a l'app qui fonctionne.
+On va essayer tout simplement de venir build l'Apple Watch sur cette watch.
+Quand je clique ici sur la watch, always version lower than deployment targets.
+Ah mais t'es vraiment un fils de pute.
+OK, sur la watch, il y a aussi un développeur mode.
+Il fallait le savoir.
+Il faut aussi restart la watch.
+Non mais quand même, ça processe.
+On résout les problèmes.
+On est développeur.
+C'est aussi là un autre truc qu'on voit qui est intéressant.
+C'est que si tu n'es pas développeur, tu dois faire tout ça.
+Tu dois faire tout ça, mais c'est compliqué.
+Ah oui, là, c'est galère puisque là, je suis constamment en train de voir des bugs, de demander, de chercher, de débugger.
+Et non développeur qui fait des app iOS.
+Alors là, je pense que c'est compliqué.
+Et encore, moi, j'ai de la chance parce que j'ai fait plus de six mois full time iOS.
+Donc autant dire que toutes ces conneries, je les ai un peu dans la mémoire aussi, même si ce n'est pas tout neuf.
+Je suis calé, un peu.
+Je suis un peu calé.
+Je suis assez calé en tout cas pour le faire.
+Et donc c'est pour ça que j'arrive un petit peu quand même à utiliser l'Apple Watch.
+Je suis déjà à 57 dollars de tokens utilisés.
+Et donc autant dire que ça bosse.
+OK, donc encore un petit test.
+On rebueille l'application sur l'iPhone qui est toujours branchée correctement.
+On a bien l'application qui fonctionne sur iPhone.
+En tout cas, elle s'est lancée.
+Pas très jolie en dark mode, mais on s'en bat des couilles.
+Et sur l'Apple Watch.
+Oui, ça, c'est ma tête quand je pleure, quand je pleure parce que je ne sais pas si ça fonctionne.
+Et je suis en mode.
+Qu'est-ce qui se passe ?
+OK.
+Peut-être que ça a fonctionné.
+OK, après beaucoup de travail, je peux vous annoncer qu'on a réussi à faire cette histoire.
+On a l'Apple Watch juste ici.
+Et donc on va venir trouver un moyen de montrer en live qu'est-ce que ça donne.
+Ici, je peux créer un match, donc par exemple, américano.
+Je peux dire combien de service je veux avoir juste ici.
+Donc, par exemple, deux services par personne, ça va faire huit points.
+Et donc là, quand je mets, on peut voir qu'il y a toutes les données qui s'update automatiquement.
+Je peux undo, je peux redo.
+Je peux cliquer, ça affiche la page.
+Et ensuite, je peux refaire un nouveau match.
+Je peux faire autant de matchs que je veux.
+En fait, ça ne s'arrête jamais.
+Et après, ici, on a toutes les données 260808 avec toutes les parties qu'on fait.
+Comme ça, on peut garder l'historique.
+On peut voir que ça scroll bien, que ça fonctionne parfaitement.
+On a juste l'heure ici qui s'affiche.
+Donc, c'est un peu moche de voir l'heure comme ceci en même temps que le timer.
+Donc le timer, il faudrait le déplacer.
+Mais sinon, on a un bon résultat.
+On peut terminer le match.
+Et ce qui ne marche pas, par contre, c'est que là, tu vois que je ne sais pas s'il y a deux Apple Watch qui sont lancés.
+Parce que ici, quand j'essaie de lancer une partie, ici, on fait en service.
+Et on fait des petites parties comme ceci.
+On peut voir que quand je end game, l'Apple Watch ne se fait pas à jour.
+Donc ça, c'est un peu problématique.
+On a aussi quelques UI issues.
+Tu vois qu'ici, ça fait un peu grand.
+Il y a cette header qui n'est pas très jolie.
+Donc je pense qu'on va totalement la déplacer, déplacer le timer quelque part d'autre.
+Ça va être beaucoup plus joli.
+Et trouver un moyen d'afficher les elf kits.
+Donc voilà, c'est trois tâches à faire.
+Je vais essayer de demander à Alia de voir ce qu'elle arrive à faire.
+Et on va checker.
+OK, jour deux de la création de l'application.
+Je fais ça en vibecoding sans d'autre chose.
+Donc on est vraiment en mode multitasking de con.
+Et donc aujourd'hui, j'ai rouvert l'application.
+Et hier, j'ai utilisé l'app.
+En fait, quand tu fais du iOS, tu peux utiliser l'app en l'installant sur ta watch de manière locale.
+Personne d'autre peut l'installer, mais toi, tu peux l'installer.
+Donc ça, c'est la première étape.
+Après, tu peux faire un test fly.
+Et après, tu peux la publier.
+Ça, c'est la troisième étape.
+Nous, on est dans la deuxième étape.
+Et du coup, j'ai eu un bug.
+J'ai eu un bug.
+En gros, parfois le state de la partie perd est perdu si tu arrêtes d'utiliser l'app pendant trop longtemps.
+Ce qui est infernal.
+Ce qui est très ennuyeux.
+Ce qui est très énervant.
+Parce que tu perds tout ton historique, etc.
+C'est un peu le but de la watch, de garder ton historique.
+Et donc ce matin, j'ai lancé un nouveau Cloud Code.
+Donc ici, VS Code.
+Ici, j'ai Cloud Code.
+Et je lui ai lancé la commande.
+Je lui ai lancé la commande slash explore plan code test avec ce prompt Make Deep Research à propos.
+Et comme ça ici, il va essayer de...
+On va voir s'il arrive à me générer du bon code du premier coup.
+En lui donnant beaucoup plus de contexte, beaucoup plus d'informations.
+Et lui disant, j'ai envie que tu Deep Research.
+Que tu Dip sur ce sujet pour me trouver la solution.
+Donc on va voir ce que ça donne.
+Et on se retrouve dès que c'est terminé.
+Bon, pendant qu'on est là, j'avais envie de te montrer un petit peu comment j'utilise l'IA avec cette application iOS.
+Donc ici, j'ai mon terminal, Cloud Code.
+Ça sert à rien de s'embrouiller avec d'autres trucs.
+Parce que de façon, on est en mode full vibe coding.
+Donc on s'en fout un petit peu.
+Et j'ai aussi...
+Voilà, donc on va mettre ça ici.
+Et donc ici, j'appelle la commande export explore plan code test.
+Qui est une des meilleures commandes qui permet d'avoir des résultats réfléchis.
+Et du coup là, j'ai envie de résoudre durablement le problème entre l'iPhone et WatchOS qui n'est pas bien synchronisé.
+Donc je vais lui dire...
+Donc là, tu vois que j'ai utilisé ma commande.
+Et ensuite, je vais lui expliquer vraiment ce que je veux.
+Et vu que je suis développeur et que j'ai l'idée ici, je vais même lui coller des bouts de code afin d'avoir les différentes choses, etc.
+On va même lui donner des informations.
+Donc là, je lui envoie tout ça.
+Et avec la commande explore plan code test.
+Contrairement à un simple prompt, il va venir travailler de manière beaucoup plus dure.
+Avec ici du thinking.
+Et là, j'ai fait un petit test.
+Et c'est un peu plus dur.
+Donc là, je vais lui expliquer tout ça.
+Et là, je vais lui expliquer tout ça.
+Et là, je vais lui expliquer tout ça.
+Et là, je vais lui expliquer tout ça.
+Et là, je vais lui expliquer tout ça.
+Avec ici du thinking.
+Et avec de l'exploration.
+Et donc là, tu vas voir qu'il va summon des tasks.
+Donc les tasks, elles vont être assez précises.
+Donc là, il ne m'en a summon qu'une seule.
+Ça arrive.
+Mais il va pouvoir en summon une ou plusieurs.
+Normalement, tu vois qu'il a dit parallèle ce badgen.
+Donc il m'en a lancé qu'un. Je ne sais pas pourquoi.
+Mais ça va lui permettre de faire la recherche.
+Le but c'est que Cloud code, étant donné qu'il n'a pas d'intexting de fichier.
+Et qu'ici on est un peu en mode vibe coding.
+on va vouloir faire en sorte d'être sûr d'avoir le maximum de contexte et donc pour ça il faut une
+phase d'exploration très très très intéressante comme on peut le voir ici. Ensuite il doit faire
+le plan, implémenter la solution et tester avec les différentes commandes donc on va voir ce que
+ça donne. Donc là on peut voir que Li a un peu pré terminé sa tâche, on peut voir ici toute la
+conversation donc je vais te la mettre juste ici. Donc on a commencé tcha tcha tcha tcha tcha tcha
+ici et on peut voir qu'il a explore bla bla bla bla bla ici il a fait le plan bla bla bla bla bla
+ensuite il a fait le code code code code code code et ensuite il a automatiquement testé donc le
+test ici ça veut un peu rien dire mais c'est tout simplement le build il a vu des erreurs il a vu
+des erreurs il a dit ok je dois résoudre ses erreurs il a corrigé les erreurs corrigé les
+erreurs corrigé les erreurs corrigé les erreurs et à la fin il m'a dit bah voilà maintenant ça
+s'est terminé donc ici en fait voilà corriger les erreurs corriger les erreurs la conversation
+est très très très longue ici il m'a généré du code généré du code généré du code généré du
+code généré du code et là il me dit bah voilà maintenant j'ai tout terminé j'ai amélioré le
+le design etc moi qu'est ce que je fais alors xcode c'est un peu dégueulasse donc si je te montre
+xcode juste ici et que je te fous ce menu de cons ici c'est lent ça marche pas très bien donc
+personne n'utilise ça quand tu utilises xcode autant utiliser directement github desktop donc
+ça c'est très pratique pour l'utilisation de xcode et comme ça tu peux review le code parce
+qu'on est quand même un petit peu des développeurs donc ici match view detail bon ici c'est du code
+ui donc il n'y a pas grand chose à review match type card tournaments dashboard view
+ancients and sisters match card ok tournaments and watch connectivity service et donc ça c'est
+le code compliqué donc j'y comprends pas grand chose alors là j'avoue donc là en fait il essaie
+de transférer les infos entre mon iphone et mon apple watch avec un timer de manière efficace
+etc et il vient décoder chaque match en fonction du type comme on peut le voir juste ici argentino
+match update et match update etc est ce que ça marche je sais pas je sais pas ce qu'on peut
+faire ici avec xcode qui juste là on peut venir prendre paddle pro et le lancer en fait sur un
+simulator est ce que les deux peuvent être connectés ensemble je sais pas donc si on
+prend l'iphone 16 pro max comme ça on a un très très grand écran d'ailleurs le prochain iphone
+que je veux m'acheter c'est un max puisque je me suis rendu compte que les grands écrans c'est
+cool donc bref moi je te dégage suis là et en fait normalement maintenant j'ai la ultra et j'ai
+l'iphone donc ça c'est toujours un sacré grand kiff de pouvoir dev avec des simulateurs donc ici
+on a l'application bam on peut cliquer dessus on peut voir que ça fonctionne plutôt bien on a
+les minutes on a les games avec les settings et à gauche en fait on peut voir la est ce que sur
+simulateur sur simulateur je peux ou pas voir la connexion entre les deux devices où ça va
+pas marcher donc là le code peut tout faire donc on peut évidemment lui poser des questions si tu
+le poses une question il va pas coder tu vois que là il est en train de manger du token donc
+manger du token c'est que là il est en train de streamer la réponse sauf que le code il
+t'affiche la réponse que quand c'est terminé donc en l'occurrence il est en train de me streamer
+une réponse qui va bientôt faire mille tokens donc ça va être long comme la mort même très
+très très très long ah non en fait c'est bon sur simulateur ne fonctionnera pas voici pourquoi
+watch connectivity ne fonctionne pas solution pour tester appareil physique non c'est bon
+t'as pas besoin de t'as pas besoin de créer un mode simulé donc bref en tout cas il a fait
+une meilleure il a fait une meilleure UI et là on peut voir que c'est pas reachable et d'ailleurs
+là je peux dire dans apple watch connexion sur le simulateur et donc là on lui envoie on lui
+envoie des petits prompts bref on a quand même nos deux simulateurs c'est trop cool c'est trop
+cool de pouvoir coder comme ceci avec nos deux simulateurs et c'est trop drôle d'avoir des
+faux iphones hop là un petit iphone ici pas de lois de juste ici et si ça c'est pas excitant
+je sais pas ce que c'est donc voilà on va essayer de de corriger tout ça et de tester ensuite je
+vais pas faire ça maintenant parce qu'en même temps je suis en train de faire autre chose mais
+c'est très intéressant ok les amis je suis super fier de ce que j'ai accompli c'est une app facile
+et à la fois compliqué ok parce qu'il ya beaucoup de connectivité et moi j'ai envie d'avoir une app
+vraiment qui correspond exactement à mon rêve ok je suis un perfectionniste et donc en ce moment
+j'ai deux agents qui travaillent ici avec le même code mais ils font des features totalement
+différentes et s'est trouvé des problèmes différents avec les bugs de connectivité mais
+je peux te faire une démo de l'application avec la watch alors on a l'application juste ici où tu
+vas pouvoir voir que déjà on va ensuite devoir trouver un moyen comme ceci pour afficher les deux
+en même temps mais là tu peux voir que si je commence un americano où on va commencer une
+game normale un basic start match et ici on peut voir que l'iphone a été mis à jour en live et
+ensuite si je fais un point tu peux voir que là ça affiche 2 0 3 4 j'ai changé de vue 5 6 et là
+game donc on a fini le 7 et ensuite je vais 1 2 3 4 5 6 et là on a fini le 7 et on voit que
+ça update là pas côté ensuite si si c'est cette personne là et là tu vois que je peux
+cliquer un peu n'importe où et ça va venir tout sauvegarder donc là je remets 6 points ici et là
+ça termine la partie comme on peut le voir juste ici alors ça termine la partie un peu brusquement
+mais on va fixer ça et ensuite dans match ici et ben j'ai mon match basique qui vient d'être créé
+ici et je peux voir l'intégralité des détails du match donc ici on a les scores game brown town
+game game game game game ici 0 game game game et là on a tous les points donc 0 game game 30 0 game
+game 15 30 game 0 0 0 0 0 0 alors on a encore quelques trucs qui fonctionnent pas mais on peut
+voir que ça rend plutôt bien on a ici toutes les parties qu'on a on peut retourner sur le match
+history on peut naviguer on voit notre stade il ya tout qui est connecté etc alors il a fallu
+pas mal de travail et du coup j'ai pu apprendre pas mal de trucs durant tout ça la première
+chose on va être que dans du coup le conseil là que j'ai découvert c'est d'ajouter des logs donc
+ici on peut voir que maintenant j'ai un pt mais une pt de log donc ça log mais dans tous les sens
+si là je vais dans la watch ça log log log log log log log log sans arrêt à quoi ça sert c'est
+que chaque fois que je veux tester un truc en fait je viens prendre les logs et je les envoie
+à l'IA game changer game changer l'IA qui jusqu'à maintenant comprenait pas les problèmes elle
+comprenait rien je lui ai dit ajoute des logs pour chaque étape chaque fois chaque truc qui
+se passe entre cette interaction compliquée donc qu'on appelle la connectivité entre la watch et
+l'iphone je lui ai dit maintenant tu ajoute les logs je veux quelque chose de super précis je lui
+ai passé les logs à chaque problème et je lui ai dit bah voilà maintenant et il a corrigé étape
+par étape chaque bug il les trouvait beaucoup plus rapidement etc donc log très très très bon tips
+et aussi recommencer les conversations ça fonctionne officiellement mieux donc sur cloud
+code reprendre la même conversation à l'infini c'est pas pratique utiliser mon prompt très
+spécial qu'avec les deux travail en même temps il ya des compilations erreurs parce qu'on a
+un qui a pas terminé son travail et l'autre il est en train de s'énerver parce qu'il se dit mais
+pourquoi il y a des compilations erreurs dans la face bref en général recommencer la conversation
+et utiliser le prompt explore plan code test ça fonctionne beaucoup mieux il va retrouver le
+contexte donc ça coûte beaucoup plus cher puisque chaque fois tu le fais retravailler il doit tout
+rechercher etc mais ça fonctionne super bien donc on avance bien et je vais faire d'autres tâches
+en même temps j'essaie de faire les deux j'ai deux bureaux et j'avance sur les deux en même temps
+hello on revient il est 3h44 de l'après midi et voilà j'ai quelques retours sur tout ça donc
+déjà j'ai parlé de tout ça à mon collègue et du coup j'ai voulu essayer d'intégrer swift data
+on fait ça de manière safe je lui ai dit crée une branche etc comme ça il fait son truc encore
+une fois le hack ultime ici c'est toujours d'utiliser le prompt de l'enfer et aussi de
+lui dire cette commande là chèque de build erreur comme ça il s'autocorrigent c'est le plus important
+pour éviter qu'il y ait des erreurs le build c'est magique les langages compilés c'est magique c'est
+à dire compiler ou transpiler on s'en fout mais typescript par exemple ça va venir faire des
+erreurs les builds xcode ça fait des erreurs ça résout des problèmes et c'est vraiment
+très efficace ensuite j'ai terminé la majorité de l'application c'est assez assez fou l'application
+est pas compliquée mais pourtant mais pourtant malgré que ce soit pas compliqué ouais il y a
+beaucoup de choses il y a beaucoup de choses il y a beaucoup de choses et lia ici elle a fait
+un travail incroyable et maintenant même malgré qu'il y ait beaucoup de fichiers j'arrive à lui
+demander de faire du travail qui fait très bien donc c'est très intéressant maintenant ce que je
+pourrais faire dans la suite alors c'est tester l'application quand moi je suis en train de jouer
+etc pour voir ce que je peux améliorer et résoudre que problème une fois que ça s'est fait il faudrait
+que je j'ajoute tout simplement icône donc icône on va utiliser chat gpt on partagera ça dans ce
+vlog il faudra que je fasse publication de l'application que je paie mes 100 dollars et
+que je mette un premium pour accéder à plus de trois historiques un truc à la con avec un
+one time payment tout simple qui permettra à tout le monde d'utiliser aussi une feature géniale que
+j'ai ajouté alors celle là elle est vraiment formidable si je bulle l'application rapidement
+pour vous cette feature il va falloir la tester en cas réel mais on va on va le faire on va la
+tester un jour ou l'autre donc il n'y a pas de souci donc encore une fois ici on va arrêter
+cette partie on va lancer un match basique comme ceci là on est en match basique et là on voit du
+coup ça update automatiquement l'interface et là je suis capable de mettre ça en full screen et
+comme ça quand je change les points on voit le changement de point en direct et quand je mets ça
+comme ça alors là on peut voir qu'il ya un abe il ya un abe problème mais c'est pas très grave mais
+on peut voir que du coup chaque si j'essaie de mettre ça comme ça peut voir que ça met à
+jour les points avec la luminosité au maximum ça permet à tout le monde de pouvoir voir le
+résultat de loin et donc il ya un peu le concept ici qui s'affiche il ya juste ce ab qui est un peu
+buggé un peu buggé on va voir s'il y a arrive à corriger ça mais voilà une bonne feature en
+plus une fois qu'on a fait des points donc ici on spam un petit peu puis qu'ensuite j'arrête le
+match ici ça a quitté le match on voit que j'ai fixé l'ui pour que ce soit beaucoup plus joli
+donc là moi j'aime beaucoup là je clique et là du coup je peux voir game game game game game game
+on peut voir les points on peut voir les 7 et on a du coup le match des tailles directement ici
+j'ai juste de m'en rendre compte qu'il a modifié le code du match history alors ça totalement c'est
+le genre de truc tu te dis mais qu'est ce qu'il a fait voilà il a fait n'importe quoi donc je
+vais résoudre ça et puis on est bon tu te demandes surtout qu'est ce que c'est ce style ce style ici
+là c'est le style de paddle c'est quand on est en mode full trail paddle on est en app de
+paddle faudrait que je te mette des types plans que je fais du paddle c'est quoi plan que je fais du
+paddle man ok maintenant on va pas terminer ça on va dans un petit top et on va voir la balie en
+avc c'est tellement cool ça fait tellement plaisir on a mon bike qui est juste ici on a l'ordi qui
+est juste ici on a un doggy juste ici le stat qui s'invite etc ça fait toujours plaisir et du coup
+j'en trouve vite qu'aux raisons d'un bug que j'ai eu pendant à partir d'aujourd'hui donc des fois
+l'application elle crache ou elle crache par et la watchOS à une manière de gérer c'était ça
+etc etc bref du coup ce qu'on va faire c'est juste ici utiliser la commande comme d'habitude la
+commande magique c'est explore plan code et tests alors on essaie de zoomer voilà explore plan code
+et tests et là je lui explique voilà des fois ça crache et tout ça on envoie ça on a excode en
+background et là on a la magie on a la magie je les montais pas mais ça fonctionne au pire
+ce explore plan code test qui est une étape quatre étapes il vient bosser il fait son truc qui
+termine il a le contexte nécessaire et il travaille de manière super efficace c'est magique c'est
+fantastique ok ça c'est clair maintenant par la même occasion du coup tous ces conseils que j'ai
+trouvé en faisant du white coding de base vidéo je les ai mis sur un site qui s'appelle iwupriudopter
+voilà un master class gratuit sur cloud code quand tu fais ça tu as accès en fait à cette
+formation tu vois juste ici donc avec plein de petites vidéos et notamment une ressource notion
+comme tu peux le voir ici avec toutes les scripts et toutes les applications que j'ai trouvé et je
+vais aussi rajouter les petits conseils de white coding qu'on a ici qui est quand même une manière
+de codifier un peu ce problème avec ce prompt la magie et le prompt donc il faut faire le bon
+prompt et utiliser explore plan code pro et test machin on peut voir qu'il a lancé quatre agents
+1 2 3 4 qui vient explorer tout ça et qui vient faire une recherche aussi du web pour comprendre
+quel est le problème que se passe donc voilà le problème avec le white coding c'est que pas
+rien à faire c'est que tu te rends le tu fous tu es là je suis un peu un handicapé assisté qui
+sait pas trop qu'est-ce qu'il fait et donc il faut trouver d'autres tâches et donc qu'est-ce
+que j'ai fait aujourd'hui pendant que lui a code il faut quand même un peu la monitorer donc des
+fois ça prend du temps mais des fois faut corriger la main fait c'est pas cool d'ailleurs je viens
+d'avoir un autre bug que j'avais mais en même temps aujourd'hui j'ai lancé salee.now ça fait
+toujours plaisir juste ici je suis très content c'est toujours marrant de faire ça salee.now
+upvotes donc rien à voir avec ce que je dis dans cette vidéo mais c'est pas grave
+et pas oublier mon ami j'ai terminé le logo de l'application j'aime beaucoup j'aime beaucoup
+j'aime beaucoup donc qu'est ce que j'ai fait j'ai commencé que j'ai pété avec une base et je lui ai
+dit bah fais moi un logo il m'a fait le premier logo alors j'aimais pas trop la balle de tennis
+qui m'a foutu ici donc je lui ai dit bah voilà enlève le 3d effect bon sans 3d effect ça rend
+très plat et ça rend ça ressemble pas il n'a pas us je lui ai dit d'améliorer tout ça il m'a
+donné ça et ensuite finalement ça qui est un très très bon logo et que j'ai pu upload sur mes
+applications qui permet d'avoir le nouveau logo je suis en train d'imaginer aussi un truc pour
+mettre en avant le scoring voilà sera la logo de l'av1 l'objectif principal que je devrais noter
+quelque part les amis alors j'ai ma tout de vous aujourd'hui on est jeudi jeudi c'est tournage de
+vidéos youtube alors le problème c'est que ce vlog c'est pas compter comme un tournage de
+vidéos youtube donc je peux pas le je peux pas l'inclure je vais devoir faire deux autres vidéos
+donc ça c'est la base ensuite je vais quand même essayer d'avancer là dessus qu'est ce qui nous
+faut dans cette application il faut que je m'assure que la connectivité entre la watch et l'iphone
+fonctionne bien donc ça ça va être dans les dans les tout doux plus ou moins importantes et ensuite
+on va essayer de la publier en test fly on va payer on va faire tout ça ensemble on se retrouve
+très énervé parce que chaque fois que je suis pas chez moi la watch elle charge et ça ça marche pas
+et ici je suis obligé de lancer cette commande et on voit que c'est en connecting et pas en connecter
+donc là il m'a niqué ma watch et j'ai une partie juste tout de suite et donc j'aimerais vraiment que
+l'application locale fonctionne pour que je puisse l'utiliser comme ça je peux être un pro des
+compteurs des points et ça m'évite de m'embrouiller la vie donc on va essayer de build ça avant de
+partir normalement ça va marcher on est toujours en connecting mais en prix et voilà un petit
+travail dans le café entre deux parties de paddle à utiliser mon app ça fonctionne plutôt bien
+et là il est 7h47 du soir on est le 25 juillet et voici le petit setup de travail avec la musique
+on a le mac dans le mac c'est stylé on a xcode on a une session cloud code deux sessions
+cloud code les changements et ici je sais pas trop pour ici cet écran il sert à rien on a
+l'iphone j'ai la watch où j'essaie de tester voir tout ça nous on a du bordel et j'ai une
+petite lumière trop stylé juste ici qui fait un petit effet qui fait un petit effet feu donc
+voilà un peu les avancées alors les problèmes que je suis en train d'essayer de résoudre c'est
+tout simplement de faire fonctionner le health kit je veux que quand je fasse du paddle il y est la
+santé l'application santé qui se détecte et donc pour ça je lui ai demandé comme d'habitude
+d'ajouter des logs et donc on peut voir que la technique des logs elle fonctionne extrêmement bien
+je vais enlever la musique on a ici toutes les logs j'ai pris les logs je lui ai copié je lui ai mis
+dedans et puis après il me dit c'est super et là je peux build l'application quand je build
+l'application alors c'est chiant quand je suis pas à la maison mais quand je suis à la maison
+on peut voir que l'apple watch elle va se mettre un jour tu vois que ça charge et finalement on a
+nos performances qui sont juste ici alors le problème c'est que le timer il est à zéro et
+que earth rate et calories n'est pas définit comme ça on peut dire qu'il est dans dans l'avancée
+pourquoi il n'y a pas de timer pourquoi il n'y a pas de workout ça ça va être les bugs qu'il
+faut faire et donc là on est sur un niveau de complexité qui augmente quand même pour de l'IA
+faire de l'iOS avec la liaison tout ça ça demande pas mal de travail donc ce que je fais c'est que
+j'essaie de lui dire corrige corrige corrige corrige débug débug débug ça fonctionne toujours pas
+au bout d'un moment je clear le contexte je fais slash clear je fais explore plan code test et comme
+ça il repart de zéro il peut un peu se réinspirer de l'univers donc là c'est le travail je fais deux
+je fais deux petites sessions comme ça et on se retrouve après alors en fait en disant ça là
+pendant cette petite vidéo je vois qu'on a bien le bpm et tout ça qui fonctionne juste ici je
+vais m'amuser un petit peu à changer les couleurs mais sinon ça fonctionne donc bravo à l'IA qui a
+réussi à faire ça et je vais voir s'il ya un sport qui s'affiche quand je termine le match quand
+je vais dans l'application Apple Watch regardez-moi ça alors là je suis content alors tu savais quoi
+je pensais que ça allait me prendre des heures et finalement l'IA est bien meilleur que ce qu'on
+pense on peut voir que ici voilà c'est dingue peut voir que ici j'ai bien le logo de mon
+application avec ici le temps que ça a duré les calories bon évidemment ici je fous rien donc
+j'ai apparemment un bpm de 67 ce qui est pas top top mais j'ai tout qui est rempli comme ceci
+avec hertrade tous les trucs donc maintenant j'ai enfin lié à ça à l'app santé c'est une sacrée
+victoire et en même temps je lui ai fait corriger un bug que j'ai eu aujourd'hui j'ai fait la
+synchronisation 2 way je vais essayer de t'expliquer ça avec un petit papier et de la lumière en gros
+on a d'un côté de l'iphone ok il ya l'iphone qui est juste ici et on a de l'autre côté la
+watch qui ressemble à ça et on a ces deux données en fait ils communiquent ensemble mais on peut
+pas créer des sortes de data provider du futur qui connecteraient les deux données et donc ici
+on a le match donc on va avoir la donnée qu'elle a et à chaque update et bah elle va envoyer les
+données à l'iphone l'iphone lui il a des data qui persiste alors que l'apple watch ce qui peut
+arriver et donc là c'est attention ce qui arrive dans l'apple watch parfois c'est qu'elle crache
+enfin c'est qu'elle crache pas mais après un certain temps d'inactivité je sais pas pourquoi
+dans ces app de paddle alors si c'est un crash je devrais réussir à le monitorer mais le problème
+c'est que je le teste pas comme ça si c'est pas un crash c'est juste que l'apple watch se met
+en veille quand elle se met en veille elle perd ses données pas tout le temps mais à peu près 20%
+des cas dans une partie elle va se mettre en veille de manière prolongée elle va perdre les
+données à ce moment là quand je rouvre la watch après une perte de données je veux que l'iphone
+et que la watch se disent je n'ai pas de données c'est étrange que je commence ma partie sans aucune
+données donc je vais récupérer les data de l'iphone qui vont venir dans la watch donc voici
+le schéma et j'espère que t'as compris donc tout ça c'est de l'architecture l'architecture lia
+elle n'est pas très douée où elle fait les trucs un peu au hasard et donc ça j'ai dû le préciser
+avec des points assez précis en expliquant voilà moi je veux que les données se communiquent de
+cette manière avec cette logique là cette logique là et ça passe pas quand ça fait ça etc résultat
+bah c'est le dernier test que j'ai fait évidemment quand je débranche l'iphone ça enlève les logs
+donc ça c'est pas cool donc là si je regarde alors ça ça a les logs alors je sais pas si c'est live
+mais donc on a on a les logs je vais tester ça et on regarde
+pendant qu'on y est faut que je vous montre un truc rare à bali j'ai ce qu'on appelle de la
+home food les trucs que j'ai préparé avec ma copine que je mange aujourd'hui je mange tous
+les restes aujourd'hui que tu tout seul de la home food pas de restaurant pas de café juste de
+la nourriture qu'on a fait donc voilà un petit repas je vous montre c'est du pur reste poulet
+machin truc et ici on a Claude code qui travaille en attendant faut que je partage d'un truc où j'ai
+insulté Claude code je vais te montrer ça ici il me dit mais attends en fait j'utilisais cette
+méthode là mais si tu as envie que ce soit un live update il faut que j'utilise send message et là
+il fait un bout de code et il dit bah voilà en fait j'ai corrigé le résultat j'ai dit mais
+enculé j'ai dit fils de machin pourquoi t'as enlevé le send message tu as raison d'être énervé je
+l'ai enlevé parce que tu as dit que les matchs basiques fonctionnaient c'était n'importe quoi et
+donc la grosse erreur de l'IA quand tu vibe code et pas quand tu code assisté donc là je suis plus
+dans du vibe coding c'est qu'il génère du code que tu n'as pas compris le code que tu n'as pas
+compris peut faire n'importe quoi avec il est 6 heures du matin sur bali c'est ce que j'appelle
+très très tôt et je prends mon vaille pour aller voir daniel d'allan pendant ce qu'on fait le mardi
+je sais pas j'ai l'impression de trop vacancer de devoir me lever c'était une run organisée par
+daniel d'allan où on a commencé par courir et après on s'est retrouvé pour boire des cafés des
+coconuts dénetorqué. panel app 100% vibe code va enfin pouvoir quitter mon ordinateur et découvrir
+le monde découvrir le monde après des heures des jours à essayer de set up mon compte apple
+c'était infernal c'était tellement infernal que j'ai même pas filmé parce que c'était chiant j'ai
+dû utiliser mon iphone un numéro de téléphone changer de numéro de téléphone bla bla bla bla bla
+pas pratique du tout app sur safari j'ai utilisé safari avec un vpn c'était l'enfer de créer ça
+et ici on a le bouton add app et donc ensemble on va cliquer sur add app et je vais enfin pouvoir
+créer mon app et donc moi je vais l'appeler paddle track bon je veux publier la payos et
+maintenant je dois trouver un nom je dois écrire un nom et j'avais choisi paddle track mais finalement
+le domaine et j'ai déjà pris et donc on va utiliser clod pour trouver un nom je vais te montrer mon
+prompt ici fait une deep search alors attend bam fait une deep search du nom de l'application
+parfaite il faut que tu regardes le nom d'application le domaine libre et un nom qui
+va marquer et optimiser sur le seos la recherche à us example paddle track paddle pro donc c'est
+déjà pris crée un dossier deep search slash appnen avec des fichiers markdown pour garder
+la trace de ce que tu fais ultra fin ultra search deep search très important utiliser
+les mots clé deep search ultra fin comme ça il va et donc là là je peux te dire que j'en
+ai pour dix minutes je reviens après tu veux voir il va travailler comme un fou et je vais
+trouver un nom à cette application putain paddle il ya trop d'app de paddle ils ont
+tout été prise c'est avec beaucoup de fierté que je peux dire que j'ai réussi après des combats
+charnée à voir mon application il n'y a toujours pas de premium c'est pour ça c'est gratuit mais
+mon application sur test fly alors test fly ça permet que sur mon iphone et sur ma watch je
+puisse avoir une perce une version de pré-prod qui me permet ici de pouvoir tout simplement
+travailler avec ma mon apple watch enfin de pouvoir utiliser l'application dans mon quotidien
+sans avoir besoin d'utiliser les builds de def qui peuvent être instables et pour faire ça et
+bah voilà je t'avais expliqué j'ai créé tout le compte là on peut voir paddle watch et là on
+peut voir internal testing où il ya toutes mes emails qui ont ici l'accès à l'application dans
+la distribution pour préparer l'application et bah il faut venir remplir tous ces trucs et donc
+là on a évidemment demandé à chat gpt nous aider pour remplir tout ça et j'ai trouvé le
+nom de l'application qui s'appelle paddle tally.com alors pourquoi paddle tally parce que après deux
+jours à réfléchir au nom de l'application parce que sinon je peux pas le publier sur l'app store
+je me suis dit qu'il fallait que je prenne un truc et que j'arrête de me faire chier et tally alors
+je sais pas quel point mais en anglais ça veut dire quelque chose du style comptage de point bref
+on s'en fout parce que sur l'app store je l'appelle paddle tally scoring tracking donc ça c'est sur
+l'app store et donc dans mon aventure ici pour faire tout ça j'ai dû encore une fois faire des ce
+qu'on appelle les images qu'on retrouve sur l'app store et donc pour les images qu'on retrouve sur
+l'app store et bah j'ai utilisé une template Figma comme ceci et j'ai utilisé une watch donc
+quand vous avez besoin de faire ce genre de truc on va ici dans communauté donc dans communauté si
+je fais retour alors j'arrive pas voilà dans communauté tu cherches apple store machin t'as plein de
+templates et là on peut voir que j'ai des iphone mock-up j'ai des iphone mock-up iphone mock-up apple
+watch mock-up c'est un très bon template ça peut avoir des apple watch mock-up ici des mock-up et
+là j'ai celui là et en fait celui là c'est le plus simple il est même pas avec la bonne version
+d'iphone mais on s'en fout parce que c'est simple et quand on ship quand on est tout seul on n'a pas
+d'employé alors dire fais toi chier pendant 50 heures pour faire mon truc j'aurais peut-être pu
+utiliser de chat jpd mais je me demande à quel point il arrive à utiliser mon screenshot c'est
+quoi je vais essayer juste après dans le doute et voilà je vais donner tout ça enfin je vais pas
+donner tout ça mais j'ai pris tout ça et j'écris dans indie project ici voilà les cinq images et
+ici avec la template et une sorte de slice j'ai exporté et sur safari alors j'utilise safari pour
+tout ce qui est apple comme ça ça sépare mes browsers et bon safari permet que de gérer ça
+bon c'est pas grave on peut voir qu'ici pour l'iphone display j'ai utilisé ça alors là ici il
+veut que j'utilise aussi des app review pour ça bon ça me fait chier mais bon voilà et il faut
+aussi que je mette pour l'apple watch bon une fois que j'aurais fait tout ça ce sera top et là
+j'ai rempli ça et puis là ensuite je peux faire add for review pour l'instant on va pas cliquer
+sur add for review pourquoi je sais pas mais voilà donc on a maintenant l'apple watch il y a tout qui
+fonctionne c'est synchronisé avec l'iphone c'est magique c'est fantastique j'ai ajouté des petites
+features et j'ai encore la réflexion de quelques trucs que j'ai envie d'ajouter mais on a fait
+un sacré vibe coding c'est assez fou l'aventure que j'ai fait juste ici et de pouvoir accéder
+maintenant une application qui fonctionne et qui sera bientôt accessible par n'importe qui c'est
+assez dingue mais voilà il faut encore acheter le domaine on va aussi faire une template on va
+demander sûrement à Claude pour continuer cette vidéo pour générer tout simplement l'intégralité
+de l'uai et du site web et au moins ce sera bon pour finir cette application ios il faut à tout
+près avoir un site web sinon app store va pas accepter mon application tout simplement parce
+qu'il faut un site web avec les privacy policy et tout ce bordel et donc ici je prépare un site
+web avec ça et là je vais préparer un prompt et je vais te je vais aller sur mon ordi après un
+prompt qui explique précisément ce que je veux faire toutes les pages que je veux créer et je
+pense je vais lancer opus pour qu'il fasse tout ça on va voir s'il est capable de faire ça ultra
+vite bon voici le one shot prompt que j'ai eu en créant une landing page sur paddle tally donc
+on a juste ici bam alors évidemment ça marche jamais ce screen donc ici on a des petits bugs
+sur ceci avec les notes on va tout de suite d'ailleurs lui noter first donc on va changer
+en modèle sonnet parce que moi j'utilise en fait opus que pour créer et des choses et ensuite là
+je vais passer sur sonnet je vais dire les stars ont des bugs et je sais pas 2000 joueurs ça sert
+à rien de mentir lié à tendance à vouloir toujours bullshit la section stats à remplacer
+avec des avantages pas des bullshit numbers ça c'est ça c'est ça c'est sympa beautiful on
+every device et on voit que là c'est assez cool parce qu'il a réussi à analyser les images donc
+en fait là je lui ai dit analyse les images et et fait en sorte que ça fonctionne et si je lui
+dire pour les reviews mais qu'une seule review avec la photo qui est sur melvinx.com voilà il
+a fait hop franchement c'est joli et franchement il a fait une bonne application alors le bouton
+download on peut aussi dire enlève la pomme sur le bouton donc voilà on est capable de lui demander
+là on peut voir d'ailleurs alors je pense que je vais refaire le zoom que j'avais fait avant donc
+je me sens un peu un peu con à changer de ça toutes les dix secondes mais en fait si je peux
+faire ça peut l'ouvrir avec à peu près la taille de son écran comme ça toi tu vois tu vois l'histoire
+qu'on peut voir qu'ici ça revient c'est juste qu'il a fait des petites erreurs avec ça et ça on
+peut aussi voir que si je vais voir le petit code qu'on ajuste ici que je te montre et bien il
+a le il a le background bash donc c'est lui qui lance le serveur donc c'est assez sympa et de
+l'autre côté on a rajouté les bâches privacy, elb, etc. d'ailleurs je vais lui dire rajoute ses
+pages dans le footer alors des fois faut pas s'en faire il y a le chat qui disparaît et ça
+ça peut arriver surtout quand vous resizez la page parce que là dans le footer faq privacy
+policy voilà pour l'instant ça marche pas donc j'ai demandé à l'IA de rajouter mais normalement
+ici on peut aller sur slash privacy et on a le privacy on peut lui dire que le support markdown
+pour le markdown il faudrait un plugin comme chat cn pros alors la petit tips les amis si
+vous avez save it dot now et que vous avez sauvegardé chat cn pros chat cn pros boum on trouve
+direct le lien on copie l'url on lui met juste ici l'url pour avoir un bon formatting et on lui
+demande et donc comme ça on est vraiment en train de travailler avec deux IA qui font chacun un petit
+peu leur travail donc si je retourne sur localhost 3000 on peut voir que ça rend bien il a résolu
+les stars il a résolu le download il a changé exactement ce que je lui ai dit franchement ça
+envoie du lourd c'est très très joli je valide totalement ce qu'il a fait cool cette landing
+page mais franchement Claude c'est Claude c'est une machine de gare on peut voir que là encore
+une fois la puissance de Claude je lui passe le lien de la documentation il est capable d'aller
+lire la documentation de résoudre les bugs Claude a vraiment une un feeling de génie du futur c'est
+genre incroyable je suis je suis je suis tombé amoureux de ce de ce modèle donc là j'ai créé tout
+ce site en quelques secondes sans même lui dire quoi faire il a réussi à trouver quoi faire tout
+seul donc là boum et on peut voir que maintenant si je vais dans privacy policy on a un bon
+formatage comme ça c'est bon et si je vais dans term of service on a le terme service normalement
+il ya la page slash help qui dit voilà toutes les petits détails donc il manque la documentation
+mais pour l'instant on s'en fout une fois qu'on a fait ça on va tout simplement sur porkbun j'ai
+payé le petit domaine aujourd'hui et puis je vais lui dire commit regarde regarde la magique
+créer un repository on va dire ici slash commit crée un repository github publie le puis utilise
+le verset si elle aille pour déployer cette application alors s'il arrive à le faire c'est
+incroyable on voit qu'il est capable de créer les repositories donc là il a créé les repositories
+et maintenant est ce qu'il est capable de déployer vers celles déployer donc là on va voir si il
+lance vers celles prod tiré tiré yes et donc normalement on sent ça il est capable de venir
+lancer mon application directement sur vers celles je peux lui dire sur vers celles je veux que tu
+set up le domaine pas de la tally.com si lui rajouter ça mais c'est fantastique il est capable
+de tout faire parce que et en fait quand tu utilises l'autre compte tu te rends compte la
+puissance du terminal principalement tu te dis en fait avec le terminal je suis capable de tout
+faire j'essaie d'avoir une coupe des fois c'est un peu plus joli ok d'après l'IA on a terminé
+juste ici on va voir ici il a réussi il a réussi à m'ajouter pas de tally mais il a pas mis de
+git repository ce qui est pas mal mais il a quand même publié le projet donc ici on peut tout
+simplement cliquer sur github et connecter le repository pas de tally.com qu'on vient de créer
+et dans les domaines on peut voir qu'il a rajouté et on a maintenant pas de tally qui a été publié
+on va vérifier qu'il a bien publié le site et voilà on a le site et quand on clique sur
+download ça redirige sur melvinx.com pourquoi parce que l'application n'est pas encore publié
+d'ailleurs en parlant d'application pas publié bon bah ça c'était l'autre truc et donc en fait
+une fois qu'on a fait tout ça on a la version 1.0 juste ici qui rajoute tout ça avec pas de tally
+bla bla bla ok donc ici avec chatjpt on peut voir que normalement ça va marcher il n'y a pas de
+soucis et donc qu'est ce qu'on fait on a no sign in required et puis en fait faut remplir toutes
+ces informations et une fois qu'on a ajouté la version je sais plus dans d'ailleurs le build que
+j'avais je pense que j'avais fait un nouveau build voilà j'ai le build 3 et ici faut juste
+sélectionner ça donc avec la dernière version de l'application et donc là normalement je peux save
+et je peux add le contenu pour la review surtout maintenant que j'ai le site ce qui va permettre de
+publier mais évidemment on a toujours des problèmes on doit venir ajouter des screenshots
+pour l'apple watch donc je vais faire ça tout de suite et on se retrouvera après donc voilà une
+fois qu'on a mis là pour la review comme je le fais juste ici on peut cliquer sur submit to app
+review et comme ça on publie officiellement l'application pour se faire review et publier
+officiellement dans le store est accessible par littéralement n'importe qui donc maintenant
+il n'y a plus qu'à attendre en attendant c'est vite ça a été accepté tu connais peut-être pas
+assez vite mais comme ça c'est fait et ce vlog arrive à la fin et vous savez pourquoi est-ce que
+tu sais pourquoi ça arrive à la fin parce qu'on est capable d'aller sur l'app store sur mon iphone
+taper paddle tally avec deux L donc si vous jouez au paddle vous pouvez taper paddle tally c'est
+l'application 100% gratuite et on la trouve juste ici le logo de mon application c'est écrit mon nom
+il ya mes images il ya mes démos et donc on a terminé ce vlog et donc ce que je vais faire
+maintenant c'est que je vais le monter et comme ça je pourrais publier cette vidéo j'espère que
+tu as kiffé si tu as kiffé le like et abonne-toi c'était cool et si tu as envie que j'en fasse plus
+du style ou que j'en fasse des différents c'est toujours plaisir c'est toujours un plaisir on se
+dit à bientôt ciao ciao

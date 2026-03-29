@@ -1,0 +1,469 @@
+Aujourd'hui, je suis avec Terence qui a créé une app iOS avec Cloud Code de A à Z sans savoir coder
+et on va le faire passer au niveau OJ. Salut Terence !
+Salut, ça va ?
+Bien et toi ? Merci.
+Tu peux le retrouver sur Instagram sur mlv.estab slash Terence ou dans la description.
+Il fait de très bonnes vidéos, je vous invite à le suivre.
+Et donc, ce que j'expliquais, c'est que actuellement, on a moi qui suis ici au niveau OJ.
+Ok, évidemment.
+Et on a ma mère qui est ici, elle n'a jamais utilisé Cloud Code donc elle est au niveau 0.
+Terence, il est au niveau OK parce qu'il a quand même créé une app de A à Z
+mais le but, c'est de le monter à son plein potentiel afin que telle une fusée,
+il atteigne le Saint Graal.
+Donc, je vous propose de set-up ça tout de suite
+et on va se retrouver sur son écran pour ajouter tout ça.
+Let's go !
+Vous allez ouvrir un éditeur de code.
+Alors lui, il a anti-gravity, c'est pas grave, tout le monde fait des erreurs dans son parcours
+mais ce que vous allez pouvoir faire, c'est ouvrir un terminal et ouvrir un dossier très important.
+Qui est Claude ?
+Vous faites CD Claude, ça va vous mettre dans le dossier Claude et là vous faites anti-gravity point.
+Ça ne marche pas.
+Code point.
+Ça ne marche pas.
+Vous faites open point.
+Ça va vous ouvrir le dossier Claude.
+Vous changez la vue en colonne.
+Si vous n'avez pas utilisé la vue en colonne dans votre vie,
+ce qui est sûrement ton cas, utilisez la vue en colonne.
+Force-toi pendant une semaine, tu ne vas plus jamais pouvoir retourner en arrière.
+Vous drag and drop le dossier Claude.
+Vous ouvrez et là vous êtes face à votre config Claude
+où vous allez avoir le fichier settings.json juste ici
+et vous allez avoir ici toutes vos conversations et tout ce que vous avez fait.
+Donc typiquement juste ici, si on ferme toutes les merdes qu'il y a sur cette page,
+on va pouvoir retrouver les commandes, les skills, etc.
+Ce que je vous recommande, qui est assez simple,
+c'est d'utiliser mon CLI gratuit accessible
+qui est normalement sur IE Blueprint CLI GitHub Melvinx.
+Donc il y a le repo qui est juste ici.
+Sous cette vidéo, je vous mettrai un lien pour accéder au repo
+et un lien pour pouvoir accéder à une formation
+qui vous prend la main pour le faire de votre côté
+et pour setup Claude au cas où ce n'est pas déjà fait sur votre ordinateur.
+Bref, quick start, c'est la seule commande qu'il faut savoir.
+IE Blueprint CLI setup.
+On vient ouvrir le terminal comme ceci et on la colle dans votre terminal.
+Vous faites yes et on va voir ce que ça va changer.
+Donc là vous lui dites, vous installez tous les trucs qui sont ici, il n'y a pas de soucis.
+Ça va vous créer une backup au cas où dans le dossier backups.h2026 machin chose.
+Et ça va vous installer entre autres les skills.
+Donc on vient d'installer la configuration et je vais un peu vous montrer ce qui va changer.
+Enfin je vais montrer à Terence pour imposer des questions
+comme ça toi tu vas comprendre, ça va être immensément incroyable.
+Donc ici quand on lance Claude, maintenant ça va lancer par défaut en bypass permission.
+Et ce que ça va faire ici dans permission, c'est que j'ai mis un ask mode avec des règles interdites.
+Ça va lui permettre de venir interdire Claude de potentiellement faire des trucs très dangereux.
+Par exemple si je lui dis supprime un dossier qui n'existe pas,
+vous allez voir que malgré qu'il soit en bypass permission, c'est à dire qu'il peut tout faire.
+Ici quand je lui demande de supprimer un dossier, normalement il ne va pas avoir trop peur.
+Et vous voyez que là ça vous demande le permission à bloquer.
+Et la permission rules RMRF te demande la permission de faire cette commande ou pas.
+Donc en fait ça permet de l'autoriser de faire tout.
+Mais dans le cas, moi ça m'est déjà arrivé que des fois tu ne sais pas pourquoi tu lui dis
+clean ça, il supprime un dossier, il n'y a pas guide et tu perds toutes tes données.
+Et bien à ce moment là vous pouvez lui dire non et ça vient annuler la tâche et ça arrête l'IA.
+Donc ça première update.
+Ensuite dans les updates on aura un son.
+Donc ça tu peux désactiver aussi si ça te fait chier.
+Oh putain, quel con.
+Dis juste bonjour.
+Normalement quand il va terminer, il fait un petit bruit ce qui permet de savoir qu'il a terminé.
+C'est vrai que tu ne le sais jamais Simon.
+Donc vous allez pouvoir avoir le machin et quand il a besoin d'un humain, il fait un bruit qui s'appelle
+mid human.
+C'est vrai ?
+Un bruit différent, c'est quand il vous pose un prompt.
+Excellent.
+Donc ça c'est ça.
+On va avoir un autre script command validator qui est un peu plus deep, qui vient aussi vérifier
+les commandes avant qu'elles s'effectuent, ça va très vite.
+Et on va avoir une statue line qui actuellement ne semble pas être de super efficacité.
+On va tester.
+D'ailleurs on a un bruit, celui-là ce n'est pas moi qui l'ai fait.
+Et je ne sais pas pourquoi ici on n'a pas de statue line qui devrait quand même être le cas.
+On n'a pas bun.
+Install bun, stp et slash debug la statue line.
+Alors il se peut que suivant votre ordinateur etc la config elle ne one shot pas tout.
+C'est très dur de réussir à faire un script.
+Dans mon cas qui one shot tous les users en fonction de vos permissions, ce que tu as sur ton ordi etc.
+Donc il y a une commande qui existe par défaut dans Cloud qui s'appelle slash debug.
+Ça permet en fait de debugger la configuration de Cloud.
+Donc il s'auto debug.
+Et ici c'est ce qu'on est en train de faire.
+Donc là on voit qu'il va réussir à debug la statue line.
+Et la statue line qui est faite normalement dans ce projet elle a des tests.
+Et donc il est capable de s'auto tester.
+Mais on peut voir qu'ici il n'a pas la commande bun.
+On ne sait pas exactement.
+Il n'a pas dans le path.
+C'est un bug un peu tricky.
+Mais là du coup il l'a.
+Il a réussi.
+Ça c'est pour voir combien tu dépenses sur ton code.
+Donc là en ajoutant ça vous pouvez après customiser.
+Maintenant on voit si on est dans un repo git.
+On voit le chemin actuel.
+On voit combien nous a coûté la session.
+Combien il y a de tokens et combien de pourcentage ça fait.
+Vu que là j'utilise le modèle slash model.
+Quand vous allez passer à celui-là vous voyez que là j'ai utilisé 10% parce que j'ai 20 tokens.
+Donc ça permet de savoir quand est-ce que vous arrivez à la fin de la session.
+Donc là statue line.
+Ensuite on va avoir plusieurs skills qui sont disponibles gratuitement.
+Ils sont juste ici.
+Typiquement dans ton projet qu'on avait juste avant à pire.
+Si on lance un terminal.
+Vous allez pouvoir travailler avec la commande par exemple cloud memory.
+Ça va lui permettre d'optimiser.
+On peut tester typiquement.
+D'optimiser la mémoire, les tokens, ce qui est inutile dans votre mémoire.
+Ou d'ajouter de la mémoire spécifique.
+C'est un point vraiment que j'ai optimisé avec plusieurs études etc.
+Qui permet de créer les meilleurs fichiers de mémoire possible pour l'IA.
+Si elle oublie des trucs.
+Entre les sessions elle se rappelle.
+Normalement il y a un fichier cloud.md.
+Alors peut-être que tu ne l'as pas.
+Mais tu en as cloud.md juste ici qui est mal nommé.
+Mais ce n'est pas très très grave.
+Mais majuscule normalement.
+Mais ici ça va permettre de chercher les infos.
+Et d'optimiser en l'occurrence ceci.
+Ou de créer des nouvelles règles.
+Ça c'est typiquement un prompt très sympa pour des profils comme toi.
+On a quoi d'autre ?
+On va avoir Apex.
+On a la commande commits qui permet de commit.
+Très simplement.
+Create Pairer.
+Fix Error.
+Fix Error ça vient fixer les erreurs avec des sub-adjoints.
+Donc ça peut corriger plein d'erreurs en même temps.
+Par exemple toi je pense que souvent il fait des builds de Swift.
+Et le build Swift des fois il fail.
+S'il y a plein d'erreurs à faire de partout.
+Il va lancer plusieurs agents pour aller beaucoup plus vite.
+Fix Grammar.
+Très stylé.
+Il peut analyser tous les fichiers de votre app.
+On peut le tester pour voir si tu as laissé des erreurs de grammaire.
+C'est surtout que tu es juste.
+Pourquoi ?
+Parce que j'ai rien écrit.
+Des fois il fait des erreurs.
+Fix Grammar.
+Ici vous pouvez mettre un dossier.
+Par exemple je vais fixer toutes les grammars de onboarding.
+Et ici il vient lancer des sub-adjoints.
+Ensuite il va chercher tous les fichiers.
+Je dois faire 23 fichiers.
+Je vais les processer en parallèle.
+Et il va lancer plein de sub-adjoints.
+Ils vont chacun corriger un groupe de fichiers.
+C'est génial.
+Pour bulk modifier tous tes fichiers le plus rapidement possible.
+Moi je fais ça typiquement sur mes landing pages.
+Vu que j'ai plein de fichiers ça me prend du temps.
+Boom.
+Il lance tout.
+Là il a tout lancé en background.
+Là il va dire que je vais attendre quelques secondes que tout soit terminé.
+Ils vont très vite.
+On peut voir que là les agents n'ont rien trouvé.
+Il n'y a pas de fichiers qui se modifient.
+Il est toujours...
+Ok il en a.
+J'ai jamais vu l'IA qui crée 23 agents.
+Hop. Modifié.
+On peut le voir qui modifie des codes.
+On va voir si ça a un sens ou pas.
+And you're going in circle.
+Il y a un S à circle.
+Tu sais ce que c'est ça ?
+Ouais.
+Je pense que c'est juste la correction.
+C'est avec un S ?
+Non je pensais sans S.
+Ah non.
+Il a corrigé, il a rajouté un S.
+Oui.
+Je pense que...
+Maybe un S.
+S.
+Donc il corrige la grammaire.
+C'est normal.
+Lui il a peut-être aussi des fautes.
+Ça arrive.
+Donc corriger la grammaire.
+Pixpr command.
+Bon toi ça te servira à rien.
+Merge one shot.
+C'est un truc très cool.
+Je ne sais pas si tu as un mini truc à update.
+Mais si ici on fait slash clear et qu'on utilise la commande one shot.
+Ça va permettre de faire des features assez rapidement.
+Donc si on regarde ce onboarding.
+Je vais par exemple lui dire.
+On va annuler.
+On va annuler.
+Pas de soucis.
+Ici je vais lui dire.
+Rends le onboarding 0.7 en dark mode.
+On s'en fout.
+L'intéressant c'est que ce one shot.
+Il a pour but de faire une feature rapidement mais efficacement.
+Donc il va généralement commencer par...
+Je ne sais pas.
+Ici il a le contexte du navigateur.
+Qu'est ce qu'il va faire ?
+Qu'est ce qu'il va faire ?
+Je ne sais pas qu'on voit plus ce qu'il fait.
+Normalement il ne fait pas ça.
+Je pense que la feature est trop petite.
+C'est quoi l'intérêt du one shot ?
+J'ai envie de te montrer.
+Mais il faut que je trouve un truc à faire.
+Si j'ai rien à faire.
+Je ne sais pas trop quoi lui dire.
+C'est quoi ?
+Il faut une feature quand même assez fat.
+Voilà.
+On va faire ça.
+On va faire ce truc.
+Tu l'as déjà fait.
+Ce n'est pas grave.
+Sur l'écran.
+Là la différence que je vais faire avec one shot.
+C'est que je ne vais pas taguer des fichiers.
+Tu vois qu'ici je voyais que tu taguais des fichiers.
+C'est à dire que tu comprends quand même un petit peu ce qui se passe.
+En tout cas tu essaies de faire du code qui a un sens.
+Ici le but du one shot c'est vibe.
+Ce n'est pas d'explication de fichier.
+Pas d'explication de quoi que ce soit.
+Les règles du one shot c'est de faire beaucoup de phases d'exploration et de planification.
+De manière autonome.
+Et one shot à la spécificité où il ne va pas te demander ton avis.
+Le but de one shot c'est qu'il one shot ta feature.
+Sans que tu aies besoin d'intervenir.
+A ce moment là il va lancer plus ou moins d'agents.
+Mais la commande que moi je recommande.
+La commande one shot c'est plutôt pour les petites features.
+Comme on l'a fait ici.
+Elle est optimisée pour la rapidité.
+Moi ce que je renseigne le plus c'est Apex.
+Apex ici je vais le lancer sans paramètre.
+Mais il y a un paramètre principal que toi tu as en gratuit.
+C'est tirer A.
+Ça permet de le faire en mode automatique.
+Sans automatique il va te demander les permissions de faire ce que tu veux.
+Donc là on va lancer workflow Apex free.
+Et tu vois qu'il va lire un fichier d'initialisation comme ceci.
+Automode, save mode, economy mode, branch mode.
+Donc ça c'est les modes qu'il a activé ou pas.
+Et là il va dire voilà.
+Ok non ta feature elle est simple ici.
+Donc là il dit task complexity single.
+Single area, no iOS API, direct exploration.
+Donc là il n'a pas fait d'étapes plus compliquées.
+Pourquoi ? Parce que c'est trop simple.
+Si on fait une feature complexe.
+Il n'y a pas des features complexes que tu as fait dans ta vie ?
+On va regarder.
+Si il peut.
+C'est pas une feature non.
+Ça c'est des pontes.
+Ce qu'il pourrait faire c'est dans le in-app.
+Il faudrait faire en sorte qu'il y ait Grant qui envoie un message tous les jours.
+À 7 heures du mat.
+Ou il va demander à l'utilisateur comment s'est passé l'action du jour précédent.
+On va pas lui laisser finir.
+Ok parce qu'après il ajoute une UI ou il met une petite notif.
+Ok je vais rajouter.
+Puis il ajoute une UI avec une petite notif.
+On ne va pas forcément lui laisser exécuter.
+C'est sûrement qu'on écrit de la merde.
+Mais le concept ici c'est en lançant le workflow qui est juste là.
+Ça c'est un peu chaud.
+Il y a du backing, il y a du front, il y a de tout.
+Là il fait un petit truc.
+Et là il fait analysing.
+On va voir ce qu'il va faire.
+Et là tu vois qu'il va lancer.
+Explore code base.
+Un, deux sub-agents.
+Peut-être trois s'il y a besoin.
+En fait il va être beaucoup plus capable avec ce prompt de lancer plus d'agents.
+Donc si on regarde un petit peu pour comprendre comment ça marche.
+Apex, step.
+En fait il a une phase d'initialisation.
+Ensuite si tu lui passes un paramètre branch il va créer une nouvelle branche.
+Economie ça va éviter les sub-agents pour éviter de dépenser de l'argent.
+Ensuite ici il va analyser.
+Et en fait il est obligé d'avoir tout le contexte possible.
+Ce qui te permet d'assurer que l'IA ne commence pas à halluciner.
+Que tu n'aies pas besoin de lui dire quoi faire.
+Tu le vibe.
+Et lui il va comprendre.
+Ensuite il va planifier ici avec ce fichier.
+Il va exécuter et valider sa propre tâche.
+Dans la version premium il vient même review la sécurité, le clean code et la cohérence de ton code par la suite.
+Moi j'utilise beaucoup ça pour one shot des features.
+Sans avoir besoin de faire exactement ce que tu as fait juste ici.
+Moi je ne tag jamais de fichiers.
+Parce que je fais ça.
+Ça c'est un sens de tagger des fichiers.
+Parce qu'avec l'abonnement à 20 dollars que tu as.
+Tu vas vouloir économiser des tokens.
+Le fait de lui demander de chercher lui-même les fichiers.
+Tu lui fais l'inverse.
+Tu lui demandes de chercher lui-même.
+Ce qui permet quand moi je travaille sur beaucoup de futures.
+Des fois j'ai plein de terminaux en même temps.
+Que je n'ai pas besoin de m'amuser à tagger les fichiers etc.
+Et que je peux juste lui balancer.
+Et grâce à ces phases d'exploration en fait il va presque toujours trouver tous les fichiers et aller chercher.
+Tu vois là il a lancé les agents.
+Et ensuite une fois qu'il a fait ça il va relire encore un petit peu le contexte.
+Pour être sûr de ce qu'il a fait.
+Et après ici il lit le plan.
+Et là tu vois il va lire le prompt pour planifier.
+Il va planifier.
+Une fois qu'il a planifié il va exécuter etc.
+On va couper ça de faire burn des tokens pour rien.
+Mais l'idée est là.
+Il a des scripts aussi pour set up pas mal de choses.
+C'est phénoménal ça.
+En vrai ça je pense que ça change la vie.
+C'est assez cheaté.
+Et je te mettrai la version premium du coup.
+Tu peux le lancer avec un nombre de trucs différents.
+Prompt Creator.
+Ça c'est Ultra Axe.
+Tu as de l'IA dans ton app.
+Tous les patterns d'IA pour avoir des bons prompts.
+Moi je fais beaucoup de choses.
+Et donc ici ça va lui permettre de compter avec des règles.
+Avec toutes les bonnes pratiques.
+Toutes les règles d'anthropique.
+De OpenAI sur les best practice.
+Pour que le prompt fasse ce que tu veux.
+Les multiprocessing.
+Tout ce que tu veux.
+Skill Creator.
+Ça te permet de créer des skills.
+Donc là on a des skills.
+Tu peux en créer autant que tu veux.
+Sub-agents Creator.
+C'est pour créer des sub-agents.
+On t'a créé aussi des agents.
+Explore code base.
+Explore doc.
+Et on va aussi avoir ici Ultra Think.
+Ça permet juste de lui faire avec ce prompt.
+Il utilise le maximum de thinking tokens possible.
+Des fois il peut think pendant deux minutes.
+Ça n'a aucun sens.
+Et ici c'est le workflow Apex Free.
+Ce que j'ai pas fait avec toi pour terminer ta configuration.
+Et terminer cette vidéo.
+Donc ça c'est la configuration.
+On a la statue line juste ici qu'on a vue.
+On a deux trois scripts.
+Et on va t'installer les deux trois mcp que j'aime bien.
+Donc que je vois que tu n'as pas en fait.
+C'est pour ça.
+Context Seven.
+Je crois que je l'ai lui.
+Peut-être pas dans cette config.
+Est-ce que c'est possible de l'avoir à plusieurs endroits?
+Oui.
+Ici vous allez aller dans sign in.
+Normalement vous pouvez vous sign in avec github.
+Comme ceci.
+Et une fois que vous êtes sign in.
+On va ici prendre le token.
+Tu vois que tu l'avais déjà fait.
+Juste ici.
+Il y a six jours.
+Tu l'as utilisé il y a six jours.
+Je vais couper le record.
+Donc là j'ai ajouté le mcp context seven qu'on voit qui est juste ici.
+Context Seven ça va permettre à l'IA de chercher dans la documentation.
+Chercher des librairies.
+Chercher toutes les dernières mises à jour.
+Et il n'y a pas de clé ici.
+Et la dernière chose qu'on a besoin c'est hexa.ai.
+C'est pas mal aussi.
+On peut aussi se connecter avec Google comme ceci.
+Et là on ajoute le deuxième mcp.
+Donc ici avec hexa.
+On remplace hexa API key comme ceci.
+Et je vais encore une fois couper le record.
+Une fois qu'on a ajouté ça on peut lancer cloud encore.
+Et là normalement si on fait slash mcp.
+On peut voir qu'on a voulancé cloud.
+Et après tout ce qu'on a fait.
+On lui redit qu'on est content et qu'on trust le folder.
+On a hexa et là on peut lui faire.
+Recherche la meilleure librairie react avec hexa.
+Par défaut normalement il devrait avoir tendance à utiliser hexa.
+Suivant comment.
+Mais ici je lui demande.
+Tu vois qu'il utilise hexa.
+L'avantage d'hexa c'est qu'il fait des recherches web.
+Qui sont rapides.
+Et en fait il output des trucs très intéressants quand vous regardez.
+Si tu peux voir.
+Il vient output le contenu des articles.
+Avec uniquement ce qui est intéressant comme ceci en format AI.
+Donc c'est un service qui scrap internet.
+Et qui permet de output des sacrés résultats pour faire des recherches.
+À la place d'utiliser web search qui est par défaut.
+Le prix de hexa c'est gratuit avec 10 dollars de crédit.
+Personnellement en étant un.
+En dépensant 3000 dollars par mois de cloud code.
+J'ai dépensé mes 6 dollars.
+Donc ici dans billing on peut voir qu'on a une balance normalement gratuite.
+On n'a pas mis de carte.
+J'ai dépensé 20 dollars maintenant.
+Chier à des fois qu'il n'y a que 10 dollars.
+Pour dépenser 10 dollars j'avais pris 5 mois.
+Donc toi tu en as pour 10 mois.
+Tu dépenses comme moi 3000 dollars de cloud par mois.
+Mais c'est très cool.
+Au moins.
+Qu'est-ce que tu en dis ?
+Est-ce que tu as des questions réflexions Terence ?
+Voilà c'est la fin.
+On a tout set up avec Terence sur ton ordi.
+Il est maintenant prêt pour open cloud codifier tout ça.
+Et il est enfin arrivé au niveau audio.
+Enfin en vrai il est arrivé à 90% comme ceci.
+Parce que je ne lui ai pas encore mis la config premium.
+Une fois qu'il aura la config premium il sera au niveau audio.
+Il sera au niveau 99.
+Et le niveau son est impossible à atteindre.
+Parce qu'il n'y a que moi qui...
+Il y a un moment il faut avoir quand même un ego surdimensionné.
+C'est à ce moment là que ça se passe.
+OJ ça compte à partir de 99 c'est bon ?
+90 OJ.
+Oh yes.
+Donc si vous installez la config vous passez en bas d'OJ.
+Si vous avez la config premium OJ++.
+Comme ça vous aurez tous les workflows.
+Et aussi en plus pour remercier Terence pour sa participation.
+Il repartira avec un sticker de moi.
+Qu'il pourra mettre sur ma tête comme ça.
+Avec ça ça fait plaisir.
+C'est ce que j'attendais de ces interactions.
+Allez, suive Terence sur Instagram.
+C'est vraiment un super gars.
+Il fait de très bonnes vidéos.
+Il va continuer à poster une vidéo par jour.
+Il m'a dit pendant un an.
+Pendant au moins 5 jours.
+Alors on se dit à très bientôt.
+Ciao ciao.

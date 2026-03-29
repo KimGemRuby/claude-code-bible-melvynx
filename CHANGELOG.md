@@ -1,30 +1,30 @@
 # CHANGELOG — Bible Melvynx Claude Code
 
-## [V4.0] — 2026-03-29
+## [V4.1] — 2026-03-29
 
-### Bible V4.0 — 21 chapitres, 1714 lignes, 59 sources fusionnees
+### Bible V4.1 finale — 21 chapitres, 1717 lignes, 59+ sources fusionnees
 
-Fusion massive de 23 sources supplementaires (59 total). 3 passes de verification par 12 agents swarm — unanime : BIBLE COMPLETE.
+Fusion de 27 transcriptions Whisper + analyses par 8 agents paralleles. 3 passes de verification par 12 agents swarm.
 
 ### Nouveaux chapitres
-- **Ch.21 — Comparatifs, Benchmarks & Garde-fous hardcodes** : Opus 4.5, Claude Code vs concurrents, jdupes/fdupes (4 etapes doublons), memoire chaude/froide, pre-commit hooks, isolation environnement
-- 217 sections totales (vs ~180 en V3.3)
+- **Ch.21 — Comparatifs & Benchmarks** : Opus 4.5, Claude Code vs Cursor vs GitHub Copilot, pricing reel, verdict longevite
 
 ### Ajouts majeurs
-- Core 7 terminologie Melvynx
-- Chaining multi-skills (3+ skills en une commande)
-- NowTS boilerplate (ZodRoute, Upfetch, commentaires inline)
-- Chrome pair-browsing + pause login auto
-- Teams self-claim
-- Ralph parametre -N
-- StatusLine usableContextOnly + couleurs progressives
-- Cowork Dispatch/Channels
-- OpenClaw tips (anti-ban, email auto-apprentissage, Telegram share, workspace backup)
-- Pricing details (237$/jour, 80% users <200$, expense marketing)
-- Skills : pnpx, prompt injection warning, taguer au milieu du prompt
-
-### Config Mac
-- `autoCompact: false` ajoute dans settings.json (+45K tokens libres)
+- Code source exact skill APEX + tableau techniques prompting Melvynx
+- Workflow ONE-SHOT SaaS complet (8 etapes, methode Melvynx, cout 403$)
+- Reverse engineering API (metadonnees, web fetch auto, slash commands = prompt injection)
+- Plugins & Marketplace (systeme complet, structure, limitations)
+- Claude Code Desktop App (test Melvynx, limitations detectees)
+- Outils : CC Notify, Super Cloud, Cloud Code Template, CC Usage, ZED IDE, MoltBot/ClawdBOT
+- Output Styles, Opus Plan Mode, VSCode Extension details, pricing juillet 2026
+- Techniques live coding (14 tips extraits de 2h de sessions filmees)
+- Commentaires inline (prompt injection benefique), Keywords priorite
+- Core 7 terminologie Melvynx, Chaining multi-skills, NowTS boilerplate
+- Chrome pair-browsing + pause login auto, Teams self-claim, Ralph -N
+- StatusLine usableContextOnly + couleurs progressives, Cowork Dispatch/Channels
+- OpenClaw tips, Pricing details, autoCompact: false (+45K tokens)
+- 27 transcriptions Whisper dans `source/transcriptions/`
+- 220+ sections totales, 59+ sources fusionnees
 
 ---
 
