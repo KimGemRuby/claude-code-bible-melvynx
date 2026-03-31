@@ -4105,95 +4105,10 @@ configure par l'utilisateur.
 
 ### A3. Le contexte (Context Window)
 
-#### Chiffres cles
-
-| Metrique | Valeur |
-|----------|--------|
-| Taille max contexte | 200 000 tokens (1M sur Max/Team/Enterprise) |
-| Tokens au demarrage | ~27 000 (system prompt + tools + config) |
-| Demarrage projet moyen | ~82 000 tokens (tools, MCP, rules, memories, agents, plugins) |
-| System prompt seul | ~3 500 tokens (1,7% du contexte) |
-| Buffer autocompact | 45 000 tokens reserves |
-| Declenchement autocompact | ~96-99% du contexte |
-| Zone de danger | >150-160K → l'IA divague |
-
-#### Composition du contexte au demarrage
-
-1. **System prompt** : identite, regles internes Claude
-2. **Tools** : schemas JSON de chaque outil natif (tres volumineux)
-3. **MCP tools** : schemas de chaque outil MCP (charges meme si non utilises)
-4. **Skills** : description de chaque skill installe
-5. **CLAUDE.md** : global + projet + dossier
-6. **Rules** : tous les fichiers `.claude/rules/` avec `alwaysApply: true`
-7. **Auto-memory** : 200 premieres lignes de MEMORY.md
-8. **Agents** : descriptions de chaque agent configure
-9. **Message utilisateur** : le prompt
-
-#### Autocompact
-
-L'autocompact se declenche quand le contexte atteint ~96-99%.
-Il compacte l'historique en un resume. **Cela degrade la qualite**
-car les details sont perdus.
-
-Recommandation Melvynx : **desactiver autocompact** (`autoCompact: false`)
-et utiliser `/clear` entre les taches. Gain : 45 000 tokens
-recuperes (passe de 62% a 83% d'espace libre).
-
-Configuration :
-```json
-{
-  "autoCompact": false
-}
-```
-
-Ou si on le garde, baisser le seuil :
-```json
-{
-  "autoCompactThreshold": 60
-}
-```
-
-#### Le probleme "Lost in the Middle"
-
-Les modeles Transformer donnent plus d'importance au **DEBUT**
-et a la **FIN** du contexte. Les tokens au milieu sont
-structurellement ignores (ponderes 1/3 a 1/2 de moins).
-
-**Impact concret** : quand tu lances un workflow comme EPCT,
-le prompt initial est important. Mais apres exploration et
-planification, le prompt initial se retrouve "au milieu" et
-perd de l'influence. L'IA commence a oublier les instructions.
-
-#### Solution : Prompt Discovery (steps/)
-
-Au lieu d'un gros prompt au debut, decouper en etapes :
-
-```
-skills/mon-skill/
-  steps/
-    step1-init.md       → lu au debut
-    step2-analyse.md    → lu avant l'analyse
-    step3-plan.md       → lu avant la planification
-    step4-execute.md    → lu avant l'execution
-    step5-verify.md     → lu avant la verification
-```
-
-Chaque etape lit son fichier juste avant d'agir. Le prompt
-courant est toujours "recent" dans le contexte, donc bien
-respecte par le modele.
-
-Melvynx : "Ca change vraiment la vie a quel point elle
-respecte plus les instructions."
-
-#### Debug du contexte avec Proxyman
-
-**Proxyman** : outil macOS pour intercepter les requetes HTTP.
-Permet de voir exactement ce qui est envoye au modele
-a chaque requete. Utile pour comprendre les 27K tokens de
-demarrage et optimiser.
-
-Hack : demander a Claude de creer un fichier HTML qui affiche
-toutes les infos du contexte de maniere lisible.
+> Voir **Chapitre 6 — Context Engineering & Memoire** pour le detail complet. Resume :
+> - 200K tokens max (1M sur Max/Team/Enterprise), ~27K au demarrage, ~82K en projet moyen
+> - Autocompact a ~96-99% degrade la qualite → desactiver (`autoCompact: false`) + `/clear` entre taches
+> - Probleme "Lost in the Middle" → solution : Prompt Discovery (decouper skills en `steps/`)
 
 ---
 
@@ -4309,95 +4224,10 @@ propre configuration.
 
 ### A5. Les permissions et securite
 
-#### 4 modes de permission (Shift+Tab pour changer)
-
-| Mode | Comportement | Icone |
-|------|-------------|-------|
-| **default** | Demande permission pour tout | Vert |
-| **acceptEdits** | Auto-accepte les modifs fichiers, demande le reste | Jaune |
-| **plan** | Ne modifie rien, propose un plan | Bleu |
-| **bypassPermissions** | Tout autorise (sauf deny list) | **Rouge** |
-
-**Recommandation Melvynx** : bypass permission + deny list.
-Citation : "Plus vous limitez l'IA, moins les resultats seront
-bons. J'ai decouvert la vraie puissance de l'IA depuis que je
-lui ai donne l'acces a tout."
-
-#### Deny list — Bloque meme en bypass
-
-```json
-{
-  "permissions": {
-    "deny": [
-      "rm -rf",
-      "sudo rm",
-      "sudo",
-      "dd",
-      "chmod 777",
-      "mkfs",
-      "fdisk"
-    ]
-  }
-}
-```
-
-En bypass, quand une commande deny est tentee :
-`Permission to use bash with command rm -rf denied`
-
-#### Allow list — Autorise sans question
-
-```json
-{
-  "permissions": {
-    "allow": [
-      "pnpm *",
-      "git *",
-      "npm *",
-      "bun *"
-    ]
-  }
-}
-```
-
-Wildcards supportes. Autorise ces commandes sans demander.
-
-#### Command Validator (PreToolUse hook)
-
-Script TypeScript/Bun qui valide les commandes au niveau AST
-(Abstract Syntax Tree). Pas de faux positifs (contrairement aux
-filtres grep naifs).
-
-Bloque : `rm -rf`, `sudo`, `dd`, privilege escalation,
-remote execution, fork bombs.
-
-```json
-{
-  "hooks": {
-    "PreToolUse": [{
-      "matcher": "Bash",
-      "command": "bun command-validator/src/cli.ts"
-    }]
-  }
-}
-```
-
-**UN SEUL hook PreToolUse recommande** pour eviter les
-ralentissements.
-
-#### Double securite recommandee
-
-1. Deny list dans `settings.json`
-2. "Utilise trash au lieu de rm" dans `CLAUDE.md`
-3. Command validator hook PreToolUse
-4. Read deny list pour fichiers sensibles (`.pem`, `.env`, secrets)
-
-#### Isolation de l'environnement
-
-- JAMAIS donner un acces root global a Claude Code
-- Monter les dossiers sensibles en lecture seule
-- L'IA peut lire tout le systeme (comprehension)
-  mais ne peut ecrire que dans le dossier projet
-- Ne JAMAIS lancer Claude Code a la racine du systeme
+> Voir **Chapitre 9 — Securite** pour le detail complet. Resume :
+> - 4 modes (default, acceptEdits, plan, bypassPermissions) — Shift+Tab pour changer
+> - Recommandation Melvynx : bypass + deny list (`rm -rf`, `sudo`, `dd`, `chmod 777`, etc.)
+> - Double securite : deny list settings.json + command validator hook PreToolUse + "trash au lieu de rm" dans CLAUDE.md
 
 ---
 
@@ -4560,137 +4390,11 @@ ses propres logs, ajouter des logs, comprendre, corriger
 
 ### B2. Workflows structures
 
-#### EPCT — Le workflow de base
-
-Le fondement de tous les workflows Melvynx :
-
-1. **Explore** : lancer des sub-agents (explore-codebase,
-   explore-doc, web-search) pour comprendre le contexte
-2. **Plan** : entrer en plan mode, planifier les modifications
-3. **Code** : executer le plan
-4. **Test** : verifier lint, tests, que tout fonctionne
-
-#### /apex — Le workflow principal (>99% succes)
-
-LA commande principale de Melvynx. Pas un logiciel externe
-mais un **modele cognitif** (framework de raisonnement) encode
-sous forme d'instructions strictes. Implementation du concept
-IA **ReAct** (Reasoning and Acting).
-
-**Cycle A-P-E-X** :
-
-1. **Analyze** (l'Audit)
-   - L'IA a l'INTERDICTION de toucher au code
-   - Lance sub-agents explore-codebase (1 a 3+)
-   - Lit les fichiers, dependances, arborescence
-   - But : comprendre le contexte global
-
-2. **Plan** (le Brouillon)
-   - L'IA a TOUJOURS l'interdiction de modifier le code
-   - Redige une feuille de route dans SCRATCHPAD.md
-   - 5-6 micro-taches simples et numerotees
-   - Force la reflexion algorithmique avant la syntaxe
-
-3. **Execute** (la Frappe)
-   - MAINTENANT l'IA modifie les vrais fichiers
-   - Lit la micro-tache n1 du plan, modifie, barre la tache
-   - Code chirurgical, fichier par fichier
-
-4. **eXamine** (le Controle Qualite)
-   - L'IA n'a PAS le droit de dire "c'est fini"
-   - Relit le diff, execute le linter, lance les tests
-   - Si erreur → corrige immediatement avant de rendre la main
-
-**Flags disponibles** :
-
-| Flag | Court | Effet |
-|------|-------|-------|
-| `--auto` | `-A` | Mode automatique, aucune question |
-| `--examine` | `-e` | Active la review |
-| `--test` | `-t` | Lance les tests |
-| `--economy` | `-$` | Evite les sub-agents (economise tokens) |
-| `--branch` | `-b` | Cree une branche git |
-| `--pr` | `-p` | Cree une Pull Request |
-| `--interactive` | `-i` | Menu interactif pour les flags |
-| `--teams` | `-m` | Mode equipe multi-agents |
-| `--resume` | `-r` | Reprendre une tache interrompue |
-| `--plan` | | Plan mode (sinon plan inline) |
-| `--save` | | Sauvegarde les outputs |
-
-**3 super-pouvoirs** :
-1. **State Persistence** : sauvegarde l'etat si quota epuise,
-   reprend avec `--resume`
-2. **Mode Economie** : saute les sur-verifications (version gratuite)
-3. **Isolation Git** : cree une branche automatiquement
-
-#### /oneshot — Quick fix rapide
-
-- Zero intervention, zero demande d'avis
-- Mode "vibe" : zero explication
-- Exploration + planification autonome puis execution
-- Cout tokens faible
-- Ideal pour petites features, corrections rapides
-
-#### /brainstorm — Recherche profonde
-
-4 rounds de reflexion intensive :
-1. **Expansive Exploration** : explorer en profondeur (sub-agents)
-2. **Devil's Advocate** : challenger tout
-3. **Synthese** : condenser en 5 perspectives
-4. **Cristallisation** : recommandations actionnables
-
-TRES gourmand en tokens. Utiliser avec parcimonie.
-
-#### /debug — Fix erreurs structure
-
-Workflow en steps (prompt discovery) :
-1. Init : initialiser parametres
-2. Analyse : analyser l'erreur
-3. Solutions : proposer plusieurs solutions
-4. Fix : appliquer la meilleure
-5. Verify : verifier le resultat
-
-#### /fix-errors — Correction parallele
-
-Lance des sub-agents en parallele (jusqu'a 23) pour corriger
-plusieurs erreurs simultanement. Ideal pour les builds Swift
-ou TypeScript avec beaucoup d'erreurs.
-
-#### /ultrathink — Reflexion profonde
-
-Force le maximum de thinking tokens. Peut durer 2+ minutes.
-Pour les problemes vraiment complexes.
-
-5 mots-cles par intensite croissante :
-`think` < `think more` < `think lot` < `think longer` < `ultrathink`
-
-#### /fix-grammar — Grammaire en bulk
-
-Analyse tous les fichiers d'un dossier, lance des sub-agents
-par groupe. Usage : `/fix-grammar onboarding/`
-
-#### /simplify — Review automatique (3 agents paralleles)
-
-Lance 3 agents qui reviewent le code modifie pour :
-- Reutilisation de code existant
-- Qualite et lisibilite
-- Efficacite et performance
-
-Corrige automatiquement les problemes trouves.
-
-#### Workflow ONE-SHOT SaaS complet (methode Melvynx)
-
-8 etapes pour creer un SaaS from scratch :
-1. Idee + SAS Challenge (challenger le concept)
-2. PRD : recherche competiteurs, pricing, feature list MVP
-3. Architecture : stack technique, structure fichiers
-4. Tasks : decomposer en petites taches (5-10 lignes max)
-5. Run Tasks : `/run-task` sequentiellement
-6. First Version : app fonctionnelle brute
-7. Refinement : `/oneshot` feature par feature
-8. Multi-terminal : 3-4 sessions paralleles
-
-Resultats : Sumfast cree en 10h pour 403$.
+> Voir **Chapitre 4 — Workflows** pour le detail complet (code source APEX inclus). Resume :
+> - EPCT = workflow de base : Explore → Plan → Code → Test
+> - `/apex` = workflow principal (>99% succes), cycle A-P-E-X avec flags (`--auto`, `--test`, `--branch`, `--pr`, `--teams`, `--resume`)
+> - Autres : `/oneshot` (quick fix), `/brainstorm` (4 rounds), `/debug` (steps), `/fix-errors` (sub-agents paralleles), `/ultrathink`, `/simplify` (3 agents review)
+> - Workflow SaaS complet en 8 etapes (Sumfast cree en 10h pour 403$)
 
 ---
 
@@ -5013,77 +4717,10 @@ Main Agent verifie que tout fonctionne
 
 ### B5. MCP (Model Context Protocol)
 
-#### Ce qu'est un MCP
-
-Un MCP ajoute des **outils externes** au modele. Contrairement
-aux skills (qui ajoutent des connaissances/prompts), les MCP
-ajoutent des **fonctions appelables** (tool calls).
-
-**Probleme fondamental** : les definitions des outils MCP sont
-injectees dans le contexte a CHAQUE requete, meme si non utilises.
-Plus de MCP = moins de contexte disponible.
-
-#### Les MCP recommandes (max 2-3 — STRICT)
-
-| MCP | Type | Usage | Cout |
-|-----|------|-------|------|
-| **Context7** | Documentation | Doc librairies a jour | Gratuit |
-| **Exa.ai** | Web Search | Recherche web IA | 20$ credits gratuits |
-
-Au-dela de 3 MCP, la qualite des outputs se degrade.
-
-#### Installation MCP
-
-```bash
-# Format generique
-claude mcp add <nom> <commande> -s <scope> -- <args>
-
-# Context7 global
-claude mcp add context7 --url <url> --scope user
-
-# Exa project-only
-claude mcp add exa npx -s project -- @exa-ai/mcp
-
-# Desactiver un MCP : # devant le nom dans mcp.json
-```
-
-#### Tool Search (gestion automatique)
-
-- Si MCP < 2-3% du contexte : `toolSearchMode: false`
-  (Claude utilise mieux vos MCP)
-- Si MCP > 2-3% du contexte : `toolSearchMode: true`
-  (economise du contexte mais l'IA utilise moins les MCP)
-
-#### CLI > MCP — La nouvelle philosophie (2026)
-
-Melvynx : "Degagez-moi ces MCP, c'est nul."
-
-**Pourquoi les CLI remplacent les MCP** :
-- Pas de process npm qui tourne en permanence (RAM, CPU)
-- Pas de remote MCP avec problemes de fiabilite
-- "Le CLI marche tout le temps, 365 jours par an"
-- Controle total de l'output : `ctx7 query ... | head -150`
-  (impossible avec MCP qui retourne un bloc fixe)
-- Pas d'overload du contexte : seul le skill est charge
-- L'agent peut modifier/ameliorer le CLI lui-meme
-
-**Migration Context7 : MCP → CLI + Skill** :
-```bash
-claude mcp remove context7
-npx ctx7@latest setup    # Choisir "CLI + Skill"
-```
-
-Le skill ajoute une description chargee UNIQUEMENT quand
-necessaire (vs MCP charge a chaque conversation).
-
-#### MCP vs Skills — Distinction fondamentale
-
-| | MCP | Skills |
-|---|---|---|
-| Ajoute | Des **outils** (tool calls) | Des **connaissances** (prompts) |
-| Charge | En permanence dans le contexte | A la demande (description seule au depart) |
-| Controle output | Non (bloc fixe) | Oui (pipe, head, grep via CLI) |
-| Maintenance | Externe | L'agent peut modifier |
+> Voir **Chapitre 5 — Commandes & Outils** et **Chapitre 23 — CLI > MCP** pour le detail complet. Resume :
+> - MCP = outils externes (tool calls) charges en permanence dans le contexte — max 2-3 STRICT (Context7, Exa.ai)
+> - CLI > MCP = nouvelle philosophie 2026 : migrer vers CLI + Skill (controle output, pas d'overload contexte)
+> - Tool Search : `toolSearchMode: auto` si MCP > 2-3% du contexte
 
 ---
 
@@ -5306,71 +4943,10 @@ sur Agent SDK). Conseil : 50% OpenClaw / 50% CLI directement.
 
 ### B9. Memoire et persistance
 
-#### CLAUDE.md
-
-Le fichier principal de memoire. 3 niveaux (global, projet,
-dossier). Contient les instructions, conventions, stack technique.
-Max ~200-500 lignes.
-
-Generation : `/init` dans un contexte enrichi.
-
-#### rules/
-
-Regles modulaires dans `.claude/rules/`. Deux types :
-- Always apply (defaut)
-- Conditionnel avec globs (charge pour certains fichiers)
-
-Cas d'usage : quand l'IA fait une erreur 2+ fois, creer une
-regle. "Tu as fait cette erreur trop souvent. Cree un fichier
-dans .claude/rules/ qui t'empechera de la refaire."
-
-Regle optimale :
-`CRITICAL: Never create middleware.ts — middleware is proxy
-helper in proxy utils`
-
-#### memory/ (fichiers detailles)
-
-Pour les documents trop longs pour rules/ (>50 lignes).
-Architecture, lecons passees, conventions strictes, etc.
-
-#### Auto-Memory native
-
-```json
-{
-  "autoMemoryEnabled": true
-}
-```
-
-Claude s'ecrit des notes entre sessions.
-Stocke dans `~/.claude/projects/<hash>/memory/`.
-200 premieres lignes de MEMORY.md chargees a chaque session.
-
-**Conseil** : preferer dire "modifie le CLAUDE.md avec cette info"
-plutot que laisser l'auto-memory sauvegarder n'importe quoi.
-
-#### Ajout rapide de memoire
-
-- `#texte` dans le prompt → choix project/local/user memory
-- `yes [information]` → Claude propose de sauvegarder
-- `/memory` pour ouvrir le fichier memoire
-
-#### Keywords de priorite
-
-Mots-cles que l'IA detecte et priorise :
-- `CRITICAL` — priorite maximale
-- `MANDATORY` — obligatoire
-- `VALIDATION` / `VERIFICATION` — verification requise
-- `non-negotiable` — renforce la contrainte
-- Majuscules = plus d'impact que minuscules
-
-#### Sessions et historique
-
-- `/resume` : retrouver une ancienne conversation
-- `/rewind` : restaurer code ET conversation a un etat precedent
-- `Escape x2` : acces historique + restauration
-- Les transcripts sont stockes dans `.claude/projects/`
-  (recuperables : "analyse le dossier projects pour retrouver
-  la session qui parle de X")
+> Voir **Chapitre 6 — Context Engineering & Memoire** pour le detail complet. Resume :
+> - CLAUDE.md (3 niveaux : global, projet, dossier) + rules/ (always apply ou conditionnel avec globs) + memory/ (docs >50 lignes)
+> - Auto-Memory native (`autoMemoryEnabled: true`) : notes inter-sessions dans `~/.claude/projects/<hash>/memory/`
+> - Keywords de priorite : `CRITICAL`, `MANDATORY`, majuscules = plus d'impact
 
 ---
 
@@ -5605,55 +5181,10 @@ Gratuit. 4.7 stars.
 
 ### B14. Commandes slash natives (reference complete)
 
-| Commande | Action |
-|----------|--------|
-| `/clear` | Reset contexte (OBLIGATOIRE entre taches) |
-| `/init` | Generer CLAUDE.md du projet |
-| `/context` | Afficher utilisation contexte en % |
-| `/usage` | Limites et consommation |
-| `/model` | Changer modele |
-| `/agent` | Creer/gerer agents |
-| `/mcp` | Voir MCP connectes |
-| `/plugin` | Installer plugins |
-| `/stat` | Statistiques session |
-| `/config` | Configuration interactive |
-| `/voice` | Mode vocal (beta) |
-| `/loop` | Tache recurrente a intervalle |
-| `/schedule` | Taches planifiees persistantes |
-| `/batch` | Changements paralleles grande echelle |
-| `/simplify` | Review et simplification (3 agents) |
-| `/copy` | Copier derniere reponse en Markdown |
-| `/debug` | Auto-debug configuration |
-| `/compact` | Compacter le contexte |
-| `/rewind` | Revenir a un etat precedent |
-| `/resume` | Retrouver une ancienne conversation |
-| `/remote control` | Controle a distance via telephone |
-| `/memory` | Ouvrir le fichier memoire |
-
-#### Raccourcis clavier
-
-| Raccourci | Action |
-|-----------|--------|
-| `Escape x1` | Stoppe Claude / efface texte courant |
-| `Escape x2` | Historique conversations |
-| `Shift+Tab` | Changer mode permissions |
-| `Tab` | Activer/desactiver thinking mode |
-| `Ctrl+T` | Taches en cours |
-| `Ctrl+O` | Transcript verbose |
-| `Ctrl+S` | Sauvegarder prompt |
-| `Ctrl+B` | Backgrounder un subagent en cours |
-| `Meta+P` | Changer modele |
-| `Ctrl+C` | Arreter Claude Code |
-| Fleche haut/bas | Historique messages |
-
-#### Prefixes dans le prompt
-
-| Prefixe | Effet |
-|---------|-------|
-| `@fichier` | Taguer un fichier (contexte) |
-| `/commande` | Lancer une commande (Tab pour selectionner) |
-| `!commande` | Mode bash direct (resultat dans le contexte) |
-| `#texte` | Ajouter une memoire (project, local, user) |
+> Voir **Chapitre 5 — Commandes & Outils** pour le tableau complet et les raccourcis. Resume :
+> - 21+ commandes natives : `/clear`, `/init`, `/context`, `/model`, `/loop`, `/schedule`, `/batch`, `/simplify`, `/resume`, `/rewind`, `/remote control`, etc.
+> - Raccourcis : Escape x2 (historique), Shift+Tab (permissions), Tab (thinking), Ctrl+B (background subagent)
+> - Prefixes : `@fichier` (contexte), `/commande` (slash), `!commande` (bash direct), `#texte` (memoire)
 
 ---
 
@@ -5712,37 +5243,17 @@ Installation : skill + hook UserPromptSubmit + resources
 
 ### B16. Les 6 niveaux de maitrise (Melvynx)
 
-| Niveau | Nom | Description |
-|--------|-----|-------------|
-| 1 | **Prompteur** | Ordres bruts, context rot |
-| 2 | **Planificateur** | Plan Mode, PRD, /clear |
-| 3 | **Ingenieur Contexte** | /context, /compact, StatusLine, tokens |
-| 4 | **Skill Builder** | Cree skills des qu'action repetee 2+ fois |
-| 5 | **Multi-Agent** | 4+ terminaux, work trees, agent swarm |
-| 6 | **Agents Autonomes H24** | OpenClaw VPS, agents specialises, 24/7 |
-
-#### Les 4 niveaux de developpeur IA
-
-| Niveau | Profil | Description |
-|--------|--------|-------------|
-| 1 | **Anti-IA** | Usage minimal, ne croit pas en l'IA |
-| 2 | **IA Assisted** | Monitore l'IA, review tout, prompts precis |
-| 3 | **Builder** | Agent mode, review logique/vibe, workflows |
-| 4 | **Dev Manager** | 4-12 agents simultanes, token maxing, full access |
+> Voir **Chapitre 16 — Les 6 niveaux de maitrise** pour le detail complet. Resume :
+> - 6 niveaux : Prompteur → Planificateur → Ingenieur Contexte → Skill Builder → Multi-Agent → Agents Autonomes H24
+> - 4 niveaux dev IA : Anti-IA → IA Assisted → Builder → Dev Manager (4-12 agents simultanes)
 
 ---
 
 ### B17. Les "Core 7" de Claude Code (terminologie Melvynx)
 
-Les 7 fonctionnalites qui font de Claude Code ce qu'il est :
-
-1. **Commandes/Skills** — prompts reutilisables
-2. **Hooks** — automatisation des evenements
-3. **Memoire** — CLAUDE.md + rules/
-4. **MCP** — outils externes (a remplacer par CLI)
-5. **StatusLine** — monitoring en temps reel
-6. **Sub-agents** — delegation et parallelisation
-7. **Context Management** — gestion du contexte
+> Voir **Chapitre 29 — Les Core 7** pour le detail complet. Resume :
+> - Skills, Hooks, Memoire (CLAUDE.md + rules/), MCP (→ CLI), StatusLine, Sub-agents, Context Management
+> - Ces 7 composants forment le socle de Claude Code
 
 ---
 
@@ -5839,56 +5350,18 @@ Si ca ne marche pas : `/debug` pour auto-reparation.
 
 ## ANTI-PATTERNS COMPLETS (25 regles)
 
-1. JAMAIS lancer Claude Code a la racine du systeme
-2. JAMAIS surcharger CLAUDE.md (max ~200-500 lignes)
-3. JAMAIS installer >3 MCP
-4. JAMAIS bypass SANS deny-list
-5. JAMAIS features complexes sans workflow
-6. JAMAIS dependre des plugins sans controler le code
-7. JAMAIS utiliser /batch (preferer main agent + sub-agents)
-8. JAMAIS empiler les demandes pendant que l'IA travaille
-9. JAMAIS taguer les fichiers avec Apex/OneShot
-10. JAMAIS utiliser Teams sur une seule zone de code
-11. JAMAIS laisser l'auto-memory sauvegarder n'importe quoi
-12. JAMAIS specifier la technique au premier run Greenfield
-13. JAMAIS lancer plus de 4 terminaux/work trees simultanes
-14. JAMAIS utiliser work trees pour de petites features
-15. JAMAIS laisser les plugins controler votre config
-16. JAMAIS relancer des skills pour petites modifs (langage naturel)
-17. JAMAIS creer skills/hooks/agents manuellement
-18. JAMAIS modifier settings.json manuellement
-19. JAMAIS utiliser Chrome Headless pour debug (lourd et lent)
-20. JAMAIS attendre des agents teams qu'ils communiquent entre eux
-21. JAMAIS installer 25 plugins (contexte pollue)
-22. JAMAIS laisser autocompact actif (utiliser /clear)
-23. JAMAIS un dev = un seul agent (minimum 3 en parallele)
-24. JAMAIS coder via OpenClaw quand on est devant son ordi
-25. JAMAIS utiliser tool search si MCP < 2-3% du contexte
+> Voir **Chapitre 1 — Architecture fondamentale** (section Anti-patterns) pour la liste complete et detaillee. Resume :
+> - JAMAIS : racine systeme, >3 MCP, bypass sans deny-list, features sans workflow, >4 terminaux
+> - JAMAIS : surcharger CLAUDE.md, autocompact actif, plugins non controles, 1 seul agent
+> - JAMAIS : Chrome Headless, coder via OpenClaw devant son ordi, tool search si MCP < 2-3%
 
 ---
 
 ## COMPARATIFS (resume)
 
-### Claude Code vs Cursor vs GitHub Copilot
-
-| Critere | Claude Code | Cursor | GitHub Copilot |
-|---------|------------|--------|----------------|
-| Vitesse | Moyen | Rapide | Lent |
-| Gestion CLI | Excellent | Bon | Mauvais |
-| Customisation | Maximum | Moyenne | Faible |
-| Courbe apprentissage | Raide | Facile | Moyenne |
-| Longevite | Terminal = portable | Startup | Microsoft |
-| Rapport valeur | Meilleur (Max 20x) | 20$/mois | 10$/mois |
-
-### OpenClaw vs Claude Code Channels
-
-| Aspect | OpenClaw | CC Channels |
-|--------|----------|-------------|
-| Canaux | 23+ | 3 |
-| Modeles | Multi-provider | Claude uniquement |
-| Memoire | Persistante | Session-scoped |
-| Setup | ~15 min | ~5 min |
-| Autonomie | Agent 24/7 | Requiert session ouverte |
+> Voir **Chapitre 21 — Comparatifs** pour les tableaux complets et detailles. Resume :
+> - Claude Code vs Cursor vs Copilot : CC = meilleure customisation et CLI, courbe raide, meilleur rapport valeur (Max 20x)
+> - OpenClaw vs CC Channels : OpenClaw = 23+ canaux, multi-provider, agent 24/7 ; Channels = 3 canaux, setup rapide
 
 ---
 
@@ -6338,12 +5811,52 @@ Configuration : `~/.claude/settings.json` > `hooks`
 |------|------|
 | `afplay Glass.aiff` (async) | Son de fin de tache |
 
-## D.4 — Hooks UserPromptSubmit (2 hooks actifs)
+## D.4 — Hooks UserPromptSubmit (2 hooks natifs + 1 plugin)
 
 | Hook | Role |
 |------|------|
 | `set-tab-title.sh` | Change le titre du terminal/tmux |
 | `claudeception-activator.sh` | Active le systeme Claudeception |
+| `hookify/userpromptsubmit.py` | Evalue les regles hookify `event: prompt` |
+
+### Detail des 3 hooks UserPromptSubmit
+
+#### 1. set-tab-title.sh (execution unique par session)
+- **Chemin** : `~/.claude/hooks/set-tab-title.sh`
+- **Declenchement** : une seule fois par session (flag `/tmp/claude-tab-title-{SESSION_ID}.flag`)
+- **Mecanisme** :
+  1. Verifie si le flag existe — si oui, `exit 0` immediatement (idempotent)
+  2. Lit la variable d'environnement `$CLAUDE_PROMPT` (injectee par le hook)
+  3. Tronque le prompt a 80 caracteres pour lisibilite
+  4. Envoie la sequence OSC 0 (`\033]0;TITRE\007`) a iTerm2 pour definir le titre d'onglet
+  5. Cree le flag pour empecher les executions suivantes
+- **Impact** : cosmetique — identifie visuellement chaque session dans iTerm2/tmux
+
+#### 2. claudeception-activator.sh (execution a chaque prompt)
+- **Chemin** : `~/.claude/skills/claudeception/scripts/claudeception-activator.sh`
+- **Declenchement** : a chaque prompt utilisateur, sans exception
+- **Mecanisme** :
+  1. Affiche un bloc texte sur stdout (lu comme `systemMessage` par Claude Code)
+  2. Le texte injecte un protocole d'evaluation en 4 etapes :
+     - Completer la requete utilisateur d'abord
+     - Evaluer si l'interaction a produit des connaissances non-evidentes
+     - Si OUI : activer `Skill(claudeception)` pour extraire un skill reutilisable
+     - Si NON : skip, pas d'extraction necessaire
+  3. L'instruction est marquee `NON-NEGOTIABLE` — Claude ne peut pas l'ignorer
+- **Impact** : ELEVE — c'est le moteur d'auto-apprentissage continu de Claudeception.
+  Sans ce hook, le systeme ne s'active qu'en mode manuel (`/claudeception`)
+
+#### 3. hookify/userpromptsubmit.py (plugin officiel)
+- **Chemin** : `~/.claude/plugins/.../hookify/hooks/userpromptsubmit.py`
+- **Declenchement** : a chaque prompt utilisateur
+- **Mecanisme** :
+  1. Lit le JSON du prompt depuis stdin
+  2. Charge les regles hookify de type `event: prompt` (fichiers `hookify.*.local.md`)
+  3. Evalue chaque regle via le `RuleEngine` (operateurs regex, contains, equals, etc.)
+  4. Retourne un JSON : `systemMessage` (warn) ou `permissionDecision: deny` (block)
+  5. Exit 0 systematique (ne bloque jamais le pipeline en cas d'erreur)
+- **Impact** : conditionnel — actif uniquement si des regles `event: prompt` existent.
+  Aucune regle promptcreee par defaut. Permet de filtrer/avertir selon le contenu du prompt
 
 ## D.5 — Hook Notification (1 hook actif)
 
@@ -6367,7 +5880,7 @@ Configuration : `~/.claude/settings.json` > `hooks`
 Prompt utilisateur
   |
   v
-[UserPromptSubmit] set-tab-title + claudeception-activator
+[UserPromptSubmit] set-tab-title + claudeception-activator + hookify(prompt)
   |
   v
 [PreToolUse] Bash|Write|Edit|MultiEdit|NotebookEdit :
@@ -6477,6 +5990,186 @@ Configures dans `settings.json` > `enabledPlugins`
 
 Tous sont des plugins officiels (`@claude-plugins-official`).
 La Bible dit "JAMAIS 25 plugins" — 9 est dans la zone raisonnable.
+
+### Plugin hookify — Systeme de regles comportementales
+
+#### Qu'est-ce que hookify ?
+
+Plugin officiel Anthropic qui permet de creer des regles de securite
+et de comportement SANS coder. On ecrit un fichier markdown avec un
+frontmatter YAML, et hookify l'evalue automatiquement a chaque action.
+C'est le SEUL plugin qui transforme des instructions en gardes-fous
+executables par Claude Code.
+
+Auteur : Anthropic (claude-plugins-official)
+Activation : `"hookify@claude-plugins-official": true` dans settings.json
+Dependances : Python 3.7+ (stdlib uniquement, zero dep externe)
+
+#### Architecture (23 fichiers)
+
+```
+plugins/hookify/
+  .claude-plugin/plugin.json    — metadata du plugin
+  README.md                     — documentation complete (341 lignes)
+  commands/
+    hookify.md                  — commande principale /hookify
+    help.md                     — /hookify:help
+    list.md                     — /hookify:list
+    configure.md                — /hookify:configure
+  skills/
+    writing-rules/SKILL.md      — guide ecriture de regles
+  agents/
+    conversation-analyzer.md    — sous-agent analyse conversation
+  hooks/
+    hooks.json                  — config des 4 hooks Python
+    pretooluse.py               — hook PreToolUse
+    posttooluse.py              — hook PostToolUse
+    stop.py                     — hook Stop
+    userpromptsubmit.py         — hook UserPromptSubmit
+  core/
+    config_loader.py            — chargement regles .local.md
+    rule_engine.py              — moteur evaluation regles (LRU cache 128)
+  examples/
+    console-log-warning.local.md
+    dangerous-rm.local.md
+    require-tests-stop.local.md
+    sensitive-files-warning.local.md
+```
+
+#### 5 commandes slash
+
+- `/hookify` — commande principale. Avec argument : cree une regle
+  depuis l'instruction ("Don't use console.log"). Sans argument :
+  lance le sub-agent conversation-analyzer qui scanne les derniers
+  messages pour detecter corrections, frustrations, reversions,
+  patterns repetes et propose des regles automatiquement.
+  Processus en 4 etapes : Gather > Present > Generate > Confirm.
+- `/hookify:help` — affiche la doc complete du plugin (events,
+  patterns, operateurs, exemples). Outil autorise : Read uniquement.
+- `/hookify:list` — scanne `.claude/hookify.*.local.md` via Glob,
+  extrait le frontmatter YAML, affiche tableau avec nom, enabled,
+  event, pattern, fichier. Montre le total regles actives/inactives.
+- `/hookify:configure` — interface interactive pour toggle
+  enabled: true/false dans le frontmatter. Changements immediats,
+  pas de restart necessaire.
+- `/hookify:writing-rules` — skill (pas commande) : guide complet
+  pour ecrire des regles hookify, reference de tous les champs
+  frontmatter, exemples pour chaque type d'event.
+
+#### Types d'events supportes
+
+- `bash` — se declenche sur les commandes Bash. Champ disponible :
+  `command` (la commande shell).
+- `file` — se declenche sur Edit, Write, MultiEdit. Champs :
+  `file_path`, `new_text`, `old_text`, `content`.
+- `stop` — se declenche quand Claude veut s'arreter. Champ :
+  `transcript` (lit le fichier transcript complet de la session).
+  Permet de bloquer l'arret si une condition n'est pas remplie
+  (ex: tests pas lances).
+- `prompt` — se declenche a chaque soumission de prompt utilisateur.
+  Champ : `user_prompt`.
+- `all` — se declenche sur TOUS les events ci-dessus.
+
+#### 4 hooks Python injectes
+
+hookify injecte automatiquement ses 4 hooks via `hooks.json` :
+
+1. `pretooluse.py` — evalue les regles `event: bash` et `event: file`
+   AVANT l'execution de l'outil. Peut BLOQUER (permissionDecision: deny).
+2. `posttooluse.py` — meme logique APRES l'execution de l'outil.
+3. `stop.py` — evalue les regles `event: stop` quand Claude veut
+   s'arreter. Peut empecher l'arret (decision: block).
+4. `userpromptsubmit.py` — evalue les regles `event: prompt` a chaque
+   soumission de prompt utilisateur. Injecte un systemMessage.
+
+Chaque hook a un timeout de 10 secondes.
+
+#### 6 operateurs de comparaison
+
+| Operateur | Description |
+|-----------|-------------|
+| `regex_match` | Pattern regex doit matcher (le plus courant) |
+| `contains` | La string doit contenir le pattern |
+| `equals` | Correspondance exacte |
+| `not_contains` | La string ne doit PAS contenir le pattern |
+| `starts_with` | La string commence par le pattern |
+| `ends_with` | La string finit par le pattern |
+
+#### 2 actions disponibles
+
+- `warn` — affiche un avertissement (systemMessage) mais LAISSE
+  l'operation s'executer. Action par defaut.
+- `block` — BLOQUE l'operation. Sur PreToolUse : permissionDecision
+  deny. Sur Stop : decision block. Sur les autres : systemMessage
+  uniquement.
+
+#### Format des regles (.local.md)
+
+Les regles sont des fichiers `.claude/hookify.*.local.md` dans le
+repertoire du projet. Frontmatter YAML + corps markdown (le message).
+
+**Format simple (1 pattern) :**
+```markdown
+---
+name: block-dangerous-rm
+enabled: true
+event: bash
+pattern: rm\s+-rf
+action: block
+---
+
+Message affiche quand la regle se declenche.
+```
+
+**Format avance (conditions multiples, TOUTES doivent matcher) :**
+```markdown
+---
+name: warn-sensitive-files
+enabled: true
+event: file
+action: warn
+conditions:
+  - field: file_path
+    operator: regex_match
+    pattern: \.env$|credentials|secrets
+  - field: new_text
+    operator: contains
+    pattern: KEY
+---
+
+Message affiche quand TOUTES les conditions matchent.
+```
+
+#### Sub-agent conversation-analyzer
+
+Agent specialise lance par `/hookify` sans arguments.
+Analyse les derniers messages de la conversation pour detecter :
+- Corrections de l'utilisateur ("non", "pas comme ca", "arrete")
+- Frustrations et reversions
+- Patterns repetes (meme erreur 2+ fois)
+Categorise par severite (high/medium/low) et genere des regex
+patterns prets a l'emploi pour creer des regles automatiquement.
+
+#### Moteur de regles (rule_engine.py)
+
+- Cache LRU des regex compilees (max 128 patterns)
+- Support 2 formats : simple (pattern) et avance (conditions[])
+- Extraction intelligente des champs selon le type d'outil
+  (Bash -> command, Edit -> file_path/new_text/old_text,
+  Write -> file_path/content, MultiEdit -> concatenation des edits)
+- Les regles de type `block` sont prioritaires sur `warn`
+- Toutes les regles matchantes sont combinees (messages concatenes)
+
+#### Etat actuel sur ce Mac
+
+Aucune regle `.claude/hookify.*.local.md` creee dans le repertoire
+home ou le projet CC. Le plugin est installe et actif mais aucune
+regle utilisateur n'a ete definie.
+
+La protection anti-suppression est assuree par la deny-list
+(54 regles, Chapitre A) et le command-validator bun (Melvynx
+standard). hookify est disponible comme couche SUPPLEMENTAIRE
+pour creer des gardes-fous custom en markdown.
 
 ---
 
