@@ -1,0 +1,600 @@
+ 
+Comment devenir Vipbe Codeurer et
+réussir à créer des applications
+complexes même si tu n'es pas
+développeur auparavant ? Alors ça paraît
+dingue mais depuis quelques mois
+maintenant j'ai accompagné plusieurs
+dizaines de personnes qui n'avaient
+jamais codé de leur vie et qui en
+seulement quelques semaines ont déployé
+et publié leur première application.
+Le varbe coding, c'est quelque chose qui
+est maintenant non seulement possible
+mais de plus en plus facile à condition
+de respecter la roadmap que je vais te
+partager aujourd'hui. Déjà, quel
+résultat tu peux t'attendre avec le vibe
+coding ? Personnellement, j'ai créé
+cette application Paddle sans jamais
+avoir créé une application iOS avant.
+J'ai créé une application Watch et iOS
+avec toutes ces illustrations que j'ai
+fait moi-même, tout ça qui a été publié
+par mon compte et que j'ai codé sans
+écrire une seule ligne de code.
+Pourtant, j'ai de l'expérience en tant
+que développeur, je vais pas te mentir,
+je suis un développeur. J'ai par exemple
+créé saveit. Now un peu avant et pendant
+la hype de Lia qui est une application
+de bookmark. J'ai créé surface et
+cetera. Donc j'ai de l'expérience et
+pourtant
+j'ai pas d'expérience en AP iOS et j'ai
+réussi à en créer une. Ça c'est du Vibe
+coding. À la question le Vibe coding
+c'est quoi ? La réponse c'est créer une
+app sans savoir comment créer quelque
+chose. Typiquement ici cette application
+iOS du Watch OS. Je n'ai pas écrit une
+seule ligne de code. Pourtant, j'ai un
+repository sur GitHub ici avec du code
+uniquement fait en Swift que j'ai écrit
+de A à Z en utilisant Lia. Ça c'est le
+vibe coding. Et maintenant à l'heure où
+tu regardes cette vidéo, tu es capable
+de créer des sass aussi complexe que
+subfast que j'ai ici sans savoir créer
+une seule ligne de code. Mais pour ça,
+va falloir suivre une road map très
+précise que je vais te partager ici.
+Vibe Coder, les trois piliers et ensuite
+on va voir la road map. Pour moi, il y a
+trois piliers essentiels que tu vas
+devoir euh débuter, comprendre pour
+devenir vibe coder. Le premier, ça va
+être les outils essentiels. Qu'est-ce
+qui est inclus dans les outils ? dit par
+exemple pour versionner ton code. Même
+si tu n'es pas développeur et que tu ne
+sais pas coder, tu vas avoir besoin de
+pas apprendre à utiliser Git qui est ce
+qu'on appelle un outil de de terminal,
+mais il va falloir comprendre un petit
+peu le concept. GitHub, c'est
+l'interface que je t'ai montré ici qui
+va te permettre de publier ton code, de
+déployer ton code et de ne jamais perdre
+ton code. C'est aussi très important.
+Cloud code, il va falloir utiliser et
+maîtriser les outils d'agent IA. Tu peux
+l'utiliser en mode yolo noob comme la
+plupart des gens font ou tu peux en
+avoir un usage beaucoup plus avancé et
+des résultats beaucoup plus
+intéressants. Le terminal. Le terminal
+c'est ce que tu retrouves sur un
+ordinateur qui te permet de contrôler
+l'ordinateur via une interface de
+commande. C'est exactement comme sur
+Minecraft. Vous vous connaissez sûrement
+les les commandes Minecraft.
+Donc tu sais c'est dans le chat comme
+ceci. On pouvait faire des
+commandes/gameem/say
+pour euh say quelque chose. Et ben c'est
+exactement la même chose slash téléport.
+Voilà. Bah la commande/htp on la connaît
+tous. Et ben le l'ordinateur a des
+commandes similaires qui permettent de
+contrôler ton ordinateur. Ça c'est le
+terminal. Et finalement un peu l'IDE,
+faut un peu savoir ouvrir Visual Studio
+Code, cliquer sur deux trois trucs et
+utiliser Guide directement avec
+l'interface. Ça c'est le pilier 1
+que tu veuilles créer une app iOS, un
+SAS B2C comme ça, un SAS B2B comme
+Subfast ou n'importe quelle app, ce
+pilier va être élémentaire pour la
+suite. Le pilier 2, c'est la stack et la
+compréhension d'une app web. Qu'est-ce
+que je veux dire ici ? comprendre le
+back et le front. Je te demande pas de
+savoir créer du back et front, on va
+voir les détails après. Mais si je
+t'affiche cette page là et que je te dis
+ce bouton copier, est-ce qu'il est en
+back end ou en frontend, tu devrais être
+capable de me dire ça c'est du front
+end. Donc on en parlera après,
+t'inquiète pas. Les databases, faut
+comprendre qu'est-ce que c'est une
+database, pourquoi on a besoin d'une
+database. Le déployement, que ce soit
+sur Versel en mode simple ou sur un VPS
+en mode plus complexe, tu devrais être
+capable de faire les deux avec Lia, mais
+c'est intéressant. Savoir et avoir
+connaissance des librairies, par exemple
+Chat CNUI qui va te permettre d'avoir
+une application de beaucoup plus
+beaucoup plus qualitatif rapidement.
+savoir utiliser tous les outils de
+l'écosystème. Alors voilà, ici j'ai mis
+Upstach, on pourrait parler d'Ingest et
+cetera, plein d'outils qui vont résoudre
+des problèmes intéressants. Avoir une
+compréhension des des fichiers donc
+typiquement R2, blob et cetera. Comment
+est-ce qu'on upload et on gère des
+fichiers ? Avoir une compréhension de la
+CCD, donc qu'est-ce que c'est un
+déploiement ? Qu'est-ce que c'est les
+différentes étapes d'une application ?
+On parlera de build, on parlera de
+runtime, tous ces trucs là en fait sont
+assez importants, non pas et ça prend 5
+minutes de le de le comprendre entre
+guillemetsin.
+Le but c'est pas de savoir faire du
+build ou du runtime, c'est de d'avoir ce
+pilier et cette compréhension minimale
+du sujet pour pouvoir vi coder ensuite.
+Ensuite, les workflow, donc le pilier 3,
+ça va être le plus le top of the mind.
+Une fois que tu as les bases, ça va être
+utiliser l'IA. Et plus précisément dans
+notre cas, le plus simple à démarrer et
+le plus friendly, ça va être Cloud Code
+ou Codex qui va avoir les deux des
+skills, des PRD, archi, task, commande,
+prompt, automatisation, MCP. Pour cette
+partie-là, on va moins le voir
+précisément dans la vidéo. Je t'invite à
+regarder un tutoriel de euh pas mal
+d'heures sur ma chaîne YouTube qui parle
+de ce sujet-là. Je te le mettrai dans la
+description si tu as envie d'aller plus
+loin sur ce sujet. Maintenant, de quoi
+on n'a pas besoin pour être vibe coder ?
+Et ça c'est super important. C'est super
+important de savoir qu'est-ce que tu
+n'as pas besoin de faire. Tu n'as pas
+besoin de savoir faire du HTML. Mais
+quand je te dis que tu as pas besoin,
+c'est que tu as même pas de besoin de
+savoir faire une seule et unique ligne
+de HTML. Tu peux juste créer ton app
+sans HTML, sans savoir ça. Même chose
+pour le CSS,
+tu n'a même pas besoin de regarder une
+vidéo CSS, c'est totalement inutile.
+JS React, Next JS, euh tous ces outils
+qu'on peut avoir, Prisma et cetera,
+toute l'implémentation est 100 %
+inutile. Aucune syntaxe est à savoir.
+pas de fonction, pas de constante, pas
+de variable, pas de boucle. Tout ça est
+devenu complètement inutile. Et comment
+est-ce que je peux te le dire avec
+autant d'assurance ? Aujourd'hui, j'ai
+j'ai codé pour plus de Donc si je lance
+clut code ici, tu peux voir
+qu'aujourd'hui j'ai codé plus de 70
+dollars. J'ai pas lu une seule ligne de
+code. J'ai pas lu une seule ligne de
+code et pourtant dû écrire des centaines
+voire des milliers de lignes juste
+aujourd'hui. Ça ne me sert plus à rien
+de connaître une syntaxe. Complètement
+inutile. complètement
+savoir coder en soi, ça ne sert à rien.
+Ne perd pas de temps à faire du HTML, du
+CSS, du JS, tout ça est 100 % inutile.
+Savoir faire de l'algo,
+ça ne sert à rien aussi. Lia sera, est
+deviendra meilleur que toi dans tous les
+cas.
+Ça c'est la base. Non pas que c'est mal
+si tu sais ces points-là, juste que
+prendre du temps pour les apprendre est
+devenu inutile. Je le sais parce que
+tous les jours je fais des fatures, je
+code. Donc donc je suis pas juste là en
+train de te faire une vidéo en sachant
+que je crée jamais d'app. Je passe ma
+vie entière à créer des app. J'en ai
+plus de cinq ou six. Bref, et tout ça ne
+sert à rien et j'ai pas des app des
+appiles. On verra ça. Maintenant,
+qu'est-ce qui est inutile utile et
+pourquoi ? la compréhension des mots
+importants, le backend, le front end,
+une database, quel outil pour gérer du
+cash, quel outil il y a on doit utiliser
+une compréhension de ces sujets. Une
+compréhension n'a rien à voir avec un
+apprentissage.
+On n pas besoin de savoir créer un
+backend, savoir faire une application
+express, fastify, deno, tous ces mots un
+petit peu obscurs. Tout ça est
+strictement inutile qu'on soit clair.
+Mais réussir à savoir que dans une
+application on a deux parties, une back
+end et un front-end et que certaines
+choses sont géré plus par le back end et
+que d'autres sont gérées plus par le
+front end. Ça c'est quelque chose
+d'élémentaire.
+Voilà
+pourquoi on a besoin de savoir ça. Là,
+tu peux dire Melvin et ben ça va
+t'éviter d'avoir une appomir
+tout simplement avec exemple database
+dans des fichiers Jon. C'est pas des
+exemples que je te ponds euh de manière
+aléatoire ici. C'est des vrais exemples.
+Avoir une application avec juste un
+fichier HTML CSS multipage. Ça existe.
+Ne rigole pas, ça existe.
+Aucune sécurité, tout en mode yolo. Euh
+client authentification complètement
+fausse. N'importe qui peut se connecter
+avec n'importe quoi. Ça existe. Il y a
+sans instruction, sans réflexion, sans
+minimum de compréhension, sans savoir
+communiquer avec elle, elle va faire ce
+genre de truc et j'ai vu de ce genre de
+truc.
+Savoir à l'inverse tout ça, ça va te
+permettre de communiquer avec Lia.
+Est-ce que tu as bien mis ça dans le
+backend ? Et quand Lia te répond "Oui,
+j'ai mis ça dans le backend, regarde."
+Tu es capable de comprendre sa réponse.
+Si tu as aucune connaissance des mots
+minim minimal pour réaliser une
+application, comment est-ce que tu
+pourrais même imaginer être capable de
+comprendre ce que Lia te dit ? Alors
+oui, évidemment que tout ça, tu vas
+pouvoir l'apprendre en créant des appes.
+Je dis pas que c'est impossible, je dis
+juste c'est les trucs que tu vas devoir
+apprendre. Alors que ce soit pendant que
+tu crées une app, avant, après, tout ce
+que tu veux, c'est pas mon mon sujet.
+Mais ça va être des choses importantes.
+Et voici pourquoi. Alors maintenant,
+quelle est la roadmap du Vibe Coder que
+je te recommande dans cette vidéo ? Et
+désolé, je t'arrête 2 secondes dans
+cette vidéo pour te dire que si tu es
+actuellement avant le dimanche 20h 8
+mars, tu peux t'inscrire à un webinar
+live dans lequel on vaccoder notre
+application zéro sur mlv.sh/fl SH/FL
+juste ici. Alors, en plus de pouvoir
+t'inscrire au webinar live, tu vas aussi
+avoir une formation gratuite qui va te
+permettre de setup cloud code et ton
+environnement de travail afin d'être
+capable de pouvoir créer des
+applications de zéro, même si tu n'as
+jamais codé. Donc encore une fois,
+webinar live dimanche à 20h le 8 mars
+sur mlv.sh/fl.
+Je t'attends vraiment sur ce live. Ça va
+être légendaire. à donc à 20h dimanche
+et surtout faut t'inscrire donc premier
+lien sous cette vidéo. Ça c'est la vraie
+action à faire et si on est après le 8
+mars, tu peux toujours aller sur ce lien
+et ça te redirigera vers la formation
+gratuite. Donc soit tu as accès au live,
+soit tu as accès à la formation. Dans
+tous les cas, tu as accès à la formation
+mais en plus tu peux avoir un live
+gratuit donc c'est gagnant gagnant.
+D'abord la première étape ce serait
+d'avoir un environnement de travail
+parfait. Qu'est-ce que je veux dire par
+là ? Si tu es sur Windows Setup WSL
+qui s'appelle Windows Subs Système Linux
+qui va te permettre de coder de manière
+beaucoup plus simple et d'éviter des
+dizaines et des dizaines et des dizaines
+d'heures à résoudre des problèmes que tu
+comprendras rien et tu finiras par
+abandonner pour aller sur loveable.
+Une fois que tu as WSL qui est une sorte
+de système, c'est comme si tu mettais
+Linux. Alors, si tu sais pas ce que
+c'est Linux, c'est tous ces tous ces
+ordis. Donc c'est c'est le petit truc
+là, mais c'est tous ces ordis qui sont
+pas sur Windows, qui sont sur Linux.
+Donc c'est comme si tu avais un Linux
+dans ton Windows, ce qui va te permettre
+de facilement installer Cloud Code, not
+JS, guide, VS Code et cetera. Ça c'est
+la config pour Windows et pour MacOS
+c'est exactement la même chose sauf
+qu'on enlève WSL parce que MacOS
+fonctionne sur la même chose que Linux
+avec des guillemets pour les plus tech
+d'entre vous. C'est pas la même chose
+mais et c'est c'est tellement similaire
+qu'il y a besoin de rien changer par
+rapport à ce que vous auriez fait sur
+Linux.
+Ça c'est la base. Si vous avez un
+environnement de travail mauvais, c'est
+là vous allez vouloir utiliser des
+outils comme laable. Pourquoi vous allez
+vouloir utiliser des outils comme laable
+? Parce que l'able ne n'a pas besoin de
+setup sur votre ordinateur. Donc oui,
+setup sur votre ordinateur, c'est un
+truc qu'il faut faire une fois. Une fois
+que c'est fait, vous aurez plus jamais
+besoin de le faire. Ça va être très très
+pratique et très très simple, mais il va
+falloir le faire. C'est obligatoire.
+Deuxième chose, et ça c'est la seule et
+unique compétence technique que je peux
+te recommander, c'est celle de savoir
+utiliser le terminal et VS code.
+Qu'est-ce que j'entends par là ? Les
+commandes du style CD, LS, MKD qui te
+permettent en fait de te de naviguer
+dans ton terminal
+juste ici vont être essentiels pour ta
+compréhension. Sinon, tu vas très
+rapidement déchanter en fait, te
+familiariser en général avec le
+terminal, la gestion des pafs,
+l'installation de nouveaux outils, le
+lancement de serveurs. Alors, je sais
+pas si tu as déjà créé une app, mais tu
+sais tu sais peut-être que quand tu es
+dans une app et que tu veux lancer un
+serveur, tu dois lancer une commande.
+Donc encore une fois, comme Minecraft,
+c'est comme si j'écrivais slash lancer
+le serveur. Sauf que cette commande là,
+on l'écrit PNPM.
+Qu'est-ce que c'est PNP PNPM ? Et ben ça
+ce serait intéressant aussi de le
+savoir. PNPM dev qui vient lancer ici
+comme tu peux voir, hop, on a lancé un
+serveur sur local host. La même chose
+une fois qu'on a vu ça, qu'est-ce que
+c'est local host ? Qu'est-ce que c'est
+que cette adresse ici ? Qu'est-ce que
+c'est que ce 3000 ? pas que il faut
+savoir comment ça fonctionne. Faut juste
+se dire ce serveur là est sur le port
+local host le port 3000 sur local
+pardon. C'est le genre d'exemple qu'on
+va pouvoir partager ici. Savoir un petit
+peu qu'est-ce que c'est que guit et
+alors pas pas besoin de savoir les
+commandes hein. On va principalement
+utiliser, c'est ce que j'ai écrit juste
+ici VS Code. Mais quand tu es sur Visual
+Studio Code, avoir une vague
+compréhension de ce que veut dire ce
+menu qui est juste ici. Donc si ici je
+viens ouvrir subfast, tu peux voir que
+là on a une sorte de menu guit un peu
+étrange avec des u, des m des trucs. Ça
+va être intéressant pour toi de
+comprendre ce que ça veut dire. Et
+encore une fois, ça n'a rien à voir avec
+le fait d'apprendre à ce qu'on pourrait
+dire coder ou je sais pas trop qu'est-ce
+qu'on pourrait dire, mais ça n'a rien à
+voir avec le fait d'apprendre à coder.
+Ça a vraiment à voir avec juste le fait
+de savoir que quand tu fais des
+changements, tu vas vouloir les ajouter,
+les commit, séparer les choses, cleiner
+les choses, faire tout ça va t'aider
+énormément pour le déploiement et la
+gestion de tes app. Prochain sujet,
+maîtriser et configurer cloud code.
+Alors évidemment, si tu utilises un
+agent et maintenant qu'on s'est
+familiarisé avec le terminal, il va être
+intéressant pour toi de commencer à
+utiliser le terminal. Moi, je sais que
+de tous les développeurs que j'ai
+accompagné,
+quand ils ont pas les connaissances, ils
+aiment bien l'interface Cloud Code qui
+est juste ici, qui est un petit peu
+friendly, un petit peu jolie. Dès qu'ils
+ont un petit peu de connaissance et dès
+qu'ils ont touché le terminal, touché
+l'odeur du terminal, senti un petit peu
+la puissance du truc, et ben ils sont
+très heureux de passer à l'utilisation
+de cloud comme ceci dans le terminal
+avec beaucoup plus d'information,
+beaucoup plus de flexibilité. Les
+dernières features qui te permettent
+d'être le développeur ou le vibe coder
+le plus productif et proliférique
+que tu peux imaginer. Donc ça très
+intéressant et important.
+Finalement, pour créer ton application,
+utiliser une bonne boiler plate avec des
+standards élevés. En fait, je me suis
+rendu compte en accompagnant beaucoup de
+personnes que le hack ultime pour un
+vibe coder qui aurait peu de
+compréhension du code, c'est de partir
+avec une boiler plate. Donc il y en a
+plein de gratuites. Moi, vu que c'est ce
+que je vends et ce que je propose, je
+vais te présenter Now TS. Mais now ça a
+été pensé exactement pour des personnes
+vibe coder parce que on va tout
+simplement ajouter par défaut des
+outils, des règles qui permettent
+d'avoir de la bonne sécurité, des tests
+qui permettent de vérifier que ton code
+n'est est respecté, une authentification
+avec une organisation qui est déjà gérée
+pour toi afin de sécuriser les pages et
+cetera. une boiler plate que tu peux
+tout simplement taper sur internet
+boiler plate application web ou boiler
+plate sas que tu peux taper. Essaie de
+brainstorm avec chat GPT si tu as pas
+envie de payer et de rejoindre la TS ou
+quoi que ce soit de moi. Voilà, tu vas
+sur sa starter. Ici tu as plein
+d'exemples et en fait au lieu de
+commencer avec rien. Donc typiquement on
+a aussi si vous voulez Versel boiler
+plate
+voilà où ça s'appelle aussi des
+templates. Mais donc ici typiquement
+vous pouvez chercher authentification et
+vous pouvez trouver des sites comme
+NextGS SAS Starter qui est juste là.
+Vous pouvez aller sur ce lien regarder
+un petit peu si ça a été mise à jour.
+Donc celui-ci, bon, il a pas été le plus
+mise à jour au monde il y a que 2 mois,
+mais c'est déjà sympa, il y a déjà
+beaucoup de choses qui sont déjà là. On
+va on va avoir high headshot generator
+aussi juste ici qui gère pas mal de
+choses si je me trompe pas. Et en règle
+générale ici, vous pourrez trouver plein
+de de de de boiler plates. Donc c'est
+vraiment le mot boiler plate. Moi
+personnellement, je vous conseille Next
+GS qui est assez simple. Et là vous vous
+avez par exemple un site avec plein de
+boiler plates. Trouver celles qui ont
+été mises à jour il y a pas trop trop
+longtemps. Et justement en parlant de ce
+qu'on avait dit avant avec la
+compréhension des outils, vous allez
+pouvoir définir quels sont les meilleurs
+outils que vous voulez utiliser. Par
+exemple, moi je vous les donne he mais
+Better Road, c'est vraiment un outil
+très puissant pour gérer
+l'authentification. Et donc vous pouvez
+chercher boiler plate next gs better h
+et venir choisir celui qui vous plaît le
+plus. Par exemple ici Next GS15 boiler
+plate et vous commencez comme ceci avec
+un code qui fonctionne déjà et qui a
+déjà en fait une interface et une
+sécurité qui a été faite et vous pouvez
+ensuite la modifier. En fait, le fait de
+faire ça, ça va vous éviter de laisser
+le l'aléatoire de LIA gérer votre
+sécurité et les différentes choses qui
+vont être mises en place. Moi je vous
+invite vraiment la même chose si vous
+faites une app native React native
+boiler plate the best React native
+boiler plate. Donc ici parfois vous
+aurez des versions payantes. Des fois,
+ce sera gratuit mais ça va être très
+intéressant en fait d'avoir ici une
+boiler plate qui permet de commencer
+avec déjà des belles interfaces avec des
+repository qui ont été travaillés, des
+gens qui ont travaillé sur ce produit et
+toi ça te permet de gagner de beaucoup
+de temps. Une fois que tu as créé ton
+premier SAS, c'est que tu as tapé toutes
+les erreurs. En fait, tu vas créer ta
+propre boiler plate que tu pourras
+utiliser pour tes app codé. Mais de ce
+que j'ai vu, si vous si vous faites les
+choses à la main, il y a quand même
+beaucoup de chance que vous vous
+retrouviez avec des choses qui soient
+approximative, pas très
+pas clean et avec des grosses erreurs.
+Donc la boiler plate en fait, c'est un
+shortcut, un hack qui vous permet
+d'aller plus beaucoup plus vite. Et
+finalement ça va être apprendre à
+développer son produit. Donc ça va être
+le choix des bronzes d'outils. Quand
+vous utilisez de l'IA, vous allez par
+exemple vouloir avoir un agent
+orchestrator pour venir faire des choses
+un peu plus complexes. Et pour ça,
+utiliser Injest, c'est par exemple une
+super solution. Injest, c'est un agent
+orchestrator qui permet de rendre du
+code plus durable et on va pouvoir
+l'utiliser comme ceci pour pouvoir euh
+gérer comme ceci des sortes d'agents qui
+vont pouvoir se connecter, générer des
+choses, avoir des progress bar et plein
+de choses comme ceci. Ensuite, ça va
+être la création et le process de PRD,
+la création d'architecture, le choix et
+le brainstorm de l'idée de la de manière
+la plus correcte possible pour avoir un
+code qui répond au standard et ensuite
+de pouvoir développer son produit. Et
+c'est comme ça que vous allez avoir une
+bonne application. Tout ça, tout ce que
+je vous ai dit ici, vous pouvez
+commencer à setup votre environnement, à
+setup Cloud Code avec une formation qui
+vous setup tous les outils sur Windows
+ou sur macOS en allant sur mlv.sh/fs/fs
+SH/FS/FS
+création de Sensas avec Lia, même si tu
+n'as jamais codé avec ici le workflow
+recommandé et dans cette formation
+gratuite que vous allez pouvoir
+rejoindre, vous allez basiquement
+accéder à un cours qui permet de setup
+votre environnement de manière correcte
+et de découvrir, maîtriser et configurer
+Cloud Code comme ceci. Sinon, sur cette
+chaîne YouTube, vous allez retrouver
+dans la suite de la vidéo ou dans des
+vidéos séparées une formation pour setup
+votre terminal VS code et des formations
+pour maîtriser et configurer cloud code.
+Vous allez retrouver tout ça aussi dans
+la description. Par exemple, sur ma
+chaîne YouTube, vous avez ici cette
+vidéo 1000 heures de cloud code résumé
+en 1h30, formation gratuite en 2026.
+C'est une formation pour débutants et
+vous avez aussi une formation avancée
+qui va être publiée très bientôt et une
+formation encore plus avancée qui va
+être publiée. Donc tout ça, vous allez
+pouvoir y accéder gratuitement, ce qui
+va vous aider à faire ceci. Voilà pour
+cette vidéo. Dites-moi si vous avez déjà
+créé des applications. Je sais que vous
+êtes nombreux à avoir fait des projets
+vraiment impressionnants, même si vous
+êtes pas développeur. Moi, étant
+développeur, ça me fait vraiment plaisir
+de voir toutes les créations qu'on peut
+faire. Et je vous invite vraiment à
+regarder la suite ou une prochaine
+vidéo. On se dit à bientôt. Ciao ! No.

@@ -1,0 +1,724 @@
+ 
+Est-ce que open close c'est juste une
+hype et ça ne répond pas à un vrai
+besoin ? C'est la question que j'ai
+envie de te répondre aujourd'hui parce
+que beaucoup de personnes ici
+n'utilisent pas Open Clow. Je le sais,
+tu le sais, on le sait, tout le monde le
+sait. C'est très très peu d'useurs dans
+le monde. Pourtant moi, j'ai
+complètement adopté cet outil. Ça fait
+pas mal de temps maintenant que je
+l'utilise de manière quotidienne. Faut
+savoir que c'est même l'application sur
+laquelle je passe le plus de temps. Je
+vais te montrer. Donc voilà, sur ma
+semaine, si tu regardes juste ici, tu
+peux voir que j'ai Telegram en top 1
+avec 3h. Ensuite, j'ai ex et ensuite
+j'ai chess.com. Alors bon, ne me
+demandez pas pourquoi je joue à
+chess.com autant, mais faut bien
+comprendre que j'utilise Telegram et
+open la majorité du temps pour tout
+faire. Et récemment, j'ai automatisé et
+j'ai créé un agent qui gère mes sponsors
+YouTube avec OpenClow. J'ai euh créer un
+agent qui m'aide à répondre aux mail du
+support, qui m'aide moi et mon assistant
+de manière très intelligente. Je vais te
+montrer à répondre aux mail de support.
+Et j'ai même essayé, j'ai pas encore
+réussi à créer une automatisation pour
+Subfast qui vient code DM et email des
+personnes. Alors aujourd'hui, je vais te
+montrer tous les cas d'usage. On va
+commencer par les moins impressionnants
+et à la fin de la vidéo, je vais te
+montrer les cas d'usage les plus fous.
+Donc reste bien jusqu'à la fin parce que
+tu risques de découvrir des choses
+jusqu'à la dernière minute de cette
+vidéo. Alors, j'ai préparé un petit euh
+truc pour vraiment extraire les
+informations les plus stylées, mais un
+des exemples que je peux faire, c'est
+gérer mes newsletter. Il faut savoir que
+mon open a accès à l'email et d'ailleurs
+l'umail, je l'ai un peu rebrandé. Alors,
+j'ai pas encore fait la vidéo de la je
+dois vraiment la faire. Mais maintenant,
+c'est don't type email, just prom
+ici euh très focus sur le fait que les
+MCP et l'intégration est extrêmement
+poussé dans l'email. Ce qui fait qu'en
+fait l'Umail a une documentation juste
+ici avec un skill MCP qui lui explique
+exactement comment faire ça et qui vient
+ajouter, tu vois, tous les skills pour
+créer des campagnes, les envoyer et
+cetera avec la gestion des campagnes. Et
+donc, je l'utilise pour envoyer draft,
+préparer des campagnes, email.
+directement parce qu'il faut savoir que
+mon business fonctionne beaucoup avec
+des emails. Deuxème cas concret que
+cette fois je peux te montrer live dans
+mon open code et par exemple hier il y a
+une personne qui m'a contacté sur
+WhatsApp pour m'afficher une erreur.
+Donc ici euh subfat should have an error
+message when the user try to upload blab
+blabla. Et là on peut voir qu'il me dit
+hop ok j'ai validé le besoin. C'est
+parti. Euh je vais lancer la fiture. Hop
+lancé l'agent et là je lui dis est-ce
+que c'est fini ? il m'a fait la pool
+request. Donc pourquoi j'ai fait ça hier
+? J'étais dans un event, j'avais pas mon
+ordi. Il m'a fait la pool request, j'ai
+émergé, ça répondait aux besoins que
+j'avais envie. Le code semblait bien. Et
+donc ici, il est capable de venir, comme
+j'ai fait ici coder sur les différents
+workspace. Qu'est-ce que fait Open Clow
+quand je lui demande de coder ? Il lance
+un agent cloud code parce que si tu
+restes aussi jusqu'à la fin de la vidéo,
+je te parlerai comment optimiser les
+coûts et les problèmes qui peut y avoir
+avec Open Clow. Mais donc ce qui se
+passe c'est qu'on a Open Clow qui
+contrôle le VPS qui lui va lancer des
+instances et manager en fait des
+instances de cloud code et qui va
+ensuite m'envoyer des rapports quand
+c'est terminé. Donc ça c'est le deuxième
+exemple, c'est tout ce qui est code que
+je peux directement faire maintenant
+depuis Telégram. Donc la même chose ici.
+Des fois je lui envoie même des
+screenshots. Donc quand j'ai pas le
+temps, quand je suis dehors, si tu
+m'envoies un message, il y a des chances
+que je lance mon open clement. Fixe un
+script code coupon landing page. Par
+exemple, ici, je lui donne un lien
+mlv.sh/iblueprint
+bundle. Je lui dis ce lien devrait être
+qu'est-ce qu'il va faire ? En fait, mon
+Open Clow, encore une fois, il a
+énormément d'outils disponibles. C'est
+vraiment ça la puissance de mon Open
+Clow actuel, c'est que le Open Clow a
+accès à Codeline, ma plateforme de
+formation via un skill MCP et il a accès
+à du.sh via un skill MCP. Et donc ce
+qu'il va faire quand je lui demande
+cette tâche, c'est qu'il va venir
+récupérer les infos sur Dub. Une fois
+qu'il a les infos sur Dub, il va venir
+créer le coupon sur Codeline, puis
+récupérer, puis modifier le lien Dub
+comme ceci et m'envoyer le lien corriger
+comme ceci sans rien que j'ai besoin de
+faire et en sans 100 % du langage
+naturel, il a réussi à connecter
+plusieurs apps que j'utilise de manière
+intelligente pour réaliser une tâche ou
+une autre. Maintenant, évidemment, agent
+Yak aussi accès à mes dossiers et
+qu'est-ce que j'ai fait ici ? Versel
+CLI, gestion du projet. Est-ce que il y
+a mon déploiement qui a fonctionné ?
+Est-ce qu'il y a ça qui a fonctionné ?
+Est-ce que ça ça fonctionne ? Et cetera
+et cetera. On se retrouve du coup avec
+un open capable de contrôler mon
+business. Maintenant, j'avais un
+problème, c'est que je pouvais
+l'utiliser pour faire ça. Euh alors ce
+que j'ai oublié de dire aussi avant de
+continuer, c'est que j'utilise beaucoup
+aussi pour comme coach. Alors, je vais
+pas montrer les conversations coach,
+love,
+ici, work et docteur, mais je peux quand
+même t'expliquer rapidement un petit peu
+ce que j'ai fait. Donc, en fait, il y a
+chaque thread, donc en fait sur Open
+Clow, tu peux activer le mode thread.
+Chaque thread a des personnalités, a des
+règles. Et donc par exemple, j'ai le
+thread coach qui va avoir une
+personnalité de personne qui me motive,
+qui me fait aller plus loin et cetera et
+qui est vraiment tough avec moi. J'ai le
+SRED Love où il connaît un petit peu euh
+donc voilà, depuis que je suis retourné
+aux États-Unis, j'ai arrêté avec mon
+ancienne copine et donc tu te retrouves
+à faire des des petits dates et à faire
+des petits trucs. Et j'aime beaucoup en
+fait faire des compte-rendus. Alors
+voilà, dans le live c'est genre j'active
+mon micro, tu finis un date ou tu finis
+une pensée et cetera, j'active mon micro
+et je vais dire bah voilà, j'ai
+rencontré Jacqueline, ça s'est passé
+comme ça, j'ai bien aimé ça et cetera.
+Et lui en fait, il a un prom système qui
+fait qui sauvegarde en fait les
+interactions ou les différentes choses
+avec les gens. Ce qui permet entre
+guillemets d'avoir un historique très
+naturel, un peu comme euh tu vois un une
+sorte de suivi de de l'amour et aussi de
+te recommander. Alors franchement, ayant
+trayarde le sujet euh euh Opus est pas
+super doué dans tout ce qui est message.
+Alors moi, je suis très mauvais aussi
+mais opus est encore plus mauvais. Donc
+abandonnez tout de suite l'idée. Donc il
+va y avoir coach love et il va y avoir
+general. Donc typiquement moi quand je
+suis avec des potes et que on veut
+parler d'un sujet genre oh mais en fait
+c'est quoi le meilleur outil ou c'est
+quoi la taille de la tour Effel ? Je
+vais aller dans général et je vais tout
+de suite lui demander tout simplement
+hein. Très simplement c'est le fait que
+je l'utilise à la place de chat GPT à la
+place de Cloud. Si vous avez regardé mes
+vlogs, je vais utiliser Open Clow pour
+ça. Euh plus fou docteur, j'ai un
+channel docteur, il a tout mon
+historique médical mais il est il est
+meilleur que un vrai docteur dans le
+sens où il a tout mon historique
+médical. Il sait exactement ce que j'ai
+eu, quand je l'ai eu, la date, comment
+je l'ai résolu, quel médicament j'ai
+pris et cetera. Il sait quelle vitamine
+je prends, quel machin, quel pils, tout.
+et ça me permet de discuter sur ma
+santé, sur des réflexions et il
+sauvegarde tout directement. Ça fait
+vraiment l'impression d'avoir un agent
+qui vient se rappeler de ce que tu fais
+et cetera et cetera. Tous ces agents-là,
+ils vont justement avoir une mémoire.
+Euh donc ils vont soit proactivement
+mettre à jour leur mémoire, soit j'ai un
+chrome job qui s'effectue deux fois par
+jour qui va venir regarder tous les
+messages qui se sont faits dans les 12
+dernières heures et qui va venir
+sauvegarder les informations de manière
+autonome dans les bons threads, dans les
+bonnes informations. Ce qui permet en
+fait que si je te montrerai mon GHub en
+fait de mon open tous les jours, il
+modifie des des fichiers de mémoire, il
+apprend, il grandit si tu veux avec tout
+ça. Donc ça aussi c'est très très
+intéressant et donc ça c'est un des
+énormes usages que j'en fais quand ici
+je suis dans la rue. Je passe énormément
+de temps sur Open Clow à discuter parce
+que j'ai l'impression que c'est un vrai
+agent et que je perds pas mon temps dans
+le sens où il apprend ce que je fais.
+Donc ça c'est quand même assez foufou.
+Faut savoir que mon docteur il m'a
+résolu des sacrés diseasises.
+Il il arrive presque à tout résoudre et
+quand je vais voir un vrai docteur, il
+me dit la même chose que ce que mon
+openla m'a dit. Faut se rendre compte de
+la folie quand même que c'est. Mon
+docteur, il me connaît très bien, il
+sait exactement ce que j'ai aussi sur la
+partie psychologique. Et les SRED
+peuvent communiquer entre guillemets
+entre eux. C'est-à-dire que si je
+demande au Sed Love euh "OK, je suis un
+peu malade, regarde ce que j'ai avec
+Docteur", il est capable d'aller
+chercher la conversation avec docteur
+pour comprendre ce qui s'est passé et ce
+qui permet au Serait de venir même
+communiquer entre eux. Donc, tu crées
+vraiment une sorte de coaching process
+et une sorte d'amélioration au fur et à
+mesure du temps et ça j'aime beaucoup.
+Maintenant, voilà, on a la vie perso, on
+a le business avec le code et quelques
+trucs. Maintenant, est-ce que Open Clow
+pourrait pas commencer à faire des
+vraies tâches ? Est-ce qu'il pourrait
+pas commencer à vraiment travailler ?
+J'avais un très gros problème, c'est que
+les sponsors pour moi, c'est un pain à
+gérer. Euh ça envoie beaucoup d'emails.
+Je reçois deux trois emails par jour de
+sponsor, je refuse la majorité, mais à
+l'époque il traînait. J'avais 40 emails
+non répondus euh tout le temps.
+Maintenant, quand je reçois un email de
+sponsor, donc par exemple ici euh Suzy
+de Test Parit, voilà, on a créé ce
+produit blab bla bla bla bla bla. Il
+envoie ça il y a 2 jours directement.
+Steve YouTube Melvin salut Suz, je suis
+Steve l'agent de Melvin. Merci de
+m'avoir envoyé un message. Le product a
+du sens et cetera euh et cetera et
+hésite pas à aller voir les prix et les
+stats sur ce fichier et s'il y a un truc
+qui matche et ben on pourra faire ça.
+Une réponse très très naturelle, faut
+savoir que il a été entraîné en fait sur
+ma manière d'écrire. Comment est-ce que
+j'ai fait ce workflow ? Je lui ai dit
+voilà euh tu vas tout simplement
+récupérer toutes mes conversations et si
+vous avez envie d'en savoir plus un peu
+un peu sur ce setup, j'ai fait un une
+petite formation gratuite que vous
+pouvez accéder. Voilà que tu peux
+retrouver juste ici sur mlv.sh/fo
+pour venir setup tout ça. Donc tu auras
+mon petit script et ensuite quelques
+vidéos qui t'expliquent un petit peu
+comment moi je fais mon setup. Et c'est
+typiquement ce setup là que j'utilise
+juste ici. Donc avec en fait les bons
+promes tous ou les bonnes manières, on
+se retrouve avec Open Clow qui ressemble
+à ça, donc qui respecte vraiment mon
+style. Bref, ensuite mon Open Clow ici
+euh il a répondu à son message et euh
+Soz Suzzi, elle dit "Bah voilà, moi
+j'aimerais bien une 90 secondes
+intégration pour 600 dollars." Or 600
+dollars n'est pas dans le budget étant
+donné que j'explique que ça coûte 1000
+dollars et à ce moment-là, je lui dis
+euh à ce moment-là, l'agent a l'ordre de
+venir dire qu'il décline. Alors en vrai,
+ce qu'il va faire ici l'agent d'après
+mon prom quand il s'agit de négociation,
+en sachant que là le prix n'est pas non
+plus absurde, c'est un moin 40 %. Il
+m'envoie un message. Il m'envoie un
+message sur Telegram, il me dit "OK,
+elle a répondu, elle propose ce prix-là
+et moi je viens tout simplement répondre
+au message et écrire no." Et quand je
+moi du coup je prends une seconde à
+répondre, alors je vais essayer de
+retrouver le message. OK. OK, je viens
+de retrouver. Donc ici, on peut voir
+test spyright counter offer receive.
+Souziy a répondu à notre pricing doc.
+Elle propose un 600 dollars au lieu de
+est-ce que tu acceptes 600 dollars ?
+Est-ce que tu négocies ou tu declinees ?
+Et là, j'ai répondu très froidement
+decline. À ce moment-là, l'agent a
+decline la request de manière
+instantanée, sans poser de questions.
+Decline, fin de l'histoire, fin du
+débat. Pas besoin d'aller plus loin.
+L'agent fait ce que je lui dis. l'agent
+le fait de manière autonome. C'est assez
+fantastique quand on voit ça juste ici.
+Donc euh moi je débats aussi ici avec
+voilà Ons Zoy qui débattait avec moi où
+ici je envoyé des messages et euh et
+c'est lui qui répondait. C'est lui qui
+répondait à ma place, c'est pas moi qui
+avais besoin de répondre directement.
+Donc c'est très très intéressant. Donc
+ça c'est un exemple. Euh, on a un autre
+exemple assez intéressant, c'est tous
+les emails de support que je reçois par
+rapport au manque de recevoir des
+emails. Donc ici, il y a quelqu'un qui
+dit euh voilà, je viens de m'abonner à
+mlv.sh/ai, mais j'ai pas reçu d'email de
+confirmation. Est-ce que vous pouvez
+valider mon inscription ? Qu'est-ce que
+va faire ici Steve ? active. Ici, il va
+utiliser le Lil SMCP qu'on a vu juste
+avant pour venir directement euh
+regarder si la personne donc en
+regardant son mail si la personne a reçu
+correctement l'email. Si c'est le cas,
+il va lui envoyer le lien direct de
+l'email et lui dire "OK, tu as bien reçu
+si tu as toujours des problèmes, ajoute
+Melvin Melvin dans tes contacts et
+cetera."
+Et moi si ici il fait une erreur et que
+je le vois, je lui réponds et je lui dis
+"OK, il faut pas faire comme ça, faut
+faire comme ça" et il la prend parce
+qu'il modifie son système promte des
+d'exécution afin de pouvoir apprendre et
+toujours faire mieux. Donc ça c'est très
+intéressant. Ensuite ici euh la même
+chose. Finalement je ne vais pas avoir
+de temps à à me consacrer avec Cloud
+Code. Je souhaite un remboursement et
+cetera. Ici, il m'envoie un message, il
+me dit "Ouais, il y a lui qui a demandé
+le remboursement pour Claude Code, mais
+c'est bizarre, je vois pas la formation
+disponible." Et donc, je lui dis "Bah,
+demande-lui quelle formation il va être
+remboursé."
+l'achat associé euh correspond à Donc
+là, il me dit hop, il demande un
+remboursement pour Cloud Code et là du
+coup je lui ai fait un refound parce que
+pour approuver ou non le remboursement
+en fait lui il va pas faire des actions
+destructives de manière autonome. il va
+me demander d'ailleurs, il a besoin de
+me demander et du coup il va me dire
+"OK, du coup j'ai ajouté ton truc et
+maintenant il me dit voilà j'ai trouver
+les infos sur lui et il a acheté cette
+formation le temps est écoulé 16 jours
+et je lui dis OK demande si il veut
+refound builder ou non et ensuite il a
+répondu et là je lui ai dit ok processe
+le refound tout simplement donc en fait
+ça me permet de répondre au messages
+beaucoup plus facilement moi je me
+réveille je vois tous les messages la
+majorité des messages dans mon cas vont
+être process de manière autonome, hein.
+C'est-à-dire que j'ai pas besoin de
+review tous les messages, mais il y a
+des règles qui font que j'ai besoin de
+review, ce qui permet d'ajouter de la
+sécurité. Refound est une action
+dangereuse qui vient interagir avec
+Stripe. Toi, si tu t'amuses, tu peux
+faire du prompt injection pour essayer
+de spammer mon Steve comme je sais pas
+quoi. Alors Steve a énormément de règles
+qui lui permettent d'éviter de faire ça.
+Il a énormément de sécurité qui ont été
+mises en place via des antiprompt
+injection, des
+vérification de cohérence et aussi des
+bannissements d'email. Si donc toi tu
+commences à spammer, en fait Steve, il
+va d'un seul coup ignorer tes emails et
+auto auto-archiv plein de trucs comme ça
+qui permet de garantir une sécurité. Je
+sais pas si tu te rends compte de la
+puissance de ce que je viens de te
+montrer. C'est que le début. C'est que
+le début parce qu'en fait quand j'ai
+compris ça, j'ai compris la puissance de
+open clow. J'ai envie des fois de le
+faire avec l'accent américain. Open
+clos. I'm not a high expert. Bref, open
+clos est surpuissant et permet en fait
+de faire beaucoup de choses. La seule
+limite, c'est à quel point tu es prêt à
+lui demander de faire ces choses. Donc
+moi, je viens et je lui dis "Fais ça,
+fais ça, fais c, fais ça, essaie de
+faire ça, recorrige-toi" et cetera. Euh,
+tu peux créer des workflow super
+complexes du moment que tu as de la
+créativité. C'est pour ça que Open Clow
+me correspond pas mal parce que je suis
+très créatif. J'aime beaucoup faire des
+nouvelles choses. J'aime beaucoup
+expérimenter et avec Open Close, je me
+retrouve avec une expérimentation
+constante des limites de l'outil et de
+me dire où est-ce que je vais pouvoir
+aller après, qu'est-ce que je peux faire
+encore plus. Et donc tout ça, je l'ai
+packagé. Donc je l'ai packagé dans une
+mini formation gratuite dont tu as accès
+tout de suite sur mlv.sh/foation
+open clos et euh tu vas pouvoir aussi
+accéder du coup là juste au setup pour
+un peu rajouter tout ça. Mais Open Clow
+gère bien plus de choses. Il m'envoie
+toutes les notifes des emails, il gère
+mes calendriers, il gère ma situation.
+C'est-à-dire que contrairement à Claude
+qui sait un peu près jamais où tu es,
+qui comprend pas exactement qu'est-ce
+que tu fais et cetera, Open Clow a accès
+à tous mes emails quand il reçoit des
+emails, qui voi par exemple que je viens
+de Liz, que je viens de rent un
+appartement ici pendant un mois, il l'a
+il l'a vu, tu vois, il a vu oh il a l un
+appartement pendant un mois, il allait
+mettre à jour le fichier situation. MD
+qui est un fichier système. Ce fichier
+situation vient préciser où est-ce que
+j'habite, où est-ce que je travaille,
+qu'est-ce que je fais actuellement dans
+mes journées, qui qu'est-ce que sont mes
+priorités actuellement. Ça vient en fait
+définir ma vie que j'ai. Et du coup,
+chaque fois que je fais une nouvelle
+conversation avec Open Clow, il me
+connaît. Si je lui dis combien de temps
+je dois prendre ou quand est-ce que ma
+liste se termine, quand est-ce que je
+dois prendre un avion et cetera ? Boum,
+il sait les informations. C'est un vrai
+assistant. Alors, je dis pas que ça va
+pas être remplacé et cetera. Je dis que
+si tu es un geekos, si tu aimes le
+freedom, si tu aimes pouvoir faire des
+choses de dingue, Open Clow est un
+cheat. Quelle leçon j'ai appris d'Open
+Clow depuis que je l'utilise ? Alors
+déjà, il consomme beaucoup plus de token
+dans votre abonnement Cloud code. Alors,
+on a un abonnement Cloud Code. Vous
+pouvez déjà première leçon, vous pouvez
+utiliser votre abonnement Cloud Code Max
+à 200 dollars avec Open Clow. Je
+l'utilise depuis 2 mois, je le dégomme.
+Ça fait les qu les trois dernières
+semaines, j'ai utilisé 100 % de ma
+session. Voilà, ce n'est pas une blague.
+ce moment, si on va voir quand même, je
+pense que je suis un un peu moins parce
+que j'ai un peu moins fait. On est à 74
+%. La majorité des gens dépassent pas 50
+% de leur weekly usage. Je suis à 74 % à
+cause d'Open Clow qui consomme
+énormément de token. Donc Cloud Code Max
+à 200 dollars va permettre d'utiliser
+Open Clow. Et là, je sais que je vais
+avoir des pleureuses qui vont me dire
+"Ouais, 200 dollars, tu vas te faire
+bannir." Non, stop. Si vous êtes des
+pingouins, si vous êtes des pigeons, si
+vous êtes des personnes qui écoutent
+tout ce qu'on vous dit et qui ne testent
+pas par vous-même, oui, vous allez vous
+faire bannir si vous avez envie de vous
+faire bannir. J'en ai rien à [&nbsp;__&nbsp;] OK
+? sans être méchant. Mais là, je dois le
+dire parce que chaque fois dans mes
+commentaires, on me dit ça et j'ai envie
+de te dire si tu as envie d'y croire et
+que tu as pas envie de l'utiliser pour
+ça, OK, anyway, I don't care. OK, mais
+moi je te dis que ça fait 2 mois que
+j'utilise énormément Open Clow avec mon
+abonnement Cloud Code Max et je me suis
+pas fait bannir. QFD, est-ce que tu
+crois Michel qui s'est fait bannir ou
+est-ce que tu me crois moi ? Pourquoi
+est-ce que vous croyez ça ? Parce que le
+fondateur de Open Clow a fait un podcast
+où il dit que son pote s'est fait
+bannir. Pourquoi ? Parce que du coup, si
+je peux vous partager des tips, ce qu'il
+faut faire, c'est ne pas consommer que
+du open clow. Donc vous pouvez consommer
+par exemple 50 % de vos token avec Open
+Clow et 50 % avec Clo code. Si vous
+faites 5050 comme je le mets juste ici,
+en fait vous vous retrouvez avec quelque
+chose qui fait une utilisation plus ou
+moins normale. Pourquoi il vous
+bannirait ? aussi quand j'ai lu les
+reddits, j'ai vu qu'il faut faire
+attention que si vous êtes sur
+l'abonnement à 20 dollars et que vous
+arrivez à la limite avec votre Open
+Clow, Open Clow va vous peut-être de
+vous donner un lien pour upgrade. À ce
+moment-là, faut pas upgrade, faut
+vraiment upgrade depuis cl code, depuis
+votre ordinateur et cetera. Faut faire
+attention de pas upgrade parce que je
+pense qu'il y a des security check qui
+se passent quand tu upgrades. Donc open
+clomax. Cependant, open clomax ne fait
+pas du caching de token. Qu'est-ce que
+c'est le caching ? c'est le fait que les
+tokens vont être
+le compute de la conversation du
+contexte en fait se refait à chaque
+fois. chaque fois ça va consommer
+beaucoup d'électricité parce que ça doit
+repasser dans toute la chaîne de
+compute. Et donc ce qui va faire ici le
+caching, c'est qu'il se dit voilà, une
+fois que j'ai fait ce compute là, je le
+sauvegarde et ensuite celui-ci va coûter
+beaucoup moins cher et toi tu vas juste
+payer la prochaine réponse. Et une fois
+que la prochaine réponse elle est faite,
+je la sauvegarde et ensuite tu payes
+juste la prochaine réponse, ainsi de
+suite, ainsi de suite. Et donc en fait,
+tu te retrouves à payer beaucoup moins
+cher. Malheureusement, Open Clome et le
+Agent SDK d'entroping ne supporte pas le
+cas caching avec la cloud sub parce que
+l'APPI ne propose pas ça en dehors de
+cloud code. Cloud code a un excellent
+caching que Open Clow n'a pas. Ce qui
+fait que si tu demandes à Open Cloud
+codé, il va burn ta session beaucoup
+beaucoup beaucoup plus vite que ce que
+ferait Claude Code. Donc c'est quand
+même très important de le savoir surtout
+si vous avez l'abonnement à 20 dollars.
+Moi avec mon abonnement à 200 dollars,
+ça me change pas grand-chose. Et si vous
+restez limité à des utilisations de
+chats, à des utilisations de processing,
+le processing d'email, ça ne consomme
+pas beaucoup de token. Le code ça
+consomme beaucoup de tokens parce qu'on
+va devoir lire des fichiers. le contexte
+va grandir très vite et une fois qu'il
+va grandir très très vite, on va faire
+beaucoup de tool co sur ce contexte. Ce
+qui fait que une fois que le contexte
+est gros et qu'on fait beaucoup de tool
+cool, ça commence à être rapidement
+price. Or, quand vous faites du chat,
+quand vous faites quelques tool call,
+par exemple, sauvegarde ce fichier et
+cetera, c'est pas du tout cher. C'est
+des ordres de grandeur qui n'ont rien à
+voir, donc il y a aucun souci. Euh
+ensuite expérimentation, demandez-lui
+demandez-lui les de faire les choses.
+Vous voulez ajouter Gmail, demandez-lui
+ajoute Gmail. Vous voulez ajouter des
+webbook quand vous recevez je sais pas
+quoi des commandes Amazon avec Amazon
+s'il supporte des Webbook, demandez-lui
+demandez-lui tout ce que vous voulez.
+Vous voulez qu'il soit capable de venir
+connaître à quelle heure votre avion va
+arriver et cetera et les détails de
+votre avion. Demandez-lui comment il
+peut faire. Demandez-lui et dis-lui sois
+autonome. Expérimentation de manière
+autonome. On veut pas s'amuser à lui
+dire quoi faire, comment faire, où le
+faire. On veut qu'il le fasse sans nous
+demander. Voici euh pour moi un concept
+très important, une autre autonomie. Moi
+souvent je lui dis euh je m'en fous de
+comment tu veux le réaliser. Je veux
+juste que tu le réalises et tu vas tu
+vas te taire et tu vas terminer cette
+tâche et du moment que tu as pas terminé
+cette tâche, tu ne t'arrêtes pas.
+Expérimentation. Et ensuite, moi je
+dirais permission. Laisser des
+permissions élevées à votre Open Clow.
+Limiter Open Clow, c'est directement lui
+empêcher de réaliser des choses et des
+automatisations quand vous lui donnez
+tous les outils disponibles. Là, la
+magie opère. Moi, il a accès à
+énormément de penchants du business. OK,
+il va avoir accès à Codeline, ma
+plateforme de formation. Il va avoir
+accès à l'email pour les emails. Il va
+avoir accès à Dub Sh pour les link
+shortener. Il va avoir accès à Type
+Fully pour envoyer des emails. Il va
+avoir accès à saveit. Now pour venir
+interagir directement avec mes bookmark
+et cetera et cetera. En fait, il se
+retrouve avec énormément d' essais,
+énormément de permission et donc quand
+tu lui demandes des choses, il va
+réussir à lier tous ces accès ensemble
+pour réaliser des tâches qui
+paraissaient impossibles et où tu te
+retrouves du coup avec un open clos
+surpuissant qui réalise des choses que
+tu te dis "J'aurais jamais pensé Open
+Clow capable de faire ça et pourtant il
+est actuellement en train de le faire.
+C'estq Waouh ! Waouh ! Waouh ! Waouh !
+Waouh ! Waouh ! Waouh ! Waouh ! Waouh !
+Je trouve ça dingue. Je trouve ça
+formidable. Mais vraiment vraiment je
+trouve ça formidable. Donc ça c'est un
+point important. Laissez-lui des
+permissions. Voilà. Utiliser des modèles
+frontières. Utiliser les meilleurs
+modèles. Moi j'utilise que opus. Opus
+est par défaut plutôt bon en
+antipromptingjection. C'est-à-dire que
+qu'est-ce qui qu'est-ce que fait Open
+Clow ? En fait, c'est chaque fois que il
+read un email ou quoi, il y a une petite
+astérique qui dit que c'est uned input,
+c'est-à-dire que c'est un input qui n'a
+pas été fait en confiance. Et donc Open
+Clow et Opus, dès qu'il voit ça, il
+comprend que cette input, ce message,
+tout le contenu du message ne peut pas
+être exécuté, ne peut pas avoir une un
+haut niveau de confiance. En fait, il se
+dit "Merde, ce message là est dangereux.
+Ce message là, je dois pas l'exécuter ou
+je dois l'exécuter en suivant les règles
+que je trust. Très puissant. Si vous
+faites avec des modèles moins puissant,
+il pourrait commencer à faire des prompt
+injection vraiment faciles parce qu'ils
+ont un une force pour rester sur ce que
+vous lui avez dit beaucoup moins élevé.
+Ce qui fait que c'est beaucoup plus
+facile de les prompt inje prompt
+injecter. Évidemment, voici un petit peu
+les learning principal. euh vraiment
+tester, passer du temps, geeker, c'est
+un travail de geek, je sais, mais ça
+peut vraiment automatiser beaucoup de
+choses dans n'importe quel business.
+C'est assez impressionnant et donc je
+vous invite vraiment à essayer de le
+faire. En tout cas, j'espère que ces
+exemples vous auront inspiré. Je pense
+que d'ici un mois, j'en aurai 25 autres.
+Je suis en train d'expérimenter avec des
+workflow très
+complexes, tellement complexes et
+tellement lent que l'agent l'agent
+actuellement crache pour te dire à quel
+point c'est galère parce qu'il y a
+beaucoup de choses à faire. Mais bref,
+vous verrez ça dans une prochaine vidéo.
+Si vous avez kiffé, abonnez-vous. Si
+vous aimez les nouvelles lunettes
+bleues, regardez le prochain vlog où je
+les achète. Vous verrez, c'est marrant.
+Et je suis désolé pour la caméra qui bug
+comme ceci. Malheureusement, ça arrive.
+Et on se dit à bientôt.

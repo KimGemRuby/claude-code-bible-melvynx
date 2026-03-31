@@ -1,0 +1,804 @@
+ 
+Les MCP sont tout simplement morts et si
+tu en utilises encore aujourd'hui,
+peut-être que tu fais une erreur. Dans
+cette vidéo, on va analyser de manière
+assez profonde, assez technique le
+problème la le vrai problème des MCP. Et
+quelle est la solution, quel est le
+remplacement des MCP ? Il faut savoir
+que moi, ça fait longtemps que je le dis
+parce que ça fait ça fait depuis Open
+Clow que j'ai complètement ditché, que
+j'ai complètement évité les MCP dans mon
+quotidien et depuis quelques temps, j'ai
+tout simplement remplacé tous les MCP
+par des CLI. Et c'est ce qu'on va voir
+dans cette vidéo. On va comprendre
+pourquoi, comment et c'est tout de suite
+que je t'explique tout ça. Tiens-toi
+prêt parce que tu vas découvrir
+énormément de choses dont tu n'avais
+sûrement jamais pensé avant. retrouve
+sur mon écran et avant de commencer, il
+faut être clair sur le fonctionnement et
+le principe des MCP. Quand c'est sorti,
+on parlait tous de ça comme une
+révolution, comme une magie et tout
+réside dans leur nom modèle, contexte,
+protocole. Une manière pour le modèle de
+donner du contexte. Donc leur nom est
+bien et à la fois il est très mauvais
+parce que ce modèle contexte protocole,
+il permet aussi principalement de
+définir des tools. Ça c'est la clé. Un
+modèle actuellement, ce qu'on appelle un
+modèle agentique, ce n'est rien d'autre
+qu'un modèle qui a été entraîné à
+utiliser des tools. Qu'est-ce que ça
+veut dire ? et un modèle c'est un peu
+comme si tu le mettais dans la cuisine
+et que il est capable si tu lui
+expliques comment utiliser une
+fourchette, une plaque et cetera, de les
+utiliser de manière naturelle. Les
+modèles actuels ont été entraînés sur
+l'utilisation des outils. C'est un
+concept super important à comprendre. Et
+donc les MCP venaient ajouter des
+outils. Si on prend Cloud Code et que
+j'ai cherche ici Cloud Code Tool, en
+fait si on va sur une doc, il y a
+quelque part la liste des tools tool
+reference agent, ask user question bash,
+Chrom create delete, edit. Tous ces
+tools sont injectés à chaque request
+dans le contexte. Le contexte pour
+rappel
+disponible du modèle. Le modèle peut
+injecter des données qui vont agir comme
+une sorte d'entraînement, comme des
+sortes de connaissances du modèle. Tout
+ce qui va être dans le contexte parce
+que un modèle est entraîné sur
+énormément de données qui vont être dans
+son dans les données qu'il a. Donc si
+ici je vais sur euhux et que j'ouvre un
+nouveau terminal et que je fais qui est
+le problème c'est qu'ici il va avoir des
+infos sur moi. Attendez, je peux voir
+que si je demande qui est Barack Obama,
+il est capable de me dire voilà que
+c'est un homme politique, il me trouve
+des photos et il a pas eu besoin de
+chercher sur internet. Ça ça fait partie
+de ses connaissances, fait partie de ce
+qui sait faire. Mais un agent I est
+capable de faire des nouvelles choses en
+partie grâce au fait qu'il va pouvoir
+appeler des outils. Et donc pour qu'il
+puisse s'appeler ces outils, il a besoin
+de savoir qu'est-ce qu'un outil. Et donc
+pour savoir qu'est-ce qu'un outil, on
+envoie un système prompt. Ce système
+prompt qui va être dans le contexte.
+Donc le contexte c'est comme une c'est
+comme si chat comme si cloud ou chat GPT
+avait une limite dans le nombre de
+données qui peuvent ingérer et dans le
+nombre de données qui peuvent output.
+Donc on a toujours input output. Et donc
+là, on se retrouve avec système prompt,
+system tool, memory file. Donc ça c'est
+tous les trucs qui vont faire partie du
+contexte et c'est tous des trucs qui
+vont permettre à l'agent de savoir qui
+doit coder, de savoir qui peut modifier
+des fichiers, de savoir comment le
+faire, de savoir les paramètres qu'il
+doit utiliser et cetera et cetera. Tout
+ça c'est des données qui vont être
+données dans ce système prompts. On l'a
+déjà analysé plusieurs fois dans les
+vidéos. Et ben les MCP Tool, c'est des
+outils supplémentaires qui vont
+permettre au modèle de contrôler Stripe,
+de contrôler NextGS, de contrôler Chat
+CN, de contrôler Context 7. Donc en fait
+les tools, ça peut être des outils de
+contexte comme Exa ou ça peut aussi être
+comme contexte Seven ou Exa ou ça peut
+aussi être des données d'action par
+exemple comme Stripe ou comme Lineéar
+qui permet de mettre à jour des issues
+et cetera. Quel est le problème de CMCP
+Tool ? CMCP Tool vont venir rentrer dans
+le contexte, c'est-à-dire que même si,
+imaginons qu'on a ces cinq MCP tool,
+Stripe, NextGS, Chat CN, Context, S ou
+pour les gens un peu plus lambda, par
+exemple le MCP Tool GitHub ou on
+pourrait même avoir le MCP Tool Lineéar.
+Même si dans ton code tu n'utilises pas
+Linéar, le modèle va avoir durant toute
+la conversation un bout de texte qui dit
+"Si tu as envie de créer une issue
+linéaire, fais ça, ça mais ça sert à
+rien parce qu'il n'utilise pas lineéar.
+Pourquoi est-ce que on donnerait au
+modèle une instruction de comment
+utiliser un outil si de toute façon il
+va pas l'utiliser ? Ce qu'il faudrait
+faire et ce qu'ils ont fait c'est que on
+donne donc imaginons que dans ce petit
+bout que j'ai j'ai mis juste ici,
+imaginons que ça représente linéar. Donc
+je vais essayer de le lui donner le même
+style et on va le mettre en rouge comme
+ceci. Et donc ici on se retrouve avec
+lineéar qui est symbolisé juste ici.
+Donc une fois qu'on a ce linéar OK
+maintenant euh pourquoi est-ce qu'on
+donne lineéar dans le contexte dès le
+début au lieu de le donner que quand on
+a besoin ? Ça c'est le problème premier
+problème des MCP. Quelle a été la
+solution proposée par Entropique ? Ça a
+été de dire on va enlever tous les MCP
+tool. Donc c'est ce qu'ils ont fait. On
+enlève tout ça et à la place on va
+donner un seul tool qui va s'appeler MCP
+search. Et comme ça on va dire au modèle
+écoute si tu as besoin d'un tool utilise
+MCP Search. Le problème que le modèle là
+maintenant c'est qu'il ne connaît pas
+les outils disponibles. Il a même pas le
+enfin même s'il a le nom context Seven,
+ça veut rien dire. Et donc le modèle se
+retrouve à ne jamais utiliser les MCP
+disponibles, ce qui rend les MCP
+inutiles parce que ça ne rajoute pas des
+compétences, des compétences au modèle,
+des compétences. Et c'est là où la magie
+commence à rentrer. Qu'est-ce que c'est
+des compétences ? En anglais, ça se
+traduit skill et skill, c'est
+l'innovation que NextJs a rapport que
+Cloud pardon a apporté. Donc une fois
+qu'on a compris que les MCP ont un
+énorme problème de part le fait qu'ils
+prennent beaucoup de contexte, que les
+MCP ont pas vraiment de solution parce
+que ils viennent rajouter de la
+complexité comme ceci et qu'I le
+fonctionnement des MCP est plutôt lourd
+parce qu'il faut créer un MCP serveur.
+Généralement MCP serveur c'est un
+process npm qui run sur ton ordi à
+chaque session. Ça ça vient utiliser de
+la RAM, du processus et cetera. Tu peux
+aussi utiliser des remote MCP mais ça
+crée toujours des problèmes. Maintenant,
+qu'est-ce que quelle est la solution que
+les entreprises ont proposé ? C'est les
+skills plus le CLI. En fait, il y a un
+tool qui permet de tout faire, c'est BH.
+Pourquoi BH permet de tout faire ? Parce
+que si je veux ici lancer Claude code
+dans un projet un peu à la con comme
+ceci et là je lui dis créer un tool pour
+générer des nombres aléatoires. Tu n'as
+que le droit d'utiliser le tool bâche
+pour le faire. Lecture fichier, écriture
+tout. Donc là si je demande à Claude,
+voilà, fais une action par exemple ici
+pour générer des nombres aléatoires,
+mais tu as que le droit d'utiliser euh
+BH. et ben il est capable de le faire.
+Tu vois qu'ici il utilise ls, ça permet
+de lister les fichiers. Là il utilise 4
+pour récupérer le contenu des fichiers.
+En fait bash c'est le terminal et via le
+terminal à l'époque les développeurs
+codaient dans le terminal. Tout peut
+être fait dans le terminal. Le terminal
+a pas vraiment de limite. Le terminal
+c'est un outil que l'IA est capable de
+connaître. Et tu peux voir que ici LIA a
+fait que des tool bâch rien d'autre. Si
+Lia peut faire que des toolb, pourquoi
+est-ce qu'on viendrait lui créer des
+skills des MCP qui lui rajoutent des
+nouveaux tool dans son contexte quand on
+peut juste lui demander lance la
+commande bâche précise ? Donc quel est
+un exemple concret qu'on va venir tester
+juste ici ? Je vais ouvrir un nouveau
+terminal là et on va voir les MCP
+disponibles juste ici. On peut voir que
+j'ai Contex Seven Exa, Post Hog, Clodai
+Gmail. Ça, je sais pas pourquoi j'ai ça.
+Il me il me fait chier avec son truc. Je
+veux pas de clodai me ça ça c'est je les
+désactive tout le temps. Post hog d'où
+ça vient et Exa non plus. Anyway, on a
+contexte se exa et et ici postock.
+Qu'est-ce qu'on va pouvoir faire ? Si on
+fait slash contexte, on verra que
+context 7 ici prend de la place dans les
+MCP tool. Évidemment, c'est pas le cas
+actuellement parce que voilà, les MCP
+Tools sont juste ici, ils sont
+disponibles. Maintenant, ils sont load
+on demand mais vu depuis qu'ils sont
+load on demand, ils ont tendance à être
+moins utilisés. Qu'est-ce qu'on peut
+faire avec ce contexte s ? Je vais ici
+faire cloud mcp remove context 7 et on
+va installer contex 7 de la nouvelle
+manière maintenant. Je sais pas
+d'ailleurs si je peux supprimer ces ces
+consp de cloud, je sais, il ils me font
+chier. On va aller sur contex 7 et on va
+voir la nouvelle manière. Qu'est-ce qui
+remplace les MCP ? Et euh après, je vais
+te montrer comment moi je les utilise
+parce que là ça va devenir très
+intéressant. Mais déjà, tu as besoin de
+comprendre le concept. OK, donc ici je
+vais sur Contex S et on a maintenant une
+nouvelle commande ici CTX7 latest setup.
+Donc ici, je vais lancer cette petite
+commande. Là, on va dire oui, il y a pas
+de souci. Et là, je vais pouvoir ajouter
+soit le MCP server, soit le CLI plus
+skill. Install find doc skill that
+guided your agent to fetch up to date
+library docli
+command. Donc là, on va choisir ça. Et
+là, tu vois qu'il va me demander de me
+connecter juste ici afin de simplifier
+un petit peu l'onboarding. On va ici
+faire allo et là il me dit bah voilà,
+est-ce que tu es d'accord d'ajouter
+cloud euh agent curseor et agent skill ?
+Je vais lui dire oui, il y a pas de
+souci. Et donc là, il vient de rajouter
+plusieurs skills. On va tout de suite
+analyser les skills qu'il a rajouté.
+Donc pour ça, on peut aller dans Cloud
+et on peut aller dans Z qui est toujours
+mon IDE favori hein si vous vous
+demandez. J'aime beaucoup toujours pour
+éditer. Donc là, j'ai peut-être un peu
+trop de skills qui sont dans Claude. Ne
+vous ne ne faites pas très attention à
+tout ce bordel. On va tout de suite se
+créer. Et là, tu peux voir que on a un
+skill qui s'appelle find doc. Ça, c'est
+le skill qui a été rajouté. Qu'est-ce
+que ça va rajouter ? Ça va rajouter
+uniquement ça au contexte, rien d'autre.
+retrieve authorical
+documentation appearation configuration
+details and code example for any
+developer technology use this skill
+whenever answering technical question or
+writing code that interact with external
+technology include library qu'est-ce que
+c'est un skill ici la description va
+être injectée dans le contexte
+c'est-à-dire que notre modèle va avoir
+accès à cette description la tâche qu'on
+lui demande matche la description il va
+utiliser l'outil disponible qu'est-ce
+qui se passe maintenant si je viens
+juste ici Donc là, voilà, on peut voir
+qu'il a tout créé en utilisant que
+bâche, il y a pas de souci, on va le cut
+et on va le relancer juste ici. Si je
+fais slash mcp, on peut voir qu'il y a
+plus de context 7 et je sais toujours
+pas comment supprimer ce cludi gmail.
+C'est pas très grave. Maintenant, je
+vais lui dire "Cherche des informations
+sur state en React". On va voir ce qu'il
+utilise. S'il utilise le MCP ou s'il
+utilise contex 7. Euh là, on peut voir
+que il réfléchit avec. Et là, tu peux
+voir qu'il load le skill. Quand il lo ce
+skill, il lo ce prompt. Donc make sure
+the CLI is is available. Et ensuite tu
+peux lancer la commande. Et là, on peut
+voir, tu peux lancer la commande
+librairie et tu peux ensuite résoudre la
+documentation. Tu dois d'abord appeler
+ça d'abord et voici des exemples, voici
+tout. Et là, ce contexte de 160 lignes,
+il le télécharge uniquement et
+uniquement quand il en a besoin et il
+peut mélanger les skills qu'il veut tous
+ensemble pour réaliser des tâches
+complexes. Et donc là, on a plus de MCP.
+On a maintenant bel et bien un skill qui
+a été téléchargé juste ici et qui
+fonctionne exactement comme le MCP parce
+que au lieu d'appeler un tool spécifique
+qui est géré d'ailleurs un des
+problèmes, c'est que les MCP des fois
+ils marchent, des fois ils marchent pas,
+des fois c'est mignon, des fois c'est
+pas mignon, des fois tu as envie de te
+te plonger dans dans l'eau remplie
+d'acide, des fois non. Ça dépend ça
+dépend le jour. Ici c'est du CLI. Le
+CLI, ça marche tout le temps. Le CLI, il
+a il a pas de jour où le CLI est triste,
+il y a pas de jour où le CLI est pas
+content. Le CLI fait ce qu'on lui dit de
+faire tous les jours de l'année, 365
+jours. Et donc là, hop, on a quelque
+chose qui marche. Tu peux voir que moi,
+j'ai beaucoup de skill. Je vais ici
+essayer de clean les skills qui me
+paraissent un peu inutiles. Bon,
+maintenant, imaginons que je lui dis euh
+une fois qu'on a fait ça, et c'est là la
+magie des skills, c'est que moi, j'ai
+des skills pour contrôler Type Fully,
+pour contrôler Versel, pour contrôler
+Ciao, pour contrôler mes emails et
+cetera. Donc là, je vais lui dire créer
+et planifie un nouveau tweet pour demain
+à propos de
+state. Donc là, on vient de récupérer
+des infos et maintenant j'ai envie de
+créer et planifier un nouveau tweet pour
+demain. Comment est-ce que l'agent peut
+s'en sortir ? Là, tu peux voir qu'il
+télécharge le skill type fully CLI. Donc
+ça, c'est moi qui ai créé ce skill et
+c'est aussi moi qui ai créé le CLI. Et
+là, tu vois queil récupère mes social
+sets. Pourquoi ? Parce que dans le skill
+typis, il y a écrit l'authentification
+et là il y a toutes les ressources,
+social state, draft et cetera. Et donc
+là, on résout un des problèmes que les
+gens disent. Donc là, voilà, il a il est
+il a déjà créé le il a déjà créé le
+Twitch, je crois. Voilà, il a trouvé les
+créneaux libres et il cré le tweet et le
+planifie. Tu vas voir que tout va
+fonctionner parfaitement. C'est magique.
+Et donc ce qui est intéressant ici,
+c'est que les MCP ont un avantage, c'est
+que il y a ce qu'on appelle le tool
+Discovery. Dès le début, le MCP va venir
+lister tous les tools disponibles et
+donc le modèle va avoir une vision
+globale des tools disponibles avec les
+skills. Il va télécharger les skills au
+bon moment. Donc qu'est-ce qui se passe
+dans le contexte et dans le contexte
+plus précisément d'une conversation ?
+C'est qu'on a toujours les mêmes choses
+au début. Ensuite, ici, on va symboliser
+les skills en rouge et on va symboliser
+les conversations ici en violet. Bon, ça
+se ressemble un peu mais c'est pas
+grave. Toi, tu vas avoir une
+conversation et d'un seul coup à la fin,
+tu lui dis "OK, mon pote, mais j'ai
+envie que tu fasses un tweet." Il va
+télécharger le skill et il va faire le
+tweet. Tu peux voir que jusqu'au moment
+où tu lui as demandé de faire le tweet,
+il a pas téléchargé ça. Imaginons qu'on
+lui demande un truc plus complexe. "Non
+seulement je veux que tu fasses le
+tweet, mais je veux aussi que euh tu
+écrives un email et cetera." Bah, on
+peut lui demander écrit une newsletter
+pour toute ma base email à ce sujet.
+Comment il va faire ça ? Et ben, il va
+se dire "Oh, j'ai l'email CLI. Qu'est-ce
+que c'est l'email CLI ? C'est mon
+software." L'email CLI/Skill.
+Évidemment, moi je le trouve pas donc je
+sais même pas comment il arrive à le
+trouver. Lia est du génie. Donc voilà.
+Lumel CL skill. Manage lumil tout le
+subscriber. C'est pas les meilleures
+descriptions du monde en skill. J'irais
+dire ça, j'irai dire un mot à mon agent
+parce que c'est pas les meilleures
+description mais écoute ça fonctionne
+quand même. Donc là, hop, CLI Tool, get
+writing steel, get available variable,
+get email snipt. OK, ben maintenant, je
+peux créer une campagne avec un bon
+skill, un bon name et cetera. Et là, il
+a mes APiki là, il est en train de
+manipuler des vrais software de la vie
+réelle. Donc, pour faire tous ces skills
+là, j'ai utilisé API to CLI. C'est un
+petit tool que j'ai créé durant un
+haathon. Vous trouverez un vlog bientôt
+sur ce sujet juste ici. Et donc ça c'est
+un skill qui permet de créer d'autres
+skills. C'est vraiment très pratique et
+personnellement j'ai créé énormément de
+skill avec ça. Et donc là on peut voir
+voilà ta campagne est prête. Tu as 29000
+abonnés actifs avant d'envoyer ce que tu
+veux envoyer maintenant et cetera et il
+est capable de tout faire. Ça c'est tout
+ce que je peux faire. Et ici il peut
+même chaîner les skills. Par exemple, je
+peux lui dire sur COD line créer un
+coupon pour la formation begin react.
+écrit ensuite un URL short link pour mon
+ami Baptiste avec 44 % de rabet sur la
+formation begin react. J'envoie ça et
+donc là on est sur un multistep
+workflow. OK sur la question que je
+demande, il faut non seulement
+comprendre comment code fonctionne alors
+déjà qu'on a un contexte rempli de
+bullshit juste ici, j'ai la flemme de
+lancer une nouvelle conversation. Cloud
+code gère très bien ça. Ici, est-ce que
+je suis capable de zoomer parce que je
+comprends que vous vous voyez plus rien.
+Zoom in. OK, on peut pas zoomer. OK,
+donc voilà. Là, on peut voir qu'il a
+utilisé COD line CLI. Alors là, j'ai
+l'impression qu'il a même pas même pas
+utilisé le skill. Alors, peut-être que
+ici j'ai merdé et que j'ai même pas de
+codeline CLI skill qui Ah, je j'ai pas
+fait le j'ai pas fait le merde. J'ai pas
+fait le Sim. Donc là, on peut voir que
+on a un autre cas normalement. Grâce au
+skill, si on va voir dans l'email CLI,
+grâce au skill, il découvre toutes les
+exemples de commandes disponibles. Ça
+lui évite de faire ça, mais l'avantage
+d'un CLI, c'est qu'il y a même pas
+besoin d'avoir un skill parce que ici
+juste le fait d'utiliser Codline, il a
+lancé une commande pour venir chercher
+s'il y avait un outil qui s'appelait
+Codline. Il a trouvé le CLI codline et
+là il a cherché les coupons. Il vient de
+trouver begin react. Il vient de créer
+le coupon ici avec une erreur. On peut
+voir qu'il a directement eu l'erreur. Il
+vient fixer, il dit "Bah voilà, j'ai
+créé le coupon Baptiste 44. Maintenant,
+il y a Baptiste." Et là, il a réussi à
+télécharger le skill du qui est juste
+là. Ce qui lui fait utiliser mon script
+du pour ici me dire "Voilà, il y a tout
+qui est bon, j'ai créé ton duub.sh SH
+pour venir faire ça. Et donc on se
+retrouve maintenant avec une sorte de
+modèle un peu magique capable de faire
+des actions ici sur ces outils en
+utilisant plusieurs skills sans jamais
+overload ton contexte parce que le seul
+ch la seule chose qui load c'est pas
+tous les paramètres qui existent mais
+c'est un fichier qui lui dit les
+différents outils. Vu que l'email c'est
+un énorme outil quand même pas mal de
+lignes qui sont présentes juste ici.
+pour des plus petits outils, des moyens
+et cetera, il pourrait évidemment y
+avoir beaucoup moins de fichiers. Donc
+maintenant, pourquoi est-ce que j'ai
+setup autant de choses et comment est-ce
+que tu peux créer tes CLI pour tes
+outils ? Je vais un peu te le montrer.
+Alors, j'ai setup tout ça pour Open
+Clow. Si je vais dans mon terminal là,
+j'étais en train de update mes petits
+agents. Tu vois d'ailleurs qu'il y a du,
+je lui demandé s'il y a du CLI, j'étais
+en train de chercher. Donc si ici je
+vais dans Open Clow et je fais Z point.
+Alors, je vous ai déjà montré mon open
+clow euh mais dans les skills, c'est la
+mess agent mail app cloud flare, je sais
+pas si Cloud Flir c'est un CLI, euh j'ai
+pas l'impression. Donc ici, c'est juste
+du bash. On a code process, on a code
+line CLI, on a CTX Z. Donc ici pour
+utiliser ça, on a du ici on peut voir
+que du ça manage by the way directement
+un script. Donc ici j'ai pas créé de du
+CLI. Donc ça va être un bon exemple, on
+va le créer ensemble. Ici, j'ai Exa,
+j'ai Front app, c'est pour gérer mes
+emails. J'ai Google Imagen, ça aussi on
+pourrait créer un CLI. Je pense qu'on va
+pouvoir faire ça ensemble. Je vais un
+peu te montrer. Donc j'ai créé API to
+CLI. Je suis juste en train de faire une
+petite update. Je vais attendre 2
+minutes que ça se termine et je vais
+faire ça. En vrai, on s'en fout un petit
+peu. Ici, on va dans Open Clow et je
+vais lancer un close. Et je vais faire
+slash API tocli. Actually, we have a
+dub. skill CLI using the CLI pattern
+recreate using API to CLI and publish it
+into the marketplace. Donc là, je vais
+lancer mon skill API to CLI, c'est un
+skill que j'ai créé que vous pouvez
+utiliser pour transformer en fait
+n'importe quel outil que vous utilisez
+dans vos quotidien en skill. Donc c'est
+exactement ce qu'on a fait ici. Moi ici
+j'ai déjà un skill du mais en fait
+c'était juste un script.sh gérait tout
+un petit peu à la yolo. Moi j'aimerais
+bien ici gérer ça bien mieux. Et donc
+ici, je lui ai pas précisé mais
+recherche sur internet toutes les API
+possibles afin de créer le skill le plus
+complet
+s'il te plaît. Donc là, on va voir qu'il
+est capable d'aller chercher toutes les
+informations et APICLI
+juste ici, c'est un skill qui contient
+en fait exactement comment rechercher
+les informations et cetera. Donc là, il
+vient lancer plusieurs web search pour
+récupérer toute la documentation. Donc
+là, il récupère swagger de Jison afin
+d'avoir tous les API point disponibles
+par rapport à Dub et il va pouvoir créer
+ça. À côté, c'est qui d'autre que j'ai
+dit que je voulais créer ? Google image
+G. Donc la même chose ici, je vais faire
+API to CLI Gemini CLI CLI that enable us
+to create images with any model, with
+inputs, any file, anything.
+about Gemini API text generation in case
+focus is about nano banana and nano
+banana pro et cetera cherche la doc et
+crée le CLI qui remplacera
+l'actuel
+et là j'avais fait Google image gène
+skill peut-être je pourrais l'appeler
+nano banana skill bon c'est pas très
+grave alors Alors là, tu peux voir
+qu'ici, je vais créer deux nouveaux CLI.
+Je vais directement les créer dans mon
+Rippo Open Clow. Ça, c'est le Rippo Open
+Clow qui est synchronisé entre mon VPS
+et cetera. Il y a plein de projets, il y
+a plein de merdes là-dedans. C'est les
+gars, ça s'éclate dans Open Clow. Vous
+savez même pas tous les trucs que je
+peux faire. Donc là, vous voyez que API
+to CLI, donc ça c'est le skill que j'ai
+créé. En fait, j'ai créé un CLI. Alors
+là, ça devient stylé mais j'ai en fait
+créé un CLI qui est capable de scafford.
+Donc Scafford, c'est-à-dire créer une
+base d'un projet CLI qui respecte des
+règles assez précises. Et en fait tous
+les CLI viennent se placer dans le
+dossier CLI. Donc c'est ce que j'appelle
+des mini CLI. Donc ici je fais Z point
+dans CLI, tu peux voir qu'ici il y a
+tous les CLI. Je les appelle tous de la
+même manière. Comme ça fait ciao CLI,
+Tyfly CLI, Savid Post Gress, Pork, Band
+Notion, Mercury CLI, Lumil Gemini CLI,
+on vient de le créer Front app, exa du
+CLI, Contex 7 CLI. Celui-ci, tu vois par
+exemple, je peux le supprimer, on peut
+l'éradiquer, mais j'avais fait
+exactement le même style de truc qu'il
+avait juste fait juste ici. Euh donc là,
+moi je vais d'ailleurs le supprimer. En
+fait, je peux le laisser là, ça change
+rien. Anyway, donc ici on peut voir
+qu'on est en train de venir setup les
+authentifications pour les deux outil.
+Et maintenant qu'il a fait ça, il va
+scaffordre le CLI ici pour du Et tu peux
+voir que ça vient créer du CLI. Donc par
+défaut en fait, ça va être un nouveau
+ripo qui va être juste ici. Il y a un RI
+avec la base des informations. Il y a un
+index avec les commandes. Ici il y a
+toutes les ressources disponibles
+analytics, list, domain, example,
+folder, link, tag. Donc ça c'est tous
+des paramètres qui vient passer quand il
+fait ça. Là il y a la libers et là il y
+a toutes les commandes disponibles. Donc
+comme ça en fait ça permet d'avoir un
+CLI et un code qui se respecte. Et là
+dans le CLI il y a déjà le skill qui a
+été préfait ici pour ensuite laisser
+l'agent update les infos. Donc là tu
+peux voir que l'agent est actuellement
+en train d'update les infos. OK. Bah
+voilà, je dois supprimer ces
+informations là, ces informations là et
+cetera. Et tu vois qu'ici il vient en
+fait bundle le Gemini. Ensuite il vient
+link pour créer un paf. Ce qui lui
+permet ensuite d'utiliser le Gemini CLI.
+Là on peut voir qu'il peut faire help.
+Là on peut voir qu'il peut faire texte.
+Là il vérifie que tout fonctionne bien.
+Et là il vient chercher les API key pour
+ajouter l'API key que j'utilise dans le
+CLI. Et toutes les API key que j'ai fait
+avec API to CLI. Donc là, no let's setup
+I will pass. Skip testing. OK, alors je
+vais lui rajouter la PI qui tout de
+suite. OK, donc ici le CLI a été créé
+pour Gemini. On peut voir qu'ici il a
+rajouté les clés et donc là il est
+capable de faire Gemini CLI image généré
+un CLI qui permet de gérer Gemini et de
+pouvoir permettre à Claude Code
+maintenant de générer toutes les images
+qu'il veut. C'est
+c'est une dinguerie, on est d'accord
+quand même. Et donc là, il va pouvoir
+installer le skill parce que Gemini CLI,
+c'est avant tout un projet qui est juste
+ici qui a un skill et ici, tu vas voir
+qu'il va mettre à jour le skill et
+toutes les différentes informations,
+télécharger tout ça pour pouvoir nous
+créer un skill qui fonctionne. Enfin, tu
+vois que là, il débug en fait tout
+lui-même le CLI et cetera. On a aussi le
+dub CLI du coup ici qui a été presminé.
+Il a créé toutes les ressources, token
+ressources, mette attaque, QR, code
+ressources et cetera. Et il y a aussi un
+skill qui permet évidemment d'update et
+de récupérer la dog. Et donc là, il dit
+"Oh, maintenant je vais supprimer
+l'exemple et build trash CLI exemp.
+Maintenant, je link du Maintenant, j'ai
+le CLI qui est disponible par défaut. Et
+maintenant, il va chercher le token.
+Maintenant, il voit qu'il a dispo à
+dispo les commandes. Et là, tu peux voir
+qu'il est capable de venir lancer toutes
+les commandes. Et là, il va se rendre
+compte normalement que le paramètre
+Jisson, ça j'ai pas l'impression que
+c'est du JSON, c'est pas du Jon parce
+que là, il passe tirer t- Jon et il
+retourne retour du tab. Donc c'est pas
+très très logique mon ami. C'est pas
+très grave. C'est pas très grave. Je te
+je te laisse tranquille, hein. Euh, tu
+peux voir qu'une fois qu'il aura créé
+tout ça, il crée le skill et le skill
+vient définir les différents modèles,
+les différentes méthodes et cetera. Et
+ça, il va falloir maintenir ce fichier
+skill évidemment en fonction des
+besoins. Là, ensuite, ça vient ajouter
+le skill Gemini dans Open Clow. Et donc
+maintenant, dans mon open, je me
+retrouve avec un nouveau skill euh qui
+va être dans tout ce bordel de skill.
+C'est pas comme si on en ait pas
+beaucoup. Alors, ici, je le vois pas.
+J'ai pas l'impression qu'il va setup
+dans ce dossier open clos. C'est pas
+très grave. Delete de Google imagen
+please to. Voilà. Donc là il link et là
+il vient p tout ça. Il vient nous
+rajouter tout ça et c'est parti. Et là,
+lui, il va faire la même chose. Et donc
+ici, on a créé des nouveaux CL. Juste
+ici. Il va supprimer ça. Ensuite, je
+vais tout commit et on va avoir ici un
+nouveau CLI et une nouvelle logique.
+Alors, tu peux voir d'ailleurs, j'avais
+C'est pas très grave, on avait pas fait
+ça. Don Google image gen remove et donc
+là, boom, git add, git comic add all. Et
+maintenant, j'ai mon Gemini CLI qui va
+normalement fonctionner. s'il fonctionne
+pas euh il va directement ajouter les
+hautes et cetera parce que tout respecte
+les mêmes règles. Et donc en fait la
+magie ici qu'on a juste ici en général,
+c'est que tout va pouvoir faire
+fonctionner magiquement et les modèles
+vont presque utiliser le nouveau skill
+que je viens de créer de manière
+automatique et magique. Désolé, j'ai
+fini ça. C'est vraiment vraiment très
+très très très puissant. Grâce à ça,
+j'ai par exemple créé le front app CLI
+et l'avantage c'est que c'est un CLI
+dans la manière dont je l'ai construit
+quand vous créer le CLI avec API to CLI.
+En fait ça crée jamais le CLI sur npm.
+Je veux pas publier. Moi je veux chaque
+fois que l'agent ait le contrôle du CLI.
+Ça permet que par exemple dans Front il
+gère pas les signatures d'email. Et je
+lui ai dit bah voilà un nouveau
+paramètre signature et tu peux passer un
+fichier en paramètres et ça ajoute la
+signature automatiquement. C'est quelque
+chose qui n'aurait pas été possible à
+faire avec les MCP et c'est quelque
+chose qui n'aurait été qui aurait pas
+été possible à faire avec des CLI
+externe. Un autre avantage des CLI,
+c'est qu'avant si on regarde encore une
+fois un petit peu comment ça
+fonctionnait, quand Lia appelait un
+outil par exemple, il appelait contexte
+S et ben il pouvait uniquement récupérer
+l'output qu'il lui donnait. Donc si il
+output 10000 token, le modèle est oublié
+obligé d'ingérer ses 10000 tokens.
+Qu'est-ce que peut faire le modèle
+maintenant juste ici ? Si je lui dis
+loation
+de use effect mais avec le minimum de
+token possible contexte se tu vas voir
+qu'ici ça va être assez impressionnant
+parce que vu que tout ça finalement euh
+hop là je te montre mon écran. Vu que
+tout ça finalement c'est que du batch,
+il est capable de venir faire head 150.
+Qu'est-ce que c'est ce head 150 ? c'est
+queil récupère que les 150 premiers
+caractères. En fait, vu que c'est un
+tool bâche et qui peut pipe et qui peut
+mettre les information qu'il veut dans
+son tool, et ben il il se retrouve
+finalement à avoir un contrôle beaucoup
+plus total sur ce qu'il veut faire. Ce
+qui veut faire que pour moi,
+honnêtement, dégagez-moi ces MCP, c'est
+nul. Non, c'est vraiment nul. Et je vois
+pas un monde en fait où les MCP se rend
+utile. En fait, on a créé une
+abstraction parce que c'était le début
+parce qu'on savait pas comment faire
+tout simplement pour un truc qui pour
+être honnête n'a pas besoin
+d'abstraction. Tout simplement parce que
+les CLI bâchent. Ce qui est intéressant
+et dans la vision d'anthropique qui a
+été intéressante, c'est que ils se sont
+toujours dit il faut que nos modèles
+sachent coder parce que coder, c'est la
+base d'un modèle. Un modèle est sur
+internet. pas sur internet mais il est
+sur une machine, il est sur un
+ordinateur. Un ordinateur fonctionne par
+base fondamentale de code. Si le modèle
+c'est codé, il sait contrôler un
+ordinateur, il sait faire la majorité
+des choses qu'on a besoin. Il sait
+coder, il sait utiliser bash, il a pas
+besoin de bullshit dans la gueule pour
+faire ça. Donc moi personnellement, je
+vais dégager tous mes MCP et j'utilise
+que des CLI. On verra ce que ça donne
+dans plusieurs mois. On se retrouve
+bientôt. Ciao ! Ciao.

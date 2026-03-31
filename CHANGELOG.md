@@ -1,5 +1,37 @@
 # CHANGELOG — Bible Melvynx Claude Code
 
+## [V5.0] — 2026-03-31
+
+### Bible V5.0 — 32 chapitres, 7057 lignes, 70 sources fusionnees
+
+Fusion massive : V4.1 (21 chapitres) + 8 nouvelles videos Melvynx + Guide OpenClaw complet + Guide Claude Code complet + Config Mac Kim13 exhaustive. De 1717 a 7057 lignes (+311%).
+
+### Nouveaux chapitres (10)
+- **Ch.23 — CLI vs MCP : La nouvelle philosophie** : mort des MCP selon Melvynx, migration CLI + Skill, Context7 en CLI, suppression MCP recommandee
+- **Ch.24 — SaaS et business avec Claude Code** : lancer un SaaS, gestion copie (Subfast), monetisation, stack recommandee
+- **Ch.25 — Les 4 niveaux de developpeur IA** : debutant a expert, roadmap progression, competences par niveau
+- **Ch.26 — Roadmap vibe coder 2026** : plan 6 mois, stack, methode, objectifs concrets
+- **Ch.27 — Dispatch vs OpenClaw** : comparatif agents distants, cas d'usage, avantages/limites
+- **Ch.28 — CEMUX et outils recommandes** : setup complet CEMUX, raccourcis, integrations
+- **Ch.29 — Masterclass : les 7 piliers (Core Seven)** : recapitulatif des 7 fonctionnalites cles
+- **Ch.30 — Guide OpenClaw 100%** : 1233 lignes, installation VPS complete, daemon, 16 skills, Gmail/Calendar, audio ElevenLabs, securite, troubleshooting
+- **Ch.31 — Guide complet Claude Code** : 1963 lignes, fonctionnement interne, config exhaustive, hooks, MCP, plugins, Cowork, Dispatch, Channels
+- **Ch.32 — Configuration Mac Kim13 complete** : 1121 lignes, 13 sous-chapitres (A-M), inventaire reel deploye (76 deny rules, 50 skills, 31 agents, 15 hooks, 5 MCP, 9 plugins, 61 commands, 24 rules)
+
+### Sources ajoutees (11 nouvelles videos)
+- 8 nouvelles videos Melvynx (transcriptions Whisper)
+- Guide OpenClaw redige a partir de documentation officielle + transcriptions
+- Guide Claude Code complet redige a partir du cours 4h + toutes les videos
+- Config Mac Kim13 extraite de la configuration reelle deployee
+
+### Statistiques
+- Chapitres : 21 → 32 (+52%)
+- Lignes : 1717 → 7057 (+311%)
+- Sources : 59 → 70 (+19%)
+- Sections estimees : 220+ → 400+
+
+---
+
 ## [V4.1] — 2026-03-29
 
 ### Bible V4.1 finale — 21 chapitres, 1717 lignes, 59+ sources fusionnees
@@ -55,30 +87,18 @@ Resultat unanime : BIBLE COMPLETE — NOTHING MISSING.
 - **Ch.20 — Usages non-code & configs avancees** (hack token API, hooks JSON complet, agents.md Teams, contextFork, /config toggles)
 
 #### Enrichissements majeurs
-- **APEX enrichi** : ReAct, SCRATCHPAD.md, State Persistence, workflow-apex-free
-- **Garde-fous hardcodes** : 4 etapes doublons (jdupes xxHash64/fdupes MD5), SHA-256, suppression silencieuse interdite
-- **Core 7** : terminologie Melvynx (Commandes, Hooks, Memoire, MCP, StatusLine, Sub-agents, Context)
-- **Chaining multi-skills** : 3+ skills en une commande (Codline + Dub + Email)
-- **NowTS boilerplate** : nowts.app, ZodRoute, Upfetch, methode commentaires inline
-- **Prisma reset** : seul risque bypass + citation Melvynx
-- **Benchmark sub-agents** : 5000 tokens economises (41% vs 38%)
-- **Pricing** : 237$/jour, 7$/session, 80% users <200$, expense marketing Anthropic
-- **Chrome** : pair-browsing humain+IA, pause auto sur pages login
-- **Teams** : self-claim teammates, delegate mode
-- **StatusLine** : usableContextOnly, couleurs progressives, showProgressBar
-- **CEMUX** : raccourcis Ctrl+1/2/3, Cmd+Shift+R
-- **Cowork** : Dispatch (sessions paralleles), Channels (agents autonomes)
-- **OpenClaw** : anti-ban upgrade, email auto-apprentissage, bannissement spammeurs, situation.md auto-update, partager via Telegram, workspace GitHub backup
-- **MCP** : desactiver tous par defaut, activer a la demande
-- **Skills** : pnpx > npx, prompt injection warning, taguer au milieu du prompt, package.json API skills
-- **Review** : humaine = uniquement taste et vision produit
+- APEX enrichi : ReAct, SCRATCHPAD.md, State Persistence, workflow-apex-free
+- Garde-fous hardcodes : 4 etapes doublons, SHA-256, suppression silencieuse interdite
+- Core 7 terminologie Melvynx
+- Chaining multi-skills, NowTS boilerplate
+- Chrome pair-browsing, Teams self-claim, Ralph -N
+- StatusLine, CEMUX, Cowork, OpenClaw enrichis
+- Anti-patterns : 20 → 25 regles
 
 ### Verification (3 passes, 12 agents)
-- Passe 1 : 4 agents → 10 elements trouves et ajoutes
-- Passe 2 : 4 agents → "NOTHING MISSING" (7/8), 2 items OpenClaw ajoutes apres fact-check
-- Passe 3 : 4 agents → "BIBLE COMPLETE — NOTHING MISSING" (unanime)
-
-### Anti-patterns : 20 → 25 regles
+- Passe 1 : 4 agents → 10 elements ajoutes
+- Passe 2 : 4 agents → "NOTHING MISSING" (7/8)
+- Passe 3 : 4 agents → "BIBLE COMPLETE" (unanime)
 
 ---
 
@@ -86,176 +106,39 @@ Resultat unanime : BIBLE COMPLETE — NOTHING MISSING.
 
 ### Fusion Checklist Integrale (820 → 1289 lignes, +57%)
 
-Fusion de la Checklist Integrale d'Instructions (22 sections, ~200 instructions cochables) dans la Bible.
+Fusion de la Checklist Integrale d'Instructions (22 sections, ~200 instructions).
 Sources ajoutees : Masterclass 1h30 + Masterclass 4h + 6 Nouveautes + Terminal Vibe Coder.
 
-### Nouveau fichier
-- `BIBLE_MELVYNX_V3.md` — Bible V3.1 fusionnee (1289 lignes, 20 chapitres + anti-patterns)
+### Chapitres restructures (20 chapitres)
+- Ch.2 enrichi (commande curl install, guide WSL)
+- Ch.3 (analogie Minecraft, commandes npm)
+- Ch.5 (reset sessions ~4.5/jour)
+- Ch.8 (section Plugins vs Skills)
+- Ch.9 (tableau choix workflow, flags /apex)
+- Ch.11 (chapitre dedie Work Trees)
+- Ch.12 (NowTS boilerplate, rules globs)
+- Ch.14 (deploiement : Netlify Drop + Vercel)
+- Ch.15 (CEMUX, Batch, Auto-Memory, Scheduled Tasks)
+- Ch.20 (hooks avec exemple JSON complet)
+- Ch.21 (WSL dedie)
 
-### Chapitres restructures (20 → 20, reorganises)
-- **Ch.2 — Installation & Prerequis** : enrichi avec commande `curl` install, guide WSL mlv.sh/fs, organisation ~/Developer/
-- **Ch.3 — Le Terminal** : ajout analogie Minecraft, commandes npm, ouvrir terminal par OS
-- **Ch.5 — Abonnement & Limites** : details reset sessions (~4.5/jour), attendre ~1h si limit
-- **Ch.8 — Skills** : section Plugins vs Skills detaillee, front-end-design, github-init recommandes
-- **Ch.9 — Workflows** : tableau choix workflow selon tache, flags /apex complets (--resume, --tasks, --interactive)
-- **Ch.11 — Work Trees** : chapitre dedie (avant fusionne dans Sub-agents), alternative sans work tree
-- **Ch.12 — Prompting** : NowTS boilerplate, rules ciblees par path avec exemple globs
-- **Ch.13 — Securite** : securite dans CLAUDE.md (hash, idempotent, diagnostiquer avant agir)
-- **Ch.14 — Deploiement** : chapitre dedie (Netlify Drop + Vercel + github-init)
-- **Ch.15 — Nouveautes 2026** : CEMUX details (Swift/AppKit), Batch, Auto-Memory, Scheduled Tasks
-- **Ch.17 — Tmux** : commandes installation (brew/apt)
-- **Ch.18 — Multi-projets & Dossier CC** : symlinks skills, philosophie "Claude peut le faire ?"
-- **Ch.20 — Hooks** : chapitre dedie avec exemple JSON complet settings.json
-- **Ch.21 — WSL** : chapitre dedie Windows
-
-### Meta-skills & meta-prompting
-- Section enrichie : creer des skills qui creent des skills, app-prompting-creator, meta-prompts pour cloud memory/hooks/skills/sub-agents
-
-### Anti-patterns
-- 20 → 25 regles
-- Ajout : JAMAIS ignorer erreurs, JAMAIS rm -rf, JAMAIS supprimer sans backup, JAMAIS >4 work trees, JAMAIS relancer skills inutilement
-
-### Resume express (nouveau)
-- Tableau de reference rapide : 14 composants avec instruction cle chacun
+### Anti-patterns : 20 → 25 regles
 
 ---
 
 ## [V2.0] — 2026-03-26
 
-### Mise a jour majeure : Bible V2 (+56% de contenu, 527 → 820 lignes)
+### Mise a jour majeure (+56%, 527 → 820 lignes)
 
-Analyse complete des 3 sources originales (4411 lignes) vs Bible V1 (527 lignes).
+Analyse complete des 3 sources originales (4411 lignes) vs Bible V1.
 Identification de 25+ sections manquantes. Fusion integrale.
 
-### Nouveau fichier
-- `BIBLE_MELVYNX_V2.md` — Bible complete mise a jour (820 lignes, 14 chapitres + anti-patterns)
-
 ### Chapitres ajoutes
-- **Chapitre 2 — Le Terminal pour Vibe Codeurs** (NOUVEAU)
-  - Commandes essentielles (pwd, cd, ls, mkdir, echo, clear)
-  - Bash vs PowerShell vs WSL
-  - Astuce copie chemin macOS (clic droit + Option)
-  - Premier projet demo (npm create vite)
+- **Ch.2 — Le Terminal pour Vibe Codeurs** (NOUVEAU)
+- **Ch.14 — Nouveautes 2026** (NOUVEAU)
 
-- **Chapitre 14 — Nouveautes 2026** (NOUVEAU)
-  - Claude Review (beta entreprise) : stats 16%→54% PRs, 94% bugs trouves, cout 15-25$/review
-  - Voice Mode : `/voice`, mieux en anglais
-  - Ask User Question ameliore : choix multiples, touche N pour notes
-
-### Sections enrichies dans chapitres existants
-
-#### Chapitre 1 — Architecture
-- Applications creees par Melvynx (Umail, SaveIt, Subfast, Chao.App, PaddleTally)
-- Analogie chef cuisinier
-
-#### Chapitre 3 — Configuration
-- Niveaux de configuration (0 → OK → OG 90% → OG++ 99%)
-- Blueprint CLI Premium (`npx aiblueprint-cli pro activate`)
-- settings.local.json (hooks locaux, Prettier, pas partage equipe)
-- StatusLine : heures restantes, depenses du jour
-
-#### Chapitre 4 — Workflows
-- /oneshot : exploration et planification autonomes
-- /debug : Chrome Headless juge "lourd et lent", log technique detaillee 4 etapes
-- /fix-errors : ideal builds Swift
-- /fix-grammar : usage avec chemin dossier
-- /loop : cas d'usage (monitoring PR, babysit deploys)
-- /ralph-loop : coding autonome en boucle
-- /batch : citation Melvynx "pas de PR par petit bout de code"
-
-#### Chapitre 5 — Commandes slash
-- /init : conseil thread enrichi de contexte
-- /plugin : 2 sources (Anthropic Cloud Code + Official Plugins)
-- /voice : ne remplace pas outils dictee
-- /debug : auto-debug config
-- Escape x2 : naviguer fleches, Enter, "Restore conversation"
-- Shift+Tab : progression Normal → Accept Edit → Bypass
-- Ctrl+O : voir le thinking
-- Ctrl+S : prompt revient automatiquement
-
-#### Chapitre 6 — Context Engineering
-- System prompt : ~3 500 tokens (1,7%)
-- Outils, skills, MCP tools : definitions injectees meme si non utilises
-- Proxyman detaille : intercepter requetes HTTP, hack fichier HTML
-- Lost in the Middle : explication approfondie (biais transformer, 1/3 a 1/2)
-- Impact concret sur EPCT
-- Prompt Discovery : comment creer un workflow avec steps
-- Rules : exemple concret (middleware.ts → proxy.ts)
-- CLAUDE.md vs Auto-Memory : tableau comparatif
-- Commentaires inline comme "prompt injection" benefique (ZodRoute, Upfetch)
-- Changelog automatique (regle CRITICAL)
-- Attention mauvais chats multi-terminaux
-- Structure .claude/ : transcripts recuperables, hack lancer CC dans ~/.claude/
-- Desactiver skills/agents : sous-dossier "disabled"
-
-#### Chapitre 7 — Sub-agents & Teams
-- Description sub-agent injectee dans le prompt
-- Relancer CC apres creation sub-agent
-- Creation agent custom live (/agent → create → personal → generate)
-- Assigner modele (Sonnet pour economiser) et couleur
-- Teams : fleche bas switcher agents, Tmux tabs, etat actuel (peu cooperatifs)
-- Work Trees : ne PAS utiliser pour petites features, piege 25% temps travail
-- Astuce CLAUDE.md erreurs TypeScript non implementees
-- Citation Melvynx sur work trees
-
-#### Chapitre 8 — Prompting
-- Greenfield : NaotS.app boilerplate, preferences APRES premier run
-- Brownfield : dessins fleches carres rouges, conventions code existant auto
-- Debugging : screenshot + description exemple concret, Chrome Headless deconseille
-- Technique 10 variations UI : prompt exact verbatim + exemples variations
-- Processus iteratif front-end : vision visuelle = plus grand hack
-- 5 methodes eviter erreurs repetitives (rules, workflow, globs, comments, changelog)
-- Anti-patterns prompting complets
-
-#### Chapitre 9 — Securite
-- Erreur deny-list affichee
-- Plugins : 2 sources, dossier non modifiable, citation "volez les concepts"
-- Command Validator : privilege escalation, remote execution
-
-#### Chapitre 10 — Pricing
-- API directe Opus : 15$/M input + 75$/M output
-- Recommandation detaillee Max 20x
-- Sessions et limites : session limit vs weekly limit, reset, verifier sur claude.ai
-- Quand monter d'abonnement (hobby → pro → intensif)
-
-#### Chapitre 11 — Outils
-- Netlify Drop : procedure complete 5 etapes
-- Ghostty : raccourcis detailles
-- CEMUX : specs completes (Swift/AppKit, notifications, browser, split pane)
-- Raycast : extensions VS Code/Figma/GitHub/Tailwind/iOS
-- WhisperTurbo : modeles PRK vs Whisper Large
-- VS Code : installation CLI
-- tmux : renommer session ($), cas d'usage par role
-- Dossier CC : alias cdcc, liste utilisations
-
-#### Chapitre 12 — OpenClaw
-- Cas d'usage reels (piscine, tweets, plateformes)
-- Installation locale detaillee (BotFather)
-- Installation VPS manuelle (9 etapes completes avec commandes)
-- Workflow complet 5 etapes avec cron job watcher
-- Skills OpenClaw liste complete (16 skills)
-- Gmail + Calendar (5 etapes Google Cloud OAuth)
-- Audio bidirectionnel ElevenLabs
-- Modeles : couts detailles ($2/$12 Gemini Pro)
-- Fichiers config (soul.md, memory/, canvas/, .env)
-- Securite : security-audit, 1Password warning, Mac Mini dedie
-- OC Pro produit payant
-
-#### Chapitre 13 — Meta-skills
-- meta-hook-creator et meta-skill-workflow-creator
-- Comment creer un meta-skill (4 etapes)
-- Analogie livre de cuisine
-- Repo GitHub officiel : 15 skills, 3 agents listes
-- Melvynx prefere skill.sh aux plugins
-
-### Anti-patterns
-- 18 → 20 regles
-- Ajout #19 : JAMAIS Chrome Headless pour debug
-- Ajout #20 : JAMAIS attendre agents teams communiquent entre eux
-
-### Configuration MacBook mise a jour
-- Permissions Claude Code : allow simplifie (`Bash(*)`, `Edit(*)`, etc.)
-- Deny-list Read maintenue (fichiers sensibles : .pem, password, secret, token, .env, .ssh)
+### Enrichissements : 12 chapitres existants completes
+- Anti-patterns : 18 → 20 regles
 
 ---
 
@@ -263,8 +146,7 @@ Identification de 25+ sections manquantes. Fusion integrale.
 
 ### Creation initiale
 - Bible Melvynx V1 : 527 lignes, 12 chapitres
-- Fusion de 3 sources : Formation Complete (1420 lignes) + Setup 20min (451 lignes) + Cours 4h (2540 lignes)
-- README.md : 17 sections structurees
-- Bibles OS : macOS, Windows, Linux
-- Bible DevOps/SysAdmin : 40 chapitres, 99 Ko
+- Fusion de 3 sources : Formation Complete + Setup 20min + Cours 4h
+- README.md, Bibles OS (macOS, Windows, Linux)
+- Bible DevOps/SysAdmin : 40 chapitres
 - Config BOKADOR : settings.json, rules, agents, docs

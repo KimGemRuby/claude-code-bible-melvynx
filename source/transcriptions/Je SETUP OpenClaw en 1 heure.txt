@@ -1,0 +1,1320 @@
+ 
+Perance n'a jamais utilisé Open Clow et
+dans cette vidéo, on va setup Open Clow
+de Zé sur son MacBook avant de le jeter
+par la fenêtre. Non, c'est une blague.
+Salut Terence.
+Salut.
+Ça va [rires] et toi ?
+Ça va.
+Terrance, c'est un Instagramur qui est
+incroyable et je vous invite à le
+suivre. Je mettrai son lien sur la
+description ou mlv.sh/terance.
+Et dans cette vidéo, le but c'est
+vraiment de setup un petit peu Open Crow
+en mode chilax.
+On va on va faire les trucs sur l'ordi,
+on va ajouter les petits les petits
+trucs qu'il faut et comme ça on aura un
+open clos.
+Donc je te propose de commencer tout de
+suite. Let's go.
+Son ordi. Les premiers trucs que je
+voulais lui faire faire et que je vous
+invite à faire parce que Terence il a il
+a le profil de beaucoup de gens qui me
+suivent, c'est-à-dire et pas en profil
+technique.
+Pas technique, je suis là, Claude fait
+tout à ma place, ça me fait plaisir.
+Mais entre nous, il avait quand même
+quelques problèmes. Le premier problème
+que vous pouvez fixer, c'est installer
+Ghost si vous êtes sur MacOS. Ça c'est
+le terminal de base.
+Je sais même pas ce que c'est mec.
+Voilà. Mais c'est pas grave. Je suis là.
+Je suis là pour ça. Ça c'est Ghosti.
+C'est beau.
+Ça ressemble au terminal.
+Tu peux faire des tables.
+Oh [&nbsp;__&nbsp;] c'est
+comme ça. Tu peux lancer plusieurs
+claudes à côté et ça te permet d'avoir
+les tables. Après, tu fais raccourci
+commande 1 2 3 4 5 6. Commande W, ça
+ferme tag et commande T, ça t'en ouvre
+des nouveaux.
+Et il est plus rapide. Et surtout pour
+la vidéo, c'est pour ça que je l'ai
+installé, on peut zoomer parce que lui
+là, on peut pas zoomer. Lui, on peut
+zoomer et comme ça ici on se retrouve
+avec, tu vois plus simple pour les gens
+qui nous suivent,
+c'est lisible.
+Alors si je dégage cette merde de
+comment si je close, ça marche. OK.
+Euh ici, on se retrouve avec un truc un
+peu plus grand, tu vois. On peut
+vraiment se faire kiffer.
+Euh, bon, apparemment moins ça fait plus
+aussi. Donc là, je suis [&nbsp;__&nbsp;]
+quoi. What the fuck ? le moins et le
+plus. Euh bon ben maintenant on est
+[&nbsp;__&nbsp;] [rires]
+Mec c'est c'est zoomé.
+Hop là.
+Donc une fois qu'on a fait ça, deuxième
+chose à faire, bon regardez si on a brou
+d'installer
+tir V. Boum,
+c'est pas mal hein. Ensuite, si vous
+avez pas ar, vous pouvez installer AR.
+Mais la deuxième chose à installer sur
+tous vos ordinateurs, c'est Raycast. Tu
+connais Rayast ?
+Non.
+Bon, on va bientôt setup open cl mais
+d'abord faut qu'on se mette bien.
+OK. Raycast, c'est l'application ultime
+que n'importe qui sur MacOS doit avoir
+immédiatement. Alors, le site est
+tellement bon que ça fait littéralement
+crache ton ordi, mais c'est pas grave.
+C'est quoi ce site de fou ? Là, il y a
+plus de drame dispo. [rires]
+Mais c'est horrible, faut rien faire.
+Pourtant, j'ai tout fermé.
+OK, attends. Euh, hop, tranquille. Non,
+on va fermer. Ah non, on va fermer lui.
+Ah, c'est bon, c'est bon, on est là.
+C'est c'est juste cas qui faisait
+cracher le truc. Et là, vous êtes prêts
+? Préparez-vous. J'ai fait ça à tous mes
+potes. C'est toujours le meilleur moment
+de ma vie. Euh, merde. Sorry, sorry. Tu
+connais Black Box ? Je connais aussi.
+Euh, on lance. Merde, on ouvre.
+Préparez-vous.
+Me fait penser à Arc. C'est quand tu le
+lances pour la première fois.
+AR,
+c'est Ah, c'est les mêmes.
+Non, non, non, mais c'est le même style.
+Your Mac, but Better, tu as emoji
+Picker, App Launcher, Clipboard History,
+Window Managements, Search, Screenshot,
+Sniped gratuit. Non. H
+ask anything ça c'est payant. Ça truc
+payant c'est si tu veux de l'IA. Mais si
+tu veux pas de l'IA, c'est gratuit.
+C'est trop bien.
+Install your first extension. Tu peux
+contrôler VS Code, Figma, GitHub, tu
+peux gérer Tailwind, tes tes
+déploiements, peut-être tu as une
+extension iOS, j'en sais rien. Euh hop
+et là tu as le Pro à 8 dollars. Mais
+sans le Pro, il y a tout qui reste à peu
+près la même chose, sauf l'IA. Et donc
+ici, qu'est-ce qu'on fait ? pour
+remplacer le commande étape et donc on
+remplace spotlight et maintenant quand
+on fait commande espace on a plus de
+spotlight, tu vas voir
+ici on peut donner tous les accès. Bon
+je te donne accès à ta place sur les
+trucs que je peux accessibilité je pense
+je peux pas. Wouh !
+Voilà donner toutes vos données aux
+Américains, c'est toujours important.
+Bon pas autoriser le calendrier. Hop là
+accessibilité. J'aurais dû faire. Merde
+sinon tu vas pas voir le clickboard
+story là. Waouh ! Only quatre
+caractères.
+Ouais, très sécure.
+Continue, continue. OK, commande espace.
+Hop. Et du coup, qu'est-ce que ça change
+? Ça fait que ici là, tu peux chercher
+les app. Donc là, Ghosty bou. Trop bien.
+Tu ouvres les app comme ça.
+C'est comme spotlight en fait,
+mais en beaucoup plus rapide.
+en terme de machin et aussi là quand on
+va quand on va copier des trucs après tu
+cherches ici clipboard history et tu
+vois que ça vient copier tous les trucs.
+Ça copie aussi les screenshots. Donc
+chaque fois que tu fais des screenshots,
+tu peux les retrouver dans clip history.
+Et euh tu as l'emoji picker. Donc tu
+peux remplacer
+tu peux remplacer l'emoji picker par
+défaut en utilisant ça. Et là le machin
+super stylé c'est que tu peux rechercher
+des emojis en natural language. exemple
+une personne qui pleure.
+[&nbsp;__&nbsp;] c'est trop bien.
+C'est du g il y a des emojis. Tu sais
+cet emoji là, l'italien,
+je sais pas le trouver. J'écris emoji
+italien pasta et il me trouve l'emoji
+comme ça.
+Ça c'est vraiment des petits problèmes
+de de la vie mec qui font plaisir de
+résoudre.
+Voilà, maintenant qu'on a fait tout ça,
+on va setup open cloud comme prévu.
+Alors euh on a on a déjà un truc
+normalement.
+Ouais ouais.
+Bon non, faut surtout fermer ce website.
+Donc comment est-ce qu'on setup Open
+Clow ? Faut avoir un VPS. Bon, alors il
+y a il y a des gens qui vont être très
+contents sur cette terre, c'est
+Hostinger
+parce que je parle jamais d'eux. Moi
+généralement je recommande Herz. Donc on
+restarte le VPS meeting detectinstall
+OS. Est-ce que c'est fait ou pas ? C'est
+en train
+Mais tu vasir tu vas falloir faire du
+montage sur cette vidéo.
+Non non euh non 10 minutes parce que
+quand vous êtes et je peux tester ici en
+live. J'ai un VPS sur lequel je me suis
+amusé juste avant. Maintenant on doit se
+connecter. Comment est-ce qu'on se
+connecte ? Merde
+crée-moi une nouvelle clé SSH qui
+s'appelle open close et copie la clé
+publique dans mon presse papier. Voilà,
+on prompte. Bon, dans la vidéo d'après
+avec Terence, on va setup Claude Code
+parce que vous voyez que ça c'est
+interdit. Comment tu fais dans ta vie ?
+Tu passes ta vie à lui dire oui.
+Non, je passe ma vie à le lancer en fou
+permission.
+OK. OK.
+Donc une fois qu'on a rajouté la clé, on
+la colle ici. Cette clé ici, alors c'est
+pas super de la montrer publiquement
+comme ça, mais en même temps, c'est
+dans la seconde.
+Mais en même temps, c'est pas très
+grave. Pourquoi ? Parce que c'est la clé
+publique comme les cryptos. La clé
+publique, tout le monde y a accès, c'est
+pas très grave. Ce qu'il faut garder
+secret, c'est la clé privée qui va
+s'afficher dans une seconde. La clé
+privée, elle est juste ici. Bior de
+class. Et maintenant, vous dites à Cloud
+Code : "Crée-moi un profil SSH pour que
+je puisse me connecter avec SSH Open
+Clow" directement. Vous allez voir, ça
+c'est vraiment la vie. Donc maintenant,
+il a créé sa clé et il va créer un
+profil sur votre ordinateur pour pouvoir
+vous connecter à Open Cloud directement.
+Ah merde, je lui ai pas donné le je pas
+donné l'IP. Alors oui, c'est sûr que si
+vous donnez pas l'IP, ça marche pas.
+Hop, vous lui balancez l'IP. Ici, vous
+lui dites route. Comme ça, on se
+connecte en mode king. Vous voulez
+toujours être le king de votre serveur,
+sinon ça sert à rien. Oh là là, j'ai
+envie de fumxer. [rires]
+C'est bon. Allez, faites-vous plaisir,
+faites-vous plaisir, lisez tout
+l'ordinateur,
+c'est pas grave. Perence,
+il se prostitue aujourd'hui. Non, mais
+une fois que vous avez fait ça, vous
+avez ssh open et là, quand tu veux te
+connecter sur ton freshly new, we just
+create ssh open clow et on est sur VPS.
+OK. Donc là, en fait, il a fait quoi ?
+Il a il a fait en sorte que ce soit que
+mon ordi qui puisse se connecter sur le
+SSH.
+Voilà. Là, on vient de se connecter en
+SSH. SSH, c'est une clé privée euh avec
+des algorithmes très très complexes et
+c'est presque impossible. La bruit de
+force, c'est ce qui fait fonctionner
+tout le web. Euh
+c'est donc très compliqué. Et donc ce
+que vous pouvez faire une fois que vous
+êtes dans votre serveur fraîchement
+installé, c'est installer Cloud. Comme
+ça après on peut faire les prochaines
+étapes.
+Tout fait on fait tout avec Claude.
+Après
+Claude installe Ubuntu. Oh, il m'a fait
+chier. C'est le seul site, tu arrives
+pas sur le bon site quand tu cherches.
+Quick start. Là, vous faites ça, vous
+balancer ça comme ça. Et ensuite, on va
+utiliser le petit script.
+Quel est le une fois que vous êtes sur
+votre VPS durement acquis, on va lancer
+la commande que j'ai créé qui s'appelle
+NPX Open Clow VPS setup qui va juste
+installer tous les requirements. Donc
+là, tu vois qu'il va installer les
+différents outils. Quel outil on va
+utiliser ? On va utiliser notre JS. Ça
+c'est l'outil qui open clow est codé en
+en notre JS. En fait, on va utiliser
+Open Clow GitHub. Ça va permettre de
+contrôler vos repo avec avec Cloud avec
+Open Cloud. On va installer Cloud pour
+debug open cloud avec votre abonnement
+Cloud. On va installer BN, c'est un
+outil pour lancer des scripts. On va
+installer Cloud FLIRed. Cloud FLIR, ça
+va permettre si on arrive, mais on va
+pas le setup dans cette vidéo, mais dans
+le futur, ça te permettrait de faire un
+tunnel entre ton Open Clow et
+potentiellement Gmail. Si tu as envie de
+setup Gmail.
+Go
+mais il te faut un domaine et je sais
+pas si tu as des domaines.
+J'ai des domaines.
+Et on va setup GCloud. Donc non, bon ça
+ça sert aussi à gérer les emails
+normalement. Ensuite le script il va
+vous demander si vous voulez faire du
+security hardening UFW fail to ban SSH
+hardening. Vous pouvez dire oui si vous
+avez setup en SSH ici ça va ajouter un
+firewall sur les différents ports.
+Ah
+ça va ajouter fail to ban. Donc s'il y a
+des IP qui essaient brut force en fait
+on va les bannir. Mais ici il a pas
+fait, c'est pas grave. Vous pouvez
+demander à clone de l'installer. Non SSH
+hardening, il l'a pas fait. Et ici ce
+qu'il faudra demander, c'est aussi de
+désactiver le password qu'on avait vu
+avant. Par défaut, si vous utilisez des
+trucs comme Hostinger, ils font un
+password. Beaucoup de services ont un
+password. On va désactiver le password
+pour rendre la clé le seul maître de
+votre VPS en sachant que la clé est très
+compliquée à hacker en règle générale.
+Top. Une fois qu'on a fait ça, ça va
+lancer le onboarding open close. C'est
+là où vous allez devoir lancer Telegram.
+Je l'ai pas mec sur l'ordi.
+Non mais c'est pas possible. C'est pas
+possible.
+Tu peux pas installer Open Close si tu
+as pas Telegram sur l'ordi.
+J'ai Telégram sur le tel
+scan. Une fois que vous avez ça, vous
+allez aller dans le bot fader comme il a
+fait juste ici et vous allez créer un
+nouveau bot avec ici slashne newbot. On
+va l'appeler, pourquoi tu l'as appelé ça
+? On va l'appeler
+en l'ID. On peut changer plus tard. On
+va l'appeler open clow.
+Euh du king, c'est il y a personne qui
+prend ce genre de truc. Ah voilà.
+Ensuite, vous avez un token d'accès
+juste ici. On va le sauvegarder pour
+plus tard. Maintenant, on retourne dans
+le terminal. On va faire le onboarding
+open club. Première étape, est-ce que tu
+es d'accord de faire ça ? Tu dis oui,
+quick start. Ici, on va choisir
+anthropic. Et là, on va prendre token.
+Donc je vais couper le rec et on va
+récupérer un token. Une fois qu'on a
+fait ça, on va choisir ici Telegram bot
+API dans le channel et ici on va mettre
+le bot token qui est juste ici. Vous
+pouvez juste cliquer dessus, normalement
+ça copie un peu près tout seul. On fait
+enter. Configure skill now. On va dire
+oui. Ici, on peut installer skill qu'on
+veut avoir. Donc par exemple Clow Up, ça
+va permettre au Clir chercher des
+nouvelles choses. On va pouvoir utiliser
+Gemini ici pour générer des images ou
+autres. On va pouvoir utiliser GOG pour
+accéder à Gmail, calendar, enfin quoi
+que ça, faudrait pas l'installer. Il y a
+un nouveau CLI. Très bien. Je pense
+qu'ils vont mettre à jour. Nano Banana
+Pro, c'est top. Ensuite, open Whisper
+pour faire les les speech et on va
+pouvoir installer, c'est tout. Est-ce
+que tu veux installer Omrouw ? Oui, ici,
+on va choisir npm, il y a pas de souci.
+Et là, il va installer les différents
+skills comme ceci. Là, maintenant, vous
+pouvez ajouter des API key, par exemple
+Google Place API qui va permettre à Clo
+de faire des recherches sur Google Map.
+Nous malheureusement euh Ah oui, j'ai je
+lui ai dit que j'avais installé, j'ai
+pas installé. C'est pas grave.
+OK.
+Bon, ici Gemina qui va falloir les
+ajouter mais je pense que toi tu en as
+pas. Si vous voulez le faire par la
+suite et si tu as envie de le faire par
+la suite, tu vas lui dire "Est-ce que tu
+peux me faire ça ?" Il va te dire "Non,
+j'ai pas les clés." Tu lui donneras les
+clés dans le chat et il ira les setup
+lui-même. Donc pour l'instant, on va pas
+mettre les clés. la même chose notion
+API IQ on a pas open I open I vous avez
+pas mais vous pouvez tous les ajouter 11
+app c'est très intéressant d'ajouter et
+cetera ensuite ici vous pouvez rajouter
+des session memories c'est pas mal euh
+inject additional workspace brive via
+glob non et et c'est tout et maintenant
+on peut voir que le getaway a peut-être
+commencé enfin nonant ici il nous voit
+system is enable unavailable command f
+user il me fait chier
+C'est pas grave, on va demander à à
+Claude de résoudre ça. Setup cloud
+tunnel. Non. Open Clow Getaway service
+start, il a créé. Et est-ce que tu veux
+créer des allias de Shell ? Ça c'est mon
+script. Oui. OK. Normalement, on a le
+open clow getaway. On peut écrire open
+clow getaway statut. Alors là, tu te
+demandes qu'est-ce que c'est Getaway,
+mec. C'est quoi getaway ?
+Ouais, Getaway, c'est le service qui va
+permettre à Open Clow ici de discuter
+avec ton Telegram. C'est un serveur quoi
+qui est toujours en train de s'exécuter
+sur ton ordi. On va pouvoir vérifier que
+ça marche en cliquant ici, en envoyant
+start et là ça va vous dire voilà c'est
+pas configuré lance le code. Ce que vous
+pouvez faire dès maintenant c'est de
+venir vous connecter avec Cloud parce
+qu'à partir de maintenant ça va être
+chiant de faire tout soi-même. Donc là
+on va faire la même chose. On va se
+connecter avec un abonnement cloud. Donc
+vous pouvez écrire l'URL. Et ici, on
+peut toujours pas copier.
+Donc là, vous la technique c'est de
+lancer cloud. Du coup, qu'est-ce qu'on
+fait ? Vous pouvez balancer le message
+qu'on a reçu sur Telegram ici à Claude
+Code. Et là, et là, ah oui, là on est
+dans la dans la sauce. Là, on est dans
+une des sauces.
+Comment ça ?
+Dans une des sauces, si vous voyez, il
+fait chier pour demander les permissions
+encore sur votre VPS. Donc là, on lui a
+là, on lui fait comprendre mais passer
+ma vie à accepter ce que Claude veut
+faire, ça me rend dingue. Donc ce que
+vous pouvez faire, c'est venir ici dans
+CD.Cloud. Holy shit, merde. Comment on
+peut faire ça facilement ? Ça c'est pas
+mal ça. J'aurais dû faire ça il y a si
+longtemps. Ah mais là vous allez voir
+c'est pas si simple parce que par défaut
+vous allez voir que Claude ne veut pas
+se lancer en bypass permission sur le
+VPS pour des security reason.
+Quelle connerie !
+Ça c'est vraiment de la connerie. Et
+donc pour résoudre ce problème, si ici
+je viens de check mon deuxième
+ordinateur, normalement
+je crois qu'il y a un hack qui s'appelle
+un qui s'appelle S andx. Donc là vous
+venez et vous écrivez is S and box equal
+one cloud. Et là Claude croit qu'il est
+dans une S box alors qu'il est pas dans
+une S box. Et bou le bypass permission
+qui passe.
+Mais est-ce que c'est capable enfin
+genre quelqu'un qui est pas dev est-ce
+qu' il pourrait faire ça ?
+Moi j'ai j'ai moi à l'époque j'ai
+demandé à Claude non je veux que tu sois
+en bypass permission trouve la solution
+et c'est lui qui m'a donné ça.
+OK solide.
+Et après ici vous pouvez lui dire
+modifie le bas RC pour toujours être
+lancé. Load equal is soundbox. En fait,
+c'est juste que moi j'ai voulu le
+lancer, j'ai eu l'erreur, j'ai dit "Fuck
+it." Après, j'ai dit "Va chercher sur
+internet comment corriger l'erreur". Il
+a trouvé un article de con. Et ce que
+j'adore avec Claude, c'est que la
+sécurité, il en a rien à [&nbsp;__&nbsp;] Il est
+en mode "Tu me demandes de bypass mes
+propres règles, fuck off, j'y vais et je
+fais ce que tu m'as dit." Merci en
+Tropique.
+Donc maintenant qu'on a fait tout ça, on
+peut euh lui redire ça et le renvoyer le
+message pour qu'il accepte son sa propre
+open clification. Donc ça ça va être les
+petites choses à faire. Ce que vous
+pouvez faire en même temps, c'est ouvrir
+un nouveau terminal donc avec commande t
+et là maintenant qu'on peut facilement
+se connecter à SSH Open Clow euh on va
+pouvoir setup les différents trucs avec
+GitHub login. Est-ce que tu as un compte
+GitHub ? Oui, c'est bien. Donc, ayez un
+compte Gitup. Donc, ici, est-ce que vous
+voulez vous authentifier ? Oui. Oui.
+Oui. Alors là, là, vous pouvez pas dire
+oui en fait, je suis con. Euh là, vous
+lui dites non
+et là, vous balancez le code dans Big
+Terance. Allez followance sur GitHub.
+C'est
+il y a que du bon,
+il y a que du bon code. Il fait des
+projets open source, il est maintenur
+principal de Open Close. Mais il fait
+que ça quand il a le temps. Mais il est
+vraiment bu.
+Ouais, chaud. Maintenant, vous êtes
+connecté avec Big Terance et là il y a
+le hack. Donc là, il a approuvé. Donc
+là, Claude Code a approuvé votre bot et
+maintenant votre bot est devenu le roi
+du VPS.
+Let's go.
+Es-tu le roi du VPS ? Typing
+tin. Roi du VPS ? Pas encore. Je viens
+juste de me réveiller et je n'ai pas
+encore de nom. [rires]
+Alors, on va l'appeler
+Sam.
+Claudovie. [rires]
+Claudo.
+[&nbsp;__&nbsp;] j'adore ce nom. J'aurais dû la
+faire comme ça.
+Merde ça claque.
+Bon d'enterance fuso
+mais mais Paris quand même.
+Paris vibe sué. Je veux que tu sois
+direct honnête n'ai pas peur de me
+frustrer.
+[rires]
+Sois hard et cachit
+de Voilà. Ça c'est pas mal. Euh
+les gars, ce prom est validé par tous
+les
+On va se connecter ensemble à
+Bon pour l'instant après on se
+connectera. OK. Prends ton temps, va
+boire un thé. Open clos reçu. Je me je
+m'installe [rires]
+là. Il a besoin de s'installer. Il faut
+lui laisser un petit peu du temps. Donc
+là, l'avantage, c'est que vous avez du
+coup ici on a setup git et la première
+chose qu'on va faire c'est trouve le
+workspace.
+votre votre clo, il va avoir un
+workspace dans lequel il va pouvoir se
+s'éclater. Tu vois, c'est un peu son
+dossier, c'est là où il se sent bien et
+tout. Donc là, vous voyez qu'il trouve
+le workspace et on va lui dire euh je
+viens de setup git CLI, créer un rep
+clodo workspace sur GitHub et initialise
+ce projet pour sauvegarder ma
+configuration.
+Sauvegarder de façon récurrente ?
+Non, pas encore. On va le faire. Avec le
+temps, vous allez développer un open
+clow qui va avoir son identité, qui va
+avoir une vie, qui va avoir des
+activités. Peut-être qu'il va aller et
+il faut qu'on se souvienne de ce qu'il a
+fait. Donc là, on crée un rio pendant
+l'instant.
+[&nbsp;__&nbsp;] je commence à recevoir les
+notifes sur ma montre. Il me parle mec.
+Merde pour en fait tu
+toi tu ter Paris zéro tolérance pour les
+conneries. Ouais, c'est juste
+pas
+là. Ce que vous pouvez faire d'ailleurs,
+je suis en train de me dire, c'est
+potentiellement aller sur Cloud Code ici
+et venir lui faire un petit prom comme
+ceci, hein. C'est euh explique
+"Je suis en train de setup mon agent,
+j'ai besoin qu'il sache tout de moi.
+Fais-moi un prom que je peux lui donner
+avec ce que tu sais".
+J'ai tellement peur de ce qui va sortir,
+mec.
+Bon, au pire, je couperai. Euh et comme
+ça en fait ici euh il va il va pouvoir
+donner des petits trucs. Je m'appelle
+Terence Spli, je suis entrepreneur
+He of product. J'escalié l' de 0 à 2
+milliants.
+Je pense que ça s'appelle Fable mon ab
+d'avant. Ah donc là une fois que vous
+avez le petit promte là, vous lui
+balancez ça et vous lui dites sauvegarde
+tout ça stp le boss. Merde. Bon si vous
+envoyez plusieurs messages, vous allez
+voir Open Clow est un peu con parce
+qu'il va répondre au premier message.
+Après, il va dire "Oh mais j'ai rien à
+sauvegarder un gen." Et après il va dire
+"Oh merci pour le message, maintenant
+j'ai quelque chose à sauvegarder.
+Honnête avec toi, je n'ai pas d'outil
+pour écrire des fichiers." Quoi ?
+Pourquoi ils ont changé ? Il y a une
+mise à jour, il y avait pas ça avant.
+problème, je n'ai pas l'accès. Je n'ai
+pas l'accès. Mais quoi ? Alors,
+qu'est-ce que vous faites s'il vous dit
+des conneries comme ça ? Il faut que
+votre open soit le roi du VPS. Et il m'a
+dit "Je suis le roi du VPS".
+Non, il a dit pas encore, je viens de me
+réveiller. Oui, fix stp. Mon open clos
+doit être full perm. Donc là, l'avantage
+de Cloud Code, c'est que contrairement à
+Open Cloud, Cloud Code en bypass
+permission, il va avoir la capacité de
+tout faire. Donc lui, il va pouvoir
+débugger votre truc. Une fois que vous
+avez fait les bases avec l'autre code
+sur le VP, vous aurez plus besoin de
+vous énerver avec Open Clow ici. Donc
+là, vous voyez que euh je sais pas
+comment ça c'est un peu la magie de Lia,
+c'est que même si elle a pas été
+entraînée sur Open Clow, elle arrive de
+manière assez magique à savoir quoi
+faire.
+ici à comprendre des profils de je sais
+pas quoi. Il y a docteur qui fait des
+trucs et là je vais lui dire ta gueule
+fais le toi. Donc là il restart en fait
+open parce que quand vous modifiez la
+configuration il va se restart. Ça va
+aussi arriver en fait quand vous
+demandez parfois à Open Clow de changer
+des trucs. Il répond plus pendant 5
+minutes parce qu'il s'auto
+donc des fois je lui dis ça fait pas
+peur de te tuer ? et il me dit "Oui,
+mais écoute, je veux fonctionner."
+E la vie c'est comme ça,
+je suis obligé de me tuer. Est-ce que tu
+as un compte Open AI API ou pas ?
+Hm, je pense pas.
+Ah, c'est dommage.
+On peut en faire un de pied avant.
+Tout sauvegarder. Bootstrap, je suis né
+officiellement. Voilà, donc on vient de
+faire naître Open Clow. Il a maintenant
+son identité et il est maintenant
+capable de faire des choses. Et c'est là
+que la magie d'Open Clow arri. C'est
+vous pouvez aussi faire sur Cloud Code
+sur le VPS ici. Mais par exemple ici, on
+pourrait réfléchir à brainstorm
+pas mal de choses qui vont être
+compliquées. Mais il y a il y a quoi
+comme truc que tu voudrais setup ? Au
+moins je te montre comment setup un
+truc. En vrai, le calendrier et au moins
+la lecture des mails ou les drafts.
+OK, c'est pas facile. On va lui setup
+lecture parce que le problème c'est
+qu'il va falloir un compte pour accéder
+à tout ça, un compte Google admin. Mais
+tu dois l'avoir. Je veux setup l'accès
+complet aux emails et calendar de mon
+email. C'est quoi l'email ? C'est point.
+Attends, j'écris. Ah merde. Ah ouais. Ah
+ouais. Ouais. Ah merde, merde, merde.
+Bon, on va faire le truc hardcore. Setup
+les emails pour Open Close. C'est quand
+même quelque chose de challengeant parce
+qu'il va falloir donner pas mal d'accès.
+Ah oui.
+Euh, il va falloir faire une clé
+d'authentification.
+Donc pour l'accès, c'est simple. Ce qui
+est assez dur à faire, c'est de venir
+gérer les les webbook pour que en fait
+quand vous recevez des emails, OpenClow
+reçoit la notif. Moi en fait mon Open
+Clow reçoit tous mes emails et il peut
+faire des actions en fonction des
+emails. Donc s'il reçoit des emails
+d'une compagnie aérienne avec un vol, il
+va aller modifier le fichier de la
+compagnie aérienne euh il aller modifier
+un fichier de mémoire pour se rappeler
+de à quelle heure est mon vol. Comme ça
+la première prochaine fois que je lui
+demande, il s'en souvient.
+Mais c'est fabuleux ça.
+Flow up skill. Euh non non non. Option
+réfléchir, vous pouvez envoyer stop.
+Option 1. Alors là, il s'énerve un petit
+peu mais c'est pas grave. Donc vous
+pouvez faire le même setup qu'on fait
+ici directement avec aussi code qui va
+avoir un peu près les mêmes accès à la
+différence que quand lui il va se
+shutdown, le chat va plus continuer
+alors que Cloud code ne se shutdown
+jamais. Donc en fait si votre open clow
+crash ou a des problèmes techniques,
+qu'est-ce que vous devez faire ? Ouvrir
+un nouveau terminal, écrire SSH open cl
+comme on a setup ensemble, rentrer
+dedans, lancer cloud. Vu que maintenant
+on a setup le raccourci quand vous
+lancez clone normalement il est en
+bypass permission. Voilà donc c'est bon.
+Et euh on peut voir que ici votre open
+cloud il est smart hein. Voilà tu as
+trois choses à faire. Créer un projet
+Google Cloud. C'est pour ça que c'est
+chiant. Pourquoi tu as un truc trash ?
+Accès à Google Cloud bloqué. Ça c'est
+parce que tu as un compte de con là.
+Ah ouais. Attends je peux te mettre sur
+l'autre. Ouais.
+Ah une fois que vous êtes à Google Cloud
+activez les API. Donc là on va cliquer
+sur Gmail. dans Marketplace, on active
+et on va activer Google Calendar API.
+Même chose, on cherche Google Calendar
+API. Euh si vous savez pas quoi faire,
+vous lui envoyez des images.
+Apparemment, ça c'est fait. Activer. Et
+là, on active les API. Une fois que ça
+fait, on va devoir aller dans create
+credential. Donc encore une fois,
+généralement, vous pouvez copier les
+textes et taper ça dans la barre de
+recherche. Il y a des actions qui
+existent, sauf quand je le dis. Mais si
+vous faites API et service al peut-être
+voilà API fils de identifiant juste ici
+identifiant crédential et là vous faites
+ID de client au hs vous choisissez comme
+il a dit application de bureau vous
+l'appelez open clos appelez tout open
+comme ça vous vous souvenez que c'est
+tous les accès si d'un seul coup vous
+avez un problème vous supprimez tout ça
+et ensuite vous lui balancez les client
+vous téléchargez le gon donc là il y a
+quelqu'un ici qui va devoir refaire ça
+chez lui parce que non, je cacherai les
+clés. Je cacherai peut-être les clés.
+Cache les clés, mec.
+Voilà, vous lui balancer et vous voyez
+que c'est très simple la vie avec Open
+Club. J'en sais rien.
+Jeis plus qu'on est sur le bon compte.
+Ouais, OK, c'est bon.
+Donc, on lui balance des trucs. Là, tu
+vois qu'il y a le super base login.
+Donc, c'est ce que tu avais fait. C'est
+pour ça que tu avais déjà un compte qui
+est setup.
+Normalement, quand il va faire ça, il va
+un peu s'énerver. il va vous envoyer un
+un lien à cliquer pour lui donner les
+accès. Mais ça c'est vraiment le
+process, c'est que toi après il faut que
+tu t'amuses à bidouiller et à ajouter
+les trucs que tu veux rajouter dans ta
+vie. Donc hop, j'ai envie d'ajouter ça
+et cetera. On va regarder s'il y a
+d'autres services que tu utilises
+peut-être. Non, je suis pas des sass
+tu payes, tu payes pas beaucoup de
+services. Donc bon, anyway, ici voilà
+Google account machin chose. Vous copiez
+l'URL de Michel là, vous prenez votre
+compte. C'est celui ça que tu vas
+accéder le calendar. Exactement.
+Voilà. Et donc là, ça se termine très
+rapidement. Inside, c'est
+on peut s'autoapprouver je pense hein,
+si je me trompe pas. Après, je sais pas
+pourquoi il s'autoapprouve pas en
+sachant que c'est toi-même. C'est assez
+con. Pourquoi tu as pas le Google haut
+plateforme ? Ça c'est ton app.
+Ouais, c'est ça c'est pas mon app. Tu as
+pas publié l'application. Voilà, vous
+vous autoaprouvez si vous avez pas
+publié euh l'application, mais vu qu'on
+est en dev, on s'en fout. L'avantage
+c'est que même maintenant même si vous
+avez le token, ça vous servira à rien
+parce que vous devez être approuvé pour
+pour faire ça. Une fois que vous avez
+fait ça, vous lui balancez le code
+exactement comme il vous demande et
+généralement il vous il vous il vous dit
+quoi fairein. Donc moi, je sais déjà
+quoi faire. Donc je le fais en mode
+yolo. Mais vous vous pouvez lire les
+messages. Moi, j'ai un problème
+autistique où je lis même pas les
+messages et je colle directement les
+bouts de code. Et maintenant, il teste
+l'accès à Gmail et calendar.
+Quel boss
+calendar vide. Ajoute un nouveau event.
+Attends, je peux le faire sinon ?
+Non non non. À 11h
+pour me rappeler d'aller piss. Attends
+attends annule annule. On va voir si ça
+apparaît.
+OK OK
+demain 11h Paris ça sera la nuit.
+Ouais. Ah ouais mec attends c'est pas
+demain. Elle est pissé mais
+il l'a fait monte. Non mais
+ah oui non parce qu'il devait voir le
+dég
+un event de 4h. Donc là je lui dis de
+rallonger l'event. On a l'event ici en
+bleu. C'est mis un petit emoji le boss.
+On a l'event en bleu qui est juste ici.
+Là, je lui ai dit modifie pour le faire
+en 4h et il a modifié.
+C'est légendaire.
+Et là maintenant, on a l'épisé 4h. Donc
+ça c'est la première étape. La deuxième
+étape qui est plus challengeante, c'est
+de rajouter comment te notifier quand je
+reçois des emails. Mais là, vous allez
+voir que la difficulté augmente un petit
+peu. Va falloir vous faire kiffer là. va
+falloir se faire kiffer, ajouter des ce
+qu'on appelle un tunnel qui va permettre
+d'exposer une adresse publique de votre
+serveur pour que n'importe qui puisse y
+accéder. N'importe qui sera
+euh OK, ouais, il peut faire ça. Chrome
+open anyway. Voilà, normalement faudrait
+faire les Gmail Push recommendation. Ça
+c'est le meilleur truc. C'est compliqué
+à faire. Si vous voulez le faire,
+accrochez-vous, mettez-vous dans une
+voiture, allez conduire 20 minutes. Non,
+bon, mettez-vous devant l'ordi, mais
+préparez-vous. Maintenant, ce qu'on peut
+faire, c'est aussi euh de rajouter un
+Cron. Donc, qu'est-ce qu'on avait fait
+avant ? Tu m'as dit "Est-ce qu'il va le
+faire tout le temps ?" J'avais oublié.
+C'est quoi un con ?
+Attends,
+euh, on a tu m'avais posé une question
+en mode "Ah, mais est-ce que il pourra
+faire ça tout le temps ou pas ?"
+C'est quoi ? Le bypass permission.
+Non, il y avait un truc où je t'avais
+montré quelque chose. Bon, ce que vous
+pouvez lui faire déjà, c'est désactive
+le password sur le VPS uniquement clé cs
+autorisé. Normalement, il va être
+capable d'auto de s'autoonfigurer pour
+augmenter la sécurité. Donc ça, vous
+pouvez faire. Et ensuite ce que vous
+pouvez faire comme il dit ici euh ah
+c'est ça c'est commit le ripo. On va lui
+demander ton workspace est sur GitHub 1.
+Faites bien le 1 sinon il pourrait ne
+pas comprendre que c'est une question.
+Oui big teran/
+fichier. Voilà il push. Et maintenant je
+vais lui dire euh tuas tu t'ai vu que tu
+as tu payes super whisper. Non tu payes
+open flow.
+Tu payes Whisper Flow. Euh non mais je
+suis en version d'essai surtout gen j'ai
+plein de comptes en version d'c.
+Bon on va lui faire installer ma
+dernière app comme ça c'est ciao.
+C'est truc que tu vas montrer là.
+Ah oui oui c'est ça. Melvinx/ash
+parler c'est une app qui permet de
+parler. Non c'est pas une blague.
+Tu donnes ça à un enfant de 3 mois. Il
+te lâche des mots de ouf.
+Là vous cherchez le DMG. Alors il y a un
+gars qui s'est fait kiffer et qui a
+rajouté les versions Windows de mon app.
+Je sais pas quoi ça
+c'est en open source.
+Oui
+sim mec.
+Hop parler. Et là
+et quand vous ajoutez parler, vous
+pouvez enfin parler. Non mais c'est une
+blague. Non c'est pas une enfin oui
+c'est une blague. Ouais ok. Autorisation
+requise. C'est pas moi qui a fait j'ai
+j'ai copié un repous.
+C'est toi qui a tout fait. Ouais
+et j'ai rajouté deux trois features.
+Il m'a dit il m'a dit que c'était lui
+qui avait tout fait.
+Voilà. Hop. Là on peut installer
+Paraquet. C'est le modèle le plus rapide
+à télécharger parce qu'il est très
+léger. Mais je vous invite à aussi
+installer Whisper Flow. C'est moi qui ai
+recommandé les deux là.
+C'est vrai.
+C'est moi qui vous recommande les deux.
+C'est moi qui choisit qui est qui est
+recommandé. Mais Whisper Turbo, du coup,
+tu le télécharges en en local.
+Voilà, gratuit à vie, il y a pas de
+paiement et c'est moi qui ai choisi
+cette magnifique fonte pixeliser.
+J'espère que tu apprécies.
+Bon, [rires]
+j'aurais préféré un logo.
+Oh mais j'ai un logo, il est là.
+Le logo est cool. Mais c'est toi qui l'a
+fait ? Euh, on a travaillé ensemble avec
+un pote qui s'appelle Claude.
+Non, c'est Jemy.
+Non, c'est cool
+en vrai. Non, j'ai pris le logo initial
+qui est Andy.
+Et je lui ai dit remplace par une
+bouche.
+Ah [&nbsp;__&nbsp;] vénère
+Smart
+mec. En vrai, elle est très cool. Tu mér
+une fois que vous avez le modèle, ça
+marche. Maintenant, vous pouvez changer
+le raccourci. Moi je mets contrôle V.
+Bon, je vais mettre contrôle V, tu
+pourras changer. Donc,
+c'est le pire truc. Je pourrais plus
+jamais coller mes trucs.
+Non, c'est command pour que
+Ouais. OK. OK.
+Et là, vous lui dites "J'ai envie que
+tous les jours" E Oh, tu m'entends ou
+pas ?
+[&nbsp;__&nbsp;] il m'entend pas bien. C'est quoi
+ton micro ? Ah, il m'entend bien. OK.
+J'ai envie que tous les jours tu viennes
+backup le matin et le soir mon clodo
+workpace surre.
+Bon, ce modèle est très léger et donc il
+est pas très doué en français. Je trouve
+pas incroyable mais si vous prenez
+Whisper large, il va être très bien
+meilleur.
+On peut lancer l'installation.
+Est-ce que moi j'ai ajouté comme mode en
+fait c'est ça c'est model for long
+recording. Qu'est-ce que c'est ? C'est
+que Perek il est bon pour les short
+recording. En français, il arrive mais
+dès que vous faites des recordings de
+plus de 20 secondes, 30 secondes, une
+minute, il a trop d'échec et moi s'il
+est chou, ça me rend dingue.
+Ouais. Donc je passe en mode whisper et
+c'est pour ça que j'ai forqué le ricot,
+c'est juste pour cette fiture. Et j'ai
+rajouté aussi des post traitement ici.
+[&nbsp;__&nbsp;] je savais même pas que l'app
+était en français. Ça c'est Claude, il
+s'est auto traduit son app. Et là, vous
+pouvez faire des actions en mode email.
+Et comme ça, quand tu fais contrôle V et
+tu rajoutes
+le mode qui est qui est créé ici, ça va
+formater l'email après l'avoir écrit.
+Bref, en place, boou, il a fait ça.
+Maintenant, on peut lui dire aussi, j'ai
+envie que tous les jours le matin à 8h,
+tu ailles lire mes derniers mails, tous
+les emails que j'ai pas lu et que tu me
+fasses un review d'email importants. Et
+là, la même chose, vu qu'on lui a donné
+les accès à votre Gmail, il va pouvoir
+vous faire votre review. Et là,
+maintenant, faut se faire kiffer. Votre
+seule limite, c'est la créativité.
+Connecter des autres outils, en plus que
+Gmail. Plus cloud a d'outil, plus il va
+pouvoir faire de choses. Rajouter plus
+open cloud outil, pardon. rajouter des
+accès. Donc si vous utilisez des sasses,
+essayez de lui demander est-ce que tu
+peux accéder à ça. Par exemple, moi j'ai
+fait des truc de fou. Je lui ai dit je
+veux que tu a l'accès à mes vols.
+Et du coup, il a dit "Ah bah va créer un
+compte là-dessus. Il y a une appli, je
+peux faire 100 request par mois et grâce
+à ça, je pourrais te dire tes vols,
+s'ils sont accessibles et cetera." Et
+maintenant, à partir de maintenant,
+quand tu as des vols, j'irai checker
+toutes les tous les jours et cetera. Du
+coup, tous les jours, il check si j'ai
+des vols. Comment il sait si j'ai des
+vols grâce au mail ? Il sauvegarde les
+ID des vols et ensuite il peut venir
+checker. Voilà. En place tous les
+matins, je lis tes emails non lu et
+cetera. D'autres exemples, par exemple,
+si ici on fait la voix euh on va faire
+autoriser. Hello, qu'est-ce que tu fais
+aujourd'hui ? Il va pas marcher parce
+qu'on n pas setup la clé open ce que
+j'ai dit juste avant. Sauf s'il marche
+et là c'est incroyable. Mais peut-être
+qu'il va marcher en fait parce qu'il a
+setup le il a setup le repoflexion.
+Je pense qu'il va marcher ce compte
+parce que dans ton repois les modèles de
+speech to text.
+Non, quand j'ai activé les skills, au
+début, il y avait un des skills qui
+était un modèle je peux pas transcrire,
+voilà, pas de Whisper installé. Si tu
+veux, je peux je peux activer Whisper.
+Et donc là, vous pouvez installer avec
+une clé open là. Je sais pas si on peut
+faire ça si tuas par hasard cette clé.
+J'essaierai de cacher, je suis pas sûr.
+Donc c'est mieux que tu dises. Hop, lui
+balancer la clé.
+dans le chat, c'est pas sécurisé mais
+c'est OK. Euh faut savoir faire
+confiance à la vie. L'avantage de Opus,
+c'est que quand vous lui envoyer ça
+comme ça, il va quand même se faire
+kiffer et généralement il va quand même
+réaliser la tâche que vous venez de lui
+demander. Son
+sonnet opus, c'est des modèles très cool
+niveau permission. Codex quand je lui
+envoie des clés dans le chat, il me dit
+"Je ne peux pas copier ta clé parce que
+maintenant elle est corrompue parce
+qu'elle est dans le chat."
+Quel bâtard !
+Et il m'empêche de copier. Mec, il
+faudrait que je me note tous les trucs
+que je dois supprimé parce que c'est
+dans la vidéo. Ça me fait trop peur.
+Non, en fait, même si quelqu'un te prend
+cette clé, ça change rien parce que tu
+as pas d'argent dessus. Donc et moi si
+on me vole mes clés, moi j'ai ma carte
+de crédit sur Open donc ils peuvent se
+faire plaisir.
+Mais toi, tu as pas de carte, c'est un
+compte gratuit. Mais je flouterai, je
+j'essayerai de Ça me fait peur
+parce que là il va rien faire du coup
+s'il a pas d'argent.
+Il a 5 dollars de crédit gratuit. Bon
+alors là, je pense qu'on lui a mis en
+pleine réflexion. Alors, ce que vous
+pouvez faire aussi pendant qu'on est
+dans le dans la sauce, c'est venir
+lancer le aide-moi à lancer le getway
+pour que je puisse afficher l'UI sur mon
+ordinateur local.
+Ah, on peut lui donner accès à Chrome.
+Il a déjà accès normalement. Tu peux lui
+dire installe, il a le VPS donc il va
+pouvoir accéder à Brave ou je sais pas
+quoi. Normalement ici si vous demandez
+c'est là où j'aime bien cl code, c'est
+que au moins ici il va pouvoir vous
+aider à configurer ça. Vous allez voir.
+Donc là il dit le serveur tourne
+inaccessible deux options. Et donc là le
+mieux c'est de venir lancer exactement
+cette commande. Là vous lui dites je
+rentre dans le VPS avec SSH Open Clow.
+Donne-moi la commande à lancer stp.
+Alors là, on vient de le [&nbsp;__&nbsp;] parce
+que lui il vient de shutdown notre
+Michel.
+Oh non !
+Oui.
+Allez, allez. Non mais non, je t'ai
+demandé de faire ça comme ça.
+OK. Donc là, il me dit "Vous allez sur
+un nouveau onglet lancer cette
+commande." "Ah mais nique ta mère avec
+la clé.
+Avec la clé ? Non mais je je vais
+et voilà, ça s'est sonné.
+Ah en fait c'est bon normalement.
+Maintenant, vous pouvez aller sur local
+host 7 URL sur votre navigateur et là
+vous allez voir que ça va vous afficher
+le la connexion avec le site. Sauf que
+pour l'instant on n'est pas autorisé. Et
+donc là, je vais lui dire génère le
+token. Génère le token. Normalement, il
+va vous donner une URL avec un token
+quelque part. Ah, il était là. [&nbsp;__&nbsp;]
+le con, mais le con, mais le con. Il
+m'avait déjà donné le token. Là, vous
+mettez le token dans l'URL avec ce slash
+token. Mais une fois que vous avez ça,
+ça marche. Maintenant, vous pouvez
+discuter avec votre open depuis le chat.
+Quel plaisir ! Et ça, il y a moyen de le
+de le host sur euh sur un serveur où on
+est obligé de passer par le local host à
+chaque fois ?
+Euh je peux le host c'était sur un
+serveur avec euh quand tu fais avant.
+Ouais,
+ils font ils font avec un il faudrait
+utiliser un tunnel dans l'idéal mais euh
+c'est pas très sécurisé ce truc hein.
+C'est mieux de pas avoir accès à cette
+interface.
+Et en vrai, ça sert à quoi ça ? Ça sert
+à configurer. C'est pour ça que moi je
+préfère ne jamais le laisser ouvert
+parce que ça c'est une entrée non
+sécurisée. Tu vois qu'il y a le token
+ici mais si tu l'ouvres, ça veut dire
+que n'importe qui peut accéder à l'URL
+et qu'ensuite il lui faut juste le token
+pour pouvoir accéder à l'application.
+Mais c'est pas Telegram, c'est quand
+même un peu plus sécurisé dans un sens
+et moi j'aime pas garder ça ouvert. Donc
+je le laisse ouvert pour pouvoir
+s'amuser ici si tu veux. aller dans les
+bugs ici ou dans les configs et là tu
+vois que dans settings, il y a
+un nombre de settings. J'ai jamais
+ouvert ce fichier et je vais jamais
+et je vais jamais ouvrir ce fichier
+parce que moi je demande à Claude de
+modifier ses settings lui-même. Donc ça
+c'est un peu tout ce que vous pouvez
+faire. Euh voir s'il arrive quand même.
+OK, je Donc la clé n'a pas de crédit.
+Voici un petit peu pour ce setup open
+écran. Ça c'est ma mémoire open juste
+ici. Et on peut voir que moi je vais
+rajouter des skills. Tout ça c'est les
+skills que je lui ai fait. Il a par
+exemple accès à Cloud Flare qui va lui
+permettre de manager mes serveurs. Code
+process pour venir effectuer du code.
+Donc là typiquement en fait ce que je
+lui dis c'est euh qu'est-ce que tu dois
+faire ? Tu dois venir lancer cloud code
+avec le cloud CLI pour faire les tâches
+comme ça il les lance en parallèle et il
+peut faire plein de choses en même
+temps. Après il vient watch la feature
+et ensuite il cleanup dès que c'est
+terminé. Code, ça va être ma plateforme
+de formation. Ça lui permet de créer des
+nouvelles formations, créer des coupons,
+ref des gens, tout ce que je veux.
+Context se va lui permettre de récupérer
+de la doc. Dub, ça va lui permettre de
+créer des URL shortner, par exemple
+mlv.sh/test,
+ça redirige sur un site. D'ailleurs,
+vous pouvez aller sur mlv.sh/terance
+pour aller sur son Instagram. Et après
+là, on vient sur Telegram. C'est quoi
+ton Insta ?
+Terance P.sh/terance
+qui va sur le compte Instagram Teran P.
+Donc là, comment il va faire ça ? Il va
+utiliser ce skill du qui lui permet ici
+d'apprendre à utiliser delete link,
+delete domain delete folder. Ah non, ça
+c'est ce qu'il a pas le droit de faire.
+Action never execute action
+permission. Donc ça ça évite que d'un
+seul coup dans le doute il vous fasse
+des trucs. Bref, là il a créé
+mlv.sh/terance
+et quand on clique dessus on arrive sur
+l'instant de terence.
+Mec, c'est nimp
+euh tout simplement. Donc ici c'est des
+accès que je lui ai donné. Donc il
+utilise ce skill. Pour avoir ce skill
+ici il a un fichier que je peux pas vous
+ouvrir qui affiche toutes mes clés à
+API. Là il y a tous mes secrets.
+Ouais un petit clic dessus là et c'est
+fini.
+Exa flight data. Ici, je lui ai créé un
+script qui lui permet d'accéder à
+aviation API stack qui lui permet
+d'avoir des informations sur les avions.
+Front, c'est pour mon support. Google
+image Generation, ça lui permet de
+générer des images avec Alappi et
+Google. LinkedIn post creator, bon ça,
+j'utilise jamais. Je devrais sûrement
+supprimer. J'ai c'était un test. L'email
+pour gérer mes email marketing. Mercury
+pour accéder à ma banque. Ça je sais
+pas, c'est lui qui a dû créer. Porbon,
+ça lui permet de gérer mes domaines.
+Save it, c'est pour mon ça. Saveit. Now
+CO aussi Type Fully, c'est pour créer
+des tweets. Versel Up, c'est pour gérer
+mes déploiements de sites. YouTube
+command lui permet d'accéder à mes
+commentaires sur YouTube.
+Et donc comment je fais ces skills ? Tu
+viens ici, tu lui dis
+"C'est toi qui les fait les skills ?"
+Non, c'est lui. Je lui dis "Bah voilà,
+j'ai envie que tu puisses". Mais tu vas
+pas télécharger des skills d'internet.
+Moi, j'aime pas trop. J'aime bien créer
+par c'est pas très dur de créer vos
+skills. Les skills ont pas beaucoup de
+valeur quand on les télécharge. À part
+pour vrapper des API. pour vrapper des
+API. C'est typiquement ce que j'ai fait
+avec Type, je lui ai dit "Va chercher
+les infos sur la doc de Typuli et créer
+le skill." Comme ça, c'est lui qui le
+crée, il y a aucune chance, il y a aucun
+hack, il y a pas de dépendance, il sait
+comment le faire, il utilise votre style
+et cetera. Il y a pas il y a pas
+beaucoup de raisons de venir installer
+OK, donc tu fais tout tout avec Open
+Clow.
+Et voilà, on a terminé. Il y a encore
+beaucoup de choses à faire sur ce Open
+Clow. Mais on a fait la base. Une fois
+que vous avez open close sur votre tel,
+une fois que tu as open close sur ton
+tel.
+J'ai open clos sur mon tel.
+Ah oui oui oui oui oui oui. Et ben tu
+vas pouvoir lui dire de rajouter un
+petit peu tous les services que tu veux
+quand tu veux rajouter de nouveaux
+trucs. Moi je l'utilise aussi comme un
+chat GPT.
+Donc quand tu auras fait quand tu auras
+mis ta carte sur Open AI et que tu auras
+changé ta clé qui a été lique durant la
+vidéo, tu pourra venir faire en sorte de
+venir faire des audios. Et moi j'adore
+aussi ce que j'adore faire et je vous
+invite faire la même chose, c'est je
+sais pas, tu as un tweet, tu es sur
+Twitter, tu
+j'ai un Twitter. Ouais. Non non, enfin
+non, je dis ça euh juste en mode vous
+êtes sur en fait n'importe quel réseau a
+toujours un bouton chair.
+Tu shares shares via, tu cliques
+Telegram, tu prends ton Open Clow et tu
+lui envoies en fait le tweet, tout ce
+que tu veux et il peut le sauvegarder,
+il peut en faire quelque chose ou tu
+peux aller sur des vidéos YouTube, des
+trucs comme ça.
+Euh non, et tu peux lui apprendre à
+résumer des vidéos YouTube mais il faut
+lui un teach. Mais il y a une app
+gratuite qui permet de faire ça, faut
+générer une clé, lui donner la clé, lui
+donner le skill et cetera.
+Mais moi ce que j'aime bien, c'est que
+des fois j'ai des photos et je suis en
+mode "Ah mais c'est quoi ce gif ?" Enfin
+un gif, je sais pas si sait lire des
+gifs mais tu as une photo, tu veux lui
+partager, sauvegarde ce même mais une
+dinguerie.
+Après tu as une même database gérée par
+ton truc. Tu peux lui dire save
+ce même dans ton workspace et il va
+récupérer l'image, la copier dans dans
+le VPS. Donc maintenant, tu as l'image
+qui est sur un serveur
+euh hosting
+sur un serveur.
+Il est il est là, il est là, il est là.
+Mais voilà, au moins tu as Open Clow. Je
+vous invite vraiment open enfin je
+t'invite que je suis je suis trop un
+youtubeur, j'arrive que à vous voyer. Je
+t'invite vraiment à tester, à t'amuser.
+Voilà, quand tu as un peu de temps que
+tu t'ennuies dans dans l'aéroport
+mec, je vais m'envoyer des tunnels, ça
+va être fantastique.
+Tu discutes, tu es là et tu dis tu peux
+faire ça. L'avantage c'est qu' plus il
+dit toujours oui, même quand il est
+incapable de le faire. Donc dans le
+doute, il réussit. Dans le doute, il
+échoue.
+OK. cé vraiment un plaisir. Merci
+beaucoup à toi Merci à toi
+et on se dit à la prochaine.
+Ciao !

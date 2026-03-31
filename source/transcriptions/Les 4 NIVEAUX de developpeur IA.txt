@@ -1,0 +1,324 @@
+ 
+Il y a quatre étapes et quatre profils
+différents par rapport à l'IA et le
+développement que j'ai vu. On va parler
+du pire jusqu au J au maximum qui est
+mon étape. OK ? Pas besoin, mon ego est
+tranquille. OK, étape une basique, c'est
+l'antiia. Alors, il y en a beaucoup, il
+y en a il y en a plus que ce qu'on peut
+croire. L'antia, c'est pas qu'ilutilise
+pas l'IA parce qu'il y a aucun def qui
+n'utilise pas l'IA, mais il va sur chat
+GPT, il va sur Cloud, il a toujours son
+IDE peut-être avec Gitup Copilot, il
+fait un usage de LIA très restreint, il
+vient juste l'utiliser pour céder mais à
+aucun moment il lance un agent. Laisser
+un agent codé à sa place qui va faire
+n'importe quoi. Non. Et il y a beaucoup
+de profils comme ça. Il y a beaucoup de
+profils qui ne croient pas au fait que
+Lia peut faire un code de qualité, qui
+ne croi pas que Lia est capable de faire
+beaucoup de choses et qui pensent que
+Lia est une sorte d'outil buggé qui
+fonctionne une fois sur 10. Ça, c'est le
+niveau zéro. Et avec ce mindset, vous
+êtes mort. Vous êtes mort. Pas
+maintenant, mais bientôt. Bientôt vous
+serez mort. OK, ça c'est l'anti IA. Donc
+il utilise quelques outils, il pose des
+questions, il brainstorm avec Lia, mais
+il n'utilise pas Lia pour changer sa vie
+et changer ses habitudes. Ça c'est le
+niveau que on a tous été à l'époque. Le
+deuxième niveau, c'est Lia Assisted.
+Donc lui il utilise Lia mais il la
+monitore comme si c'était un enfant de 4
+ans. Il review tout, il précise tout. Il
+est à l'affu de tout. Il est comme ça à
+regarder chaque chose, pourquoi il a
+modifié cette ligne et cetera. Les
+prompts du IA assisted ressemble à
+quelque chose de ce style. Il ressemble
+à modifie euh en prenant compte de XXY y
+ZZ VV modifie
+PP avec ZZ et cetera et cetera. On va
+monitorer Lia avec des promptes très
+précis. C'est aussi pour moi ce niveau
+que tu devrais avoir si tu es junior
+développeur. En fait, si tu veux
+apprendre à coder, c'est ce niveau qui
+t'apprend le plus sur le code, sur des
+choses que tu ne connaîtrais pas parce
+que ça te permet d'être un développeur
+et d'exprimer ton besoin. Et donc ces
+développeurs, ils utilisent des A agents
+mais à aucun moment ils vont préciser un
+prompte du style
+rajoute un bouton
+sur la page Signup pour cancel son
+compte. Ça c'est trop vague. C'est
+beaucoup trop vague pour un I assisted.
+Lui, il a besoin de quelque chose de
+précis. Quelle est la page de signup ?
+Comment il doit faire le bouton ? En
+fait, cette demande c'est le truc qu'il
+doit faire et lui il va réfléchir cette
+tâche à faire. Un quel fichier de
+contexte ? Il va lister tous les
+fichiers de contexte pour lui ajouter.
+De il va se demander quelle euh chose je
+veux faire, donc quel fichier il va
+devoir modifier. Et tr comment le faire.
+Donc les instructions précises avec les
+choses qu'il va falloir faire. Ça c'est
+un I assisted, c'est-à-dire qui vient
+faire les choses de manière précise.
+Comme je t'ai dit, un junior développeur
+devrait vraiment faire ça parce que un
+junior développeur doit review le code
+et s'assurer qu'il comprend le code de
+Lia pour être un bon développeur. Il
+doit être précis dans son prompt pour
+montrer que c'est un développeur et
+qu'il peut transformer un besoin en une
+demande précise et cetera. Beaucoup de
+personnes sont dans ce niveau-là et ce
+niveau-là, c'est aussi les gens qui font
+du low level, donc des choses
+compliquées d'optimisation. À ce
+moment-là, on va utiliser l'IA pour
+modifier des choses de manière très
+précise et faire ceci comme ça. Le
+troisème niveau, c'est le builder. C'est
+quelqu'un qui crée avec Lia en mode
+agent. Qu'est-ce qu'il fait ? Il review
+en gros.
+C'est-à-dire que il va avoir des PR et
+il va reviewver la logique, le la vibe,
+mais il va pas reviewver indépendamment
+chaque fichier, chaque ligne à se dire
+qu'est-ce qui peut être faire. Ensuite,
+il exprime un besoin. Donc lui,
+typiquement ton prompt te sera beaucoup
+plus proche de rajoute un bouton sur la
+landing page pour cancel ton compte.
+Donc ici, on va review le besoin mais
+ensuite généralement il va voilà p la
+fiture faire une fiture à la fois ou
+utiliser des work et donc avoir un rôle
+de développeur dans le sens où il va
+faire ses fatures, il va monitore ses
+agents, il va suivre ce que fait l'agent
+sans avoir besoin de faire ça, mais il
+va pouvoir le diriger. Donc s'il a
+commence à faire n'importe quoi, il va
+dire non faut faire ça et cetera. aussi
+à ce niveau-là, le high builder, il a
+des strong workflow, il a des workflow
+poussés, des workflow poussé,
+c'est-à-dire qu'il va avoir editing
+workflow, il va avoir la logique de mise
+à jour, la logique de comment faire c,
+comment faire ça, avoir des workflow qui
+vont permettre à Li de réaliser des
+bonnes choses. C'est-à-dire avoir une
+phase d'exploration avec des subagent
+pour chaque fature, avoir une phase de
+planification et il va valider le plan
+parce que un builder même si il exprime
+pas son besoin, il va utiliser la
+planification aussi. Ça c'est très
+important. Ensuite, il va exécuter puis
+il va faire la pool request et il va
+regarder tout ça. Ça, c'est le niveau
+builder, c'est le niveau, c'est plutôt
+devisted
+et c'est un développer. OK, donc ça
+c'est le niveau AI développer. On va
+toujours
+review le code mais plus en général. On
+va pas moner l et préciser le besoin. Et
+on va essayer d'exécuter plusieurs
+agents dans des work indépendants
+séparés, testés, vérifier et cetera. Ce
+qui est le niveau 3 de l'AI développer.
+Et le niveau 4 qui est mon niveau, c'est
+le dev manager de AI. Attends, attends,
+attends, je t'arrête 2 secondes pour te
+montrer cette masterclass. Tu peux
+accéder à cette formation pour setup,
+cloud code, ma configuration sur Windows
+MacOS et apprendre plusieurs choses sur
+l'IA qui vont être essentielles comme le
+fonctionnement des agents et j'en passe.
+Pour ça, il te suffit d'aller sur
+mlv.sh/fa
+comme ceci sur n'importe quel navigateur
+et tu vas directement arriver sur cette
+page. Tu vas pouvoir t'inscrire et
+accéder directement à tout ça 100 %
+gratuitement. N'attends pas, inscris-toi
+tout de suite. Et maintenant, on peut
+reprendre la vidéo. Qu'est-ce que c'est
+le dev manager de ? C'est un peu près
+ça. Sur ce projet ici, IPCLI, j'ai lancé
+quatre agents en même temps sur le même
+code. OK ? Donc c'est quelqu'un qui
+multitasque constamment. Multitasking
+constant. Plusieurs agents en constance.
+Plusieurs agents en constance. Donc là,
+avant la vidéo, j'avais quatre agents
+qui travaillaient et maintenant ils ont
+arrêté. Ensuite, c'est utilisation de
+token maxing. Tu peux voir que moi ce
+genre de de choses, je vais je vais
+vérifier euh des des des skill creator
+de de la deep recherche, il va toujours
+beaucoup travailler. Donc juste ici, on
+peut voir que il y a le skill workflow
+que j'ai précisé juste ici pour
+m'assurer que a fait la même chose.
+Ensuite, je vais en lancer beaucoup et
+comme tu peux voir, je suis très vague.
+Can you create metadata and generate
+beautiful OG image with pixel font for
+every page all metadata use Apex
+workflow. Donc ça c'est en mode yolo, il
+y a pas de précision. Ensuite, il
+réalise sa tâche et je ne review pas le
+code. Non, moi je keep, je trust, j'ai
+un haut niveau de confiance dans mon
+workflow. La même chose ici. Boouom,
+keep. Je regarde parfois le code qui est
+juste ici, mais sinon je pche surtout
+beaucoup de fature comme ceci. On peut
+voir qu'ici il a fait son truc. Ensuite,
+je lui dis commit and push all. Et donc
+qu'est-ce que c'est ? Multitasking
+constant, plusieurs agents, utilisation
+de token maxing, c'est-à-dire de process
+qui vont consommer beaucoup de tokens.
+Ici du test in prod ou en dev. Moi
+souvent je crée une branche, je laisse
+lia publier sur la branche donc dans un
+environnement de preview versel et je
+review le code dans la preview sans même
+lancer le serveur en local pour te dire
+le niveau. Donc évidemment ça dépend la
+dangerosité de l'app. Par exemple, Chao
+n'a pas d'utilisateur. Je fais ça avec
+l'email qui a avec Chao par exemple, vu
+que c'est une application sans user à
+part moi et les gens qui sont sur mes
+sites, je pche tout en prod et je m'en
+fous. Avec l'umail qui est une
+application qui a des users, je passe un
+process de review plus strict. OK. Dans
+l'idée euh dans l'idée dans l'idée où je
+vais plus tester en local. Pour des
+applications comme Chao, je pche en prod
+et je ne runne jamais l'app.
+Donc c'est un niveau abusé.
+de évidemment j'ai tout perdu chac un
+niveau abusé test in très peu de review
+de code. On va principalement review la
+fature finale et ça va être des workflow
+ultra poussé. Donc les gens qui me
+suivent et qui ont suivi Apex, vous
+savez la puissance du workflow. Avec
+l'autoeview, avec l'autoplan, avec la
+réflexion maxing, avec le token maxing
+qu'on a, il one shot la majorité des
+features. APICLI, c'est une application
+pas si simple qui a été 100 % faite.
+Tout a été 100 % fait. le machin des
+sponsors ici qui redirige sur Strap pour
+payer un abonnement, pour gérer les
+abonnements, pour annuler son
+abonnement, les Webbooks. J'ai même
+donné l'accès à Versel, à Stud, c'est
+lui qui a euh généré et setup ses
+webbook qui a ajouté ses variables
+d'environnement sur Versel. Il a tout
+fait. Donc en fait le dev manager de
+Lia, il a un dernier point, c'est les
+accès maxing.
+Moi Cloud a accès à full access. à
+Versel et à tous mes setup Versel. Il a
+full access à Cloudfare, il peut setup
+mes domaine, il peut changer mes DNS, il
+a accès à ma gestion globale de domaine.
+Il a full access à Ste. Je lui donne les
+clés, je lui donne tout, je lui donne le
+point. Je veux une autonomie maximale de
+l'agent. Il a full access à tout ce que
+tu peux imaginer dans ta vie, à mes
+mails, à tout ce que tu veux. Mon cloud
+a un accès complet, ce qui lui permet
+une autonomie maximum et ce qui me
+permet de le lancer comme ceci avec ça.
+Si tu te demandes pourquoi je suis sur
+Cursor, c'est parce que j'ai plus de
+j'ai plus de crédit comme ceci sur mon
+cloud code. Donc j'utilise Cursor tout
+simplement. Euh donc parce que j'ai pas
+mal de crédits sur Cursor. Bref, le Dev
+maxmaxing, toujours plusieurs agents,
+toujours multitasking, une utilisation
+intensive et inarrêtée des agents. Tous
+mes projets ont plusieurs agents. Là, tu
+peux voir en un jour euh preview se day,
+en un jour, j'ai lancé genre 20 agents,
+il travaillait en constante euh euh
+machin. Là, tu vois que lui, il a fait
+cette fature là. Généralement, je vois
+la carte qui a été fait juste ici. Je
+lis pas le code, hein. Ce code là, je le
+lis pas. J'ajoute ad, commit, push en
+production. pour ce genre de feature,
+pour des trucs qui cassent pas la main
+app, je commite et pche tout ce qui
+existe et je ne réfléchis pas une seule
+seconde. Ça c'est le niveau maximal,
+c'est le dev manager de l'IA parce que
+souvent je code sur plusieurs projets en
+même temps. Donc j'ai généralement comme
+j'ai présenté dans une vidéo qui est
+fermée juste ici. Mais je vais avoir un
+projet avec par exemple Save it, un
+projet avec l'email et je vais lancer
+plusieurs agents par rapport aux idées
+que j'ai sur chacun des projets en même
+temps. Et donc je peux avoir jusqu'à 3 x
+Ça fait 4 + 4 8 12 agents en même temps.
+Et ça c'est le dev manager de Lia. C'est
+le niveau maximal. C'est le niveau
+maximal de confiance, d'autonomie et
+c'est là où tu as l'effet de levier le
+plus élevé avec les agents et où tu es
+capable de travailler littéralement sur
+plusieurs projets en même temps et faire
+énormément de choses avec Lia. Donc
+voici un petit peu les quatre niveaux.
+Je dis pas que le niveau dev manager de
+Lia est utile pour tout le monde. Il est
+utile pour des profils comme moi qui ont
+beaucoup d'applications et qui veulent
+réaliser plus rapidement. Il est
+déconseillé pour des profils de
+développeurs en entreprise qui ont des
+impératifs bien différents des miens et
+qui ont un level de qualité, un level de
+user, un level de danger beaucoup plus
+élevé. À ce moment-là, être euh au
+niveau 4 dev manager de Lia a un peu
+moins de sens et être euh au niveau I
+dev, I augmented dev ou I agent dev,
+maybe, on peut l'appeler comme ça est
+beaucoup plus intéressant. Mais j'aimais
+bien cette idée de vidéo, donc je l'ai
+faite. Dites-moi ce que vous en pensez.
+À bientôt. Ciao ciao.

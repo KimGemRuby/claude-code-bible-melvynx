@@ -1,0 +1,501 @@
+ 
+Claude essaie de remplacer Open Clow.
+Est-ce que ça a un sens ? Est-ce que
+c'est vrai ? Et qu'est-ce que Claude est
+en train de faire ? Est-ce que tu as
+vraiment compris ce qu'était Open Clow ?
+C'est ce qu'on va voir dans cette vidéo.
+Voici la dernière nouveauté de Clouds.
+You can know cloud to use your computer
+pour performer des tasques. Il peut
+ouvrir tes applications, naviguer dans
+ton browser, file, spreadsheck,
+tout ce que tu peux faire dans ton desk.
+Qu'est-ce que ça veut dire ? Qu'est-ce
+que ça veut dire ? Juste ici, on a
+dispatch from anywhere. Donc on a notre
+ordinateur qui est allumé et on peut
+effectuer des actions depuis notre
+téléphone sur notre ordinateur. Donc là,
+on a ici pair with the cloud mobile app.
+Je prends mon iPhone, je viens scanner
+le QR code comme ceci en réalisant mon
+code et je viens du coup arriver sur
+cloud.com. On va voir du coup. Moi je
+pense que ça marche directement. Je
+verrai pas pourquoi. Ah ouais, faut
+peut-être mettre à jour. Et là aussi, on
+a une update. Moi, je vais relancer. On
+se retrouve tout de suite. OK. OK. Donc
+là, on est dans cowork et là j'ai
+dispatch qui est affiché sur mon iPhone
+comme ceci. Alors, je suis désolé, la
+caméra elle bug. Cette ortie bug. Je
+[grognement] vais devoir acheter un M5
+hein. Je vais devoir acheter un M5, déjà
+que ça c'est le M4 Max. Anyway, et donc
+là, depuis mon téléphone, si j'ai mon
+ordi allumé, je peux lui dire "Trouve,
+trouve et affiche moi les dernières
+miniatures
+que j'ai download. Download, c'est un
+dossier. Donc là, j'envoie le message et
+donc normalement ce qui va se passer
+après avoir envoyé ce message, c'est que
+j'ai Cloud Cowork qui fonctionne mais
+évidemment il fonctionne pas sur
+d'ailleurs j'ai clean download qui
+s'effectue tout le temps. [&nbsp;__&nbsp;] je je
+j'ai merdé. J'ai fait ça pour une vidéo
+et évidemment j'ai du coup voilà mes
+downloads qui sont supprimés. Je savais
+pas que ça je savais pas que ça
+arrivait. Anyway, je lui ai envoyé ici,
+très intéressant. Donc moi, je lui ai
+envoyé ici le message. Mon message que
+je lui écrit, c'est "Trouve et
+affiche-moi les dernières miniatures que
+j'ai download." C'est un dossier. Je
+vais afficher iPhone Mirroring ici si ça
+fonctionne. Donc évidemment, on peut pas
+parce que side car de mes deux. Anyway,
+moi je lui ai dit "Trouve un dossier et
+cetera." Et on peut voir que le prompt a
+été modifié, a été postprocessé.
+L'utilisateur cherche ses dernières
+miniatures. C'est un dossier quelque
+part, probablement dans download.
+Request look for folié
+sur thumbnail miniature. Liste ce que tu
+trouves et affiche-les en utilisant
+pressent file. Sois intelligent, cherche
+thumbnail, miniature or similar. Donc
+très intéressant. Il vient vraiment
+euh pas se processer ça. Et là donc moi
+sur mon iPhone, il me dit "Est-ce que tu
+l'autorises ?" Donc cette histoire de
+permission qui fait chier le monde
+entier. Ils ont décidé de ne pas arrêter
+cette histoire de permission qui est
+pour moi insupportable et pour juste
+cette raison, je trouve que c'est
+mauvais. OK hein. Donc maintenant
+laisse-moi t'afficher tes miniatures
+sortent par date et donc ici tu peux
+voir qu'il est capable de faire
+presenting file qu'on voit juste ici.
+Donc sur mon téléphone je vois rien
+actuellement. Là il m'affiche tout ceci.
+Ce qui est intéressant, c'est que
+affiche la moi. Alors, ce qui est
+intéressant, c'est qu'ici, il m'a
+répondu mais sur mon iPhone. Voilà, je
+viens d'avoir le message sur mon iPhone
+et là, je fais affiche la moi. Je sais
+que moi ne prend pas de S, qu'on soit
+clair. Et là, du coup, j'ai fait une
+erreur. J'ai répondu sur l'iPhone euh au
+lieu de répondre sur la Et donc là,
+c'est pas super synchronisé parce que du
+coup sur l'iPhone, je vois pas mon
+message que je viens d'envoyer. Euh, et
+donc là, il me dit voilà, il me les
+affiche pas.
+Anyway, le concept est simple. Tu peux
+venir copier ici et faire des actions
+depuis ton téléphone sur ton ordinateur,
+un peu comme Cloud Code. Maintenant, les
+gens de ce tweet, on on peut on peut le
+voir juste ici. 74 millions de vues et
+là, on peut voir des gens qui ont
+répondu un Tropic killed open clos. Et
+là, on a 1,2 million de vues là-dessus.
+Et pour moi, c'est important ici que tu
+comprennes à quel point ce qui est dit
+juste ici n'a aucun sens. Et quelle est
+la différence entre Open Clow ? Et non
+pas que je veux euh évidemment oui, je
+veux te vendre des trucs sur Open Clo,
+il y a pas de souci hein. Moi de toute
+façon, je veux te vendre tout ce que je
+peux te vendre et si tu es pas content,
+tu peux te désabonner et aller voir
+d'autres vidéos. Je m'en fous. Ici, open
+clos. Beaucoup de gens ne semblent pas
+du tout avoir compris ce que c'était.
+Non, premier degré 1er degré la majorité
+des gens n'ont même pas compris ce que
+ça veut dire. Donc ici, ce close code
+dispatch. Faut savoir que déjà ce qui
+est important c'est ici le fait que lui
+il run sur ta machine. Run open close
+sur ta machine c'est possible mais c'est
+une mauvaise idée ça run sur le cloud
+que ce soit bah sur un MacBook. Ça on
+l'a vu sur un Mac Mini. Évidemment, ça
+dispatch peut le faire ou sur ce qu'on
+pourrait dire un VPS. Évidemment, Cloud
+pourrait aussi le faire mais ce qui est
+intéressant et qu'on a juste ici dans
+Open Clow, c'est que Open Clow est le
+roi. Et donc ici, ça run sur ta machine.
+Alors, ça run sur ta machine dans une VM
+sécurisé. Ça te demande des permissions
+et ça ne peut pas installer des trucs
+yolo. Open ça installe des trucs yolo.
+Tu peux le contrôler depuis Telegram et
+cetera. Tu peux faire des chrom jobs, tu
+peux lancer ce que tu veux et cetera.
+Par exemple, c'estqfd ce que Open Clow
+peut faire et que le Cloud Cork galérait
+à faire. Un jour, je lui envoie euh
+qu'est-ce que je lui dis ? Je lui envoie
+un tweet. Il me dit "J'arrive pas à lire
+le tweet, j'ai pas accès au tweet.
+Twitter me refuse. Je dis je m'en fous
+que Twitter te refuse. Trouve une
+solution. Il prend une minute, 2
+minutes, 3 minutes. 3 minutes plus tard,
+il vient, il me dit "Oh Melvin, c'est
+bon euh j'ai réussi à utiliser X Y Tool
+et je viens de d'afficher le tweet. Donc
+il y a pas de souci, j'ai tout
+récupéré." Je lui dis "C'est parfait.
+Maintenant, tu crées un skill avec la
+template X Y Z pour pouvoir ne jamais
+plus me dire que tu peux pas faire ça."
+Il crée Get Tweet Skill. Get tweet skill
+qui explique exactement comment
+récupérer un tweet. Ensuite, je lui dis
+"Moi, j'ai envie que tu télécharges et
+oh ! E oh ! Non, non, non, pose-toi,
+pose-toi, prépare-toi psychologiquement.
+Al gris, j'ai envie que tu télécharges
+la vidéo, que tu la transcriptes et que
+tu me fasses un résumé." Et là, Open
+Clow, il me dit "Mais je peux pas faire
+ça." Non, il dit pas ça, c'est une
+blague. Open Clow, télécharge la vidéo,
+récupère la vidéo, transforme la vidéo
+en MP3 et le fais. Mais si tu me crois
+pas, je te comprends parce que quand il
+m'a fait ça, j'ai compris la puissance
+et et je pense que je viens d'avoir
+l'idée de l'exemple à l'instant
+toi-même, tu sais, on oublie rapidement
+des trucs dans nos vies. Attends, je
+t'arrête 5 secondes. Si tu as envie
+d'avoir Open Clow, tu as une formation
+gratuite avec un script magique qui va
+installer Open Clow sur un VPS en
+quelques minutes seulement. Pour y
+accéder, tu vas sur mlv.sh/fo
+pour formation OpenClow. Et en plus de
+ça, tu vas avoir accès à cette
+formation. qui t'explique ce qu'on va
+faire, dans lequel on va t'expliquer
+comment setup un VPS avec Zner qui est
+le service le moins cher, le plus
+optimisé sans avoir besoin d'être
+dépendant d'un autre service provider.
+Et ensuite, on va voir le setup script
+qui te permet de setup tout ça en une
+seule ligne de commande. Donc si tu n'es
+pas déjà inscrit, va sur le lien qui est
+juste en dessous de cette vidéo pour
+t'inscrire en moins de 3 secondes et
+accéder à cette formation gratuite
+limitée. Anyway, il y a cette vidéo
+Orient transforme longevity bullshit. Je
+vais sur je vais sur général ici où j'ai
+un peu de bullshit. Je vais lui dire
+"Télécharge la vidéo de ce tweet et
+explique-moi ce qu'il raconte dedans et
+ce qu'il y a dans la vidéo." Je lui
+envoie ça un tweet. Je vais envoyer la
+même chose à cowork qu'on puisse un peu
+voir euh les différentes. Let me d'abord
+regarder ce tweet. Tape contexte. Donc
+là déjà, il y a une permission. Bon
+allez, on va lui dire allo all browser
+action. Comme ça ici il récupère le
+tweet. Et là, c'est intéressant parce
+que il vient contrôler mon navigateur.
+Donc ici, il vient contrôler mon
+navigateur avec mon compte ici pour
+venir récupérer le tweet. OK, je vois le
+tweet. Laisse-moi lancer la vidéo. Là,
+il lance la vidéo. Computer vidéo
+download. Et là, on a open clock côté.
+La vidéo est téléchargée. Laisse-moi
+extract le frame et transcript l'audio.
+En plus, il me fait chier. Il fait que
+de m'afficher ça. Je vois le tweet
+laisse-moi lancer la vidéo. Je
+réfléchis. Moi, je veux qu'il m'explique
+ce qu'il y a dans la vidéo, ce qui se
+passe dans la vidéo. Et donc là, on peut
+voir que dans computer, il fait des
+screenshots. Il fait des screenshots
+toutes les 8 secondes. Donc autant te
+dire que je pense que la description va
+être assez intense. Il refait un
+screenshot. Donc, il a que fait deux
+screenshots.
+Euh, j'ai j'ai vu une une woman. La
+vidéo semb me terminer. Laisse-moi
+essayer de la télécharger et revoir plus
+en détail. Check for video download
+tool. Installe YouTube DLP alors que
+c'est un tweet. Mais là, c'est
+intéressant parce que il arrive quand
+même à installer des outils dans sa VM.
+Et donc là, on a Open Cla a déjà
+terminé. Lui, il a fail. Tweet de Harry
+Gesner, fondateur d'Orient Slip. Forbe.
+Ce qu'il dit dans la vidéo, Harry
+annonce le lancement d'Orient Slip. Le
+somel, le machin, le produit.
+Visuellement, c'est filmé dans un salon
+cosi, cheminée, déco, interview face
+caméra avec sousit blanc. Un plan macro
+montre la texture du tiss et un plan
+last montre et couple qui dort
+paisément. Slogan sleep master notre
+hard. Est-ce que tu vois la dinguerie ?
+explique toutes les actions que tu as dû
+faire pour atteindre ce résultat. Non,
+parce que c'est une dinguerie et lui il
+me fait chier à m'afficher la vidéo 100
+fois. Le tracking réseau vient de
+démarrer et donc là il vient carrément
+lire la network request pour essayer de
+récupérer le stream. Euh voilà. Sleep
+score deep sleep 4h5. Laisse-moi
+continuer de regarder. Ça n'a rien à
+voir en fait. Qu'est-ce que je veux
+montrer ici ? Voici la P class complet
+extraction des infos via FX Twitter.
+J'ai pris l'URL FX Twitter et fait un
+webfetch. Je vais je vais l'arrêter
+parce qu'il me rend fou et fait un
+webfetch sur machin extraction des
+frères FFM page vidéo VPS extraire une
+image toutes les 5 secondes résulte 12
+frame. JFC couvrant les 62 secondes de
+vidéo. Extraction audio FFM pack pour
+récupérer. Transcription Open AI Whisper
+APIA. J'ai envoyé le fichier à Open AI
+via un skill intégré. Retour texte
+complet. Analyse visuelle des frames.
+Envoyer les six frames clés sur de au
+modèle de vision. Il m'a décrit chaque
+frame. Synthèse : combiner la
+transcription, la description visuelle,
+les métadonnées et cetera. Appwei
+download vidéo, split audio,
+transcription whisper vision et cetera.
+Pourquoi est-ce qu'il est capable de
+faire ça mon ami ? Pourquoi est-ce que
+cet outil paraît magique ? Hormi que mon
+ordi fre quand j'utilise ça, c'est que
+on donne Open Clow, un VPS qui me coûte
+upgrade parce que je lui demande de
+faire tellement de choses que vu que
+maintenant tu vois que j'ai plein de
+threads, il lance plein d'agents et ça
+faisait bugger le VPS et ça faisait
+crash le VPS et ça me saoulait de fou.
+Donc j'ai upgrade la config furieux. Et
+donc on se retrouve avec un VPS à 20
+dollars par mois qui a accès à une
+machine monstrueuse.
+Il a accès à une machine monstrueuse. On
+va lui demander c'est quoi ta config ?
+Elle est bonne ou pas ? Donc il a 8 VCP
+il a 8 VCPU AMD. Il a une RAM de 16 Go
+il a un dis de 300 Go by On a 62 Go qui
+sont utilisés. OS Ubuntu Uptime 7 jours.
+C'est solide de ce qu'on fait. 8 core 16
+Go. C'est largement assez pour Open
+Clow. L'écron Job FFMP Whisper Call. Les
+script d' rich, le disque est à 22 %
+donc on a de la marge Load average 0.17,
+la machine s'ennuie 85 % du temps. Euh
+donc si tu lances plusieurs claes en
+parallèle, ça bouffe de la rame. Merci.
+Mais pour l'usage actuel, c'est
+confortable. Ça c'est moi qui ai pris un
+agent et qui lui ai donné un ordi. Je
+lui donne un ordi et je lui dis
+maintenant c'est ton ordi et tu fais ce
+que tu veux avec. Pas de problème de
+permission, pas de problème de il a
+accès, il a pas accès, il peut faire, il
+peut pas faire, il s'ennuie et cetera.
+Il a full access, il fait ce qu'il veut,
+ce qui lui permet ici de trouver des
+solutions. Cloud dispatch, c'est lent,
+c'est limité, c'est pas powerful du
+tout, ça n'a pas le même objectif. Déjà
+dispatch ici a objectif d'être sur ton
+ordi. Steve Clo, Open Clow a objectif
+d'être sur un ordi distant parce que
+quand mon ordi dans mon sac sans wifi,
+je veux que mon Open Clow continue à
+répondre à mes questions de con. OK,
+très important.
+Euh ensuite, la différence qu'on a juste
+ici, c'est les automatisations simples
+et la dextérité, vu qu'on lui donne
+toutes les permissions et qu'on lui
+donne tous les outils et cetera, la
+capacité de l'agent de se créer une vie.
+Mon Steve Clant, il est vivant comme un
+humain tous les jours, il vient
+développer sa mémoire. J'ai un ripo qui
+est maintenant sûrement le repo de ma
+vie et ce n'est pas une blague. Euh je
+vais t'afficher ça juste ici. J'ai un
+ripo juste ici avec open claw config
+juste ici avec tous les fichiers que
+j'ai. Donc on peut voir que des fois ici
+il y a des images de tweet que j'ai
+téléchargé. Là on peut voir qu'il y a
+pas mal d'images. Il faudrait que je lui
+disein je vais lui dire tout de suite.
+Donc là par exemple ça c'est ce que je
+fais vraiment tous les jours hein. Ici
+je l'ai prompté et je lui ai dit voilà
+il y a beaucoup d'images dans le dossier
+root du workspace. créer un dossier euh
+document, tu vas trier les images file
+PDF HTML séparé du SC sauvegarde
+toujours. Utilise des dossiers dans les
+futurs pour avoir un workspace clean.
+Donc là, il va mettre à jour sa mémorie.
+Anyway, hop, fichier subfast, marketing
+comme email, skill, skill archive,
+script, project, output, memory, même,
+email agent, document, canva et ici
+différents dossiers. Tout ça c'est ce
+qu'il est capable de faire et ce
+workspace et commit tous les jours avec
+des mises à jour sur events, email
+agents, workspace, travel, memory and
+log et cetera et il évolue parce que
+chaque fois que je lui demande ce genre
+de truc, il vient évoluer. Donc là, il
+vient de faire le commit il y a une
+minute. Cor organize workspace route
+media doc draft document. Juste ici, on
+peut voir qu'il a euh synthétisé tous
+les documents ici qu'il avait dans
+média, qu'il a déplacé tout ça dans euh
+donc on peut voir qu'il a modifié
+beaucoup de choses. Euh l'arch commit,
+voilà, donc ça c'est des grands
+fichiers, il a tout mis dans le document
+et il a supprimé tous les fichiers qui
+étaient à la racine. Est-ce que on peut
+le voir ? Je crois que du coup il les a
+déplacé. C'est pour ça qu'on voit ici
+euh les fichiers qui ont été déplacés.
+Et ici il a rajouté dans agent.mmd, MD
+juste ici image all image PDF machin
+doit aller dans document never drop file
+in the workspace root keep it clean il
+vient d'apprendre un nouveau truc tu
+veux lui apprendre dans tes réponses
+n'utilise jamais de double dash il s'en
+souvient il s'en rappelle et cetera il
+devient un agent qui vit c'est
+fantastique c'est incroyable j'utilise
+ce open clow tous les jours avec
+énormément de tâches différentes. Donc
+je pense pas que les gens ont compris à
+quoi ça servait. Et ce dispatch n'a rien
+à voir avec Open Clow. Cependant, c'est
+très intéressant et c'est super. Moi
+cowork pour moi c'est un outil de
+Normies, c'est un outil fait pour des
+non power user. Je suis un power user.
+J' un ego surdimensionné. C'est OK.
+C'est OK. Des fois il faut l'accepter.
+Il faut l'accepter. OK. Euh évidemment,
+c'est une blague. On s'amuse. Mais non,
+réalité, voilà. Ego, important de savoir
+ce que tu veux dans la vie. Et moi ici,
+il y a aucun souci à assumer le fait que
+j'aime bien être un power user. Et si
+toi aussi tu es un power user, tu sais
+quoi faire. Deuxième news pendant qu'on
+y est, pendant qu'on avant de s'ennuyer
+parce que est quand même
+quand même mon ami. Donc là, on avait le
+petit poste Activity Claude AI juste
+ici. On a aussi eu le nouveau auto mode.
+Donc c'est-à-dire que ils ont créé un
+auto mode. Claude va pouvoir faire des
+changements sans demander. Mais avant de
+chaque tool, avant chaque tool, un
+classifier review si c'est une action
+destructive. Les actions euh safe vont
+être passées, les risqués et ça va
+permettre de faire différents approche.
+C'est disponible maintenant en research
+preview. Euh pourquoi est-ce qu'ils font
+ça ? C'est ça c'est fun fact
+intéressant. Je discutais avec un gars
+euh et je disais pourquoi tous les
+modèles Gemini sont toujours en
+research, sont toujours par release,
+sont toujours en process et cetera.
+C'est QFD, c'est pour dire vu que c'est
+pas stable. La même chose avec le
+dispatch, hein. Euh, même cork ici, je
+pense que voilà. Cork is in research
+preview, vu que c'est pas stable. OK.
+Euh, on dit que c'est en research
+preview, comme ça si tu fais de la
+merde, on te dit "Ah non non non non non
+! E oh, notre truc c'était en research
+preview, hein. Toi, tu as décidé de
+faire de la merde. Écoute, c'est ton
+problème. Nous, nous on a dit que
+c'était en research preview. Toi, tu
+l'as quand même utilisé, donc c'est de
+ta faute.
+Voici un petit peu le concept de
+research prévu. Très cool ce autome.
+Personnellement, j'ai envie de faire
+fuck comme ceci à l'automode et
+j'utilise bypass permission parce que
+ici, on veut des agents autonomes.
+Exactement comme mon Open Clow qui est
+full autonome. D'ailleurs, si vous
+voulez avoir Open Clow Setup, j'ai fait
+une mini mini mini mini mini formation
+sur mlv.sh/formationopenclow
+FO. mlv.sh/fo
+setup ton bon telegram en 10 minutes.
+Pas besoin de payer d'abonnements, on
+utilise eder. C'est gratuit, c'est
+puissant, c'est parfait pour ton cas, ça
+va être fantastique, tu vas adorer et
+j'en suis convaincu. Voilà, entre nous,
+c'est comme ça que ça va se passer.
+Donc, tu peux aller en premier lien sous
+cette description pour t'inscrire. Si tu
+aimes ce genre de format, euh hésite pas
+à me le dire dans les commentaires. Je
+dis, tous vos commentaires ont fait
+beaucoup de vues en ce moment. C'est
+cette chaîne est en train d'exploser et
+donc quand je serai une quand j'aurai le
+bouton YouTube, je mettrai vos
+commentaires dessus. Donc hésitez pas à
+mettre un commentaire. Merci à tous
+d'avoir suivi cette vidéo. Dites-moi ce
+que vous en pensez. Exprimez-moi votre
+opinion. J'accepte tout. Je suis open.

@@ -1,0 +1,446 @@
+ 
+OK, il faut que je te parle très
+sérieusement de la nouvelle manière
+d'utiliser Cloud Code que je te
+recommande de faire maintenant. C'est un
+outil surpuissant, c'est un outil
+addictif, c'est un outil que je n'arrive
+plus à me séparer et c'est littéralement
+l'application que j'ai le plus utilisé
+la semaine dernière. Cette application
+c'est une nouvelle application et dans
+cette vidéo, je vais te parler du
+terminal que j'utilise maintenant sur
+macOS de manière principale. Je vais
+aussi te parler du navigateur que j'aime
+beaucoup beaucoup beaucoup que personne
+ne parle. Donc reste bien jusqu'à la fin
+avec moi parce que ce terminal peut
+vraiment changer ta manière de
+travailler et on va le comparer avec les
+autres alternatives. Le terminal dont je
+vais te parler aujourd'hui c'estux. Je
+t'en avais déjà parlé dans une autre
+vidéo en étant un peu hypé, mais j'avais
+pas encore touché la puissance de
+l'outil. J'étais j'étais là, j'avais
+gratouillé, je m'étais un peu amus mais
+j'avais pas fait un truc incroyable.
+Donc là, j'ai un écran un peu petit
+parce que je fais la vidéo et donc ici,
+j'ai des écrans un peu petits et là je
+suis avec le mauvais compte. Donc c'est
+infame. On va tout de suite aller hop.
+Et donc euh ça c'est ma plateforme de
+formation pour les gens qui savent pas
+euh où il y a toutes les différentes
+formations que je peux avoir. Donc ce
+qu'on a juste ici c'estux. C'est la
+première application que je vais te
+présenter aujourd'hui et je commence
+directement avec sa interface qui
+t'affiche tout ce qu'il faut savoir.
+Qu'est-ce qui est très intéressant avec
+Semxux ? En fait c'est que il propose un
+outil multi multitab multihorizontalité.
+On va avoir ici des terminal tab qui
+s'apparentent aux tab de niveau 1 qui
+vont te permettre de séparer tes
+différents projets. Les tabs
+contrairement à des tables où ça affiche
+juste le nom. Alors le nom
+personnellement je suis pas fan. C'est
+écrit que l'autre code partout, j'en ai
+rien à [&nbsp;__&nbsp;] Ce qui m'intéresse, c'est
+souvent de voir les pafs. Donc en fait
+là, tu vas voir qu'on va avoir des
+sortes de groupes de terminales. Dans
+ces groupes de terminales, donc par
+exemple actuellement je suis ouvert sur
+celui-ci. On va avoir ici un surgroupe
+de terminal qui te permet de lancer
+plusieurs terminales dans ton terminal.
+Donc là, tu peux voir que j'ai mon
+groupe COD line et à l'intérieur, j'ai 1
+pouvoir faire des splits et donc tu peux
+notamment split en affichant comme ceci
+ton application. Ce qui est encore plus
+fou, c'est qu'ici on peut split par
+exemple horizontally et là afficher un
+petit terminal. Et donc typiquement ce
+qu'on pourrait faire si on veut se
+retrouver un petit peu comme un un dev,
+c'est ici euh avoir du coup sur un écran
+externe, tu vois que là je suis sur mon
+MacBook qui est juste ici, l'écran est
+un peu petit et bon c'est pas non plus
+la folie la folie sur la manière de
+faire et j'ai ma souris qui veut pas se
+connecter, c'est pas très grave. Donc
+ici tout est petit, c'est pas super
+pratique pour dev. sur un grand écran,
+c'est très très pratique. Donc ici, on
+se retrouve en fait avec nos sessions
+cloud code. Donc moi ici, je vais en
+afficher qu'une seule. Ces deux-là,
+j'avais déjà terminé. Donc là, on a une
+session cloud code où j'ai demandé des
+modifications. Et si par exemple, je
+lance une nouvelle modification, comment
+tu vas pouvoir travailler ? Donc là, tu
+peux voir que j'ai reçu beaucoup
+d'erreurs. Je vais prendre ces logs, je
+vais les coller juste ici. Et là, je
+vais pouvoir faire un raccourci clavier.
+Donc écoute-moi bien, c'est commenter.
+Commenter, ça va me permettre de faire
+des tabs. Donc là, ça c'est des tabs. Et
+là, je peux lancer cloud code comme
+ceci. Et je peux ici lancer/dbug code- A
+qui est ma commande pour desbug. Et je
+viens débugger le code comme ceci. Donc
+ici, tu peux voir que maintenant j'ai
+deux cloud codes qui s'exécutent.
+Comment est-ce que va gérer la
+navigation dans ce tab ? Et ben, on va
+utiliser contrôle. Quand on appuie
+longtemps sur contrôle, tu peux voir
+qu'on a ici contrôle 1, contrôle 2. Et
+là, je peux faire contrôle 1, contrôle 2
+pour facilement naviguer entre mes
+tables. Très très pratique. Je pense que
+si je viens juste ici, OK, non, celui-ci
+il est pas actif. Ensuite, on a
+l'application web qui est juste ici.
+Cette application web, elle utilise
+Safari. Donc, c'est intéressant. Ça va
+te permettre aussi de vérifier que ton
+site fonctionne sur Safari. Heureusement
+maintenant la majorité des trucs
+fonctionne aussi sur Safari donc on
+n'est pas trop problématique. Et on a du
+coup ce premier niveau de tab ici avec
+du coup les différents cloud code tab
+qu'on va avoir ici. Ça c'est du coup le
+premier niveau. Deuxième niveau, c'est
+les horizontal tab qu'on a. Par exemple
+ici je suis dans le projet CODline. Je
+pourrais renommer ici commande R COD
+line. Évidemment ça renomme pas la bonne
+page. Je suis un touriste. Rename
+Workspace c'est toujours commande Shift
+R. Voilà un codline. Boom. Et donc là,
+j'ai mon workspace qui s'appelle
+CODline. Et là, je pourrais appeler CC2.
+Et là, je pourrais appeler CC1.
+Personnellement, je m'organise pas trop
+parce que mes clods vivent, ils meurent,
+ils vivent, ils meurent et cetera. Donc
+généralement, je viens pas m'embrouiller
+avec ça. Et là, tu vois que je vois
+quand même que des fois, il faut quand
+même s'attendre à avoir quelques Voilà.
+Voilà. En fait, faut cliquer sur cette
+sur ce petit outil, c'est bien mieux.
+Donc juste ici, on va avoir ces tables
+là. Là, j'ai renommé. Là, je peux par
+exemple aller sur mon projet Subfast.
+Donc là, j'ai Subfast et je crois que je
+l'avais lancé dans Cursor. Donc je vais
+quitter Cursor pour éviter de dupliquer.
+Et j'avais lancé d'autres choses. Mais
+là, par exemple, j'ai rajouté une
+nouvelle fature et on peut sans autre
+ici avoir une navigation, un terminal,
+lancer l'application ici sur le port 355
+et venir la lancer dans le tab. Et en
+fait là du coup, on se retrouve avec des
+vrais environnements de travail où j'ai
+mon application sur laquelle je suis en
+train de coder qui est juste ici. Là, vu
+que je me suis connecté avec Github, en
+fait, je peux me connecter sur avec
+GitHub encore et encore, peu importe sur
+le projet. Donc c'est très intéressant.
+Et là, je vais pouvoir vérifier la
+dernière fature que j'ai faite. Donc
+encore une fois, c'est un peu petit euh
+juste ici. Voilà. Hop. Mais normalement,
+j'ai ajouté le fait de pouvoir gérer
+différentes tailles. Donc là, on
+pourrait générer. On peut voir que là,
+par exemple, je peux pas sélectionner.
+Et là, par exemple, je peux lui dire je
+peux pas sélectionner les tailles mon
+ami sur cette page. Et je lui envoie
+comme ceci. Et donc là, j'ai un deuxième
+projet que je vais appeler ici subfast.
+Donc tu vois que j'ai un projet CODline,
+un projet subfast et ça c'était en
+expéri un petit peu. Donc là tu vois
+qu'on a les trois tables et je vais
+pouvoir naviguer entre les
+onglets. On pourrait on pourrait appeler
+les onglets, les tables. Je sais pas
+exactement comment on peut appeler ce
+niveau multiple, mais là quand on appuie
+sur commande, on peut voir que je vais
+pouvoir naviguer sur les onglets. Tu
+peux voir que là, j'ai ma surface qui
+est affiché. Là, j'ai code line et là,
+bon, j'ai rien mais je pourrais
+évidemment afficher une preview. Et donc
+tu te retrouves avec une navigation
+multiniveau qui est très intéressante.
+Ça c'est le premier point. Le deuxième
+point c'est que tu peux voir ici le
+statut de tes page. Par exemple là je
+peux voir que étrangement j'ai deux
+ports qui sont exécutés. Et donc là si
+je reprends, on peut voir ici qu'on a
+des états. Donc là tu peux voir que j'ai
+reçu une notification qui me dit voilà
+cloud code is waiting your inputs. Tu
+vas recevoir la notification et donc là
+tu te retrouves avec les informations.
+OK donc voici ce que j'ai changé et
+cetera. Ensuite, je peux par exemple
+lancer la commande crap review euh
+current pending changes et là je le
+relance. Et tu peux voir que après euh
+ça prend un petit peu de temps parfois
+de se mettre à jour, mais lui il va me
+dire "OK, c'est parti, je suis euh je
+suis retourné au travail." Et si on a
+différents projets qui sont ouverts, tu
+vas voir qu'ici ça va t'afficher aussi
+tous les différents dossiers que tu as.
+Encore plus fun, comme on peut le voir
+ici, ça t'ouvre aussi les pool request
+et ça t'ouvre les ports qui sont
+actuellement écoutés. Donc là, on peut
+voir qu'il y a 4 7 2 3. Je sais pas qui
+a ouvert ce port. Je devrais sûrement le
+fermer. Là sur tout le point subfast, on
+a la branche et donc en fait, tu te
+retrouves avec plein d'infos utiles qui
+sont juste ici. On se retrouve ici du
+coup avec le bouton pour ajouter des
+tables. On a ici les différentes
+actions. Donc là, je vais euh venir par
+exemple lancer les 15 agents. Ça c'est
+une nouvelle commande que j'ai rajouté
+dans ma config. Vous pouvez la trouver
+sous la description, ma clot code config
+premium. J'ai rajouté crab review. C'est
+un hack ultime qui fait des reviews de
+codes de quoi avoir envie de se de de
+s'exciter et aller danser dans la plage
+pendant des heures. Bref, donc ici, on a
+plusieurs tables et on se retrouve du
+coup avec un site web qui fonctionne
+comme ceci. Franchement, c'est magique.
+Franchement, c'est vraiment intuitif. Tu
+vois que tu te navigues comme ça, il y a
+des raccourcis clavier pour tout faire
+et je suis vraiment choqué par la
+qualité de l'outil. Alors euh
+maintenant, quelle est la différence
+avec des outils comme Superet ? Superet,
+je vais même pas l'ouvrir parce que je
+les déteste. Voilà. Euh pourquoi je les
+déteste ? Parce que il m'ajoute des
+configurations que je veux pas. Mais
+qu'est-ce que c'est ce genre d'outil ?
+Ce genre d'outil, c'est des code editor
+for I agent. C'est aussi ce qu'on peut
+retrouver dans un truc comme codex.
+Pourquoi est-ce que ça n'a rien à voir ?
+Parce que ces outils sont souvent build
+autour de configuration prédéfinie. Donc
+par exemple là, on a Codex, Gemini,
+Curse. Attends, attends, attends, je
+t'arrête 2 secondes pour te montrer
+cette masterclass. Tu peux accéder à
+cette formation pour setup, Cloud, code
+ma configuration sur Windows MacOS et
+apprendre plusieurs choses sur l'IA qui
+vont être essentielles comme le
+fonctionnement des agents et j'en passe.
+Pour ça, il te suffit d'aller sur
+mlv.sh/fa
+comme ceci sur n'importe quel navigateur
+et tu vas directement arriver sur cette
+page. Tu vas pouvoir t'inscrire et
+accéder directement à tout ça 100 %.
+gratuitement. N'attends pas, inscris-toi
+tout de suite. Et maintenant, on peut
+reprendre la vidéo. Et on se retrouve
+avec ici un projet et c'est vraiment
+créé entre guillemets pour des projets.
+Tu vas ajouter un projet et une fois que
+tu as le projet, tu vas pouvoir faire
+des modifications. Si j'ouvre conductor
+qui est une alternative, qui est la plus
+vieille, qui est la meilleure pour moi
+pour faire ça, tu peux voir qu'ici je
+dois ajouter des projets. Une fois que
+j'ai ajouté des projets, je dois créer
+des work. Et une fois que j'ai des work,
+je suis capable de coder. Ce qui est pas
+en fait dans mon cas, c'est pas ce que
+je veux. Moi, je veux pas un truc qui me
+babysite et qui me fasse avaler voilà le
+machin. Maintenant, pour créer des work,
+vous avez qu'à venir ici. Et là, c'est
+très simple hein. Je veux créer un work
+pour cloud code. Je fais cloud code
+worke. Fin du game. Je suis dans un work
+tree. Welcome, welcome to my work tree.
+Ensuite, je sais même pas comment le
+supprimer mais maintenant j'ai un work
+tree. On va pouvoir le voir juste ici.
+Donc, je sais pas s'il a dégagé le work
+vu que j'ai quitté et que j'ai rien
+fait, mais ce serait super. On va faire
+ls-elia.cloud
+ls. Voilà, on peut voir qu'il y a work
+tree de mort juste ici. Donc on va le
+dégager. Hop. Mais donc en fait
+l'avantage contrairement à un conductor
+qui est build autour d'une interface ici
+qui est le chat principal, autour de
+fichiers, autour de dif, autour
+d'actions en fait qui rendent ma vie
+plus compliquée. OK. dans l'idée est un
+outil build autour du semux est un outil
+build autour de terminal. En fait, ce
+n'est qu'un vrappeur de terminal, ce
+n'est qu'un wrappeur de terminal qui a
+ajouté Safari, qui a ajouté des tables
+et qui a essayé de scrapper quelques
+infos. Et donc en fait, ça m'offre une
+liberté totale. Moi ici, je suis dans
+Cloud Code. Si je veux, j'ouvre un
+nouveau tab. Ici, je vais dans le projet
+que je veux. Là, je split, je vais dans
+le projet que je veux. Là, je split, je
+vais dans le projet que je veux. En
+fait, on a une liberté de navigation qui
+est très très agréable juste ici. Donc
+là, on a la review qui a fonctionné.
+Comment ça fonctionne la review ? C'est
+que tu vois qu'il lance plusieurs agents
+pour chaque review afin que chaque agent
+puisse avoir des tokens de génération et
+que potentiellement ce soit super.
+Anyway, euh, on peut voir ici Steve Clow
+is waiting. Bon, Steve Clow, faut pas
+trop le voir parce que je suis en train
+de reconfigurer mon open sur un VPS qui
+me coûte 20 dollars par mois. Tellement
+j'utilise Open Clow parce que j'arrive
+plus à fucking m'arrêter d'utiliser cet
+outil. C'est addictif. Donc ça c'est le
+premier outil que je voulais te montrer
+avec ma souris qui marche pas. Je crois
+qu'elle a plus de batterie. La deuxième
+outil que je vais te montrer c'est Hiom.
+Hium c'est un navigateur donc j'ai
+toujours Arc mais j'aime beaucoup Hium.
+Hium, c'est un navigateur vraiment
+lightwe
+par défaut, si là je viens fermer tous
+les tables du monde et que je viens
+chercher le activity monitor et que
+j'ouvre Helium avec le timity activity
+monitor, évidemment, il y a rien qui se
+passe dans ce monde, mais on peut voir
+ici, Arc est à 691 MB. Donc Hium, c'est
+le deuxième outil que je voulais te
+présenter. C'est un navigateur très
+simple, très minimaliste, que j'aime
+bien utiliser dans mes vidéos parce que
+ça me permet de séparer les choses, mais
+en général je l'aime beaucoup. Il y a
+pas de furniture, il y a pas de
+bullshit, il y a pas de choses
+complexes, c'est simple et efficace.
+J'ai ajouté cinq shortcuts qui font la
+majorité des choses. Et si on va ici sur
+Localos 3000 normalement qui va me
+rediriger sur Code Line, on va se
+retrouver avec une interface pour dev
+qui est top. C'est chrome, il se fait
+pas chier. L'URL, elle est pas cachée.
+Et c'est en fait un chrome. Pour moi,
+c'est plus un concurrent de chrome que
+un concurrent de arc, mais qui a été
+fait avec un cerveau supérieur à la
+moyenne en gros hein. Euh si si on peut
+dire ça. Donc là, évidemment, hop, on va
+aller on va aller dans le checkout. Et
+là quand je fais commande C, tu peux
+voir que le link qui se copie ça
+fonctionne, que les bookmarks ils sont
+jolis, que les extensions bah tu vois,
+j'en ai pas beaucoup mais il y a tout
+qui fonctionne. On est connecté à
+Chrome. Donc ici voilà, on a le Hium
+profile. Il y a pas de trackur de
+données, il y a pas de bordel. C'est
+simple, c'est minimaliste. Ici, on a les
+tabs. On peut ici pin un tab qui va
+venir s'afficher en haut comme ceci. Et
+on peut mettre en favoris. Donc si si je
+vais sur saveit. Ma petite application
+ici je peux le mettre en favori et là je
+peux mettre dans la bookmark bar et je
+sais pas il y a la bookmark bar juste
+ici qui s'ouvre. OK, j'utilise même pas
+la bookmark bar. Si je mets dans order
+bookmark, je sais même pas ce que ça
+fait. OK là j'ai rien. Create new tab
+group. Ah non c'est ici. OK. Moi j'aime
+bien ces shortcuts. C'est un peu mes
+bookmark. Moi, j'utilise pas trop de
+bookmark tab de tout ce que tu veux,
+hein. Donc là, tu peux voir que j'ai que
+savit. Now mais moi, j'aime bien juste
+chercher la page comme un comme un
+touriste juste ici. Et je trouve ce
+navigateur super. Si vous avez envie
+d'un lightway version of Arc qui ne vous
+bullshit pas la gueule à coup de AI de
+merde dans tous les sens comme Arc et
+Dia peuvent le faire, je trouve que
+c'est un bon combo Semux et euh Hium qui
+est juste ici. Donc ça c'est le petit
+feedback. L'avantage de Mux aussi euh
+qu'on peut revenir juste ici, c'est le
+fait que tu peux utiliser l'agent que tu
+veux, de la manière que tu veux, comme
+tu veux, les pages que tu veux, les
+serveurs que tu veux, les librairies que
+tu veux. Voilà, c'est un terminal. Moi
+en fait, j'aime bien le contrôle en
+général quand même. J'aime bien pouvoir
+faire des trucs comme un peu j'ai envie
+de les faire. Et donc là, le fait
+d'avoir un terminal avec des tables et
+ben c'est moi qui gère quelle tab je
+veux, quelle chose je veux, comment
+est-ce que je veux les ajouter ? Et ça
+juste fonctionne quoi, tu sais. J'aime
+bien cette phrase, ça juste fucking
+fonctionne. Il y a pas de blabla, il y a
+pas de ça m'énerve, il y a pas de ça
+fonctionne pas très bien, ça juste
+fonctionne. Donc si vous voulez
+utiliserux, je vous invite à le faire.
+Je vais d'ailleurs, je pense rencontrer
+le développeur de Semus Semux qui est
+ici à SF qui fait des trucs incroyables.
+Donc j'espère que je vais le rencontrer.
+Merci à tous. On se dit à bientôt. Ciao
+ciao.
