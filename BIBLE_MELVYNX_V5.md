@@ -1,12 +1,14 @@
 # BIBLE MELVYNX — Claude Code Masterclass Complete
-> Version V5.0 — 2026-03-31 — 32 chapitres
+> Version V5.0 — 2026-03-31 — 34 chapitres
 > Sources : 36+23+11 videos/transcriptions + documentation officielle OpenClaw + recherche web 2026
-> Fusion V4.1 + 8 nouvelles videos Melvynx + Guide OpenClaw + Guide CC complet + Config Mac
+> Fusion V4.1 + 8 nouvelles videos Melvynx + Guide OpenClaw + Guide CC complet + Config Mac + Config BOKADOR + Computer Use
 > Chapitres 1-22 : V4.1 originale (inchangee) + sections ajoutees en complement
 > Chapitres 23-29 : Nouvelles videos Melvynx 2026
 > Chapitre 30 : Guide OpenClaw 100%
 > Chapitre 31 : Guide Complet Claude Code
 > Chapitre 32 : Configuration Mac Kim13 Complete
+> Chapitre 33 : Configuration BOKADOR Windows (Reference)
+> Chapitre 34 : Computer Use — Controle de l'ordinateur
 
 ## CHAPITRE 1 — ARCHITECTURE FONDAMENTALE
 
@@ -6748,3 +6750,503 @@ Tous les elements de la config Mac reelle sont documentes.
 # FIN — BIBLE_CONFIG_MAC_COMPLETE.md
 # 13 chapitres (A-M) | ~700 lignes
 # Date : 2026-03-31
+
+---
+
+## CHAPITRE 33 — CONFIGURATION BOKADOR WINDOWS (REFERENCE)
+
+> Source : Export exhaustif config Claude Code BOKADOR — 2026-03-31
+> Machine : Windows 11 Pro, 32GB RAM, RTX 3060 12GB, 40TB stockage (H:)
+> Integration Bible : 2026-03-31
+
+---
+
+### 33.1 Machine et infrastructure
+
+BOKADOR est le serveur Windows principal de l'infrastructure kim13 :
+- Windows 11 Pro, 32GB RAM, RTX 3060 12GB VRAM
+- Disques : C: (systeme), H: (stockage 40TB), G: (backup)
+- SSH port 47281 (anti-theft, port obscur)
+- Tunnel reverse SSH vers VPS (109.176.197.139:10022)
+- Docker Desktop installe, WSL Ubuntu 24.04 + tmux 3.4
+- Bun disponible : C:\Users\kim13\.bun\bin\bun.exe
+- Node.js v24.13.1
+- GPU NVIDIA RTX 3060 pour traitement local (whisper, etc.)
+
+Connexion depuis l'exterieur :
+```
+ssh -p 47281 kim13@31.35.20.184
+```
+
+---
+
+### 33.2 CLAUDE.md BOKADOR vs Mac
+
+Le CLAUDE.md BOKADOR reprend la meme structure que le Mac avec des ajouts specifiques :
+
+**Identique au Mac :**
+- Identite, langue, IPs de confiance, ports SSH
+- Regles absolues (anti-suppression, backup, idempotence)
+- Workflow EPCT, Bootstrap Jarvis, preferences code
+- Commandes interdites, auto-apprentissage
+
+**Specifique BOKADOR :**
+- Sons via hooks PowerShell (play-sound.ps1) au lieu de afplay
+- Services actifs : OpenSSH Server, Tunnel Reverse SSH, GPU NVIDIA
+- OpenClaw installe (v2026.3.23-2) avec bot Telegram SysAdmin
+- Journal des modifications CHANGELOG.md obligatoire
+- Directive Intelligence Autonome (mode proactif)
+- Commandes supplementaires : /deep-code-analysis, /explain-architecture,
+  /epct, /watch-ci, /run-tasks, /brain-dump, /evolve, /load-memory
+- Gestion contexte : /strategic-compact en plus de /clear
+
+---
+
+### 33.3 settings.json — Differences avec le Mac
+
+**Permissions allow (BOKADOR a plus de commandes autorisees) :**
+- Commandes Windows : powershell, powershell.exe, where, type, net,
+  sc query, schtasks /query, nvidia-smi, arp, ipconfig, tasklist,
+  findstr, netsh, reg query
+- Commandes partagees : docker, fail2ban-client, journalctl, systemctl,
+  openclaw, uvx
+- Total allow : 115 regles (vs ~45 sur Mac)
+
+**Permissions deny (BOKADOR = 94 regles vs 54 Mac) :**
+- Protection disques specifique : G:, H:, D:, E:, J:, K:, L:
+- Protection Bible : suppression + Edit/Write bloques sur *bible*, *BIBLE*,
+  *FORMATION_COMPLETE_MELVYNX*
+- Protection Windows : diskpart, format, mkfs
+- del /f et del /s /q bloques
+
+**Mode :** bypassPermissions (identique Mac)
+
+---
+
+### 33.4 Hooks — Architecture Windows
+
+BOKADOR utilise 12 fichiers hooks (vs 6 sur Mac) avec une couverture plus large :
+
+**Stop (4 hooks chaines) :**
+1. Log session → claude-sessions.log (PowerShell)
+2. Son fin de tache → play-sound.ps1
+3. Toast Windows → notify-toast.ps1 (async)
+4. Alerte Telegram → notify-telegram-timed.ps1 (async)
+
+**PostToolUse (3 hooks) :**
+1. hook-post-file.ts (Bun) : log + detection TS + tsc lint
+2. Prettier auto sur fichiers modifies (PowerShell)
+3. tool-usage-logger.js : log tous les outils utilises (async)
+
+**PreToolUse (3 hooks) :**
+1. claude-firewall.js : BLOCKED/WARNING/ALLOWED → security.log
+2. secrets-scanner.js : detecte secrets dans Write/Edit
+3. prompt-injection-detector.js : detecte injections dans tous les outils
+
+**Notification (2 hooks) :**
+1. play-need-human.ps1 : son alerte
+2. notify-telegram-timed.ps1 : notification Telegram quand Claude attend
+
+**Timer :**
+- task-timer-start.ps1 : chronometre chaque outil (async)
+
+---
+
+### 33.5 MCP et StatusLine
+
+**MCP actifs (3, limite respectee) :**
+- Context7 : documentation technique (npx @upstash/context7-mcp)
+- Exa : recherche web IA (HTTP, cle API via variable env Windows)
+- Gmail : acces email (npx @gongrzhe/server-gmail-autoauth-mcp)
+
+**StatusLine :**
+```
+C:\Users\kim13\.bun\bin\bun.exe run C:\Users\kim13\.claude\scripts\status-line.ts
+```
+Affiche : branche git, tokens utilises, cout session, pourcentage contexte.
+
+**CLI Shortcuts (8 raccourcis) :**
+- s: /status, a: /audit, c: /smart-commit, m: /master-audit
+- d: /disk-report, t: /tunnel-check, b: /brain-dump, e: /evolve
+
+---
+
+### 33.6 Rules — 40 fichiers (vs 24 sur Mac)
+
+BOKADOR a 16 rules supplementaires par rapport au Mac :
+
+**Rules identiques (partagees Mac/BOKADOR) :**
+- 07: Melvynx checklist
+- 08: Claude Code commands
+- 11: Bbox NAT rules
+- 12: Melvynx workflows
+- 13: Context management
+- 14: Hooks reference
+- 15: Sub-agents teams
+- 16: Nouveautes 2026
+
+**Rules specifiques BOKADOR :**
+- 09: Windows specifics (trash-cli, explorer, Docker, WSL, Bun, PowerShell)
+- 10: Never kill without detail (identique au Mac mais plus stricte)
+- 12a: Skills best practices
+- 17-42: Rules specifiques systeme Windows, GPU, tunnels, services
+
+---
+
+### 33.7 Skills et Agents — Inventaire
+
+**Skills : 50** (vs 39 sur Mac a la date de l'export)
+
+Skills specifiques BOKADOR non presentes sur Mac :
+- brain-dump : sauvegarde contexte fin de session
+- deep-code-analysis : analyse code approfondie
+- evolve : auto-amelioration systeme
+- explain-architecture : explication architecture projet
+- load-memory : chargement optimise memoire (token efficient)
+- master-audit : audit complet systeme BOKADOR
+- power-check : verification alimentation/GPU
+- run-tasks : execution issues GitHub
+- scan-secrets : scan secrets dans le code
+- smart-commit : commit intelligent avec pre-checks
+- status : diagnostic systeme rapide
+- sync-config : synchronisation config entre machines
+- tunnel-check : verification tunnel SSH reverse
+- watch-ci : surveillance CI/CD
+- wsl-init : initialisation WSL
+
+**Agents : 21** (vs 31 sur Mac — Mac a plus d'agents)
+
+**Commands : 68** (vs 43 sur Mac — BOKADOR a plus de commandes slash)
+
+---
+
+### 33.8 Plugins installes (9)
+
+| Plugin | Usage |
+|--------|-------|
+| hookify | Regles hook automatiques |
+| commit-commands | Commit + push + PR |
+| feature-dev | Dev feature guidee |
+| code-review | Review de PR |
+| code-simplifier | Simplification code |
+| pr-review-toolkit | Review PR multi-agents |
+| claude-md-management | Gestion CLAUDE.md |
+| claude-code-setup | Recommandations setup |
+| security-guidance | Guidance securite |
+
+Blocklist : code-review@claude-plugins-official (test),
+fizz@testmkt-marketplace (securite).
+
+---
+
+### 33.9 Comparaison Mac vs BOKADOR
+
+| Element | Mac (M4) | BOKADOR (Win) |
+|---------|----------|---------------|
+| OS | macOS Sequoia | Windows 11 Pro |
+| RAM | 24 GB | 32 GB |
+| GPU | Apple M4 (integre) | RTX 3060 12GB |
+| SSH port | 1983 | 47281 |
+| Shell | zsh | Git Bash + PowerShell |
+| Sons | afplay (natif) | PowerShell hooks |
+| Notification | Funk.aiff | Toast Windows + Telegram |
+| Deny rules | 54 | 94 |
+| Allow rules | ~45 | 115 |
+| Skills | 39 | 50 |
+| Agents | 31 | 21 |
+| Commands | 43 | 68 |
+| Rules | 24 | 40 |
+| Hooks fichiers | 6 | 12 |
+| Plugins | 9 | 9 |
+| MCP | 5 (local+cloud) | 3 |
+| StatusLine | Bun | Bun |
+| Docker | Docker Desktop | Docker Desktop |
+| WSL | N/A | Ubuntu 24.04 |
+| OpenClaw | Installe | Installe |
+| Tunnel SSH | BOKADOR tunnel | Tunnel reverse VPS |
+
+---
+
+### 33.10 Services critiques BOKADOR (Ne JAMAIS interrompre)
+
+1. **OpenSSH Server** — Port 47281 (acces distant principal)
+2. **Tunnel Reverse SSH** — VPS 109.176.197.139:10022 (pont communication)
+3. **Claude Code** — Node.js v24.13.1 (agent actif)
+4. **Services GPU NVIDIA** — RTX 3060 (traitement local whisper, etc.)
+5. **Docker Desktop** — Containers actifs
+
+---
+
+### 33.11 Securite specifique BOKADOR
+
+**claude-firewall.js** — Hook PreToolUse principal :
+- Analyse chaque commande Bash/Cmd/PowerShell
+- Classifie en BLOCKED / WARNING / ALLOWED
+- Log dans security.log avec timestamp et commande
+
+**secrets-scanner.js** — Hook PreToolUse Write/Edit :
+- Detecte tokens, cles API, mots de passe dans le contenu ecrit
+- Bloque l'ecriture si secret detecte
+
+**prompt-injection-detector.js** — Hook PreToolUse global :
+- Detecte tentatives d'injection de prompt
+- Protege contre les attaques via contenu de fichiers lus
+
+**Disques proteges :**
+- H: et G: = INTOUCHABLES (40TB stockage + backup)
+- C:\Windows + D:, E:, J:, K:, L: = deny dans settings.json
+
+---
+
+### 33.12 Fiche rapide BOKADOR
+
+| Element | Detail |
+|---------|--------|
+| Machine | Windows 11 Pro, 32GB RAM, RTX 3060 |
+| SSH | port 47281 via 31.35.20.184 |
+| Claude Code | Node.js v24.13.1, Bun pour StatusLine |
+| Mode | bypassPermissions |
+| Deny rules | 94 (protection maximale) |
+| Hooks | 12 fichiers (4 Stop, 3 PostToolUse, 3 PreToolUse, 2 Notif) |
+| MCP | Context7 + Exa + Gmail |
+| Skills | 50 |
+| Commands | 68 |
+| Agents | 21 |
+| Plugins | 9 |
+| Rules | 40 |
+| Export complet | BOKADOR_CONFIG_EXPORT.md (7876 lignes) |
+
+---
+
+## CHAPITRE 34 — COMPUTER USE : CONTROLE DE L'ORDINATEUR
+
+> Source : "Claude Code prend le controle de ton ordinateur" (Melvynx, mars 2026)
+> Integration Bible : 2026-03-31
+
+---
+
+### 34.1 Qu'est-ce que Computer Use ?
+
+Computer Use est un MCP server built-in de Claude Code qui permet
+de controler physiquement l'ordinateur : souris, clavier, clics,
+drag & drop, screenshots.
+
+Claude Code savait deja interagir avec l'OS via bash scripts et
+AppleScript. Computer Use est la version **officielle et
+standardisee** de cette capacite.
+
+> "Claude Code savait deja utiliser un ordi. C'est juste que ici
+> Claude vient proposer un plugin officiel qui permet de faire ca."
+
+---
+
+### 34.2 Activation
+
+**Etape 1 — Activer le MCP :**
+1. Lancer Claude Code
+2. Taper `/mcp`
+3. Reperer **"computer use"** sous "Built-in MCP"
+4. Selectionner > **"enable"**
+
+**Etape 2 — Permissions macOS :**
+1. System Settings > Privacy & Security > Screen Recording
+2. Activer pour le terminal utilise (Ghostty, iTerm2, etc.)
+3. Accepter TOUTES les popups de permissions au fur et a mesure
+4. Relancer Claude Code si necessaire
+
+Permissions requises :
+- **Screen Recording** (obligatoire)
+- **Accessibility** (selon les actions)
+
+> Plusieurs popups apparaissent la premiere fois :
+> "Computer Use request access", "wants to control this app", etc.
+
+---
+
+### 34.3 Fonctionnalites
+
+**Actions souris :**
+- Left click : boutons, menus, elements UI
+- Left click drag : sliders, dessin, drag & drop
+- Precision de positionnement remarquable
+
+**Actions clavier :**
+- Raccourcis (Cmd+Shift+P, etc.) executes de maniere autonome
+- Saisie de texte dans les champs
+
+**Screenshots automatiques :**
+- Pattern : action > screenshot > analyse > action suivante
+- Claude verifie visuellement chaque resultat avant de continuer
+
+**Navigation systeme :**
+- Ouvrir System Settings macOS
+- Naviguer dans les sous-menus
+- Modifier des parametres (taille curseur, accessibilite, etc.)
+
+**Applications testees par Melvynx :**
+- Parler (menu bar app) : clics, raccourcis, reset
+- System Settings macOS : navigation, modification curseur
+- Pixelmator : selection brush, couleur, dessin
+
+---
+
+### 34.4 Workflows demontres par Melvynx
+
+**Workflow 1 — Test d'application native :**
+Demander a Claude de lancer l'app en dev > Claude compile >
+interagit avec l'UI (clics, raccourcis) > prend des screenshots
+pour verifier > rapporte le resultat.
+
+**Workflow 2 — Modification parametres systeme :**
+Demander d'ouvrir Settings macOS > Claude navigue dans les menus
+(Accessibility > Display) > modifie le parametre > confirme
+visuellement via screenshot.
+
+**Workflow 3 — Design dans une app :**
+Demander de creer quelque chose dans Pixelmator > Claude
+selectionne les outils (brush, couleur) > dessine via drag.
+Resultat basique, tres lent (5+ minutes).
+
+**Workflow 4 — Tests iOS (mentionne) :**
+Simulateur iOS + scripts de screenshot + verification visuelle
+des layouts. End-to-end testing d'apps mobiles.
+
+---
+
+### 34.5 Limitations
+
+**LIMITATION CRITIQUE — Ordinateur bloque :**
+Pendant l'execution, l'utilisateur ne peut PAS utiliser son
+ordinateur. Si la souris est bougee, ca casse l'execution.
+
+> "Si je bouge ma souris en meme temps, ca marche pas. En fait
+> vous pouvez plus controler votre ordinateur quand vous faites ca."
+
+**Ne pas toucher au terminal :**
+Cliquer dans le terminal pendant que Computer Use travaille sur
+une autre app quitte l'application cible.
+
+**Lenteur sur taches visuelles :**
+Actions rapides pour Opus, mais dessin et taches complexes =
+5+ minutes pour un resultat basique.
+
+**Popups de permissions :**
+macOS demande beaucoup de confirmations. Chaque nouvelle app
+necessite une autorisation.
+
+---
+
+### 34.6 Cas d'usage recommandes
+
+**VPS / machine distante (recommande) :**
+Le blocage de l'ordinateur n'est pas un probleme sur un VPS.
+Computer Use est **plus utile sur une machine distante**.
+
+> "C'est principalement utile pour un VPS pour controler
+> des choses."
+
+**Developpeurs iOS :**
+Tests end-to-end via simulateur iOS, verification visuelle
+des layouts, screenshots automatises.
+
+> "Ca parait etre interessant peut-etre pour les developpeurs
+> iOS, peut-etre si tu as une machine qui permet de faire des
+> features et qui permettrait de tester et verifier ce qui a
+> ete fait."
+
+**Tests d'applications natives :**
+Validation UI d'apps macOS sans intervention humaine.
+
+**PAS recommande pour :**
+- Travail quotidien sur sa machine principale
+- Taches longues et complexes
+- Dessin et creation visuelle
+
+---
+
+### 34.7 Securite
+
+**Risque theorique — Contournement des regles :**
+Un modele pourrait creer un script contenant une commande
+interdite, l'executer, puis supprimer le script.
+
+> "Ce que peut faire le modele quand il est pas bete, c'est
+> qu'il vient creer un fichier qui bypasse les rules, et ensuite
+> il vient executer ce fichier."
+
+**Realite selon Melvynx :**
+Claude ne cherche PAS a contourner les restrictions. Quand il
+recoit une "permission error", il comprend et demande a
+l'utilisateur.
+
+> "Claude n'est pas malveillant. Opus non plus."
+> "Quand il voit que le software lui dit qu'il a pas le droit
+> de faire ca, il va pas se dire comment je peux bypass."
+
+**Cas problematiques connus :**
+- Prisma Reset (l'IA faisait `prisma reset` trop souvent)
+- Suppression de dossiers
+
+**Protection suffisante :**
+- Hook PreToolUse (command-validator) bloque 98% des commandes
+  dangereuses
+- Deny-list dans settings.json
+- Ces deux couches suffisent en pratique
+
+---
+
+### 34.8 Verdict Melvynx
+
+Melvynx est honnete : il n'utilise PAS Computer Use au quotidien.
+
+> "Est-ce qu'il y a un monde ou j'utilise ca dans ma vie ?
+> Je dois etre honnete. Non."
+
+> "Si je peux pas utiliser mon ordi pendant que Computer Use
+> il bosse, j'aurais un peu la flemme."
+
+**Resume du verdict :**
+- Technologie impressionnante (precision des clics, screenshots)
+- Pas pratique au quotidien (ordinateur bloque)
+- Utile sur VPS, tests iOS, apps natives
+- Pas une revolution : Claude savait deja interagir via scripts
+- Securite suffisante avec les hooks existants
+
+---
+
+### 34.9 Citations cles
+
+> "Claude peut maintenant venir build et valider une application
+> native."
+
+> "Il a reussi a cliquer. Ca va plutot vite."
+
+> "Commande left shift P, il vient de faire le raccourci clavier
+> de lui-meme."
+
+> "C'est incroyable qu'il arrive... je sais pas comment ils font
+> pour que le modele soit capable de cliquer de maniere aussi
+> precise."
+
+> "Moi franchement, je fais tout en bypass permission depuis
+> un moment."
+
+> "Claude Code savait deja utiliser un ordi. C'est juste que ici
+> Claude vient proposer un plugin officiel qui permet de faire ca."
+
+---
+
+### 34.10 Fiche rapide
+
+| Element | Detail |
+|---|---|
+| Type | MCP server built-in |
+| Activation | `/mcp` > computer use > enable |
+| Permissions | Screen Recording + Accessibility macOS |
+| Actions | Clic, drag, raccourcis, screenshots |
+| Limitation majeure | Ordinateur bloque pendant execution |
+| Usage quotidien | Non recommande (avis Melvynx) |
+| Meilleur cas | VPS, tests iOS, apps natives |
+| Securite | Hook PreToolUse + deny-list suffisent |
+| Modele | Opus (rapide pour Computer Use) |
+| Alternative | Scripts bash + AppleScript (existait deja) |

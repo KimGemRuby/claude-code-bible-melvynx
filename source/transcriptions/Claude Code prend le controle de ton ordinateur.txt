@@ -1,0 +1,403 @@
+ 
+Hello, Claude vient de nous balancer une
+nouvelle masterclass et on peut le dire
+parce que maintenant Claude peut venir
+contrôler ton ordinateur comme ceci avec
+computer Us. C'est un sujet que Anthopic
+avait snipé il y a pas mal de temps
+quand IQ donc IQ 4.5 était sorti. Il y
+avait pas mal de benchmark sur lequel
+ils optimisent et je pense qu'ils ont
+vraiment raison pour ça. C'est sur le
+fait de rendre Claude capable d'utiliser
+ton ordinateur, de venir vérifier
+certaines choses et cetera et cetera. Et
+donc c'est ce qu'on peut voir juste ici
+avec le computer use. Donc c'est le fait
+de rendre cette capacité d'utiliser ton
+ordinateur directement dans Cloud Code.
+Cloud Code peut maintenant venir build
+et valider une application native. Donc
+par exemple une macOS menu barre app. Il
+peut faire du end to end tasting avec
+une app électron. Il peut débugger des
+layouts
+avec par exemple red screenshots et
+cetera. Et ici drive only tool, donc
+interact with design tool, hardware, iOS
+simulator et cetera. Donc très très
+intéressant. Pour ça, il va falloir
+utiliser un MCP serveur et si tu veux
+utiliser le navigateur, tu peux utiliser
+Cloud in Chrome. Donc d'ailleurs,
+c'était ce que j'avais pas dit. Ce qu'on
+va avoir pour l'activer, on va tout de
+suite tester. Donc je vais venir ici
+dans Ghosti. Donc dans ma vie de tous
+les jours, j'utiliseux mais en fait
+c'est beaucoup plus pratique de venir
+faire ici sur Ghosty parce que ça me
+permet de zoomer pour les vidéos. Donc
+là vous pouvez lancer cloud code et
+quand vous faites slashmcp, il y a
+maintenant built mcp comme vous le voyez
+juste ici. Est-ce que vous voyez ce que
+je fais ? Oui. Buil mcp computer use. On
+va faire enter sur ce computer use comme
+ceci. Et ici, on va choisir enable.
+Comme ça, on va rendre ce computer use
+activé. Alors, attention parce que
+d'ailleurs ça, j'avais déjà disable mais
+ils font chier.
+Pourquoi il y a ça ici par défaut ? Ils
+rajoutent plein de trucs. Mais c'est
+bien qu'ils font ça en MCP. Donc comp
+use MCP, c'est parti. Maintenant, je
+vais lui dire lance l'application parler
+en dev et vérifie qu'on peut bien
+changer la navigation avec. On va voir
+si je peux appeler computer use. Non, je
+peux pas faire ça, c'est pas grave.
+Computer use mcp. Afin de venir
+directement interagir avec parler et
+vérifier qu'on peut changer le raccourci
+clavier pour play pause. Donc là, vous
+balancez votre prom comme ceci euh avec
+celui-ci et donc là, il va d'abord
+lancer l'application.
+[grognement]
+Donc évidemment, moi c'est ce que j'ai
+envie qu'il se produise. On va voir si
+ça marche. L'app est en train de
+compiler. Computer use request access.
+OK, intéressant. Computer use a besoin
+de macOS. Donc pour ça, on va faire open
+system settings, screen recording. Et
+là, va falloir en fait activer,
+j'imagine Ghosti. Où est-ce que je suis
+fou ? C'est déjà activé. Donc, j'avoue
+que je me pose des questions. Open grand
+the mission System. Den Select try
+again. Ah, OK, c'était déjà le cas.
+Alors, je sais pas si c'est Claude.
+Peux-tu l'accorder de la fenêtre qui
+s'est ouverte puis dis-moi quand c'est
+fait. Bon bah, c'est fait. OK. Non, ça
+marche toujours pas. Je sace que j'ai
+j'ai que Telégramé
+ici. Donc là, je me demande si c'est
+Ghosty qu'il faut rajouter ici tout
+simplement.
+Ouais, j'ai trois Ghostti.
+On va rajouter celui-ci.
+Est-ce que le MCP c'est supprimé parce
+que j'ai dû relancer ? OK, c'est
+toujours actifé. C'est fait. Use
+computer use. Donc là, je lui ai donné
+tous les accès et je l'ai relancé. Mais
+du coup, je lui ai juste donné le
+ghosty. Interagir avec parler. OK.
+Computer use want to control this app.
+Donc là, on peut voir euh ces app là et
+on peut encore une fois le Allô ! Alors,
+je sais pas pourquoi ils font autant de
+permission de request tout le temps,
+encore et encore. Et donc là, il nous
+dit "Ghosty demande de bypasser les
+permissions pour accéder." On va faire
+allo et là, waouh ! OK, il a réussi à
+cliquer. User left click computer use
+screenshot. Ça va plutôt vite. Alors, il
+est pas dans le dans le bon endroit.
+Ici, left click sur les modèles, il open
+l'application, il screenshot. Est-ce que
+je suis fou ? Ah, ça déplace ma souris
+en fait. Attends, attends, attends, je
+t'arrête 5 secondes. J'ai préparé une
+configuration complète pour Cloud Code.
+Tu peux accéder à ce site en écrivant
+mlv.sh/fc SH/FC
+pour formation Cloud code et tu vas
+pouvoir en t'inscrivant juste ici 100 %
+gratuitement accéder à ma configuration
+accéder à ma configuration privée avec
+tous mes skills, tous mes agents
+configurat des permissions et ma statut
+line. Dès que tu te seras inscrit, tu
+vas avoir accès à cette plateforme et tu
+vas avoir accès à ma config cloud avec
+un tutoriel complet qui va t'aider à le
+faire que tu sois sur Windows. Je vais
+te t'expliquer comment le setup et
+comment installer CL code ou que tu sois
+sur macOS. C'est une formation simple
+qui a énormément de valeur et je te
+l'offre gratuitement en allant sur
+mlv.sh/fc.
+Inscris-toi maintenant pour ne pas la
+louper. C'est Ah oui, en fait si je
+bouge ma souris en même temps, ça marche
+pas. Donc en fait vous pouvez plus
+contrôler votre ordinateur quand vous
+faites ça. En fait vous devez partir.
+Waouh ça a fonctionné. Il a bien cliqué
+sur le prki. Est-ce qu'il est capable de
+faire un raccourci clavier ? Waouh !
+commande left shift P, il vient de faire
+le raccourci clavier de lui-même. Donc
+là, en fait, il est vraiment en train de
+faire ce qu'il appelle du computer use.
+Donc là, hop, il a cliqué sur le bouton
+reset et on peut voir en fait que la
+souris est en train de bouger en live
+sur l'application parler. Donc là, tu
+peux voir qu'il a réussi à vérifier tout
+ça et ça a fait crash euh ça a fait
+crash cloud. Ah non, ça a pas fait crash
+cloud. Donc là, tout fonctionne
+parfaitement. Ce qui est très
+intéressant ici, ce qu'on peut lui faire
+faire et là ça devient drôle, c'est que
+je peux aller dans le settings et là je
+vais dire trouve le settings dans ma
+page settings avec computer use pour
+réduire la taille de mon curseur. Et là
+ça devient là ça devient marrant. OK,
+[grognement] donc là normalement il va
+me request l'access. Donc là il va
+accéder au settings du macOS. Donc là il
+ouvre l'application. En fait, on peut
+voir que si je reclique dans le
+terminal, ça vient quitter et il va
+devoir réouvrir l'application. Donc là,
+il dit OK. Accessibilité. Il clique sur
+accessibilité, il va assez vite pour un
+opus. En plus, il va très très vite.
+Ici, on peut voir qu'il a cliqué sur
+display. Je suis pas très sûr que c'est
+Ah oui, ça doit être dans display.
+Pounter. Ah, il a raison. Il a raison.
+Donc là, ça l'a clitté encore une fois.
+Je sais pas si j'ai Ah, voilà, en bas de
+la page. Ah, OK. Il m'a dit "C'est bon,
+tu as trouvé, change-le en tout petit."
+Donc là, on peut voir que hop, il arrive
+exactement au bon endroit. C'est
+incroyable qu'il arrive. Je sais pas
+comment ils font pour venir faire en
+sorte ici que le modèle soit capable de
+cliquer euh de cliquer de manière aussi
+précise. Donc là, il fait il clique
+vraiment au bon endroit là. Alors ça
+marche pas malheureusement parce que
+peut-être qu'il doit apprendre à slide.
+Mais ben voilà, si c'est pas slidé, il
+va être dans la sauce là. Left click
+drag. Il a réussi à drag. Il peut drag.
+Il a réussi. Il a réussi. OK, on peut
+faire un autre test très drôle. Create a
+new document. Hop là. Et là, je vais lui
+dire voilà. P un dessin de coucher de
+soleil sur Pixel Mator. Alors les gars,
+là on part en Vri hein. Là on part tout
+de suite en Vriquest
+l'accès. Alors en réalité quand je vois
+ça comme ça, je suis en mode OK c'est
+sympa. On a une IA ici qui est capable
+de venir utiliser mon application Pixel
+Mator. Alors le premier problème c'est
+que quand elle fait ça, je suis
+incapable d'utiliser mon ordinateur
+parce que si j'utilise mon ordinateur en
+même temps, ça marche pas. Donc c'est
+principalement utile pour un VPS pour
+contrôler des choses, ce qui lui
+permettrait potentiellement de contrôler
+des application comme on est en train de
+le faire juste ici parce que finalement
+s'il arrive à faire des clics, en fait
+il s'est utilisé des interfaces et il
+pourrait aller sur ton VPS pour faire
+ça. Donc là boum, tu vois, il a cliqué
+sur brush e cetera. Est-ce qu'il y a un
+monde où j'utilise ce computer use pour
+faire quelque chose dans ma vie ?
+Franchement, si je peux pas utiliser mon
+ordi pendant que Computer Use il bosse,
+j'aurais un peu la flemme de faire quoi
+que ce soit avec ce truc parce que je me
+dirais, ça veut dire que dès que je
+l'utilise, je suis littéralement bloqué.
+Donc là, il a enlevé la softness, il a
+réussi à drag, il a réussi à bien
+dragzin et du coup il a pas encore là
+c'est assez lent. Alors là quand même,
+je lui donne un challenge. Voilà. OK, il
+va changer le style. Je sais pas
+pourquoi il m'a mis un pointeur à 200
+là. Ça va littéralement peindre tout le
+truc en 2 secondes. Ah quoique il a
+choisi un bon point. Mais il a fait un
+point he c'est peut-être coucher de
+soleil. Donc il se dit que le rouge ça
+fait un peu coucher de soleil. Bon vous
+dire que ça va prendre un petit peu de
+temps parce que là ça fait 5 minutes que
+je suis sur mon téléphone et on a
+actuellement un petit départ de quelque
+chose qui est apparu et je peux rien
+faire sur mon ordi hein parce que même
+si je vais sur ce magnifique OBS. Voilà,
+on a on a de nouvelles lignes, on va le
+couper, hein. Voilà, donc là, vous êtes
+partis pour un moment, mais il peut
+contrôler des applications. Donc il y a
+quand même du concept qui se passe ici.
+Alors, en réalité, ça paraît être
+intéressant peut-être pour les
+développeurs iOS, peut-être si tu as une
+machine qui permet de faire des fatures
+et donc qui permettrait de tester et
+vérifier ce qui a été fait, un peu comme
+Cursor avait lancé. Mais en pratique,
+est-ce que il y a un monde où j'utilise
+ça dans ma vie ? Euh
+je dois être honnête. Non non non non
+non, je n'utilise pas ça dans ma vie.
+Mais écoutez au moins maintenant vous en
+savez plus et on a pu le tester. Donc
+ici computer use c'est disponible.
+Qu'est-ce que les gens disent ? Voilà
+this night. toutes les relays que euh
+Cloud a fait ici par exemple en mars.
+Cloud Memory is free, Cloud Marketplace,
+Cloud comme ambassadeur, code review,
+Cloud Skill, chart, One Million,
+Dispatch, Cloud Cowork channels, Cowork
+Project, Cloud et Tool Cloud on Mobile.
+Donc ça c'est tous les trucs qui sont
+sortis là, les updates. Voilà, tout le
+monde parle juste des updates. Alors,
+c'est plutôt des nouvelles fatures, des
+nouvelles choses. Ça peut être
+intéressant. Et voilà, par exemple,
+juste ici, on a un bon exemple. il est
+capable de venir. Donc là, je pense que
+ce qu'il disait, c'est qu'il arrivait
+déjà à le faire avant parce qu'il
+lançait des scripts et qu'il avait pas
+besoin de computer use parce que
+computer use finalement c'est que c'est
+que du Apple script. Mais donc là, on
+peut voir que il était déjà capable.
+Cloud Code savait déjà utilisé un ordi,
+hein, qu'on soit clair, c'est juste que
+ici Cloud vient proposer un plugin
+officiel qui permet de faire ça. Alors,
+pardon, en fait, je vous ai pas montré
+la vidéo, mais donc juste ici, il y a
+quelqu'un qui nous montrait une vidéo.
+On peut voir que c'est du bash et que
+là, tu vois dans les screen bash, il
+arrive à venir lancer. Il a il a
+sûrement créé un petit package script
+iOS screenshots avec outputs. Et donc
+là, c'est juste que Cloud nous a proposé
+une manière de le faire un peu plus
+propre. Donc ici avec beaucoup de
+feures, on va voir les repartages. Donc
+moi j'avais un peu voulu vibe sloper sur
+le sur le poste et là on a le pire tweet
+du monde d'un d'une personne qui doit
+sûrement être limitée. Well that fucking
+officially replac software enginer close
+is no 24 hour autonomous coding agents.
+C'est difficile de faire plus fake hein
+parce que ça c'est autonomous agent qui
+prend une heure pour faire des petites
+actions. Bonne chance. Qu'est-ce que
+c'est un non autonomous agent ? On a
+aussi récemment le automode qui est
+sorti. Au lieu d'approuver chaque fâche
+et cetera, on va utiliser automode qui
+permet de faire en sorte que Cloud
+prenne des décisions à ta place. Save
+guard. Check each action before it run.
+Qu'est-ce que ça doit être ? On va voir.
+Donc ce que vous pouvez faire ici, c'est
+lancer
+close avec
+enable auto mode. Donc là, on peut venir
+le lancer close- enable auto mode. Et
+quand vous faites ça, évidemment, ça ne
+fait rien. Enable ti auto mode. Alors,
+on va voir si on l'a. On l'a pas. Cloud-
+enable auto mode. OK, ça marche pas. Moi
+de toute façon, j'ai pas été très fan
+quand j'ai vu ça. C'est intelligent.
+C'est tout simplement que il va y avoir
+un petit soit un petit modèle, soit un
+script, soit quelque chose qui va venir
+vérifier la dangerosité de l'action. Ça
+peut être très intéressant si ça utilise
+le contexte parce que moi si vous avez
+acheté ma cloud code config, j'ai quand
+même un hook qui bloque 98 % des choses.
+Ce que peut faire le modèle quand il est
+pas bête, c'est qu'il vient créer un
+fichier qui bypasse les rules, les les
+règles et ensuite il vient exécuter ce
+fichier. Donc par exemple, tu lui
+interdis de supprimer des dossiers, il
+crée un script qui supprime ton dossier,
+il l'exécute puis il supprime le script
+euh ou il garde le script ou même il
+supprime le script dans le script. Bref,
+il peut faire ce qu'il veut, ce qui te
+permet de bypass tes safegard.
+Personnellement,
+j'ai pas vu que Claude faisait ce genre
+de chose. Voilà, je dois je dois vous
+être honnête, il y a beaucoup de gens
+qui ont peur de l'a qui fait pas les
+choses ou qui prend trop d'initiatives
+ou qui prend trop d'action qui commence
+ça. Donc, il y a eu le cas avec Prisma
+Reset. Lia aimait beaucoup faire du
+Prisma Reset. Il y a eu le cas avec
+suppression de dossier, mais en fait
+quand vous lui interdisez en gros de
+faire des commandes destructives, c'est
+assez rare qu'il se disent "Oh là là, je
+peux pas supprimer le dossier parce
+qu'en fait il va par défaut, il va
+toujours essayer de supprimer le dossier
+de la manière la plus logique. La
+manière la plus logique, c'est RMRF.
+Quand il va lancer RMF, il va recevoir
+une permission error." Permission error,
+c'est quoi dans son contexte ? C'est
+attention, tu as pas le droit de faire
+ça. Claude n'est pas malveillant. Opus
+non plus. quand il voit que le software
+qu'il utilise lui dit qu'il a pas le
+droit de faire ça, il va pas se dire
+"Comment est-ce que je peux bypass ?" Il
+va juste comprendre que c'est pas une
+action qu'on lui a autorisé de faire et
+il va tout simplement dire "Mon frérot,
+tu peux le faire toi-même 100 % du
+temps." Euh donc enable auto mode.
+Voilà, il y a beaucoup de flipper par
+rapport à tout ça. Moi franchement, je
+fais tout en bypass permission depuis un
+moment. On verra si un jour je me fais
+ Si un jour je me fais je
+vous ferai une vidéo. Bon, je suis
+désolé pour le bureau qui était pas
+droit pour cette vidéo, mais j'espère
+que tu as kiffer cette petite news à
+show du autome. Il est chez moi 11h47 du
+soir et chez toi, il est 8h47 du matin.
+On va voir à quelle vitesse j'arrive à
+publier cette vidéo. Ciao. Ciao.
