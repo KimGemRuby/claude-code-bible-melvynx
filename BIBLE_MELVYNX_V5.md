@@ -6786,7 +6786,7 @@ Avant /clear ou fermeture, se demander :
 
 ---
 
-# CHAPITRE J — INVENTAIRE COMPLET COMMANDS (61 commands)
+# CHAPITRE J — INVENTAIRE COMPLET COMMANDS (62 commands)
 
 Repertoire : `~/.claude/commands/*.md`
 Les commands sont les precurseurs des skills.
@@ -6876,7 +6876,7 @@ Quand un doublon existe, la version skills/ est prioritaire (rule 35).
 | process-mgr | Analyser processus et anomalies |
 | alert | Commande alerte |
 
-## J.7 — Commands Divers (7)
+## J.7 — Commands Divers (8)
 
 | Command | Description |
 |---------|-------------|
