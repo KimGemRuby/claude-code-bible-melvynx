@@ -1,5 +1,5 @@
 # BIBLE MELVYNX — Claude Code Masterclass Complete
-> Version V5.0 — 2026-03-31 — 34 chapitres
+> Version V5.1 — 2026-04-01 — 34 chapitres + 13 annexes (A-M)
 > Sources : 36+23+11 videos/transcriptions + documentation officielle OpenClaw + recherche web 2026
 > Fusion V4.1 + 8 nouvelles videos Melvynx + Guide OpenClaw + Guide CC complet + Config Mac + Config BOKADOR + Computer Use
 > Chapitres 1-22 : V4.1 originale (inchangee) + sections ajoutees en complement
