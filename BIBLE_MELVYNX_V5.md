@@ -10,6 +10,63 @@
 > Chapitre 33 : Configuration BOKADOR Windows (Reference)
 > Chapitre 34 : Computer Use — Controle de l'ordinateur
 
+---
+
+## TABLE DES MATIERES
+
+| Ch. | Titre | Ligne approx |
+|-----|-------|-------------|
+| 1 | Architecture fondamentale | 13 |
+| 2 | Le terminal pour vibe codeurs | 64 |
+| 3 | Installation & Configuration | 106 |
+| 4 | Workflows et commandes | 330 |
+| 5 | Commandes slash natives | 536 |
+| 6 | Context Engineering & Memoire | 601 |
+| 7 | Sub-Agents & Teams | 746 |
+| 8 | Prompting techniques | 870 |
+| 9 | Securite | 946 |
+| 10 | Pricing & Limites | 1051 |
+| 11 | Outils recommandes | 1085 |
+| 12 | OpenClaw (Agent distant Telegram) | 1139 |
+| 13 | Skills & Meta-Skills | 1336 |
+| 14 | Nouveautes 2026 | 1426 |
+| 15 | Ralph (Boucle autonome infinie) | 1531 |
+| 16 | Les 6 niveaux de maitrise | 1565 |
+| 17 | Skills tiers remarquables (Top 10) | 1588 |
+| 18 | Erreurs en entreprise (5 erreurs) | 1619 |
+| 19 | Outils complementaires | 1646 |
+| 20 | Usages non-code & Configurations avancees | 1741 |
+| 21 | Comparatifs & Benchmarks | 1868 |
+| 22 | Claudeception & Securite avancee | 1933 |
+| 23 | CLI vs MCP : La nouvelle philosophie | 2059 |
+| 24 | SaaS et Business avec Claude Code | 2207 |
+| 25 | Les 4 niveaux de developpeur IA | 2284 |
+| 26 | Roadmap Vibe Coder 2026 | 2354 |
+| 27 | Dispatch vs OpenClaw | 2444 |
+| 28 | CEMUX et outils recommandes | 2509 |
+| 29 | Masterclass : Les 7 piliers (Core Seven) | 2592 |
+| 30 | Guide OpenClaw 100% | 2727 |
+| 31 | Guide complet Claude Code | 3966 |
+| 32 | Configuration Mac Kim13 complete | 5408 |
+| 33 | Configuration BOKADOR Windows (Reference) | 6756 |
+| 34 | Computer Use — Controle de l'ordinateur | 7021 |
+| **Annexes (dans Ch.32)** | | |
+| A | Inventaire complet Deny Rules (54 regles) | 5419 |
+| B | Inventaire complet Skills (50 skills) | 5588 |
+| C | Inventaire complet Agents (31 agents) | 5680 |
+| D | Inventaire complet Hooks (15 fichiers) | 5767 |
+| E | Inventaire complet MCP (5 serveurs) | 5924 |
+| F | Plugins actifs (9 plugins) | 5977 |
+| G | Protocoles de securite Kim | 6178 |
+| H | Infrastructure reseau | 6303 |
+| I | Architecture memoire deployee | 6375 |
+| J | Inventaire complet Commands (62 commands) | 6484 |
+| K | Inventaire complet Rules (24 actives) | 6589 |
+| L | CLAUDE.MD reel deploye | 6646 |
+| M | Statusline et outils avances | 6691 |
+
+---
+
 ## CHAPITRE 1 — ARCHITECTURE FONDAMENTALE
 
 ### Qu'est-ce que Claude Code ?
@@ -5407,6 +5464,8 @@ Si ca ne marche pas : `/debug` pour auto-reparation.
 
 ## CHAPITRE 32 — CONFIGURATION MAC KIM13 COMPLETE
 
+> Note : Ce chapitre contient 13 sous-chapitres (Annexes A-M) detaillant l'inventaire complet de la configuration Mac.
+
 > Contenu integral de la config Mac — fusion depuis BIBLE_CONFIG_MAC_COMPLETE.md
 
 # Bible Claude Code — Configuration Mac Reelle de Kim13
@@ -5416,12 +5475,12 @@ Si ca ne marche pas : `/debug` pour auto-reparation.
 
 ---
 
-# CHAPITRE A — INVENTAIRE COMPLET DENY RULES (76 regles)
+# CHAPITRE A — INVENTAIRE COMPLET DENY RULES (54 regles uniques)
 
 La deny-list est le premier rempart de securite.
 Configuree dans `~/.claude/settings.json` > `permissions.deny`.
 La Bible Melvynx ne documente que 6-7 deny rules.
-Voici les 76 regles reelles deployees.
+Voici les 54 regles uniques reellement deployees (l'audit initial comptait 76 en incluant variantes et doublons conceptuels).
 
 ## A.1 — Protections suppression (12 regles)
 
