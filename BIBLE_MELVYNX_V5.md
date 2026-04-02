@@ -7309,3 +7309,157 @@ Melvynx est honnete : il n'utilise PAS Computer Use au quotidien.
 | Securite | Hook PreToolUse + deny-list suffisent |
 | Modele | Opus (rapide pour Computer Use) |
 | Alternative | Scripts bash + AppleScript (existait deja) |
+
+
+## CHAPITRE 35 — 18 TOKEN HACKS CLAUDE CODE (Source YouTube)
+
+> Source : "18 Claude Code Token Hacks in 18 Minutes"
+> URL : https://www.youtube.com/watch?v=49V-5Ock8LU
+> Transcrit le 2026-04-02 via faster-whisper large-v3 sur BOKADOR RTX 3060
+> 549 segments, ~18 min
+
+### 35.1 Comment les tokens fonctionnent
+
+- Chaque message, Claude relit TOUTE la conversation depuis le debut
+- Le cout est compounding, pas lineaire — message 1 = 500 tokens, message 30 = 15 000 tokens
+- Apres 30 messages : ~250 000 tokens cumulatifs
+- Un dev a mesure : 98.5% des tokens = relecture de l'historique
+- En plus des messages : CLAUDE.md, MCP, system prompt, skills, fichiers = recharges a chaque tour
+- Phenomene "Lost in the Middle" : le modele ignore le milieu du contexte
+
+### 35.2 Tier 1 — Hacks basiques (9 hacks)
+
+**Hack 1 : Conversations fraiches**
+- /clear entre chaque tache non-liee
+- Ne pas porter le contexte du sujet A dans le sujet B
+- Chaque message dans un long chat = exponentiellement plus cher
+- C'est LE hack #1 qui etend la vie de session
+
+**Hack 2 : Deconnecter les MCP inutilises**
+- Chaque MCP charge toutes ses definitions d'outils a chaque message
+- Un seul serveur MCP = ~18 000 tokens par message (invisible)
+- Preferer les CLI aux MCP quand possible (ex: Google Calendar CLI > MCP)
+- Le futur = agents utilisent les CLI plutot que les MCP
+
+**Hack 3 : Batching — tout en un message**
+- 3 messages separes coutent 3x plus qu'un message combine
+- Si Claude se trompe : editer le message original + regenerer (remplace l'echange)
+- Les follow-ups s'empilent dans l'historique de facon permanente
+
+**Hack 4 : Plan mode avant toute tache**
+- Evite le plus gros gaspillage : Claude part dans la mauvaise direction
+- Ajouter dans CLAUDE.md : "Do not make any changes until you have 95% confidence"
+- Demander des questions de suivi jusqu'a atteindre 95% de confiance
+
+**Hack 5 : /context et /cost**
+- /context montre exactement ce qui mange les tokens (historique, MCP, fichiers)
+- /cost montre l'usage reel et le cout estime de la session
+- Exemple : session vierge = deja 51K tokens (system prompt, tools, skills, memory)
+- "Si tu ne sais pas que tu saignes a cause des MCP, comment corriger ?"
+
+**Hack 6 : Status line**
+- Affiche en temps reel : modele, barre de progression, % contexte, tokens
+- Configurer via /statusline dans le terminal
+- Exemple : "5% of 1M context, 52K/1000K tokens"
+
+**Hack 7 : Dashboard ouvert**
+- Garder le dashboard Anthropic ouvert a cote
+- Verifier toutes les 20-40 min
+- Possibilite d'automatiser une alerte toutes les 30 min
+
+**Hack 8 : Pasting intelligent**
+- Avant de coller un document : "est-ce que Claude a besoin de TOUT lire ?"
+- Si le bug est dans une fonction : coller JUSTE cette fonction
+- Etre precis dans ce qu'on donne a Claude
+
+**Hack 9 : Regarder Claude travailler**
+- Ne pas lancer un prompt et partir
+- Surveiller les taches longues — Claude peut boucler, relire les memes fichiers
+- 80% des tokens sont utilises pour zero valeur quand Claude est en boucle
+- Stopper immediatement si mauvais chemin
+
+### 35.3 Tier 2 — Hacks intermediaires (5 hacks)
+
+**Hack 10 : CLAUDE.md lean**
+- Max 200 lignes
+- Contenir : tech stack, conventions, build commands, regle 95% confidence
+- Traiter comme un INDEX qui pointe vers les fichiers detailles
+- "Mindset shift" : skills et reference guides = meme principe (index lean)
+- Chaque message relit CLAUDE.md en entier — 1000 lignes = charge a chaque message
+
+**Hack 11 : References de fichiers chirurgicales**
+- Ne PAS dire "voici mon repo, trouve le bug"
+- Dire "check the verifyUser function in auth.js"
+- Utiliser @filename pour pointer des fichiers specifiques
+- Eviter l'exploration libre de Claude
+
+**Hack 12 : Compact a 60%**
+- Auto-compact se declenche a ~95% (trop tard, qualite deja degradee)
+- Manuellement /compact a 60% avec instructions sur quoi preserver
+- Apres 3-4 compacts consecutifs : qualite se degrade
+- A ce stade : session summary → /clear → redonner le summary → continuer
+
+**Hack 13 : Le cache de 5 minutes**
+- Claude Code utilise le prompt caching pour eviter de retraiter le contexte inchange
+- Le cache expire apres 5 minutes d'inactivite
+- Si pause > 5 min : le prochain message retraite TOUT depuis zero (cout plein)
+- Avant de s'absenter : /compact ou /clear
+
+**Hack 14 : Output bloat des commandes**
+- Quand Claude execute des commandes shell, TOUT l'output entre dans le contexte
+- 200 commits de git log = des milliers de tokens inutiles
+- Etre intentionnel sur les commandes autorisees
+- Deny les permissions de commandes inutiles par projet
+
+### 35.4 Tier 3 — Hacks avances (4 hacks + bonus)
+
+**Hack 15 : Choisir le bon modele**
+- Sonnet = default pour le coding quotidien
+- Haiku = sub-agents, formatting, taches simples
+- Opus = architecture profonde, seulement quand Sonnet ne suffit pas (<20% usage)
+- Tip : utiliser Codex (plugin officiel) pour les code reviews (economise tokens Claude)
+
+**Hack 16 : Cout des sub-agents**
+- Les agents consomment 7-10x plus de tokens qu'une session single-agent
+- Chaque sub-agent demarre avec son propre contexte complet (reload tout)
+- Deleguer aux sub-agents pour les taches one-off, surtout en Haiku
+- 80% des tokens en modele cheap > 80% en modele cher
+- Agent teams = tres couteux, utiliser avec parcimonie
+
+**Hack 17 : Heures de pointe**
+- Peak : 8h-14h Eastern (weekdays) — session drain plus vite
+- Off-peak : apres-midi, soirees, weekends — usage normal ou etendu
+- Planifier les gros refactors et sessions multi-agents en off-peak
+- Hack 17.5 : si pres du reset avec du budget restant → utiliser a fond avant reset
+
+**Hack 18 : CLAUDE.md comme constitution du systeme**
+- Stocker les decisions stables, regles d'architecture, resumes de progres
+- "Sauver des decisions, pas des conversations"
+- Chaque decision architecturale stockee = un paragraphe qu'on ne retape jamais
+- Regles token-aware dans CLAUDE.md :
+  - "Use sub-agents for any exploration or research"
+  - "If task needs 3+ files, spawn sub-agent, return summarized insights"
+  - "Spawn sub-agent in Haiku"
+- Applied learning : quand quelque chose echoue, ajouter un bullet (<15 mots)
+- Attention : verifier regulierement que le fichier ne grossit pas trop
+
+### 35.5 Checklist recapitulative (fin de video)
+
+1. Lancer /context — voir l'etat actuel
+2. Lancer /cost sur les sessions actives
+3. Status line : modele + % contexte + token count
+4. Dashboard Anthropic ouvert
+5. Deconnecter les MCP inutilises
+6. Plan mode pour les taches complexes
+7. /clear entre taches non-liees
+8. /compact manuellement a 60%
+9. Batcher les instructions multi-etapes en un seul message
+10. Sessions lourdes en heures off-peak
+
+### 35.6 Messages cles
+
+- "Ce n'est pas un probleme de limites. C'est un probleme d'hygiene de contexte."
+- "La plupart des gens n'ont pas besoin d'un plan plus cher — ils doivent arreter de renvoyer tout leur historique 30 fois"
+- "Atteindre sa limite = bon signe si on optimise bien (power user)"
+- Balance qualite vs cout = un jeu permanent
+- Tokens = compounding cost, pas lineaire

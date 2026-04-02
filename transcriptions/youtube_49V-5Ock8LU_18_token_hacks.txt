@@ -1,0 +1,549 @@
+Dans les dernières semaines, il y a eu beaucoup de gens qui se sont compliqués
+sur le fait de atteindre leur limite de code de clave incroyablement rapide.
+Des claims comme un prompt qui est à environ 1% de la limite est maintenant à environ 10%.
+Vous pouvez aller sur X et trouver des tonnes et des tonnes de threads sur ce sujet.
+Même sur un plan de 200$ par mois, les gens sont à atteindre la limite de la session
+beaucoup trop vite.
+Et puis, nous avons eu ce post de un employé anthropophobe qui a basicement dit
+qu'ils travaillent sur un petit changement avec les heures de pique et les heures de pique.
+Mais même après ça, certaines personnes disaient qu'ils étaient toujours
+atteints vraiment vite, même pendant les heures de pique.
+Donc, en tout cas, j'ai joué un tas, essayé différentes choses, fait de la recherche
+et j'ai 18 hacks de gestion de token pour vous que j'ai organisé de tier 1
+jusqu'à tier 3, pour qu'ils aillent plus avancé.
+Je suis très confiant que à l'endroit de ce vidéo, vous vous sentez comme si votre
+usage de code de clave a doublé, triplé, peut-être même 5x.
+Donc, ne pas perdre du temps et juste rentrer directement dans le vidéo.
+Donc, en optimisant mon propre gestion de token, je pense que ce qui est vraiment
+important de réaliser d'abord est comment les tokens fonctionnent.
+Parce que une fois que vous réalisez comment Claude utilise les tokens,
+ça peut être un peu plus facile de réaliser comment Claude utilise les tokens.
+Et ça fait très clair comment vous devriez ré-ingéniez la façon dont vous travaillez
+pour utiliser moins de tokens.
+Donc, un token est la plus petite unité de texte qu'un modèle d'AI lit et vous charge.
+C'est à peu près un token, c'est une parole, mais ce n'est pas explicitement vrai,
+c'est juste une bonne base.
+Donc, chaque fois que vous envoyez un message, Claude ré-lit l'entière conversation
+depuis le début et tous ceux-ci sont des tokens que ça vous charge.
+Donc, message 1, il le lit, puis il lit sa réponse, puis message 2,
+puis la réponse, jusqu'à votre plus dernier prompt.
+Et ça le fait chaque fois.
+Et je pense que ça seul est un énorme moment de lumière pour beaucoup de gens.
+Cela signifie que lorsque vous avez une conversation avec Claude,
+votre coût est compoundant, pas seulement en ajoutant,
+c'est exponentiellement grandissant.
+C'est-à-dire que message 1 peut coûter 500 tokens,
+message 30 coûte 15 000,
+parce que c'est ré-écrit tout avant.
+Un développeur a en fait traqué un chat de message plus de 100
+et a trouvé que 98,5% de tous les tokens
+étaient juste ré-écrits dans l'histoire de chat de l'ancienne session.
+C'est un énorme dégât.
+Alors oui, l'argument doit être fait que,
+on a un token qui est un token,
+il a besoin du contexte et il a besoin d'entendre ce que nous faisons,
+mais encore, 98,5% est fou.
+Donc, prenez une petite vue à ce graphique ici.
+Au-delà de l'axe X, nous avons le nombre de messages,
+et en l'incréant, vous pouvez voir que nous avons
+nos coûts par message et nos tokens cumulatifs s'increant,
+mais ce n'est pas linéaire.
+C'est-à-dire que chaque message est ré-écrit
+tous les derniers et il faut le compter.
+Donc, message 1 peut être 500,
+message 30 peut être 15 500,
+ce qui est 31 fois plus.
+Et puis, après 30 messages, vous pourriez déjà être
+à presque un quart de million de tokens cumulatifs.
+Maintenant,
+au-delà de tous vos propres messages,
+Cloud va aussi ré-loader votre Cloud.md,
+vos serveurs MCP, vos prompts systémiques,
+vos compétences, vos fichiers, sur chaque tour.
+Et c'est un overhead invisible,
+mais il est constamment en train de se dérouler
+dans votre contexte et vos tokens.
+Et une chose vraiment importante à réaliser,
+c'est que ce contexte bloqué ne vous coûte pas plus d'argent,
+mais il produit aussi une output pire.
+Donc, vous payez plus et vous obtenez moins.
+Il y a ce phénomène appelé « perdus dans le milieu »,
+qui dit en fait que les modèles payent le plus d'intention
+au début de votre session et à la fin.
+Donc, tout ce truc dans le milieu de votre session,
+dans ce dip, est en train d'être ignoré.
+D'accord, donc maintenant que nous comprenons un peu plus
+comment fonctionne le code de Cloud et comment fonctionnent les tokens,
+allons-y avec les hacks.
+Nous allons commencer ici avec les hacks de tier 1.
+Ce sont les hacks qui vont être super faciles à imprimer
+et que tout le monde devrait pouvoir comprendre.
+Donc, nous avons 9 de ces.
+Le numéro 1 est de commencer des conversations fraîches.
+Utilisez « slash clear » entre les tâches inrelatrices.
+Ne portez pas le contexte sur le sujet A
+dans une conversation sur le sujet B.
+Donc, chaque message dans un long chat
+est exponentiellement plus cher que le même message
+dans un message frais.
+Donc, ce habit de 1 est le numéro 1
+qui étend votre vie de session.
+Et c'est assez évident en fonction de ce que nous avons juste parlé.
+Donc, c'est pourquoi c'était le numéro 1.
+D'accord, le numéro 2 est de déconnecter les serveurs de MCP.
+Chaque serveur de MCP connecté
+charge toutes ses définitions de outils
+dans votre contexte sur chaque message.
+C'est une autre source de tokens complètement invisibles
+qui pourraient juste être en train d'éteindre et d'éteindre.
+Donc, un seul serveur pourrait être
+quelque chose comme 18 000 tokens par message.
+Donc, utilisez MCP à l'origine de chaque session
+et déconnectez les serveurs que vous n'avez pas besoin.
+Et mieux encore,
+si vous pouvez trouver des CLIs pour quelque chose,
+donc par exemple,
+plutôt que d'avoir le serveur Google Workspace
+ou le serveur Google Calendar MCP,
+qui mange beaucoup de tokens,
+utilisez juste le serveur Google Workspace CLI.
+C'est plus rapide, c'est plus cher,
+et je pense que le futur est en train de se dérouler
+en faisant que nos agents utilisent les CLIs
+plutôt que les MCPs.
+D'accord, numéro 3.
+Batch prompts into one message.
+Trois messages séparés coûtent trois fois
+ce que une message combinée coûte
+à cause de la façon dont les tokens fonctionnent, n'est-ce pas?
+Instead of summarizing this as one message
+and then now extract the issues,
+now suggest a fix,
+send it all in one prompt.
+If CLOG gets something slightly wrong,
+edit your original message and regenerate
+instead of sending a full follow-up correction.
+Follow-ups stack onto history permanently
+while edits replace the bad exchange entirely.
+Now, I will say,
+there is an argument to be made here
+that potentially doing it this way
+where you're doing task 1, task 2, then task 3
+might actually be better output quality.
+I think it depends on the actual use case.
+Basically, the idea would be
+if you can give AI one specific task at a time,
+it's going to do better
+because it's more specialized and it's more focused.
+But this is definitely something that you should be aware of.
+Okay, number 4 is to use plan mode before any real task.
+This lets CLOG map out the approach,
+ask you the right questions,
+and it prevents the single biggest source of token waste,
+which is just having CLOG go down the wrong path,
+writing code,
+and then basically everything that it just did,
+you have to basically like scrap and redo.
+It's just a huge waste of time and tokens.
+So you can add something like this to your CLOG.md.
+Do not make any changes
+until you have 95% confidence in what you need to build.
+Ask me follow-up questions
+until you reach that confidence level.
+This is something that I'm putting into all of my CLOG.mds
+when I am having it help me build things.
+Number 5, we have run slash context and slash cost.
+Slash context shows you exactly what's eating your tokens right now.
+So your conversation history,
+your MCP overhead, loaded files, stuff like that.
+And slash cost shows your actual token usage
+and estimated spend for that current session.
+Most people have no idea where their tokens are going,
+and these two commands,
+make the invisible visible.
+Because if you don't actually know that you're bleeding
+because of MCPs,
+then how would you be able to fix that?
+So when you run slash context,
+this is what it will look like.
+It'll basically give you a screenshot
+of how many tokens you're at,
+what is the cap,
+and it will estimate based on the different categories.
+And what I did here is this was ran
+in a completely fresh session, no chats.
+So what that tells me is,
+okay, before I even talk to Claude,
+I'm already down 51,000 tokens
+because of things like the system prompt,
+the system tools,
+my custom agent,
+my skills,
+memory files.
+And here,
+I've actually cleared out all the MCPs,
+so there wasn't anything in there.
+But those can, like I said,
+completely blow up your tokens right from the get-go.
+Okay, number six is to set up a status line.
+This kind of goes hand in hand with having more visibility.
+You only actually see this in your terminal though,
+so you will have to do it there.
+And it basically lets you see what's going on.
+So right here, you can see in my terminal,
+I've got this set up
+so that I can see the model I'm using.
+I can see a visual kind of progress bar of my usage.
+And then I can see,
+5% of my whole 1,000,000 context window.
+And I can see 52,000 tokens out of 1,000,000,
+which is a million.
+And just to clarify,
+this isn't my session,
+like my five-hour session.
+This is basically just indicating that I'm 5% of the way
+or 52K out of 1,000K.
+So all you have to do is in Claude code in the terminal,
+do slash status line
+and explain that you want to replicate this setup.
+Number seven is just super simple,
+but keep your dashboard open.
+Same thing with visibility.
+You might run into issues with your limit
+and just get,
+get hit out of nowhere.
+But if you have it pulled up next to you
+or you have it ready so that you can switch into that tab
+and you know, check every 20, 40 minutes,
+then you're going to be able to pace yourself
+a little bit better.
+You could even set up a automation
+to basically check in on it every 30 minutes
+and send you like a text or a Slack message and say,
+Hey, by the way, you're getting near your usage.
+All right.
+So number eight, we have be smart with pasting.
+Before you drop a document or a file or something large,
+just ask yourself,
+does Claude need to read this whole thing?
+Sometimes it does.
+Sometimes it needs that full context,
+but sometimes it just needs one section or one page.
+So if the bug is in one function,
+then paste just that function.
+Or if it just needs the context of one little paragraph,
+just paste that.
+Claude needs to be precise about what it reads,
+but you also need to be precise about what you feed it.
+And number nine,
+our last tier one hack is to actually watch Claude code work.
+Don't just fire off a prompt and walk away or switch tabs.
+Watch what Claude is doing,
+especially on longer tasks.
+And this is because if you actually sit and watch it,
+sometimes you'll realize it's going down the wrong path.
+Sometimes it gets stuck.
+And it's on loops rereads the same files,
+things like that.
+So if it's doing that,
+you might as well just stop it right there.
+Kind of the same idea as plan mode.
+Why would you let it go down the wrong path,
+waste all your tokens,
+and then just have to scrap it all in a bad loop?
+80% of the tokens are being used producing zero value.
+So if you're able to just watch your session run until,
+you know,
+it's going down the right path,
+it could save you thousands of tokens.
+All right,
+let's kick it up a little bit.
+Let's move into our tier two hacks.
+And for these ones,
+we have five of them.
+So number one is to keep,
+your cloud.md file lean,
+place it in your project route,
+whether that is globally or in local projects,
+Claude auto reads it at the start of every single chat as a system context.
+So keep it under 200 lines include things like your tech stack,
+your coding conventions,
+your build commands,
+the 95% confidence rule,
+only the most important things.
+And you need to treat this like an index route to where more data lives.
+And it's a complete mindset shift.
+This file basically just tells Claude code,
+where is everything that it needs and what to do every single time.
+So it can,
+point to files that are huge,
+but that way it just says,
+okay,
+I don't need this right now,
+but if I do need this,
+I know exactly where to look and because it knows exactly where to look,
+it's not going to waste time or tokens searching through and reading other files.
+It's just able to grab it right there by the file name.
+And the reason I say this is a mindset shift because you should be doing this with other things,
+not just your closet MD with your skills or with your,
+you know,
+master reference guide sheets.
+I saw someone talking about how they created an index that's super,
+super lean,
+and it shows Claude code exactly where to go in the Claude code documentation.
+So if it needs help,
+with something related to Claude code,
+it doesn't have to search through the whole database.
+It can just say,
+okay,
+here's my index file.
+I know exactly which URL to look up at super simple.
+You want to keep this lean and trim it all the time.
+It's always a work in progress because every single chat,
+not just like your session,
+every single message,
+Claude that MD gets red.
+So if your closet MD file is a thousand lines,
+every single time you shoot off a message,
+even if you just say hi,
+the whole thing's going to get red.
+Okay.
+Number two here is to be surgical with file references.
+Don't just say something like,
+here's my whole repo.
+Go find the bug.
+Say something more like check the verify user function inside the auth dot JS file.
+Or you can also use at file name to point at specific files instead of once again,
+letting Claude explore freely the whole idea of being specific and routing.
+All right.
+So number three,
+I'm saying to compact at around 60% capacity auto-compact triggers at like 95%,
+by which point your context is already pretty degraded.
+So run slash context to check your capacity percentage,
+or you should have the status line set up and at about 60%,
+just run the slash,
+compact with specific instructions on what it should actually be preserving after three to four compacts in a row.
+The quality does start to degrade.
+So at that point,
+once you've done three or four,
+just get a session summary slash clear,
+give the session summary back and then keep going.
+All right.
+So number four short breaks are actually costing you.
+Claude code uses prompt training to avoid reprocessing unchanged context,
+but the cash has a five minute timeout.
+So if you step away and you come back and it's been longer than five minutes,
+your next message reprocesses,
+everything from,
+from scratch at full cost.
+And that is why some people feel like their usage just randomly spikes if they might have,
+you know,
+stepped away and came back.
+So if you're going to do that,
+just consider doing a slash compact or a slash clear before you step away.
+All right.
+Number five,
+command output bloat.
+When Claude runs shell commands,
+the full output enters your context window.
+So if you have a command that it comes back with 200 commits or,
+you know,
+just tons and tons of data,
+then all of that is tokens that gets sent to your model.
+So really,
+the takeaway here is to be intentional about what you let Claude run.
+If you know in a certain project that it doesn't need to use certain commands,
+then you can go ahead and in that project,
+deny those permissions.
+And this is another one that seems like it's invisible because when it runs like a bash or,
+you know,
+certain commands,
+it basically just has like one line and you don't actually see all the tokens that it has,
+you know,
+sent there.
+All right.
+So sitting here,
+editing this video,
+and there's just one more thing that I wanted to get off my chest.
+And it's basically about hitting your limit and,
+you know,
+the goal of this video and your goal should be to optimize so that you don't hit your limit.
+But I don't think that you should associate hitting your limit with like,
+it shouldn't be a negative connotation because ultimately,
+if you're doing a lot of these hacks and you are not just like being wasteful with tokens,
+then hitting your limit is actually a good thing if you think about it,
+because it means that you are using this tool so much.
+And I think that's what you want to be.
+I think you want to be a power user of this tool to the point where it's like,
+got to wait again and,
+you know,
+waiting sucks,
+but people that are using it so much are going to be so much more productive and so much farther ahead than people who are never hitting their limits,
+you know,
+not make,
+not getting their money's worth and not truly getting the leverage that you are now getting.
+So anyways,
+quick little raw rant there,
+but I think it's an important mindset shift to have,
+you know,
+just something to think about.
+All right.
+So we're moving on to tier three now.
+I hope you guys feel like you already have a lot of things that you want to implement,
+and these ones are getting a little crazy.
+So we've got four of these here,
+and I've got a few bonus ones also,
+but number one is to pick the right model.
+So Sonnet for your default,
+most coding work,
+Haiku for sub-agents,
+formatting,
+simple tasks,
+Opus for deep architectural planning,
+and only when Sonnet wasn't enough,
+try to keep this under 20% of usage,
+or unless you just really,
+really need it for that project.
+Now,
+a little tip here is when you have a huge code base and you want to do certain things like maybe a review,
+then try bringing in Codex.
+There is an official plugin now,
+and I made a video about this.
+I'll tag that right up here,
+but you could basically have,
+you know,
+Opus and Sonnet working together to build you,
+you know,
+a project or a code base.
+And then you could just bring in Codex to actually review everything.
+And that way you're saving yourself on the Claude tokens.
+The next one,
+number two here is the cost of sub-agents.
+Agent workflows use roughly seven to 10 times more tokens than a standard single agent session.
+Now,
+why is that?
+Because they wake up with their own full context and it's a separate instance.
+So they basically have to reload everything when you start up the new session,
+all of those files,
+all of the system tools,
+like everything like that.
+Now, what you can do though,
+which is helpful is to delegate to sub-agents for one-off tasks,
+especially if you want that one-off task to use Haiku.
+So maybe you need to process a lot of information,
+or maybe you need to do a ton of research and get just like a summary back.
+Now, yes, tokens are still tokens,
+no matter what at the end of the day,
+but if you can make 80% of your tokens,
+a cheaper model rather than 80% of your tokens,
+an expensive model,
+then you're going to be saving money.
+And then of course,
+agent teams are cool.
+Sometimes I really do actually like them and it helps me get more,
+higher quality outputs,
+but they're very,
+very expensive.
+So try to use them very sparingly.
+All right.
+So number three is to understand peak hours.
+So we just talked about at the beginning,
+how they've adjusted how fast your five hour session window drains based on demand during the peak hours,
+which are 8 AM to 2 PM Eastern time on weekdays.
+But off peak,
+this is when your usage is kind of either normal or it lasts a little longer.
+And these are afternoons,
+evenings, weekends.
+So if you actually think about this strategically,
+maybe you're going to be able to do a lot of work,
+maybe you want to make sure that you're running big refactors or multi-agent sessions or big projects during off peak hours only.
+Otherwise you're going to drain right through that peak session.
+And on top of this,
+we'll call this a little hack 3.5,
+which is the one I kind of alluded to earlier when I said,
+Hey,
+just keep open your cloud account so you can see your usage at all times.
+If you're near a reset and you have room left in your allocation,
+then go heavy,
+try to hit that usage limit before it resets,
+get your money's worth,
+let your agents go loose at that point.
+And on the other side,
+if you're getting near your limit,
+but you still have lots of time,
+then step away.
+This is your time to take a break,
+take a walk,
+make some lunch,
+come back with a full budget instead of burning the last 5% on something small and getting stuck mid task and having to just kind of,
+you know,
+lose that flow state that you might've been in.
+Okay.
+Number four,
+your systems constitution,
+which is cloud.md.
+This should contain stable decisions,
+architecture rules and progress summaries.
+Think of it like the source of truth that makes every prompt shorter and shorter.
+Save decisions,
+not conversations,
+every architectural call that you store there is a paragraph that you never have to type again.
+So this builds on top of the way that you were thinking about it back in tier one.
+You can add rules in there that basically tell it,
+Hey,
+I want you to help me make sure I'm being smart about tokens.
+Use sub agents for any exploration or research.
+If a task needs three plus files or multifile analysis,
+spawn a sub agent and only return summarized insights.
+Spawn that sub agent in Haiku.
+And here's a little prompt that I have at the bottom of mycloud.md.
+And I will say before I read this out,
+you have to be careful because,
+when you make a file like this kind of self-learning or self-evolving,
+you have to check on it frequently because you don't want it to accidentally get too bloated.
+But here I said applied learning when something fails repeatedly,
+when Nate has to re-explain or when a workaround is found for a platform tool or limitation,
+add a one-line bullet here.
+Keep each bullet under 15 words,
+no explanations,
+only add things that will save time in future sessions.
+And then it's got some bullets.
+Now I'm not saying this is the most optimal prompt,
+but I think this sort of system of having your cloud.md,
+actually learn and continuously think about how it can save you time and tokens is a good idea to play with.
+All right, so I know that we just went through a ton of stuff.
+This whole slide deck will be available for download for free in my free school community.
+The link for that will be on the description.
+But right now, what you should go do are these things.
+Go run slash context, see what it looks like.
+Go to some of your active sessions, run slash cost.
+Status line, make sure it's showing your model,
+your context percentage and your token count.
+Make sure you pull up your cloud usage dashboard so you can see your remaining allocation.
+And what time it resets.
+Disconnect unused MCP servers.
+Start complex tasks in plan mode.
+Use slash clear when you're switching to an unrelated task.
+Manually compact at 60% context.
+Batch your multi-step instructions into single messages
+and schedule heavy sessions for off-peak hours.
+And really just be mindful about the actual timing.
+So I wanted to kind of leave you guys with one, maybe two messages.
+The first thing is just the idea that there is a balance between quality and cost.
+And so that's kind of a game that you have to play.
+You play a little bit and sometimes you do have to go for the higher quality,
+which ultimately is going to cost you more money.
+And that's just the way it works.
+But the other thing is just to keep it simple and think about what we talked about at the beginning of this video,
+how tokens actually work, how cloud code actually charges you.
+Most people don't need a bigger plan.
+They need to stop resending their entire conversation history 30 times when you could just send it, you know, five times.
+It's not a limits problem.
+It's a context hygiene problem.
+But anyways, that is going to do it for this one.
+If you guys enjoyed it or learned something new, please give it a like.
+It helps me out a ton.
+And as always,
+I appreciate you guys making it to the end of the video.
+I'll see you on the next one.
+Thanks, everyone.
